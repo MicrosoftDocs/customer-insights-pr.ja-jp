@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Dynamics 365 Customer Insights の対象者に関するインサイト機能
+summary: 複数のソースからの顧客データを取り込み、統合、整理を行います。 顧客プロファイルとリアルタイムのセグメント化を作成および管理します。 顧客データを他のシステムと統合して、さらに実用的なものにします。
+metadata:
+  title: 対象者に関するインサイトのドキュメント
+  description: 対象者に関するインサイトの主要なリンクを含むヘルプ ハブ。
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406185"
+landingContent:
+- title: 対象者に関するインサイトについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 製品概要
+      url: overview.md
+    - text: 新機能と更新された機能
+      url: whats-new-audience-insights.md
+    - text: コミュニティ サイト
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: データ ソースの取り込む
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: データ ソースの追加
+      url: data-sources.md
+    - text: 増分更新
+      url: incremental-refresh-data-sources.md
+    - text: エンティティについて
+      url: entities.md
+- title: データを統合する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: マップ
+      url: map-entities.md
+    - text: 照合
+      url: match-entities.md
+    - text: マージ
+      url: merge-entities.md
+- title: 顧客プロファイルを改良する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 関連付けを構成する
+      url: relationships.md
+    - text: 顧客アクティビティをリストする
+      url: activities.md
+    - text: 独自の機械学習モデルを取り込む
+      url: custom-models.md
+- title: 顧客データをエクスポートする
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: エクスポート先の設定
+      url: export-destinations.md
+    - text: Dynamics 365 アプリの顧客カード
+      url: customer-card-add-in.md
+    - text: Power BI コネクタ
+      url: export-power-bi.md
+- title: アプリを管理する。
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: システムを構成する
+      url: system.md
+    - text: ユーザーのアクセス許可を定義する
+      url: permissions.md
+    - text: 複数の環境を管理する
+      url: manage-environments.md
