@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Dynamics 365 Customer Insights のヘルプ ハブ
+  author: m-hartmann
+  description: 関連記事を検索して、ヘルプ コンテンツから始めます。
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406202"
+title: Dynamics 365 Customer Insights のドキュメント
+summary: 開始に役立つリソースを検索し、Customer Insights の機能について学びます。
+landingContent:
+- title: Customer Insights の紹介
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: " Customer Insights の概要"
+      url: overview.md
+    - text: リリース計画
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: 環境へのアクセス
+      url: https://home.ci.ai.dynamics.com/
+- title: 対象者に関するインサイトの利用を開始する
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 試用版へのサインアップ
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: 新機能
+      url: audience-insights/whats-new-audience-insights.md
+    - text: 対象者に関するインサイトのドキュメント
+      url: audience-insights/index.yml
+- title: 連絡する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Dynamics 365 コミュニティに参加する
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: アイデアの共有
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: 問題の報告
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: 対象者に関するインサイトのチュートリアル
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 新しい環境の作成
+      url: audience-insights/home.md
+    - text: 統合型顧客プロファイルを作成する
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: アプリで作業する
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: 対象者に関するインサイトのデータをエクスポートする
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: エクスポート先の設定
+      url: audience-insights/export-destinations.md
+    - text: Dynamics 365 アプリの顧客カード
+      url: audience-insights/customer-card-add-in.md
+    - text: Power BI コネクタ
+      url: audience-insights/export-power-bi.md
+- title: 対象者に関するインサイトの管理
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: システムを構成する
+      url: audience-insights/system.md
+    - text: ユーザーのアクセス許可を定義する
+      url: audience-insights/permissions.md
+    - text: 複数の環境を管理する
+      url: audience-insights/manage-environments.md
+- title: エンゲージメント インサイトについて (プレビュー)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 機能の概要
+      url: engagement-insights/overview.md
+    - text: 用語と概念
+      url: engagement-insights/glossary.md
+    - text: 開始する
+      url: engagement-insights/get-started.md
+- title: エンゲージメント インサイトのレポート (プレビュー)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: レポートの表示
+      url: engagement-insights/view-reports.md
+    - text: カスタム レポートの作成
+      url: engagement-insights/custom-reports.md
+    - text: 統合プロファイル レポートの表示
+      url: engagement-insights/profile-reports.md
+- title: エンゲージメント インサイトのイベント (プレビュー)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 詳細なイベントの作成
+      url: engagement-insights/refined-events.md
+    - text: イベントのエクスポート
+      url: engagement-insights/export-events.md
+    - text: 個人データの削除とエクスポート
+      url: engagement-insights/delete-export-personal-data.md
