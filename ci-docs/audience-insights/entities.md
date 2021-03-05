@@ -9,51 +9,54 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e3f41c0424b2cd756d72ae6af9d5225ebba92628
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: e71c69a6207147d8cd65363d51a5fa6bbf896151
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406160"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269382"
 ---
-# <a name="entities-in-audience-insights"></a><span data-ttu-id="4da33-103">対象者に関するインサイトのエンティティ</span><span class="sxs-lookup"><span data-stu-id="4da33-103">Entities in audience insights</span></span>
+# <a name="entities-in-audience-insights"></a><span data-ttu-id="815bb-103">対象者に関するインサイトのエンティティ</span><span class="sxs-lookup"><span data-stu-id="815bb-103">Entities in audience insights</span></span>
 
-<span data-ttu-id="4da33-104">[データソースの構成](data-sources.md) 後、**エンティティ** ページに移動して、取り込んだデータの品質を評価します。</span><span class="sxs-lookup"><span data-stu-id="4da33-104">After [configuring your data sources](data-sources.md), go to the **Entities** page to evaluate the quality of the ingested data.</span></span> <span data-ttu-id="4da33-105">エンティティはデータセットと見なされます。</span><span class="sxs-lookup"><span data-stu-id="4da33-105">Entities are considered datasets.</span></span> <span data-ttu-id="4da33-106">Dynamics 365 Customer Insights の複数の機能は、これらのエンティティを中心に構築されています。</span><span class="sxs-lookup"><span data-stu-id="4da33-106">Multiple capabilities of Dynamics 365 Customer Insights are built around these entities.</span></span> <span data-ttu-id="4da33-107">それらを綿密に確認すると、これらの機能の出力を検証するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="4da33-107">Reviewing them closely can help you validate the output of those capabilities.</span></span>
+<span data-ttu-id="815bb-104">[データソースの構成](data-sources.md) 後、**エンティティ** ページに移動して、取り込んだデータの品質を評価します。</span><span class="sxs-lookup"><span data-stu-id="815bb-104">After [configuring your data sources](data-sources.md), go to the **Entities** page to evaluate the quality of the ingested data.</span></span> <span data-ttu-id="815bb-105">エンティティはデータセットと見なされます。</span><span class="sxs-lookup"><span data-stu-id="815bb-105">Entities are considered datasets.</span></span> <span data-ttu-id="815bb-106">Dynamics 365 Customer Insights の複数の機能は、これらのエンティティを中心に構築されています。</span><span class="sxs-lookup"><span data-stu-id="815bb-106">Multiple capabilities of Dynamics 365 Customer Insights are built around these entities.</span></span> <span data-ttu-id="815bb-107">それらを綿密に確認すると、これらの機能の出力を検証するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="815bb-107">Reviewing them closely can help you validate the output of those capabilities.</span></span>
 
-<span data-ttu-id="4da33-108">**エンティティ** ページにはエンティティがリストされ、次のいくつかの列が含まれます。</span><span class="sxs-lookup"><span data-stu-id="4da33-108">The **Entities** page lists entities and includes several columns:</span></span>
+<span data-ttu-id="815bb-108">**エンティティ** ページにはエンティティがリストされ、次のいくつかの列が含まれます。</span><span class="sxs-lookup"><span data-stu-id="815bb-108">The **Entities** page lists entities and includes several columns:</span></span>
 
-- <span data-ttu-id="4da33-109">**名前**: プロジェクトの名前です。</span><span class="sxs-lookup"><span data-stu-id="4da33-109">**Name**: The name of your data entity.</span></span> <span data-ttu-id="4da33-110">エンティティ名の横に警告記号が表示されている場合、そのエンティティのデータが正常にロードされていないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="4da33-110">If you see a warning symbol next to an entity name, it means that the data for that entity didn't load successfully.</span></span>
-- <span data-ttu-id="4da33-111">**ソース**: エンティティを取得したデータ ソースのタイプ</span><span class="sxs-lookup"><span data-stu-id="4da33-111">**Source**: The type of data source that ingested the entity</span></span>
-- <span data-ttu-id="4da33-112">**作成者** : エンティティを作成した人の名前</span><span class="sxs-lookup"><span data-stu-id="4da33-112">**Created by**: Name of the person who created the entity</span></span>
-- <span data-ttu-id="4da33-113">**作成した**：エンティティ作成の日付と時刻</span><span class="sxs-lookup"><span data-stu-id="4da33-113">**Created**: Date and time of the entity creation</span></span>
-- <span data-ttu-id="4da33-114">**更新者** : エンティティを更新した人の名前</span><span class="sxs-lookup"><span data-stu-id="4da33-114">**Updated by**: Name of the person who updated the entity</span></span>
-- <span data-ttu-id="4da33-115">**最終更新日** : エンティティを最後に更新した日付と時刻</span><span class="sxs-lookup"><span data-stu-id="4da33-115">**Last updated**: Date and time of the last update of the entity</span></span>
-- <span data-ttu-id="4da33-116">**最新情報に更新した日** : 最後に最新の情報に更新した日付と時刻</span><span class="sxs-lookup"><span data-stu-id="4da33-116">**Last refresh**: Date and time of the last data refresh</span></span>
+- <span data-ttu-id="815bb-109">**名前**: プロジェクトの名前です。</span><span class="sxs-lookup"><span data-stu-id="815bb-109">**Name**: The name of your data entity.</span></span> <span data-ttu-id="815bb-110">エンティティ名の横に警告記号が表示されている場合、そのエンティティのデータが正常にロードされていないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="815bb-110">If you see a warning symbol next to an entity name, it means that the data for that entity didn't load successfully.</span></span>
+- <span data-ttu-id="815bb-111">**ソース**: エンティティを取得したデータ ソースのタイプ</span><span class="sxs-lookup"><span data-stu-id="815bb-111">**Source**: The type of data source that ingested the entity</span></span>
+- <span data-ttu-id="815bb-112">**作成者** : エンティティを作成した人の名前</span><span class="sxs-lookup"><span data-stu-id="815bb-112">**Created by**: Name of the person who created the entity</span></span>
+- <span data-ttu-id="815bb-113">**作成した**：エンティティ作成の日付と時刻</span><span class="sxs-lookup"><span data-stu-id="815bb-113">**Created**: Date and time of the entity creation</span></span>
+- <span data-ttu-id="815bb-114">**更新者** : エンティティを更新した人の名前</span><span class="sxs-lookup"><span data-stu-id="815bb-114">**Updated by**: Name of the person who updated the entity</span></span>
+- <span data-ttu-id="815bb-115">**最終更新日** : エンティティを最後に更新した日付と時刻</span><span class="sxs-lookup"><span data-stu-id="815bb-115">**Last updated**: Date and time of the last update of the entity</span></span>
+- <span data-ttu-id="815bb-116">**最新情報に更新した日** : 最後に最新の情報に更新した日付と時刻</span><span class="sxs-lookup"><span data-stu-id="815bb-116">**Last refresh**: Date and time of the last data refresh</span></span>
 
-## <a name="exploring-a-specific-entitys-data"></a><span data-ttu-id="4da33-117">特定エンティティのデータを調べる</span><span class="sxs-lookup"><span data-stu-id="4da33-117">Exploring a specific entity's data</span></span>
+## <a name="exploring-a-specific-entitys-data"></a><span data-ttu-id="815bb-117">特定エンティティのデータを調べる</span><span class="sxs-lookup"><span data-stu-id="815bb-117">Exploring a specific entity's data</span></span>
 
-<span data-ttu-id="4da33-118">エンティティを選択して、そのエンティティに含まれるさまざまなフィールドとレコードを調べます。</span><span class="sxs-lookup"><span data-stu-id="4da33-118">Select an entity to explore the different fields and records included within that entity.</span></span>
-
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="4da33-119">![エンティティの選択](media/data-manager-entities-data.png "エンティティの選択")</span><span class="sxs-lookup"><span data-stu-id="4da33-119">![Select an entity](media/data-manager-entities-data.png "Select an entity")</span></span>
-
-- <span data-ttu-id="4da33-120">**データ** タブはデフォルトで選択されており、エンティティの個々のレコードに関する詳細をリストするテーブルを表示します。</span><span class="sxs-lookup"><span data-stu-id="4da33-120">The **Data** tab is selected by default and shows a table listing details about individual records of the entity.</span></span>
+<span data-ttu-id="815bb-118">エンティティを選択して、そのエンティティに含まれるさまざまなフィールドとレコードを調べます。</span><span class="sxs-lookup"><span data-stu-id="815bb-118">Select an entity to explore the different fields and records included within that entity.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="4da33-121">![フィールド テーブル](media/data-manager-entities-fields.PNG "フィールド テーブル")</span><span class="sxs-lookup"><span data-stu-id="4da33-121">![Fields table](media/data-manager-entities-fields.PNG "Fields table")</span></span>
+> <span data-ttu-id="815bb-119">![エンティティの選択](media/data-manager-entities-data.png "エンティティの選択")</span><span class="sxs-lookup"><span data-stu-id="815bb-119">![Select an entity](media/data-manager-entities-data.png "Select an entity")</span></span>
 
-- <span data-ttu-id="4da33-122">**フィールド** タブには、フィールド名、データ タイプ、種類など、選択したエンティティの詳細をレビューするためのテーブルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4da33-122">The **Fields** tab shows a table to review details for the selected entity, such as field names, data types, and types.</span></span> <span data-ttu-id="4da33-123">**種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。</span><span class="sxs-lookup"><span data-stu-id="4da33-123">The **Type** column shows Common Data Model associated types, which are either auto-identified by the system or [manually mapped](map-entities.md) by users.</span></span> <span data-ttu-id="4da33-124">これらは、属性のデータ型とは異なるセマンティック型です。たとえば、フィールド *メール* の下には、データ型 *テキスト* がありますが、その (セマンティック型の) Common Data Model の種類は、*メール* または *メールアドレス* である場合があります。</span><span class="sxs-lookup"><span data-stu-id="4da33-124">These are semantic types that can differ from the attributes' data types—for example, the field *Email* below has a data type *Text* but its (semantic) Common Data Model type might be *Email* or *EmailAddress*.</span></span>
+- <span data-ttu-id="815bb-120">**データ** タブはデフォルトで選択されており、エンティティの個々のレコードに関する詳細をリストするテーブルを表示します。</span><span class="sxs-lookup"><span data-stu-id="815bb-120">The **Data** tab is selected by default and shows a table listing details about individual records of the entity.</span></span>
+
+> [!div class="mx-imgBorder"]
+> <span data-ttu-id="815bb-121">![フィールド テーブル](media/data-manager-entities-fields.PNG "フィールド テーブル")</span><span class="sxs-lookup"><span data-stu-id="815bb-121">![Fields table](media/data-manager-entities-fields.PNG "Fields table")</span></span>
+
+- <span data-ttu-id="815bb-122">**フィールド** タブには、フィールド名、データ タイプ、種類など、選択したエンティティの詳細をレビューするためのテーブルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="815bb-122">The **Fields** tab shows a table to review details for the selected entity, such as field names, data types, and types.</span></span> <span data-ttu-id="815bb-123">**種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。</span><span class="sxs-lookup"><span data-stu-id="815bb-123">The **Type** column shows Common Data Model associated types, which are either auto-identified by the system or [manually mapped](map-entities.md) by users.</span></span> <span data-ttu-id="815bb-124">これらは、属性のデータ型とは異なるセマンティック型です。たとえば、フィールド *メール* の下には、データ型 *テキスト* がありますが、その (セマンティック型の) Common Data Model の種類は、*メール* または *メールアドレス* である場合があります。</span><span class="sxs-lookup"><span data-stu-id="815bb-124">These are semantic types that can differ from the attributes' data types—for example, the field *Email* below has a data type *Text* but its (semantic) Common Data Model type might be *Email* or *EmailAddress*.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4da33-125">両方のテーブルには、エンティティのデータのサンプルのみが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4da33-125">Both tables show only a sample of your entity's data.</span></span> <span data-ttu-id="4da33-126">完全なデータセットを表示するには、**データ ソース** ページに移動して、エンティティを選択し、**編集** を選択して、その後[データ ソース](data-sources.md) で説明した通り、このエンティティのデータを Power Query エディターで表示します。</span><span class="sxs-lookup"><span data-stu-id="4da33-126">To view the full data set, go to the **Data sources** page, select an entity, select **Edit**, and then view this entity's data with the Power Query editor as explained in [Data sources](data-sources.md).</span></span>
+> <span data-ttu-id="815bb-125">両方のテーブルには、エンティティのデータのサンプルのみが表示されます。</span><span class="sxs-lookup"><span data-stu-id="815bb-125">Both tables show only a sample of your entity's data.</span></span> <span data-ttu-id="815bb-126">完全なデータセットを表示するには、**データ ソース** ページに移動して、エンティティを選択し、**編集** を選択して、その後[データ ソース](data-sources.md) で説明した通り、このエンティティのデータを Power Query エディターで表示します。</span><span class="sxs-lookup"><span data-stu-id="815bb-126">To view the full data set, go to the **Data sources** page, select an entity, select **Edit**, and then view this entity's data with the Power Query editor as explained in [Data sources](data-sources.md).</span></span>
 
-<span data-ttu-id="4da33-127">エンティティに取り込まれたデータの詳細については、**概要** 列は、データに適用可能なヌル、欠損値、一意の値、カウント、分布など、データの重要な特性を提供します。</span><span class="sxs-lookup"><span data-stu-id="4da33-127">To learn more about the data ingested in the entity, the **Summary** column provides you with some important characteristics of the data, such as nulls, missing values, unique values, counts, and distributions, as applicable to your data.</span></span>
+<span data-ttu-id="815bb-127">エンティティに取り込まれたデータの詳細については、**概要** 列は、データに適用可能なヌル、欠損値、一意の値、カウント、分布など、データの重要な特性を提供します。</span><span class="sxs-lookup"><span data-stu-id="815bb-127">To learn more about the data ingested in the entity, the **Summary** column provides you with some important characteristics of the data, such as nulls, missing values, unique values, counts, and distributions, as applicable to your data.</span></span>
 
-<span data-ttu-id="4da33-128">グラフ アイコンを選択して、データの概要を表示します。</span><span class="sxs-lookup"><span data-stu-id="4da33-128">Select the chart icon to see the summary of the data.</span></span>
+<span data-ttu-id="815bb-128">グラフ アイコンを選択して、データの概要を表示します。</span><span class="sxs-lookup"><span data-stu-id="815bb-128">Select the chart icon to see the summary of the data.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="4da33-129">![概要記号](media/data-manager-entities-summary.png "データ概要テーブル")</span><span class="sxs-lookup"><span data-stu-id="4da33-129">![Summary symbol](media/data-manager-entities-summary.png "Data summary table")</span></span>
+> <span data-ttu-id="815bb-129">![概要記号](media/data-manager-entities-summary.png "データ概要テーブル")</span><span class="sxs-lookup"><span data-stu-id="815bb-129">![Summary symbol](media/data-manager-entities-summary.png "Data summary table")</span></span>
 
-### <a name="next-step"></a><span data-ttu-id="4da33-130">次の手順</span><span class="sxs-lookup"><span data-stu-id="4da33-130">Next step</span></span>
+### <a name="next-step"></a><span data-ttu-id="815bb-130">次の手順</span><span class="sxs-lookup"><span data-stu-id="815bb-130">Next step</span></span>
 
-<span data-ttu-id="4da33-131">[統一](data-unification.md) トピックで、取り込んだデータを *マップ*、*一致*、そして *マージ* する方法をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="4da33-131">See the [Unify](data-unification.md) topic to learn how to *map*, *match*, and *merge* the ingested data.</span></span>
+<span data-ttu-id="815bb-131">[統一](data-unification.md) トピックで、取り込んだデータを *マップ*、*一致*、そして *マージ* する方法をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="815bb-131">See the [Unify](data-unification.md) topic to learn how to *map*, *match*, and *merge* the ingested data.</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

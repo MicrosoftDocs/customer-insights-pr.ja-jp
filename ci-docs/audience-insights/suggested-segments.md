@@ -1,0 +1,108 @@
+---
+title: 機械学習を利用して提案されたセグメント
+description: 機械学習を使用して、顧客の属性に基づいて新しく興味深いセグメントを見つけることができます。
+ms.date: 02/01/2021
+ms.reviewer: jimsonc
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: how-to
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: 54655d57f4f0f723b497fe47891fd397ccb9dbf4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268232"
+---
+# <a name="suggested-segments-preview"></a><span data-ttu-id="a17b6-103">提案されたセグメントを見る (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="a17b6-103">Suggested segments (preview)</span></span>
+
+<span data-ttu-id="a17b6-104">AI モデルの助けを借りて、顧客の興味深いセグメントを検出します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-104">Discover interesting segments of your customers with the help of an AI model.</span></span> <span data-ttu-id="a17b6-105">この機械学習を利用した機能は、メジャーまたは顧客属性に基づいてセグメントを提案します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-105">This machine learning powered feature suggests segments based on measures or customer attributes.</span></span> <span data-ttu-id="a17b6-106">これは、KPI を改善したり、他の属性との文脈で属性の影響の理解を深めたりするのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-106">It can help improve your KPIs or better understand the influence of attributes in context of other attributes.</span></span> 
+
+> [!NOTE]
+> <span data-ttu-id="a17b6-107">提案されたセグメント機能は、自動化された手段を使用してデータを評価し、そのデータに基づいて予測を行います。したがって、その用語は一般データ保護規則 (「GDPR」) で定義されているため、プロファイリングの方法として使用できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-107">The suggested segments feature uses automated means to evaluate data and make predictions based on that data, and therefore has the capability to be used as a method of profiling, as that term is defined by the General Data Protection Regulation ("GDPR").</span></span> <span data-ttu-id="a17b6-108">データを処理するためのこの機能の使用は、GDPR またはその他の法律または規制の対象となる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-108">Your use of this feature to process data may be subject to GDPR or other laws or regulations.</span></span> <span data-ttu-id="a17b6-109">お客様は、この昨日を含む Dynamics 365 Customer Insights の使用が、プライバシー、個人データ、生体認証データ、データ保護、通信の秘密保持に関連する法律を含む、適用されるすべての法律および規制に準拠していることを確認する責任があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-109">You are responsible for ensuring that your use of Dynamics 365 Customer Insights, including this feature, complies with all applicable laws and regulations, including laws related to privacy, personal data, biometric data, data protection, and confidentiality of communications.</span></span>
+
+:::image type="content" source="media/suggested-segments-details.png" alt-text="サイド ペインに提案の詳細を表示する Customer Insights の提案されたセグメント ページ。":::
+
+## <a name="suggested-segments-to-improve-your-kpis"></a><span data-ttu-id="a17b6-111">KPI を改善する提案されたセグメント</span><span class="sxs-lookup"><span data-stu-id="a17b6-111">Suggested segments to improve your KPIs</span></span>
+
+<span data-ttu-id="a17b6-112">対象者インサイトのユーザーである場合、主要業績評価指標 (KPI) の追跡に役立つ一連の[作成されたメジャー](measures.md)があるかと思います。</span><span class="sxs-lookup"><span data-stu-id="a17b6-112">As a user of audience insights, you likely have a series of [measures created](measures.md) that help track your Key Performance Indicators (KPIs).</span></span> <span data-ttu-id="a17b6-113">セグメントを作成し、ターゲットを絞ったキャンペーンを実行するには、特定の属性がこの KPI にどのように影響するかを理解することが重要です。</span><span class="sxs-lookup"><span data-stu-id="a17b6-113">It's important to understand how certain attributes influence this KPI to create segments and run a highly targeted campaign.</span></span>   
+<span data-ttu-id="a17b6-114">たとえば、*TotalSpendPerCustomer* と呼ばれるメジャーを追跡します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-114">For example, you track a measure called *TotalSpendPerCustomer*.</span></span> <span data-ttu-id="a17b6-115">企業としては、この数が増えることを望んでいます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-115">As a business, you’d like to see this number grow.</span></span> <span data-ttu-id="a17b6-116">メジャーを主属性として選択すると、影響を評価する属性を選択できるようになります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-116">Choosing a measure as primary attribute, lets you select the attributes that you want to assess for influence.</span></span> <span data-ttu-id="a17b6-117">*メンバーシップ階層*、*メンバーシップ期間*、および *職業* と仮定しましょう。</span><span class="sxs-lookup"><span data-stu-id="a17b6-117">Let's say *membership tier*, *membership period*, and *occupation*.</span></span> <span data-ttu-id="a17b6-118">Customer Insights は、そのメジャーの最大の影響力を示すセグメントを提案できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-118">Customer Insights can then suggest a segment that tells you who are the biggest influence of that measure.</span></span> <span data-ttu-id="a17b6-119">たとえば、*ゴールド* メンバーであり、*少なくとも 5 年* 営業している *会計士* は、*TotalSpendPerCustomer* の最大のインフルエンサーです。</span><span class="sxs-lookup"><span data-stu-id="a17b6-119">For example, *Accountants* who are *Gold* members, and who have been with your business for *at least five years* are the biggest influencer of *TotalSpendPerCustomer*.</span></span> <span data-ttu-id="a17b6-120">すべての提案の推定セグメント サイズを取得します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-120">You’ll get an estimated segment size for every suggestion.</span></span> <span data-ttu-id="a17b6-121">この情報を使用して、ターゲット対象者向けのキャンペーンを作成できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-121">You can use this information to create campaigns for the targeted audiences.</span></span>
+
+## <a name="understand-what-influences-a-customer-attribute"></a><span data-ttu-id="a17b6-122">顧客の属性に影響を与えるものを理解する</span><span class="sxs-lookup"><span data-stu-id="a17b6-122">Understand what influences a customer attribute</span></span>
+
+<span data-ttu-id="a17b6-123">メジャーの代わりに顧客属性を主属性として選択できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-123">You can choose a customer attribute instead of a measure as the primary attribute.</span></span> <span data-ttu-id="a17b6-124">影響を与える属性の選択に基づいて、AI モデルは、選択された属性が主属性にどのように影響するかを示す一連の提案を作成します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-124">Based on your choice of influencing attributes, the AI model creates a series of suggestions that show how the selected attributes influence the primary attribute.</span></span>   
+<span data-ttu-id="a17b6-125">たとえば、*リワード メンバー (はい/いいえ)* を主属性として選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-125">For example, you choose *Rewards Member (Yes/No)* as the primary attribute.</span></span> <span data-ttu-id="a17b6-126">*保有期間*、*職業*、および *サポート チケットの数* が、他の影響を与える属性として設定されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-126">*Tenure*, *Occupation*, and *Number of Support Tickets* are set as other influencing attributes.</span></span> <span data-ttu-id="a17b6-127">AI モデルは、2 年以上の保有期間を持つ主に IT プロフェッショナルがリワード メンバーであることを示すセグメントを提案する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-127">The AI model could suggest segments indicating mostly IT professionals with tenure over two years are rewards members.</span></span> <span data-ttu-id="a17b6-128">別の提案では、在職期間が 1 年以上で、サポート チケットが 3 枚未満の会計士がリワード メンバーであることを強調できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-128">Another suggestion could highlight that accountants with tenure over one year and fewer than three support tickets are rewards members.</span></span> 
+
+## <a name="artificial-intelligence-usage"></a><span data-ttu-id="a17b6-129">人工知能の使用</span><span class="sxs-lookup"><span data-stu-id="a17b6-129">Artificial intelligence usage</span></span>
+
+<span data-ttu-id="a17b6-130">主属性と影響を与える属性を使用して、決定ツリー アルゴリズムは興味深いセグメントを提案します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-130">Using the primary attribute and influencing attributes, a decision tree algorithm suggests interesting segments.</span></span> <span data-ttu-id="a17b6-131">提案は、AI アルゴリズムによって取得されたルールまたはパターンに基づいています。</span><span class="sxs-lookup"><span data-stu-id="a17b6-131">The suggestions are based on rules or patterns that were picked up by the AI algorithm.</span></span> <span data-ttu-id="a17b6-132">平均人口と大幅に異なるセグメントのみが提案として表示されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-132">Only segments that significantly differ from the average population are shown as suggestions.</span></span> <span data-ttu-id="a17b6-133">平均人口との比較は、選択したメジャーまたは主属性に基づいています。</span><span class="sxs-lookup"><span data-stu-id="a17b6-133">The comparison to the average population is based on the selected measure or primary attribute.</span></span>
+
+### <a name="responsible-ai"></a><span data-ttu-id="a17b6-134">責任ある AI</span><span class="sxs-lookup"><span data-stu-id="a17b6-134">Responsible AI</span></span>
+
+<span data-ttu-id="a17b6-135">提案されたセグメントを使用すると、属性を選択して新しいセグメントを作成し、選択したデータを処理できます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-135">Suggested segments lets you select attributes to create new segments and process the data you select.</span></span> <span data-ttu-id="a17b6-136">人種、性的指向、性別など機密性の高い属性を含む属性を選択する際、そのデータを処理できること、および処理する必要があることを確認しなければなりません。</span><span class="sxs-lookup"><span data-stu-id="a17b6-136">When choosing attributes, including sensitive attributes like race, sexual orientation, or gender, you must ensure that you can and should process that data.</span></span> <span data-ttu-id="a17b6-137">お客様は、組織に適用される法律を遵守し、組織の原則とプライバシー ポリシーを遵守する責任があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-137">You are responsible to comply with any laws applicable to your organization and adhere to your organization’s principles and privacy policies.</span></span>
+
+### <a name="different-results-for-primary-attributes-with-categorical-and-numeric-values"></a><span data-ttu-id="a17b6-138">カテゴリ値と数値を持つ主属性に対するさまざまな結果</span><span class="sxs-lookup"><span data-stu-id="a17b6-138">Different results for primary attributes with categorical and numeric values</span></span>
+
+<span data-ttu-id="a17b6-139">数値属性またはカテゴリ属性を主属性として選択した場合、セグメントの提案は異なります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-139">Segment suggestions are different if you choose a numeric attribute or a categorical attribute as the primary attribute.</span></span> <span data-ttu-id="a17b6-140">カテゴリ属性の値には、2 つ以上のカテゴリまたはタイプが含まれています。</span><span class="sxs-lookup"><span data-stu-id="a17b6-140">Values in a categorical attribute contain two or more categories or types.</span></span> <span data-ttu-id="a17b6-141">数値属性には定量的なデータが含まれており、それに関連する測定の意味合いがあります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-141">A numeric attribute contains quantitative data and has a sense of measurement associated with it.</span></span>
+
+<span data-ttu-id="a17b6-142">主属性として *年収* または *会員期間* などの数値属性がある場合、すべての顧客と比較して数値属性の平均値が高いまたは低いセグメントが提案されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-142">With a numeric attribute like *annual income* or *membership period* as the primary attribute, the system suggests segments that have a higher or lower average value of the numeric attribute when compared to all customers.</span></span>
+
+<span data-ttu-id="a17b6-143">*顧客満足度* などのカテゴリ属性を主属性とすると、同じカテゴリに属するすべての顧客の割合と比較して、特定のカテゴリに属する顧客の割合が高いまたは低いセグメントが提案されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-143">A categorical attribute like *customer satisfaction* as the primary attribute results in suggested segments that have a higher or lower percentage of customers belonging to a particular category when compared to the percentage of all customers belonging to that same category.</span></span> <span data-ttu-id="a17b6-144">たとえば、*顧客満足度* が主属性として選択され、3 つのカテゴリ (*低*、*中*、*高*) で構成されているとします。</span><span class="sxs-lookup"><span data-stu-id="a17b6-144">For example, *customer satisfaction* is chosen as the primary attribute and it consists of three categories (*Low*, *Medium* and *High*).</span></span> <span data-ttu-id="a17b6-145">カテゴリごとに、同じカテゴリのすべての顧客の割合と比較して、そのカテゴリに属する顧客の割合が大幅に高いまたは低いセグメントが提案されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-145">For each category, segments will be suggested that have a significantly higher or lower percentage of customers belonging to that category as compared to the proportion of all customers in same category.</span></span> <span data-ttu-id="a17b6-146">すべての顧客の 22% の満足度が *高* の場合、22% と比べて満足度が *高* の顧客の割合よりも大幅に高いまたは低いセグメントのみがそのカテゴリに提案されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-146">If 22% of all customers have a *High* satisfaction, then, only segments that have a significantly higher or lower proportion of customers with a *High* satisfaction as compared to 22% will be suggested for that category.</span></span> <span data-ttu-id="a17b6-147">同様に、統計的に有意である場合、セグメントは他の各カテゴリ (*低* と *中*) に対しても提案されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-147">Similarly, segments will be suggested for each of the other categories (*Low* and *Medium*) if they are statistically significant.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a17b6-148">現在、最大 10 個のカテゴリを持つカテゴリ主属性のみをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="a17b6-148">Currently, we only support primary categorical attributes that have up to 10 categories.</span></span> <span data-ttu-id="a17b6-149">10 を超えるカテゴリを持つ主属性に基づいてセグメントの提案を表示する場合、一部のカテゴリをグループ化して、カテゴリの数を 10 以下に減らすことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="a17b6-149">If you want to see segment suggestions based on a primary attribute with more than 10 categories, we recommend to group some of the categories to reduce the number of categories to 10 or fewer.</span></span> <span data-ttu-id="a17b6-150">この制限は、主属性にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-150">This limitation only applies to primary attributes.</span></span> <span data-ttu-id="a17b6-151">影響を与えるカテゴリ属性については、現在、最大 100 までのカテゴリをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="a17b6-151">For influencing categorical attributes, we currently support a maximum of 100 categories.</span></span>
+
+## <a name="generate-suggested-segments"></a><span data-ttu-id="a17b6-152">提案されたセグメントを生成する</span><span class="sxs-lookup"><span data-stu-id="a17b6-152">Generate suggested segments</span></span>
+
+1. <span data-ttu-id="a17b6-153">**セグメント** に移動します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-153">Go to **Segments**.</span></span>
+
+1. <span data-ttu-id="a17b6-154">**提案 (プレビュー)** タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-154">Select the **Suggestions (preview)** tab.</span></span>
+
+1. <span data-ttu-id="a17b6-155">**新しい提案を取得する** を選択して、ガイド付きエクスペリエンスを開始します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-155">Select **Get new suggestions** to start the guided experience.</span></span>
+
+1. <span data-ttu-id="a17b6-156">主属性としてメジャーまたは顧客属性を選択して、**次へ** を選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-156">Choose a measure or a customer attribute as the primary attribute and select **Next**.</span></span>
+
+   :::image type="content" source="media/suggested-segments-primary-attribute.png" alt-text="提案されたセグメントに関して提案の主属性を選択します。":::
+
+1. <span data-ttu-id="a17b6-158">影響を与える属性を選択して、**保存** を選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-158">Select the influencing attributes and select **Save**.</span></span>
+   
+   > [!TIP]
+   > <span data-ttu-id="a17b6-159">影響を与える属性を複数選択すると、それらが主属性にどのように影響するかを評価する可能性が高まります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-159">Selecting multiple influencing attributes improves the chances of evaluating how they influence the primary attribute.</span></span> <span data-ttu-id="a17b6-160">主属性に影響を与えない属性は含めないでください。</span><span class="sxs-lookup"><span data-stu-id="a17b6-160">Don't include attributes that have no influence the primary attribute.</span></span> <span data-ttu-id="a17b6-161">たとえば、すべての顧客が特定の国から来ている場合は、出力に影響を与えないため、*国* 属性は含めません。</span><span class="sxs-lookup"><span data-stu-id="a17b6-161">For example, if all your customers are from a specific country, don't include the *country* attribute because it won't have any impact on the output.</span></span>
+
+1. <span data-ttu-id="a17b6-162">顧客プロファイルと選択した属性の数によっては、選択した属性の処理に数分かかる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-162">Depending on the number of customer profiles and selected attributes, it can take a few minutes to process the selected attributes.</span></span> 
+
+## <a name="view-details-of-a-suggested-segment"></a><span data-ttu-id="a17b6-163">提案されたセグメントの詳細を見る</span><span class="sxs-lookup"><span data-stu-id="a17b6-163">View details of a suggested segment</span></span>
+
+<span data-ttu-id="a17b6-164">AI モデルが提案を生成すると、それらは **セグメント** > **提案 (プレビュー)** にリスト表示されます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-164">Once the AI model has generated the suggestions, you'll find them listed on **Segments** > **Suggestions (preview)**.</span></span>
+ 
+<span data-ttu-id="a17b6-165">提案されたセグメントを選択して、平均値とセグメント メンバーの数の比較など、その提案の詳細を確認します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-165">Select a suggested segment to review the details of that suggestion including a comparison of the average value and the number of segment members.</span></span> <span data-ttu-id="a17b6-166">AI モデルが選択したセグメントを提案するために学習した属性値またはルールを確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-166">You can also review the attribute values or rules that the AI model learned to suggest the selected segment.</span></span>
+
+## <a name="save-a-suggestion-as-a-segment"></a><span data-ttu-id="a17b6-167">標準セグメントをセグメントとして保存する</span><span class="sxs-lookup"><span data-stu-id="a17b6-167">Save a suggestion as a segment</span></span>
+
+1. <span data-ttu-id="a17b6-168">**セグメント** > **提案 (プレビュー)** に移動します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-168">Go to **Segments** > **Suggestions (preview)**.</span></span>
+
+1. <span data-ttu-id="a17b6-169">保存するセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-169">Select the segment you want to save.</span></span> 
+
+1. <span data-ttu-id="a17b6-170">サイド ペインで、**セグメントとして保存する** を選択します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-170">In the side pane, select **Save as segment**.</span></span> 
+
+1. <span data-ttu-id="a17b6-171">セグメントを保存すると、**すべてのセグメント** タブ上のセグメントのリストに表示されます。これで、[他のセグメントと同様に、更新、編集、または削除](segments.md)できるようになります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-171">After saving the segment, it will show in the list of segments on the **All segments** tab. It can now be [refreshed, edited, or deleted like any other segment](segments.md).</span></span>
+
+## <a name="refresh-or-edit-a-set-of-suggestions"></a><span data-ttu-id="a17b6-172">一連の提案を更新または編集する</span><span class="sxs-lookup"><span data-stu-id="a17b6-172">Refresh or edit a set of suggestions</span></span>
+
+1. <span data-ttu-id="a17b6-173">**セグメント** > **提案 (プレビュー)** に移動します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-173">Go to **Segments** > **Suggestions (preview)**.</span></span>
+
+1. <span data-ttu-id="a17b6-174">**提案を更新する** を選択して、構成された属性を保持しながら提案を更新します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-174">Select **Refresh suggestions** to refresh the suggestions while keeping configured attributes.</span></span> <span data-ttu-id="a17b6-175">または **属性を編集する** を選択して、構成された属性を変更します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-175">Or select **Edit attributes** to modify the configured attributes.</span></span> <span data-ttu-id="a17b6-176">システムは AI モデルを再実行し、最新のデータに基づいてセグメントの提案を生成し、現在の提案を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="a17b6-176">The system will rerun the AI model, generate segment suggestions based on the latest data, and replace the current suggestions.</span></span>
+
+## <a name="limitations"></a><span data-ttu-id="a17b6-177">制限</span><span class="sxs-lookup"><span data-stu-id="a17b6-177">Limitations</span></span>
+
+1. <span data-ttu-id="a17b6-178">推定セグメントサイズの不一致: 空の値を含む主属性を選択すると、セグメント提案の推定セグメント サイズに影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-178">Estimated segment size mismatch: If you choose a primary attribute that contains empty values, it can affect the estimated segment size in the segment suggestions.</span></span> <span data-ttu-id="a17b6-179">このようなセグメントを保存する場合、実際のセグメント サイズは元の推定値と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a17b6-179">When saving such segment, the actual segment size can be different to the original estimation.</span></span>
+ 
+2. <span data-ttu-id="a17b6-180">ブール型の主属性が機能しない: 現在、主属性としてサポートされているのは文字列型と数値型のデータのみです。</span><span class="sxs-lookup"><span data-stu-id="a17b6-180">Boolean type primary attributes don't work: Currently, we only support string and numeric types of data as the primary attribute.</span></span>
+
+3. <span data-ttu-id="a17b6-181">提案されたセグメントが十分に区別されていない: 選択された属性とそれらの属性の値の分布が結果に影響を与えることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="a17b6-181">Suggested segments aren't distinct enough: Keep in mind that the selected attributes and the distribution of values of those attributes influences the results.</span></span> <span data-ttu-id="a17b6-182">影響を与える属性あるいは主属性でさえも変更すると、結果が変化します。</span><span class="sxs-lookup"><span data-stu-id="a17b6-182">You can change your influencing attributes or even your primary attribute to get different results.</span></span>
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
