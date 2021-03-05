@@ -1,20 +1,20 @@
 ---
 title: Customer Insights のデータを Dynamics 365 Sales にエクスポートする
 description: Dynamics 365 Sales への接続を構成する方法について説明します。
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643824"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269014"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Dynamics 365 Sales のコネクタ (プレビュー)
 
@@ -24,7 +24,10 @@ Dynamics 365 Sales で顧客データを使用して、マーケティング リ
 
 ## <a name="prerequisite"></a>前提条件
 
-[Common Data Service を使用して取り込んだ Dynamics 365 Sales](connect-power-query.md) の取引先担当者レコード。
+1. Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。 取引先担当者を取り込む方法の詳細については、[Common Data Services を使った Dynamics 365 Sales](connect-power-query.md) を読んでください。
+
+   > [!NOTE]
+   > 対象者インサイトから Sales にセグメントをエクスポートしても、Sales インスタンスに新しい取引先担当者レコードは作成されません。 Sales からの取引先担当者レコードは、対象者インサイトに取り込まれ、データ ソースとして使用される必要があります。 また、セグメントをエクスポートする前に、顧客 ID を取引先担当者 ID にマッピングするために、統合された顧客エンティティに含める必要があります。
 
 ## <a name="configure-the-connector-for-sales"></a>Sales 用のコネクタを構成する
 
@@ -49,3 +52,6 @@ Dynamics 365 Sales で顧客データを使用して、マーケティング リ
 ## <a name="export-the-data"></a>データをエクスポートする
 
 [オンデマンドでデータをエクスポート](export-destinations.md) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

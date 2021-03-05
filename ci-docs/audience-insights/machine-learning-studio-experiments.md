@@ -4,17 +4,17 @@ description: Dynamics 365 Customer Insights で Machine Learning Studio (クラ�
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669024"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270210"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Azure Machine Learning Studio (クラシック) に基づくモデルを使用する
 
@@ -171,3 +171,6 @@ CLTV の予測は、予測値が正の値の連続型変数であるため、回
 Customer Insights でこれらの予測を使用するには、顧客 ID と共に予測値を **エクスポート** する必要があります。 ソース データをエクスポートするのと [同じ Azure Blob Storage の場所にエクスポート](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) します。 予測 Webサービスは、定期的に実行してスコアを更新するようにスケジュール設定することができます。
 
 カスタム モデルで生成されたデータを使用して、顧客データをさらに強化させることができます。 詳細については、[カスタム機械学習モデル](custom-models.md) を参照してください。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

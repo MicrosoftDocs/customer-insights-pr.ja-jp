@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643599"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269796"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>トランザクション解約予測 (プレビュー) サンプル ガイド
 
@@ -49,7 +49,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    [!div class="mx-imgBorder"]
    ![生年月日を日付に変換](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 
 1. データ ソースを保存します。
 
@@ -66,7 +66,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **PurchasedOn**: 日付/時刻
    - **TotalPrice**: 通貨
    
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommercePurchases** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommercePurchases** に変更します。
 
 1. データ ソースを保存します。
 
@@ -84,7 +84,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **RewardsPoints**: 整数
    - **CreatedOn**: 日付/時刻
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
 
 1. データ ソースを保存します。
 
@@ -166,7 +166,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
      :::image type="content" source="media/model-levers.PNG" alt-text="モデル レバーの予測ウィンドウと解約定義を選択します。":::
 
-1. **購入履歴 (必須)** を選択し、サブスクリプション履歴の **データの追加** を選択します。
+1. **購入履歴 (必須)** を選択し、購入履歴に対して **データの追加** を選択します。
 
 1. **eCommercePurchases : eCommerce** エンティティを追加し、eコマースのフィールドをモデルに必要な対応するフィールドにマップします。
 
@@ -204,3 +204,6 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 これで、このサブスクリプション ビジネスの解約リスクの高い顧客を識別するセグメントが動的に更新されます。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

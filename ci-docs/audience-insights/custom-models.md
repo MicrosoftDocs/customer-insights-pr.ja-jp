@@ -4,16 +4,16 @@ description: Dynamics 365 Customer Insights で Azure Machine Learning で作成
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668909"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267240"
 ---
 # <a name="custom-machine-learning-models"></a>カスタム機械学習モデル
 
@@ -46,15 +46,15 @@ ms.locfileid: "4668909"
 
 1. **モデルを含む Web サービス** ドロップダウンで、Machine Learning Studio (クラシック) Web サービスまたは Azure Machine Learning パイプラインを選択します。 続いて、**次へ** を選択します。
    - [Machine Learning Studio (クラシック) での Web サービスの公開](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service) の詳細
-   - [デザイナーを使用した Azure Machine Learning でのパイプラインの公開](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) または [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) の詳細。 
-     > [!NOTE]
-     > パイプラインは、[パイプライン エンドポイント](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) で公開する必要があります。
+   - [デザイナーを使用した Azure Machine Learning でのパイプラインの公開](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) または [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) の詳細。 パイプラインは、[パイプライン エンドポイント](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) で公開する必要があります。
 
 1. **Web サービスの入力** ごとに、対象者に関するインサイトから一致する **エンティティ** を選択して、**次へ** を選択します。
+   > [!NOTE]
+   > カスタム モデル ワークフローは、ヒューリスティックを適用して、フィールドの名前とデータ型に基づいて Web サービス入力フィールドをエンティティ属性にマッピングします。 Web サービス フィールドをエンティティにマップできない場合は、エラーが表示されます。
 
    > [!div class="mx-imgBorder"]
    > ![ワークフローの構成](media/intelligence-screen2-updated.png "ワークフローの構成")
-
+   
 1. **モデル出力パラメーター** のステップで、次のプロパティを設定します:
    - Machine Learning Studio (クラシック)
       1. Web サービス出力結果のフロー先となる、出力 **エンティティ名** を入力します。
@@ -112,3 +112,6 @@ ms.locfileid: "4668909"
 1. **削除** を選び、削除内容を確認します。
 
 ワークフローが削除されます。 ワークフローの作成時に作成された [エンティティ](entities.md)は保持されており、これらは **エンティティ** ページで確認することができます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: 顧客カード アドインのインストールと構成
 description: Dynamics 365 Customer Insights の顧客カード アドインのインストールと構成
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644049"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268050"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -28,7 +28,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 顧
 - [Common Data Service を使用して Dynamics 365 アプリから取り込んだ](connect-power-query.md) 顧客プロファイル。
 - 顧客カード アドインのユーザーは、対象者に関するインサイトに [ユーザーとして追加](permissions.md) する必要があります。
 - [構成された検索およびフィルター機能](search-filter-index.md)。
-- 人口統計コントロール: 年齢や性別などの人口統計フィールドは、統合顧客プロファイルで利用できます。
+- 人口統計コントロール: 人口統計フィールド (年齢や性別など) は、統合顧客プロファイルで利用できます。
 - エンリッチメント制御 : 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
 - インテリジェンス制御: Azure Machine Learning ([予測](predictions.md) または [カスタム モデル](custom-models.md)) を使用して生成されたデータが必要です
 - メジャー制御: [構成済みメジャー](measures.md) が必要です。
@@ -92,10 +92,26 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 顧
 
 1. **フィールドのプロパティ** ダイアログで、**フォームにラベルを表示する** チェックボックスをオフにします。
 
-1. **Web** オプションをコントロールに選択します。 エンリッチメント制御で、**enrichmentType** フィールドを設定して、表示するエンリッチメントのタイプを選択します。 エンリッチメントのタイプごとに個別のエンリッチメント制御を追加する必要があります。
+1. **Web** オプションをコントロールに選択します。 エンリッチメント制御で、**enrichmentType** フィールドを設定して、表示するエンリッチメントのタイプを選択します。 エンリッチメントのタイプごとに個別のエンリッチメント コントロールを追加します。
 
 1. **保存** そして **公開** を選択して、更新された問い合わせフォームを公開します。
 
 1. 公開されている取引先担当者フォームに移動します。 新しく追加されたコントロールが表示されます。 初めて使用するときはサインインする必要がある場合があります。
 
 1. カスタム コントロールで表示したいものをカスタマイズするには、右上隅の編集ボタンを選択します。
+
+## <a name="upgrade-customer-card-add-in"></a>顧客カード アドインのアップグレード
+顧客カード アドインは自動的にアップグレードされません。 最新バージョンにアップグレードするには、アドインがインストールされている Dynamics 365 アプリでこの手順に従います。
+
+1. Dynamics 365 アプリで、**設定** > **カスタマイズ**、そして **ソリューション** を選択します。
+
+1. アドインの表で、**CustomerInsightsCustomerCard** を探して、行を選択します。
+
+1. アクションバーで **ソリューションのアップグレードを適用する** を選択します。
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 アプリのカスタマイズ領域でソリューションをアップグレードする":::
+
+1. アップグレード プロセスを開始すると、アップグレードが完了するまで読み込みインジケータが表示されます。 新しいバージョンがない場合、アップグレードでエラーメッセージが表示されます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

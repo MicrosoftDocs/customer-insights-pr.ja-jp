@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c25cfbf3808fc1534b54d2d834f1c63ff4c9fe0a
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: 6b73aa93ec1a98f2b8d20d02e88bc6304f887078
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667100"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269474"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -47,7 +47,10 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 - 強化された顧客プロファイルの数を使用して、エンリッチメントの詳細を **表示** します。
 - エンリッチメント構成を **編集** します。
 - 最新のデータで顧客プロファイルを更新するためのエンリッチメントを **実行** します。
-- 既存のエンリッチメントを **非アクティブ化** して、スケジュールされた更新のたびに自動更新されないようにします。 最後に成功した更新のデータは引き続き利用できます。 非アクティブなエンリッチメントを **活性化** し、スケジュールされた更新ごとに自動更新を再開します。
+- 既存のエンリッチメントを **非アクティブ化** して、スケジュールされた更新のたびに自動更新されないようにします。 最後に成功した更新のデータは引き続き使用できます。 非アクティブなエンリッチメントを **活性化** し、スケジュールされた更新ごとに自動更新を再開します。
 - エンリッチメントを **削除** します。
 
 リストで複数のエンリッチメントを選択して、一度に実行または非アクティブ化できます。 表示と編集のオプションは一括アクションとして使用できず、一度に 1 つのエンリッチメントに対してのみ機能します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

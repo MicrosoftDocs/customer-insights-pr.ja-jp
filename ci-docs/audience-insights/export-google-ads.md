@@ -5,16 +5,16 @@ ms.date: 11/18/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 06aa0b6ff3125d8735adc8c8f9f6dad69087d9f8
-ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
+ms.openlocfilehash: ba7c82e643ea0dc1897e0954e78646932cafffa3
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4568460"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268968"
 ---
 # <a name="connector-for-google-ads-preview"></a>Google 広告用コネクタ (プレビュー)
 
@@ -74,3 +74,6 @@ ms.locfileid: "4568460"
 
 Dynamics 365 Customer Insights による Google 広告へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、Google 広告がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

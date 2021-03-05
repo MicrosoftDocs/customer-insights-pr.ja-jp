@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406154"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477094"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI のコネクタ (プレビュー)
 
@@ -31,7 +31,7 @@ Power BI Desktop を使用してデータをビジュアル化します。 統�
 
 1. **詳細を表示** を選択して、**Dynamics 365 Customer Insights** を検索します
 
-1. 結果を選択して、**接続** を選択します。
+1. **接続** を選択します。
 
 1. Customer Insightsに使用するのと同じ組織アカウントを使用して **サインイン** して、**接続** を選択します。
    > [!NOTE]
@@ -52,3 +52,22 @@ Power BI の Customer Insights コネクタは、最大 100 万の顧客プロ�
 ### <a name="work-with-a-subset-of-data"></a>データのサブセットを使用する
 
 データのサブセットを使用することを検討してください。 たとえば、すべての顧客レコードを Power BI にエクスポートする代わりに、[セグメント](segments.md) を作成できます。
+
+## <a name="troubleshooting"></a>トラブルシューティング​​
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Power BI に Customer Insights 環境はに表示されません
+
+対象者に関するインサイトの 2 つの同一エンティティ間で定義された[リレーションシップ](relationships.md)が複数ある環境は、Power BI コネクタでは使用できません。
+
+重複したリレーションシップは特定して削除できます。
+
+1. Power BI にない環境の対象者インサイトで、**データ** > **リレーションシップ** に進みます。
+2. 重複したリレーションシップを特定します。
+   - 同じ 2 つのエンティティ間に複数のリレーションシップが定義されているかどうかを確認してください。
+   - 統合プロセスに含まれる 2 つのエンティティ間に作成されたリレーションシップがあるかどうかを確認します。 統合プロセスに含まれるすべてのエンティティ間に定義された暗黙のリレーションシップがあります。
+3. 識別された重複するリレーションシップをすべて削除します。
+
+重複したリレーションシップを削除した後、Power BI コネクタに再接続してみます。 これで環境が利用可能になりました。
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

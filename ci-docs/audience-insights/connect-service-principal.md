@@ -1,20 +1,20 @@
 ---
 title: サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する
 description: 対象者に関するインサイトの Azure サービス プリンシパルを使用して、対象者に関するインサイトに接続するときに、独自のデータ レイクに接続します。
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644094"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267728"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>対象者に関するインサイトの Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する
 
@@ -22,7 +22,9 @@ Azure サービスを使用する自動ツールは、常に制限されたア�
 
 サービス プリンシパルを使用して、安全に [Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md) したり、[新しい環境を作成、または既存の環境を更新](manage-environments.md#create-an-environment-in-an-existing-organization) したりできます。
 
-サービス プリンシパルを作成するには、Azure サブスクリプションに対する管理者のアクセス許可が必要です。
+> [!IMPORTANT]
+> - サービス プリンシパルを使用する予定の Azure Data Lake Gen2 ストレージ アカウントでは、[階層名前空間 (HNS) が有効](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)である必要があります。
+> - サービス プリンシパルを作成するには、Azure サブスクリプションに対する管理者のアクセス許可が必要です。
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>対象者に関するインサイトに Azure サービス プリンシパルを作成する
 
@@ -83,7 +85,7 @@ Azure portal に移動して、対象者に関するインサイトで使用す�
 
 以下の手順に従って、選択したアプローチに関する必要な情報を指定します。
 
-### <a name="resounce-based-storage-account-connection"></a>リソース ベースのストレージ アカウント接続
+### <a name="resource-based-storage-account-connection"></a>リソースベースのストレージ アカウント接続
 
 1. [Azure 管理ポータル](https://portal.azure.com) に移動し、サブスクリプションにサインインし、ストレージ アカウントを開きます。
 
@@ -108,7 +110,8 @@ Azure portal に移動して、対象者に関するインサイトで使用す�
 1. **サブスクリプション**、**リソース グループ**、ストレージ アカウントの **名前** を確認して、対象者に関するインサイトで適切な値を選択していることを確認します。
 
 1. 対象者に関するインサイトで、ストレージ アカウントを添付するときに、値または対応するフィールドを選択します。
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="ストレージ アカウントのリソース ID 情報を入力します。":::
    
 1. 対象者に関するインサイトの残りの手順を続行して、ストレージ アカウントを添付します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

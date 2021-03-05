@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653986"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269842"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>サブスクリプション解約予測 (プレビュー) サンプル ガイド
 
@@ -46,10 +46,9 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **DateOfBirth**: 日付
    - **CreatedOn**: 日付/時刻/タイムゾーン
 
-   [!div class="mx-imgBorder"]
-   ![生年月日を日付に変換](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 
 1. データ ソースを保存します。
 
@@ -67,7 +66,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **RewardsPoints**: 整数
    - **CreatedOn**: 日付/時刻
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
 
 1. データ ソースを保存します。
 
@@ -90,7 +89,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **Is_auto_renew**: True/False
    - **RecurringFrequencyInMonths**: 整数
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
 
 1. データ ソースを保存します。
 
@@ -230,3 +229,6 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 これで、このサブスクリプション ビジネスの解約リスクの高い顧客を識別するセグメントが動的に更新されます。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: サードパーティ エンリッチメント HERE Technologies によるエンリッチメント
 description: HERE Technologies サードパーティ エンリッチメントに関する一般情報。
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668684"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269520"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies による顧客プロファイルの強化 (プレビュー)
 
@@ -43,7 +43,11 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 
 1. **HERE に接続** を選択して両方の入力を確認します。
 
-1. **データの追加** を選択して、フィールドを住所 1 または住所 2、あるいはその両方にマップするかどうかを選択します。 両方の住所 (例えば、自宅と会社の住所) のフィールド マッピングを指定し、両方の住所のプロファイルを個別に強化できます。 **次へ** を選択します。
+1.  **データを追加する** を選択して、HERE Technologies の場所データをエンリッチさせる **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="顧客データ セットを選択するときのスクリーンショット。":::
+
+1. フィールドを住所 1 または住所 2、あるいはその両方にマップするかどうかを選択します。 両方の住所 (例えば、自宅と会社の住所) のフィールド マッピングを指定し、両方の住所のプロファイルを個別に強化できます。 **次へ** を選択します。
 
 1. HERE Technologies から一致する位置データを検索するために、統合プロファイルのどのフィールドを使用するかを定義します。 **番地 1** と **郵便番号** フィールドは、住所 1 または住所 2、あるいはその両方に必要です。 一致精度を高めるために、より多くのフィールドを追加できます。
 
@@ -68,3 +72,6 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 
 Dynamics 365 Customer Insights による HERE Technologies へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、HERE Technologies がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、このエンリッチメントはいつでも削除できます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

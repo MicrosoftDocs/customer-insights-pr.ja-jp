@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644409"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268324"
 ---
 # <a name="transactional-churn-prediction-preview"></a>トランザクション解約予測 (プレビュー)
 
@@ -96,6 +96,8 @@ ms.locfileid: "4644409"
 1. 必要に応じて、**顧客活動** の **データの追加** を選択します。 前提条件に記載されているように、顧客活動情報を提供するエンティティを選択します。
 
 1. セマンティック フィールドを顧客活動エンティティ内の属性にマップし、**次へ** を選択します。 フィールドの説明については、[前提条件](#prerequisites)を参照してください。
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="トランザクション データの顧客フィールドをマッピングします。":::
 
 1. 構成した顧客活動のタイプに一致する活動タイプを選択します。 **新規作成** を作成して、利用可能な活動の種類を選択するか、新しい種類を作成します。
 
@@ -185,3 +187,6 @@ ms.locfileid: "4644409"
 1. 削除する予測の横に配置されている縦型の省略記号を選択します。
 
 1. **削除** を選択します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

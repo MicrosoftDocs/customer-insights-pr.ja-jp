@@ -1,30 +1,26 @@
 ---
-title: 対象者に関するインサイトの機能
-description: Dynamics 365 Customer Insights 対象者に関するインサイト機能の概要。
-ms.date: 02/05/2020
+title: Dynamics 365 Customer Insights の対象者インサイトの概要
+description: Dynamics 365 Customer Insights の対象者インサイトの概要。
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406183"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477001"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights 対象者に関するインサイトの機能
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights の対象者インサイトの概要
 
-顧客エクスペリエンスは、すべての組織のデジタル変革を実現する上で非常に重要な役割を担っています。 今日の市場で競争するためには、組織は個人レベルで顧客との有意義な関係を構築する必要があります。 大規模なカスタマイズを効果的に行うには、完全で統一された顧客ビューが必要です。
+対象者に関するインサイトは、顧客をより深く理解するのに役立ちます。 さまざまなトランザクション、行動、および観測ソースからのデータを接続して、360 度の顧客ビューを作成します。 これらのインサイトを使用して、顧客中心のエクスペリエンスとプロセスを推進します。 顧客データを統合して理解し、インテリジェントなインサイトおよびアクションに活用します。
 
-対象者に関するインサイトは、顧客をより深く理解するのに役立ちます。 さまざまなトランザクション、行動、および観測ソースからのデータを接続して、360 度の顧客ビューを作成します。 これらのインサイトを使用して、顧客中心のエクスペリエンスとプロセスを推進します。
-
-**顧客データを統合して理解し、インテリジェントなインサイトおよびアクションに活用します。**
-
-対象者に関するインサイトを使用することで、組織は次のことが可能になります:  
+## <a name="main-benefits"></a>主な利点 
 
 - **データ サイロを削除し、顧客データを統合する**
 
@@ -33,15 +29,15 @@ ms.locfileid: "4406183"
 
 - **Microsoft Graph に含まれるオーディエンス インテリジェンスのエンリッチ**
 
-  - Microsoft Graph に含まれるオーディエンス インテリジェンスを組み込むことにより、より豊かな顧客プロファイルを構築します。  
+  - [Microsoft Graph ](enrichment-microsoft-graph.md)に含まれるオーディエンス インテリジェンスを組み込むことにより、より豊かな顧客プロファイルを構築します。  
 
 - **ビジネス プロセスと個人用に設定されたカスタマー エクスペリエンスを強化**
 
   - チャンネル全体で個人用に設定されたエンゲージメントを促進—すぐに使用できる、コンテキストに応じた Customer Insights、および毎日使用するビジネス アプリケーションに組み込まれたカスタマイズされた顧客プロファイル カードにより、マーケティング、営業、およびサービスの専門家を支援します
   - カスタマイズ可能なプロファイル、ビジネス メジャー、およびセグメントに基づいて、顧客中心のエクスペリエンスとプロセスを自動化します。
-  - Microsoft Power Platform で構築された業種エクスペリエンスを有効にして拡張します。 PowerApps から強力なロー コード アプローチを使用して、組み込みインサイトでアプリケーションをすばやく構築します。  
+  - [Microsoft Power Platform](https://powerplatform.microsoft.com/) で構築された業種エクスペリエンスを有効にして拡張します。 PowerApps から強力なロー コード アプローチを使用して、組み込みインサイトでアプリケーションをすばやく構築します。  
 
-対象者に関するインサイトには、次の主要ユーザー向けの機能が含まれます:
+## <a name="key-audiences"></a>主な対象者
 
 - **データ アナリスト / 管理者:**
 
@@ -58,5 +54,8 @@ ms.locfileid: "4406183"
 
 - **ビジネス アナリスト:**
 
-  - カスタマイズ可能なプロファイルを作成し、メジャーを定義し、セグメントを作成して、組織に固有の顧客の 360 度ビューを取得します。  
-  - すぐに使用できるコネクタを使用する PowerApps、Microsoft Power BI、または API 用の既成のコネクタを使用して、ビジネス アプリケーションまたは BI ソリューションのインサイトを取得します。  
+  - カスタマイズ可能なプロファイルを作成し、メジャーを定義し、セグメントを作成して、組織に固有の顧客の 360 度ビューを取得するための予測分析の恩恵を受けます。  
+  - インサイトをさらに処理するために、いくつかの Microsoft およびサードパーティのアプリケーションまたは API に既製のコネクタを使用します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

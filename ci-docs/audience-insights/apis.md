@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 5a03e916676800afdd8692da865a1060952d5c4f
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689136"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267530"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -140,3 +140,6 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. メソッドは複数の型 (たとえば、`IList<InstanceInfo>` や `ApiErrorResult`) を返すことができるため、応答は `object` 型である可能性があります。 戻り値の型を確認するためには、その操作の [API 詳細ページ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) で指定した応答型にオブジェクトを安全にキャストできます。    
    要求に関する詳細情報が必要な場合は、**HTTP メッセージ メソッド** を使用して、未加工の応答オブジェクトにアクセスします。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

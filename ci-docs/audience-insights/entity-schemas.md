@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643914"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269290"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
@@ -45,3 +45,6 @@ ms.locfileid: "4643914"
 [Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 **GitHub からロードする** を選択します **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** に移動すると、Customer Insights エンティティと定義のリストが表示されます。
 > [!div class="mx-imgBorder"]
 > ![CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター](media/CDM-entity-navigator.png "CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

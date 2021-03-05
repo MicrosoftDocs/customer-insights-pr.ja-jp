@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689181"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270286"
 ---
 # <a name="real-time-data-ingestion-preview"></a>リアルタイム データ インジェスト (プレビュー)
 
@@ -44,7 +44,7 @@ ms.locfileid: "4689181"
 
 ## <a name="real-time-creation-of-activities"></a>活動のリアルタイム作成
 
-リアルタイム API を使用すると、ソース システム (個々のソース レコード) から統合顧客プロファイルに、新しい活動を公開できます。 新しい活動は、統合された顧客プロファイルのタイムラインで統合された活動として数秒以内に利用可能になります。 タイムラインは、顧客カード ビューまたは構成したその他のタイムライン統合で確認できます。
+リアルタイム API を使用すると、ソース システム (個々のソース レコード) から統合顧客プロファイルに、新しい活動を公開できます。 新しいアクティビティは、その統合された顧客プロファイルのタイムラインで、数秒で統合されたアクティビティとして利用できます。 タイムラインは、顧客カード ビューまたは構成したその他のタイムライン統合で確認できます。
 
 > [!NOTE]
 >
@@ -83,6 +83,7 @@ ms.locfileid: "4689181"
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>テレメトリを使用してリアルタイムの使用状況を把握する
 
-リアルタイム API への要求の量の概要と、システムで発生する可能性のある問題に関する情報を取得します。 [リアルタイム テレメトリにアクセス](system.md#api-usage-tab) するには、**管理** > **システム** > **API の使用** に移動します。 **操作** テーブルでは、リアルタイム メソッドを使用する API 操作の行に、リアルタイム API の使用状況を表示するボタンが含まれています。 ボタンは双眼鏡マークで視覚化されています。 ボタンを選択して、現在の環境でリアルタイム API の使用状況の詳細を含むサイド ペインを開きます。
+リアルタイム API への要求の量の概要と、システムで発生する可能性のある問題に関する情報を取得します。 [リアルタイム テレメトリにアクセス](system.md#api-usage-tab)できます。 
 
-**グループ化** セレクターを使用して、過去 24 時間から過去 30 日間までのタイムライン上でリアルタイムのインタラクションを最適に表示する方法を選択します。 API メソッド、エンティティー修飾名 (取り込んだエンティティー)、作成者 (イベントのソース)、結果 (成功または失敗)、またはエラー コード別にデータをグループ化できます。 データは履歴グラフおよびテーブルとして利用できます。
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

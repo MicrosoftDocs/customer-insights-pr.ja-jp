@@ -1,20 +1,20 @@
 ---
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644139"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270118"
 ---
 # <a name="manage-environments"></a>環境の管理
 
@@ -46,9 +46,9 @@ ms.locfileid: "4644139"
 
 環境の作成方法 :
 
-1. アプリのヘッダーから **設定** 記号を選択します。
+1. アプリのヘッダーにある **環境** ピッカーを選択します。
 
-1. **新しい環境** を選択します。
+1. **新規** をクリックします。
 
    > [!div class="mx-imgBorder"]
    > ![環境の設定](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ ms.locfileid: "4644139"
 
    - Azure Data Lake Storage Gen2 オプションの場合、認証にリソース ベースのオプションとサブスクリプション ベースのオプションのどちらかを選択できます。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 **コンテナー** 名は変更できず、"customerinsights" になります。
    
-   - [予測](predictions.md) を使用する場合は、**予測の使用** の下の **サーバー アドレス** フィールドに Common Data Service インスタンスの URL を入力します。
+   - [予測](predictions.md)を使う場合、または Microsoft Dataverse に基づいてアプリケーションやソリューションとのデータ共有を構成する場合は、**Microsoft Dataverse とのデータ共有を構成して、追加機能を有効にする** の下に Microsoft Dataverse 環境 URL を入力します。 **データ共有を有効にする** を選択して、Customer Insights 出力データを Microsoft Dataverse マネージド Data Lake と共有します。
+
+     > [!NOTE]
+     > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
+     > - [エンティティの欠落値の予測](predictions.md)は、Microsoft Dataverse マネージド Data Lake とのデータ共有を有効にした場合、現在はサポートされていません。
+
+     > [!div class="mx-imgBorder"]
+     > ![Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png) とのデータ共有を可能にする構成オプション
 
    データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 データ ファイルと model.json ファイルが作成され、実行するプロセスに基づいてそれぞれのサブ フォルダーに追加されます。
 
@@ -86,7 +93,7 @@ ms.locfileid: "4644139"
 以下の構成設定がコピーされます：
 
 - 機能の構成
-- 統合/インポートされたデータソース
+- 取り込んだ/インポートされたデータ ソース
 - データ統合 (マッピング、一致、マージ) の構成
 - セグメント
 - メジャー
@@ -120,11 +127,11 @@ ms.locfileid: "4644139"
 
 既存の環境について詳細な部分を編集できます。
 
-1. **管理** > **システム** > **詳細** に移動します。
+1.  アプリのヘッダーにある **環境** ピッカーを選択します。
 
-2. **編集** を選択します。
+2.  **編集** アイコンを選択します。
 
-3. 環境の **表示名称** を更新できますが、**リージョン** または **タイプ** の変更はできません。
+3. **環境の編集** ボックスで、環境の **表示名** は更新できますが、**リージョン** または **タイプ** を変更することはできません。
 
 4. 環境がデータを Azure Data Lake Storage Gen2 に保存するように構成されている場合は、 **アカウントキー** を更新することができます。 ただし、**アカウント名** または **コンテナー** 名前を変更することはできません。
 
@@ -132,19 +139,27 @@ ms.locfileid: "4644139"
 
 ## <a name="reset-an-existing-environment"></a>既存の環境のリセット
 
-すべての構成を削除し、取り込んだデータを削除する場合は、環境を空の状態にリセットできます。
+管理者の場合、すべての構成を削除し、取り込んだデータを削除する場合は、環境を空の状態にリセットできます。
 
-1.  **管理** > **システム** > **詳細** に移動します。
+1.  アプリのヘッダーにある **環境** ピッカーを選択します。 
 
-2.  **リセット** を選択します。 
+2.  リセットする環境を選択し、省略記号 **...** を選択します。 
 
-3.  削除を確認するには、環境名を入力して、**リセット** を選択します。
+3. **リセット** オプションを選択してください。 
+
+4.  削除を確認するには、環境名を入力して、**リセット** を選択します。
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>既存の環境を削除する (管理者のみ利用可能)
+
+管理者の場合、管理している環境を削除できます。
+
+1.  アプリのヘッダーにある **環境** ピッカーを選択します。
+
+2.  リセットする環境を選択し、省略記号 **...** を選択します。 
+
+3. **削除** オプションを選択してください。 
+
+4.  削除の確認をするには、当該環境の名前を入力して **削除** を選択します。
 
 
-## <a name="delete-an-existing-environment"></a>既存の環境を削除する
-
-1. **管理** > **システム** > **詳細** に移動します。
-
-1. **削除** を選択します。
-
-1. 削除の確認をするには、当該環境の名前を入力して **削除** を選択します。
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

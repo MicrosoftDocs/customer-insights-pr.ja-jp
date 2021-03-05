@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406195"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269886"
 ---
 # <a name="relationships-between-entities"></a>エンティティ間の関連付け
 
@@ -28,8 +28,8 @@ ms.locfileid: "4406195"
 > ![リレーションシップ の作成](media/relationships-entities-merge.png "リレーションシップ の作成")
 
 - ***CustomerToContact* リレーションシップ** は、顧客エンティティと取引先担当者エンティティとの間に作成されました。 顧客エンティティはキー フィールド **Contact_contactId** を、取引先担当者エンティティのキー フィールド **contactId** と関連付けます。
-- **_CustomerToAccount_ リレーションシップ** が、顧客エンティティと取引先企業エンティティとの間に作成されました。 顧客エンティティは、キー フィールド **Account_accountId** を、取引先企業エンティティのキー フィールド **accountId** と関連付けます。
-- **_CustomerToWebAccount_ リレーションシップ** が、顧客エンティティと WebAccount エンティティとの間に作成されました。 顧客エンティティは、キー フィールド **WebAccount_webaccountId** を、WebAccount エンティティのキー フィールド **webaccountId** と関連付けます。
+- ***CustomerToAccount* リレーションシップ** が、顧客エンティティと取引先企業エンティティとの間に作成されました。 顧客エンティティは、キー フィールド **Account_accountId** を、取引先企業エンティティのキー フィールド **accountId** と関連付けます。
+- ***CustomerToWebAccount* リレーションシップ** が、顧客エンティティと WebAccount エンティティとの間に作成されました。 顧客エンティティは、キー フィールド **WebAccount_webaccountId** を、WebAccount エンティティのキー フィールド **webaccountId** と関連付けます。
 
 ## <a name="create-a-relationship"></a>関連付けの作成
 
@@ -69,3 +69,6 @@ ms.locfileid: "4406195"
 ## <a name="next-step"></a>次の手順
 
 システムとカスタム リレーションシップは、サイロ化されなくなった複数のデータ ソースに基づいてセグメントを作成するために使用されます。 詳細については、[セグメント](segments.md) を参照してください。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

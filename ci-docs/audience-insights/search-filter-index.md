@@ -1,7 +1,7 @@
 ---
 title: 顧客プロファイルの検索とフィルター
 description: 統一された顧客プロファイルに関する情報をすばやく検索し、指定された属性をフィルタ―します。
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406196"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270072"
 ---
 # <a name="customer-profiles-search--filter-index"></a>顧客プロファイル: 検索とフィルターのインデックス
 
@@ -28,14 +28,6 @@ ms.locfileid: "4406196"
 検索可能な属性を管理者として初めて定義する場合、最初にインデックス付きフィールドを定義する必要があります。 **顧客** ページでユーザーが顧客を検索してフィルタ―できるすべての属性を選択することをお勧めします。 データ統合プロセス中に作成した Customer Profile エンティティに存在する属性のみを指定できます。
 
 1. **顧客** ページを開き、**インデックスの検索とフィルター** を選択します。
-
-> [!NOTE]
-> マップ ページで定義されている以下のセマンティック タイプから、顧客 エンティティで利用可能な属性の既定の検索インデックス構成を作成します。
-> - 姓、名、ミドルネーム、フルネーム
-> - 組織名
-> - 電子メール アドレス
-> - 電話番号
-> - 位置情報
 
 2. **+ 追加** を選択して、インデックス フィールドを指定します。
 
@@ -65,3 +57,10 @@ ms.locfileid: "4406196"
 2. **保存** を選択して変更を適用します。
 
 3. 設定を適用する準備ができたら **実行** を選択します。
+
+## <a name="next-steps"></a>次の手順
+
+**顧客** ページに移動して、顧客プロファイルを検索するか、インデックス付きフィールドを使用してすべての顧客プロファイルのサブセットを表示します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

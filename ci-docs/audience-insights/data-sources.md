@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643959"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269704"
 ---
-# <a name="overview-about-data-sources"></a>データ ソースの概要
+# <a name="data-sources-overview"></a>データ ソースの概要
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -46,10 +46,10 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 |---------|---------|
 |成功   |**最終更新** 列に時間が記載されている場合、データ ソースは正常に取り込まれました。
 |開始前   |データ ソースには、まだデータが取り込まれていないか、ドラフト モードのままです。         |
-|更新中    |データ取り込みが進行中です。 この操作をキャンセルするには、**アクション** 列で **更新を中止** を選択します。 データ ソースの更新を停止すると、最後の更新状態に戻ります。       |
+|更新中    |データ取り込みが進行中です。 この操作をキャンセルするには、**アクション** 列で **更新を中止** を選択します。 データ ソースの更新を停止すると、そのデータ ソースは最後の更新状態に戻ります。       |
 |失敗     |データの取り込みでエラーが発生しました。         |
 
-**更新の状態** を選択し、エラーの詳細や下流プロセスの更新など、更新状態の詳細を確認します。
+任意のデータ ソースの **ステータス** 列でで値を選択して、詳細をレビューします。 **進捗状況の詳細** ペインで、**データ ソース** を展開します。 **詳細の表示** を選択し、エラーの詳細や下流プロセスの更新など、更新ステータスのその他の情報を確認します。
 
 データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、**エンティティ** ページから取り込んだデータをレビューできます。 詳細については、[エンティティ](entities.md) を参照してください。
 
@@ -76,3 +76,6 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 2. 削除するデータ ソースの横にある縦の省略記号を選択し、ドロップダウンメニューから **削除** を選択します。
 
 3. 削除を確認します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

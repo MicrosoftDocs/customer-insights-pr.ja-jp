@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406173"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267776"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データソースに接続する
 
@@ -28,7 +28,10 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
 
 1. **データをインポート** する方法を選択し、**次へ** を選択します。
 
-1. データ ソースの **名前** を入力し、**次へ** を選択してデータ ソースを作成します。
+1. データ ソースの **名前** を入力し、**次へ** を選択してデータ ソースを作成します。 名前のガイドライン: 
+   - 文字で始まる必要があります。
+   - 文字と数字のみを使用してください。 特殊文字とスペースは使用できません。
+   - 3〜64 文字を使用します。
 
 1. [使用可能なコネクタ](#available-power-query-data-sources) のいずれかを選択します。 この例では、**Text/CSV** コネクタを選択しています。
 
@@ -77,3 +80,6 @@ Customer Insights にデータをインポートするために選択できる�
 3. **Power Query - キューの編集** ダイアログで、[新しいデータソースの作成](#create-a-new-data-source)に記載されているように、変更と変換を適用します。
 
 4. 編集の完了後は、Power Query で **保存** を選択して変更を保存します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

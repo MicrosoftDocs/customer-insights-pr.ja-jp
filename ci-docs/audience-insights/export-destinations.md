@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643869"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477139"
 ---
-# <a name="export-destinations-preview"></a>エクスポート先 (プレビュー)
+# <a name="export-destinations-preview-overview"></a>エクスポート先 (プレビュー) の概要
 
 **エクスポート先** ページには、データのエクスポート先として設定したすべての場所が表示されます。 エクスポートには新しい宛先を追加することもできます。 さらに、現在利用可能なエクスポート オプションが表示されます。 概要や説明を参照し、各拡張オプションでできることを確認してください。 統一されたプロファイル、メジャーおよびセグメントを業務に関連するサポート対象のアプリケーションにエクスポートします。
 
@@ -27,10 +27,13 @@ ms.locfileid: "4643869"
 - [Power Automate コネクタ](export-power-automate.md)
 - [Power Apps コネクタ](export-power-apps.md)
 - [Power BI コネクタ](export-power-bi.md)
+- [AutoPilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Dynamics 365 の販売](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob Storage](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; コネクタ](export-liveramp.md)
 - [Microsoft Teams 用ボット](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ ms.locfileid: "4643869"
 2. ドロップダウン メニューで **削除** を選択します。
 
 3. 確認画面で **削除** を選択して削除を確認します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

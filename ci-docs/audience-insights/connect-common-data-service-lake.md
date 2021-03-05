@@ -4,17 +4,17 @@ description: Common Data Service が管理する  Data Lake からデータを�
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643404"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267820"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Common Data Service の管理された Data Lake に接続する
 
@@ -34,7 +34,10 @@ Azure Data Lake Storage などのオンライン サービスに保存される�
 
 3. **Common Data Serviceに接続する** を選択し、**次へ** を選択します。
 
-4. データソースの **名前** を入力し、 **次へ** を選択します。
+4. データソースの **名前** を入力し、 **次へ** を選択します。 名前のガイドライン: 
+   - 文字で始まる必要があります。
+   - 文字と数字のみを使用してください。 特殊文字とスペースは使用できません。
+   - 3〜64 文字を使用します。
 
 5. Common Data Service 組織の **サーバーアドレス** を入力し、**サイン イン** を選択します。
 
@@ -65,3 +68,6 @@ Azure Data Lake Storage などのオンライン サービスに保存される�
 3. リストから **編集** オプションを選択します。
 
 4. 使用可能なエンティティのリストから追加するエンティティを選択し、**保存** を選択します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

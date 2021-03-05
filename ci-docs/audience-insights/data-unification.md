@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406157"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269658"
 ---
-# <a name="data-unification"></a>データ統合
+# <a name="data-unification-overview"></a>データの統合の概要
 
 [データ ソースの設定](data-sources.md) 後、データを統合できます。 データ統合には、**マップ**、**一致**、そして **結合** の 3 つのステップが含まれます。
 
@@ -31,3 +31,6 @@ ms.locfileid: "4406157"
 - [エンティティ間にリレーションシップを設定](relationships.md) して、高度なセグメントを作成できます
 - [データを強化](enrichment-hub.md) して、顧客に関する幅広いインサイトを獲得できます
 - 取り込んだ属性の一部から [活動を定義](activities.md) できます
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

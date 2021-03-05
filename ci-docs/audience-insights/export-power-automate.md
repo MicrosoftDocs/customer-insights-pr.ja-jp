@@ -1,20 +1,20 @@
 ---
 title: Power Automate コネクタ | Microsoft Docs
 description: Dynamics 365 Customer Insights から Microsoft Power Automate でフローを作成します。
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406149"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268830"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automateコネクタ (プレビュー)
 
@@ -22,7 +22,7 @@ ms.locfileid: "4406149"
 
 ## <a name="power-automate-triggers"></a>Power Automate のトリガー
 
-さまざまなトリガーを使用して、通知やその他の高度なアクションなどの反復タスクを自動化するフローを作成できます。 
+トリガーを使用してクラウド フローを作成し、通知やより高度なアクションなどの反復的なタスクを自動化します。 
 
 - データ ソースの更新が失敗したときにトリガーされます。 
 - データ ソースの更新が成功したときにトリガーされます。
@@ -36,14 +36,20 @@ ms.locfileid: "4406149"
 ## <a name="power-automate-actions"></a>Power Automate  のアクション
 Power Automate のコネクタは、利用可能なトリガー以外のアクションを提供します。 詳細については、『[Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/)』を参照してください。
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>対象者に関するインサイトで Power Automate フローを作成する
+## <a name="create-a-power-automate-flow"></a>Power Automate フローを作成する
 
-1. 対象者に関するインサイトで、**管理** > **システム** に移動します。
+1. 対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。
 
-1. **システム** ページで、**状態** タブを選択します。
+1. **Power Automate** タイルで、**設定** を選択します。
 
-1. **データソース** セクションの中に、**フロー** を選択し、ドロップダウンリストから **フローの作成** を選択します。
-   > [!div class="mx-imgBorder"]
-   > ![フローアクションの作成を示す Power Automate コネクタ](media/power-automate-connector-create-flow.png "フロー アクションの作成を示す Power Automate コネクタ")
+1. Power Automate で Customer Insights コネクタ (プレビュー) が開きます。 Power Automate に **サインイン** します。
 
-1. Power Automate で、使用可能なトリガーの 1 つを選択して、優先フローを作成します。 最初のフローを作成する場合は、最初に Power Automate コネクタで認証する必要があります。
+1. 使用可能なトリガーの 1 つを選択し、新しいフローにステップを追加します。 詳細については、[Power Automateでクラウド フローを作成する](https://docs.microsoft.com/power-automate/get-started-logic-flow)を参照してください。
+
+フローの使用方法の例: 
+- データ ソースの更新が失敗した場合、Microsoft Teams チャネルにメッセージを投稿します。 
+- セグメントのしきい値を超えたときに、データ所有者に E メールを送信します。
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

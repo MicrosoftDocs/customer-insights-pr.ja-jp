@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667235"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267438"
 ---
 # <a name="customer-activities"></a>顧客活動
 
@@ -44,13 +44,13 @@ Dynamics 365 Customer Insights で [さまざまなデータ ソース](data-sou
 
 1. **リレーションシップの設定** セクションで、活動データを対応する顧客に接続するために使用される詳細を構成する必要があります。
 
-   > [!div class="mx-imgBorder"]
-   > ![エンティティ リレーションシップを定義する](media/activities-entities-define.png "エンティティ リレーションシップを定義する")
-
     - **活動エンティティ フィールド**: 別のエンティティとのリレーションシップを確立するために使用される活動エンティティでフィールドを選択します。
     - **顧客エンティティ**: 活動エンティティがリレーションシップになる対応するソース顧客エンティティを選択します。 データ統合プロセスで使用されるソース顧客エンティティのみに関連付けることができます。
     - **顧客エンティティ フィールド**: このフィールドには、マップ プロセスで選択されたソース顧客エンティティの主キーが表示されます。 ソース顧客エンティティのこの主キー フィールドは、アクティビティ エンティティとの関係を確立するために使用されます。
     - **名前**: このアクティビティ エンティティと選択したソース顧客エンティティの間に関係が既に存在する場合、関係名は読み取り専用モードになります。 そのような関係が存在しない場合、ここで指定された名前で新しい関係が作成されます。
+   
+   > [!div class="mx-imgBorder"]
+   > ![エンティティ リレーションシップを定義する](media/activities-entities-define.png "エンティティ リレーションシップを定義する")
 
 1. **保存** を選択して変更を適用します。
 
@@ -82,3 +82,6 @@ Dynamics 365 Customer Insights で [さまざまなデータ ソース](data-sou
 3. **削除** アイコンを選択します。
 
 4. 削除を確認します。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

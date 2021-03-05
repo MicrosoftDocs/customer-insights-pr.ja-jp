@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668729"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269428"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
 
@@ -38,7 +38,11 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 1. **開始する** を選択し、アクティブな **Leadspace トークン** (永久キー) を入力します。 内容を確認し、**同意する** チェックボックスを選択して、**データのプライバシーとコンプライアンス** に同意してください。 **Leadspace に接続** を選択して両方の入力を確認します。
 
-1. **データのマップ** を選択し、統合プロファイルのどのフィールドを使用して、Leadspace から一致する会社データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
+1. **データをマップする** を選択して、Leadspace からの会社データをエンリッチするデータ セットを選択します。 *顧客* エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="顧客プロファイルとセグメント エンリッチメントのどちらかを選択します。":::
+
+1. **次へ** をクリックし、統合プロファイルのどのフィールドを使用して、Leadspace から一致する会社データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace フィールド マッピング ペイン。":::
    
@@ -62,3 +66,6 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 Dynamics 365 Customer Insights による Leadspace へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、Leadspace がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、このエンリッチメントはいつでも削除できます。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
