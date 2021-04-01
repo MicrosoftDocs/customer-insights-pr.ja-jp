@@ -1,34 +1,34 @@
 ---
 title: 対象者に関するインサイトでサポートされている言語
 description: 言語サポートを理解して構成します。
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268186"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595478"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>対象者に関するインサイト機能でサポートされている言語
 
-Dynamics 365 Customer Insights 対象者に関するインサイト機能では、複数の言語をサポートしています。 このトピックは、使用可能な言語をリストし、それらの間の変更をサポートするとともに、翻訳されるコンテンツの概要を提供します。
+Dynamics 365 Customer Insights の対象者に関するインサイトは、多くの言語に翻訳されています。 次の一覧には、使用可能な言語と翻訳内容に関する情報が含まれています。 言語設定の変更方法についても説明します。 
 
 ## <a name="languages"></a>言語
 
 | 言語名 (英語)|  言語名（母国語） |
 | ------------- | ------------- |
 | バスク語 | euskara |
-| ブルガリア語 | Български |
+| ブルガリア語 | български |
 | カタルニア語 | català |
 | 中国語 (簡体字) | 中文(简体) |
-| 中国語 (繁体字) | 中文(繁体) |
+| 繁体中国語 | 中文(繁体) |
 | クロアチア語 | hrvatski |
 | チェコ語 | čeština |
 | デンマーク語 | dansk |
@@ -42,20 +42,20 @@ Dynamics 365 Customer Insights 対象者に関するインサイト機能では�
 | ギリシャ語 | Ελληνικά |
 | ヒンディー語 | हिंदी |
 | ハンガリー語 | magyar |
-| インドネシア語 | Bahasa Indonesia |
+| インドネシア語 | インドネシア |
 | イタリア語 | italiano |
 | 日本語 | 日本語 |
-| カザフ語 | Қазақ |
+| カザフ語 | қазақ тілі |
 | 韓国語 | 한국어 |
 | ラトビア語 | latviešu |
 | リトアニア語 | lietuvių |
-| マレー語 | Bahasa Melayu |
-| ノルウェー語 (ブークモール) | norsk (bokmål) |
-| ポーランド語 | Polski |
+| マレー語 | マレー語 |
+| ノルウェー語 (ブークモール) | norsk bokmål |
+| ポーランド語 | polski |
 | ポルトガル語 (ブラジル) | português |
 | ポルトガル語 (ポルトガル) | português |
 | ルーマニア語 | română |
-| ロシア語 | Русский |
+| ロシア語 | pусский |
 | セルビア語 (キリル) | српски |
 | セルビア語 (ラテン) | srpski |
 | スロバキア語 | slovenčina |

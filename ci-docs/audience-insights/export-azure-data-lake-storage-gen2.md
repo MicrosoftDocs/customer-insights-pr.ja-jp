@@ -2,19 +2,19 @@
 title: Customer Insights のデータを Azure Data Lake Storage Gen2 にエクスポートする
 description: Azure Data Lake Storage Gen2 への接続を構成する方法を説明します。
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477185"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596643"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Azure Data Lake Storage Gen2 用コネクタ (プレビュー)
 
@@ -29,8 +29,8 @@ Customer Insights データを Azure Data Lake Storage Gen2 に保存するか�
 1. 出力先となる **表示名称** フィールドにはわかりやすい名前を付けます。
 
 1. Azure Data Lake Storage Gen2 の **アカウント名**、**アカウント キー**、および **コンテナ** を入力します。
-    - Azure Data Lake Storage Gen2 で使うストレージ アカウントを作成する方法を学ぶには、[ストレージアカウントを作成する](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account)を参照します。 
-    - Azure Data Lake Gen2 ストレージ アカウント名とアカウントキーを見つける方法の詳細については、[ Azure ポータルでストレージ アカウント設定を管理する](https://docs.microsoft.com/azure/storage/common/storage-account-manage)を参照してください。
+    - Azure Data Lake Storage Gen2 で使うストレージ アカウントを作成する方法を学ぶには、[ストレージアカウントを作成する](/azure/storage/blobs/create-data-lake-storage-account)を参照します。 
+    - Azure Data Lake Gen2 ストレージ アカウント名とアカウントキーを見つける方法の詳細については、[ Azure ポータルでストレージ アカウント設定を管理する](/azure/storage/common/storage-account-manage)を参照してください。
 
 1. **次へ** を選択します。
 

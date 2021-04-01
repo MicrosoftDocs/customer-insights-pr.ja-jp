@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267728"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596505"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>対象者に関するインサイトの Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する
 
@@ -23,7 +23,7 @@ Azure サービスを使用する自動ツールは、常に制限されたア�
 サービス プリンシパルを使用して、安全に [Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md) したり、[新しい環境を作成、または既存の環境を更新](manage-environments.md#create-an-environment-in-an-existing-organization) したりできます。
 
 > [!IMPORTANT]
-> - サービス プリンシパルを使用する予定の Azure Data Lake Gen2 ストレージ アカウントでは、[階層名前空間 (HNS) が有効](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)である必要があります。
+> - サービス プリンシパルを使用する予定の Azure Data Lake Gen2 ストレージ アカウントでは、[階層名前空間 (HNS) が有効](/azure/storage/blobs/data-lake-storage-namespace)である必要があります。
 > - サービス プリンシパルを作成するには、Azure サブスクリプションに対する管理者のアクセス許可が必要です。
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>対象者に関するインサイトに Azure サービス プリンシパルを作成する
@@ -48,7 +48,7 @@ Azure サービスを使用する自動ツールは、常に制限されたア�
 
 ### <a name="create-a-new-service-principal"></a>新しいサービス プリンシパルを作成する
 
-1. **Graph 用 Azure Active Directory PowerShell** の最新バージョンをインストールします。 詳細については、[Graph 用 Azure Active Directory PowerShell のインストール](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) を参照してください。
+1. **Graph 用 Azure Active Directory PowerShell** の最新バージョンをインストールします。 詳細については、[Graph 用 Azure Active Directory PowerShell のインストール](/powershell/azure/active-directory/install-adv2) を参照してください。
    - PC で、キーボードの Windows キーを選択し、**Windows PowerShell** を検索して、**管理者として実行** します。
    
    - 開いた PowerShell ウィンドウで、`Install-Module AzureAD` を入力します。

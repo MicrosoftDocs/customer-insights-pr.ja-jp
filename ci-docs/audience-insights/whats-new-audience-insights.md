@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270438"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598438"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-最新の更新プログラムについてお知らせします ! この記事は、パブリック プレビュー機能、全般的な可用性の強化、毎月の更新プログラム、機能の更新をまとめたものです。 長期的な機能計画を確認するには、[Dynamics 365 と Power Platform のリリース計画](https://docs.microsoft.com/dynamics365/release-plans/) をご覧ください。
+最新の更新プログラムについてお知らせします ! この記事は、パブリック プレビュー機能、全般的な可用性の強化、毎月の更新プログラム、機能の更新をまとめたものです。 長期的な機能計画を確認するには、[Dynamics 365 と Power Platform のリリース計画](/dynamics365/release-plans/) をご覧ください。
 
 次のビデオを見て、過去 6 か月間に予定された機能の詳細を確認することもできます。
 
@@ -30,6 +30,40 @@ ms.locfileid: "5270438"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="february-2021-updates"></a>2021 年 2 月の更新プログラム
+
+2021 年 2 月の更新には、いくつかの機能、パフォーマンスのアップグレード、およびバグ修正が含まれています。
+
+#### <a name="extensibility"></a>拡張性
+
+- **セグメントを AdRoll にエクスポート**
+
+  AdRoll を含むようにエクスポート先を拡張しました。 Customer Insights から AdRoll の対象者にセグメントをエクスポートし、それらを広告のベースラインとして使用できるようになりました。 詳細については、[AdRoll 用コネクタ](export-adroll.md) を参照してください。
+
+#### <a name="segments"></a>セグメント
+ 
+- **セグメントの複製**
+  
+  既存のセグメントに基づいて新しいセグメントを作成する場合、セグメントを複製し、複製したセグメントを編集してさらに絞り込むことができるようになりました。 
+
+- **セグメントに属性を追加**
+
+  これらの属性が顧客プロファイルの一部でない場合でも、セグメント出力に属性を含めることができるようになりました。 たとえば、顧客エンティティと M:1 の関連付けを持つサブスクリプション エンティティの一部である場合でも、セグメントにサブスクリプション ID を含めます。 属性が顧客エンティティに関連するエンティティに属している限り、これらの属性を含めることができるようになりました。  
+
+#### <a name="predictions"></a>予測
+
+- **予測製品レコメンデーションの作成**
+
+  顧客が購入に興味を持っているものを理解することは、個人設定とエンゲージメントを通じてビジネスの収益を改善し、顧客ロイヤルティを構築するために必要な最初のステップの 1 つです。 顧客の関心に合わない製品にレコメンデーションを提示すると、顧客とビジネスの間に断絶感が生まれ、最終的には顧客の潜在的な収益と経験を全体的に制限することになります。 
+
+  独自のデータを使用して、顧客が今後購入する可能性のある製品の予測を作成できるようになりました。 詳細については、[製品のレコメンデーション予測](predict-product-recommendation.md) を参照してください。
+
+#### <a name="system-administration"></a>システム管理
+
+- **コピー環境では、より多くの種類のデータ ソースをサポート**
+
+  管理者は、環境構成を同じ組織内の新しい環境にコピーできます。 この機能は、Common Data Service データ レイクまたは Common Data Model フォルダーに基づくデータ ソースが使用される場合のコピー環境機能を拡張します。
 
 ## <a name="january-2021-updates"></a>2021 年 1 月の更新
 

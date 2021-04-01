@@ -2,25 +2,25 @@
 title: Common Data Model における Customer Insights エンティティ スキーマ
 description: Common Data Model のエンティティに関する作業。
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269290"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596367"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) は宣言的な仕様であり、ビジネスと生産性アプリケーションの全体で一般的に使用される概念とアクティビティを表す標準エンティティの定義です。 このモデルは実測データ、および分析データにも拡張されています。 Common Data Model は、アクティビティおよびサービス レベル アグリーメントなど、ベンダー、従業員、および顧客間の対話だけでなく、取引先企業、部署、ケース、連絡先、潜在顧客、営業案件、製品など、適切に定義されたモジュール形式の拡張可能なビジネス エンティティを提供します。 誰もが Common Data Model の定義に基づいて拡張し、さらなるビジネス固有のアイデアを取り込むことができます。
+[Common Data Model](/common-data-model/) は宣言的な仕様であり、ビジネスと生産性アプリケーションの全体で一般的に使用される概念とアクティビティを表す標準エンティティの定義です。 このモデルは実測データ、および分析データにも拡張されています。 Common Data Model は、アクティビティおよびサービス レベル アグリーメントなど、ベンダー、従業員、および顧客間の対話だけでなく、取引先企業、部署、ケース、連絡先、潜在顧客、営業案件、製品など、適切に定義されたモジュール形式の拡張可能なビジネス エンティティを提供します。 誰もが Common Data Model の定義に基づいて拡張し、さらなるビジネス固有のアイデアを取り込むことができます。
 
 この共有データ モデルにより、データの統一された定義を提供され、アプリケーションとデータ インテグレータの共同作業が容易になります。 Common Data Model には、標準的なエンティティー、関連付け、階層、特性などを備えた豊富なメタデータ システムが含まれています。 これは、Dynamics 365 アプリ を起点としており、260を超える標準エンティティを持つ GitHub でオープンソース化されています。 内外のパートナーからなる大規模なシステムは、Common Data Model に業種固有の概念を提供します。
 
@@ -32,13 +32,13 @@ ms.locfileid: "5269290"
 
 | エンティティ | 説明 |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | 業務に対する観察的な視点を持つユーザーが実行する活動です。 |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | 事業活動を行った、または行う可能性のある個人または組織です。 |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | 0 個以上のディメンションで区分された KPI の定義です (例：月間アクティブユーザー、顧客別支出合計、顧客獲得費用の平均) |
-|[セグメント](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | 共通した特徴を持つメンバーのグループを定義します。 |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | 特定のセグメントに加わっているメンバーです。 |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | 業務に対する観察的な視点を持つユーザーが実行する活動です。 |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | 事業活動を行った、または行う可能性のある個人または組織です。 |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | 0 個以上のディメンションで区分された KPI の定義です (例：月間アクティブユーザー、顧客別支出合計、顧客獲得費用の平均) |
+|[セグメント](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | 共通した特徴を持つメンバーのグループを定義します。 |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | 特定のセグメントに加わっているメンバーです。 |
 
-詳細については、[Common Data Model の Customer Insights エンティティ スキーマ](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview) を参照してください。
+詳細については、[Common Data Model の Customer Insights エンティティ スキーマ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview) を参照してください。
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Common Data Model エンティティ ナビゲーターを使用してエンティティを表示する
 

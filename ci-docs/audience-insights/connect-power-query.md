@@ -2,23 +2,23 @@
 title: Power Query コネクタを使用してデータを取り込む
 description: Power Queryに基づくデータソース用のコネクタです。
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267776"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596919"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データソースに接続する
 
-Power Query では一連の広範なコネクターを搭載しており、データを取り込むことができます。 これらコネクターの多くが Dynamics 365 Customer Insights でサポートされています。 Power Query コネクタに基づくデータ ソースの追加方法については、次のセクションで説明する手順を参照してください。 ただし、使用するコネクタによっては、異なる情報が必要になります。 それぞれのコネクタに関する詳細情報については、[Power Query コネクタについての参考資料](https://docs.microsoft.com/power-query/connectors/) を参照してください。
+Power Query では一連の広範なコネクターを搭載しており、データを取り込むことができます。 これらコネクターの多くが Dynamics 365 Customer Insights でサポートされています。 Power Query コネクタに基づくデータ ソースの追加方法については、次のセクションで説明する手順を参照してください。 ただし、使用するコネクタによっては、異なる情報が必要になります。 それぞれのコネクタに関する詳細情報については、[Power Query コネクタについての参考資料](/power-query/connectors/) を参照してください。
 
 ## <a name="create-a-new-data-source"></a>新しいデータ ソースの作成
 
@@ -44,7 +44,7 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
    > [!div class="mx-imgBorder"]
    > ![クエリの編集ダイアログ](media/data-manager-configure-edit-queries.png "クエリの編集ダイアログ")
 
-1. また、データをエクスポートすることもできます。 編集または変換するエンティティを選択します。 変換を適用するには、Power Query ウィンドウのオプションを使用します。 それぞれの変換は、**適用された手順** 配下に表示されます。 Power Query には、事前に構築された変換オプションが多数用意されています。 詳細については、[Power Query の変換](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations) を参照してください。
+1. また、データをエクスポートすることもできます。 編集または変換するエンティティを選択します。 変換を適用するには、Power Query ウィンドウのオプションを使用します。 それぞれの変換は、**適用された手順** 配下に表示されます。 Power Query には、事前に構築された変換オプションが多数用意されています。 詳細については、[Power Query の変換](/power-query/power-query-what-is-power-query#transformations) を参照してください。
 
 1. **クエリの編集** ダイアログで **データの取得** を選択することで、その他のエンティティをデータ ソースに追加できます。
 
@@ -59,7 +59,7 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
 
 ## <a name="available-power-query-data-sources"></a>利用可能な Power Query のデータソース
 
-Customer Insights にデータをインポートするために選択できるコネクタの最新のリストについては、[Power Query コネクタの参考資料](https://docs.microsoft.com/power-query/connectors/)を参照してください。 
+Customer Insights にデータをインポートするために選択できるコネクタの最新のリストについては、[Power Query コネクタの参考資料](/power-query/connectors/)を参照してください。 
 
 **Customer Insights (Dataflows)** 列にチェック マークが付いているコネクタは、Power Query に基づいた新しいデータ ソースを作成することができます。 特定のコネクタのドキュメントを確認し、その前提条件、制限、およびその他の詳細を確認します。
 

@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268278"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595907"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
 
@@ -31,7 +31,7 @@ ms.locfileid: "5268278"
 
 組織で予測機能を使用するには、次の前提条件を満たす必要があります:
 
-1. 組織には、[Common Data Service で設定された](https://docs.microsoft.com/ai-builder/build-model#prerequisites) インスタンスがあり、Customer Insights と同じ組織にあります。
+1. 組織には、[Common Data Service で設定された](/ai-builder/build-model#prerequisites) インスタンスがあり、Customer Insights と同じ組織にあります。
 
 2. ご使用の環境は、Common Data Service インスタンスに関連付けられています。
 
@@ -120,7 +120,7 @@ ms.locfileid: "5268278"
 
 4. **AI Builder でカスタマイズ** を選択します。
 
-5. AI Builder でモデルを更新します。 [AI Builder でのモデルの管理に関する詳細](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models)。
+5. AI Builder でモデルを更新します。 [AI Builder でのモデルの管理に関する詳細](/ai-builder/manage-model#retrain-and-republish-existing-models)。
 
 予測の次の実行では、作成した更新済みモデルが使用されます。
 

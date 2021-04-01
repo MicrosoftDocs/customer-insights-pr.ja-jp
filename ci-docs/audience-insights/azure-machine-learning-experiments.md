@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267912"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597425"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning ベースのモデルを使用する
 
@@ -29,9 +29,9 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Azure Machine Learning ワークスペースの設定
 
-1. ワークスペースを作成するためのさまざまなオプションについては、[Azure Machine Learning ワークスペースの作成](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) を参照してください。 最適なパフォーマンスを得るには、Customer Insights 環境に地理的に最も近い Azure リージョンにワークスペースを作成します。
+1. ワークスペースを作成するためのさまざまなオプションについては、[Azure Machine Learning ワークスペースの作成](/azure/machine-learning/concept-workspace#-create-a-workspace) を参照してください。 最適なパフォーマンスを得るには、Customer Insights 環境に地理的に最も近い Azure リージョンにワークスペースを作成します。
 
-1. [Azure Machine Learning Studio](https://ml.azure.com/) からワークスペースにアクセスします。 ワークスペースを [操作する方法](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) はいくつかあります。
+1. [Azure Machine Learning Studio](https://ml.azure.com/) からワークスペースにアクセスします。 ワークスペースを [操作する方法](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) はいくつかあります。
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure Machine Learning デザイナーと連携する
 
@@ -39,13 +39,13 @@ Azure Machine Learning デザイナーは、Machine Learning Studio (クラシ�
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure Machine Learning SDK との連携
 
-データ サイエンティストと AI 開発者は、[Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) を使用して、機械学習ワークフローを構築します。 現在、SDK を使用してトレーニングされたモデルは、Customer Insights と直接統合することはできません。 このモデルを使用するバッチ推論パイプラインは、Customer Insights との統合に必要です。
+データ サイエンティストと AI 開発者は、[Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) を使用して、機械学習ワークフローを構築します。 現在、SDK を使用してトレーニングされたモデルは、Customer Insights と直接統合することはできません。 このモデルを使用するバッチ推論パイプラインは、Customer Insights との統合に必要です。
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Customer Insights と統合するためのバッチ パイプラインの要件
 
 ### <a name="dataset-configuration"></a>データセットの構成
 
-Customer Insights のエンティティ データをバッチ推論パイプラインに使用するには、データセットを作成する必要があります。 これらのデータセットは、ワークスペースに登録する必要があります。 現在、.csv 形式の [表形式データセット](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) のみをサポートしています。 エンティティ データに対応するデータセットは、パイプライン パラメーターとしてパラメーター化する必要があります。
+Customer Insights のエンティティ データをバッチ推論パイプラインに使用するには、データセットを作成する必要があります。 これらのデータセットは、ワークスペースに登録する必要があります。 現在、.csv 形式の [表形式データセット](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) のみをサポートしています。 エンティティ データに対応するデータセットは、パイプライン パラメーターとしてパラメーター化する必要があります。
    
 * デザイナーのデータセット パラメーター
    
@@ -76,7 +76,7 @@ Customer Insights のエンティティ データをバッチ推論パイプラ�
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>パイプライン データ を Customer Insights にインポートする
 
-* デザイナーは、パイプラインの出力を Azure Storage にエクスポートできる [データ エクスポート モジュール](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) を提供します。 現在、モジュールはデータストア型の **Azure Blob Storage** を使用し、**データストア** と 相対 **パス** をパラメータ化する必要があります。 Customer Insights は、パイプラインの実行中に、製品にアクセス可能なデータストアとパスを使用して、これら両方のパラメーターを上書きします。
+* デザイナーは、パイプラインの出力を Azure Storage にエクスポートできる [データ エクスポート モジュール](/azure/machine-learning/algorithm-module-reference/export-data) を提供します。 現在、モジュールはデータストア型の **Azure Blob Storage** を使用し、**データストア** と 相対 **パス** をパラメータ化する必要があります。 Customer Insights は、パイプラインの実行中に、製品にアクセス可能なデータストアとパスを使用して、これら両方のパラメーターを上書きします。
    > [!div class="mx-imgBorder"]
    > ![データ モジュール構成のエクスポート](media/intelligence-designer-importdata.png "データ モジュール構成のエクスポート")
    

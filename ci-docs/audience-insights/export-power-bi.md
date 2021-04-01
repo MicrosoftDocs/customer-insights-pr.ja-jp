@@ -2,19 +2,19 @@
 title: Power BI コネクタ
 description: Power BI で Dynamics 365 Customer Insights コネクタの使用方法を学びます。
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477094"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596045"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI のコネクタ (プレビュー)
 
@@ -23,7 +23,7 @@ Power BI Desktop を使用してデータをビジュアル化します。 統�
 ## <a name="prerequisites"></a>前提条件
 
 - 統合顧客プロファイルがあります。
-- [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/)の最新バージョンがコンピュータにインストールされている。 [Power BI Desktop の詳細](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)
+- 最新バージョンの [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) がコンピュータにインストールされます。 [Power BI Desktop の詳細](/power-bi/desktop-what-is-desktop)
 
 ## <a name="configure-the-connector-for-power-bi"></a>Power BI のコネクタの構成
 
@@ -47,7 +47,7 @@ Power BI Desktop を使用してデータをビジュアル化します。 統�
 
 ## <a name="large-data-sets"></a>大規模なデータセット
 
-Power BI の Customer Insights コネクタは、最大 100 万の顧客プロファイルを含むデータセットで機能するように設計されています。 大きなデータセットのインポートは出来る可能性がありますが、時間がかかります。 さらに、Power BI 制限によりプロセスがタイムアウトになる可能性があります。 詳細については、[Power BI : 大きなデータセットの推奨事項](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets)を参照してください。 
+Power BI の Customer Insights コネクタは、最大 100 万の顧客プロファイルを含むデータセットで機能するように設計されています。 大きなデータセットのインポートは出来る可能性がありますが、時間がかかります。 さらに、Power BI 制限によりプロセスがタイムアウトになる可能性があります。 詳細については、[Power BI : 大きなデータセットの推奨事項](/power-bi/admin/service-premium-what-is#large-datasets)を参照してください。 
 
 ### <a name="work-with-a-subset-of-data"></a>データのサブセットを使用する
 
@@ -70,4 +70,3 @@ Power BI の Customer Insights コネクタは、最大 100 万の顧客プロ�
 重複したリレーションシップを削除した後、Power BI コネクタに再接続してみます。 これで環境が利用可能になりました。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

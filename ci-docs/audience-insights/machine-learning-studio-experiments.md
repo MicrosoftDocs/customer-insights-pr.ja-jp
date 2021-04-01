@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270210"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598345"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Azure Machine Learning Studio (クラシック) に基づくモデルを使用する
 
@@ -37,7 +37,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 1. **Machine Learning Studio ワークスペース** を選択し、**作成** を選択します。
 
-1. 必要な詳細を入力して[ワークスペースを作成します](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace)。 インポートする予定のデータの量に基づき、**Web サービス プランの価格レベル** を選択します。 最良のパフォーマンスを得るために、地理的に最も近い **場所** を選択します。
+1. 必要な詳細を入力して[ワークスペースを作成します](/azure/machine-learning/studio/create-workspace)。 インポートする予定のデータの量に基づき、**Web サービス プランの価格レベル** を選択します。 最良のパフォーマンスを得るために、地理的に最も近い **場所** を選択します。
 
 1. リソースを作成すると、Machine Learning Studio ワークスペースのダッシュボードが表示されます。 **Machine Learning Studio** を選択します。
 
@@ -65,7 +65,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
    ![予測 Web サービスを設定する](media/predictive-webservice-control.png)
 
-1. 予測 Web サービスの実験が成功したら、自動スケジューリング用にデプロイすることができます。 Web サービスを Customer Insights と連携させるには、**Web サービスのデプロイ** > **Web サービスのデプロイ [新規] プレビュー** を選択します。 [Web サービスのデプロイの詳細](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
+1. 予測 Web サービスの実験が成功したら、自動スケジューリング用にデプロイすることができます。 Web サービスを Customer Insights と連携させるには、**Web サービスのデプロイ** > **Web サービスのデプロイ [新規] プレビュー** を選択します。 [Web サービスのデプロイの詳細](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
 
    ![予測 Web サービスをデプロイする](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 ![Azure Machine Learning Studio のチャーン モデル](media/azure-machine-learning-model.png)
 
-また、モデル最適化の重要な側面である **順列の特徴量の重要度** と呼ばれる手法を適用します。 組み込みモデルは、最終的な予測に対する特定の特徴量の影響についての分析情報をほとんど有しません。 特徴量の重要度計算機は、特定のモデルの結果に対する個々の特徴量の影響を計算するためにカスタム アルゴリズムを使用しています。 特徴量の重要度は +1 から -1 の範囲で正規化されます。 マイナスの影響は、対応する特徴量が結果に反直観的な影響を及ぼしており、モデルから削除する必要があることを意味します。 ポジティブな影響は、特徴量が予測に大きく貢献していることを示します。 これらの値は異なるメトリックであるため、相関係数とは見なされません。 詳細については、[順列の特徴量の重要度](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance) を参照してください。
+また、モデル最適化の重要な側面である **順列の特徴量の重要度** と呼ばれる手法を適用します。 組み込みモデルは、最終的な予測に対する特定の特徴量の影響についての分析情報をほとんど有しません。 特徴量の重要度計算機は、特定のモデルの結果に対する個々の特徴量の影響を計算するためにカスタム アルゴリズムを使用しています。 特徴量の重要度は +1 から -1 の範囲で正規化されます。 マイナスの影響は、対応する特徴量が結果に反直観的な影響を及ぼしており、モデルから削除する必要があることを意味します。 ポジティブな影響は、特徴量が予測に大きく貢献していることを示します。 これらの値は異なるメトリックであるため、相関係数とは見なされません。 詳細については、[順列の特徴量の重要度](/azure/machine-learning/studio-module-reference/permutation-feature-importance) を参照してください。
 
 全体的な [チャーンの実験は Azure AI Gallery で利用できます](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp)。
 
@@ -168,7 +168,7 @@ CLTV の予測は、予測値が正の値の連続型変数であるため、回
 
 ## <a name="integrate-custom-models"></a>カスタム モデルの統合
 
-Customer Insights でこれらの予測を使用するには、顧客 ID と共に予測値を **エクスポート** する必要があります。 ソース データをエクスポートするのと [同じ Azure Blob Storage の場所にエクスポート](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) します。 予測 Webサービスは、定期的に実行してスコアを更新するようにスケジュール設定することができます。
+Customer Insights でこれらの予測を使用するには、顧客 ID と共に予測値を **エクスポート** する必要があります。 ソース データをエクスポートするのと [同じ Azure Blob Storage の場所にエクスポート](/azure/storage/common/storage-import-export-data-from-blobs) します。 予測 Webサービスは、定期的に実行してスコアを更新するようにスケジュール設定することができます。
 
 カスタム モデルで生成されたデータを使用して、顧客データをさらに強化させることができます。 詳細については、[カスタム機械学習モデル](custom-models.md) を参照してください。
 

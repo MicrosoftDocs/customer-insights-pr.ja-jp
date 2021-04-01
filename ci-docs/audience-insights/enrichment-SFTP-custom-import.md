@@ -2,19 +2,19 @@
 title: SFTP カスタム インポートによるエンリッチメント
 description: SFTP カスタム インポート エンリッチメントに関する一般情報。
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269612"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595861"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
@@ -50,7 +50,7 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 
 ## <a name="defining-field-mappings"></a>フィールド マッピングの定義 
 
-SFTP サーバーにインポートするファイルを含むディレクトリには、*model.json* ファイルも含まれている必要があります。 このファイルは、データのインポートに使用するスキーマを定義します。 スキーマは、[Common Data Model](https://docs.microsoft.com/common-data-model/) を使用して、フィールド マッピングを指定する必要があります。 model.json ファイルの簡単な例は次のようになります:
+SFTP サーバーにインポートするファイルを含むディレクトリには、*model.json* ファイルも含まれている必要があります。 このファイルは、データのインポートに使用するスキーマを定義します。 スキーマは、[Common Data Model](/common-data-model/) を使用して、フィールド マッピングを指定する必要があります。 model.json ファイルの簡単な例は次のようになります:
 
 ```
 {

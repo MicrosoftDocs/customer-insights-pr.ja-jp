@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 133555881fcbb0bcecb0749343d0aef970405af2
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a953b35b7299500471457d826332563e007a28e3
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643359"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595616"
 ---
 > [!NOTE]
-> 2020 年 11 月より有効:
-> - Common Data Service は Microsoft Dataverse に名前が変更されました。 [詳細情報](https://aka.ms/PAuAppBlog)
-> - Microsoft Dataverse の用語が一部更新されました。 たとえば、*エンティティ* は *テーブル* に、*フィールド* は *列* になりました。 [詳細情報](https://go.microsoft.com/fwlink/?linkid=2147247)
+> 2020 年 11 月発効:
+> - Common Data Service は Microsoft Dataverse に名称が変更されました。 [詳細情報](https://aka.ms/PAuAppBlog)
+> - Microsoft Dataverse に関して、用語を一部変更しています。 たとえば、*エンティティ* は *テーブル* に、*フィールド* は *列* に変わりました。 [詳細情報](/powerapps/maker/data-platform/data-platform-intro)
 >
-> この記事は、まもなく更新され、最新の用語が反映されます。
+> この記事は間もなく更新され、最新の用語が反映されます。
