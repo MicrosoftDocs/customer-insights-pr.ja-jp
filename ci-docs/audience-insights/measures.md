@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269934"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654738"
 ---
 # <a name="define-and-manage-measures"></a>メジャーの定義と管理
 
@@ -72,8 +72,8 @@ ms.locfileid: "5269934"
    1. **ディメンションの編集** を選択して、メジャー値をグループ化するデータ属性を追加します。 たとえば、都市や性別。 既定では、*顧客レベル メジャー* を作成するのに *CustomerID* ディメンションが選択されます。 *ビジネスレベル メジャー* を作成する場合、既定ディメンションを削除できます。
    1. **完了** を選択して、ディメンションをメジャーに追加します。
 
-1. マッピングしたデータ エンティティと顧客エンティティの間に複数のパスがある場合、識別された[エンティティ関連パス](relationships.md)の 1 つを選択する必要があります。 メジャー結果は、選択したパスによって異なります。
-   1. **データ設定** を選択し、メジャーを識別するために使用するエンティティ パスを選択します。
+1. マッピングしたデータ エンティティと *Customer* エンティティの間に複数のパスがある場合、識別された [エンティティ関連パス](relationships.md) の 1 つを選択する必要があります。 メジャー結果は、選択したパスによって異なります。 
+   1. **データ設定** を選択し、メジャーを識別するために使用するエンティティ パスを選択します。 *Customer* エンティティへのパスが 1 つしかない場合、このコントロールは表示されません。
    1. **完了** を選択して、選択肢を適用します。 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="メジャーのエンティティ パスを選択します。":::

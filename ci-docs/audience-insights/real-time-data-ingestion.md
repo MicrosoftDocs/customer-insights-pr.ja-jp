@@ -2,19 +2,19 @@
 title: リアルタイム データ インジェストと制限
 description: 対象者に関するインサイトのリアルタイム機能に関する一般情報。
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270286"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598575"
 ---
 # <a name="real-time-data-ingestion-preview"></a>リアルタイム データ インジェスト (プレビュー)
 
@@ -54,7 +54,7 @@ ms.locfileid: "5270286"
 
 リアルタイム API に接続する方法は 2 つあります:
 
-- [Dynamics 365 Customer Insights コネクタ](https://docs.microsoft.com/connectors/customerinsights/)を使用して[間接的に](#connect-via-the-dynamics-365-customer-insights-connector)
+- [Dynamics 365 Customer Insights コネクタ](/connectors/customerinsights/)を使用して[間接的に](#connect-via-the-dynamics-365-customer-insights-connector)
 - コードを使用して[直接](#connect-directly-to-the-real-time-api)
 
 どちらの方法でも次の前提条件が適用されます。
@@ -66,13 +66,13 @@ ms.locfileid: "5270286"
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Dynamics 365 Customer Insights コネクタ経由で接続
 
-リアルタイム API は、専用 Power Platform コネクタ、[Dynamics 365 Customer Insights コネクタ](https://docs.microsoft.com/connectors/customerinsights/) からデータを取り込むことができます。コードを記述してデプロイする必要はありません。    
-コネクタは、API と同じリアルタイム アクションを実行できます。 プレミアム コネクタの有効なライセンスが必要です。 詳細については、[Power Apps と Power Automate のライセンスの FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq)を参照してください。
+リアルタイム API は、専用 Power Platform コネクタ、[Dynamics 365 Customer Insights コネクタ](/connectors/customerinsights/) からデータを取り込むことができます。コードを記述してデプロイする必要はありません。    
+コネクタは、API と同じリアルタイム アクションを実行できます。 プレミアム コネクタの有効なライセンスが必要です。 詳細については、[Power Apps と Power Automate のライセンスの FAQ](/power-platform/admin/powerapps-flow-licensing-faq)を参照してください。
 
-- Power Platform [Power Apps や Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps や Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-フローの作成の詳細については、[Power Automate ドキュメンテーション](https://docs.microsoft.com/power-automate/)を参照してください。
+フローの作成の詳細については、[Power Automate ドキュメンテーション](/power-automate/)を参照してください。
 
 ## <a name="connect-directly-to-the-real-time-api"></a>リアルタイム API に直接接続する
 

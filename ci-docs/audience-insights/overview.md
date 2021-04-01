@@ -2,19 +2,19 @@
 title: Dynamics 365 Customer Insights の対象者インサイトの概要
 description: Dynamics 365 Customer Insights の対象者インサイトの概要。
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477001"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598636"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights の対象者インサイトの概要
 
@@ -25,7 +25,7 @@ ms.locfileid: "5477001"
 - **データ サイロを削除し、顧客データを統合する**
 
   - [組み込まれたコネクタを使用することで](data-sources.md)、一般的なデータソースからトランザクション データ、観察データ、および行動データを簡単に接続し、データを統合します。
-  - 顧客データをインテリジェントに変換します— [共通データ モデル](https://docs.microsoft.com/common-data-model/) に準拠した統合された顧客プロファイルを構築します。 AI/ML 駆動型のレコメンデーションで顧客 ID を解決します。
+  - 顧客データをインテリジェントに変換します— [共通データ モデル](/common-data-model/) に準拠した統合された顧客プロファイルを構築します。 AI/ML 駆動型のレコメンデーションで顧客 ID を解決します。
 
 - **Microsoft Graph に含まれるオーディエンス インテリジェンスのエンリッチ**
 
@@ -42,7 +42,7 @@ ms.locfileid: "5477001"
 - **データ アナリスト / 管理者:**
 
   - コネクタの豊富なコレクションにアクセスして、すべての顧客データを取り込みます。
-  - 顧客データを統合し、[共通データ モデル](https://docs.microsoft.com/common-data-model/) フォーマットに変換できます。
+  - 顧客データを統合し、[共通データ モデル](/common-data-model/) フォーマットに変換できます。
   - ブランド アフィニティや関心など、Microsoft Graph に含まれるオーディエンス インテリジェンスからのインサイトを使用して、顧客情報をエンリッチします。
   - "コードではなくクリック" の構成とデバッグ エクスペリエンスにより、対象者に関するインサイトを簡単に構成し、潜在的な問題を特定することができます。
   - AIを使用したレコメンデーションにより、さまざまなソースにわたって顧客データをクレンジングおよび標準化します。  
