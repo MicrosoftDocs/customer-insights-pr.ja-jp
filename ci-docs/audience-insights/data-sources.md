@@ -1,7 +1,7 @@
 ---
 title: データ ソースを使用してデータを取り込む
 description: さまざまなソースからデータをインポートする方法について説明します。
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595953"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887900"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -32,8 +32,15 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 - [Common Data Model フォルダーから](connect-common-data-model.md)
 - [自分の Common Data Service レイク から](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> オンプレミスのデータ ソースからのデータはまだ追加できません。
+## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
+
+対象者に関するインサイトにあるオンプレミスのデータ ソースからのデータの取り込みは、Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](manage-environments.md#create-an-environment-in-an-existing-organization) することで、Customer Insights で有効にできます。
+
+Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、オンプレミス データ ゲートウェイを使用します。
+
+既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、オンプレミス データ ゲートウェイを表示および構成できる Power Platform 環境へのリンクが表示されます。
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Power Platform 環境へのリンクを示すデータ ソース ページのスクリーンショット。":::
 
 ## <a name="review-ingested-data"></a>取り込んだデータのレビュー
 
@@ -65,7 +72,7 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 
 2. 更新するデータ ソースの横にある縦の省略記号を選択して、ドロップダウンリストから **更新** を選択します。
 
-3. これで、データ ソースが手動で更新されるようになりました。 データ ソースを更新すると、エンティティ スキーマと、データ ソースで指定されているすべてのエンティティのデータの両方が更新されます。
+3. これで、データ ソースが手動で更新されるようになりました。 データ ソースを更新すると、データ ソースで指定されたすべてのエンティティのエンティティ スキーマとデータの両方が更新されます。
 
 4. 既存の更新をキャンセルし、データ ソースを最後の更新状態に戻す場合は、**更新の停止** を選択します。
 

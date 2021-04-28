@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596873"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896333"
 ---
 # <a name="customer-profiles"></a>顧客プロファイル
 
@@ -59,7 +59,7 @@ Customer Profile エンティティ フィールドで顧客をフィルタリ�
 
 -   **顧客プロファイル タイル:** このタイルには、統合顧客プロファイル エンティティのさまざまな値が表示されます。 これらの詳細には、電子メールアドレス、名前、都市などが含まれます。 
 
--   **潜在的な関心、潜在的なブランド:** ファースト パーティのエンリッチメントを設定したかどうかを示します。 これは、この顧客に類似するプロファイルを持つ顧客が持つ可能性のあるブランドに対する潜在的な関心と親近感を表します。 詳細については、[ブランドと興味のアフィニティで顧客プロファイルを強化する](enrichment-microsoft-graph.md)を参照してください。
+-   **潜在的な関心、潜在的なブランド:** ファースト パーティのエンリッチメントを設定したかどうかを示します。 これは、この顧客に類似するプロファイルを持つ顧客が持つ可能性のあるブランドに対する潜在的な関心と親近感を表します。 詳細については、[ブランドと興味のアフィニティで顧客プロファイルを強化する](enrichment-microsoft.md)を参照してください。
 
 -   **メジャー:** 特定種類のメジャー (顧客属性メジャー) を 1 つ以上構成したかどうかを表示します。 これには、個々の顧客レベルの顧客に関する計算された KPI が含まれます。 詳細については、[メジャーの定義および管理](measures.md) を参照してください。
 

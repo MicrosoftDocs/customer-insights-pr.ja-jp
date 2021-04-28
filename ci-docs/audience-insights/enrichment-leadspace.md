@@ -1,7 +1,7 @@
 ---
 title: サードパーティ エンリッチメント Leadspace による会社プロファイルのエンリッチメント
 description: Leadspace サードパーティ エンリッチメントに関する一般情報。
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597655"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895919"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
 
-Leadspace は、B2B の顧客データ プラットフォームを提供するデータ サイエンス企業です。 これを使用することで、企業の顧客プロファイルが統一された顧客は、データを充実させることができます。 エンリッチメントには、会社の規模、所在地、業種などの追加属性が含まれます。
+Leadspace は、B2B の顧客データ プラットフォームを提供するデータ サイエンス企業です。 これを使用することで、企業の顧客プロファイルが統一された顧客は、データを充実させることができます。 エンリッチメントには、会社の規模、所在地、業界など、より多くの属性が含まれます。
 
 ## <a name="prerequisites"></a>前提条件
 
 Leadspace を構成するには、次の前提条件が満たしている必要があります :
 
-- アクティブな Leadspace ライセンスと "永久キー" (**Leadspace トークン** と呼ばれる) があります。 製品の詳細について、[Leadspace](https://www.leadspace.com/products/leadspace-on-demand/)に直接に問い合わせます。
-- [管理者](permissions.md#administrator) のアクセス許可があります。
+- アクティブな Leadspace ライセンスを所有していること。
 - 企業向けの[統一された顧客プロファイル](customer-profiles.md)を持っていること。
+- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#administrator) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) に直接お問い合わせください。
 
-## <a name="configuration"></a>構成
+## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 
 1. 対象者に関するインサイトで、**データ** > **エンリッチメント** に移動します。
 
-1. Leadspace のタイル上で、**データを充実させる** を選択します 。
+1. Leadspace タイルで **データのエンリッチ** を選択し、**開始する** を選択します。
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace タイルのスクリーンショット。":::
 
-1. **開始する** を選択し、アクティブな **Leadspace トークン** (永久キー) を入力します。 内容を確認し、**同意する** チェックボックスを選択して、**データのプライバシーとコンプライアンス** に同意してください。 **Leadspace に接続** を選択して両方の入力を確認します。
+1. ドロップダウンから [接続](connections.md) を選択します。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、**Leadspace** を選択することで、接続を作成できます。 
 
-1. **データをマップする** を選択して、Leadspace からの会社データをエンリッチするデータ セットを選択します。 *顧客* エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+1. **Leadspace に接続する** を選択し、接続を確定します。
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="顧客プロファイルとセグメント エンリッチメントのどちらかを選択します。":::
+1. **次へ** を選択し、Leadspace の企業データで強化する **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
 
-1. **次へ** をクリックし、統合プロファイルのどのフィールドを使用して、Leadspace から一致する会社データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="顧客データ セットを選択するときのスクリーンショット。":::
+
+1. **次へ** を選択し、統合プロファイルからどのフィールドを使用して、Leadspace から一致する企業データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace フィールド マッピング ペイン。":::
-   
-1. **適用** を選択して、フィールド マッピングを完了します。
 
-1. **実行** を選択して会社のプロフィールを拡充します。 エンリッチメントにかかる時間は、統合顧客プロファイルの数によって異なります。
+1. **次へ** を選択し、フィールド マッピングを完了します。
+
+1. エンリッチメントの名前を入力して、選択内容を確認した後 **エンリッチメントの保存** を選択します。
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Leadspace の接続を構成する 
+
+接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、Leadspace タイルで **設定** を選択します。
+
+1. **開始する** を選択します 
+
+1. **表示名** ボックスに接続の名前を入力します。
+
+1. 有効な Leadspace トークンを指定します。
+
+1. **データのプライバシーとコンプライアンス** を確認し、**同意する** チェックボックスを選択して、同意します
+
+1. **検証** を選択して、構成を検証します。
+
+1. 検証が完了したら、**保存** を選択します。
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace 接続構成ページ。":::
 
 ## <a name="enrichment-results"></a>強化の結果
 

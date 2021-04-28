@@ -1,7 +1,7 @@
 ---
 title: ユーザーのアクセス許可を管理する
 description: アクセス許可とユーザー ロールについて説明します。
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595708"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760379"
 ---
 # <a name="user-permissions"></a>ユーザーのアクセス許可
 
@@ -31,7 +31,7 @@ ms.locfileid: "5595708"
 - **強化** ページを確認し、探索します。
 - **エンティティ** ページを使用してエンティティを探索およびエクスポートします。
 - **システム** ページを使用してシステムプロセスのステータスを表示します。
-- **セグメント** ページからセグメントをエクスポートします。
+- **エクスポート** ページでエクスポートを表示します。
 - **Power BI Customer Insights** ダッシュボードをインストールして使用します。
 
 ## <a name="contributor"></a>共同作成者
@@ -43,6 +43,7 @@ ms.locfileid: "5595708"
 - **セグメント** ページを使用してセグメントを作成します。
 - **メジャー** ページを使用してメジャーを作成します。
 - 構成を管理し、顧客プロファイルを **エンリッチメント** ページから拡充します (ファースト パーティのエンリッチメントのみ)。
+- 共同作成者と共有されている接続に基づいてエクスポートを管理および作成します。 [管理者が共同作成者にエクスポート用の接続の使用を許可する方法について説明します](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
 ## <a name="administrator"></a>管理者
 
@@ -50,8 +51,9 @@ ms.locfileid: "5595708"
 - 作業言語とシステム プロセスの更新スケジュールを含む、**システム** ページの設定を変更します。
 - **アクセス許可** ページを使用して、アクセス許可を表示および追加します。
 - **インデックスの検索およびフィルター処理** ページ (**顧客** ページからアクセス可能) を使用して、顧客ページの検索およびフィルターの定義を設定します。
-- **エクスポート先** ページを使用して Dynamics 365 Sales セグメントの保存先を定義します。
+- 接続を管理し、**接続** ページで他のユーザー ロールを許可します。
 - 構成を管理し、顧客プロファイルを **エンリッチメント** ページから拡充します (すべてのエンリッチメントが対象)。
+- **エクスポート** ページでエクスポートを管理および作成します。
 - **顧客カード アドイン** をインストールして使用します。
 - **Power Apps コネクタ** を追加して使用します。
 - [Customer Insights API](apis.md) の使用を有効にします。

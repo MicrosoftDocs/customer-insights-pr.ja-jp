@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Autopilot にエクスポートする
-description: Autopilot への接続を構成する方法を説明します。
-ms.date: 12/08/2020
+description: Autopilot への接続とエクスポートを構成する方法を説明します。
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,54 +9,22 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d039c4afd84eaad942d214d4e6fb8ef7b1ec72a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e320a48d5b7c35b530e3a38567b226b804879e4e
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596137"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760149"
 ---
-# <a name="connector-for-autopilot-preview"></a>Autopilot 用コネクタ (プレビュー)
+# <a name="export-segments-to-autopilot-preview"></a>セグメントを AutoPilot にエクスポート (プレビュー)
 
 統合された顧客プロファイルのセグメントを Autopilot にエクスポートし、Autopilot での E メール マーケティングに使用します。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites-for-a-connection"></a>接続の前提条件
 
 -   [Autopilot 広告アカウント](https://www.autopilothq.com/) と対応する管理者資格情報があります。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
 -   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
-
-## <a name="connect-to-autopilot"></a>Autopilot に接続する
-
-1. **管理** > **エクスポート先** へと移動します。
-
-1. **Autopilot** で **設定** を選択します。
-
-1. **表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。
-
-   :::image type="content" source="media/export-autopilot.PNG" alt-text="Autopilot 接続の構成ペイン。":::
-
-1. **Autopilot API キー** [自動操縦 API キー](https://autopilot.docs.apiary.io/#)を入力します。
-
-1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
-
-1. **接続** を選択して、Autopilot への接続を初期化します。
-
-1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
-
-1. **次へ** を選択してエクスポートを構成します。
-
-## <a name="configure-the-connector"></a>コネクタの構成
-
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 **名**、**姓** など、他の任意フィールドに同じ手順を繰り返します。
-
-1. エクスポートするセグメントを選択します。 Autopilot に対しては **合計で 10 万件を超える顧客プロファイルは、エクスポートしないことをお勧めします**。 
-
-1. **保存** を選択します。
-
-## <a name="export-the-data"></a>データをエクスポートする
-
-[オンデマンドでデータをエクスポート](export-destinations.md) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。
 
 ## <a name="known-limitations"></a>既知の制限
 
@@ -64,6 +32,46 @@ ms.locfileid: "5596137"
 - Autopilot へのエクスポートはセグメントに制限されています。
 - 最大 10 万件のプロファイルを Autopilot にエクスポートすると、完了するまでに最大で数時間かかる場合があります。 
 - Autopilot にエクスポートできるプロファイルの数は、Autopilot との契約に依存し、制限されています。
+
+## <a name="set-up-connection-to-autopilot"></a>Autopilot への接続を設定する
+
+1. **管理** > **接続** に移動します。
+
+1. **つながりの追加** を選択し、**Autopilot** を選択して、接続を構成します。
+
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
+
+1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+
+3. [Autopilot API キー](https://autopilot.docs.apiary.io/#) を入力します。
+
+1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
+
+1. **接続** を選択して、Autopilot への接続を初期化します。
+
+1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
+
+1. **保存** を選択して、接続を完了します。
+
+## <a name="configure-an-export"></a>エクスポートの構成
+
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **データ** > **エクスポート** に移動します。
+
+1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
+
+1. **エクスポートの接続** フィールドで、Autopilot セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+
+3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 **名**、**姓** など、他の任意フィールドに同じ手順を繰り返します。
+
+1. エクスポートするセグメントを選択します。 Autopilot に対しては **合計で 10 万件を超える顧客プロファイルは、エクスポートしないことをお勧めします**。 
+
+1. **保存** を選択します。
+
+エクスポートを保存しても、エクスポートはすぐには実行されません。
+
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

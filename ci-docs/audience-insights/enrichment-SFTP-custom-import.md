@@ -1,7 +1,7 @@
 ---
 title: SFTP カスタム インポートによるエンリッチメント
 description: SFTP カスタム インポート エンリッチメントに関する一般情報。
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595861"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896287"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
-セキュリティで保護されたファイル転送プロトコル (SFTP) カスタム インポートを使用すると、データ統合のプロセスを行う必要のないデータをインポートできます。 これは、データを取り込むための柔軟で安全かつ簡単な方法です。 SFTP カスタム インポートは、エンリッチメントに必要な顧客プロファイル データをエクスポートできる [SFTP エクスポート](export-sftp.md) と組み合わせて使用できます。 次に、データを処理して強化し、SFTP カスタム インポートを使用して、エンリッチしたデータを Dynamics 365 Customer Insights の対象者に関するインサイト機能に戻すことができます。
+セキュリティで保護されたファイル転送プロトコル (SFTP) カスタムインポートでは、データ統合のプロセスを必要としないデータをインポートできます。 これは、データを取り込むための柔軟で安全かつ簡単な方法です。 SFTP カスタム インポートは、エンリッチメントに必要な顧客プロファイル データをエクスポートできる [SFTP エクスポート](export-sftp.md) と組み合わせて使用できます。 次に、データを処理して強化し、SFTP カスタム インポートを使用して、エンリッチしたデータを Dynamics 365 Customer Insights の対象者に関するインサイト機能に戻すことができます。
 
 ## <a name="prerequisites"></a>前提条件
 
 SFTP カスタム インポートを構成するには、次の前提条件が満たされている必要があります:
 
-- データのインポート元となる SFTP の場所に、ユーザー資格情報 (ユーザー名とパスワード) があります。
-- STFP ホストに URL とポート番号 (通常は22) があります。
-- SFTP ホストにインポートするファイルのファイル名と場所があります。
-- インポートするデータのスキーマを指定する *model.json* ファイルがあります。 このファイルは、インポートするファイルと同じディレクトリにある必要があります。
-- [管理者](permissions.md#administrator) のアクセス許可があります。
+- SFTP ホスト上に、インポートするファイルのファイル名とロケーション (パス) がある。
+- インポートするデータの [Common Data Model スキーマ](/common-data-model/) を指定する *model.json* ファイルがある。 このファイルは、インポートするファイルと同じディレクトリにある必要があります。
+- SFTP 接続は既に管理者によって構成されている、*または* [管理者](permissions.md#administrator) アクセス許可を所有していること。 データのインポート元となる SFTP ロケーションに対して、ユーザー資格情報、URL、およびポート番号が必要です。
 
-## <a name="configuration"></a>構成
+
+## <a name="configure-the-import"></a>インポートの構成
 
 1. **データ** > **エンリッチメント** に移動し、**検出** タブを選択します。
 
-1. **SFTP カスタム インポート タイル** で **データの強化** を選択します。
+1. **SFTP カスタム インポート タイル** で **データのエンリッチ** を選択し、**開始する** を選択します。
 
-   > [!div class="mx-imgBorder"]
-   > ![SFTP カスタム インポート タイル](media/SFTP_Custom_Import_tile.png "SFTP カスタム インポート タイル")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP カスタム インポート タイル。":::
 
-1. **開始する** を選択し、SFTP サーバーの資格情報とアドレスを指定します。 たとえば、sftp://mysftpserver.com:22 です。
+1. ドロップダウンから [接続](connections.md) を選択します。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、ドロップダウンから **SFTP カスタム インポート** を選択することで、接続を作成できます。
 
-1. データを含むファイルの名前と、ルート フォルダーにない場合は、SFTP サーバー上のファイルへのパスを入力します。
+1. **カスタム インポートに接続する** を選択し、選択した接続を確認します。
 
-1. **カスタム インポート への接続** を選択して、すべての入力を確認します。
+1.  **次へ** 選択し、インポートするデータファイルの **ファイル名** と **パス** を入力します。
 
-   > [!div class="mx-imgBorder"]
-   > ![SFTP カスタム インポート構成ポップアップ](media/SFTP_Custom_Import_Configuration_flyout.png "SFTP カスタム インポート構成ポップアップ")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="データの場所を入力する際のスクリーンショット。":::
+
+1. **次へ** を選択し、エンリッチメントの名前と出力エンティティの名前を指定します。 
+
+1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP カスタム インポートの接続を構成する 
+
+接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、カスタム インポート タイルで **設定** を選択します。
+
+1. **表示名** ボックスに接続の名前を入力します。
+
+1. インポートするデータが存在する STFP サーバーの有効なユーザー名、パスワード、およびホスト URL を入力します。
+
+1. 内容を確認し、**同意する** チェックボックスを選択して、**データのプライバシーとコンプライアンス** に同意してください。
+
+1. **検証** を選択して、構成を検証します。
+
+1. 検証が完了したら、**保存** をクリックして接続を保存できます。
+
+> [!div class="mx-imgBorder"]
+   > ![Experian 接続構成ページ](media/enrichment-SFTP-connection.png "Experian 接続構成ページ")
+
 
 ## <a name="defining-field-mappings"></a>フィールド マッピングの定義 
 
@@ -105,8 +124,5 @@ SFTP サーバーにインポートするファイルを含むディレクトリ
 ## <a name="next-steps"></a>次の手順
 
 エンリッチされた顧客データの上に構築します。 [セグメント](segments.md)、[メジャー](measures.md)、[データのエクスポート](export-destinations.md) を作成し、パーソナライズされたエクスペリエンスを顧客に提供します。
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

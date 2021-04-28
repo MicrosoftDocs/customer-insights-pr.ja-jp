@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Marketo にエクスポートする
-description: Marketo への接続を構成する方法を説明します。
-ms.date: 11/12/2020
+description: Marketo への接続とエクスポートを構成する方法を説明します。
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597977"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759827"
 ---
-# <a name="connector-for-marketo-preview"></a>Marketo 用コネクタ (プレビュー)
+# <a name="export-segments-to-marketo-preview"></a>セグメントを Marketo にエクスポート (プレビュー)
 
 統合顧客プロファイルのセグメントをエクスポートして、キャンペーンを生成し、電子メール マーケティングを提供して Marketo で特定の顧客グループを使用します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites-for-connection"></a>接続の前提条件
 
 -   [Marketo アカウント](https://login.marketo.com/) と対応する管理者資格情報があります。
 -   Marketo に既存のリストと対応する ID があります。 詳細については、[Marketo リスト](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) を参照してください。
 -   [セグメントを構成](segments.md) しました。
 -   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
-
-## <a name="connect-to-marketo"></a>Marketo への接続
-
-1. **管理** > **エクスポート先** へと移動します。
-
-1. **Marketo** で **設定** を選択します。
-
-1. **表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。
-
-1. **[Marketo クライアント ID、クライアント シークレット、REST エンドポイントのホスト名](https://developers.marketo.com/rest-api/authentication/)** を入力します。
-
-1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します 
-
-1. **同意する** を選択して、**データのプライバシーとコンプライアンス** を確認し、**接続** を選択して、Marketo への接続を初期化します。
-
-1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Marketo 接続のスクリーンショットをエクスポートする":::
-
-1. **次へ** を選択してエクスポートを構成します。
-
-## <a name="configure-the-connector"></a>コネクタの構成
-
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
-
-1. オプションで、**名**、**姓**、**市**、**都道府県**、**国/地域** を追加フィールドとしてエクスポートし、よりパーソナライズされた電子メールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
-
-1. エクスポートするセグメントを選択します。 合計で最大 100 万の顧客プロファイルを Marketo にエクスポートできます。
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="フィールドとセグメントを選択して、Marketo にエクスポートする":::
-
-1. **保存** を選択します。
-
-## <a name="export-the-data"></a>データをエクスポートする
-
-[オンデマンドでデータをエクスポート](export-destinations.md) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。 Marketo では、セグメントが [Marketo リスト](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) の下に表示されるようになりました。
 
 ## <a name="known-limitations"></a>既知の制限
 
@@ -69,6 +33,49 @@ ms.locfileid: "5597977"
 - Marketo へのエクスポートはセグメントに制限されています。
 - 合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 3 時間かかる場合があります。 
 - Marketo にエクスポートできるプロファイルの数は、Marketo との契約に依存し、制限されています。
+
+## <a name="set-up-connection-to-marketo"></a>Marketo への接続を設定する
+
+1. **管理** > **接続** に移動します。
+
+1. **つながりの追加** を選択し、**Marketo** を選択して、接続を構成します。
+
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
+
+1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+
+1. **[Marketo クライアント ID、クライアント シークレット、REST エンドポイントのホスト名](https://developers.marketo.com/rest-api/authentication/)** を入力します。
+
+1. **同意する** を選択して、**データのプライバシーとコンプライアンス** を確認し、**接続** を選択して、Marketo への接続を初期化します。
+
+1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
+
+1. **保存** を選択して、接続を完了します。
+
+## <a name="configure-an-export"></a>エクスポートの構成
+
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **データ** > **エクスポート** に移動します。
+
+1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
+
+1. **エクスポートの接続** フィールドで、Marketo セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+
+1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します 
+
+1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
+
+1. オプションで、**名**、**姓**、**市**、**都道府県**、**国/地域** をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
+
+1. エクスポートするセグメントを選択します。 合計で最大 100 万の顧客プロファイルを Marketo にエクスポートできます。
+
+1. **保存** を選択します。
+
+エクスポートを保存しても、エクスポートはすぐには実行されません。
+
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 Marketo では、セグメントが [Marketo リスト](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) の下に表示されるようになりました。
+
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

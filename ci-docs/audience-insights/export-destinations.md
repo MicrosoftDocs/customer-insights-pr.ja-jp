@@ -1,7 +1,7 @@
 ---
-title: エクスポート先
-description: データをエクスポートし、エクスポート先を管理します。
-ms.date: 07/21/2020
+title: Customer Insights からデータをエクスポートする
+description: エクスポートを管理してデータを共有します。
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596091"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896149"
 ---
-# <a name="export-destinations-preview-overview"></a>エクスポート先 (プレビュー) の概要
+# <a name="exports-preview-overview"></a>エクスポート (プレビュー) の概要
 
-**エクスポート先** ページには、データのエクスポート先として設定したすべての場所が表示されます。 エクスポートには新しい宛先を追加することもできます。 さらに、現在利用可能なエクスポート オプションが表示されます。 概要や説明を参照し、各拡張オプションでできることを確認してください。 統一されたプロファイル、メジャーおよびセグメントを業務に関連するサポート対象のアプリケーションにエクスポートします。
+**エクスポート** ページには、構成済みのすべてのエクスポートが表示されます。 エクスポートは、特定のデータをさまざまなアプリケーションと共有します。 顧客プロファイルまたはエンティティ、スキーマ、およびマッピングの詳細を含めることができます。 各エクスポートには、[認証とアクセスを管理するために、管理者によって設定された接続](connections.md) が必要です。
 
-**管理者** > **エクスポート先** へと移動し、次の拡張オプションを見つけます。
+> [!NOTE]
+> 2021 年 3 月まで、エクスポートでは、対応するサービスへの接続が自動的に作成されていました。 エクスポートを作成する前に、[管理者が作成および共有する接続](connections.md) が必要になりました。
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Experience Platform](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [AutoPilot](export-autopilot.md)
-- [Azure Blob Storage](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Microsoft Teams 用ボット](export-teams-bot.md)
-- [Customer Insights API](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (顧客カード アドイン)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 営業ハブ (顧客カード アドイン)](customer-card-add-in.md)
-- [Facebook 広告マネージャー](export-facebook.md)
-- [Google 広告](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+**データ** > **エクスポート** に移動し、エクスポート ページを表示します。 すべてのユーザー ロールには、構成済みのエクスポートを表示するアクセス権があります。 コマンド バーの検索フィールドを使用して、名前、接続名、または接続の種類でエクスポートを検索します。
 
-## <a name="add-a-new-export-destination"></a>新しいエクスポート先を追加する
+## <a name="set-up-a-new-export"></a>新しいエクスポートの設定
 
-エクスポート先を追加するするために、[管理者のアクセス許可](permissions.md) があります。 Microsoft サービスにエクスポートする場合、両方のサービスが同じ組織にあると見なされます。
+エクスポートを設定または編集するには、使用可能な接続が必要です。 接続は [ユーザー ロール](permissions.md) によって異なります:
+- 管理者はすべての接続にアクセスできます。 また、エクスポートを設定するときに新しい接続を作成することもできます。
+- 共同作成者は、特定の接続にアクセスできます。 接続の構成と共有を管理者に依存します。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+- ビューアーは、既存のエクスポートを表示することはできますが、作成することはできません。
 
-1. **管理** > **エクスポート先** へと移動します。
+1. **データ** > **エクスポート** に移動します。
 
-1. **自分のエクスポート先** タブに切り替えます。
+1. **エクスポートの追加** を選択して、新しいエクスポート先を作成します。
 
-1. **エクスポート先の追加** を選択して、新しいエクスポート先を作成します。
+1. **エクスポートの設定** ペインで、使用する接続を選択します。 [接続](connections.md) は、管理者によって管理されます。 
 
-1. **エクスポート先の追加** ウィンドウで、ドロップダウンでエクスポート先の **種別** を選択します。
+1. 必要な詳細を入力して **保存** 選択し、エクスポートを作成します。
 
-1. 必要な詳細を入力し、**次へ** て選択してエクスポート先を作成します。
-
-**検出** タブのタイルで、**設定** を選択することもできます。
-
-## <a name="view-export-destinations"></a>エクスポート先を表示する
-
-エクスポート先を作成すると、**自分のエクスポート先** タブのテーブルに表示されます。このテーブルには 3 つの列があります:
-
-- **表示名**：エクスポートの出力先を作成した時に入力した名前。
-- **種別**: エクスポートの出力先を作成した時に設定した出力先の種別。
-- **作成日**: エクスポートの出力先が作成された日付。
-
-## <a name="edit-an-export-destination"></a>エクスポート先を編集する
+### <a name="edit-an-export"></a>エクスポートの編集
 
 1. 編集するエクスポート先の垂直方向の省略記号を選択します。
 
-   > [!div class="mx-imgBorder"]
-   > ![垂直方向の省略記号](media/export-destinations-page-ellipsis.png "垂直方向の省略記号")
-
 1. ドロップダウン メニューから **編集** を選択します。
 
-1. 更新が必要な値を変更して、**保存** を選択します。
+1. 更新する値を変更し、**保存** を選択します。
 
-## <a name="export-data-on-demand"></a>オンデマンドでデータをエクスポートする
+## <a name="view-exports-and-export-details"></a>エクスポートとエクスポートの詳細の表示
 
-エクスポート先のコネクタを構成すると、[スケジュールされた更新](system.md#schedule-tab) ごとにエクスポートが実行されます。
+エクスポート先を作成した後、**データ** > **エクスポート** に表示さます。 すべてのユーザーは、共有されているデータとその最新の状態を確認できます。
 
-スケジュールされた更新を待たずにデータをエクスポートするには、**管理** > **エクスポート先** の **自分のエクスポート先** タブに移動します。
+1. **データ** > **エクスポート** に移動します。
 
-> [!div class="mx-imgBorder"]
-> ![垂直方向の省略記号](media/export-destinations-page-ellipsis.png "垂直方向の省略記号")
+1. 編集権限のないユーザーは、**編集** ではなく **ビュー** を選択して、エクスポートの詳細を表示します。
 
-- リストの上にある **エクスポート** を選択して、すべてのエクスポート先へのエクスポートを同時に実行します。
-- リスト項目の後の省略記号 (...) を選択し、**エクスポート** オプションを選択して、単一のエクスポート先に対してエクスポートを実行します。
+1. このサイド ペインには、このエクスポートの設定が表示されます。 編集権限がないと、値を変更できません。 **閉じる** を選択して、エクスポート ページに戻ります。
 
-## <a name="remove-an-export-destination"></a>エクスポート先を削除する
+## <a name="run-exports-on-demand"></a>オンデマンドでエクスポートを実行
 
-エクスポート先を削除するには、メインの **エクスポート先** ページから開始します。
+エクスポートを構成した後、作業中の接続がある限り、[スケジュール更新](system.md#schedule-tab) ごとに実行されます。
 
-1. 削除するエクスポート先の垂直方向の省略記号を選択します。
+スケジュール更新を待たずにデータをエクスポートするには、**データ** > **エクスポート** に移動します。 次の 2 つのオプションがあります。
 
-   > [!div class="mx-imgBorder"]
-   > ![垂直方向の省略記号](media/export-destinations-page-ellipsis.png "垂直方向の省略記号")
+- すべてのエクスポートを実行するには、コマンドバーで **すべて実行** を選択します。 
+- 1 つのエクスポートを実行するには、リスト項目で省略記号 (...) を選択してから、**実行** を選択します。
 
-2. ドロップダウン メニューで **削除** を選択します。
+## <a name="remove-an-export"></a>エクスポートの削除
 
-3. 確認画面で **削除** を選択して削除を確認します。
+1. **データ** > **エクスポート** に移動します。
+
+1. 削除するエクスポートの垂直方向の省略記号を選択します。
+
+1. ドロップダウン メニューで **削除** を選択します。
+
+1. 確認画面で **削除** を選択して削除を確認します。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

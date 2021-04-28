@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Adobe Experience Platform にエクスポート
 description: Adobe Experience Platform で対象者に関するインサイト セグメントを使用する方法について説明します。
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596275"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760107"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform で Customer Insights セグメントの使用 (プレビュー)
 
@@ -51,21 +51,36 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 対象ユーザーを特定した上で、対象者に関するインサイトから Azure Blob Storage アカウントへのエクスポートを構成できます。
 
-1. 対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。
+### <a name="configure-a-connection"></a>接続の構成
 
-1. **Azure Blob Storage** タイルで、**設定** を選択します。
+1. **管理** > **接続** に移動します。
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob Storage の構成タイル。":::
+1. **つながりの追加** を選択し、**Azure Blob Storage** を選択するか、**Azure Blob Storage** タイルで **設定** を選択します:
 
-1. この新しいエクスポート先の **表示名** を指定し、セグメントをエクスポートする Azure Blob Storage アカウントの **アカウント名**、**アカウント キー**、**コンテナー** を入力します。  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob Storage の構成タイル。"::: 接続を構成するには。
+
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
+
+1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+
+1. セグメントをエクスポートする Blob Storage アカウントの **アカウント名**、**アカウント キー**、および **コンテナー** を入力します。  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="ストレージ アカウント構成のスクリーンショット。"::: 
+   
+    - Blob Storage アカウント名とアカウント キーを検索する方法の詳細については、[Azure ポータルでストレージ アカウントの設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
+    - コンテナの作成方法については、[コンテナを作成する](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)を参照してください。
 
-   - Azure Blob ストレージアカウント名とアカウントキーを見つける方法の詳細については、[Azure ポータルでストレージ アカウント設定を管理する](/azure/storage/common/storage-account-manage)を参照してください。
+1. **保存** を選択して、接続を完了します。 
 
-   - コンテナの作成方法については、[コンテナを作成する](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)を参照してください。
+### <a name="configure-an-export"></a>エクスポートの構成
 
-1. **次へ** を選択します。
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **データ** > **エクスポート** に移動します。
+
+1. 新しいエクスポートを作成するには、**エクスポートの追加** を選択します。
+
+1. **エクスポートの接続** フィールドで、Azure Blob Storage セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
 1. エクスポートするセグメントを選択します。 この例では、**ChurnProneCustomers** です。
 
@@ -73,11 +88,9 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 1. **保存** を選択します。
 
-エクスポート先を保存した後、**管理** > **エクスポート** > **自分のエクスポート先** に表示されます。
+エクスポート先を保存した後、**データ** > **エクスポート** に表示されます。
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="エクスポートの一覧とサンプル セグメントが強調表示されたスクリーンショット。":::
-
-これで、[セグメントをオンデマンドでエクスポート](export-destinations.md#export-data-on-demand) できるようになりました。 エクスポートは、[スケジュールされた更新](system.md) ごとに実行されます。
+これで、[セグメントをオンデマンドでエクスポート](export-destinations.md#run-exports-on-demand) できるようになりました。 エクスポートは、[スケジュールされた更新](system.md) ごとに実行されます。
 
 > [!NOTE]
 > エクスポートされたセグメントのレコード数が、Adobe Campaign Standard ライセンスの許可された制限内にあることを確認してください。

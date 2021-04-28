@@ -1,7 +1,7 @@
 ---
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598299"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887992"
 ---
 # <a name="manage-environments"></a>環境の管理
 
@@ -44,6 +44,9 @@ ms.locfileid: "5598299"
 
 新規環境を作成するには、次の 2 つの方法があります。 まったく新たな構成を指定することも、既存の環境から一部の構成設定をコピーすることも可能です。
 
+> [!NOTE]
+> 組織では、Customer Insights ライセンスごとに *2* つの環境を作成できます。 組織が複数のライセンスを購入する場合は、[サポート チームに連絡](https://go.microsoft.com/fwlink/?linkid=2079641) して利用可能な環境の数を増やしてください。 容量とアドオン容量の詳細については、[Dynamics 365 のライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544) をダウンロードしてください。
+
 環境の作成方法 :
 
 1. アプリのヘッダーにある **環境** ピッカーを選択します。
@@ -55,14 +58,14 @@ ms.locfileid: "5598299"
 
 1. **新しい環境の作成** ダイアログで **新しい環境** を選択します。
 
-   [現在の環境からデータをコピー](#additional-considerations-for-copy-configuration-preview) する場合は、**既存の環境からコピー** を選択します。 データのコピー元となる組織の、利用可能なすべての環境のリストが表示されます。
+   [現在の環境からデータをコピー](#considerations-for-copy-configuration-preview) する場合は、**既存の環境からコピー** を選択します。 データのコピー元となる組織の、利用可能なすべての環境のリストが表示されます。
 
 1. 次の詳細を入力します:
    - **名前**: この環境の名前。 既存の環境からコピーする場合は、このフィールドには既にに入力されていますが、変更することもできます。
    - **リージョン** : サービスが展開、ホストされるリージョンを示します。
    - **タイプ**: 実稼働環境、またはサンドボックス環境のどちらを作成するかを選択します。
 
-2. オプションで、**詳細設定** を選択できます:
+1. オプションで、**詳細設定** を選択できます:
 
    - **すべてのデータを保存する** : Customer Insights から生成された出力データを保存する場所を指定します。 次の2つの選択肢があります: **Customer Insights ストレージ** (Customer Insights チームが管理する Azure Data Lake) と **Azure Data Lake Storage Gen2** (ユーザーが管理する Azure Data Lake Storage) です。 既定では、Customer Insights のストレージが選択されています。
 
@@ -75,20 +78,20 @@ ms.locfileid: "5598299"
 
    - Azure Data Lake Storage Gen2 オプションの場合、認証にリソース ベースのオプションとサブスクリプション ベースのオプションのどちらかを選択できます。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 **コンテナー** 名は変更できず、"customerinsights" になります。
    
-   - [予測](predictions.md)を使う場合、または Microsoft Dataverse に基づいてアプリケーションやソリューションとのデータ共有を構成する場合は、**Microsoft Dataverse とのデータ共有を構成して、追加機能を有効にする** の下に Microsoft Dataverse 環境 URL を入力します。 **データ共有を有効にする** を選択して、Customer Insights 出力データを Microsoft Dataverse マネージド Data Lake と共有します。
+   - [予測](predictions.md) を使用したり、、Microsoft Dataverse に基づくアプリケーションおよびソリューションとのデータ共有を構成したり、オンプレミスのデータ ソースからのデータ インジェストを有効にしたりする場合は、**Microsoft Dataverse とのデータ共有を構成し、追加の機能を有効にする** の下にある Microsoft Dataverse 環境の URL を指定します。 **データ共有を有効にする** を選択して、Customer Insights 出力データを Microsoft Dataverse マネージド Data Lake と共有します。
 
      > [!NOTE]
      > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
      > - [エンティティの欠落値の予測](predictions.md)は、Microsoft Dataverse マネージド Data Lake とのデータ共有を有効にした場合、現在はサポートされていません。
 
      > [!div class="mx-imgBorder"]
-     > ![Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png) とのデータ共有を可能にする構成オプション
+     > ![Microsoft Dataverse](media/datasharing-with-DataverseMDL.png) とのデータ共有を可能にする構成オプション
 
    データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 データ ファイルと model.json ファイルが作成され、実行するプロセスに基づいてそれぞれのサブ フォルダーに追加されます。
 
    Customer Insights の複数の環境を作成し、それらの環境からの出力エンティティをストレージ アカウントに保存することを選択した場合、コンテナーに ci_<environmentid> が含まれる環境ごとに個別のフォルダーが作成されます。
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>コピー構成に関する追加の考慮事項 (プレビュー)
+### <a name="considerations-for-copy-configuration-preview"></a>コピー構成に関する考慮事項 (プレビュー)
 
 以下の構成設定がコピーされます：
 
@@ -136,6 +139,18 @@ ms.locfileid: "5598299"
 4. 環境がデータを Azure Data Lake Storage Gen2 に保存するように構成されている場合は、 **アカウントキー** を更新することができます。 ただし、**アカウント名** または **コンテナー** 名前を変更することはできません。
 
 5. オプションで、アカウント キー ベースの接続から、リソース ベースまたはサブスクリプション ベースの接続に更新できます。 一度アップグレードすると、アップグレード後にアカウント キーに戻すことはできません。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 接続の更新時に、**コンテナー** 情報を変更することはできません。
+
+6. オプションで、**Microsoft Dataverse とのデータ共有を構成し、追加の機能を有効にする** の下にある Microsoft Dataverse 環境の URL を指定できます。 これらの機能には、Microsoft Dataverse に基づくアプリケーションおよびソリューションとのデータ共有、オンプレミスのデータ ソースからのデータ インジェスト、または使用 [予測](predictions.md) が含まれます。 **データ共有の有効化** を選択して、Customer Insights 出力データを Microsoft Dataverse Managed Data Lake と共有します。
+
+   > [!NOTE]
+   > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
+   > - Microsoft Dataverse Managed Data Lake を使用したデータ共有を有効にした場合、[エンティティでの不足値の予測](predictions.md) は、現在サポートされていません。
+
+   Microsoft Dataverse でデータ共有を有効にすると、データ ソースやその他のプロセスの完全更新がトリガーされます。 プロセスが現在実行中でキューに入っている場合は、Microsoft Dataverse とのデータ共有を有効にするオプションは表示されません。 これらのプロセスが完了するのを待つか、キャンセルして、データ共有を有効にすることができます。 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
+   
+   データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 実行するプロセスに応じて、データ ファイルと model.json ファイルが作成され、それぞれのサブフォルダーに追加されます。
 
 ## <a name="reset-an-existing-environment"></a>既存の環境のリセット
 

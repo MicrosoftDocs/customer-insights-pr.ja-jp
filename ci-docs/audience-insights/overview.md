@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598636"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896471"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights の対象者インサイトの概要
 
@@ -27,9 +27,9 @@ ms.locfileid: "5598636"
   - [組み込まれたコネクタを使用することで](data-sources.md)、一般的なデータソースからトランザクション データ、観察データ、および行動データを簡単に接続し、データを統合します。
   - 顧客データをインテリジェントに変換します— [共通データ モデル](/common-data-model/) に準拠した統合された顧客プロファイルを構築します。 AI/ML 駆動型のレコメンデーションで顧客 ID を解決します。
 
-- **Microsoft Graph に含まれるオーディエンス インテリジェンスのエンリッチ**
+- **対象者インテリジェンスでエンリッチする**
 
-  - [Microsoft Graph ](enrichment-microsoft-graph.md)に含まれるオーディエンス インテリジェンスを組み込むことにより、より豊かな顧客プロファイルを構築します。  
+  - [エンリッチしたデータを組み込む](enrichment-hub.md) ことで、より豊かな顧客プロファイルを構築します。  
 
 - **ビジネス プロセスと個人用に設定されたカスタマー エクスペリエンスを強化**
 
@@ -43,7 +43,7 @@ ms.locfileid: "5598636"
 
   - コネクタの豊富なコレクションにアクセスして、すべての顧客データを取り込みます。
   - 顧客データを統合し、[共通データ モデル](/common-data-model/) フォーマットに変換できます。
-  - ブランド アフィニティや関心など、Microsoft Graph に含まれるオーディエンス インテリジェンスからのインサイトを使用して、顧客情報をエンリッチします。
+  - ブランド アフィニティや関心など、対象者インテリジェンスからのインサイトを使用して、顧客情報をエンリッチします。
   - "コードではなくクリック" の構成とデバッグ エクスペリエンスにより、対象者に関するインサイトを簡単に構成し、潜在的な問題を特定することができます。
   - AIを使用したレコメンデーションにより、さまざまなソースにわたって顧客データをクレンジングおよび標準化します。  
 

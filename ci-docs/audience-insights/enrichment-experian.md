@@ -1,7 +1,7 @@
 ---
 title: サードパーティ エンリッチメント Experian によるエンリッチメント
 description: Experian サードパーティ エンリッチメントに関する一般情報。
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597793"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896379"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian の人口統計で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -25,10 +25,10 @@ Experian は、消費者および企業の信用調査およびマーケティ�
 Experian を構成するには、次の前提条件が満たされている必要があります:
 
 - Experian のサブスクリプションがアクティブです。 サブスクリプションを取得するには、直接 [Experian にお問い合わせください](https://www.experian.com/marketing-services/contact)。 [Experian データ エンリッチメントの詳細情報](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage) を確認する。
-- Experian が作成した SSH 対応のセキュア トランスポート (ST) アカウントのユーザー ID、パーティ ID、およびモデル番号があります。
-- 対象者に関するインサイトに [管理者](permissions.md#administrator) のアクセス許可があります。
 
-## <a name="configuration"></a>構成
+- Experian 接続はすでに管理者によって構成されている、*または* [管理者](permissions.md#administrator) アクセス許可を所有していること。 また、Experian がユーザーのために作成した、SSH 対応セキュア トランスポート (ST) アカウントのユーザー ID、関係者 ID、およびモデル番号も必要です。
+
+## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 
 1. **データ** > **エンリッチメント** に移動し、**検出** タブを選択します。
 
@@ -36,26 +36,46 @@ Experian を構成するには、次の前提条件が満たされている必�
 
    > [!div class="mx-imgBorder"]
    > ![Experian タイル](media/experian-tile.png "Experian タイル")
+   > 
 
-1. **開始する** を選択して、Experian セキュア トランスポート アカウントのユーザー ID、パーティ ID、およびモデル番号を入力します。 内容を確認し、**同意する** チェックボックスを選択して、**データのプライバシーとコンプライアンス** に同意してください。 **適用** を選択して、すべての入力を確認します。
+1. ドロップダウンから [接続](connections.md) を選択します。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、ドロップダウンから Experian を選択することで、接続を作成できます。 
 
-## <a name="map-your-fields"></a>フィールドのマップ
+1. **Experian に接続する** を選択し、接続の選択内容を確認します。
 
-1.  **データを追加する** を選択して、Experian からの人口統計情報をエンリッチさせる **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+1.  **次へ** を選択し、Experian の人口統計データで強化する **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
 
-1. **名前と住所**、**E メール**、または **電話** からキー識別子をから選択し、ID 解決のために Experian に送信します。
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="顧客データ セットを選択するときのスクリーンショット。":::
 
-   > [!TIP]
-   > Experian に送信されるキー識別子属性が多いほど、一致率が高くなる可能性があります。
+1. **次へ** を選択し、統合プロファイルからどの種類のフィールドを使用して、Experian から一致する人口統計データを検索するかを定義します。 **名前と住所**、**電話**、または **メール** フィールドの少なくとも 1 つが必要です。 一致精度を高めるために、他に最大 2 つのフィールドを追加できます。 この選択は、次の手順でアクセスできるマッピング フィールドに影響します。
 
-1. **次へ** を選択して、選択したキー識別子フィールドの統合顧客エンティティから対応する属性をマップします。
+    > [!TIP]
+    > Experian に送信されるキー識別子属性が多いほど、一致率が高くなる可能性があります。
 
-1. **属性の追加** を選択して、Experian に送信する追加属性をマップします。
+1. **次へ** を選択し、フィールド マッピングを開始します。
 
-1.  **保存** を選択して、フィールドのマッピングを完了します。
+1. 統合プロファイルからどのフィールドを使用して、Experian から一致する人口統計データを検索するかを定義します。 必須フィールドはマークされます。
 
-    > [!div class="mx-imgBorder"]
-    > ![Experian フィールド マッピング](media/experian-field-mapping.png "Experian フィールド マッピング")
+1. エンリッチメントの名前と出力エンティティの名前を指定します。
+
+1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
+
+## <a name="configure-the-connection-for-experian"></a>Experian の接続を構成する 
+
+接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、Experian タイルで **設定** を選択します。
+
+1. **開始する** を選択します。
+
+1. **表示名** ボックスに接続の名前を入力します。
+
+1. Experian セキュア トランスポート アカウントの有効なユーザー ID、関係者 ID、およびモデル番号を入力します。
+
+1. **データのプライバシーとコンプライアンス** を確認し、**同意する** チェックボックスを選択して、同意します
+
+1. **検証** を選択して、構成を検証します。
+
+1. 検証が完了したら、**保存** を選択します。
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian 接続構成ペイン。":::
 
 ## <a name="enrichment-results"></a>強化の結果
 

@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597701"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896011"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -27,8 +27,8 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **検出** タブでは、次のような拡充機能があります :
 
-- Microsoft Graph が提供する [ブランド](enrichment-microsoft-graph.md)
-- Microsoft Graph が提供する [関心](enrichment-microsoft-graph.md)
+- Microsoft が提供する [ブランド](enrichment-microsoft.md)
+- Microsoft が提供する [関心](enrichment-microsoft.md)
 - Leadspace が提供する [会社データ](enrichment-leadspace.md)
 - Experian が提供する [人口統計](enrichment-experian.md)
 - HERE Technologies が提供する [位置データ](enrichment-here.md)
@@ -40,7 +40,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **自分のエンリッチメント** に移動し、構成されたすべてのエンリッチメントを表示します。 各エンリッチメントは、エンリッチメントに関する追加情報を含む行として表されます。
 
-エンリッチメントを選択して、利用可能なオプションを表示します。 または、リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。
+エンリッチメントを選択して、利用可能なオプションを表示します。 リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="エンリッチメントの一覧でエンリッチメントを管理するオプション":::
 
@@ -52,5 +52,12 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 リストで複数のエンリッチメントを選択して、一度に実行または非アクティブ化できます。 表示と編集のオプションは一括アクションとして使用できず、一度に 1 つのエンリッチメントに対してのみ機能します。
 
+## <a name="enrichments-and-connections"></a>エンリッチメントと接続
+
+サード パーティのエンリッチメントは、管理者が資格情報を使用して設定し、データ転送の同意を提供する [接続](connections.md) を使用して構成されます。 管理者と共同作成者は接続を使用して、エンリッチメントを構成できます。  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>同じ種類の複数のエンリッチメント
+
+強化されるエンティティは、エンリッチメントの構成中に指定され、プロファイルのサブセットのみを強化できます。 たとえば、特定のセグメントのデータのみを強化します。 同じ種類の複数のエンリッチメントを構成し、同じ接続を再利用できます。 一部のエンリッチメントには、作成できる同じ種類のエンリッチメントの数に制限があります。 制限と現在の使用状況は **エンリッチメント** ページで確認できます。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

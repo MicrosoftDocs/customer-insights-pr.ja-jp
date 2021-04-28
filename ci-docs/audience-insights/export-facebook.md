@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Facebook 広告マネージャーにエクスポートする
-description: Facebook 広告マネージャへの接続の構成方法を説明します。
-ms.date: 06/05/2020
+description: Facebook 広告マネージャへの接続とエクスポートを構成する方法を説明します。
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596689"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906816"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Facebook 広告マネージャ向けコネクタ (プレビュー版)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>セグメント リストを Facebook 広告マネージャにエクスポート (プレビュー)
 
 統合された顧客プロファイルのセグメントを Facebook 広告マネージャにエクスポートして Facebook と Instagram でキャンペーンを作成する。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites-for-connection"></a>接続の前提条件
 
 - [**Facebook ビジネス アカウント**](https://business.facebook.com/) を含む [**Facebook 広告アカウント**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) が必要です。
 - [**Facebook 広告アカウント**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) の管理者である必要があります。
 
-## <a name="connect-to-facebook-ads-manager"></a>Facebook 広告マネージャに接続する
+## <a name="known-limitations"></a>既知の制限
 
-1. **管理** > **エクスポート先** へと移動します。
+- Facebook 広告マネージャへのエクスポートごとに最大 1,000 万件の顧客プロファイルまでとなります。
+- Facebook 広告マネージャへのエクスポートはセグメントに限定されます。
+- Facebook でカスタム対象者を作成または更新する場合は、*顧客リスト* の種類のみです。
+- 合計 1,000 万件のプロファイルを持つセグメントのエクスポートには、完了までに最大 90 分間かかります。
 
-1. **Facebook 広告マネージャ** 配下で、**設定** を選択します。
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Facebook 広告マネージャへの接続を設定する
 
-1. **表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。
+ユーザーがエクスポートを作成する前に、管理者はサービスへの接続を構成し、共同作成者が接続を使用できるようにする必要があります。
 
-1. **Facebook で続ける** を選択して、Facebook 広告アカウントにサインインします。
+1. **管理** > **接続** に移動します。
 
-1. Facebook で認証した後、**ads_management** アクセス許可を付与します。
+1. **つながりの追加** を選択し、**Facebook 広告マネージャ** を選択して、接続を構成します。
 
-1. 作業する **Facebook 広告アカウント** を選択します。
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. **既存のカスタム対象ユーザー** ドロップダウン リストから選択するか、または **新しいカスタム対象ユーザー** を作成します。 詳細については、[**Facebook 広告マネージャの対象ユーザー**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494)を参照してください。
+1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は **管理者** になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
+1. Facebook Ads による認証: 
 
-1. **次へ** を選択してエクスポートを構成します。
+   1. **Facebook で続ける** を選択して、Facebook 広告アカウントにサインインします。
 
-## <a name="configure-the-connector"></a>コネクタの構成
+   1. Facebook で認証した後、**ads_management** アクセス許可を付与します。
 
-1. **キー識別子のフィールドを選択する** にて、**E メール**、**名前と住所**、または **電話** を選択して、Facebook 広告マネージャに送信します。
+   1. 作業する **Facebook 広告アカウント** を選択します。
+
+   1. **既存のカスタム対象ユーザー** ドロップダウン リストから選択するか、または **新しいカスタム対象ユーザー** を作成します。 詳細については、[**Facebook 広告マネージャの対象ユーザー**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494)を参照してください。
+      > [!NOTE]
+      > このエクスポートでは、Facebook で *顧客リスト* の種類のカスタム対象者のみを作成または更新できます。 場合によっては、ドロップダウン リストにさまざまな種類のカスタム対象者が表示されます。 *顧客リスト* とは異なる種類を選択すると、エクスポートに失敗します。 
+
+1. **データのプライバシーとコンプライアンス** を確認し、**同意する** を選択します。
+
+1. **保存** を選択して、接続を完了します。
+
+## <a name="configure-an-export"></a>エクスポートの構成
+
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **データ** > **エクスポート** に移動します。
+
+1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。 
+
+1. **エクスポートの接続** で、**Facebook 広告マネージャ** セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+
+1. **キー識別子のフィールドを選択する** にて、**E メール**、**名前と住所**、または **電話** を選択して、Facebook 広告マネージャに送信します。 
+
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。
 
 1. 選択したキー識別子に対応する統合顧客エンティティの対応する属性をマッピングします。
    > [ヒント] キー識別子に **E メール** を選択すると、一致する可能性が最も高くなります。 識別子を追加すると、マッチングが向上する場合があります。
 
-1. **属性の追加** を選択して、追加の属性をマッピングして、Facebook 広告マネージャに送信します。 Facebook 広告マネージャは、次のようなわかりやすい名前にマッピングされています : **FN** = **名**、**LN** = **姓**、**FI** = **最初の頭文字**、**PHONE** = **電話**、**GEN** = **性別**、**DOB** = **生年月日**、**ST** = **状態**、**CT** = **市**、**ZIP** = **郵便番号**、**COUNTRY** = **国/地域**
+1. **属性の追加** を選択し、送信する属性をさらに Facebook 広告マネージャにマップします。 Facebook 広告マネージャの属性は、以下のユーザー フレンドリ名にマッピングされます: **FN** = **名**、**LN** = **姓**、**FI** = **最初の頭文字**、**PHONE** = **電話**、**GEN** = **性別**、**DOB** = **生年月日**、**ST** = **状態**、**CT** = **市**、**ZIP** = **郵便番号**、**COUNTRY** = **国 / 地域**
 
 1. エクスポートするセグメントを選択します。
 
 1. **保存** を選択します。
 
-## <a name="export-the-data"></a>データをエクスポートする
+エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-[オンデマンドでデータをエクスポート](export-destinations.md) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。
-
-## <a name="known-limitations"></a>既知の制限
-
-- Facebook 広告マネージャーへのエクスポートごとに最大 1,000 万の顧客プロファイル  
-- Facebook 広告マネージャーへのエクスポートはセグメントに制限される
-- 合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 90 分間かかる
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

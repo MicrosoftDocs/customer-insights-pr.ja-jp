@@ -1,6 +1,6 @@
 ---
-title: Customer Insights のデータを AdRollにエクスポート
-description: AdRoll への接続とエクスポートを構成する方法を説明します。
+title: Customer Insights データを RollWorks にエクスポート
+description: RollWorks への接続とエクスポートを構成する方法を説明します。
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895965"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760568"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>セグメント リストを AdRoll にエクスポート (プレビュー)
+# <a name="export-segment-lists-to-rollworks-preview"></a>セグメント リストを RollWorks にエクスポート (プレビュー)
 
-統合顧客プロファイルのセグメントを AdRoll にエクスポートし、広告に使用します。 
+統合顧客プロファイルのセグメントを RollWorks にエクスポートし、広告に使用します。 
 
 ## <a name="prerequisites-for-a-connection"></a>接続の前提条件
 
--   [AdRoll アカウント](https://www.adroll.com/) と対応する管理者資格情報があります。
+-   [RollWorks アカウント](https://www.rollworks.com/) と対応する管理者資格情報がある。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
 -   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- 1 回のエクスポートで 250'000 プロファイルを AdRoll にエクスポートできます。
-- プロファイルが 100 未満のセグメントを AdRoll にエクスポートできません。 
-- AdRoll へのエクスポートはセグメントに制限されています。
-- 最大 250'000 のプロファイルを AdRoll にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
-- AdRoll にエクスポートできるプロファイルの数は、AdRoll との契約に依存し、制限されています。
+- RollWorks には、1 回のエクスポートで 250'000 プロファイルまでエクスポートできます。
+- プロファイルが 100 未満のセグメントを RollWorks にエクスポートできません。 
+- RollWorks へのエクスポートはセグメントに限定されています。
+- 最大 250'000 件のプロファイルを RollWorks にエクスポートすると、完了するまでに最大 10 分かかります。 
+- RollWorks にエクスポートできるプロファイルの数は、RollWorks との契約によって異なり、制限されます。
 
-## <a name="set-up-connection-to-adroll"></a>AdRoll への接続を設定する
+## <a name="set-up-connection-to-rollworks"></a>RollWorks への接続を設定する
 
 1. **管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**AdRoll** を選択して接続を構成します。
+1. **つながりの追加** を選択し、**RollWorks** を選択して、接続を構成します。
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
@@ -46,9 +46,9 @@ ms.locfileid: "5895965"
 
 1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
 
-1. **接続** を選択して、AdRoll への接続を初期化します。
+1. **接続** を選択して、RollWorks への接続を初期化します。
 
-1. **AdRoll による認証** を選択し、AdRoll の管理者資格情報を入力します。 
+1. **RollWorks による認証** を選択して、RollWorks の管理者資格情報を入力します。
 
 1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
 
@@ -62,11 +62,11 @@ ms.locfileid: "5895965"
 
 1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、AdRoll セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポートの接続** フィールドで、RollWorks セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-1. **AdRoll 広告者 ID** を入力します 詳細については、[ AdRoll 広告者プロファイル](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) を参照してください。
+1. **RollWorks 広告者 ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) を入力します。
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを AdRoll にエクスポートする必要があります。
+3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを RollWorks にエクスポートする必要があります。
 
 1. エクスポートするセグメントを選択します。 メンバー数が 100 以上のセグメントを選択します。 小さいセグメントをエクスポートすることはできません。 さらに、エクスポートするセグメントの最大サイズは、エクスポートごとに 250'000 メンバーです。 
 
@@ -79,6 +79,6 @@ ms.locfileid: "5895965"
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 
-Dynamics 365 Customer Insights による AdRoll へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、AdRoll がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
+Dynamics 365 Customer Insights による RollWorks へのデータの転送を有効にすると、Dynamics 365 Customer Insights のコンプライアンスの境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可することになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、RollWorks がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 
 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。

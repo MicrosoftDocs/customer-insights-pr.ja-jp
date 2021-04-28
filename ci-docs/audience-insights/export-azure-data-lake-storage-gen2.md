@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Azure Data Lake Storage Gen2 にエクスポートする
 description: Azure Data Lake Storage Gen2 への接続を構成する方法を説明します。
-ms.date: 02/04/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,47 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596643"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760057"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Azure Data Lake Storage Gen2 用コネクタ (プレビュー)
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Azure Data Lake Storage Gen2 への接続を設定する (preview)
 
-Customer Insights データを Azure Data Lake Storage Gen2 に保存するか、それを使用してユーザーのデータを他のアプリケーションに転送します。
+1. **管理** > **接続** に移動します。
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Azure Data Lake Storage Gen2 のコネクタを構成する
+1. **つながりの追加** を選択し、**Azure Data Lake Storage Gen2** を選択して接続を構成します。
 
-1. 対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. **Azure Data Lake Storage Gen2** で **設定** を選択します。
-
-1. 出力先となる **表示名称** フィールドにはわかりやすい名前を付けます。
+1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
 1. Azure Data Lake Storage Gen2 の **アカウント名**、**アカウント キー**、および **コンテナ** を入力します。
     - Azure Data Lake Storage Gen2 で使うストレージ アカウントを作成する方法を学ぶには、[ストレージアカウントを作成する](/azure/storage/blobs/create-data-lake-storage-account)を参照します。 
-    - Azure Data Lake Gen2 ストレージ アカウント名とアカウントキーを見つける方法の詳細については、[ Azure ポータルでストレージ アカウント設定を管理する](/azure/storage/common/storage-account-manage)を参照してください。
+    - Azure Data Lake Gen2 のストレージ アカウント名とアカウント キーの詳細については、[Azure ポータルでストレージ アカウントの設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
 
-1. **次へ** を選択します。
+1. **保存** を選択して、接続を完了します。 
+
+## <a name="configure-an-export"></a>エクスポートの構成
+
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **データ** > **エクスポート** に移動します。
+
+1. 新しいエクスポートを作成するには、**エクスポートの追加** を選択します。
+
+1. **エクスポートの接続** フィールドで、**Azure Data Lake** セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
 1. エクスポートの出力先とする各エンティティの横にあるボックスを選択します。
 
 1. **保存** を選択します。
 
-## <a name="export-the-data"></a>データをエクスポートする
+エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-[オンデマンドでデータをエクスポート](export-destinations.md#export-data-on-demand) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
+
+エクスポート データは、構成した Azure Data Lake Gen 2 のストレージ コンテナーに保存されます。 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
