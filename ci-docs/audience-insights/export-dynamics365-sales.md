@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Dynamics 365 Sales にエクスポートする
-description: Dynamics 365 Sales への接続を構成する方法について説明します。
-ms.date: 02/01/2021
+description: Dynamics 365 Sales への接続とエクスポートを構成する方法を説明します。
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,49 +9,60 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598115"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759610"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="0b6b7-103">Dynamics 365 Sales のコネクタ (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="0b6b7-103">Connector for Dynamics 365 Sales (preview)</span></span>
+# <a name="use-segments-in-dynamics-365-sales-preview"></a><span data-ttu-id="d4f05-103">Dynamics 365 Sales でセグメントを使用する (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="d4f05-103">Use segments in Dynamics 365 Sales (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="0b6b7-104">Dynamics 365 Sales で顧客データを使用して、マーケティング リストの作成、ワークフローのフォローアップ、プロモーションの送信を行います。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
+<span data-ttu-id="d4f05-104">Dynamics 365 Sales で顧客データを使用して、マーケティング リストの作成、ワークフローのフォローアップ、プロモーションの送信を行います。</span><span class="sxs-lookup"><span data-stu-id="d4f05-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="0b6b7-105">前提条件</span><span class="sxs-lookup"><span data-stu-id="0b6b7-105">Prerequisite</span></span>
+## <a name="prerequisite-for-connection"></a><span data-ttu-id="d4f05-105">接続の前提条件</span><span class="sxs-lookup"><span data-stu-id="d4f05-105">Prerequisite for connection</span></span>
 
-1. <span data-ttu-id="0b6b7-106">Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="0b6b7-107">取引先担当者を取り込む方法の詳細については、[Common Data Services を使った Dynamics 365 Sales](connect-power-query.md) を読んでください。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
+1. <span data-ttu-id="d4f05-106">Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。</span><span class="sxs-lookup"><span data-stu-id="d4f05-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="d4f05-107">取引先担当者を取り込む方法の詳細については、[Common Data Services を使った Dynamics 365 Sales](connect-power-query.md) を読んでください。</span><span class="sxs-lookup"><span data-stu-id="d4f05-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="0b6b7-108">対象者インサイトから Sales にセグメントをエクスポートしても、Sales インスタンスに新しい取引先担当者レコードは作成されません。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="0b6b7-109">Sales からの取引先担当者レコードは、対象者インサイトに取り込まれ、データ ソースとして使用される必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="0b6b7-110">また、セグメントをエクスポートする前に、顧客 ID を取引先担当者 ID にマッピングするために、統合された顧客エンティティに含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
+   > <span data-ttu-id="d4f05-108">対象者インサイトから Sales にセグメントをエクスポートしても、Sales インスタンスに新しい取引先担当者レコードは作成されません。</span><span class="sxs-lookup"><span data-stu-id="d4f05-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="d4f05-109">Sales からの取引先担当者レコードは、対象者インサイトに取り込まれ、データ ソースとして使用される必要があります。</span><span class="sxs-lookup"><span data-stu-id="d4f05-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="d4f05-110">また、セグメントをエクスポートする前に、顧客 ID を取引先担当者 ID にマッピングするために、統合された顧客エンティティに含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="d4f05-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="0b6b7-111">Sales 用のコネクタを構成する</span><span class="sxs-lookup"><span data-stu-id="0b6b7-111">Configure the connector for Sales</span></span>
+## <a name="set-up-the-connection-to-sales"></a><span data-ttu-id="d4f05-111">Sales への接続を設定する</span><span class="sxs-lookup"><span data-stu-id="d4f05-111">Set up the connection to Sales</span></span>
 
-1. <span data-ttu-id="0b6b7-112">対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-112">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="d4f05-112">**管理** > **接続** に移動します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-112">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="0b6b7-113">**Dynamics 365 Sales** で **設定** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-113">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
+1. <span data-ttu-id="d4f05-113">**つながりの追加** を選択し、**Dynamics 365 Sales** を選択して、接続を構成します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-113">Select **Add connection** and choose **Dynamics 365 Sales** to configure the connection.</span></span>
 
-1. <span data-ttu-id="0b6b7-114">**表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="d4f05-114">接続にわかりやすい名前を **表示名** フィールドに付けます。</span><span class="sxs-lookup"><span data-stu-id="d4f05-114">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="d4f05-115">接続の表示名と種類は、この接続を説明します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-115">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="d4f05-116">接続の目的とターゲットを説明する名前を選択することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d4f05-116">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="0b6b7-115">**サーバー アドレス** フィールドに組織の Sales URL を入力します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-115">Enter your organization's Sales URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="d4f05-117">この接続を使用できるユーザーを選択します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-117">Choose who can use this connection.</span></span> <span data-ttu-id="d4f05-118">アクションを実行しない場合、既定は管理者になります。</span><span class="sxs-lookup"><span data-stu-id="d4f05-118">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="d4f05-119">詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d4f05-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="0b6b7-116">**サーバー管理者アカウント** セクションで、**サインイン** を選択し、Dynamics 365 Sales アカウントを選択します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-116">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
+1. <span data-ttu-id="d4f05-120">**サーバー アドレス** フィールドに組織の Sales URL を入力します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-120">Enter your organization's Sales URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="0b6b7-117">顧客 ID フィールドを Dynamics 365 取引先担当者 ID にマップします。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-117">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="d4f05-121">**サーバー管理者アカウント** セクションで、**サインイン** を選択し、Dynamics 365 Sales アカウントを選択します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-121">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
 
-1. <span data-ttu-id="0b6b7-118">**次へ** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-118">Select **Next**.</span></span>
+1. <span data-ttu-id="d4f05-122">顧客 ID フィールドを Dynamics 365 取引先担当者 ID にマップします。</span><span class="sxs-lookup"><span data-stu-id="d4f05-122">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="0b6b7-119">1つ、または複数のセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-119">Choose one or more segments.</span></span>
+1. <span data-ttu-id="d4f05-123">**保存** を選択して、接続を完了します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-123">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="0b6b7-120">**保存** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-120">Select **Save**.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="d4f05-124">エクスポートの構成</span><span class="sxs-lookup"><span data-stu-id="d4f05-124">Configure an export</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="0b6b7-121">データをエクスポートする</span><span class="sxs-lookup"><span data-stu-id="0b6b7-121">Export the data</span></span>
+<span data-ttu-id="d4f05-125">この種類の接続にアクセスできる場合は、このエクスポートを構成できます。</span><span class="sxs-lookup"><span data-stu-id="d4f05-125">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="d4f05-126">詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d4f05-126">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-<span data-ttu-id="0b6b7-122">[オンデマンドでデータをエクスポート](export-destinations.md) できます。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-122">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="0b6b7-123">エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。</span><span class="sxs-lookup"><span data-stu-id="0b6b7-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="d4f05-127">**データ** > **エクスポート** に移動します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-127">Go to **Data** > **Exports**.</span></span>
 
+1. <span data-ttu-id="d4f05-128">新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-128">To create a new export, select **Add destination**.</span></span>
+
+1. <span data-ttu-id="d4f05-129">**エクスポートの接続** フィールドで、Dynamics 365 Sales セクションから接続を選択します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-129">In the **Connection for export** field, choose a connection from the Dynamics 365 Sales section.</span></span> <span data-ttu-id="d4f05-130">このセクション名が表示されない場合、この種類の接続は使用できません。</span><span class="sxs-lookup"><span data-stu-id="d4f05-130">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="d4f05-131">1つ、または複数のセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="d4f05-131">Choose one or more segments.</span></span>
+
+1. <span data-ttu-id="d4f05-132">**保存** を選択します</span><span class="sxs-lookup"><span data-stu-id="d4f05-132">Select **Save**</span></span>
+
+<span data-ttu-id="d4f05-133">エクスポートを保存しても、エクスポートはすぐには実行されません。</span><span class="sxs-lookup"><span data-stu-id="d4f05-133">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="d4f05-134">エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。</span><span class="sxs-lookup"><span data-stu-id="d4f05-134">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="d4f05-135">[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。</span><span class="sxs-lookup"><span data-stu-id="d4f05-135">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

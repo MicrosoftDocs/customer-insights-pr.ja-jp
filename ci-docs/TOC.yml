@@ -65,7 +65,7 @@
         - name: 顧客プロファイルのエンリッチ
           href: audience-insights/enrichment-hub.md
         - name: ブランドや関心のアフィニティ
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: HERE Technologies を利用して強化する
           href: audience-insights/enrichment-here.md
         - name: Leadspace で充実させる
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: 製品レコメンデーション予測のサンプル ガイド
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: 予測に基づいてセグメントを作成する
+          href: audience-insights/prediction-based-segment.md
         - name: カスタム機械学習モデルを実装する
           href: audience-insights/custom-models.md
         - name: Azure Machine Learning で実験する
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: エクスポート オプション
       items:
-        - name: エクスポート先プレビュー
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: AutoPilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage Gen2
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: Dynamics 365 Customer Service (アドイン)
-          href: audience-insights/customer-card-add-in.md
-        - name: Dynamics 365 Marketing
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: Dynamics 365 の販売
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Dynamics 365 Sales ハブ (アドイン)
-          href: audience-insights/customer-card-add-in.md
-        - name: Facebook 広告マネージャー
-          href: audience-insights/export-facebook.md
-        - name: Google 広告
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: Mailchimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (ボット)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: エクスポート
+          items:
+            - name: エクスポート (プレビュー) の概要
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: AutoPilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Storage
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage Gen2
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Adobe Experience Platform
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: Dynamics 365 Marketing
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: Dynamics 365 Sales
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Facebook 広告マネージャー
+              href: audience-insights/export-facebook.md
+            - name: Google 広告
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: Mailchimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: その他の用途
+          items:
+            - name: Dynamics 365 Customer Service (アドイン)
+              href: audience-insights/customer-card-add-in.md
+            - name: Dynamics 365 Sales ハブ (アドイン)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (ボット)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: 管理
       items:
         - name: システム構成の設定
           href: audience-insights/system.md
         - name: ユーザーのアクセス許可を割り当てる
           href: audience-insights/permissions.md
+        - name: 接続 (プレビュー) の概要
+          href: audience-insights/connections.md
         - name: 複数の環境を管理する
           href: audience-insights/manage-environments.md
         - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
@@ -212,10 +228,14 @@
       items:
         - name: レポートの表示
           href: engagement-insights/view-reports.md
-        - name: カスタム レポートの作成
+        - name: カスタム レポートを作成する
           href: engagement-insights/custom-reports.md
         - name: 統合プロファイル レポートの作成
           href: engagement-insights/profile-reports.md
+    - name: 体験分析
+      items:
+        - name: じょうごレポートの作成および管理
+          href: engagement-insights/funnel-reports.md
     - name: 開発者リソース
       items:
         - name: 開発者リソースの概要

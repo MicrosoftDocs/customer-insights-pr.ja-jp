@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを AdRollにエクスポート
-description: AdRoll への接続を構成する方法について説明します。
-ms.date: 02/15/2021
+description: AdRoll への接続とエクスポートを構成する方法を説明します。
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,67 +9,76 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697080"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895965"
 ---
-# <a name="connector-for-adroll-preview"></a><span data-ttu-id="3498c-103">AdRoll 用コネクタ (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="3498c-103">Connector for AdRoll (preview)</span></span>
+# <a name="export-segment-lists-to-adroll-preview"></a><span data-ttu-id="5b679-103">セグメント リストを AdRoll にエクスポート (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="5b679-103">Export segment lists to AdRoll (preview)</span></span>
 
-<span data-ttu-id="3498c-104">統合顧客プロファイルのセグメントを AdRoll にエクスポートし、広告に使用します。</span><span class="sxs-lookup"><span data-stu-id="3498c-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
+<span data-ttu-id="5b679-104">統合顧客プロファイルのセグメントを AdRoll にエクスポートし、広告に使用します。</span><span class="sxs-lookup"><span data-stu-id="5b679-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
 
-## <a name="prerequisites"></a><span data-ttu-id="3498c-105">前提条件</span><span class="sxs-lookup"><span data-stu-id="3498c-105">Prerequisites</span></span>
+## <a name="prerequisites-for-a-connection"></a><span data-ttu-id="5b679-105">接続の前提条件</span><span class="sxs-lookup"><span data-stu-id="5b679-105">Prerequisites for a connection</span></span>
 
--   <span data-ttu-id="3498c-106">[AdRoll アカウント](https://www.adroll.com/) と対応する管理者資格情報があります。</span><span class="sxs-lookup"><span data-stu-id="3498c-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="3498c-107">対象者に関するインサイトで [セグメントを構成](segments.md) しました。</span><span class="sxs-lookup"><span data-stu-id="3498c-107">You have [configured segments](segments.md) in audience insights.</span></span>
--   <span data-ttu-id="3498c-108">エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="3498c-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="5b679-106">[AdRoll アカウント](https://www.adroll.com/) と対応する管理者資格情報があります。</span><span class="sxs-lookup"><span data-stu-id="5b679-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="5b679-107">対象者に関するインサイトで [セグメントを構成](segments.md) しました。</span><span class="sxs-lookup"><span data-stu-id="5b679-107">You have [configured segments](segments.md) in audience insights.</span></span>
+-   <span data-ttu-id="5b679-108">エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5b679-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-adroll"></a><span data-ttu-id="3498c-109">AdRoll に接続する</span><span class="sxs-lookup"><span data-stu-id="3498c-109">Connect to AdRoll</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="5b679-109">既知の制限</span><span class="sxs-lookup"><span data-stu-id="5b679-109">Known limitations</span></span>
 
-1. <span data-ttu-id="3498c-110">**管理** > **エクスポート先** へと移動します。</span><span class="sxs-lookup"><span data-stu-id="3498c-110">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="5b679-110">1 回のエクスポートで 250'000 プロファイルを AdRoll にエクスポートできます。</span><span class="sxs-lookup"><span data-stu-id="5b679-110">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
+- <span data-ttu-id="5b679-111">プロファイルが 100 未満のセグメントを AdRoll にエクスポートできません。</span><span class="sxs-lookup"><span data-stu-id="5b679-111">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
+- <span data-ttu-id="5b679-112">AdRoll へのエクスポートはセグメントに制限されています。</span><span class="sxs-lookup"><span data-stu-id="5b679-112">Exporting to AdRoll is limited to segments.</span></span>
+- <span data-ttu-id="5b679-113">最大 250'000 のプロファイルを AdRoll にエクスポートすると、完了するまでに最大 10 分かかる場合があります。</span><span class="sxs-lookup"><span data-stu-id="5b679-113">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
+- <span data-ttu-id="5b679-114">AdRoll にエクスポートできるプロファイルの数は、AdRoll との契約に依存し、制限されています。</span><span class="sxs-lookup"><span data-stu-id="5b679-114">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
 
-1. <span data-ttu-id="3498c-111">**AdRoll** で **設定** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3498c-111">Under **AdRoll**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-adroll"></a><span data-ttu-id="5b679-115">AdRoll への接続を設定する</span><span class="sxs-lookup"><span data-stu-id="5b679-115">Set up connection to AdRoll</span></span>
 
-1. <span data-ttu-id="3498c-112">**表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="3498c-112">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="5b679-116">**管理** > **接続** に移動します。</span><span class="sxs-lookup"><span data-stu-id="5b679-116">Go to **Admin** > **Connections**.</span></span>
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="AdRoll 接続の構成ペイン。":::
+1. <span data-ttu-id="5b679-117">**つながりの追加** を選択し、**AdRoll** を選択して接続を構成します。</span><span class="sxs-lookup"><span data-stu-id="5b679-117">Select **Add connection** and choose **AdRoll** to configure the connection.</span></span>
 
-1. <span data-ttu-id="3498c-114">**同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。</span><span class="sxs-lookup"><span data-stu-id="3498c-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="5b679-118">接続にわかりやすい名前を **表示名** フィールドに付けます。</span><span class="sxs-lookup"><span data-stu-id="5b679-118">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="5b679-119">接続の表示名と種類は、この接続を説明します。</span><span class="sxs-lookup"><span data-stu-id="5b679-119">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="5b679-120">接続の目的とターゲットを説明する名前を選択することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="5b679-120">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="3498c-115">**接続** を選択して、AdRoll への接続を初期化します。</span><span class="sxs-lookup"><span data-stu-id="3498c-115">Select **Connect** to initialize the connection to AdRoll.</span></span>
+1. <span data-ttu-id="5b679-121">この接続を使用できるユーザーを選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-121">Choose who can use this connection.</span></span> <span data-ttu-id="5b679-122">アクションを実行しない場合、既定は管理者になります。</span><span class="sxs-lookup"><span data-stu-id="5b679-122">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="5b679-123">詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b679-123">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="3498c-116">**AdRoll による認証** を選択し、AdRoll の管理者資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="3498c-116">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
+1. <span data-ttu-id="5b679-124">**同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。</span><span class="sxs-lookup"><span data-stu-id="5b679-124">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-1. <span data-ttu-id="3498c-117">**エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="3498c-117">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="5b679-125">**接続** を選択して、AdRoll への接続を初期化します。</span><span class="sxs-lookup"><span data-stu-id="5b679-125">Select **Connect** to initialize the connection to AdRoll.</span></span>
 
-1. <span data-ttu-id="3498c-118">**AdRoll 広告者 ID** [AdRoll 広告](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles) を入力します。</span><span class="sxs-lookup"><span data-stu-id="3498c-118">Enter your **AdRoll Advertiser ID** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span></span>
+1. <span data-ttu-id="5b679-126">**AdRoll による認証** を選択し、AdRoll の管理者資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="5b679-126">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
 
-1. <span data-ttu-id="3498c-119">**次へ** を選択してエクスポートを構成します。</span><span class="sxs-lookup"><span data-stu-id="3498c-119">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="5b679-127">**エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="5b679-127">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="3498c-120">コネクタの構成</span><span class="sxs-lookup"><span data-stu-id="3498c-120">Configure the connector</span></span>
+1. <span data-ttu-id="5b679-128">**保存** を選択して、接続を完了します。</span><span class="sxs-lookup"><span data-stu-id="5b679-128">Select **Save** to complete the connection.</span></span>
 
-1. <span data-ttu-id="3498c-121">**データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。</span><span class="sxs-lookup"><span data-stu-id="3498c-121">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="3498c-122">セグメントを AdRoll にエクスポートする必要があります。</span><span class="sxs-lookup"><span data-stu-id="3498c-122">It's required to export segments to AdRoll.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="5b679-129">エクスポートの構成</span><span class="sxs-lookup"><span data-stu-id="5b679-129">Configure an export</span></span>
 
-1. <span data-ttu-id="3498c-123">エクスポートするセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="3498c-123">Select the segments you want to export.</span></span> <span data-ttu-id="3498c-124">メンバー数が 100 以上のセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="3498c-124">Select a segment with a least 100 members.</span></span> <span data-ttu-id="3498c-125">小さいセグメントをエクスポートすることはできません。</span><span class="sxs-lookup"><span data-stu-id="3498c-125">You can't export smaller segments.</span></span> <span data-ttu-id="3498c-126">さらに、エクスポートするセグメントの最大サイズは、エクスポートごとに 250'000 メンバーです。</span><span class="sxs-lookup"><span data-stu-id="3498c-126">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
+<span data-ttu-id="5b679-130">この種類の接続にアクセスできる場合は、このエクスポートを構成できます。</span><span class="sxs-lookup"><span data-stu-id="5b679-130">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="5b679-131">詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b679-131">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="3498c-127">**保存** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3498c-127">Select **Save**.</span></span>
+1. <span data-ttu-id="5b679-132">**データ** > **エクスポート** に移動します。</span><span class="sxs-lookup"><span data-stu-id="5b679-132">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="3498c-128">データをエクスポートする</span><span class="sxs-lookup"><span data-stu-id="3498c-128">Export the data</span></span>
+1. <span data-ttu-id="5b679-133">新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-133">To create a new export, select **Add destination**.</span></span>
 
-<span data-ttu-id="3498c-129">[オンデマンドでデータをエクスポート](export-destinations.md) できます。</span><span class="sxs-lookup"><span data-stu-id="3498c-129">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="3498c-130">エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。</span><span class="sxs-lookup"><span data-stu-id="3498c-130">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="5b679-134">**エクスポートの接続** フィールドで、AdRoll セクションから接続を選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-134">In the **Connection for export** field, choose a connection from the AdRoll section.</span></span> <span data-ttu-id="5b679-135">このセクション名が表示されない場合、この種類の接続は使用できません。</span><span class="sxs-lookup"><span data-stu-id="5b679-135">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="3498c-131">既知の制限</span><span class="sxs-lookup"><span data-stu-id="3498c-131">Known limitations</span></span>
+1. <span data-ttu-id="5b679-136">**AdRoll 広告者 ID** を入力します 詳細については、[ AdRoll 広告者プロファイル](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b679-136">Enter your **AdRoll Advertiser ID** For more information, see [AdRoll Advertiser Profiles](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span></span>
 
-- <span data-ttu-id="3498c-132">1 回のエクスポートで 250'000 プロファイルを AdRoll にエクスポートできます。</span><span class="sxs-lookup"><span data-stu-id="3498c-132">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
-- <span data-ttu-id="3498c-133">プロファイルが 100 未満のセグメントを AdRoll にエクスポートできません。</span><span class="sxs-lookup"><span data-stu-id="3498c-133">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
-- <span data-ttu-id="3498c-134">AdRoll へのエクスポートはセグメントに制限されています。</span><span class="sxs-lookup"><span data-stu-id="3498c-134">Exporting to AdRoll is limited to segments.</span></span>
-- <span data-ttu-id="3498c-135">最大 250'000 のプロファイルを AdRoll にエクスポートすると、完了するまでに最大 10 分かかる場合があります。</span><span class="sxs-lookup"><span data-stu-id="3498c-135">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
-- <span data-ttu-id="3498c-136">AdRoll にエクスポートできるプロファイルの数は、AdRoll との契約に依存し、制限されています。</span><span class="sxs-lookup"><span data-stu-id="3498c-136">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
+3. <span data-ttu-id="5b679-137">**データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-137">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="5b679-138">セグメントを AdRoll にエクスポートする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5b679-138">It's required to export segments to AdRoll.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="3498c-137">データのプライバシーとコンプライアンス</span><span class="sxs-lookup"><span data-stu-id="3498c-137">Data privacy and compliance</span></span>
+1. <span data-ttu-id="5b679-139">エクスポートするセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-139">Select the segments you want to export.</span></span> <span data-ttu-id="5b679-140">メンバー数が 100 以上のセグメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-140">Select a segment with a least 100 members.</span></span> <span data-ttu-id="5b679-141">小さいセグメントをエクスポートすることはできません。</span><span class="sxs-lookup"><span data-stu-id="5b679-141">You can't export smaller segments.</span></span> <span data-ttu-id="5b679-142">さらに、エクスポートするセグメントの最大サイズは、エクスポートごとに 250'000 メンバーです。</span><span class="sxs-lookup"><span data-stu-id="5b679-142">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
 
-<span data-ttu-id="3498c-138">Dynamics 365 Customer Insights による AdRoll へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。</span><span class="sxs-lookup"><span data-stu-id="3498c-138">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="3498c-139">Microsoft ではこのようなデータをお客様の指示により転送しますが、AdRoll がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。</span><span class="sxs-lookup"><span data-stu-id="3498c-139">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="3498c-140">詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3498c-140">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+1. <span data-ttu-id="5b679-143">**保存** を選択します。</span><span class="sxs-lookup"><span data-stu-id="5b679-143">Select **Save**.</span></span>
 
-<span data-ttu-id="3498c-141">Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。</span><span class="sxs-lookup"><span data-stu-id="3498c-141">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+<span data-ttu-id="5b679-144">エクスポートを保存しても、エクスポートはすぐには実行されません。</span><span class="sxs-lookup"><span data-stu-id="5b679-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="5b679-145">エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。</span><span class="sxs-lookup"><span data-stu-id="5b679-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="5b679-146">[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。</span><span class="sxs-lookup"><span data-stu-id="5b679-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="5b679-147">データのプライバシーとコンプライアンス</span><span class="sxs-lookup"><span data-stu-id="5b679-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="5b679-148">Dynamics 365 Customer Insights による AdRoll へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。</span><span class="sxs-lookup"><span data-stu-id="5b679-148">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="5b679-149">Microsoft ではこのようなデータをお客様の指示により転送しますが、AdRoll がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。</span><span class="sxs-lookup"><span data-stu-id="5b679-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="5b679-150">詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b679-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+
+<span data-ttu-id="5b679-151">Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。</span><span class="sxs-lookup"><span data-stu-id="5b679-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
