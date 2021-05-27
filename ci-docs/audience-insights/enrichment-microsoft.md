@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896608"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064897"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>ブランドと関心のアフィニティで顧客プロファイルをエンリッチさせる (プレビュー)
 
@@ -31,7 +31,7 @@ Microsoft の所有するデータを使用して、ブランドや関心のア�
 
 ## <a name="how-we-determine-affinities"></a>アフィニティの決定方法
 
-Microsoft のオンライン検索データを使用して、さまざまな人口統計セグメント (年齢、性別、または場所によって定義される) におけるブランドおよび関心に対するアフィニティを見つけます。 ブランドまたは関心のオンライン検索ボリュームは、他のセグメントと比較して、人口統計セグメントがそのブランドまたは関心にどれだけのアフィニティがあるかを決定します。 ブランドまたは関心。
+Microsoft のオンライン検索データを使用して、さまざまな人口統計セグメント (年齢、性別、または場所によって定義される) におけるブランドおよび関心に対するアフィニティを見つけます。 ブランドまたは関心のオンライン検索ボリュームは、他のセグメントと比較して、人口統計セグメントがそのブランドまたは関心にどれだけのアフィニティがあるかを決定します。
 
 ## <a name="affinity-level-and-score"></a>アフィニティ レベルとスコア
 

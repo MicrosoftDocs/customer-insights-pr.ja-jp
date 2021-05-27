@@ -1,7 +1,7 @@
 ---
 title: API に関する作業
 description: API を使用し、制限を把握します。
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873668"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016598"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -90,19 +90,13 @@ Azure でのアプリの登録の詳細については、[新しい Azure portal
 
 1. Azure portal のアプリの登録で、**API アクセス許可** に移動します。
 
-1. **アクセス許可の追加** を選択し、サイド ペインで **Customer Insights** を選択します。
+1. **アクセス許可の追加** を選択します。 
+
+1. **所属する組織で使用している API** タブを選択し、リストから **Dynamics 365 AI for Customer Insights** を選択します。 
 
 1. **アクセス許可の種類** で **アプリケーションのアクセス許可** を選択し、**CustomerInsights.Api.All** アクセス許可を選択します。
 
 1. **アクセス許可の追加** を選択します。
-
-1. このアプリケーションのアクセス許可に管理者の同意を付与するには、サービス プリンシパルを追加する必要があります。
-
-   1. Azure Active Directory (AD) PowerShell モジュールをインストールします: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. AD アカウントに接続します: `Connect-AzureAD -TenantId <your tenant id>`。 テナント ID は **概要** > **Azure Active Directory** で確認できます。
-   1. 次のコマンドを実行して、Azure AD サービス プリンシパルを追加します: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` AppId パラメーターは、Customer Insights API アプリに関連しています。
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="サービス プリンシパル サンプル":::
 
 1. アプリの登録の **API アクセス許可** に戻ります。
 

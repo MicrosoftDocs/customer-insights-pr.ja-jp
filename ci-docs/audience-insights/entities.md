@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596413"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049400"
 ---
 # <a name="entities-in-audience-insights"></a>対象者に関するインサイトのエンティティ
 
@@ -35,14 +35,14 @@ ms.locfileid: "5596413"
 エンティティを選択して、そのエンティティに含まれるさまざまなフィールドとレコードを調べます。
 
 > [!div class="mx-imgBorder"]
-> ![エンティティの選択](media/data-manager-entities-data.png "エンティティの選択")
+> ![エンティティを選択する](media/data-manager-entities-data.png "エンティティの選択")
 
-- **データ** タブはデフォルトで選択されており、エンティティの個々のレコードに関する詳細をリストするテーブルを表示します。
+- **データ** タブには、エンティティの個々のレコードに関する詳細を一覧表示したテーブルが表示されます。
 
 > [!div class="mx-imgBorder"]
 > ![フィールド テーブル](media/data-manager-entities-fields.PNG "フィールド テーブル")
 
-- **フィールド** タブには、フィールド名、データ タイプ、種類など、選択したエンティティの詳細をレビューするためのテーブルが表示されます。 **種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。 これらは、属性のデータ型とは異なるセマンティック型です。たとえば、フィールド *メール* の下には、データ型 *テキスト* がありますが、その (セマンティック型の) Common Data Model の種類は、*メール* または *メールアドレス* である場合があります。
+- **属性** タブは既定で選択されており、フィールド名、データ型、種類など、選択したエンティティの詳細を確認するためのテーブルが表示されます。 **種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。 これらは、属性のデータ型とは異なるセマンティック型です。たとえば、フィールド *メール* の下には、データ型 *テキスト* がありますが、その (セマンティック型の) Common Data Model の種類は、*メール* または *メールアドレス* である場合があります。
 
 > [!NOTE]
 > 両方のテーブルには、エンティティのデータのサンプルのみが表示されます。 完全なデータセットを表示するには、**データ ソース** ページに移動して、エンティティを選択し、**編集** を選択して、その後[データ ソース](data-sources.md) で説明した通り、このエンティティのデータを Power Query エディターで表示します。

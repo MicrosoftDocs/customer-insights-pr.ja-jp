@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759827"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059322"
 ---
 # <a name="export-segments-to-marketo-preview"></a>セグメントを Marketo にエクスポート (プレビュー)
 
@@ -44,7 +44,7 @@ ms.locfileid: "5759827"
 
 1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. **[Marketo クライアント ID、クライアント シークレット、REST エンドポイントのホスト名](https://developers.marketo.com/rest-api/authentication/)** を入力します。
+1. **[Marketo クライアント ID、クライアント シークレット、REST エンドポイントのホスト名](https://developers.marketo.com/rest-api/authentication/)** を入力します。 REST エンドポイントのホスト名はホスト名のみで、`https://` は含まれません。 例: `xyz-abc-123.mktorest.com`。 
 
 1. **同意する** を選択して、**データのプライバシーとコンプライアンス** を確認し、**接続** を選択して、Marketo への接続を初期化します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "5759827"
 
 1. **エクスポートの接続** フィールドで、Marketo セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します 
+1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します。 リスト ID は純粋な数値です。 たとえば、Marketo リスト ID が ST12345A7 の場合、数字の前後の文字を削除して、`12345` を入力します。 
 
 1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
 
@@ -74,7 +74,7 @@ ms.locfileid: "5759827"
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 Marketo では、セグメントが [Marketo リスト](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) の下に表示されるようになりました。
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 Marketo では、セグメントが [Marketo リスト](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) の下に表示されるようになりました。
 
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス

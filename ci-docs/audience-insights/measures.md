@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887946"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049256"
 ---
 # <a name="define-and-manage-measures"></a>メジャーの定義と管理
 
@@ -34,7 +34,7 @@ ms.locfileid: "5887946"
 
 1. **名前の編集** を選択して、メジャーの **名前** を提供します。 
    > [!NOTE]
-   > 新しいメジャー構成に、たとえば、CustomerID と 1 つの計算の 2 つのフィールドしかない場合、出力は、Customer_Measure と呼ばれるシステム生成エンティティに新しい列として追加されます。 また、統一された顧客プロファイルでメジャーの値を確認できます。 他のメジャーは、独自のエンティティを生成します。
+   > 新しいメジャー構成に、例えば CustomerID と 1 つの計算という、2 つのフィールドしかない場合、出力は、Customer_Measure と呼ばれるシステム生成エンティティに新しい列として追加されます。 また、統一された顧客プロファイルでメジャーの値を確認できます。 他のメジャーは、独自のエンティティを生成します。
 
 1. 構成領域で、**関数の選択** ドロップダウン メニューから集計関数を選択します。 集計関数は次のとおりです。 
    - **Sum**

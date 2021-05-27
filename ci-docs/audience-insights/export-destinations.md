@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896149"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016620"
 ---
 # <a name="exports-preview-overview"></a>エクスポート (プレビュー) の概要
 
 **エクスポート** ページには、構成済みのすべてのエクスポートが表示されます。 エクスポートは、特定のデータをさまざまなアプリケーションと共有します。 顧客プロファイルまたはエンティティ、スキーマ、およびマッピングの詳細を含めることができます。 各エクスポートには、[認証とアクセスを管理するために、管理者によって設定された接続](connections.md) が必要です。
-
-> [!NOTE]
-> 2021 年 3 月まで、エクスポートでは、対応するサービスへの接続が自動的に作成されていました。 エクスポートを作成する前に、[管理者が作成および共有する接続](connections.md) が必要になりました。
 
 **データ** > **エクスポート** に移動し、エクスポート ページを表示します。 すべてのユーザー ロールには、構成済みのエクスポートを表示するアクセス権があります。 コマンド バーの検索フィールドを使用して、名前、接続名、または接続の種類でエクスポートを検索します。
 

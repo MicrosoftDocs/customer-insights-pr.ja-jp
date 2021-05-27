@@ -1,7 +1,7 @@
 ---
-title: 顧客カード アドインのインストールと構成
-description: Dynamics 365 Customer Insights の顧客カード アドインのインストールと構成
-ms.date: 01/20/2021
+title: Dynamics 365 アプリ用顧客カード アドイン
+description: このアドインを使用して、Dynamics 365 アプリに対象者に関するインサイトのデータを表示します。
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597333"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059594"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dynamics 365 アプリで直接、顧客を全方位から確認します。 顧客カード アドインを使用して、人口統計、インサイト、および活動のタイムラインを表示します。
+Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにインストールされた顧客カード アドインを使用すると、人口統計、インサイト、活動タイムラインの表示を選択することができます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。 
 
 ## <a name="prerequisites"></a>前提条件
 
-- Dynamics 365アプリ (営業ハブまたは顧客サービス ハブなど)、バージョン9.0以降、統一インターフェイスが有効化されていること。
-- [Common Data Service を使用して Dynamics 365 アプリから取り込んだ](connect-power-query.md) 顧客プロファイル。
-- 顧客カード アドインのユーザーは、対象者に関するインサイトに [ユーザーとして追加](permissions.md) する必要があります。
-- [構成された検索およびフィルター機能](search-filter-index.md)。
-- 人口統計コントロール: 人口統計フィールド (年齢や性別など) は、統合顧客プロファイルで利用できます。
-- エンリッチメント制御 : 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
-- インテリジェンス制御: Azure Machine Learning ([予測](predictions.md) または [カスタム モデル](custom-models.md)) を使用して生成されたデータが必要です
-- メジャー制御: [構成済みメジャー](measures.md) が必要です。
-- タイムライン コントロール: [構成済みアクティビティ](activities.md) が必要です。
+- アドインは、Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
+- Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Common Data Service コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) 必要があります。
+- 顧客カード アドインのすべての Dynamics 365 ユーザーは、データを表示するために対象者に関するインサイトの [ユーザーとして追加](permissions.md) されている必要があります。
+- データの検索を機能させるには、対象者に関するインサイトの [検索およびフィルター機能を構成](search-filter-index.md) する必要があります。
+- 各アドイン コントロールは、対象者に関するインサイトの特定のデータに依存します:
+  - メジャー制御: [構成済みメジャー](measures.md) が必要です。
+  - インテリジェンス制御: [予測](predictions.md) または [カスタム モデル](custom-models.md) を使用して生成されたデータが必要です。
+  - 人口統計コントロール: 人口統計フィールド (年齢や性別など) は、統合顧客プロファイルで利用できます。
+  - エンリッチメント制御 : 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
+  - タイムライン コントロール: [構成済みアクティビティ](activities.md) が必要です。
 
 ## <a name="install-the-customer-card-add-in"></a> 顧客カード アドイン のインストール
 
@@ -56,9 +57,9 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 顧
    > [!NOTE]
    > **サインイン** ボタンを選択する場合に、ブラウザのポップアップ ブロッカーが認証ウィンドウをブロックしないことを確認します。
 
-1. データを取り込む環境を選択します。
+1. データを取得する Customer Insights 環境を選択します。
 
-1. Dynamics 365 アプリのレコードにマッピングするフィールドを定義します。
+1. Dynamics 365 アプリでレコードへのフィールド マッピングを定義します。 Customer Insights のデータに応じて、次のオプションのマップを選択できます:
    - 取引先担当者とマップするには、取引先担当者エンティティの ID と一致する顧客エンティティのフィールドを選択します。
    - 取引先企業とマップするには、取引先企業エンティティの ID と一致する顧客エンティティのフィールドを選択します。
 

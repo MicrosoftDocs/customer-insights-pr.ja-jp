@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595570"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085628"
 ---
 # <a name="match-entities"></a>エンティティを一致させる
 
@@ -103,6 +103,18 @@ ms.locfileid: "5595570"
 
 > [!NOTE]
 > ルールの順序は重要です。 照合アルゴリズムでは、最初のルールに基づいて照合を試み、最初のルールで一致するものがなかった場合に限り、2 番目のルールに進みます。
+
+### <a name="change-the-entity-order-in-match-rules"></a>照合ルールでエンティティの順序を変更する
+
+照合ルールのエンティティを並べ替えて、処理順序を変更できます。 順序が変更されたため競合しているルールは削除されます。 削除されたルールを更新された構成で再作成する必要があります。
+
+1. **データ** > **統合** > **照合** に移動して、**編集** を選択します。
+
+1. **ルールの編集** ペインで、**上/下へ移動** コントロールを選択するか、エンティティをドラッグ アンド ドロップして、順序を変更します。
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="照合フェーズでエンティティが処理される順序を変更するオプション。":::
+
+1. **完了** を選択して、ルールを保存します。
 
 ## <a name="define-deduplication-on-a-match-entity"></a>照合エンティティで重複排除を定義する
 
