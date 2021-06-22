@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034018"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111393"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -32,22 +32,13 @@ ms.locfileid: "6034018"
 - メジャーまたは属性に基づく AI を活用した提案: [メジャーを改善するための提案されたセグメント](suggested-segments.md)
 - 活動に基づく提案: [顧客活動に基づく提案されたセグメント](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>既存セグメントに関するインサイトの取得
-
-[セグメント インサイト](segment-insights.md) を使用して、既存セグメントに関する追加情報を検出します。 2 つのセグメントの違いや共通点を調査します。
-
-## <a name="find-similar-customers"></a>類似する顧客を見つける
-
-人工知能を使用して、選択したセグメントのメンバーに類似する顧客を検索します。 詳細については、[類似顧客](find-similar-customer-segments.md) を参照してください。
-
 ## <a name="manage-existing-segments"></a>既存のセグメントを管理する
 
 **セグメント** ページに移動し、保存したすべてのセグメントを表示して管理します。
 
 各セグメントは、セグメントに関する追加情報を含む行で表されます。
 
-> [!div class="mx-imgBorder"]
-> ![既存のセグメントを管理するオプション](media/segments-selected-segment.png "既存のセグメントを管理するオプション")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="オプション ドロップダウン リストと使用可能なオプションがある選択されたセグメント。":::
 
 セグメントを選択すると、次のアクションを実行できます。
 
@@ -59,7 +50,7 @@ ms.locfileid: "6034018"
   または、**アクティブ化/非アクティブ化** ドロップダウンで **後でスケジュール** 機能を使用して、特定のセグメントをアクティブ化および非アクティブ化する未来の日時を指定します。
 - セグメントの **名前を変更します**。
 - メンバーのリストを、CSV ファイル形式で **ダウンロード** します。
-- **追加先** オプションは、別のアプリケーションで処理するために、セグメント内の顧客 ID のリストを送信します。
+- **エクスポートを管理** して、エクスポートに関連するセグメントを表示および管理します。 [エクスポートについて詳細を確認します。](export-destinations.md)
 - セグメントを **削除** します。
 
 ## <a name="refresh-segments"></a>セグメントを最新の情報に更新する
@@ -68,6 +59,24 @@ ms.locfileid: "6034018"
 
 > [!TIP]
 > タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+
+## <a name="export-segments"></a>セグメントのエクスポート
+
+セグメント ページまたは [エクスポート ページ](export-destinations.md) からセグメントをエクスポートできます。 
+
+1. **セグメント** ページを表示します。
+
+1. エクスポートするセグメントの **詳細表示 [...]** を選択します。
+
+1. アクション ドロップダウン リストから **エクスポートの管理** を選択します。
+
+1. ページ **セグメントのエクスポート (プレビュー)** を開きます。 現在のセグメントを含む、または含まないエクスポートによってグループ化された、構成済みのすべてのエクスポートを表示できます。
+
+   1. 選択したセグメントをエクスポートに追加するには、一覧でエクスポートを選択して、**セグメントの追加** を選択します。
+
+   1. 選択したセグメントで新しいエクスポートを作成するには、**エクスポートの追加** を選択します。 エクスポートの作成の詳細については、[新しいエクスポートの設定](export-destinations.md#set-up-a-new-export) を参照してください。
+
+1. **戻る** を選択して、セグメントのメイン ページに戻ります。
 
 ## <a name="view-processing-history-and-segment-members"></a>処理履歴とセグメント メンバーの表示
 

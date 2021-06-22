@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988926"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263257"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
@@ -26,6 +26,37 @@ ms.locfileid: "5988926"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="may-2021-updates"></a>2021 年 5 月の更新
+
+2021 年 5 月の更新プログラムには、いくつかの機能、パフォーマンス アップグレード、およびバグ修正が含まれます。
+
+### <a name="data-ingestion"></a>データ インジェスト
+
+- **Azure Data Lake Storage からデータを添付する際のメタデータまたはエンティティ定義の表示または変更** Azure Data Lake Storage の Common Data Model フォルダーからデータを添付するときに、対象者に関するインサイトでメタデータまたはエンティティ定義を表示および編集できるようになりました。 この機能により、リアルタイムのフィードバック、モデルの検証、およびエラーチェックできます。 model.json と manifest.json の両方をシームレスに編集できます。
+
+### <a name="extensibility"></a>拡張性
+
+- **セグメントのエクスポート、カスタムス ケジュール、複製の改善** 一覧で [特定のセグメントのすべてのエクスポートを表示](export-destinations.md#view-exports-and-export-details) できるようになりました。 この新しいビューは、特定のセグメントの使用方法を管理したり、既存のエクスポートを適用したり、新しいエクスポートを作成したりするのに役立ちます。    
+  一度に個々のエクスポートまたは複数のエクスポートの [カスタム更新スケジュールを定義](export-destinations.md#schedule-and-run-exports) できます。 これまで、すべてのエクスポートはシステムの更新ごとに実行されていました。    
+  新しいエクスポートを最初から作成するのではなく、既存のエクスポートに基づいて開始し、時間を節約できます。
+
+- **セグメントの Microsoft Advertising へのエクスポート** エクスポート先を Microsoft Advertising を含むように拡張しました。 統合された顧客プロファイル データを使用し、カスタマー マッチの対象者を Microsoft Advertising で作成して、広告キャンペーンでその対象者を使用します。 詳細については、[セグメントの Microsoft Advertising へのエクスポート](export-microsoft-advertising.md) を参照してください。
+
+- **セグメントの LinkedIn Ads へのエクスポート** エクスポート先を LinkedIn Ads を含むように拡張し、統合された顧客プロファイル データをエクスポートすることで、LinkedIn による連絡先のターゲット設定と企業のターゲット設定を解除できるようにしました。 詳細については、[セグメントの LinkedIn Ads へのエクスポート](export-linkedin-ads.md) を参照してください。
+
+
+- **セグメントの Omnisend へのエクスポート** エクスポート先を Omnisend を含むように拡張しました。 対象者に関するインサイトで作成したセグメントを使用して、キャンペーンを生成したり、電子メール マーケティングを行ったり、Omnisend で特定の顧客グループを使用します。 詳細については、[セグメントの Omnisend へのエクスポート](export-omnisend.md) を参照してください
+
+### <a name="predictions"></a>予測
+
+- **入力データのユーザビリティ レポート** 入力データのユーザビリティ レポートには、即時利用可能な予測で生成される可能性のあるエラーと警告の統合されたビューが表示されます。 また、モデルのパフォーマンスを向上させる方法についても推奨します。    
+  レポートは、モデルがトレーニング プロセスを完了した後で利用できます。 正常に完了したかどうかに関係なく、モデルごとに個別に作成されます。
+  現在、この機能はトランザクション離反モデルでのみ使用できます。 詳細については、[入力データのユーザビリティ レポート](manage-predictions.md#input-data-usability-report) を参照してください。
+
+### <a name="relationships"></a>関係
+
+- **関連ビジュアライザー** 関連ビジュアライザーのビューでは、エンティティ間のすべての既存関係とその基数を表示できます。 関連付けは、ユーザー作成、システム、継承された関連付けのグループに編成されるようになりました。 ビューを画像としてエクスポートすることもできます。 詳細については、[関連付けの表示](relationships.md#view-relationships) を参照してください。 
 
 ## <a name="april-2021-updates"></a>2021 年 4 月の更新プログラム
 

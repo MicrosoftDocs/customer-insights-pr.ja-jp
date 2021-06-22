@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906908"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095654"
 ---
 # <a name="subscription-churn-prediction-preview"></a>サブスクリプションの解約予測 (プレビュー)
 
@@ -147,30 +147,9 @@ ms.locfileid: "5906908"
        > [!div class="mx-imgBorder"]
        > ![解約結果の予測における影響力のある要因とその重要性を示すリスト](media/subscription-churn-influentialfactors.PNG "解約結果の予測における影響力のある要因とその重要性を示すリスト")
 
-## <a name="fix-a-failed-prediction"></a>失敗した予測を修正する
+## <a name="manage-predictions"></a>予測の管理
 
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-1. エラーログを表示する予測を選択して **ログ** を選択します。
-   > [!div class="mx-imgBorder"]
-   > ![クローズ、モデル編集、ログ ボタンを含む結果メニュー バーの表示](media/subscription-churn-logsbutton.PNG "クローズ、モデル編集、ログ ボタンを含む結果メニュー バーの表示")
-1. すべてのエラーをレビューします。 発生するエラーにはいくつかの種類があり、どのような状態でエラーが発生したかを記載しています。 たとえば、正確に予測するのに十分なデータがないというエラーは、通常、追加のデータをロードすることで解決されます。
-
-## <a name="refresh-a-prediction"></a>予測を更新する
-
-予測は、設定で構成されているとおり、同一の[データ更新スケジュール](system.md#schedule-tab)に基づいて自動的に更新されます。
-
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-1. 更新する予測の横に配置されている縦型の省略記号を選択します。
-1. **最新の情報に更新** を選択します。
-
-## <a name="delete-a-prediction"></a>予測を削除する
-
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-1. 削除する予測の横に配置されている縦型の省略記号を選択します。
-1. **削除** を選択します。
-
-> [!NOTE]
-> 予測を削除すると、その出力エンティティが削除されます。
+予測を最適化、トラブルシューティング、更新、または削除することができます。 入力データのユーザビリティ レポートを確認して、予測をより高速で信頼性の高いものにする方法を見つけます。 詳細については、[予測の管理](manage-predictions.md) を参照してください。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

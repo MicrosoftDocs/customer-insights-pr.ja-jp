@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906770"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095562"
 ---
 # <a name="product-recommendation-prediction-preview"></a>製品レコメンデーションの予測 (プレビュー)
 
@@ -205,33 +205,9 @@ ms.locfileid: "5906770"
        > [!div class="mx-imgBorder"]
        > ![個々の顧客の一部のセットに対する信頼性の高い提案を示すリスト](media/product-recommendation-highconfidence.PNG "個々の顧客の一部のセットに対する信頼性の高い提案を示すリスト")
 
-## <a name="fix-a-failed-prediction"></a>失敗した予測を修正する
+## <a name="manage-predictions"></a>予測の管理
 
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-
-1. エラーログを表示する予測を選択して **ログ** を選択します。
-
-1. すべてのエラーをレビューします。 発生するエラーにはいくつかの種類があり、どのような状態でエラーが発生したかを記載しています。 たとえば、正確に予測するのに十分なデータがないというエラーは、通常、Customer Insights にさらにデータを読み込むことで解決されます。
-
-## <a name="refresh-a-prediction"></a>予測を更新する
-
-予測は、設定で構成したものと同じ[スケジュール](system.md#schedule-tab)でデータを自動更新します。
-
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-
-1. 更新する予測の横に配置されている縦型の省略記号を選択します。
-
-1. **更新** を選択します。
-
-## <a name="delete-a-prediction"></a>予測を削除する
-
-予測を削除すると、その出力エンティティも削除されます。
-
-1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
-
-1. 削除する予測の横に配置されている縦型の省略記号を選択します。
-
-1. **削除** を選択します。
+予測を最適化、トラブルシューティング、更新、または削除することができます。 入力データのユーザビリティ レポートを確認して、予測をより高速で信頼性の高いものにする方法を見つけます。 詳細については、[予測の管理](manage-predictions.md) を参照してください。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

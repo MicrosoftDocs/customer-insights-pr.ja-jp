@@ -1,7 +1,7 @@
 ---
 title: Microsoft のデータで顧客プロファイルをエンリッチする
 description: Microsoft が所有するデータを使用して、ブランドや関心のアフィニティで顧客データをエンリッチさせます。
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064897"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245713"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>ブランドと関心のアフィニティで顧客プロファイルをエンリッチさせる (プレビュー)
 
@@ -69,12 +69,10 @@ Microsoft のオンライン検索データを使用して、さまざまな人�
 
 ### <a name="define-your-brands-or-interests"></a>ブランドや関心の定義
 
-次のいずれかのオプションを選択してください。
+次のオプションのいずれかまたは両方を使用して、最大 5 つのブランドや関心を選択します:
 
-- **業界** : このシステムは、業界に関連するトップブランドや関心を識別し、顧客データを拡充します。
-- **自分で選択する** : 組織に最も関連のあるブランドや関心のリストから最大 5 つの項目を選択します。
-
-ブランドや関心を追加するには、入力エリアに入力して、一致する用語に基づいて提案を取得します。 探しているブランドや興味が見つからない場合は、**提案する** リンクを使用してフィードバックを送ってください。
+- **業種**: ドロップダウン リストからご自分の業種を選択し、その業種のトップ ブランドや関心事を選択します。
+- **自分で選択する**: 組織に関連するブランドや関心を入力し、一致する候補から選択します。 探しているブランドや興味が見つからない場合は、**提案する** リンクを使用してフィードバックを送ってください。
 
 ### <a name="review-enrichment-preferences"></a>エンリッチメントの基本設定をレビューする
 
