@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085628"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306034"
 ---
 # <a name="match-entities"></a>エンティティを一致させる
 

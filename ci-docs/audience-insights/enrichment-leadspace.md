@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895919"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305208"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
 
@@ -36,7 +36,7 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace タイルのスクリーンショット。":::
 
-1. ドロップダウンから [接続](connections.md) を選択します。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、**Leadspace** を選択することで、接続を作成できます。 
+1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、**Leadspace** を選択することで、接続を作成できます。 
 
 1. **Leadspace に接続する** を選択し、接続を確定します。
 
@@ -57,13 +57,13 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、Leadspace タイルで **設定** を選択します。
 
-1. **開始する** を選択します 
+1. **開始する** を選択します。 
 
 1. **表示名** ボックスに接続の名前を入力します。
 
 1. 有効な Leadspace トークンを指定します。
 
-1. **データのプライバシーとコンプライアンス** を確認し、**同意する** チェックボックスを選択して、同意します
+1. 確認して、**同意する** を選択して、**データのプライバシーとコンプライアンス** に同意します。
 
 1. **検証** を選択して、構成を検証します。
 
@@ -81,12 +81,12 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 ## <a name="next-steps"></a>次の手順
 
-エンリッチされた顧客データの上に構築します。 [セグメント](segments.md)、[メジャー](measures.md) を作成し、[データをエクスポート](export-destinations.md) して、顧客にパーソナライズされたエクスペリエンスを提供します。
+エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、さらに [データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 
 Dynamics 365 Customer Insights による Leadspace へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、Leadspace がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、このエンリッチメントはいつでも削除できます。
+Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

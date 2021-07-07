@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965584"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305438"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
@@ -22,7 +22,7 @@ ms.locfileid: "5965584"
 
 ## <a name="how-we-enhance-addresses"></a>住所の拡張方法
 
-このモデルでは、住所を拡張するために 2 ステップのプロセスを行います。 まず、住所を解析してコンポーネントを識別し、構造化された形式にします。 次に、人工知能を使用して、住所の値を修正、補完、標準化します。
+このモデルでは、住所を拡張するために 2 ステップのプロセスを行います。 まず、住所を解析してコンポーネントを識別し、構造化された形式にします。 次に、AI を使用して、住所の値を修正して完成させ、標準化します。
 
 ### <a name="example"></a>例
 
@@ -50,7 +50,7 @@ ms.locfileid: "5965584"
 2. 郵便番号や町名などの値のいずれかが有効かどうかを確認する。
 3. 認識できない値を変更する。
 
-モデルは、機械学習ベースの手法を使用して住所を拡張します。 ML ベースのモデルと同様に、モデルが入力値を変更するときに高い信頼性のしきい値を適用しますが、100% の精度は保証されません。
+モデルは、機械学習ベースの手法を使用して住所を拡張します。 他の機械学習ベースのモデルと同様に、モデルが入力値を変更するときには信頼性の高いしきい値を適用しますが、100％ の精度は保証されません。
 
 ## <a name="supported-countries-or-regions"></a>サポートされている国または地域
 
@@ -76,7 +76,7 @@ ms.locfileid: "5965584"
 1. データ セットでの住所の形式を選択します。 **1 つの属性を持つ住所** は、データ内の住所が 1 つのフィールドを使用する場合に選択します。 **複数の属性を持つ住所** は、データ内の住所が複数のデータ フィールドを使用する場合に選択します。
 
    > [!NOTE]
-   > 国/地域は、1 つの属性を持つ住所と複数の属性を持つ住所の両方で必須です。 有効またはサポート対象の国/地域の値を含まない住所はエンリッチされません
+   > 国/地域は、1 つの属性を持つ住所と複数の属性を持つ住所の両方で必須です。 有効またはサポート対象である国/地域の値を含まない住所はエンリッチされません。
 
 1.  統合顧客エンティティから住所フィールドをマップします。
 
@@ -98,6 +98,6 @@ ms.locfileid: "5965584"
 
 ## <a name="next-steps"></a>次の手順
 
-エンリッチされた顧客データの上に構築します。 [セグメント](segments.md)、[メジャー](measures.md) を作成し、[データをエクスポート](export-destinations.md) して、顧客にパーソナライズされたエクスペリエンスを提供します。
+エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、さらに [データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

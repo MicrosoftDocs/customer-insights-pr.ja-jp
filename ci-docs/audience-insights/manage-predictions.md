@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095724"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315884"
 ---
 # <a name="manage-predictions"></a>予測の管理
 
@@ -35,9 +35,6 @@ ms.locfileid: "6095724"
 入力データのユーザビリティ レポートは、すぐに使用できる予測で生成される可能性のあるエラーと警告の統合ビューを提供します。 また、モデルのパフォーマンスを向上させる方法についても推奨します。
 
 レポートは、モデルがトレーニング プロセスを完了した後で利用できます。 正常に完了したかどうかに関係なく、モデルごとに個別に作成されます。
-
-> [!NOTE]
-> 現在、この機能はトランザクション離反モデルでのみ機能します。
 
 ### <a name="view-the-input-data-usability-report"></a>入力データ ユーザビリティ レポートの表示
 

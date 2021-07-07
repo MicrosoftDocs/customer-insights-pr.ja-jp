@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595340"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306080"
 ---
 # <a name="segment-insights-preview"></a>セグメント インサイト (プレビュー)
 
@@ -50,7 +50,7 @@ ms.locfileid: "5595340"
 
 - 分析用に選択されたセグメントと重複するメンバーの数。
 - 1 つのセグメントに含まれているが、残りのセグメントには含まれていないメンバーの数。
-- 重複分析の構成中にフィールドを選択した場合、対応するタブにそれらが表示されます。 フィルター ドロップダウンを使用して、関心のある任意の属性レベルを選択でき、下部のテーブルには、対応するデータが表示されます。
+- 重複分析の構成中にフィールドを選択した場合、対応するタブにそれらが表示されます。 フィルター ドロップダウンを使用して、関心のある属性レベルを選択すると、下部のテーブルに対応するデータが表示されます。
 
 ## <a name="segment-differentiators"></a>セグメントの区別
 

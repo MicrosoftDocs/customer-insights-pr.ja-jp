@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129951"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306355"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>顧客の生涯価値 (CLV) 予測サンプル ガイド
 
@@ -123,9 +123,9 @@ Contoso は高品質のコーヒーとコーヒー メーカーを製造する�
 
 1. **照合** タブに移動して、**順序の設定** を選択します。
 
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択し、すべてのレコードを含めます。
+1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
 
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択し、すべてのレコードを含めます。
+1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
 
    ![eコマースとロイヤルティの一致を統合します。](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Contoso は高品質のコーヒーとコーヒー メーカーを製造する�
 
 1. FullName を使用して最初の条件を追加します。
 
-   - eCommerceContacts の場合は、ドロップダウンで **FullName** を選択します。
-   - loyCustomers の場合は、ドロップダウンで **FullName** を選択します。
+   - eCommerceContacts では、ドロップダウンで **FullName** を選択します。
+   - loyCustomers では、ドロップダウンで **FullName** を選択します。
    - **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
    - **精度レベル** の設定: **基本** と **値**: **高い**。
 
 1. 新しいルールに **FullName, Email** という名前を入力します。
 
    - **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   - エンティティ eCommerceContacts の場合、ドロップダウンで **電子メール** を選択します。
-   - エンティティ loyCustomers の場合、ドロップダウンで **電子メール** を選択します。
+   - エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
+   - エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。
    - 正規化を空白のままにします。
    - **精度レベル** の設定: **基本** と **値**: **高い**。
 

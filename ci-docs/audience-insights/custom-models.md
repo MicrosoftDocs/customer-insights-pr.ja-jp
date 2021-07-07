@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700674"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305644"
 ---
 # <a name="custom-machine-learning-models"></a>カスタム機械学習モデル
 
@@ -72,7 +72,7 @@ ms.locfileid: "5700674"
       > [!div class="mx-imgBorder"]
       > ![モデル出力パラメーター ペイン](media/intelligence-screen3-outputparameters.png "モデル出力パラメーター ペイン")
 
-1. 顧客を識別する **結果に含まれる顧客 ID** ドロップダウン リストから一致する属性を選択し、**保存** を選択します。
+1. 顧客を特定するには、**結果内の顧客 ID** ドロップダウン リストから一致する属性を選択し、**保存** を選択します。
 
    > [!div class="mx-imgBorder"]
    > ![結果と顧客データの関連付けペイン](media/intelligence-screen4-relatetocustomer.png "結果と顧客データの関連付けペイン")
@@ -100,7 +100,7 @@ ms.locfileid: "5700674"
       1. テスト パイプラインの **出力データ ストア パラメーター名** を選択します。
       1. テスト パイプラインの **出力パス パラメーター名** を選択します。
 
-1. 顧客を識別する **結果に含まれる顧客 ID** ドロップダウン リストから一致する属性を選択し、**保存** を選択します。
+1. 顧客を特定するには、**結果内の顧客 ID** ドロップダウン リストから一致する属性を選択し、**保存** を選択します。
    顧客エンティティの顧客 ID 列に類似した値を持つ属性を、推論出力から選択します。 データ セットにそのような列がない場合は、行を一意に識別する属性を選択してください。
 
 ## <a name="run-a-workflow"></a>ワークフローの実行

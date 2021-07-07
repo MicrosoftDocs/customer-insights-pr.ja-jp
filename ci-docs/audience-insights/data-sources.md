@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085536"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304702"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -30,15 +30,15 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 
 - [多数の Power Query コネクタを使用して](connect-power-query.md)
 - [Common Data Model フォルダーから](connect-common-data-model.md)
-- [自分の Common Data Service レイク から](connect-common-data-service-lake.md)
+- [自分の Microsoft Dataverse レイク から](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
 
-対象者に関するインサイトにあるオンプレミスのデータ ソースからのデータの取り込みは、Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](manage-environments.md#create-an-environment-in-an-existing-organization) することで、Customer Insights で有効にできます。
+オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](manage-environments.md#create-an-environment-in-an-existing-organization) することで、Customer Insights で有効にできます。
 
-Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md) します。
+Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/data-integration/gateway/service-gateway-app.md) します。
 
-既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、オンプレミス データ ゲートウェイを表示および構成できる Power Platform 環境へのリンクが表示されます。
+既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、Microsoft Power Platform 環境に移動するためのリンクが表示され、オンプレミスのデータ ゲートウェイを表示および構成することができます。
 
 ## <a name="review-ingested-data"></a>取り込んだデータのレビュー
 
@@ -66,9 +66,9 @@ Dataverse 環境を Customer Insights に関連付け後に作成されるデー
 
 オンデマンドでデータ ソースを更新するには、次の手順を実行します:
 
-1. 対象者に関するインサイトで、**データ** > **データ ソース** に移動します
+1. 対象者に関するインサイトで、**データ** > **データ ソース** に移動します。
 
-2. 更新するデータ ソースの横にある縦の省略記号を選択して、ドロップダウンリストから **更新** を選択します。
+2. 更新するデータ ソースの横にある縦の省略記号を選択し、ドロップダウン リストから **更新** を選択します。
 
 3. これで、データ ソースが手動で更新されるようになりました。 データ ソースを更新すると、データ ソースで指定されたすべてのエンティティのエンティティ スキーマとデータの両方が更新されます。
 
@@ -78,7 +78,7 @@ Dataverse 環境を Customer Insights に関連付け後に作成されるデー
 
 1. 対象者に関するインサイトで、**データ** > **データ ソース** に移動します。
 
-2. 削除するデータ ソースの横にある縦の省略記号を選択し、ドロップダウンメニューから **削除** を選択します。
+2. 削除するデータ ソースの横にある縦の省略記号を選択し、ドロップダウン メニューから **削除** を選択します。
 
 3. 削除を確認します。
 

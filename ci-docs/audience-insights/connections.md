@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896103"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304978"
 ---
 # <a name="connections-preview-overview"></a>接続 (プレビュー) の概要
 
@@ -74,7 +74,9 @@ ms.locfileid: "5896103"
 
 ## <a name="remove-a-connection"></a>接続の削除
 
-削除する接続がエンリッチメントまたはエクスポートで使用されている場合は、最初にそれらをデタッチまたは削除する必要があります。 削除ダイアログでは、関連するエンリッチメントまたはエクスポートを説明します。 分離されたエンリッチメントとエクスポートは非アクティブになります。 それらを再度アクティブにするには、[エンリッチメント](enrichment-hub.md) または [エクスポート](export-destinations.md) ページで別の接続を追加します。
+削除する接続がエンリッチメントまたはエクスポートで使用されている場合は、最初にそれらをデタッチまたは削除する必要があります。 削除ダイアログでは、関連するエンリッチメントまたはエクスポートを説明します。 
+
+分離されたエンリッチメントとエクスポートは非アクティブになります。 それらを再度アクティブにするには、[エンリッチメント](enrichment-hub.md) または [エクスポート](export-destinations.md) ページで別の接続を追加します。
 
 1. **管理** > **接続 (プレビュー)** に移動します。
 
@@ -89,5 +91,5 @@ ms.locfileid: "5896103"
       - **エンリッチメント:** 接続を削除できるように、エンリッチメントを削除するか非アクティブ化するかを選択できます。 
    1. 接続に依存関係がなくなったら、**管理** > **接続** に戻り、再度接続の削除を試みます。
 
-1. 削除内容を確認するには、**削除** を選択します。
+1. 削除の実行を確定するには、**削除** を選択します。
 

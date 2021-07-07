@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595432"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306126"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>トランザクション解約予測 (プレビュー) サンプル ガイド
 
@@ -22,7 +22,7 @@ ms.locfileid: "5595432"
 
 ## <a name="scenario"></a>シナリオ
 
-Contoso は、高品質のコーヒーとコーヒー メーカーを製造し、Contoso Coffee の Web サイトで販売している会社です。 彼らの目標は、製品を通常定期的に購入している顧客のうち、どの顧客が今後 60 日以内にアクティブな顧客でなくなるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
+Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。 彼らの目標は、製品を通常定期的に購入している顧客のうち、どの顧客が今後 60 日以内にアクティブな顧客でなくなるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -109,9 +109,9 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. **照合** タブに移動して、**順序の設定** を選択します。
 
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択し、すべてのレコードを含めます。
+1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
 
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択し、すべてのレコードを含めます。
+1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="eコマースとロイヤルティの一致を統合します。":::
 
@@ -119,16 +119,16 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. FullName を使用して最初の条件を追加します。
 
-   * eCommerceContacts の場合は、ドロップダウンで **FullName** を選択します。
-   * loyCustomers の場合は、ドロップダウンで **FullName** を選択します。
+   * eCommerceContacts では、ドロップダウンで **FullName** を選択します。
+   * loyCustomers では、ドロップダウンで **FullName** を選択します。
    * **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 
 1. 新しいルールに **FullName, Email** という名前を入力します。
 
    * **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   * エンティティ eCommerceContacts の場合、ドロップダウンで **電子メール** を選択します。
-   * エンティティ loyCustomers の場合、ドロップダウンで **電子メール** を選択します。 
+   * エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
+   * エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。 
    * 正規化を空白のままにします。 
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 

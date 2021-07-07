@@ -1,6 +1,6 @@
 ---
 title: Customer Insights データを Adobe Experience Platform にエクスポート
-description: Adobe Experience Platform で対象者に関するインサイト セグメントを使用する方法について説明します。
+description: Adobe Experience Platform で対象者に関するインサイトのセグメントを使用する方法を学びます。
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760107"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305530"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform で Customer Insights セグメントの使用 (プレビュー)
 
-Dynamics 365 Customer Insights の対象者インサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントを作成している可能性があります。 Adobe Experience Platform および Adobe Campaign Standardなどのアプリケーションで対象者に関するインサイトのセグメントを使用するには、この記事で概説するいくつかの手順に従う必要があります。
+Dynamics 365 Customer Insights の対象者に関するインサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントが作成された可能性があります。 Adobe Experience Platform および Adobe Campaign Standardなどのアプリケーションで対象者に関するインサイトのセグメントを使用するには、この記事で概説するいくつかの手順に従う必要があります。
 
 :::image type="content" source="media/AEP-flow.png" alt-text="この記事で概説されているステップのプロセス図。":::
 
@@ -55,9 +55,9 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 1. **管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**Azure Blob Storage** を選択するか、**Azure Blob Storage** タイルで **設定** を選択します:
+1. 接続を構成するには、**接続の追加** を選択し、**Azure Blob Storage** を選ぶか、**Azure Blob Storage** タイルで **設定** を選択します。
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob Storage の構成タイル。"::: 接続を構成するには。
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob Storage の構成タイル。"::: 
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
@@ -67,7 +67,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="ストレージ アカウント構成のスクリーンショット。"::: 
    
-    - Blob Storage アカウント名とアカウント キーを検索する方法の詳細については、[Azure ポータルでストレージ アカウントの設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
+    - Blob Storage アカウント名とアカウント キーを検索する方法の詳細については、[Azure portal でストレージ アカウントの設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
     - コンテナの作成方法については、[コンテナを作成する](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)を参照してください。
 
 1. **保存** を選択して、接続を完了します。 
@@ -80,7 +80,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 1. 新しいエクスポートを作成するには、**エクスポートの追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、Azure Blob Storage セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポートの接続** フィールドで、Azure Blob Storage セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は利用できません。
 
 1. エクスポートするセグメントを選択します。 この例では、**ChurnProneCustomers** です。
 
@@ -123,7 +123,8 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 このキャンペーンのメールを送信するには、Adobe Campaign Standard を使用します。 データを Adobe Experience Platform にインポートした後、Adobe Experience Platform のデータを使用して、Adobe Campaign Standard で[対象ユーザーを作成](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) する必要があります。
 
-Adobe Campaign Standard [セグメント ビルダーを使用](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) して、Adobe Experience Platform のデータに基づいて対象ユーザーを定義する方法を説明します。
+
+Adobe Campaign Standard [セグメント ビルダーを使用](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) して、Adobe Experience Platform のデータに基づいて対象ユーザーを定義する方法を説明します。
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Adobe Campaign Standard を使用したメールの作成と送信
 

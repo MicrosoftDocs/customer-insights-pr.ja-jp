@@ -1,7 +1,7 @@
 ---
 title: Power Automate コネクタ | Microsoft Docs
 description: Dynamics 365 Customer Insights から Microsoft Power Automate のフローを作成します。
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976094"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305070"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automateコネクタ (プレビュー)
 
@@ -28,12 +28,13 @@ ms.locfileid: "5976094"
 - データ ソースの更新が成功したときにトリガーされます。
 - セグメントのしきい値を超えたときにトリガーされます。 トリガーは、しきい値を超えると制限されます。
 - 業務の計測値のしきい値を超えたときにトリガーされます。 ディメンションのないビジネス メジャーのみがサポートされます。 トリガーは、しきい値を超えると制限されます。
-- (データソース、セグメント、メジャーなど) の完全更新が完了したときに、トリガーします。
+- (データソース、セグメント、メジャーなど) の更新がすべて完了したときに、トリガーします。
 - 統合プロセス (マップ、照合、結合) の更新が完了したときにトリガーします。
 
-[Power Automateでトリガーを構成する](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)。
+[Power Automate でトリガーを構成する。](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Power Automate  のアクション
+
 Power Automate のコネクタは、利用可能なトリガー以外のアクションを提供します。 詳細については、『[Dynamics 365 Customer Insights Connector](/connectors/customerinsights/)』を参照してください。
 
 ## <a name="create-a-power-automate-flow"></a>Power Automate フローを作成する

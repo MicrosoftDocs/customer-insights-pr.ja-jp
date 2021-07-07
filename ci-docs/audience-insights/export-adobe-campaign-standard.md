@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760287"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305392"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Adobe CampaignStandard で Customer Insights セグメントの使用 (プレビュー)
 
-Dynamics 365 Customer Insights の対象者インサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントを作成している可能性があります。 Adobe Experience Platform および Adobe Campaign Standardなどのアプリケーションで対象者に関するインサイトのセグメントを使用するには、この記事で概説するいくつかの手順に従う必要があります。
+Dynamics 365 Customer Insights の対象者に関するインサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントが作成された可能性があります。 Adobe Experience Platform および Adobe Campaign Standardなどのアプリケーションで対象者に関するインサイトのセグメントを使用するには、この記事で概説するいくつかの手順に従う必要があります。
 
 :::image type="content" source="media/ACS-flow.png" alt-text="この記事で概説されているステップのプロセス図。":::
 
@@ -28,7 +28,7 @@ Dynamics 365 Customer Insights の対象者インサイトのユーザーとし�
 -   Adobe Campaign Standard ライセンス
 -   Azure Blob Storage アカウント
 
-## <a name="campaign-overview"></a>キャンペーン概要
+## <a name="campaign-overview"></a>キャンペーン 概要
 
 Adobe Experience Platform で対象者に関するインサイトのセグメントを使用する方法をよりよく理解するために、架空のサンプル キャンペーンを見てみましょう。
 
@@ -54,7 +54,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 1. 対象者に関するインサイトで、**管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**Adobe Campaign** を選択して接続を構成するか、**Adobe Campaign** タイルで **設定** を選択します
+1. 接続を構成するには、**接続の追加** を選択し、**Adobe Campaign** を選ぶか、**Adobe Campaign** タイルで **設定** を選択します。
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standard の構成タイル。":::
 
@@ -66,7 +66,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="ストレージ アカウント構成のスクリーンショット。"::: 
 
-   - Azure Blob ストレージアカウント名とアカウントキーを見つける方法の詳細については、[Azure ポータルでストレージ アカウント設定を管理する](/azure/storage/common/storage-account-manage)を参照してください。
+   - Azure Blob Storage アカウント名とアカウント キーを見つける方法の詳細については、[Azure portal でストレージ アカウント設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
 
    - コンテナの作成方法については、[コンテナを作成する](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)を参照してください。
 
@@ -80,7 +80,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 1. 新しいエクスポートを作成するには、**エクスポートの追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、Adobe Campaign セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポートの接続** フィールドで、Adobe Campaign セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は利用できません。
 
 1. エクスポートするセグメントを選択します。 この例では、**ChurnProneCustomers** です。
 
@@ -128,7 +128,7 @@ Adobe Campaign Standard でセグメントを使用するには、Adobe Campaign
 
 すべてが整ったので、準備した対象ユーザー データを対象者に関するインサイトから Adobe Campaign Standard にインポートして、プロファイルを作成する必要があります。 ワークフローを使用して、[Adobe Campaign Standard でプロファイルをインポートする方法](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) について説明します。
 
-次の図のインポート ワークフローは、8 時間ごとに実行するように構成されており、エクスポートされた対象者に関するインサイト セグメント (Azure Blob Storage の .csv ファイル) を検索します。 ワークフローは、指定された列の順序で .csv ファイルのコンテンツを抽出します。 このワークフローは、基本的なエラー処理を実行し、Adobe Campaign Standard でデータをハイドレートする前に、各レコードに電子メール アドレスがあることを確認するために構築されています。 ワークフローは、ACS プロファイル データにアップサートする前に、ファイル名からセグメント名も抽出します。
+以下の画像のインポート ワークフローは、8 時間ごとに実行され、エクスポートされた対象ユーザー分析セグメント (Azure Blob Storage の .csv ファイル) を探すように構成されています。 ワークフローは、指定された列の順序で .csv ファイルのコンテンツを抽出します。 このワークフローは、基本的なエラー処理を実行し、Adobe Campaign Standard でデータをハイドレートする前に、各レコードに電子メール アドレスがあることを確認するために構築されています。 ワークフローは、Adobe Campaign Standard プロファイル データにアップサートする前に、ファイル名からセグメント名も抽出します。
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Adobe Campaign Standard ユーザー インターフェイスのインポート ワークフローのスクリーンショット。":::
 
