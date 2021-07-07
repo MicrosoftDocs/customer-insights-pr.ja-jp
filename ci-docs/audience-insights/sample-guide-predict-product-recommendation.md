@@ -9,199 +9,199 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129905"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306172"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a><span data-ttu-id="b8207-103">製品のレコメンデーション予測 (プレビュー) サンプル ガイド</span><span class="sxs-lookup"><span data-stu-id="b8207-103">Product recommendation prediction (preview) sample guide</span></span>
+# <a name="product-recommendation-prediction-preview-sample-guide"></a><span data-ttu-id="0f9a8-103">製品のレコメンデーション予測 (プレビュー) サンプル ガイド</span><span class="sxs-lookup"><span data-stu-id="0f9a8-103">Product recommendation prediction (preview) sample guide</span></span>
 
-<span data-ttu-id="b8207-104">以下に示すサンプル データを使用して、製品レコメンデーション予測のエンドツーエンドの例について説明します。</span><span class="sxs-lookup"><span data-stu-id="b8207-104">We'll walk you through an end to end example of product recommendation prediction using the sample data provided below.</span></span>
+<span data-ttu-id="0f9a8-104">以下に示すサンプル データを使用して、製品レコメンデーション予測のエンドツーエンドの例について説明します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-104">We'll walk you through an end to end example of product recommendation prediction using the sample data provided below.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="b8207-105">シナリオ</span><span class="sxs-lookup"><span data-stu-id="b8207-105">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="0f9a8-105">シナリオ</span><span class="sxs-lookup"><span data-stu-id="0f9a8-105">Scenario</span></span>
 
-<span data-ttu-id="b8207-106">Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。</span><span class="sxs-lookup"><span data-stu-id="b8207-106">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="b8207-107">その目標は、定期的な顧客にどの製品を推奨すべきかを理解することです。</span><span class="sxs-lookup"><span data-stu-id="b8207-107">Their goal is to understand which products should they recommend to their recurring customers.</span></span> <span data-ttu-id="b8207-108">顧客が **購入する可能性が高い** ことを把握することで、特定のアイテムに焦点を当ててマーケティングの労力を軽減できます。</span><span class="sxs-lookup"><span data-stu-id="b8207-108">Knowing what customers are more **likely to purchase**, can help them save marketing efforts by focusing on specific items.</span></span>
+<span data-ttu-id="0f9a8-106">Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-106">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="0f9a8-107">その目標は、定期的な顧客にどの製品を推奨すべきかを理解することです。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-107">Their goal is to understand which products should they recommend to their recurring customers.</span></span> <span data-ttu-id="0f9a8-108">顧客が **購入する可能性が高い** ことを把握することで、特定のアイテムに焦点を当ててマーケティングの労力を軽減できます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-108">Knowing what customers are more **likely to purchase**, can help them save marketing efforts by focusing on specific items.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="b8207-109">前提条件</span><span class="sxs-lookup"><span data-stu-id="b8207-109">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="0f9a8-109">前提条件</span><span class="sxs-lookup"><span data-stu-id="0f9a8-109">Prerequisites</span></span>
 
-- <span data-ttu-id="b8207-110">少なくとも Customer Insights の[共同作成者権限](permissions.md) があること。</span><span class="sxs-lookup"><span data-stu-id="b8207-110">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
-- <span data-ttu-id="b8207-111">[新しい環境で](manage-environments.md) 次の手順を実行することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="b8207-111">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
+- <span data-ttu-id="0f9a8-110">少なくとも Customer Insights の[共同作成者権限](permissions.md) があること。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-110">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
+- <span data-ttu-id="0f9a8-111">[新しい環境で](manage-environments.md) 次の手順を実行することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-111">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
 
-## <a name="task-1---ingest-data"></a><span data-ttu-id="b8207-112">タスク 1 - データの取り込み</span><span class="sxs-lookup"><span data-stu-id="b8207-112">Task 1 - Ingest data</span></span>
+## <a name="task-1---ingest-data"></a><span data-ttu-id="0f9a8-112">タスク 1 - データの取り込み</span><span class="sxs-lookup"><span data-stu-id="0f9a8-112">Task 1 - Ingest data</span></span>
 
-<span data-ttu-id="b8207-113">特に [データの取り込み](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) についての記事を確認します。</span><span class="sxs-lookup"><span data-stu-id="b8207-113">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="b8207-114">以下の情報は、一般的なデータの取り込みに精通していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="b8207-114">The following information assumes you familiarized with ingesting data in general.</span></span>
+<span data-ttu-id="0f9a8-113">特に [データの取り込み](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) についての記事を確認します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-113">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="0f9a8-114">以下の情報は、一般的なデータの取り込みに精通していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-114">The following information assumes you familiarized with ingesting data in general.</span></span>
 
-### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="b8207-115">顧客データを eコマース プラットフォームから取り込む</span><span class="sxs-lookup"><span data-stu-id="b8207-115">Ingest customer data from eCommerce platform</span></span>
+### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="0f9a8-115">顧客データを eコマース プラットフォームから取り込む</span><span class="sxs-lookup"><span data-stu-id="0f9a8-115">Ingest customer data from eCommerce platform</span></span>
 
-1. <span data-ttu-id="b8207-116">**eコマース** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-116">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="0f9a8-116">**eコマース** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-116">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="b8207-117">eコマースの連絡先の URL https://aka.ms/ciadclasscontacts を入力します。</span><span class="sxs-lookup"><span data-stu-id="b8207-117">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
+1. <span data-ttu-id="0f9a8-117">eコマースの連絡先の URL https://aka.ms/ciadclasscontacts を入力します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-117">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
 
-1. <span data-ttu-id="b8207-118">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-118">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="0f9a8-118">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-118">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="b8207-119">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="b8207-119">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="b8207-120">**DateOfBirth**: 日付</span><span class="sxs-lookup"><span data-stu-id="b8207-120">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="b8207-121">**CreatedOn**: 日付/時刻/タイムゾーン</span><span class="sxs-lookup"><span data-stu-id="b8207-121">**CreatedOn**: Date/Time/Zone</span></span>
+1. <span data-ttu-id="0f9a8-119">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="0f9a8-119">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="0f9a8-120">**DateOfBirth**: 日付</span><span class="sxs-lookup"><span data-stu-id="0f9a8-120">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="0f9a8-121">**CreatedOn**: 日付/時刻/タイムゾーン</span><span class="sxs-lookup"><span data-stu-id="0f9a8-121">**CreatedOn**: Date/Time/Zone</span></span>
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
 
-5. <span data-ttu-id="b8207-123">右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します</span><span class="sxs-lookup"><span data-stu-id="b8207-123">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
+5. <span data-ttu-id="0f9a8-123">右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します</span><span class="sxs-lookup"><span data-stu-id="0f9a8-123">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
 
-6. <span data-ttu-id="b8207-124">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="b8207-124">**Save** the data source.</span></span>
+6. <span data-ttu-id="0f9a8-124">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-124">**Save** the data source.</span></span>
 
-### <a name="ingest-online-purchase-data"></a><span data-ttu-id="b8207-125">オンライン購入データを取り込む</span><span class="sxs-lookup"><span data-stu-id="b8207-125">Ingest online purchase data</span></span>
+### <a name="ingest-online-purchase-data"></a><span data-ttu-id="0f9a8-125">オンライン購入データを取り込む</span><span class="sxs-lookup"><span data-stu-id="0f9a8-125">Ingest online purchase data</span></span>
 
-1. <span data-ttu-id="b8207-126">同じ **eコマース** データ ソースに別のデータ セットを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8207-126">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="b8207-127">**テキスト/CSV** コネクタをもう一度選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-127">Choose the **Text/CSV** connector again.</span></span>
+1. <span data-ttu-id="0f9a8-126">同じ **eコマース** データ ソースに別のデータ セットを追加します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-126">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="0f9a8-127">**テキスト/CSV** コネクタをもう一度選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-127">Choose the **Text/CSV** connector again.</span></span>
 
-1. <span data-ttu-id="b8207-128">**オンライン購入** データ の URL https://aka.ms/ciadclassonline を入力します。</span><span class="sxs-lookup"><span data-stu-id="b8207-128">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
+1. <span data-ttu-id="0f9a8-128">**オンライン購入** データ の URL https://aka.ms/ciadclassonline を入力します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-128">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
 
-1. <span data-ttu-id="b8207-129">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-129">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="0f9a8-129">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-129">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="b8207-130">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="b8207-130">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="b8207-131">**PurchasedOn**: 日付/時刻</span><span class="sxs-lookup"><span data-stu-id="b8207-131">**PurchasedOn**: Date/Time</span></span>
-   - <span data-ttu-id="b8207-132">**TotalPrice**: 通貨</span><span class="sxs-lookup"><span data-stu-id="b8207-132">**TotalPrice**: Currency</span></span>
+1. <span data-ttu-id="0f9a8-130">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="0f9a8-130">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="0f9a8-131">**PurchasedOn**: 日付/時刻</span><span class="sxs-lookup"><span data-stu-id="0f9a8-131">**PurchasedOn**: Date/Time</span></span>
+   - <span data-ttu-id="0f9a8-132">**TotalPrice**: 通貨</span><span class="sxs-lookup"><span data-stu-id="0f9a8-132">**TotalPrice**: Currency</span></span>
 
-1. <span data-ttu-id="b8207-133">サイド ペインの **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommercePurchases** に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8207-133">In the **Name** field on the side pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
+1. <span data-ttu-id="0f9a8-133">サイド ペインの **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommercePurchases** に変更します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-133">In the **Name** field on the side pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
 
-1. <span data-ttu-id="b8207-134">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="b8207-134">**Save** the data source.</span></span>
+1. <span data-ttu-id="0f9a8-134">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-134">**Save** the data source.</span></span>
 
 
-### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="b8207-135">ロイヤルティ スキームから顧客データを取り込む</span><span class="sxs-lookup"><span data-stu-id="b8207-135">Ingest customer data from loyalty schema</span></span>
+### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="0f9a8-135">ロイヤルティ スキームから顧客データを取り込む</span><span class="sxs-lookup"><span data-stu-id="0f9a8-135">Ingest customer data from loyalty schema</span></span>
 
-1. <span data-ttu-id="b8207-136">**LoyaltyScheme** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-136">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="0f9a8-136">**LoyaltyScheme** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-136">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="b8207-137">eコマースの連絡先の URL https://aka.ms/ciadclasscustomerloyalty を入力します。</span><span class="sxs-lookup"><span data-stu-id="b8207-137">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
+1. <span data-ttu-id="0f9a8-137">eコマースの連絡先の URL https://aka.ms/ciadclasscustomerloyalty を入力します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-137">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
 
-1. <span data-ttu-id="b8207-138">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-138">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="0f9a8-138">データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-138">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="b8207-139">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="b8207-139">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="b8207-140">**DateOfBirth**: 日付</span><span class="sxs-lookup"><span data-stu-id="b8207-140">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="b8207-141">**RewardsPoints**: 整数</span><span class="sxs-lookup"><span data-stu-id="b8207-141">**RewardsPoints**: Whole Number</span></span>
-   - <span data-ttu-id="b8207-142">**CreatedOn**: 日付/時刻</span><span class="sxs-lookup"><span data-stu-id="b8207-142">**CreatedOn**: Date/Time</span></span>
+1. <span data-ttu-id="0f9a8-139">以下にリストされている列のデータ型を更新します:</span><span class="sxs-lookup"><span data-stu-id="0f9a8-139">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="0f9a8-140">**DateOfBirth**: 日付</span><span class="sxs-lookup"><span data-stu-id="0f9a8-140">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="0f9a8-141">**RewardsPoints**: 整数</span><span class="sxs-lookup"><span data-stu-id="0f9a8-141">**RewardsPoints**: Whole Number</span></span>
+   - <span data-ttu-id="0f9a8-142">**CreatedOn**: 日付/時刻</span><span class="sxs-lookup"><span data-stu-id="0f9a8-142">**CreatedOn**: Date/Time</span></span>
 
-1. <span data-ttu-id="b8207-143">右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8207-143">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
+1. <span data-ttu-id="0f9a8-143">右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-143">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
 
-1. <span data-ttu-id="b8207-144">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="b8207-144">**Save** the data source.</span></span>
+1. <span data-ttu-id="0f9a8-144">データ ソースを **保存** します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-144">**Save** the data source.</span></span>
 
-## <a name="task-2---data-unification"></a><span data-ttu-id="b8207-145">タスク 2 - データの統合</span><span class="sxs-lookup"><span data-stu-id="b8207-145">Task 2 - Data unification</span></span>
+## <a name="task-2---data-unification"></a><span data-ttu-id="0f9a8-145">タスク 2 - データの統合</span><span class="sxs-lookup"><span data-stu-id="0f9a8-145">Task 2 - Data unification</span></span>
 
-<span data-ttu-id="b8207-146">データを取り込んだ後、データ統合プロセスを開始して、統合された顧客プロファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="b8207-146">After ingesting the data, we now begin the data unification process to create a unified customer profile.</span></span> <span data-ttu-id="b8207-147">詳細については、[データの統合](data-unification.md) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8207-147">For more information, see [Data unification](data-unification.md).</span></span>
+<span data-ttu-id="0f9a8-146">データを取り込んだ後、データ統合プロセスを開始して、統合された顧客プロファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-146">After ingesting the data, we now begin the data unification process to create a unified customer profile.</span></span> <span data-ttu-id="0f9a8-147">詳細については、[データの統合](data-unification.md) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-147">For more information, see [Data unification](data-unification.md).</span></span>
 
-### <a name="map"></a><span data-ttu-id="b8207-148">マップ</span><span class="sxs-lookup"><span data-stu-id="b8207-148">Map</span></span>
+### <a name="map"></a><span data-ttu-id="0f9a8-148">マップ</span><span class="sxs-lookup"><span data-stu-id="0f9a8-148">Map</span></span>
 
-1. <span data-ttu-id="b8207-149">データを取り込んだ後、連絡先を eコマースおよびロイヤルティ データから共通のデータ型にマップします。</span><span class="sxs-lookup"><span data-stu-id="b8207-149">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="b8207-150">**データ** > **統合** > **マップ** に移動します。</span><span class="sxs-lookup"><span data-stu-id="b8207-150">Go to **Data** > **Unify** > **Map**.</span></span>
+1. <span data-ttu-id="0f9a8-149">データを取り込んだ後、連絡先を eコマースおよびロイヤルティ データから共通のデータ型にマップします。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-149">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="0f9a8-150">**データ** > **統合** > **マップ** に移動します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-150">Go to **Data** > **Unify** > **Map**.</span></span>
 
-2. <span data-ttu-id="b8207-151">顧客プロファイルを表すエンティティ - **eCommerceContacts** および **loyCustomers** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-151">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span>
+2. <span data-ttu-id="0f9a8-151">顧客プロファイルを表すエンティティ - **eCommerceContacts** および **loyCustomers** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-151">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span>
 
    ![eコマースとロイヤルティ データソースを統合します。](media/unify-ecommerce-loyalty.png)
 
-3. <span data-ttu-id="b8207-153">**eCommerceContacts** の主キーとして **ContactId**、**loyCustomers** の主キーとして **LoyaltyID** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-153">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
+3. <span data-ttu-id="0f9a8-153">**eCommerceContacts** の主キーとして **ContactId**、**loyCustomers** の主キーとして **LoyaltyID** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-153">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
 
    ![LoyaltyId を主キーとして統合します。](media/unify-loyaltyid.png)
 
-### <a name="match"></a><span data-ttu-id="b8207-155">照合</span><span class="sxs-lookup"><span data-stu-id="b8207-155">Match</span></span>
+### <a name="match"></a><span data-ttu-id="0f9a8-155">照合</span><span class="sxs-lookup"><span data-stu-id="0f9a8-155">Match</span></span>
 
-1. <span data-ttu-id="b8207-156">**照合** タブに移動して、**順序の設定** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-156">Go to the **Match** tab and select **Set Order**.</span></span>
+1. <span data-ttu-id="0f9a8-156">**照合** タブに移動して、**順序の設定** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-156">Go to the **Match** tab and select **Set Order**.</span></span>
 
-2. <span data-ttu-id="b8207-157">**プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択し、すべてのレコードを含めます。</span><span class="sxs-lookup"><span data-stu-id="b8207-157">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
+2. <span data-ttu-id="0f9a8-157">**プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-157">In the **Primary** dropdown list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
 
-3. <span data-ttu-id="b8207-158">**エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択し、すべてのレコードを含めます。</span><span class="sxs-lookup"><span data-stu-id="b8207-158">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
+3. <span data-ttu-id="0f9a8-158">**エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-158">In the **Entity 2** dropdown list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
 
    ![eコマースとロイヤルティの一致を統合します。](media/unify-match-order.png)
 
-4. <span data-ttu-id="b8207-160">**新しいルールの作成** を選択します</span><span class="sxs-lookup"><span data-stu-id="b8207-160">Select **Create a new rule**</span></span>
+4. <span data-ttu-id="0f9a8-160">**新しいルールの作成** を選択します</span><span class="sxs-lookup"><span data-stu-id="0f9a8-160">Select **Create a new rule**</span></span>
 
-5. <span data-ttu-id="b8207-161">FullName を使用して最初の条件を追加します。</span><span class="sxs-lookup"><span data-stu-id="b8207-161">Add your first condition using FullName.</span></span>
+5. <span data-ttu-id="0f9a8-161">FullName を使用して最初の条件を追加します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-161">Add your first condition using FullName.</span></span>
 
-   - <span data-ttu-id="b8207-162">eCommerceContacts の場合は、ドロップダウンで **FullName** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-162">For eCommerceContacts select **FullName** in the drop-down.</span></span>
-   - <span data-ttu-id="b8207-163">loyCustomers の場合は、ドロップダウンで **FullName** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-163">For loyCustomers select **FullName** in the drop-down.</span></span>
-   - <span data-ttu-id="b8207-164">**正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-164">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
-   - <span data-ttu-id="b8207-165">**精度レベル** の設定: **基本** と **値**: **高い**。</span><span class="sxs-lookup"><span data-stu-id="b8207-165">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   - <span data-ttu-id="0f9a8-162">eCommerceContacts では、ドロップダウンで **FullName** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-162">For eCommerceContacts select **FullName** in the dropdown.</span></span>
+   - <span data-ttu-id="0f9a8-163">loyCustomers では、ドロップダウンで **FullName** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-163">For loyCustomers select **FullName** in the dropdown.</span></span>
+   - <span data-ttu-id="0f9a8-164">**正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-164">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
+   - <span data-ttu-id="0f9a8-165">**精度レベル** の設定: **基本** と **値**: **高い**。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-165">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
-6. <span data-ttu-id="b8207-166">新しいルールに **FullName, Email** という名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="b8207-166">Enter the name **FullName, Email** for the new rule.</span></span>
+6. <span data-ttu-id="0f9a8-166">新しいルールに **FullName, Email** という名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-166">Enter the name **FullName, Email** for the new rule.</span></span>
 
-   - <span data-ttu-id="b8207-167">**条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します</span><span class="sxs-lookup"><span data-stu-id="b8207-167">Add a second condition for email address by selecting **Add Condition**</span></span>
-   - <span data-ttu-id="b8207-168">エンティティ eCommerceContacts の場合、ドロップダウンで **電子メール** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-168">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
-   - <span data-ttu-id="b8207-169">エンティティ loyCustomers の場合、ドロップダウンで **電子メール** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-169">For entity loyCustomers, choose **EMail** in the drop-down.</span></span>
-   - <span data-ttu-id="b8207-170">正規化を空白のままにします。</span><span class="sxs-lookup"><span data-stu-id="b8207-170">Leave Normalize blank.</span></span>
-   - <span data-ttu-id="b8207-171">**精度レベル** の設定: **基本** と **値**: **高い**。</span><span class="sxs-lookup"><span data-stu-id="b8207-171">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   - <span data-ttu-id="0f9a8-167">**条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します</span><span class="sxs-lookup"><span data-stu-id="0f9a8-167">Add a second condition for email address by selecting **Add Condition**</span></span>
+   - <span data-ttu-id="0f9a8-168">エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-168">For entity eCommerceContacts, choose **EMail** in dropdown.</span></span>
+   - <span data-ttu-id="0f9a8-169">エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-169">For entity loyCustomers, choose **EMail** in the dropdown.</span></span>
+   - <span data-ttu-id="0f9a8-170">正規化を空白のままにします。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-170">Leave Normalize blank.</span></span>
+   - <span data-ttu-id="0f9a8-171">**精度レベル** の設定: **基本** と **値**: **高い**。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-171">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
    ![名前とメールの照合ルールを統一します。](media/unify-match-rule.png)
 
-7. <span data-ttu-id="b8207-173">**保存** と **実行** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-173">Select **Save** and **Run**.</span></span>
+7. <span data-ttu-id="0f9a8-173">**保存** と **実行** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-173">Select **Save** and **Run**.</span></span>
 
-### <a name="merge"></a><span data-ttu-id="b8207-174">マージ</span><span class="sxs-lookup"><span data-stu-id="b8207-174">Merge</span></span>
+### <a name="merge"></a><span data-ttu-id="0f9a8-174">マージ</span><span class="sxs-lookup"><span data-stu-id="0f9a8-174">Merge</span></span>
 
-1. <span data-ttu-id="b8207-175">**マージ** タブに移動します。</span><span class="sxs-lookup"><span data-stu-id="b8207-175">Go to the **Merge** tab.</span></span>
+1. <span data-ttu-id="0f9a8-175">**マージ** タブに移動します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-175">Go to the **Merge** tab.</span></span>
 
-1. <span data-ttu-id="b8207-176">**loyCustomers** エンティティの **ContactId** で、表示名を **ContactIdLOYALTY** に変更して、取り込まれた別の ID とは区別されるようにします。</span><span class="sxs-lookup"><span data-stu-id="b8207-176">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
+1. <span data-ttu-id="0f9a8-176">**loyCustomers** エンティティの **ContactId** で、表示名を **ContactIdLOYALTY** に変更して、取り込まれた別の ID とは区別されるようにします。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-176">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
 
    ![ロイヤルティ ID から contactid に名前を変更します。](media/unify-merge-contactid.png)
 
-1. <span data-ttu-id="b8207-178">**保存** と **実行** を選択し、マージ プロセスを開始します。</span><span class="sxs-lookup"><span data-stu-id="b8207-178">Select **Save** and **Run** to start the Merge Process.</span></span>
+1. <span data-ttu-id="0f9a8-178">**保存** と **実行** を選択し、マージ プロセスを開始します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-178">Select **Save** and **Run** to start the Merge Process.</span></span>
 
-## <a name="task-3---configure-product-recommendation-prediction"></a><span data-ttu-id="b8207-179">タスク 3 - 製品レコメンデーション予測を構成する</span><span class="sxs-lookup"><span data-stu-id="b8207-179">Task 3 - Configure product recommendation prediction</span></span>
+## <a name="task-3---configure-product-recommendation-prediction"></a><span data-ttu-id="0f9a8-179">タスク 3 - 製品レコメンデーション予測を構成する</span><span class="sxs-lookup"><span data-stu-id="0f9a8-179">Task 3 - Configure product recommendation prediction</span></span>
 
-<span data-ttu-id="b8207-180">統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。</span><span class="sxs-lookup"><span data-stu-id="b8207-180">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span>
+<span data-ttu-id="0f9a8-180">統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-180">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span>
 
-1. <span data-ttu-id="b8207-181">**インテリジェンス** > **予測** に移動して、**製品レコメンデーション** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-181">Go to **Intelligence** > **Prediction** choose **Product recommendation**.</span></span>
+1. <span data-ttu-id="0f9a8-181">**インテリジェンス** > **予測** に移動して、**製品レコメンデーション** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-181">Go to **Intelligence** > **Prediction** choose **Product recommendation**.</span></span>
 
-1. <span data-ttu-id="b8207-182">**開始する** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-182">Select **Get started**.</span></span>
+1. <span data-ttu-id="0f9a8-182">**開始する** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-182">Select **Get started**.</span></span>
 
-1. <span data-ttu-id="b8207-183">モデルに **OOB 製品レコメンデーション モデル予測**、出力エンティティには **OOBProductRecommendationModelPrediction** という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="b8207-183">Name the model **OOB Product Recommendation Model Prediction** and the output entity **OOBProductRecommendationModelPrediction**.</span></span>
+1. <span data-ttu-id="0f9a8-183">モデルに **OOB 製品レコメンデーション モデル予測**、出力エンティティには **OOBProductRecommendationModelPrediction** という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-183">Name the model **OOB Product Recommendation Model Prediction** and the output entity **OOBProductRecommendationModelPrediction**.</span></span>
 
-1. <span data-ttu-id="b8207-184">モデルの 3 つの条件を定義します。</span><span class="sxs-lookup"><span data-stu-id="b8207-184">Define three conditions for the model:</span></span>
+1. <span data-ttu-id="0f9a8-184">モデルの 3 つの条件を定義します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-184">Define three conditions for the model:</span></span>
 
-   - <span data-ttu-id="b8207-185">**製品数**: この値を **5** に設定します。</span><span class="sxs-lookup"><span data-stu-id="b8207-185">**Number of products**: Set this value to **5**.</span></span> <span data-ttu-id="b8207-186">この設定は、顧客に推奨する製品の数を定義します。</span><span class="sxs-lookup"><span data-stu-id="b8207-186">This setting defines how many products you want to recommend to your customers.</span></span>
+   - <span data-ttu-id="0f9a8-185">**製品数**: この値を **5** に設定します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-185">**Number of products**: Set this value to **5**.</span></span> <span data-ttu-id="0f9a8-186">この設定は、顧客に推奨する製品の数を定義します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-186">This setting defines how many products you want to recommend to your customers.</span></span>
 
-   - <span data-ttu-id="b8207-187">**期待される再購入**: **はい** を選択して、顧客が以前に購入したことのある製品をおすすめ候補に含めることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b8207-187">**Repeat purchases expected**: Select **Yes** to indicate that you want to include products in the recommendation that your customers have purchased before.</span></span>
+   - <span data-ttu-id="0f9a8-187">**期待される再購入**: **はい** を選択して、顧客が以前に購入したことのある製品をおすすめ候補に含めることを指定します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-187">**Repeat purchases expected**: Select **Yes** to indicate that you want to include products in the recommendation that your customers have purchased before.</span></span>
 
-   - <span data-ttu-id="b8207-188">**ウィンドウを見返す:** 少なくとも **365 日** を選択してください。</span><span class="sxs-lookup"><span data-stu-id="b8207-188">**Look back window:** Select at least **365 days**.</span></span> <span data-ttu-id="b8207-189">この設定で、レコメンデーションへの入力として顧客のアクティビティをさかのぼって振り返る期間が定義されます。</span><span class="sxs-lookup"><span data-stu-id="b8207-189">This setting defines how far the model will look back at the customer's activity to use it as input to their recommendations.</span></span>
+   - <span data-ttu-id="0f9a8-188">**ウィンドウを見返す:** 少なくとも **365 日** を選択してください。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-188">**Look back window:** Select at least **365 days**.</span></span> <span data-ttu-id="0f9a8-189">この設定で、レコメンデーションへの入力として顧客のアクティビティをさかのぼって振り返る期間が定義されます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-189">This setting defines how far the model will look back at the customer's activity to use it as input to their recommendations.</span></span>
    
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="製品レコメンデーション モデルモデル マッピングです。":::
 
-1. <span data-ttu-id="b8207-191">**必要なデータ** を選択し、購入履歴に対して **データの追加** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-191">Select **Required data** and select **Add data** for purchase history.</span></span>
+1. <span data-ttu-id="0f9a8-191">**必要なデータ** を選択し、購入履歴に対して **データの追加** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-191">Select **Required data** and select **Add data** for purchase history.</span></span>
 
-1. <span data-ttu-id="b8207-192">**eCommercePurchases : eCommerce** エンティティを追加し、eコマースのフィールドをモデルに必要な対応するフィールドにマップします。</span><span class="sxs-lookup"><span data-stu-id="b8207-192">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
+1. <span data-ttu-id="0f9a8-192">**eCommercePurchases : eCommerce** エンティティを追加し、eコマースのフィールドをモデルに必要な対応するフィールドにマップします。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-192">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
 
-1. <span data-ttu-id="b8207-193">**eCommercePurchases : eCommerce** エンティティを **eCommerceContacts : eCommerce** と結合します。</span><span class="sxs-lookup"><span data-stu-id="b8207-193">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
+1. <span data-ttu-id="0f9a8-193">**eCommercePurchases : eCommerce** エンティティを **eCommerceContacts : eCommerce** と結合します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-193">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
 
    ![eコマース エンティティを結合します。](media/model-purchase-join.png)
 
-1. <span data-ttu-id="b8207-195">**次へ** を選択し、モデル スケジュールを設定します。</span><span class="sxs-lookup"><span data-stu-id="b8207-195">Select **Next** to set the model schedule.</span></span>
+1. <span data-ttu-id="0f9a8-195">**次へ** を選択し、モデル スケジュールを設定します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-195">Select **Next** to set the model schedule.</span></span>
 
-   <span data-ttu-id="b8207-196">新しいデータが取り込まれた場合、モデルは新しいパターンを学習するために定期的にトレーニングする必要があります。</span><span class="sxs-lookup"><span data-stu-id="b8207-196">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="b8207-197">この例では、**月** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-197">For this example, select **Monthly**.</span></span>
+   <span data-ttu-id="0f9a8-196">新しいデータが取り込まれた場合、モデルは新しいパターンを学習するために定期的にトレーニングする必要があります。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-196">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="0f9a8-197">この例では、**月** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-197">For this example, select **Monthly**.</span></span>
 
-1. <span data-ttu-id="b8207-198">すべての詳細を確認した後、**保存と実行** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-198">After reviewing all the details, select **Save and Run**.</span></span>
+1. <span data-ttu-id="0f9a8-198">すべての詳細を確認した後、**保存と実行** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-198">After reviewing all the details, select **Save and Run**.</span></span>
 
 
-## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="b8207-199">タスク 4 - モデルの結果と説明を確認する</span><span class="sxs-lookup"><span data-stu-id="b8207-199">Task 4 - Review model results and explanations</span></span>
+## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="0f9a8-199">タスク 4 - モデルの結果と説明を確認する</span><span class="sxs-lookup"><span data-stu-id="0f9a8-199">Task 4 - Review model results and explanations</span></span>
 
-<span data-ttu-id="b8207-200">モデルにデータのトレーニングとスコアリングを完了させます。</span><span class="sxs-lookup"><span data-stu-id="b8207-200">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="b8207-201">これで、製品レコメンデーション モデルの説明を確認できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="b8207-201">You can now review the product recommendation model explanations.</span></span> <span data-ttu-id="b8207-202">詳細については、[予測の状態と結果の確認](predict-subscription-churn.md#review-a-prediction-status-and-results) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8207-202">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
+<span data-ttu-id="0f9a8-200">モデルにデータのトレーニングとスコアリングを完了させます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-200">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="0f9a8-201">これで、製品レコメンデーション モデルの説明を確認できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-201">You can now review the product recommendation model explanations.</span></span> <span data-ttu-id="0f9a8-202">詳細については、[予測の状態と結果の確認](predict-subscription-churn.md#review-a-prediction-status-and-results) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-202">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
 
-## <a name="task-5---create-a-segment-of-high-purchased-products"></a><span data-ttu-id="b8207-203">タスク 5 - 購入数の多い製品のセグメントを作成する</span><span class="sxs-lookup"><span data-stu-id="b8207-203">Task 5 - Create a segment of high purchased products</span></span>
+## <a name="task-5---create-a-segment-of-high-purchased-products"></a><span data-ttu-id="0f9a8-203">タスク 5 - 購入数の多い製品のセグメントを作成する</span><span class="sxs-lookup"><span data-stu-id="0f9a8-203">Task 5 - Create a segment of high purchased products</span></span>
 
-<span data-ttu-id="b8207-204">運用モデルを実行すると、**データ** > **エンティティ** に表示される新しいエンティティが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b8207-204">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>
+<span data-ttu-id="0f9a8-204">運用モデルを実行すると、**データ** > **エンティティ** に表示される新しいエンティティが作成されます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-204">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>
 
-<span data-ttu-id="b8207-205">モデルによって作成されたエンティティに基づいて、新しいセグメントを作成できます。</span><span class="sxs-lookup"><span data-stu-id="b8207-205">You can create a new segment based on the entity created by the model.</span></span>
+<span data-ttu-id="0f9a8-205">モデルによって作成されたエンティティに基づいて、新しいセグメントを作成できます。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-205">You can create a new segment based on the entity created by the model.</span></span>
 
-1. <span data-ttu-id="b8207-206">**セグメント** に移動します。</span><span class="sxs-lookup"><span data-stu-id="b8207-206">Go to **Segments**.</span></span> <span data-ttu-id="b8207-207">**新規** を選択し、**作成元** > **インテリジェンス** と選択します。</span><span class="sxs-lookup"><span data-stu-id="b8207-207">Select **New** and choose **Create from** > **Intelligence**.</span></span>
+1. <span data-ttu-id="0f9a8-206">**セグメント** に移動します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-206">Go to **Segments**.</span></span> <span data-ttu-id="0f9a8-207">**新規** を選択し、**作成元** > **インテリジェンス** と選択します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-207">Select **New** and choose **Create from** > **Intelligence**.</span></span>
 
    ![モデル出力を使用してセグメントを作成しています。](media/segment-intelligence.png)
 
-1. <span data-ttu-id="b8207-209">**OOBProductRecommendationModelPrediction** エンドポイントを選択して、セグメントを定義します。</span><span class="sxs-lookup"><span data-stu-id="b8207-209">Select the **OOBProductRecommendationModelPrediction** endpoint and define the segment:</span></span>
+1. <span data-ttu-id="0f9a8-209">**OOBProductRecommendationModelPrediction** エンドポイントを選択して、セグメントを定義します。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-209">Select the **OOBProductRecommendationModelPrediction** endpoint and define the segment:</span></span>
 
-   - <span data-ttu-id="b8207-210">フィールド: ProductID</span><span class="sxs-lookup"><span data-stu-id="b8207-210">Field: ProductID</span></span>
-   - <span data-ttu-id="b8207-211">演算子: 値</span><span class="sxs-lookup"><span data-stu-id="b8207-211">Operator: Value</span></span>
-   - <span data-ttu-id="b8207-212">値: 上位 3 つの製品 ID を選択する</span><span class="sxs-lookup"><span data-stu-id="b8207-212">Value: Select the top three product IDs</span></span>
+   - <span data-ttu-id="0f9a8-210">フィールド: ProductID</span><span class="sxs-lookup"><span data-stu-id="0f9a8-210">Field: ProductID</span></span>
+   - <span data-ttu-id="0f9a8-211">演算子: 値</span><span class="sxs-lookup"><span data-stu-id="0f9a8-211">Operator: Value</span></span>
+   - <span data-ttu-id="0f9a8-212">値: 上位 3 つの製品 ID を選択する</span><span class="sxs-lookup"><span data-stu-id="0f9a8-212">Value: Select the top three product IDs</span></span>
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="モデルの結果からセグメントを作成します。":::
 
-<span data-ttu-id="b8207-214">これで、最も推奨される 3 つの製品を購入する意欲のある顧客を識別する、動的に更新されるセグメントができました</span><span class="sxs-lookup"><span data-stu-id="b8207-214">You now have a segment that is dynamically updated which identifies the customers who are more willing to purchase the three most recommended products</span></span> 
+<span data-ttu-id="0f9a8-214">これで、最も推奨される 3 つの製品を購入する意欲のある顧客を識別する、動的に更新されるセグメントができました</span><span class="sxs-lookup"><span data-stu-id="0f9a8-214">You now have a segment that is dynamically updated which identifies the customers who are more willing to purchase the three most recommended products</span></span> 
 
-<span data-ttu-id="b8207-215">詳細については、[セグメントの作成と管理](segments.md) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="b8207-215">For more information, see [Create and manage segments](segments.md).</span></span>
+<span data-ttu-id="0f9a8-215">詳細については、[セグメントの作成と管理](segments.md) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="0f9a8-215">For more information, see [Create and manage segments](segments.md).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
