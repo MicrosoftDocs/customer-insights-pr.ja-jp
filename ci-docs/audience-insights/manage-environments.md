@@ -1,7 +1,7 @@
 ---
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,125 +9,24 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
+ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304886"
+ms.lasthandoff: 07/28/2021
+ms.locfileid: "6683479"
 ---
 # <a name="manage-environments"></a>環境の管理
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-この記事では、新しい組織を作成する方法と環境をプロビジョニングする方法について説明します。
+## <a name="switch-environments"></a>環境の切り替え
 
-## <a name="sign-up-and-create-an-organization"></a>サインアップと組織の作成
+ページ右上隅にある **環境** コントロールを選択肢て、環境を変更します。
 
-1. [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) Web サイトに移動します。
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="環境を切り替えるコントロールのスクリーンショット。":::
 
-2. **使用開始** を選択します。
-
-3. お好みの新規登録のシナリオを選択し、該当のリンクを選択します。
-
-4. 利用条件に同意して、**続行** を選択し、組織の作成を開始します。
-
-5. 環境が作成されると、[Customer Insights](https://home.ci.ai.dynamics.com) にリダイレクトされます。
-
-6. デモ環境を使用してアプリを探索するか、次のセクションに示す手順に従って新しい環境を作成してください。
-
-7. 環境の設定を指定した後、**作成する** を選択します。
-
-8. 環境が正常に作成された後、サインインします。
-
-## <a name="create-an-environment-in-an-existing-organization"></a>既存の組織で環境を作成する
-
-新規環境を作成するには、次の 2 つの方法があります。 まったく新たな構成を指定することも、既存の環境から一部の構成設定をコピーすることも可能です。
-
-> [!NOTE]
-> 組織では、Customer Insights ライセンスごとに *2* つの環境を作成できます。 組織が複数のライセンスを購入する場合は、[サポート チームに連絡](https://go.microsoft.com/fwlink/?linkid=2079641) して利用可能な環境の数を増やしてください。 容量とアドオン容量の詳細については、[Dynamics 365 のライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544) をダウンロードしてください。
-
-環境の作成方法 :
-
-1. アプリのヘッダーにある **環境** ピッカーを選択します。
-
-1. **新規** をクリックします。
-
-   > [!div class="mx-imgBorder"]
-   > ![環境の設定。](media/environment-settings-dialog.png)
-
-1. **環境を作成する** ダイアログで、**新しい環境** を選択します。
-
-   [現在の環境からデータをコピー](#considerations-for-copy-configuration-preview) する場合は、**既存の環境からコピー** を選択します。 データのコピー元となる組織の、利用可能なすべての環境のリストが表示されます。
-
-1. 次の詳細を入力します:
-   - **名前**: この環境の名前。 既存の環境からコピーする場合は、このフィールドには既にに入力されていますが、変更することもできます。
-   - **タイプ**: 実稼働環境、またはサンドボックス環境のどちらを作成するかを選択します。
-   - **リージョン** : サービスが展開、ホストされるリージョンを示します。
-   
-1. オプションで、**詳細設定** を選択できます:
-
-   - **すべてのデータを保存する** : Customer Insights から生成された出力データを保存する場所を指定します。 **Customer Insights ストレージ** (Customer Insights チームによって管理される Azure Data Lake) および **Azure Data Lake Storage** (独自の Azure Data Lake Storage) の 2 つのオプションがあります。 既定では、Customer Insights のストレージが選択されています。
-
-     > [!NOTE]
-     > Azure Data Lake Storage にデータを保存することで、その Azure Storage のアカウントに対して適切な地理的位置にデータが転送され、保存されることに同意したことになります。これは、 Dynamics 365 Customer Insights におけるデータの保存場所とは異なる場合があります。 [Microsoft Trust Center を詳しく知る。](https://www.microsoft.com/trust-center)
-     >
-     > 現在、取り込まれたエンティティは常に Customer Insights マネージド Data Lake に保存されます。 
-     > 
-     > 環境の作成時に選択したのと同じ Azure リージョンの Azure Data Lake Storage アカウントのみをサポートしています。 
-     > 
-     > 階層名前空間が有効になっている Azure Data Lake Storage アカウントのみをサポートしています。
-
-
-   - Azure Data Lake Storage オプションでは、認証用にリソース ベース オプションとサブスクリプション ベース オプションのどちらかを選択できます。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 **コンテナー** 名は変更できず、`customerinsights` になります。
-   
-   - [予測](predictions.md) を使用したり、Microsoft Dataverse を使用したデータ共有を構成したり、あるいはオンプレミスのデータ ソースからのデータ インジェストを有効にしたりする場合は、**Microsoft Dataverse とのデータ共有を構成し、追加の機能を有効にする** の下にある Microsoft Dataverse 環境の URL を指定します。 **データ共有を有効にする** を選択して、Customer Insights 出力データを Microsoft Dataverse マネージド Data Lake と共有します。
-
-     > [!NOTE]
-     > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
-     > - [エンティティの欠落値の予測](predictions.md)は、Microsoft Dataverse マネージド Data Lake とのデータ共有を有効にした場合、現在はサポートされていません。
-
-     > [!div class="mx-imgBorder"]
-     > ![Microsoft Dataverse とのデータ共有を有効にする構成オプション。](media/datasharing-with-DataverseMDL.png)
-
-   データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 データ ファイルと model.json ファイルが作成され、プロセス名に基づいてフォルダーに追加されます。
-
-   Customer Insights の複数の環境を作成し、それらの環境からの出力エンティティをストレージ アカウントに保存することを選択した場合、コンテナーに ci_<environmentid> が含まれる環境ごとに個別のフォルダーが作成されます。
-
-### <a name="considerations-for-copy-configuration-preview"></a>コピー構成に関する考慮事項 (プレビュー)
-
-以下の構成設定がコピーされます：
-
-- 機能の構成
-- 取り込んだ/インポートされたデータ ソース
-- データ統合 (マッピング、一致、マージ) の構成
-- セグメント
-- メジャー
-- 顧客間関係
-- 活動 
-- 検索/フィルターのインデックス
-- エクスポート先
-- スケジュールされた更新
-- エンリッチメント
-- モデル管理
-- ロールの割り当て
-
-以下の構成設定はコピー *されません*：
-
-- 顧客のプロファイル。
-- データ ソースの資格情報。 すべてのデータ ソースの認証情報を提供し、データソースを手動で更新する必要があります。
-- Common Data Model フォルダと Dataverse マネージド Data Lake のデータ ソース。 これらのデータ ソースは、ソース環境と同じ名前で手動で作成する必要があります。
-
-環境をコピーすると、新たな環境が作成されたことを示す確認メッセージが表示されます。 **データソースに移動する** を選択してデータ ソースのリストを表示します。
-
-すべてのデータソースの状態が **資格情報が必須** となっています。 データソースを編集し、資格情報を入力して更新します。
-
-> [!div class="mx-imgBorder"]
-> ![コピーされたデータ ソース。](media/data-sources-copied.png)
-
-データソースの更新後、**データ** > **統一** に移動します。 ここには、ソース環境に由来する設定があります。 必要に応じて編集するか、**実行** を選択してデータ統合プロセスを開始し、統合された顧客エンティティを作成します。
-
-データ統合の完了後は、**計測** と **セグメント** に移動し、それらを更新します。
+管理者は環境の[作成](get-started-paid.md)と管理ができます。
 
 ## <a name="edit-an-existing-environment"></a>既存の環境を編集する
 
@@ -147,13 +46,52 @@ ms.locfileid: "6304886"
 
    > [!NOTE]
    > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
-   > - Microsoft Dataverse Managed Data Lake を使用したデータ共有を有効にした場合、[エンティティでの不足値の予測](predictions.md) は、現在サポートされていません。
+   > - [エンティティの欠落値の予測](predictions.md)および対象ユーザーインサイトの PowerBI Embedded レポート (ご利用の環境で有効になっている場合) は、Microsoft Dataverse マネージド Data Lake とのデータ共有を有効にした場合、現在サポートされていません。
 
    Microsoft Dataverse でデータ共有を有効にすると、データ ソースやその他のプロセスの完全更新が開始されます。 プロセスが現在実行中の場合は、Microsoft Dataverse とのデータ共有を有効にするオプションは表示されません。 これらのプロセスが完了するのを待つか、キャンセルして、データ共有を有効にします。 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
    
    データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 実行するプロセスに応じて、データ ファイルと model.json ファイルが作成され、それぞれのサブフォルダーに追加されます。
+
+## <a name="copy-the-environment-configuration"></a>環境の構成をコピーする
+
+新しい環境を作成するときに、既存の環境から構成をコピーすることを選択できます。 
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="環境設定の設定オプションのスクリーンショット。":::
+
+データのコピー元となる組織の、利用可能なすべての環境のリストが表示されます。
+
+以下の構成設定がコピーされます：
+
+- 取り込んだ/インポートされたデータ ソース
+- データ統合 (マッピング、一致、マージ) の構成
+- セグメント
+- メジャー
+- 顧客間関係
+- 活動 
+- 検索/フィルターのインデックス
+- エクスポート先
+- スケジュールされた更新
+- エンリッチメント
+- モデル管理
+- ロールの割り当て
+
+以下のデータはコピー *されません*:
+
+- 顧客のプロファイル。
+- データ ソースの資格情報。 すべてのデータ ソースの認証情報を提供し、データソースを手動で更新する必要があります。
+- Common Data Model フォルダと Dataverse マネージド Data Lake のデータ ソース。 これらのデータ ソースは、ソース環境と同じ名前で手動で作成する必要があります。
+
+環境をコピーすると、新たな環境が作成されたことを示す確認メッセージが表示されます。 **データソースに移動する** を選択してデータ ソースのリストを表示します。
+
+すべてのデータソースの状態が **資格情報が必須** となっています。 データソースを編集し、資格情報を入力して更新します。
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="コピーされた、認証が必要なデータソースのリスト。":::
+
+データソースの更新後、**データ** > **統一** に移動します。 ここには、ソース環境に由来する設定があります。 必要に応じて編集するか、**実行** を選択してデータ統合プロセスを開始し、統合された顧客エンティティを作成します。
+
+データ統合の完了後は、**計測** と **セグメント** に移動し、それらを更新します。
 
 ## <a name="reset-an-existing-environment"></a>既存の環境のリセット
 

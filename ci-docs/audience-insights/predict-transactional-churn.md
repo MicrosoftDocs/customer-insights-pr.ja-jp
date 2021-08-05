@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095608"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559411"
 ---
 # <a name="transactional-churn-prediction-preview"></a>トランザクション解約予測 (プレビュー)
 
@@ -47,7 +47,7 @@ ms.locfileid: "6095608"
         - **イベント :** 使用するイベントの名前。 たとえば、食料品店の "UserAction" というフィールドは、顧客が使用するクーポンである可能性があります。
         - **詳細 :** イベントの詳細情報。 たとえば、食料品店の "CouponValue" というフィールドは、クーポンの通貨値である可能性があります。
 - 推奨されるデータ特性:
-    - 十分な履歴データ: 選択した時間枠の少なくとも 2 倍のトランザクション データ。 2 - 3 年分のサブスクリプションデータが望ましい。 
+    - 十分な履歴データ: 選択した時間枠の少なくとも 2 倍のトランザクション データ。 できれば、2年〜3年の取引履歴。 
     - 顧客ごとの複数の購入: 顧客ごとに少なくとも 2 つのトランザクションが理想的です。
     - 顧客数: 少なくとも 10 人の顧客プロファイル、1,000 人を超える一意の顧客が望ましい。 モデルは、顧客が 10 人未満で、履歴データが不十分な場合に失敗します。
     - データの完全性: 提供されたエンティティのデータ フィールドで不足値の 20% 未満。

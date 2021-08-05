@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304702"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692441"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -30,13 +31,13 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 
 - [多数の Power Query コネクタを使用して](connect-power-query.md)
 - [Common Data Model フォルダーから](connect-common-data-model.md)
-- [自分の Microsoft Dataverse レイク から](connect-common-data-service-lake.md)
+- [自分の Microsoft Dataverse レイク から](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
 
-オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](manage-environments.md#create-an-environment-in-an-existing-organization) することで、Customer Insights で有効にできます。
+オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](get-started-paid.md) することで、Customer Insights で有効にできます。
 
-Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/data-integration/gateway/service-gateway-app.md) します。
+Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/data-integration/gateway/service-gateway-app) します。
 
 既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、Microsoft Power Platform 環境に移動するためのリンクが表示され、オンプレミスのデータ ゲートウェイを表示および構成することができます。
 
@@ -45,9 +46,9 @@ Dataverse 環境を Customer Insights に関連付け後に作成されるデー
 取り込んだ各データ ソースの名前、状態、ソースのデータが最後に更新された時刻が表示されます。 データ ソースの一覧を列ごとに並べ替えることができます。
 
 > [!div class="mx-imgBorder"]
-> ![追加されたデータ ソース](media/configure-data-datasource-added.png "追加されたデータ ソース")
+> ![データ ソースが追加されました。](media/configure-data-datasource-added.png "追加されたデータ ソース")
 
-|ステータス  |内容  |
+|Status  |内容  |
 |---------|---------|
 |成功   |**最終更新** 列に時間が記載されている場合、データ ソースは正常に取り込まれました。
 |開始前   |データ ソースには、まだデータが取り込まれていないか、ドラフト モードのままです。         |

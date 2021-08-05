@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059594"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692211"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -25,7 +25,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 ## <a name="prerequisites"></a>前提条件
 
 - アドインは、Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
-- Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Common Data Service コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) 必要があります。
+- Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) 必要があります。
 - 顧客カード アドインのすべての Dynamics 365 ユーザーは、データを表示するために対象者に関するインサイトの [ユーザーとして追加](permissions.md) されている必要があります。
 - データの検索を機能させるには、対象者に関するインサイトの [検索およびフィルター機能を構成](search-filter-index.md) する必要があります。
 - 各アドイン コントロールは、対象者に関するインサイトの特定のデータに依存します:
@@ -50,7 +50,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 1. **Dynamics 365 Customer Insights 顧客カード アドイン (プレビュー)** ソリューションの **表示名** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![表示名の選択](media/select-display-name.png "表示名の選択")
+   > ![表示名の選択。](media/select-display-name.png "表示名の選択")
 
 1. **サインイン** を選択し、Customer Insights の構成に使用する管理者アカウントの資格情報を入力します。
 
@@ -64,7 +64,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
    - 取引先企業とマップするには、取引先企業エンティティの ID と一致する顧客エンティティのフィールドを選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![取引先担当者 ID フィールド](media/contact-id-field.png "取引先担当者 ID フィールド")
+   > ![取引先担当者 ID フィールド。](media/contact-id-field.png "取引先担当者 ID フィールド")
 
 1. 設定を保存するには、**構成を保存** を選択します。
 
@@ -83,7 +83,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 1. 顧客カード管理を追加したい取引先担当者フォームを選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![取引先担当者フォームを選択する](media/contact-active-forms.png "取引先担当者フォームを選択する")
+    > ![取引先担当者フォームを選択する。](media/contact-active-forms.png "取引先担当者フォームを選択する")
 
 1. 人口統計コントロールを追加するには、フォーム エディターで、任意のフィールドを **フィールド エクスプローラー** から人口統計コントロールを配置する場所にドラッグします。
 
@@ -110,7 +110,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 
 1. アクションバーで **ソリューションのアップグレードを適用する** を選択します。
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 アプリのカスタマイズ領域でソリューションをアップグレードする":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 アプリのカスタマイズ領域でソリューションをアップグレードする。":::
 
 1. アップグレード プロセスを開始すると、アップグレードが完了するまで読み込みインジケータが表示されます。 新しいバージョンがない場合、アップグレードでエラーメッセージが表示されます。
 

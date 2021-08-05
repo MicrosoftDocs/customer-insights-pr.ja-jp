@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598345"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555175"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Azure Machine Learning Studio (クラシック) に基づくモデルを使用する
 
@@ -41,7 +41,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 1. リソースを作成すると、Machine Learning Studio ワークスペースのダッシュボードが表示されます。 **Machine Learning Studio** を選択します。
 
-   ![Azure Machine Learning Studio ユーザー インターフェイス](media/azure-machine-learning-studio.png)
+   ![Azure Machine Learning Studio ユーザー インターフェイス。](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Azure Machine Learning Studio で作業する
 
@@ -55,7 +55,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 1. 新たな実験を作成するか、ギャラリーから実験のテンプレートを使用する場合は、**データをインポートする** プロパティを構成する必要があります。 ガイド付きエクスペリエンスを使用するか、詳細を直接入力して、データを含む Azure Blob Storage にアクセスします。  
 
-   ![Azure Machine Learning Studio で実験する](media/azure-machine-learning-studio-experiment.png)
+   ![Azure Machine Learning Studio で実験する。](media/azure-machine-learning-studio-experiment.png)
 
 1. ここまでの手順で、カスタム処理パイプラインを構築して、データのクリーンアップと前処理、機能の抽出、適切なモデルのトレーニングを行うことができます。
 
@@ -63,15 +63,15 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 1. モデルの品質が満足いくものであれば、**Webサービスを設定する** > **予測 Web サービス** を選択します。 このオプションは、トレーニング済みのモデルと機能化パイプラインをトレーニング実験から予測サービスにインポートします。 予測サービスは、予測を行うためにトレーニングの実験で使用されたスキーマを使用して、別の入力データのセットを取得することができます。
 
-   ![予測 Web サービスを設定する](media/predictive-webservice-control.png)
+   ![予測 Web サービスを設定する。](media/predictive-webservice-control.png)
 
 1. 予測 Web サービスの実験が成功したら、自動スケジューリング用にデプロイすることができます。 Web サービスを Customer Insights と連携させるには、**Web サービスのデプロイ** > **Web サービスのデプロイ [新規] プレビュー** を選択します。 [Web サービスのデプロイの詳細](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
 
-   ![予測 Web サービスをデプロイする](media/predictive-webservice-deploy.png)
+   ![予測 Web サービスをデプロイする。](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>ギャラリーのサンプル モデル
 
-この記事のモデルでは、Contoso Hotel の架空のシナリオを使用しています。 Contoso Hotel は次のデータを収集します :
+今回のモデルでは、Contoso ホテルという架空のシナリオを使用します。 Contoso ホテルは次のデータを収集します:
 
 - ホテルの滞在活動で構成される CRM データ。 データセットには、登録されている顧客ごとの宿泊日に関する情報が含まれています。 また、予約情報、部屋タイプ、支出の詳細などに関する詳細も含まれています。 データは、2014 年 1 月から 2018 年 1 月までの 4 年間です。
 - ホテルのゲストの顧客プロファイル。 これらのプロファイルには、名前、生年月日、住所、性別、電話番号など、それぞれの顧客に関する情報が含まれています。
@@ -87,13 +87,13 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 実験のテンプレートは、ギャラリーからインポートできます。 まず、**ホテル滞在アクティビティ**、**顧客データ**、**サービス利用データ** のデータを Azure Blob Storage からインポートしていることを確認します。
 
-   ![チャーンのモデルに使用するデータをインポートする](media/import-data-azure-blob-storage.png)
+   ![チャーンのモデルに使用するデータをインポートする。](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>特性付け
 
 チャーンの定義に基づいて、まずラベルに影響を与える生の特徴を特定します。 そして、これらの原素材の特徴を機械学習モデルで利用できる数値特徴に加工します。 データ統合は、Customer Insights で行われるため、*顧客 ID* を使用して、これらのテーブルを結合できます。
 
-   ![インポートされたレコードの結合](media/join-imported-data.png)
+   ![インポートされたレコードの結合。](media/join-imported-data.png)
 
 チャーン分析のモデルを構築するための特性付けには、少し注意が必要です。 データは時間の関数であり、新しいホテルのアクティビティが毎日記録されます。 特性付けの際には、動的データから静的機能を生成する必要があります。 この場合、1 年のスライディング ウィンドウを使用して、ホテルの活動から複数の機能を生成します。 また、部屋タイプや予約タイプなどのカテゴリ機能を、ワンホット エンコーディングを使用してで別の機能に拡張します。  
 
@@ -114,7 +114,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 次の画像は、Azure Machine Learning Studio におけるモデルのトレーニングと評価のパイプラインを示しています :
 
-![Azure Machine Learning Studio のチャーン モデル](media/azure-machine-learning-model.png)
+![Azure Machine Learning Studio のチャーン モデル。](media/azure-machine-learning-model.png)
 
 また、モデル最適化の重要な側面である **順列の特徴量の重要度** と呼ばれる手法を適用します。 組み込みモデルは、最終的な予測に対する特定の特徴量の影響についての分析情報をほとんど有しません。 特徴量の重要度計算機は、特定のモデルの結果に対する個々の特徴量の影響を計算するためにカスタム アルゴリズムを使用しています。 特徴量の重要度は +1 から -1 の範囲で正規化されます。 マイナスの影響は、対応する特徴量が結果に反直観的な影響を及ぼしており、モデルから削除する必要があることを意味します。 ポジティブな影響は、特徴量が予測に大きく貢献していることを示します。 これらの値は異なるメトリックであるため、相関係数とは見なされません。 詳細については、[順列の特徴量の重要度](/azure/machine-learning/studio-module-reference/permutation-feature-importance) を参照してください。
 
@@ -148,7 +148,7 @@ CLTV の予測は、予測値が正の値の連続型変数であるため、回
 
 チャーンモデルと同様に、ホテルの ServiceCustomerID と CustomerID を結合し、CustomerID ごとに一貫した推奨事項を構築しています。
 
-![推奨モデルの特性付け](media/azure-machine-learning-model-featurization.png)
+![レコメンデーション モデルの特性付け。](media/azure-machine-learning-model-featurization.png)
 
 データは 3 つの異なるエンティティをソースにしており、そこから特徴を派生させています。 推奨の問題に対する特徴付けは、チャーンや CLTV のシナリオとは異なります。 推奨モデルには、3 つの機能セットの形式で入力データが必要となります。
 
@@ -156,13 +156,13 @@ CLTV の予測は、予測値が正の値の連続型変数であるため、回
 
 **マッチボックス レコメンダーのトレーニング** と呼ばれるアルゴリズムを用いて、製品やサービスを予測し、推奨モデルをトレーニングします。
 
-![製品推奨のアルゴリズム](media/azure-machine-learning-model-recommendation-algorithm.png)
+![製品レコメンデーションのアルゴリズム。](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 **マッチボックス レコメンダーのトレーニング** モデルに使用されるの 3 つの入力ポートは、トレーニング サービスの利用データ、顧客説明 (オプション)、サービス説明を取り込みます。 モデルのスコアリングには 3 つの方法があります。 1 つは、正規化された割引累積ゲイン (NDCG) スコアを計算して、評価されたアイテムをランク付けするモデル評価用です。 この実験では、NDCG スコアは 0.97 となっています。 その他 2 つのオプションは、推奨可能なサービス カタログ全体でモデルを採点するか、ユーザーが以前に使用したことのない項目のみを採点するものです。
 
 さらにサービス カタログ全体での推奨分布を見てみると、電話、WiFi、宅配便が推奨度の上位を占めていることがわかります。 これは、サービスの消費データの分布から得られるものと一致しています。
 
-![推奨モデルの結果](media/azure-machine-learning-model-output.png)
+![レコメンデーション モデルの結果。](media/azure-machine-learning-model-output.png)
 
 全体的な [製品推奨の実験は、Azure AI Gallery でアクセスできます。](https://gallery.azure.ai/Experiment/Recommendation-4)
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Salesforce Marketing Cloud にエクスポートする
 description: 接続を構成して、Salesforce Marketing Cloud にエクスポートする方法を学びます。
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314633"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660273"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>セグメントおよびその他のデータを Salesforce Marketing Cloud にエクスポートする (プレビュー)
 
@@ -23,11 +23,6 @@ ms.locfileid: "6314633"
 ## <a name="prerequisites-for-connection"></a>接続の前提条件
 
 - SFTP ホストと対応する管理者の資格情報が利用できること。 [Salesforce Marketing Cloud の SFTP ロケーションを設定する方法](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>既知の制限
-
-- エクスポートの実行時間は、システムのパフォーマンスによって異なります。 サーバーの最小構成としては、2 つの CPU コアと 1Gb のメモリをお勧めします。 
-- 推奨される最小構成を使用する場合、最大 1 億の顧客プロファイルを持つエンティティをエクスポートするには、90 分かかる場合があります。 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Salesforce Marketing Cloud への接続を設定する
 

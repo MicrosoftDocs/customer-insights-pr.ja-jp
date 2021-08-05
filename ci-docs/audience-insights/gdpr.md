@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597517"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554331"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR におけるデータ主体の権利 (DSR)
 
@@ -40,7 +40,7 @@ Customer Insights の管理者は、次の手順に従って、データ ソー�
    2. **状態** 下のデータ ソースの状態を確認します。 チェックマークが付いていると、更新が成功したことを意味します。 警告の三角形は、何かがうまくいかなかったことを意味します。 警告の三角形が表示された場合は、D365CI@microsoft.com にお問い合わせください。
 
 > [!div class="mx-imgBorder"]
-> ![顧客データのGDPR 削除要求の処理](media/gdpr-data-sources.png "顧客データの GDPR 削除要求の処理")
+> ![顧客データの GDPR 削除要求の処理。](media/gdpr-data-sources.png "顧客データの GDPR 削除要求の処理")
 
 #### <a name="manage-delete-requests-for-user-data"></a>ユーザー データの削除要求の管理
 
@@ -52,7 +52,7 @@ Customer Insights 管理者は、次の手順に従って Customer Insights ユ�
 4. **Remove** を選択します。
 
 > [!div class="mx-imgBorder"]
-> ![ユーザー データの GDPR 削除要求の処理](media/gdpr-permissions.png "ユーザー データの GDPR 削除要求の処理")
+> ![ユーザー データの GDPR 削除要求の処理。](media/gdpr-permissions.png "ユーザー データの GDPR 削除要求の処理")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>GDPR データ主体のエクスポート要求に対応する
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595999"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555129"
 ---
 # <a name="map-entities-and-attributes"></a>エンティティおよび属性のマッピング
 
@@ -35,14 +35,14 @@ ms.locfileid: "5595999"
 3. *一致* フェーズや *マージ* フェーズで使用するエンティティと属性を選択します。 エンティティから必要な属性を個別に選択するか、エンティティレベルの　**すべてのフィールドを含める** チェックボックスを選択して、エンティティからすべての属性を含めることができます。 データ統合プロセスの恩恵を受けるには、少なくとも 2 つのエンティティを選択することをお勧めします。
 
    > [!div class="mx-imgBorder"]
-   > ![エンティティの追加の例](media/data-manager-configure-map-add-entities-example.png "エンティティの追加の例")
+   > ![エンティティの追加例。](media/data-manager-configure-map-add-entities-example.png "エンティティの追加の例")
 
    この例では、**eCommerceContacts** エンティティや **loyCustomers** エンティティを追加しています。 これらのエンティティを選択することにより、どのオンライン ビジネス顧客がロイヤルティ プログラム メンバーであるかに関するインサイトを引き出すことができます。
    
    すべての属性およびエンティティ全体でキーワードを検索して、マップする必要な属性を選択できます。
    
      > [!div class="mx-imgBorder"]
-   > ![検索フィールドの例](media/data-manager-configure-map-search-fields-example.png "検索フィールドの例")
+   > ![検索フィールドの例。](media/data-manager-configure-map-search-fields-example.png "検索フィールドの例")
 
 4. **適用** を選択して、選択を確認します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "5595999"
 - **属性セマンティックの種類**: メールアドレスや名前などの属性のカテゴリ。 セマンティクスのスマートな予測に AI モデルを使用し、時間を節約して、精度を向上させるには、**インテリジェント マッピング** を **オン** に設定します。 インテリジェント マッピングは、**種類** フィールドでの AI ベースのセマンティクスの推奨事項を強調します。 **オフ** に設定した場合、定期的なマッピングの推奨事項が表示されます。 使用可能なオプションのリストから任意のセマンティック タイプを選択し、提案された選択を上書きできます。
 
 > [!div class="mx-imgBorder"]
-> ![属性の種類とセマンティック予測](media/data-manager-configure-map-add-attributes-semantic-prediction.png "属性の種類とセマンティック予測")
+> ![属性の種類とセマンティック予測。](media/data-manager-configure-map-add-attributes-semantic-prediction.png "属性の種類とセマンティック予測")
 
 ユーザー定義セマンティック タイプを追加することもできます。 その属性の種類フィールドを選択し、カスタムのセマンティック タイプの名前を入力します。 これにより、システムによって識別された属性の種類を変更することもできます。
 
@@ -64,7 +64,7 @@ ms.locfileid: "5595999"
 セマンティック タイプに自動的にマッピングされない属性は、**マップされていないフィールドにデータを定義する** セクションでグループ化されます。 マップされていない属性のセマンティック タイプ フィールドを選択するか、カスタム属性タイプ名を入力します。
 
 > [!div class="mx-imgBorder"]
-> ![主キーと属性の種類](media/data-manager-configure-map-add-attributes.png "主キーと属性の種類")
+> ![主キーと属性の種類。](media/data-manager-configure-map-add-attributes.png "主キーと属性の種類")
 
 > [!NOTE]
 > 顧客カードに顧客名を入力するために、1 つのフィールドをセマンティック タイプの Person.FullName にマップする必要があります。 そうでない場合、顧客カードは名前が表示されません。 
@@ -76,7 +76,7 @@ ms.locfileid: "5595999"
 2. **フィールドの編集** ペインで、属性とエンティティを追加または削除します。 検索またはスクロールを使用して、目的の属性とエンティティを見つけて選択します。 属性またはエンティティが既に一致している場合、それらを削除することはできません。
 
    > [!div class="mx-imgBorder"]
-   > ![属性の追加または削除](media/configure-data-map-edit.png "属性の追加または削除")
+   > ![属性の追加と削除。](media/configure-data-map-edit.png "属性の追加または削除")
 
 3. **適用** を選択します。
 
@@ -96,7 +96,7 @@ ms.locfileid: "5595999"
 > [!div class="mx-imgBorder"]
 > ![主キーと属性の種類 B2B](media/configure-data-map-edit-b2b.png "主キーと属性の種類 B2B")
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 データ統合プロセスの一環として、**一致**　ページに移動します。 [**一致**](match-entities.md) に移動して、このフェーズについて学習します。
 

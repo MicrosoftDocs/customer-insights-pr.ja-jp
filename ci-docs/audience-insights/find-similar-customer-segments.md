@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596781"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554211"
 ---
 # <a name="similar-customers-preview"></a>類似した顧客 (プレビュー)
 
@@ -50,7 +50,7 @@ ms.locfileid: "5596781"
 類似するセグメントを処理した後、新たなセグメントが **セグメント** ページにリスト表示されます。
 
 > [!div class="mx-imgBorder"]
-> ![類似する顧客のセグメント](media/expanded-segment.png "類似する顧客のセグメント")
+> ![類似する顧客のセグメント。](media/expanded-segment.png "類似する顧客のセグメント")
 
 アクションバーで **表示** を選択して、セグメントの詳細を開きます。 このビューには、[類似性スコア](#about-similarity-scores)の結果の分布に関する情報が含まれています。 類似性スコアの値は、**セグメント メンバーのプレビュー** にも表示されます。
 

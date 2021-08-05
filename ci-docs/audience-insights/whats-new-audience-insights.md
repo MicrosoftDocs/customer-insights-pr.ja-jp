@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263257"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692395"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
@@ -26,6 +26,28 @@ ms.locfileid: "6263257"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="june-2021-updates"></a>2021 年 6 月の更新プログラム
+
+2021 年 6 月の更新には、いくつかの機能、パフォーマンスのアップグレード、およびバグ修正が含まれています。
+
+### <a name="data-ingestion"></a>データ インジェスト
+
+- **データ統合の進捗状況の更新が改善**: [データ統合プロセス](data-unification.md)ステップで、さらに詳細で改善された動的ステータスの更新を表示できるようになりました。 この機能を使用すると、詳細な進行状況を追跡してプロセス フローを理解し、注意が必要なステップがある場合にアクションを実行できます。
+
+### <a name="extensibility"></a>拡張性
+
+- **セグメントやその他のデータを Salesforce Marketing Cloudにエクスポート**: [Salesforce Marketing Cloud](export-salesforce.md) をはじめとする様々なエクスポート先に対応します。 ブランド化されたSFTPエクスポートを介して、セグメントやその他のデータを Salesforce Marketing Cloud にエクスポートできるようになりました。 データのインポートは Salesforce 上で完全に自動化され、より効果的なマーケティングキャンペーンの作成に利用できます。  
+ 
+- **セグメントを ActiveCampaign にエクスポート**: [アクティブなキャンペーン](export-active-campaign.md)をはじめとする様々なエクスポート先に対応します。 セグメントをエクスポートして、キャンペーンの生成、メールマーケティングの実行、ActiveCampaign の特定の顧客グループを利用できるようになりました。
+ 
+- **セグメントを Sendinblue にエクスポート**: [Sendinblue](export-sendinblue.md)をはじめとする様々なエクスポート先に対応します。 セグメントをエクスポートして、キャンペーンの生成、メールマーケティングの実行、Sendinblue の特定の顧客グループを利用できるようになりました。
+ 
+### <a name="ux-updates"></a>UX の更新 
+
+- **カスタマーズページとプロフィール詳細ページの新設と強化**: 顧客のページとプロフィールの詳細ページのデザインを変更し、ユーザー体験の向上とパフォーマンスの向上を図りました。 これらの変更により、顧客の表示、並べ替え、検索、フィルター処理が可能になります。 フィルターを URL で表示することで、検索結果を他のユーザーとシームレスに共有できるようになりました。 検索結果はセグメントとして保存することもできます。    
+  顧客プロファイルの詳細ページでは、人口統計データ、ID、その他のプロファイル属性など、さまざまなサブセクションでデータをグループ化しており、読みやすさが向上しています。 プロファイルの詳細ページの他のセクションがさらにインタラクティブになりました。 たとえば、アクティビティ セクションでのフィルターと並べ替えができるようになりました。
+
 
 ## <a name="may-2021-updates"></a>2021 年 5 月の更新
 
@@ -170,7 +192,7 @@ ms.locfileid: "6263257"
 
 - **コピー環境では、より多くの種類のデータ ソースをサポート**
 
-  管理者は、環境構成を同じ組織内の新しい環境にコピーできます。 この機能は、Common Data Service データ レイクまたは Common Data Model フォルダーに基づくデータ ソースが使用される場合のコピー環境機能を拡張します。
+  管理者は、環境構成を同じ組織内の新しい環境にコピーできます。 この機能は、Microsoft Dataverse のマネージド Data Lake や Common Data Model フォルダをベースにしたデータソースを使用する場合に、コピー環境の機能を拡張します。
 
 ## <a name="january-2021-updates"></a>2021 年 1 月の更新
 

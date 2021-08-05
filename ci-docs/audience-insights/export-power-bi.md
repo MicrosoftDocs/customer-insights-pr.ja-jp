@@ -1,7 +1,7 @@
 ---
 title: Power BI コネクタ
 description: Power BI で Dynamics 365 Customer Insights コネクタの使用方法を学びます。
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596045"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661108"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI のコネクタ (プレビュー)
 
@@ -39,7 +39,7 @@ Power BI Desktop を使用してデータをビジュアル化します。 統�
 
 1. **検索** ダイアログ ボックス。 アクセス可能なすべての環境を一覧表示します。 環境を展開し、任意のフォルダー (エンティティ、メジャー、セグメント、エンリッチメント) を開きます。 たとえば、**エンティティ** フォルダを開き、インポートできるすべてのエンティティを表示します。
 
-   ![Power BIコネクタ ナビゲータ](media/power-bi-navigator.png "Power BI コネクタ ナビゲーター")
+   ![Power BIコネクタ ナビゲータ。](media/power-bi-navigator.png "Power BI コネクタ ナビゲーター")
 
 1. 含めるエンティティの横にあるチェックボックスを選択して、**読み込みます**。 複数の環境から複数のエンティティを選択できます。
 
@@ -68,5 +68,11 @@ Power BI の Customer Insights コネクタは、最大 100 万の顧客プロ�
 3. 識別された重複するリレーションシップをすべて削除します。
 
 重複したリレーションシップを削除した後、Power BI コネクタに再接続してみます。 これで環境が利用可能になりました。
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Power BI Desktop にエンティティを読み込む際の日付フィールドのエラー
+
+MM / DD / YYYY のような日付形式のフィールドを含むエンティティを読み込むと、ロケール形式の不一致が原因でエラーが発生する可能性があります。 Power BI Desktop ファイルのロケールが英語 (米国) 以外に設定されていると、対象ユーザーインサイトの日付フィールドが米国形式で保存されるため、このような不一致が発生します。
+
+Power BI Desktop ファイルには単一のロケール設定があり、データを取得するときに適用されます。 これらの日付フィールドを正しく解釈するには、.BPI ファイルのロケールを英語 (米国) に設定します。 [Power BI Desktop のロケールを変更する方法について説明します](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop)。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597149"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554027"
 ---
 # <a name="customer-profiles-search--filter-index"></a>顧客プロファイル: 検索とフィルターのインデックス
 
 顧客データを統合した結果は、顧客ベース全体に統一されたビューを提供する顧客プロファイル エンティティです。 迅速に [特定の顧客または顧客グループに関する情報を見つける](customer-profiles.md) には、**検索** と **フィルタ** 機能を **顧客** ページで構成できます。 ユーザーが検索とフィルタリングに使用できる **検索およびフィルター インデックス** ページを読んで、管理者がどのように属性を編集できるかを学んください。
 
 > [!div class="mx-imgBorder"]
-> ![検索フィルター](media/search-filter.png "検索フィルター")
+> ![検索フィルター。](media/search-filter.png "検索フィルター")
 
 ## <a name="add-fields-and-specify-attributes"></a>フィールドを追加して属性を指定する
 

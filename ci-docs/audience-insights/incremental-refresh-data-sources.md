@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596827"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554165"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query ベースのデータ ソースの増分更新
 
@@ -45,7 +45,7 @@ ms.locfileid: "5596827"
 1. **増分更新の設定** にて、データ ソースの作成時に選択したすべてのエンティティーの増分更新を構成します。
 
    > [!div class="mx-imgBorder"]
-   > ![データソースのエンティティの増分更新を設定する](media/incremental-refresh-settings.png "データソースのエンティティの増分更新を設定する")
+   > ![データソースのエンティティの増分更新を設定する。](media/incremental-refresh-settings.png "データソースのエンティティの増分更新を設定する")
 
 1. エンティティを選択し、次の詳細を指定します：
 

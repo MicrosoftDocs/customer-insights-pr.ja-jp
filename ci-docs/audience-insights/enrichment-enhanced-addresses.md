@@ -1,7 +1,7 @@
 ---
 title: 住所拡張エンリッチメント
 description: Microsoft のモデルを使用して、顧客プロファイルの住所情報をエンリッチおよび正規化します。
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305438"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692259"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
@@ -22,7 +22,7 @@ ms.locfileid: "6305438"
 
 ## <a name="how-we-enhance-addresses"></a>住所の拡張方法
 
-このモデルでは、住所を拡張するために 2 ステップのプロセスを行います。 まず、住所を解析してコンポーネントを識別し、構造化された形式にします。 次に、AI を使用して、住所の値を修正して完成させ、標準化します。
+このモデルでは、住所を拡張するために 2 ステップのプロセスを行います。 まず、住所を解析してコンポーネントを特定し、それらを構造化された形式にします。 次に、AI を使用して、住所の値を修正して完成させ、標準化します。
 
 ### <a name="example"></a>例
 
@@ -44,24 +44,28 @@ ms.locfileid: "6305438"
 
 ### <a name="limitations"></a>制限
 
-拡張住所は、取り込んだ住所データにすでに存在する値でのみ機能します。 モデルには、以下は含まれません: 
+拡張住所は、取り込んだ住所データにすでに存在する値でのみ機能します。 モデルは以下を実行しません: 
 
-1. 住所が有効な住所であるかどうかを確認する。
-2. 郵便番号や町名などの値のいずれかが有効かどうかを確認する。
-3. 認識できない値を変更する。
+1. 住所が有効な住所かどうかを確認する。
+2. 郵便番号や番地名などの値が有効かどうかを確認する。
+3. 認識しない値を変更する。
 
 モデルは、機械学習ベースの手法を使用して住所を拡張します。 他の機械学習ベースのモデルと同様に、モデルが入力値を変更するときには信頼性の高いしきい値を適用しますが、100％ の精度は保証されません。
 
 ## <a name="supported-countries-or-regions"></a>サポートされている国または地域
 
-現在、次の国または地域で住所のエンリッチ化をサポートしています: 
+現在、次の国または地域では、住所のエンリッチがサポートされています。 
 
 - オーストラリア
 - カナダ
+- フランス
+- ドイツ
+- イタリア
+- 日本
 - イギリス
 - 米国
 
-住所には、国/地域の値が含まれている必要があります。 サポートされていない国または地域の住所、および国または地域が指定されていない住所は処理されません。
+住所には国/地域の値が含まれている必要があります。 サポートされていない国または地域の住所、および国または地域が指定されていない住所は処理されません。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

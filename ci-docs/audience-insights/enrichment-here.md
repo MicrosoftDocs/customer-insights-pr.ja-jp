@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305300"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555313"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies による顧客プロファイルの強化 (プレビュー)
 
@@ -35,7 +35,7 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 1. HERE Technologies タイルで **データのエンリッチ** を選択し、**開始する** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies タイル](media/HERE-tile.png "HERE Technologies タイル")
+   > ![HERE Technologies タイル。](media/HERE-tile.png "HERE Technologies タイル")
 
 1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択して接続を作成できます。 ドロップダウン リストから、**HERE Technologies** を選択します。 
 
@@ -50,7 +50,7 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 1. HERE Technologies から一致する位置データを検索するために、統合プロファイルのどのフィールドを使用するかを定義します。 **番地 1** と **郵便番号** フィールドは、住所 1 または住所 2、あるいはその両方に必要です。 一致精度を高めるために、より多くのフィールドを追加できます。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies エンリッチメント構成ページ](media/enrichment-HERE-configuration.png "HERE Technologies エンリッチメント構成ページ")
+   > ![HERE Technologies エンリッチメント構成ページ。](media/enrichment-HERE-configuration.png "HERE Technologies エンリッチメント構成ページ")
 
 1. **次へ** を選択し、フィールド マッピングを完了します。
 
@@ -73,7 +73,7 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 1. 検証が完了したら、**保存** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies 接続構成ページ](media/enrichment-HERE-connection.png "HERE Technologies 接続構成ページ")
+   > ![HERE Technologies 接続構成ページ。](media/enrichment-HERE-connection.png "HERE Technologies 接続構成ページ")
 
 ## <a name="enrichment-results"></a>強化の結果
 

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595907"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692533"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
 
@@ -31,11 +31,11 @@ ms.locfileid: "5595907"
 
 組織で予測機能を使用するには、次の前提条件を満たす必要があります:
 
-1. 組織には、[Common Data Service で設定された](/ai-builder/build-model#prerequisites) インスタンスがあり、Customer Insights と同じ組織にあります。
+1. あなたの組織では、[Microsoft Dataverse にインスタンス](/ai-builder/build-model#prerequisites)が設定されていて、Customer Insights と同じ組織にあります。
 
-2. ご使用の環境は、Common Data Service インスタンスに関連付けられています。
+2. 対象ユーザー インサイトの環境は Dataverse インスタンスに接続されています。
 
-[新しい環境を作成する](manage-environments.md) 場合は、**環境の作成** ダイアログで設定して、**詳細** を選択します。 既に環境を作成している場合は、その設定に移動して **詳細** を選択します。 いずれの場合も、**予測の使用** セクションで、環境を関連付ける Common Data Service インスタンス URLを入力します。
+[新しい環境を作成する](get-started-paid.md) 場合は、**環境の作成** ダイアログで設定して、**詳細** を選択します。 既に環境を作成している場合は、その設定に移動して **詳細** を選択します。 いずれの場合も、**予測の使用** セクションで、環境を関連付ける Dataverse インスタンス URLを入力します。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>顧客エンティティで予測を作成する
 
@@ -47,17 +47,17 @@ ms.locfileid: "5595907"
 
 4. 値を予測する属性名を見つけてから、**概要** 列で **概要** アイコンを選択します。
    > [!div class="mx-imgBorder"]
-   > ![概要アイコン](media/intelligence-overviewicon.png "概要アイコン")
+   > ![概要アイコン。](media/intelligence-overviewicon.png "概要アイコン")
 
 5. 属性の欠損値の割合が高い場合は、**欠損値を予測** を選択して、予測を続行します。
    > [!div class="mx-imgBorder"]
-   > ![欠損値の予測ボタンが表示された概要ステータス](media/intelligence-overviewpredictmissingvalues.png "欠損値の予測ボタンが表示された概要ステータス")
+   > ![欠損値の予測ボタンが表示された概要ステータス。](media/intelligence-overviewpredictmissingvalues.png "欠損値の予測ボタンが表示された概要ステータス")
 
 6. 予測結果に **表示名** と **出力エンティティ名** を入力します。
 
 7. オプションの事前設定リストには、予測カテゴリに値をマッピングできる場所が表示されます。 この場合、予測の True/False またはバイナリの性質にマップされるため、カテゴリ オプションは 0 または 1 のみです。 カテゴリ列で、最終予測で "0" に分類するフィールド値を "0" にマップし、最終予測で "1" に分類する項目を "1" にマップします。
    > [!div class="mx-imgBorder"]
-   > ![カテゴリにマップされたフィールド値を示す例](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
+   > ![カテゴリにマップされたフィールド値を示す例。](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
 
 8. **完了** を選択すると、予測が処理されます。 データのサイズと複雑さによっては、処理に時間がかかります。 結果は作成した予測の **出力エンティティ名** に基づいて、新しいエンティティで利用可能になります。
 
@@ -77,7 +77,7 @@ ms.locfileid: "5595907"
 
 5. 作成したセグメントのソース フィールドに不完全なデータがある場合、欠損値の予測を選択できます。
    > [!div class="mx-imgBorder"]
-   > ![予測ボタン](media/segments-predictoption.png "予測ボタン")
+   > ![予測ボタン。](media/segments-predictoption.png "予測ボタン")
 
 6. 予測結果に **表示名** と **出力エンティティ名** を入力します。
 
@@ -93,7 +93,7 @@ ms.locfileid: "5595907"
 
 4. 予測のビューに多数のデータ ポイントが表示されます。
    > [!div class="mx-imgBorder"]
-   > ![予測ページ](media/intelligence-predictionsviewpage.png "予測ページ")
+   > ![予測ページ。](media/intelligence-predictionsviewpage.png "予測ページ")
 
    - **予測値** は、フィールド値からカテゴリへのマッピング段階で作成したマッピングを示します。 これらは、特定のカテゴリにマップされたデータセット内の値です。
    -**トップ インフルエンサー** は、特定のカテゴリにマップされるフィールド値の予測の信頼性に最も影響を与えた可能性があるデータセット内の要因です。
@@ -139,7 +139,7 @@ ms.locfileid: "5595907"
 
 ## <a name="troubleshooting"></a>トラブルシューティング​​
 
-エラーが原因で Common Data Service の添付プロセスを完了できない場合は、プロセスを手動で完了できます。 添付プロセスで発生する可能性のある既知の問題が 2 つあります。
+エラーが原因で Dataverse の添付プロセスを完了できない場合は、プロセスを手動で完了できます。 添付プロセスで発生する可能性のある既知の問題が 2 つあります。
 
 - 顧客カード アドイン ソリューションがインストールされていません。
     1. 指示を完了して、[ソリューションをインストールして構成します](customer-card-add-in.md)。

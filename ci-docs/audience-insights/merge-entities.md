@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305649"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650140"
 ---
 # <a name="merge-entities"></a>エンティティの結合
 
@@ -109,7 +109,7 @@ ms.locfileid: "6305649"
 手動で属性をマージする場合でも、システムに属性をマージさせる場合でも、いつでもマージを実行できます。 **マージ** ページで **実行** を選択して、このプロセスを開始します。
 
 > [!div class="mx-imgBorder"]
-> ![データ マージの保存と実行](media/configure-data-merge-save-run.png "データ マージの保存と実行")
+> ![データ マージの保存と実行。](media/configure-data-merge-save-run.png "データ マージの保存と実行")
 
 **マージのみ実行** は、統合された顧客エンティティに反映された出力のみを表示する場合に選択します。 ダウンストリーム プロセスは [更新スケジュールで定義](system.md#schedule-tab) されたように更新されます。
 
@@ -118,7 +118,9 @@ ms.locfileid: "6305649"
 さらに変更を加えてステップを再実行するには、進行中のマージをキャンセルします。 **更新中 ...** テキストを選択して、表示された横ウィンドウの下にある **ジョブをキャンセル** を選択します。
 
 > [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+> マージ プロセスを実行した後、プロセスの状態を選択して **タスクの詳細** ペインを開きます。 処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告に関する概要が表示されます。 **詳細の表示** を選択し、どのエンティティが一致プロセスに参加したか、不一致が解決したか、および更新が正常に公開されたかどうかを確認します。  
+> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。  
+> :::image type="content" source="media/process-detail-path.png" alt-text="タスクステータスリンクからプロセスの詳細にアクセスするためのドリルダウンパス。":::
 
 ## <a name="next-step"></a>次のステップ
 

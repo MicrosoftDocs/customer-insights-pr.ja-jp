@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596505"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692119"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>対象者に関するインサイトの Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する
 
 Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 ストレージ アカウント キーの代わりに、Azure サービス プリンシパルを使用して、対象者に関するインサイトを Azure Data Lake Storage Gen2 アカウントに接続する方法について説明します。 
 
-サービス プリンシパルを使用して、安全に [Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md) したり、[新しい環境を作成、または既存の環境を更新](manage-environments.md#create-an-environment-in-an-existing-organization) したりできます。
+サービス プリンシパルを使用して、安全に [Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md) したり、[新しい環境を作成、または既存の環境を更新](get-started-paid.md) したりできます。
 
 > [!IMPORTANT]
 > - サービス プリンシパルを使用する予定の Azure Data Lake Gen2 ストレージ アカウントでは、[階層名前空間 (HNS) が有効](/azure/storage/blobs/data-lake-storage-namespace)である必要があります。
@@ -81,7 +81,7 @@ Azure portal に移動して、対象者に関するインサイトで使用す�
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>対象者に関するインサイトのストレージ アカウント添付ファイルに Azure リソース ID または Azure サブスクリプションの詳細を入力します。
 
-対象者に関するインサイトに Azure Data Lake ストレージ アカウントを添付し、[出力データを保存](manage-environments.md) または [データ ソースとして使用](connect-common-data-service-lake.md) します。 Azure Data Lake オプションを選択すると、リソース ベースまたはサブスクリプション ベースのアプローチのどちらかを選択できます。
+対象者に関するインサイトに Azure Data Lake ストレージ アカウントを添付し、[出力データを保存](manage-environments.md) または [データ ソースとして使用](connect-dataverse-managed-lake.md) します。 Azure Data Lake オプションを選択すると、リソース ベースまたはサブスクリプション ベースのアプローチのどちらかを選択できます。
 
 以下の手順に従って、選択したアプローチに関する必要な情報を指定します。
 

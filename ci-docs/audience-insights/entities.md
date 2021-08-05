@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049400"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553981"
 ---
 # <a name="entities-in-audience-insights"></a>対象者に関するインサイトのエンティティ
 
@@ -30,19 +30,19 @@ ms.locfileid: "6049400"
 - **最終更新日** : エンティティを最後に更新した日付と時刻
 - **最新情報に更新した日** : 最後に最新の情報に更新した日付と時刻
 
-## <a name="exploring-a-specific-entitys-data"></a>特定エンティティのデータを調べる
+## <a name="explore-a-specific-entitys-data"></a>特定エンティティのデータを調べる
 
 エンティティを選択して、そのエンティティに含まれるさまざまなフィールドとレコードを調べます。
 
 > [!div class="mx-imgBorder"]
-> ![エンティティを選択する](media/data-manager-entities-data.png "エンティティの選択")
+> ![エンティティを選択します。](media/data-manager-entities-data.png "エンティティを選択する")
 
 - **データ** タブには、エンティティの個々のレコードに関する詳細を一覧表示したテーブルが表示されます。
 
 > [!div class="mx-imgBorder"]
-> ![フィールド テーブル](media/data-manager-entities-fields.PNG "フィールド テーブル")
+> ![フィールド テーブル。](media/data-manager-entities-fields.PNG "フィールド テーブル")
 
-- **属性** タブは既定で選択されており、フィールド名、データ型、種類など、選択したエンティティの詳細を確認するためのテーブルが表示されます。 **種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。 これらは、属性のデータ型とは異なるセマンティック型です。たとえば、フィールド *メール* の下には、データ型 *テキスト* がありますが、その (セマンティック型の) Common Data Model の種類は、*メール* または *メールアドレス* である場合があります。
+- **属性** タブは既定で選択されており、フィールド名、データ型、種類など、選択したエンティティの詳細を確認するためのテーブルが表示されます。 **種類** 列は、Common Data Model に関連した種類を表示し、これはシステムによって自動識別されるか、ユーザーによって[手動でマッピング](map-entities.md) されます。 これらの型は、属性のデータ型とは異なる意味的な型です。 たとえば、以下のフィールド *メール* はデータ型が *テキスト* ですが、その (意味的な) 共通データモデルの型は *メール*、または *メールアドレス* かもしれません。
 
 > [!NOTE]
 > 両方のテーブルには、エンティティのデータのサンプルのみが表示されます。 完全なデータセットを表示するには、**データ ソース** ページに移動して、エンティティを選択し、**編集** を選択して、その後[データ ソース](data-sources.md) で説明した通り、このエンティティのデータを Power Query エディターで表示します。
@@ -52,11 +52,28 @@ ms.locfileid: "6049400"
 グラフ アイコンを選択して、データの概要を表示します。
 
 > [!div class="mx-imgBorder"]
-> ![概要記号](media/data-manager-entities-summary.png "データ概要テーブル")
+> ![概要記号。](media/data-manager-entities-summary.png "データ概要テーブル")
 
-### <a name="next-step"></a>次の手順
+## <a name="entity-specific-information"></a>エンティティ固有の情報
 
-[統一](data-unification.md) トピックで、取り込んだデータを *マップ*、*一致*、そして *マージ* する方法をご覧ください。
+次のセクションでは、システムシステムで作成されたエンティティについての情報を提供します。
+
+### <a name="corrupted-data-sources"></a>破損したデータ ソース
+
+取り込んだデータソースのフィールドに破損したデータが含まれる可能性があります。 破損したフィールドを持つレコードが、システムで作成されたエンティティで公開されます。 破損したレコードを知ることで、ソースシステム上でどのデータを見直し、更新すべきかを特定することができます。 次のデータソースの更新後、修正されたレコードは Customer Insights に取り込まれ、下流のプロセスに渡されます。 
+
+たとえば、「birthday」 列のデータ型は 「date」 に設定されています。 顧客レコードには、誕生日が 「01/01/19777」 と入力されています。 システムは、このレコードに破損のフラグを立てます。 ソースシステムの誕生日を「1977」に変更できるようになります。 データソースの自動更新後、このフィールドは有効なフォーマットとなり、破損したエンティティからレコードが削除されます。 
+
+**データ** > **エンティティ** に移動し、**システム** セクションで破損したエンティティを探します。 破損したエンティティのネーミング スキーマ: 'DataSourceName_EntityName_corrupt'。
+
+Customer Insights は、破損したレコードを引き続き処理します。 ただし、統合データを操作するときに問題が発生する可能性があります。
+
+取り込まれたデータに対して以下のようなチェックを行い、破損したレコードを発見します: 
+
+- フィールドの値がその列のデータ型と一致しません。
+- フィールドに文字が含まれてるため、列が期待されるスキーマと一致しません。 例: 不適切な書式の引用符、エスケープされていない引用符、改行文字など。
+- datetime/date/datetimeoffset の列がある場合、そのフォーマットが標準的な ISO フォーマットに従っていない場合は、モデル内で指定する必要があります。
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

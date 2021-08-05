@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306080"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554991"
 ---
 # <a name="segment-insights-preview"></a>セグメント インサイト (プレビュー)
 
@@ -44,7 +44,7 @@ ms.locfileid: "6306080"
 分析が完了したら、**セグメント** > **インサイト (プレビュー)** でこのインサイトの詳細を見つけます。
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="セグメント重複分析情報の詳細":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="セグメント重複分析情報の詳細。":::
 
 分析結果を表示するには、分析情報を選択してください:
 
@@ -77,9 +77,9 @@ ms.locfileid: "6306080"
 分析が完了したら、**セグメント** > **インサイト (プレビュー)** でこのインサイトの詳細を見つけます。
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="セグメント差別化要因分析情報の詳細":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="セグメント差別化要因分析情報の詳細。":::
 
-分析結果を表示するには、分析情報を選択してください。 差別化要因分析には 2 つのタブがあります。 **属性** タブには、差別化要因と見なされるプロファイル属性が一覧表示されます。 **メジャー** タブには差別化要因が一覧表示されます。 各タブには、次の詳細が含まれます:
+分析結果を表示するには、分析情報を選択してください。 差別化要因分析には、2 つのタブがあります。 **属性** タブには、差別化要因と見なされるプロファイル属性が一覧表示されます。 **メジャー** タブには差別化要因が一覧表示されます。 各タブには、次の詳細が含まれます:
 
 - 差異スコアでソートされた、差別化要因のランク付きリスト。
 - 各差別化要因の **差異スコア**。 差異スコアは、2 つのセグメント間の属性の違いの程度を表します。 差異スコアが高いほど、2 つのセグメント間の属性の違いが大きくなります。 スコアを選択して、その属性の値の分布を示す **差異スコア** ペインを開きます。

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598161"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554119"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Appsコネクタ (プレビュー)
 
@@ -56,12 +56,12 @@ Customer Insights をデータ接続として追加した後、Power Apps で次
 1. **ギャラリー** コントロールを、構築しているアプリに追加します。
 
 > [!div class="mx-imgBorder"]
-> ![ギャラリー要素を追加する](media/connector-powerapps9.png "ギャラリー要素を追加する")
+> ![ギャラリー要素を追加する。](media/connector-powerapps9.png "ギャラリー要素を追加する")
 
 1. **顧客** をアイテムのデータ ソースとして選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![データ ソースを選択](media/choose-datasource-powerapps.png "データ ソースを選択")
+    > ![データ ソースを選択。](media/choose-datasource-powerapps.png "データ ソースを選択")
 
 1. 右側のデータパネルを変更して、ギャラリーに表示する顧客エンティティのフィールドを選択できます。
 

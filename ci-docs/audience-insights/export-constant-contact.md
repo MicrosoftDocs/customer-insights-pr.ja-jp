@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124279"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362424"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>セグメントを Constant Contact にエクスポート (プレビュー)
 
@@ -47,7 +47,7 @@ ms.locfileid: "6124279"
 
 1. **接続** を選択して、Constant Contact への接続を初期化します。
 
-1. **AdRoll による認証** を選択して、Constant Contact の管理者資格情報を入力します。 
+1. **コンスタントコンタクトで認証する** を選択し、コンスタント コンタクトの管理者認証情報を入力します。 
 
 1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
 

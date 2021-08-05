@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977383"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327370"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポート (プレビュー)
 
@@ -74,8 +74,10 @@ Azure の場合:
 1. エクスポートの識別可能な **表示名** と **データベース名** を指定します。
 
 1. Azure Synapse Analytics にエクスポートするエンティティを選択します。
+   > [!NOTE]
+   > [Common DataModel フォルダー](connect-common-data-model.md) に基づくデータソースはサポートされていません。
 
-1. **保存** を選択します。
+2. **保存** を選択します。
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 

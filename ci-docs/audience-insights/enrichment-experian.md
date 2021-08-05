@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309826"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555359"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian からの人口統計情報で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -39,7 +39,7 @@ Experian を構成するには、次の前提条件が満たされている必�
 1. Experian タイルで、**データのエンリッチメント** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian タイルを](media/experian-tile.png "Experian tile")
+   > ![Experian タイル。](media/experian-tile.png "Experian tile")
    > 
 
 1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**接続の追加** を選択して、ドロップダウン リストから Experian を選択することで、接続を作成できます。 

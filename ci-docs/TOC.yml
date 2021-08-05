@@ -2,20 +2,20 @@
   href: index.yml
 - name: 製品概要
   href: overview.md
+- name: 試用版の作成
+  href: audience-insights/get-started-trial.md
 - name: 環境へのアクセス
   href: 'https://home.ci.ai.dynamics.com/'
-- name: 対象者に関するインサイト
+- name: 対象者分析情報
   items:
     - name: ヘルプ ハブ
       href: audience-insights/index.yml
     - name: 機能の概要
       href: audience-insights/overview.md
-    - name: 無料試用版
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: 新機能と更新された機能
       href: audience-insights/whats-new-audience-insights.md
-    - name: 新しい環境の作成
-      href: audience-insights/home.md
+    - name: 新しい環境を作成する
+      href: audience-insights/get-started-paid.md
     - name: モジュールの学習
       items:
         - name: データの取り込み
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: データ ソースとして共通データ モデル フォルダーを追加する
           href: audience-insights/connect-common-data-model.md
-        - name: Common Data Service により管理されたデータ レイクの追加
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Dataverse により管理されたデータ レイクの追加
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: データ ソースの増分更新
           href: audience-insights/incremental-refresh-data-sources.md
         - name: リアルタイム データ インジェスト
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: SFTP カスタム インポートを利用して強化する
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: セグメントとメジャー
+    - name: セグメント
       items:
         - name: すべてのセグメントの概要
           href: audience-insights/segments.md
-        - name: セグメント グループと顧客グループを作成する
+        - name: セグメントの作成
           href: audience-insights/segment-builder.md
         - name: メジャーに基づく提案されたセグメント
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: イベントの作成と変更
           href: engagement-insights/refined-events.md
+        - name: 以前に認証した訪問者のウェブイベントを認識する
+          href: engagement-insights/unknown-to-known.md
         - name: イベントをエクスポート
           href: engagement-insights/export-events.md
     - name: 'レポート '
@@ -304,7 +306,9 @@
       items:
         - name: 個人データの削除とエクスポート
           href: engagement-insights/delete-export-personal-data.md
+    - name: 地域別の提供状況
+      href: engagement-insights/regional-availability.md
     - name: サービス制限
       href: engagement-insights/quotas.md
-- name: サポートに問い合わせる
+- name: サポートに連絡
   href: 'https://admin.powerplatform.microsoft.com/support'

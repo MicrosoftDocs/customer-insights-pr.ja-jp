@@ -1,7 +1,7 @@
 ---
 title: セグメントを作成して管理する
 description: 顧客のセグメントを作成して、さまざまな属性に基づいてグループ化します。
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064943"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685468"
 ---
 # <a name="create-and-manage-segments"></a>セグメントを作成して管理する
+
+> [!IMPORTANT]
+> 2021 年 9 月にセグメント作成エクスペリエンスにいくつかの変更がリリースされます。 
+> - セグメント ビルダーの外観の要素が再構成され、ユーザーフローが改善されています。
+> - セグメントビルダーでは、新しい日付演算子と改良された日付選択機能が有効になっています。
+> - セグメントに条件やルールを追加、削除できるようになります。 
+> - OR 条件で始まるネストされたルールが使用可能になります。 一番外側のレイヤーでの AND 条件は不要になりました。
+> - 属性選択のサイドペインは常に利用可能です。
+> - エンティティの関連パスを選択するオプション。
+> 新しいセグメントビルダーを試すには、「Request to enable the new segment builder」 (新しいセグメント ビルダーの有効化リクエスト) という件名のメールを cihelp [at] microsoft.com に送信してください。 組織名とサンドボックス環境の ID を記入してください。
 
 統合された顧客エンティティとその関連エンティティに対して複雑なフィルターを定義します。 処理後の各セグメントには、エクスポートして操作できる顧客エンティティ レコードのセットが作成されます。 セグメントは、**セグメント** ページで管理されます。 
 
@@ -50,14 +60,14 @@ ms.locfileid: "6064943"
 1. 選択した属性の演算子と値を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![カスタム グループ フィルタ―](media/customer-group-numbers.png "顧客グループ フィルタ―")
+   > ![カスタム グループ フィルタ―。](media/customer-group-numbers.png "顧客グループ フィルタ―")
 
    |数 |定義  |
    |---------|---------|
-   |1     |Entity          |
+   |6     |Entity          |
    |2     |属性          |
-   |3    |演算子         |
-   |4    |値         |
+   |3    |オペレーター         |
+   |4    |価値         |
 
    1. グループに条件を追加するには、次の 2 つの論理演算子を使用できます。
 
@@ -66,7 +76,7 @@ ms.locfileid: "6064943"
       - **OR** 演算子 : セグメンテーション プロセスの一部として、いずれかの条件を満たしている必要があります。 このオプションは、同じエンティティにわたって複数の条件を定義するときに最も役立ちます。
 
       > [!div class="mx-imgBorder"]
-      > ![いずれかの条件が満たされる必要がある OR 演算子](media/segmentation-either-condition.png "いずれかの条件が満たされる必要がある OR 演算子")
+      > ![いずれかの条件が満たされる必要がある OR 演算子。](media/segmentation-either-condition.png "いずれかの条件が満たされる必要がある OR 演算子")
 
       現在、**AND** 演算子下で **OR** 演算子をネストすることが可能ですが、その逆はできません。
 
@@ -74,12 +84,12 @@ ms.locfileid: "6064943"
    **グループを追加** を選択します。
 
       > [!div class="mx-imgBorder"]
-      > ![顧客グループ追加グループ](media/customer-group-add-group.png "顧客グループ追加グループ")
+      > ![顧客グループ追加グループ。](media/customer-group-add-group.png "顧客グループ追加グループ")
 
    1. 集合演算子 (**結合**、**交差**、**例外**) のいずれかを選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![顧客グループ追加結合](media/customer-group-union.png "顧客グループ追加結合")
+   > ![顧客グループ追加結合。](media/customer-group-union.png "顧客グループ追加結合")
 
    - **結合** は 2 つのグループを結合します。
 
@@ -90,7 +100,7 @@ ms.locfileid: "6064943"
 1. エンティティが [リレーションシップ](relationships.md) を通して統合型顧客エンティティに接続されている場合、有効なセグメントを作成するには、関係パスを定義する必要があります。 ドロップダウンから **顧客 : CustomerInsights** のエンティティが選択できるまで、関係パスからエンティティを追加します。 次に、ステップごとに **すべてのレコード** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![セグメント作成中の関係パス](media/segments-multiple-relationships.png "セグメント作成中の関係パス")
+   > ![セグメント作成中の関係パス。](media/segments-multiple-relationships.png "セグメント作成中の関係パス")
 
 1. 既定では、セグメントは、定義されたフィルターに一致する顧客プロファイルのすべての属性を含む出力エンティティーを生成します。 セグメントが *Customer* エンティティ以外の他のエンティティに基づいている場合は、これらのエンティティから出力エンティティに属性を追加できます。 **プロジェクトの属性** を選択して、出力エンティティに追加する属性を選択します。  
   
@@ -127,7 +137,7 @@ ms.locfileid: "6064943"
 4. システムは、**推定セグメント サイズ** を提供します。 定義したセグメントを生成するか、最初に再訪して別のセグメント サイズを取得するかを選択できます。
 
     > [!div class="mx-imgBorder"]
-    > ![クイック セグメントの名前と見積もり](media/quick-segment-name.png "クイック セグメントの名前と見積もり")
+    > ![クイック セグメントの名前と見積もり。](media/quick-segment-name.png "クイック セグメントの名前と見積もり")
 
 5. セグメントに対して **名前** を入力します。 オプションで、**表示名** も入力します。
 

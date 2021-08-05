@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305254"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555267"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
 Microsoft やその他のパートナーなどのソースからのデータを使用して、顧客データを拡充させます。
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="エンリッチメント ハブ ページ":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="エンリッチメント ハブ ページ。":::
 
 対象者に関するインサイトで、**データ** > **エンリッチメント** に移動し、エンリッチメント オプションを使用します。  
 
@@ -42,9 +43,9 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **自分のエンリッチメント** タブに移動し、構成されているすべてのエンリッチメントを表示します。 各エンリッチメントは、エンリッチメントに関する追加情報を含む行として表されます。
 
-エンリッチメントを選択して、利用可能なオプションを表示します。 リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。
+エンリッチメントを選択して、使用可能なオプションを確認します。 リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="エンリッチメントの一覧でエンリッチメントを管理するオプション":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="エンリッチメントの一覧でエンリッチメントを管理するオプション。":::
 
 - 強化された顧客プロファイルの数を使用して、エンリッチメントの詳細を **表示** します。
 - エンリッチメント構成を **編集** します。
@@ -52,7 +53,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 - 既存のエンリッチメントを **非アクティブ化** して、スケジュールされた更新のたびに自動更新されないようにします。 最後に成功した更新のデータは引き続き使用できます。 非アクティブなエンリッチメントを **活性化** し、スケジュールされた更新ごとに自動更新を再開します。
 - エンリッチメントを **削除** します。
 
-リストで複数のエンリッチメントを選択して、一度に実行または非アクティブ化できます。 表示と編集のオプションは一括アクションとして使用できず、一度に 1 つのエンリッチメントに対してのみ機能します。
+リストで複数のエンリッチメントを選択して、一度に実行したり、解除したりすることができます。 表示と編集のオプションは、一括操作では利用できません。 一度に一つのエンリッチメントにしか機能しません。
 
 ## <a name="enrichments-and-connections"></a>エンリッチメントと接続
 

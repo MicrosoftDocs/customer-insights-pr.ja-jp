@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305644"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554854"
 ---
 # <a name="custom-machine-learning-models"></a>カスタム機械学習モデル
 
@@ -42,7 +42,7 @@ ms.locfileid: "6305644"
 1. **名前** フィールドで、カスタム モデルにわかりやすい名前を付けます。
 
    > [!div class="mx-imgBorder"]
-   > ![新規ワークフロー ウィンドウのスクリーンショット](media/new-workflowv2.png "新規ワークフロー ウィンドウのスクリーンショット")
+   > ![新規ワークフロー ウィンドウのスクリーンショット。](media/new-workflowv2.png "新規ワークフロー ウィンドウのスクリーンショット")
 
 1. **Web サービスを含むテナント** にて、Webサービスを含む組織を選択します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "6305644"
    > カスタム モデル ワークフローは、ヒューリスティックを適用して、フィールドの名前とデータ型に基づいて Web サービス入力フィールドをエンティティ属性にマッピングします。 Web サービス フィールドをエンティティにマップできない場合は、エラーが表示されます。
 
    > [!div class="mx-imgBorder"]
-   > ![ワークフローの構成](media/intelligence-screen2-updated.png "ワークフローの構成")
+   > ![ワークフローの構成。](media/intelligence-screen2-updated.png "ワークフローの構成")
 
 1. **モデル出力パラメーター** のステップで、次のプロパティを設定します:
    - Machine Learning Studio (クラシック)
@@ -70,12 +70,12 @@ ms.locfileid: "6305644"
       1. ドロップダウンからバッチ パイプラインの **出力パス パラメーター名** を選択します。
 
       > [!div class="mx-imgBorder"]
-      > ![モデル出力パラメーター ペイン](media/intelligence-screen3-outputparameters.png "モデル出力パラメーター ペイン")
+      > ![モデル出力パラメーター ペイン。](media/intelligence-screen3-outputparameters.png "モデル出力パラメーター ペイン")
 
 1. 顧客を特定するには、**結果内の顧客 ID** ドロップダウン リストから一致する属性を選択し、**保存** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![結果と顧客データの関連付けペイン](media/intelligence-screen4-relatetocustomer.png "結果と顧客データの関連付けペイン")
+   > ![結果と顧客データの関連付けペイン。](media/intelligence-screen4-relatetocustomer.png "結果と顧客データの関連付けペイン")
 
 1. ワークフローの詳細が表示された、**保存されたワークフロー** 画面が表示されます。    
    Azure Machine Learning パイプラインのワークフローを構成した場合、対象者に関するインサイトは、パイプラインを含むワークスペースに添付されます。 対象者に関するインサイトは、Azure ワークスペースで **共同作成者** ロールを取得します。

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306126"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556267"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>トランザクション解約予測 (プレビュー) サンプル ガイド
 
@@ -47,7 +47,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **CreatedOn**: 日付/時刻/タイムゾーン
 
    [!div class="mx-imgBorder"]
-   ![生年月日を日付に変換](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
+   ![生年月日を日付に変換。](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
 
 1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 

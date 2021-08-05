@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596367"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692311"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596367"
 
 この共有データ モデルにより、データの統一された定義を提供され、アプリケーションとデータ インテグレータの共同作業が容易になります。 Common Data Model には、標準的なエンティティー、関連付け、階層、特性などを備えた豊富なメタデータ システムが含まれています。 これは、Dynamics 365 アプリ を起点としており、260を超える標準エンティティを持つ GitHub でオープンソース化されています。 内外のパートナーからなる大規模なシステムは、Common Data Model に業種固有の概念を提供します。
 
-現在、Power BI データフロー、Azure Data Services を含む複数のシステムとプラットフォームが Common Data Model を実装しています。 既に Common Data Service、 Dynamics 365、 Power Apps、 Power BI、 と 次期 Azure データサービスで対応をしており、 [オープン データ イニシアティブ](https://www.microsoft.com/open-data-initiative)に直接的な価値をもたらします。
+現在、Power BI データフロー、 Azure Data Services を含む複数のシステムおよびプラットフォームが Common Data Model を実装しています。 これは、Microsoft Dataverse、Dynamics 365、Power Apps、Power BI、そして今後リリースされる Azure のデータサービスで対応しており、[Open Data Initiative](https://www.microsoft.com/open-data-initiative) に直接貢献しています。
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights のエンティティのスキーマ
 
@@ -44,7 +44,7 @@ ms.locfileid: "5596367"
 
 [Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 **GitHub からロードする** を選択します **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** に移動すると、Customer Insights エンティティと定義のリストが表示されます。
 > [!div class="mx-imgBorder"]
-> ![CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター](media/CDM-entity-navigator.png "CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター")
+> ![CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター。](media/CDM-entity-navigator.png "CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

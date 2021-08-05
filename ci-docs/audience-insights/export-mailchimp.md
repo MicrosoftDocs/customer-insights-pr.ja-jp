@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124233"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362515"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>セグメントを Mailchimp にエクスポート (プレビュー)
 
@@ -38,7 +38,7 @@ ms.locfileid: "6124233"
 
 1. **管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**Autopilot** を選択して、接続を構成します。
+1. **接続の追加** を選択し、**Mailchimp** を選んで、接続を構成します。
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304656"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555405"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
@@ -64,7 +64,7 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 1. 確認が完了したら、**保存** を選択して接続を保存できます。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 接続の構成ページ](media/enrichment-SFTP-connection.png "Experian 接続の構成ページ")
+   > ![Experian 接続の構成ページ。](media/enrichment-SFTP-connection.png "Experian 接続の構成ページ")
 
 
 ## <a name="defining-field-mappings"></a>フィールド マッピングの定義 

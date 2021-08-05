@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760333"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555451"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>セグメントを LiveRamp&reg; にエクスポート (プレビュー)
 
@@ -56,7 +56,7 @@ LiveRamp でデータを有効にし、デジタル、ソーシャル、およ�
 
 1. **キー識別子の選択** フィールドで、**メール**、**名前と住所**、または **電話** を選択して、ID 解決のために LiveRamp に送信します。
    > [!div class="mx-imgBorder"]
-   > ![属性マッピング付きの LiveRamp コネクタ](media/export-liveramp-segments.png "属性マッピング付きの LiveRamp コネクタ")
+   > ![属性マッピング付きの LiveRamp コネクタ。](media/export-liveramp-segments.png "属性マッピング付きの LiveRamp コネクタ")
 
 1. 選択したキー識別子に対応する統合顧客エンティティの対応する属性をマッピングします。
 

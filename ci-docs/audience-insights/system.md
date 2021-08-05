@@ -9,24 +9,24 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 32bb89b02947350c056c8ce8adbe37500d2099a1
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305716"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556084"
 ---
 # <a name="system-configuration"></a>システム構成
 
 **システム** ページには次のタブが含まれています。
-- [ステータス](#status-tab)
+- [Status](#status-tab)
 - [スケジュール​​](#schedule-tab)
 - [API の使用状況](#api-usage-tab)
 - [詳細](#about-tab)
 - [全般](#general-tab)
 
 > [!div class="mx-imgBorder"]
-> ![システム ページ](media/system-tabs.png "システム ページ")
+> ![システム ページ。](media/system-tabs.png "システム ページ")
 
 ## <a name="status-tab"></a>ステータス タブ
 

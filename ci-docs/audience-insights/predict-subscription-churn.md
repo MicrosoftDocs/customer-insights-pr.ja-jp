@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095654"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556313"
 ---
 # <a name="subscription-churn-prediction-preview"></a>サブスクリプションの解約予測 (プレビュー)
 
@@ -63,7 +63,7 @@ ms.locfileid: "6095654"
 1. 対象者に関するインサイトで、**インテリジェンス** > **予測** に移動します。
 1. **サブスクリプションの解約モデル (プレビュー)** タイルを選択し、**このモデルを使用する** を選択します。
    > [!div class="mx-imgBorder"]
-   > ![このモデルボタンを使用したサブスクリプション解約モデルのタイル](media/subscription-churn-usethismodel.PNG "このモデルボタンを使用したサブスクリプション解約モデルのタイル")
+   > ![このモデルボタンを使用したサブスクリプション解約モデルのタイル。](media/subscription-churn-usethismodel.PNG "このモデルボタンを使用したサブスクリプション解約モデルのタイル")
 
 ### <a name="name-model"></a>モデルに名前を付ける
 
@@ -86,11 +86,11 @@ ms.locfileid: "6095654"
     1. 主要な顧客エンティティと一致する **顧客エンティティ** を選択します。
     1. 関係性を説明する名前を入力します。
        > [!div class="mx-imgBorder"]
-       > ![顧客との関係性の構築を示す購読履歴ページ](media/subscription-churn-subscriptionhistoryrelationship.PNG "顧客との関係性の構築を示す購読履歴ページ")
+       > ![顧客との関係性の構築を示す購読履歴ページ。](media/subscription-churn-subscriptionhistoryrelationship.PNG "顧客との関係性の構築を示す購読履歴ページ")
 1. **次へ** を選択します。
 1. 意味論的フィールドをサブスクリプション履歴エンティティ内の属性にマッピングし、**保存** を選択します。 フィールドの説明については、[前提条件](#prerequisites)を参照してください。
    > [!div class="mx-imgBorder"]
-   > ![選択したサブスクリプション履歴エンティティのフィールドにマッピングされた、意味論的属性を表示するサブスクリプション履歴ページ](media/subscription-churn-subscriptionhistorymapping.PNG "選択したサブスクリプション履歴エンティティのフィールドにマッピングされた、意味論的属性を表示するサブスクリプション履歴ページ")
+   > ![選択したサブスクリプション履歴エンティティのフィールドにマッピングされた、意味論的属性を表示するサブスクリプション履歴ページ。](media/subscription-churn-subscriptionhistorymapping.PNG "選択したサブスクリプション履歴エンティティのフィールドにマッピングされた、意味論的属性を表示するサブスクリプション履歴ページ")
 1. 前提条件に記載のとおり、**顧客アクティビティ** で **データの追加** を選択して、顧客アクティビティの履歴情報を提供するエンティティを選択します。
 1. 構成した顧客活動のタイプに一致する活動タイプを選択します。  **新規作成** を選択して、必要なアクティビティタイプに一致するオプションが表示されない場合は、名前を入力してください。
 1. 顧客アクティビティのエンティティと顧客エンティティの関係を構成する必要があります。
@@ -101,10 +101,10 @@ ms.locfileid: "6095654"
 1. 意味論的フィールドを顧客アクティビティエンティティ内の属性にマッピングし、**保存** を選択します。 フィールドの説明については、[前提条件](#prerequisites)を参照してください。
 1. (オプション) 個々に含める他の顧客活動がある場合は、上記の手順を繰り返してください。
    > [!div class="mx-imgBorder"]
-   > ![エンティティ リレーションシップを定義する](media/subscription-churn-customeractivitiesmapping.PNG "選択した顧客活動エンティティのフィールドにマッピングされた、意味論的属性を表示する顧客活動ページ")
+   > ![エンティティの関連付けを定義する。](media/subscription-churn-customeractivitiesmapping.PNG "選択した顧客活動エンティティのフィールドにマッピングされた、意味論的属性を表示する顧客活動ページ")
 1. **次へ** を選択します。
 
-### <a name="set-schedule-and-review-configuration"></a>スケジュールを設定して構成を確認する
+### <a name="set-schedule-and-review-configuration"></a>スケジュールの設定と構成のレビュー
 
 1. モデルの再トレーニングを実施する頻度を設定します。 この設定は、新しいデータが対象者に関するインサイトに取り込まれるときに、予測の精度を更新するために重要です。 多くの企業は、月に1度再トレーニングして、予測の精度を高めることができます。
 1. **次へ** を選択します。
@@ -115,7 +115,7 @@ ms.locfileid: "6095654"
 
 1. **インテリジェンス** > **予測** で **自分の予測** タブに移動します。
    > [!div class="mx-imgBorder"]
-   > ![自分の予測ページを表示する](media/subscription-churn-mypredictions.PNG "自分の予測ページを表示する")
+   > ![自分の予測ページを表示する。](media/subscription-churn-mypredictions.PNG "自分の予測ページを表示する")
 1. レビューする予測を選択します。
    - **予測名 :** 作成時に入力された予測の名前。
    - **予測タイプ :** 予測に使用されるモデルのタイプ
@@ -131,7 +131,7 @@ ms.locfileid: "6095654"
    - **最終更新日 :** 予測結果が出力エンティティで更新された日付。
 1. 予測の横にある縦の省略記号を選択して、確認する結果の **表示** を選択します。
    > [!div class="mx-imgBorder"]
-   > ![編集、更新、表示、ログ、お削除を含む予測の縦の省略記号メニューのオプションの表示](media/subscription-churn-verticalellipses.PNG "編集、更新、表示、ログ、お削除を含む予測の縦の省略記号メニューのオプションの表示")
+   > ![編集、更新、表示、ログ、お削除を含む予測の縦の省略記号メニューのオプションの表示。](media/subscription-churn-verticalellipses.PNG "編集、更新、表示、ログ、お削除を含む予測の縦の省略記号メニューのオプションの表示")
 1. 結果ページには、3つの主要なデータ セクションがあります。
     1. **トレーニング モデルのパフォーマンス :** 使用可能なスコアは A、B、C です。 このスコアは予測のパフォーマンスを示し、出力エンティティに格納されている結果を使用するかどうかの決定に役立ちます。
         - スコアは次のルールに基づいて決定されます :
@@ -139,13 +139,13 @@ ms.locfileid: "6095654"
             - **B** モデルが予測全体の少なくとも 50% を正確に予測した場合、および解約した顧客の正確な予測の割合が、過去の平均解約率よりも過去の平均解約率の最大 10% 大きい場合。
             - **C** モデルが予測全体の 50% 未満を正確に予測した場合、または解約した顧客の正確な予測の割合が過去の平均解約率よりも低い場合。
                > [!div class="mx-imgBorder"]
-               > ![モデルのパフォーマンス結果を表示する](media/subscription-churn-modelperformance.PNG "モデルのパフォーマンス結果を表示する")
+               > ![モデルのパフォーマンス結果を表示する。](media/subscription-churn-modelperformance.PNG "モデルのパフォーマンス結果を表示する")
     1. **解約の可能性 (顧客数) :** 解約の予測リスクに基づく顧客のグループ。 このデータは、解約のリスクが高い顧客のセグメントを作成する場合に役立ちます。 このようなセグメントは、セグメント メンバーの停止がどこにあるべきかを理解するのに役立ちます。
        > [!div class="mx-imgBorder"]
-       > ![解約結果の分布を示すグラフ (0 から 100％ の範囲に分割)](media/subscription-churn-resultdistribution.PNG "解約結果の分布を示すグラフ (0 から 100％ の範囲に分割)")
+       > ![解約結果の分布を示すグラフ (0 から 100% の範囲に分割)。](media/subscription-churn-resultdistribution.PNG "解約結果の分布を示すグラフ (0 から 100％ の範囲に分割)")
     1. **最も影響力のある要因 :** 予測を作成する際には、様々な要素が考慮されています。 各要素の重要度は、モデルが作成する集約された予測に対して計算されます。 これらの要素を使用して、予測の結果を検証することができます。 あるいは、この情報を後で使用して、顧客の解約リスクに影響を与える[セグメントを作成する](segments.md)こともできます。
        > [!div class="mx-imgBorder"]
-       > ![解約結果の予測における影響力のある要因とその重要性を示すリスト](media/subscription-churn-influentialfactors.PNG "解約結果の予測における影響力のある要因とその重要性を示すリスト")
+       > ![解約結果の予測における影響力のある要因とその重要性を示すリスト。](media/subscription-churn-influentialfactors.PNG "解約結果の予測における影響力のある要因とその重要性を示すリスト")
 
 ## <a name="manage-predictions"></a>予測の管理
 

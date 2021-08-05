@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304748"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554487"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights は、Customer Insights のデータに基づい�
  
    API を有効にすると、API 要求で使用されるインスタンスに対してプライマリおよびセカンダリのサブスクリプション キーが作成されます。 キーを再生成するには、**管理** > **アクセス許可** > **API** で **プライマリの再生成** または **セカンダリの再生成** を選択します。
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API を有効にする":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API を有効にする。":::
 
 1. **API の詳細を確認** を選択して、[API を試してください](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
 
@@ -129,7 +129,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
  
    または、次のコマンドを **NuGet パッケージ マネージャー コンソール** で実行します: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGet パッケージを Visual Studio プロジェクトに追加する":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGet パッケージを Visual Studio プロジェクトに追加する。":::
 
 #### <a name="use-the-c-client-library"></a>C# クライアント ライブラリを使用する
 
@@ -141,7 +141,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. この `HttpClient` を `CustomerInsights` クライアントの構築に渡します。
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="httpclient のサンプル":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="httpclient のサンプル。":::
 
 1. クライアントで、たとえば `GetAllInstancesAsync` などの「拡張メソッド」を呼び出します。 基になる `Microsoft.Rest.HttpOperationResponse` へのアクセスが推奨される場合は、たとえば `GetAllInstancesWithHttpMessagesAsync` などの「HTTP メッセージ メソッド」を使用します。
 
