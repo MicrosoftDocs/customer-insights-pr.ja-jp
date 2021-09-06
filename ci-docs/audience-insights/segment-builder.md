@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685468"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377794"
 ---
 # <a name="create-and-manage-segments"></a>セグメントを作成して管理する
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685468"
 > - 属性選択のサイドペインは常に利用可能です。
 > - エンティティの関連パスを選択するオプション。
 > 新しいセグメントビルダーを試すには、「Request to enable the new segment builder」 (新しいセグメント ビルダーの有効化リクエスト) という件名のメールを cihelp [at] microsoft.com に送信してください。 組織名とサンドボックス環境の ID を記入してください。
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="セグメント ビルダーの要素。" lightbox="media/segment-builder-overview.png":::
+>
+> 1 - ルールとサブルールを使用してセグメントを整理します。 各ルールまたはサブルールは条件で構成されます。 論理演算子で条件を組み合わせる
+>
+> 2 - ルールに適用されるエンティティ間の[リレーション パス](relationships.md)を選択します。 リレーションシップ パスは、条件で使用できる属性を決定します。
+>
+> 3 - ルールとサブルールを管理します。 ルールの位置を変更、または削除します。
+>
+> 4 - 条件を追加し、サブルールを使用して適切なレベルのネストを構築します。
+>
+> 5 - 接続されたルールにセット操作を適用します。
+>
+> 6 - 属性ペインを使用して、利用可能なエンティティ属性の追加、属性に基づいた条件の作成をします。 ペインには、選択したリレーションシップ パスに基づいて、選択したルールで使用可能なエンティティと属性のリストが表示されます。
+>
+> 7 - 既存のルールやサブルールに属性に基づく条件を追加したり、新しいルールに追加したりすることができます。
+>
+> 8 - セグメントの構築中に変更の取消や、やり直しができます。
 
 統合された顧客エンティティとその関連エンティティに対して複雑なフィルターを定義します。 処理後の各セグメントには、エクスポートして操作できる顧客エンティティ レコードのセットが作成されます。 セグメントは、**セグメント** ページで管理されます。 
 
@@ -64,7 +81,7 @@ ms.locfileid: "6685468"
 
    |数 |定義  |
    |---------|---------|
-   |6     |Entity          |
+   |1     |Entity          |
    |2     |属性          |
    |3    |オペレーター         |
    |4    |価値         |
@@ -145,8 +162,8 @@ ms.locfileid: "6685468"
 
 7. セグメントの処理が完了すると、作成した他のセグメントと同様に表示できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[セグメントをエクスポート](export-destinations.md) して、[顧客カード](customer-card-add-in.md)  と [コネクター](export-power-bi.md) の詳細を確認して、顧客レベルでのインサイトを獲得します。
+[セグメントをエクスポート](export-destinations.md)して、[カスタマー カードとの統合](customer-card-add-in.md)を確認し、他のアプリケーションでセグメントを使用することができます。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

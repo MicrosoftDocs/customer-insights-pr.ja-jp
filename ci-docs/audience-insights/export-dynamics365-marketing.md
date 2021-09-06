@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Dynamics 365 Marketing にエクスポートする
 description: Dynamics 365 Marketing への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692487"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417211"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing でセグメントを使用する (プレビュー)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[セグメント](segments.md) を使用してキャンペーンを生成し、Dynamics 365 Marketing を使用して特定の顧客グループに連絡します。 詳しくは、[Dynamics 365 Marketing で Dynamics 365 Customer Insights のセグメントを使用する](/dynamics365/marketing/customer-insights-segments)を参照してください。
+[セグメント](segments.md) を使用してキャンペーンを生成し、Dynamics 365 Marketing を使用して特定の顧客グループに連絡します。 詳しくは、[Dynamics 365 Marketing で Dynamics 365 Customer Insights のセグメントを使用する](/dynamics365/marketing/customer-insights-segments) をご覧ください。
+
+Dynamics 365 Marketing の新機能を使って、Dataverse 組織でリアルタイムに顧客体験をオーケストレーションする場合は、Dynamics 365 Marketing への標準的なエクスポートを作成する必要はありません。 対象ユーザー インサイトの連絡先とセグメントは、マーケティングと Customer Insights を接続した後、Dynamics 365 Marketing で直接利用できます。 既存のエクスポートを削除する前に、[対象ユーザーのインサイトとDynamics 365 Marketing の顧客体験のオーケストレーションを接続する方法についてのドキュメントを確認してください](/dynamics365/marketing/real-time-marketing-ci-profile)。
 
 ## <a name="prerequisite-for-a-connection"></a>接続の前提条件
 

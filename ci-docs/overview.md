@@ -3,21 +3,21 @@ title: 製品概要
 author: m-hartmann
 description: Dynamics 365 Customer Insights とその機能の概要を取得します。
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539395"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036517"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の製品概要
 
-Dynamics 365 Customer Insights は、パーソナライズされたカスタマー エクスペリエンスの提供を支援する Microsoft の顧客データ プラットフォーム (CDP) の一部です。 プラットフォームの機能は、顧客が誰であるか、および顧客がプラットフォームにどのように関与しているかについてのインサイトを提供します。 複数ソースにまたがる顧客データを統合して、顧客を 1 つのビューで把握します。
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) は、パーソナライズされた顧客エクスペリエンスの提供を支援するマイクロソフトの顧客データ プラットフォーム (CDP) の一部です。 プラットフォームの機能は、顧客が誰であるか、および顧客がプラットフォームにどのように関与しているかについてのインサイトを提供します。 複数ソースにまたがる顧客データを統合して、顧客を 1 つのビューで把握します。
 
 
 - [対象者インサイト](audience-insights/overview.md)は、ビジネスを顧客中心の組織に変革するのに役立ちます。 マーケティング、販売、およびサービスの専門家は、エクスペリエンスをパーソナライズするために必要なインサイトを持っています。 トランザクション、行動、および観察のソースからのデータを接続して、360 度の顧客ビューを作成します。 対処可能なインサイトを提供するように設計された CDP を使用すると、結果をより早く確認できます。 

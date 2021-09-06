@@ -1,7 +1,7 @@
 ---
 title: Common Data Model における Customer Insights エンティティ スキーマ
 description: Common Data Model のエンティティに関する作業。
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692311"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380749"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
@@ -42,7 +42,7 @@ ms.locfileid: "6692311"
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Common Data Model エンティティ ナビゲーターを使用してエンティティを表示する
 
-[Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 **GitHub からロードする** を選択します **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** に移動すると、Customer Insights エンティティと定義のリストが表示されます。
+[Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 インサイト アプリケーション セクションからエンティティを選択すると、Customer Insights エンティティのリストとその定義が表示されます。
 > [!div class="mx-imgBorder"]
 > ![CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター。](media/CDM-entity-navigator.png "CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター")
 

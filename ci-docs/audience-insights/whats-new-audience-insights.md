@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692395"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035969"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
@@ -37,7 +37,7 @@ ms.locfileid: "6692395"
 
 ### <a name="extensibility"></a>拡張性
 
-- **セグメントやその他のデータを Salesforce Marketing Cloudにエクスポート**: [Salesforce Marketing Cloud](export-salesforce.md) をはじめとする様々なエクスポート先に対応します。 ブランド化されたSFTPエクスポートを介して、セグメントやその他のデータを Salesforce Marketing Cloud にエクスポートできるようになりました。 データのインポートは Salesforce 上で完全に自動化され、より効果的なマーケティングキャンペーンの作成に利用できます。  
+- **セグメントやその他のデータを Salesforce Marketing Cloudにエクスポート**: [ Salesforce Marketing Cloud](export-salesforce.md) をはじめとする様々なエクスポート先に対応します。 ブランド化されたSFTPエクスポートを介して、セグメントやその他のデータを Salesforce Marketing Cloud にエクスポートできるようになりました。 データのインポートは Salesforce 上で完全に自動化され、より効果的なマーケティングキャンペーンの作成に利用できます。  
  
 - **セグメントを ActiveCampaign にエクスポート**: [アクティブなキャンペーン](export-active-campaign.md)をはじめとする様々なエクスポート先に対応します。 セグメントをエクスポートして、キャンペーンの生成、メールマーケティングの実行、ActiveCampaign の特定の顧客グループを利用できるようになりました。
  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171170"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035237"
 ---
 # <a name="relationships-between-entities"></a>エンティティ間の関連付け
 
@@ -82,7 +82,7 @@ ms.locfileid: "6171170"
 
 ### <a name="explore-the-relationship-visualizer"></a>関連ビジュアライザーの確認
 
-関連ビジュアライザーは、接続されたエンティティ間の既存の関連付けとその基数のネットワーク図を示します。
+関連ビジュアライザーは、接続されたエンティティ間の既存の関連付けとその基数のネットワーク図を示します。 また、リレーションシップ パスを視覚化します。
 
 ビューをカスタマイズするには、ボックスをキャンバス上でドラッグして、位置を変更します。
 
@@ -92,6 +92,20 @@ ms.locfileid: "6171170"
 - **画像としてエクスポート**: 現在のビューを画像ファイルとして保存します。
 - **水平/垂直レイアウトに変更**: エンティティと関連付けの配置を変更します。
 - **編集**: 編集ペインでユーザー定義の関連付けのプロパティを更新し、変更を保存します。
+
+### <a name="relationship-path"></a>リレーションシップ パス
+
+リレーションシップ パスは、ソース エンティティとターゲット エンティティの間でリレーションシップに接続されているエンティティを記述します。 統合プロファイル エンティティ以外のエンティティを含むセグメント、またはメジャーを作成し、統一されたプロファイル エンティティに到達する複数のオプションがある場合に使用されます。
+
+リレーションシップ パスは、どの関連付けを介してユニファイド プロファイル エンティティにアクセスするかをシステムに通知します。 リレーションシップ パスが異なれば、結果も異なる可能性があります。
+
+エンティティ *eCommerce_eCommercePurchases* は、統合プロファイルの *顧客* エンティティと以下の関係にあります:
+
+- eCommerce_eCommercePurchases > 顧客
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > 顧客
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > 顧客 
+
+リレーションシップ パスは、メジャーやセグメントのルールを作成する際に使用できるエンティティを決定します。 一致するレコードがすべてのエンティティの一部である必要があるため、最も長いリレーションシップ パスを持つオプションを選択すると、結果が少なくなる可能性があります。 この例では、顧客は電子商取引 (eCommerce_eCommercePurchases) を通じて販売時点管理 (POS_posPurchases) で商品を購入し、当社のロイヤルティ プログラム (loyaltyScheme_loyCustomers) に参加する必要があります。 1 つ目のオプションを選択した場合、顧客は 1 つの追加されたエンティティに存在するだけでよいため、より多くの結果を得られる可能性があります。
 
 ## <a name="manage-existing-relationships"></a>既存の関連付けの管理 
 
@@ -105,6 +119,6 @@ ms.locfileid: "6171170"
 
 ## <a name="next-step"></a>次のステップ
 
-システムとユーザー定義の関連付けは、サイロ化されなくなった複数のデータ ソースに基づいて [セグメントを作成](segments.md) するために使用されます。
+システムやカスタムの関連付けを利用して、サイロ化から解き放たれた複数のデータソースに基づいて [セグメントの作成](segments.md) と [対策](measures.md) を行います。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
