@@ -1,6 +1,6 @@
 ---
-title: Customer Insights データを Adobe Experience Platform にエクスポート
-description: Adobe Experience Platform で対象者に関するインサイトのセグメントを使用する方法を学びます。
+title: Customer Insights データを Adobe Experience Platform にエクスポートする
+description: Adobe Experience Platform で対象ユーザー インサイトのセグメントを使用する方法を説明します。
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305530"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032123"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform で Customer Insights セグメントの使用 (プレビュー)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform で Customer Insights のセグメントを使用する (プレビュー)
 
-Dynamics 365 Customer Insights の対象者に関するインサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントが作成された可能性があります。 Adobe Experience Platform および Adobe Campaign Standardなどのアプリケーションで対象者に関するインサイトのセグメントを使用するには、この記事で概説するいくつかの手順に従う必要があります。
+Dynamics 365 Customer Insights の対象者に関するインサイトのユーザーとして、関連する対象ユーザーをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントが作成された可能性があります。 Adobe Experience Platform や Adobe Campaign Standard などのアプリケーションで対象ユーザーインサイトのセグメントを使用するには、この記事で紹介しているいくつかの手順に従う必要があります。
 
 :::image type="content" source="media/AEP-flow.png" alt-text="この記事で概説されているステップのプロセス図。":::
 
@@ -26,14 +26,14 @@ Dynamics 365 Customer Insights の対象者に関するインサイトのユー�
 
 -   Dynamics 365 Customer Insights ライセンス
 -   Adobe Experience Platform ライセンス
--   Adobe Campaign Standard ライセンス
+-   Adobe Campaign Standard のライセンス
 -   Azure Blob Storage アカウント
 
 ## <a name="campaign-overview"></a>キャンペーン概要
 
-Adobe Experience Platform で対象者に関するインサイトのセグメントを使用する方法をよりよく理解するために、架空のサンプル キャンペーンを見てみましょう。
+Adobe Experience Platform で対象ユーザーインサイトからのセグメントの利用方法を理解するために、架空のサンプル キャンペーンを見てみましょう。
 
-あなたの会社が、米国の顧客に月次サブスクリプション ベースのサービスを提供していると仮定します。 今後 8 日以内にサブスクリプションの更新が予定されているが、サブスクリプションをまだ更新していない顧客を特定します。 これらの顧客を維持するために、Adobe Experience Platform を使用して、電子メールでプロモーション オファーを送信します。
+あなたの会社が、米国の顧客に月次サブスクリプション ベースのサービスを提供していると仮定します。 今後 8 日以内にサブスクリプションの更新が予定されているが、サブスクリプションをまだ更新していない顧客を特定します。 これらの顧客を維持するために、Adobe Experience Platform を使って、メールでキャンペーン情報を送信します。
 
 この例では、メールのプロモーション キャンペーンを 1 回実行します。 この記事では、キャンペーンを複数回実行するユース ケースについては説明しません。
 
@@ -93,7 +93,7 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 これで、[セグメントをオンデマンドでエクスポート](export-destinations.md#run-exports-on-demand) できるようになりました。 エクスポートは、[スケジュールされた更新](system.md) ごとに実行されます。
 
 > [!NOTE]
-> エクスポートされたセグメントのレコード数が、Adobe Campaign Standard ライセンスの許可された制限内にあることを確認してください。
+> エクスポートされたセグメントのレコード数が、ご利用の Adobe Campaign Standard のライセンスの許容範囲内であることを確認してください。
 
 エクスポートされたデータは、上記で構成した Azure Blob Storage コンテナーに格納されます。 次のフォルダー パスがコンテナーに自動的に作成されます:
 
@@ -105,29 +105,29 @@ Adobe Experience Platform で対象者に関するインサイトのセグメン
 
 例: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Adobe Experience Platform でのエクスペリエンス データ モデル (XDM) の定義
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Adobe Experience Platform でエクスペリエンス データモデル (XDM) を定義する
 
-対象者に関するインサイトからエクスポートされたデータを Adobe Experience Platform 内で使用する前に、エクスペリエンス データ モデル スキーマを定義し、[リアルタイム顧客プロファイルのデータを構成](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) する必要があります。
+対象ユーザーインサイトからエクスポートしたデータを Adobe Experience Platform で使用する前に、エクスペリエンス データモデルのスキーマを定義し、[リアルタイム顧客プロファイルのデータを構成する](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials)必要があります。
 
 [XDM とは何か](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) を学び、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema) について理解します。
 
-## <a name="import-data-into-adobe-experience-platform"></a>Adobe Experience Platform にデータをインポート
+## <a name="import-data-into-adobe-experience-platform"></a>データを Adobe Experience Platform にインポートする
 
-すべてが整ったので、準備した対象ユーザー データを対象者に関するインサイトから Adobe Experience Platform にインポートする必要があります。
+以上ですべての準備が完了ですが、準備した対象ユーザーのデータを対象ユーザーインサイトから Adobe Experience Platform にインポートする必要があります。
 
 まず、[Azure Blob Storage のソース接続を作成](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started) します。    
 
-ソース接続を定義した後、クラウド ストレージ バッチ接続の [データフローを構成](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) して、対象者に関するインサイトから Adobe Experience Platform にセグメント出力をインポートします。
+ソース接続を定義した後、対象ユーザーインサイトのセグメント出力を Adobe Experience Platform にインポートするために、クラウドストレージのバッチ接続用の[データフローを構成](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials)します。
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standard での対象ユーザーの作成
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standard で対象ユーザーを作成する
 
-このキャンペーンのメールを送信するには、Adobe Campaign Standard を使用します。 データを Adobe Experience Platform にインポートした後、Adobe Experience Platform のデータを使用して、Adobe Campaign Standard で[対象ユーザーを作成](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) する必要があります。
+このキャンペーンのメールを送信するには、Adobe Campaign Standard を使用します。 Adobe Experience Platform にデータをインポートした後、Adobe Experience Platform のデータを使って Adobe Campaign Standard に[対象ユーザーを作成する](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission)必要があります。
 
 
-Adobe Campaign Standard [セグメント ビルダーを使用](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) して、Adobe Experience Platform のデータに基づいて対象ユーザーを定義する方法を説明します。
+Adobe Campaign Standard の[セグメント ビルダーを使って](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html)、Adobe Experience Platform のデータに基づいてオーディエンスを定義する方法を説明します。
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Adobe Campaign Standard を使用したメールの作成と送信
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Adobe Campaign Standard を使用してメールを作成して送信する
 
 メール コンテンツを作成し、メールを [テストおよび送信](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) します。
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standard からの更新キャンペーンを含むサンプル メール。":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standard からの更新オファーを含むサンプル メール。":::

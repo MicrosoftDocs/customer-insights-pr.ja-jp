@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554027"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029405"
 ---
 # <a name="customer-profiles-search--filter-index"></a>顧客プロファイル: 検索とフィルターのインデックス
 
@@ -58,9 +58,9 @@ ms.locfileid: "6554027"
 
 3. 設定を適用する準備ができたら **実行** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-**顧客** ページに移動して、顧客プロファイルを検索するか、インデックス付きフィールドを使用してすべての顧客プロファイルのサブセットを表示します。
+[統一されたプロファイルのページ](customer-profiles.md)では、プロファイルを検索したり、インデックス付きのフィールドを使ってすべての統合プロファイルのサブセットを表示します。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554624"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032810"
 ---
 # <a name="customer-profiles"></a>顧客プロファイル
 
@@ -67,9 +67,9 @@ Customer Profile エンティティ フィールドで顧客をフィルタリ�
 
 **顧客に戻る** を選択して、顧客検索ページに戻ります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[データソースをさらに追加する](data-sources.md) または [顧客セグメントを作成する](segments.md)。
+[データソースの追加](data-sources.md)、[統一されたプロファイルを充実させる](enrichment-hub.md)、[セグメントの作成](segments.md)で他のアプリケーションで統一されたプロファイルを使用します。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
