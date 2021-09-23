@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035969"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465211"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
@@ -26,6 +26,15 @@ ms.locfileid: "7035969"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="august-2021-updates"></a>2021 年 8 月の更新
+
+2021 年 7 月と 8 月の更新には、新機能、パフォーマンスのアップグレード、およびバグ修正が含まれています。
+
+### <a name="extensibility"></a>拡張性
+
+- **セグメントを Klaviyo にエクスポート**: [Klaviyoをはじめとする様々なエクスポート先](export-klaviyo.md)に対応します。 Klaviyo では、セグメントをエクスポートした、キャンペーンの作成や、メール マーケティングの実施、特定の顧客グループの利用ができるようになりました。 
+
 
 ## <a name="june-2021-updates"></a>2021 年 6 月の更新プログラム
 

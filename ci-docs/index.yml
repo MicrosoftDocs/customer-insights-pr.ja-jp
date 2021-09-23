@@ -7,12 +7,12 @@ metadata:
   ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
+  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036563"
+  ms.lasthandoff: 09/17/2021
+  ms.locfileid: "7498603"
 title: Dynamics 365 Customer Insights のドキュメント
 summary: Customer Insights の機能や特徴を把握するために役立つリソースをご紹介します。
 landingContent:
@@ -26,16 +26,16 @@ landingContent:
       url: /dynamics365-release-plan/
     - text: CDP の検出
       url: https://dynamics.microsoft.com/ai/customer-insights/
-- title: 対象者に関するインサイトの利用を開始する
+- title: Customer Insights を使用する
   linkLists:
   - linkListType: get-started
     links:
     - text: 試用版へのサインアップ
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: 新機能
+    - text: 対象ユーザー インサイトの新機能
       url: audience-insights/whats-new-audience-insights.md
-    - text: 対象者に関するインサイトのドキュメント
-      url: audience-insights/index.yml
+    - text: エンゲージメント インサイトの新機能
+      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: 連絡する
   linkLists:
   - linkListType: overview
@@ -46,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: 問題の報告
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: 対象者に関するインサイトのチュートリアル
+- title: 機能間でデータを共有する
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
-    - text: 新しい環境の作成
-      url: audience-insights/home.md
-    - text: 統合型顧客プロファイルを作成する
-      url: /learn/modules/unified-customer-profile/
-    - text: アプリで作業する
-      url: /learn/modules/working-with-customer-insights/
+    - text: 機能間のリンクを作成する
+      url: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - text: レポートで使用するセグメントを作成する
+      url: engagement-insights/integrate-audience-insights-segments.md
+    - text: プロファイル プロパティを利用したインタラクティブな解析
+      url: engagement-insights/curate-dimensions.md
 - title: 対象者に関するインサイトのデータをエクスポートする
   linkLists:
   - linkListType: how-to-guide

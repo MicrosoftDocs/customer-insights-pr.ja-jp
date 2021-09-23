@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: 新機能と更新された機能
       href: audience-insights/whats-new-audience-insights.md
-    - name: 新しい環境を作成する
-      href: audience-insights/get-started-paid.md
+    - name: 開始する
+      items:
+        - name: クイック スタート ガイド
+          href: audience-insights/get-started.md
+        - name: 新しい環境を作成する
+          href: audience-insights/get-started-paid.md
+        - name: 対象ユーザーの分析情報を探る
+          href: audience-insights/home.md
     - name: モジュールの学習
       items:
         - name: データの取り込み
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: 拡張住所
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Azure Maps でエンリッチする
+          href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies を利用して強化する
           href: audience-insights/enrichment-here.md
         - name: Leadspace で充実させる
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API リファレンス
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: サービス制限
-      href: audience-insights/service-limits.md
-    - name: GDPR の下での DSR リクエスト
-      href: audience-insights/gdpr.md
-- name: エンゲージメント インサイト (プレビュー)
+- name: エンゲージメント分析情報 (プレビュー)
   items:
     - name: ヘルプ ハブ
       href: engagement-insights/index.yml
     - name: 機能の概要
       href: engagement-insights/overview.md
-    - name: 無料試用版
-      href: 'https://pi.dynamics.com/'
     - name: 開始する
       items:
-        - name: 開始する
+        - name: クイック スタート ガイド
           href: engagement-insights/get-started.md
         - name: ワークスペースを作成する
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: 環境とワークスペースの管理
           href: engagement-insights/manage-environments-workspaces.md
-        - name: 接続の構成
-          href: engagement-insights/configure-connections.md
         - name: Cookie とユーザーの同意の管理
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: 個人データの削除とエクスポート
-          href: engagement-insights/delete-export-personal-data.md
     - name: 地域別の提供状況
       href: engagement-insights/regional-availability.md
-    - name: サービス制限
-      href: engagement-insights/quotas.md
 - name: 対象ユーザーとエンゲージメントの分析情報を統合する
   items:
     - name: エンゲージメント インサイトを対象ユーザーインサイトとリンクする
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: 人口統計ディメンションを使用して行動データを分割する
       href: engagement-insights/curate-dimensions.md
+- name: サービス制限
+  href: service-limits.md
+- name: DSR の権利と要求
+  href: dsr-rights-requests.md
 - name: サポートを受ける
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

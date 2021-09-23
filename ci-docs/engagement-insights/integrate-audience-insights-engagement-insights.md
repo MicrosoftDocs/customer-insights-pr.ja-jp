@@ -1,19 +1,19 @@
 ---
 title: 対象ユーザー インサイトとエンゲージメント インサイトの間にリンクを作成する
 description: 対象者インサイトとエンゲージメント インサイトの間にアクティブなリンクを作成して、データの双方向共有を可能にします。
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461019"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487113"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>対象ユーザー インサイトとエンゲージメント インサイトの間にリンクを作成する
 
@@ -26,14 +26,14 @@ ms.locfileid: "7461019"
 ## <a name="prerequisites"></a>前提条件
 
 - 対象ユーザー インサイトのプロファイルは、ご利用の Azure Data Lake Storage アカウント、または [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; のマネージド データレイクに保存する必要があります。 
-
+- ご利用の対象ユーザー インサイト環境には、関連する Dataverse 環境が必要です。 また、その環境でもデータの保存に Dataverse を使用している場合は、対象ユーザー インサイトの **データ共有を有効にする** にチェックを入れてください。 詳細情報については、[対象ユーザー インサイトでの有料環境の作成と構成](../audience-insights/get-started-paid.md)を参照してください。
 - エンゲージメント インサイトと対象ユーザーインサイト環境の両方に管理者権限が必要です。
-
 - リンク先の環境は同一の地域である必要があります。
 
 > [!NOTE]
-> - 対象ユーザーインサイトのサブスクリプションが試用版で、対象ユーザーインサイトが社内で管理している Data Lake を使用している場合は、[pirequest@microsoft.com](mailto:pirequest@microsoft.com) にお問い合わせください。 
-> - 対象ユーザー インサイト環境で独自の Azure Data Lake Storage を使用してデータを保存する場合は、ストレージ アカウントにエンゲージメント インサイトの Azure サービス プリンシパルを追加する必要があります。 詳しくは、[対象ユーザー インサイトの Azure サービス プリンシパルで Azure Data Lake Storage アカウントに接続する](../audience-insights/connect-service-principal.md) を参照してください。 また、対象ユーザーインサイト環境には、関連する [Dataverse 環境](../audience-insights/get-started-paid.md)が必要です。 
+> - 対象ユーザー インサイトのサブスクリプションが、対象ユーザー インサイトが社内で管理している Data Lake を使用した試用版の場合は、[pirequest@microsoft.com](mailto:pirequest@microsoft.com) までお問い合わせください。 
+> - 対象ユーザー インサイト環境で独自の Azure Data Lake Storage を使用してデータを保存する場合は、ストレージ アカウントにエンゲージメント インサイトの Azure サービス プリンシパルを追加する必要があります。 詳しくは、[対象ユーザー インサイトの Azure サービス プリンシパルで Azure Data Lake Storage アカウントに接続する](../audience-insights/connect-service-principal.md) を参照してください。 
+
 
 ## <a name="create-an-environment-link"></a>環境のリンクを作成する
 
@@ -75,6 +75,7 @@ ms.locfileid: "7461019"
 
    > [!IMPORTANT]
    > このステップでユーザーを明示的に追加しない場合、データはエンゲージメント インサイトでユーザーから非表示になります。
+   > 対象ユーザー インサイトのセグメントがエンゲージメント インサイトに表示するには、まず[マージとダウンストリームのプロセスを実行する](../audience-insights/merge-entities.md)必要があります。 ダウンストリームのプロセスでは、対象ユーザー インサイトのセグメントをエンゲージメント インサイトと共有するための固有のテーブルを生成することが重要です。 (システムの更新がスケジュールされている場合、自動的にダウンストリームのプロセスが含まれます。)
 
 1. 選択項目を確認し、**完了** を選択します。
 

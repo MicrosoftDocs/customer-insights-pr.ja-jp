@@ -1,7 +1,7 @@
 ---
 title: サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 description: Azure サービス プリンシパルを使用して、独自の Data Lake に接続します。
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461154"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483531"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 ここでは、ストレージ アカウントキーの代わりに Azure サービス プリンシパルを使用して、Dynamics 365 Customer Insights と Azure Data Lake Storage のアカウントを接続する方法について説明します。 
 
-サービス プリンシパルを使用して、[データソースとして Common Data Model フォルダを安全に追加・編集](connect-common-data-model.md)したり、[環境を作成・更新](get-started-paid.md)したりすることができます。<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+サービス プリンシパルを使用して、[データソースとして Common Data Model フォルダを安全に追加・編集](connect-common-data-model.md)したり、[環境を作成・更新](get-started-paid.md)したりすることができます。
 
 > [!IMPORTANT]
-> - 使用する Data Lake Storage のアカウント<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> サービス プリンシパルは[階層名前空間が有効](/azure/storage/blobs/data-lake-storage-namespace)になっている必要があります。
+> - サービス プリンシパルを使用する Data Lake のストレージ アカウントには、[階層型名前空間を有効化する](/azure/storage/blobs/data-lake-storage-namespace)必要があります。
 > - サービス プリンシパルを作成するには、Azure サブスクリプションに対する管理者のアクセス許可が必要です。
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Customer Insights の Azure サービス プリンシパルを作成する
@@ -38,7 +38,7 @@ Azure サービスを使用する自動ツールは、常に制限されたア�
 
 3. **管理** で、**エンタープライズ アプリケーション** を選択します。
 
-4. マイクロソフトを検索します<!--note from editor: Via Microsoft Writing Style Guide.--> アプリケーション ID:
+4. Microsoft のアプリケーション ID を検索します:
    - 対象ユーザー インサイト: `Dynamics 365 AI for Customer Insights` という名前の `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff`
    - エンゲージメント インサイト: `Dynamics 365 AI for Customer Insights engagement insights` という名前の `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd`
 
@@ -49,23 +49,23 @@ Azure サービスを使用する自動ツールは、常に制限されたア�
 6. 結果が返されない場合は、新しいサービス プリンシパルを作成します。
 
 >[!NOTE]
->Dynamics 365 Customer Insights の能力をフルに活用するためには、両方のアプリをサービス プリンシパルに追加することをお勧めします。<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Dynamics 365 Customer Insights の能力をフルに活用するためには、両方のアプリをサービス プリンシパルに追加することをお勧めします。
 
 ### <a name="create-a-new-service-principal"></a>新しいサービス プリンシパルを作成する
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. 最新の Azure Active Directory PowerShell for Graph をインストールします。 詳細については、[Azure Active Directory PowerShell for Graph のインストール](/powershell/azure/active-directory/install-adv2)にアクセスしてください。
 
-   1. PC で、キーボードの Windows キーを選択し、**Windows PowerShell** を検索し、**管理者として実行** を選択します。<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. PC で、キーボードの Windows キーを選択し、**Windows PowerShell** を検索し、**管理者として実行** を選択します。
    
    1. 開いた PowerShell ウィンドウで、`Install-Module AzureAD` を入力します。
 
 2. Azure AD PowerShell モジュールで Customer Insights のサービス プリンシパルを作成します。
 
-   1. PowerShell ウィンドウで、`Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure` を入力します。 *"[ご利用のテナント ID]"* を置換える<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> サービス プリンシパルを作成するテナントの実際の ID を使用します。 環境名パラメーター `AzureEnvironmentName` は任意です。
+   1. PowerShell ウィンドウで、`Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure` を入力します。 *テナント ID* を、サービス プリンシパルを作成するテナントの実際の ID に置き換えます。 環境名パラメーター `AzureEnvironmentName` は任意です。
   
    1. `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` を入力します。 このコマンドは、選択したテナントの対象者に関するインサイトにサービス プリンシパルを作成します。 
 
-   1. `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"` を入力します。 このコマンドは、エンゲージメント インサイトのサービス プリンシパルを作成します<!--note from editor: Edit okay?--> これを選択したテナントで実施します。
+   1. `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"` を入力します。 このコマンドは、選択したテナントにエンゲージメント インサイトのサービス プリンシパルを作成します。
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>ストレージ アカウントにアクセスするためにアクセス許可をサービス プリンシパルに付与する
 
@@ -90,7 +90,7 @@ Azure portal に移動して、対象者に関するインサイトで使用す�
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>対象者に関するインサイトのストレージ アカウント添付ファイルに Azure リソース ID または Azure サブスクリプションの詳細を入力します
 
-次の処理を行うことができます<!--note from editor: Edit suggested only if this section is optional.--> 対象ユーザー インサイトで Data Lake Storage アカウントをアタッチして、[出力データを保存](manage-environments.md)したり、[データソースとして使用](connect-common-data-service-lake.md)したりできます。 このオプションを使用すると、リソース ベースのアプローチとサブスクリプション ベースのアプローチのどちらかを選択できます。 選択したアプローチに応じて、次のセクションのいずれかの手順に従います。<!--note from editor: Suggested.-->
+対象ユーザーの分析情報に Data Lake Storage アカウントをアタッチして、[出力データの保存](manage-environments.md)や、[データ ソースとしての使用](connect-common-data-service-lake.md)ができます。 このオプションを使用すると、リソース ベースのアプローチとサブスクリプション ベースのアプローチのどちらかを選択できます。 選択したアプローチに応じて、次のセクションのいずれかの手順に従います。
 
 ### <a name="resource-based-storage-account-connection"></a>リソースベースのストレージ アカウント接続
 

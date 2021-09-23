@@ -1,20 +1,20 @@
 ---
 title: 顧客活動
-description: 顧客活動を定義し、顧客のタイムラインで表示します。
-ms.date: 04/07/2021
+description: 顧客の活動を定義し、顧客プロファイルのタイムラインでこれらを表示します。
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033637"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494417"
 ---
 # <a name="customer-activities"></a>顧客活動
 
@@ -60,12 +60,15 @@ Dynamics 365 Customer Insights では、[さまざまなデータ ソース](dat
       - **追加情報**: この活動に関連する情報を含むフィールド。
       - **アイコン**: この活動の種類を最もよく表すアイコン。
       - **Web アドレス**: この活動に関する情報を含む URL を持つフィールド。 たとえば、このアクティビティのソースとなるトランザクション システムです。 この URL は、データ ソースの任意のフィールドにすることも、Power Query 変換を使用して新たなフィールドとして構築することもできます。 URL データは、*Unified Activity* エンティティに保存され、[API](apis.md) を使用してダウンストリームで使用できます。
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Unified Activity エンティティで顧客活動データを指定する。":::
+
+   - **タイムラインに表示**
+      - この活動を顧客プロファイルのタイムライン ビューに表示するかどうかを選択します。 **はい** を選択し、タイムラインに活動を表示するか、**いいえ** を選択して非表示します。
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Unified Activity エンティティで顧客活動データを指定する。":::
 
 1. **次へ** を選択して、次の手順に移動します。 **終了して確認** を選択して、活動の種類を **その他** に設定した状態で活動を保存できます。 
 
-1. **活動の種類** の手順で活動の種類を選択し、オプションで Customer Insights の他の領域で使用するために活動の種類の一部をセマンティックにマップするかどうかを選択します。 現在、フィールドのマッピングに同意した後、*サブスクリプション* および *SalesOrderLine* の活動の種類をセマンティックにマッピングできます。 活動の種類が新しい活動に関連しない場合は、カスタム活動の種類に *その他* または *新規作成* を選択できます。
+1. **活動の種類** の手順で活動の種類を選択し、オプションで Customer Insights の他の領域で使用するために活動の種類の一部をセマンティックにマップするかどうかを選択します。 現在、活動タイプ: *フィードバック*、*ロイヤリティ*、*SalesOrder*、*SalesOrderLine*、*サブスクリプション* はフィールドのマッピングに合意した後は、セマンティックにマッピングすることができます。 活動の種類が新しい活動に関連しない場合は、カスタム活動の種類に *その他* または *新規作成* を選択できます。
 
 1. **次へ** を選択して、次の手順に移動します。 
 

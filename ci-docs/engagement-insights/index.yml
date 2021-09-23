@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Dynamics 365 Customer Insights エンゲージメント インサイト (プレビュー版) の機能
+title: Dynamics 365 Customer Insights におけるエンゲージメント分析情報の機能 (プレビュー)
 summary: Web サイトのデータを収集します。 サイト全体での顧客とのやり取りと利用状況をインタラクティブに把握することができます。 エンゲージメントの分析情報と対象ユーザーの分析情報の緊密な統合を利用して、顧客プロファイル レポートによるリアルタイムの行動分析を強化します。 顧客プロファイルを web 上のアクティビティで充実させることで、関連する顧客データと合わせてリアルタイムの行動データを取得します。 ビジネスを変革して、顧客データから直ちに価値を引き出します。
 metadata:
-  title: エンゲージメント インサイト (プレビュー版) のドキュメント
+  title: エンゲージメント インサイト (プレビュー) のドキュメント
   description: エンゲージメントの分析情報で使用する主要なリンクでハブを支援します。
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036244"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494190"
 landingContent:
 - title: 詳細
   linkLists:
   - linkListType: overview
     links:
-    - text: 機能の概要
+    - text: 機能の利点
       url: overview.md
-    - text: 用語と概念
+    - text: 用語集
       url: glossary.md
-    - text: エンゲージメント インサイトを検出する
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: 新機能と更新された機能
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: オンボード
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Web サイトをインストルメント化する
       url: instrument-website.md
-- title: 'レポート '
+- title: レポートの表示とフィルタ
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: レポートの表示
       url: view-reports.md
-    - text: カスタム レポートを作成する
-      url: custom-reports.md
     - text: 統合プロファイル レポートの表示
       url: profile-reports.md
-    - text: じょうご レポートを作成する
-      url: funnel-reports.md
-- title: イベント
+    - text: オーディエンス セグメントを使用してレポートをフィルターする
+      url: integrate-audience-insights-segments.md
+- title: 分析
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: じょうご レポートを作成する
+      url: funnel-reports.md
+    - text: 行動データを分析する
+      url: curate-dimensions.md
+    - text: カスタム レポートを作成する
+      url: custom-reports.md
     - text: 絞り込まれたイベントを作成する
       url: refined-events.md
     - text: イベントをエクスポート
       url: export-events.md
-    - text: 個人データの削除とエクスポート
-      url: delete-export-personal-data.md
 - title: 開発者リソース
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: 環境とワークスペースの管理
       url: manage-environments-workspaces.md
     - text: 対象者分析情報に接続する
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Cookie とユーザーの同意の管理
       url: user-consent-storage.md
+    - text: 個人データの削除とエクスポート
+      url: delete-export-personal-data.md
+    - text: サービス制限
+      url: ../service-limits.md

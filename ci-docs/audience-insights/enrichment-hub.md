@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032534"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469994"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -29,6 +29,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **検出** タブでは、次のような拡充機能があります :
 
+- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
 - Microsoft が提供する [ブランド](enrichment-microsoft.md)
 - Microsoft が提供する [関心](enrichment-microsoft.md)
 - Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md)
@@ -62,5 +63,17 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 ## <a name="multiple-enrichments-of-the-same-type"></a>同じ種類の複数のエンリッチメント
 
 強化されるエンティティは、エンリッチメントの構成中に指定され、プロファイルのサブセットのみを強化できます。 たとえば、特定のセグメントのデータのみをエンリッチします。 同じ種類の複数のエンリッチメントを構成し、同じ接続を再利用できます。 一部のエンリッチメントには、作成できる同じ種類のエンリッチメントの数に制限があります。 制限と現在の使用状況は **エンリッチメント** ページで確認できます。
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>エンリッチメント プロセスの進捗状況を確認する
+
+エンリッチメントの処理に関する詳細 (更新中または更新完了後のステータスや潜在的な問題など) を確認できます。 エンリッチメントを更新するためにどのようなプロセスがあり、そのプロセスの実行にどのくらいの時間がかかったのかを理解する。 エンリッチメントの状態は、Experian、Leadspace、HERE Technologies、SFTP Import、Azure Maps で確認できます。
+
+エンリッチメントの状態を確認する方法
+
+1. **データ** > **エンリッチメント** に移動します。 
+1. **マイ エンリッチメント** タブで、エンリッチメントの状態を選択してサイド ペインを開きます。 
+1. **進捗状況の詳細** ペインで、**エンリッチメント** セクションを展開します。 
+1. 進行状況を確認するエンリッチメントの配下で、**詳細を表示する** を選択します。 
+1. **タスクの詳細** ペインで、**詳細を表示する** を選択してエンリッチメントとその状態の更新に関連するプロセスを確認します。 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

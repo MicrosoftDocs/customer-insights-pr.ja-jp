@@ -4,17 +4,17 @@ description: Android SDK をパーソナライズして実行する方法を学�
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036924"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494281"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Android SDK の利用を開始する
 
@@ -35,17 +35,38 @@ ms.locfileid: "7036924"
 
 - インジェスト キー (取得するには、以下の手順を参照してください)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>ステップ 1: SDK をアプリケーションに統合する
+## <a name="integrate-the-sdk-into-your-application"></a>SDK をアプリケーションに統合する
 プロセスを開始するには、作業するワークスペースを選択し、Android モバイル プラットフォームを選択して、Android SDK をダウンロードします。
 
 - 左側のナビゲーション ペインのワークスペース スイッチャーを使用して、ワークスペースを選択します。
 
 - 既存のワークスペースがない場合は、**新しいワークスペース** を選択し、手順に従って [新しいワークスペース](create-workspace.md) を作成します。
 
-## <a name="step-2-configure-the-sdk"></a>ステップ 2: SDK を構成する
+- ワークスペースを作成したら、**管理者** > **ワークスペース** に移動し、**インストール ガイド** を選択します。 
 
-1. ワークスペースを作成したら、**管理者** > **ワークスペース** に移動し、**インストール ガイド** を選択します。 
+## <a name="configure-the-sdk"></a>SDK を構成する
 
+SDK をダウンロードしたら、Android Studio で SDK を操作して、イベントを有効にして定義できます。 これには 2 つの方法があります:
+### <a name="option-1-using-jitpack-recommended"></a>オプション1: JitPack の使用 (推奨)
+1. JitPack リポジトリをルートに追加します: `build.gradle`
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. 依存関係を追加します:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>オプション 2: ダウンロード リンクを使用する
 1. [エンゲージメント分析情報の Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) をダウンロードし、`libs` フォルダに `eiandroidsdk-debug.aar` ファイルを配置します。
 
 1. プロジェクト レベルの `build.gradle` ファイルを開き、次のスニペットを追加します:
@@ -62,7 +83,17 @@ ms.locfileid: "7036924"
     }
     ```
 
-1. `manifests` フォルダの下にある、`AndroidManifest.xml` ファイルを用いて、エンゲージメント分析情報の SDK 構成を設定します。 
+1. `manifests` フォルダ配下にある `AndroidManifest.xml` ファイルに、ネットワークとインターネットの許可を追加します。 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. `AndroidManifest.xml` ファイルでエンゲージメント インサイト SDK の設定を行います。 
+
+## <a name="enable-auto-instrumentation"></a>自動インストルメンテーションを有効にする
 1. **インストール ガイド** から、XML スニペットをコピーします。 `Your-Ingestion-Key` は自動的に入力されます。
 
    > [!NOTE]
@@ -85,7 +116,7 @@ ms.locfileid: "7036924"
    </application>
    ```
 
-1. 上部の `autoCapture` フィールドを `true` または `false` に設定し、`View` イベントの自動取り込みを有効または無効にします。
+1. 上部の `autoCapture` フィールドを `true` または `false` に設定し、`View` イベントの自動取り込みを有効または無効にします。 現在 `Action` イベントは手動で追加する必要があります。
 
 1. (オプション) その他の構成には、エンドポイント コレクター URL の設定が含まれます。 それらは、`AndroidManifest.xml` のインジェスト キー メタデータの下に追加できます。
     ```xml
@@ -94,9 +125,9 @@ ms.locfileid: "7036924"
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>ステップ 3: MainActivity から SDK を初期化する 
+## <a name="implement-custom-events"></a>カスタム イベントの実装
 
-SDK を初期化した後、MainActivity 環境でイベントとそのプロパティを操作できます。
+SDK を初期化した後、`MainActivity`  環境でイベントとそのプロパティを操作できます。
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>イベントのユーザー詳細を設定する (オプション)
+## <a name="set-user-details-for-your-event-optional"></a>イベントのユーザー詳細を設定する (オプション)
 
 SDK を使用すると、すべてのイベントで送信できるユーザー情報を定義できます。 `Analytics` レベルの `setUser(user: User)` API を呼び出すことにより、ユーザー情報を指定できます。
 

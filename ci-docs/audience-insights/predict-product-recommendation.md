@@ -1,20 +1,20 @@
 ---
 title: 製品レコメンデーションの予測
 description: 顧客が購入またはやり取りする可能性のある製品を予測します。
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034962"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494545"
 ---
 # <a name="product-recommendation-prediction-preview"></a>製品レコメンデーションの予測 (プレビュー)
 
@@ -89,23 +89,24 @@ ms.locfileid: "7034962"
 
 ### <a name="add-required-data"></a>必須データの追加
 
-1. **購入履歴** に対して **データを追加** を選択し、[前提条件](#prerequisites)に記載されているように、トランザクション/購入履歴情報を提供するエンティティを選択します。
+1. **データの追加** を選択し、サイド ペインで必要な取引や購入履歴の情報を含むアクティビティ タイプを選択します。
 
-1. セマンティック フィールドを購入履歴エンティティ内の属性にマップし、**次へ** を選択します。 フィールドの説明については、[前提条件](#prerequisites)を参照してください。
-   > [!div class="mx-imgBorder"]
-   > ![エンティティの関連付けを定義する。](media/product-recommendation-purchasehistorymapping.PNG "選択した購入履歴エンティティのフィールドにマッピングされているセマンティック属性を示す購入履歴ページ")
+1. **活動の選択** 配下で、 選択されたアクティビティの中から、計算の対象とする具体的な活動を選択します。
 
-1. フィールドに値が入力されていない場合は、購入履歴エンティティから *顧客* エンティティへの関係を構成します。
-    1. **購入履歴エンティティ** を選択します。
-    1. 購入履歴エンティティで顧客を識別する **フィールド** を選択します。 これは、*顧客* エンティティの主要な顧客 ID に関連している必要があります。
-    1. 主要な顧客エンティティと一致する **顧客エンティティ** を選択します。
-    1. 関係性を説明する名前を入力します。
-       > [!div class="mx-imgBorder"]
-       > ![顧客との関係の作成を示す購入履歴ページ。](media/model-purchase-join.png "顧客との関係の作成を示す購入履歴ページ")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="セマンティック タイプの配下で特定の活動を選択した状態のを示すサイド ペイン。":::
+
+1. アクティビティをセマンティック タイプにマッピングしていない場合は、**編集** を選択してマッピングをします。 セマンティック アクティビティをマッピングするガイド付きエクスペリエンスが開きます。 選択した活動タイプの対応するフィールドにデータをマッピングします。
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="ページ設定の活動タイプ。":::
+
+1. 活動を対応するセマンティック タイプにマッピングした後、**次へ** を選択して続行します 
+ 
+1. セマンティックの属性を、モデルの実行に必要なフィールドにマッピングします。
 
 1. **保存** を選択します。
 
 1. **次へ** を選択します。
+
 
 ### <a name="configure-product-filters"></a>製品フィルターの構成
 

@@ -4,17 +4,17 @@ description: ワークスペースと環境の作成、名前変更、削除を�
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034048"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486041"
 ---
 # <a name="manage-environments-and-workspaces"></a>環境とワークスペースの管理
 
@@ -85,13 +85,11 @@ ms.locfileid: "7034048"
 
 1. **メンバーの追加** を選択してアクセスを許可し、[役割を割り当て](user-roles.md)ます。 現在、**ワークスペース管理者** のみが使用できます。
 
-1. [対象ユーザーの分析情報に接続](configure-connections.md) を設定した場合、**プロファイルデータへのアクセスを許可**、メンバーが [ユーザー プロファイル](profile-reports.md)に基づくレポートを閲覧できるようになります。
-
 1. **メンバーの追加** を選択し、ワークスペースに追加します。
 
 ## <a name="manage-an-environment"></a>環境の管理
 
-環境の管理者は、左側のナビゲーション ペインから環境にアクセスできます。 環境設定、他の環境管理者、ワークスペース、[対象ユーザー分析情報への接続](configure-connections.md)を構成できます。 管理センターの異なる領域間を移動するには、タブを選択します。
+環境の管理者は、左側のナビゲーション ペインから環境にアクセスできます。 環境設定、その他の環境管理者、ワークスペースを構成できます。 管理センターの異なる領域間を移動するには、タブを選択します。
 
 :::image type="content" source="media/New-environment.png" alt-text="環境の管理センター。":::
 
@@ -123,8 +121,6 @@ ms.locfileid: "7034048"
 
 1. **メンバーの追加** を選択してメンバーを更新し、[役割を割り当て](user-roles.md)ます。 現在、**環境管理者** のみが使用できます。
 
-1. [対象ユーザーの分析情報に接続](configure-connections.md) を設定した場合、**プロファイルデータへのアクセスを許可**、メンバーが [ユーザー プロファイル](profile-reports.md)に基づくレポートを閲覧できるようになります。
-
 1. **メンバーの追加** を選択し、環境に追加します。
 
 ### <a name="delete-an-environment"></a>環境の削除
@@ -143,7 +139,7 @@ ms.locfileid: "7034048"
 
 対象ユーザー分析情報への接続を確立することで、統一された顧客プロファイルに基づいたエンゲージメント分析情報のレポートを見ることができます。 
 
-詳細については、 [接続の構成](configure-connections.md) を参照してください。
+詳細情報については、[対象ユーザー インサイトとエンゲージメント インサイトの間にリンクを作成する](integrate-audience-insights-engagement-insights.md)を参照してください。
 
 ## <a name="manage-personal-data"></a>個人データの管理
 
