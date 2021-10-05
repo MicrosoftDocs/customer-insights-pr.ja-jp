@@ -4,27 +4,27 @@ description: SDKの情報や使用方法を確認できます。
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036289"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558752"
 ---
 # <a name="developer-resources-overview"></a>開発者リソースの概要
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-この記事では、クイック リファレンスとして利用可能なすべてのコード スニペットとサンプルを一覧表示しています。 プラットフォームのイベント送信者のコードを取得し、チュートリアルに従ってください。 
+この記事では、開発者が Dynamics 365 Customer Insights データを共有するために利用できるすべてのソフトウェア開発ツールキット (SDK) コード スニペットとサンプルを一覧表示します。 チュートリアルに従って、プラットフォームに固有のイベントのコードを取得します。
 
 ## <a name="capture-events-from-websites"></a>ウェブサイトからイベントをキャプチャする
 
-- [ウェブサイトにコード スニペットを追加する方法](instrument-website.md)
+- [ウェブサイトのインストルメント化](instrument-website.md)
 - [Web SDK サンプル](websdk-sample.md)
 - [高度な Web SDK のインストルメント化](advanced-SDK-implementation.md)
 

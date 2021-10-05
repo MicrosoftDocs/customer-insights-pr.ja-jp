@@ -1,20 +1,20 @@
 ---
 title: エンティティとエンティティ パスの関連付け
 description: 複数のデータ ソースからエンティティ間の関連付けを作成および管理します。
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035237"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557358"
 ---
 # <a name="relationships-between-entities"></a>エンティティ間の関連付け
 
@@ -93,11 +93,11 @@ ms.locfileid: "7035237"
 - **水平/垂直レイアウトに変更**: エンティティと関連付けの配置を変更します。
 - **編集**: 編集ペインでユーザー定義の関連付けのプロパティを更新し、変更を保存します。
 
-### <a name="relationship-path"></a>リレーションシップ パス
+## <a name="relationship-paths"></a>関連付けパス
 
-リレーションシップ パスは、ソース エンティティとターゲット エンティティの間でリレーションシップに接続されているエンティティを記述します。 統合プロファイル エンティティ以外のエンティティを含むセグメント、またはメジャーを作成し、統一されたプロファイル エンティティに到達する複数のオプションがある場合に使用されます。
+関連付けパスは、ソース エンティティとターゲット エンティティの間の関係で結ばれたエンティティを記述します。 統合プロファイル エンティティ以外のエンティティを含むセグメント、またはメジャーを作成し、統一されたプロファイル エンティティに到達する複数のオプションがある場合に使用されます。 
 
-リレーションシップ パスは、どの関連付けを介してユニファイド プロファイル エンティティにアクセスするかをシステムに通知します。 リレーションシップ パスが異なれば、結果も異なる可能性があります。
+関連付けパスは、統合プロファイル エンティティにどの関連付けでアクセスするかをシステムに通知します。 リレーションシップ パスが異なれば、結果も異なる可能性があります。
 
 エンティティ *eCommerce_eCommercePurchases* は、統合プロファイルの *顧客* エンティティと以下の関係にあります:
 
@@ -105,7 +105,43 @@ ms.locfileid: "7035237"
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > 顧客
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > 顧客 
 
-リレーションシップ パスは、メジャーやセグメントのルールを作成する際に使用できるエンティティを決定します。 一致するレコードがすべてのエンティティの一部である必要があるため、最も長いリレーションシップ パスを持つオプションを選択すると、結果が少なくなる可能性があります。 この例では、顧客は電子商取引 (eCommerce_eCommercePurchases) を通じて販売時点管理 (POS_posPurchases) で商品を購入し、当社のロイヤルティ プログラム (loyaltyScheme_loyCustomers) に参加する必要があります。 1 つ目のオプションを選択した場合、顧客は 1 つの追加されたエンティティに存在するだけでよいため、より多くの結果を得られる可能性があります。
+関連付けパスは、メジャーやセグメントのルールを作成する際に、どのエンティティを使用するかを決定します。 一致するレコードがすべてのエンティティの一部である必要があるため、最も長いリレーションシップ パスを持つオプションを選択すると、結果が少なくなる可能性があります。 この例では、顧客は電子商取引 (eCommerce_eCommercePurchases) を通じて販売時点管理 (POS_posPurchases) で商品を購入し、当社のロイヤルティ プログラム (loyaltyScheme_loyCustomers) に参加する必要があります。 1 つ目のオプションを選択した場合、顧客は 1 つの追加されたエンティティに存在するだけでよいため、より多くの結果を得られる可能性があります。
+
+### <a name="direct-relationship"></a>直接的な関連付け
+
+ソース エンティティーがターゲット エンティティーと 1 つの関連付けだけで関連している場合、その関係は **直接的な関連付け** に分類されます。
+
+たとえば、*eCommerce_eCommercePurchases* という活動エンティティが *ContactId* のみでターゲット エンティティ *eCommerce_eCommerceContacts* のエンティティに接続している場合、これは直接的な関連付けです。
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="ソース エンティティはターゲット エンティティに直接的に接続します。":::
+
+#### <a name="multi-path-relationship"></a>複数パスの関連付け
+
+**マルチパスの関連付け** は、ソース エンティティを複数のターゲット エンティティに接続する特別なタイプの直接的な関連付けです。
+
+たとえば、*eCommerce_eCommercePurchases* という活動エンティティが、*eCommerce_eCommerceContacts* と *loyaltyScheme_loyCustomers* という 2 つのターゲット エンティティに関係している場合、それはマルチパスの関連付けです。
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="ソース エンティティは、マルチホップの関連付けを介して複数のターゲット エンティティに直接的に接続します。":::
+
+### <a name="indirect-relationship"></a>間接的な関連付け
+
+ソース エンティティーがターゲット エンティティーに関連付けられる前に、1 つまたは複数の追加エンティティーに関係する場合、その関係性は **間接的な関連付け** に分類されます。
+
+#### <a name="multi-hop-relationship"></a>複数ホップの関連付け
+
+*マルチホップ関係* は、ソース エンティティとターゲット エンティティを、1 つ以上の他の仲介エンティティを介して接続することができる *間接的な関連付け* です。
+
+たとえば、*eCommerce_eCommercePurchasesWest* という活動エンティティが *eCommerce_eCommercePurchasesEast* という中間エンティティに接続し、さらに *eCommerce_eCommerceContacts* というターゲット エンティティに接続した場合、それはマルチホップの関連付けです。
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="ソース エンティティが、中間エンティティを使用してターゲット エンティティに直接的に接続している。":::
+
+### <a name="multi-hop-multi-path-relationship"></a>複数ホップ、複数パスの関連付け
+
+複数ホップと複数パスの関連付けを一緒に使用して **複数ホップの関連付け、複数パスの関連付け** を作成できます。 この特殊なタイプは、**複数ホップ** と **複数パスの関連付け** の機能を兼ね備えています。 中間エンティティを使用しながら、複数のターゲット エンティティに接続できます。
+
+*eCommerce_eCommercePurchasesWest* という活動エンティティが *eCommerce_eCommercePurchasesEast* という中間エンティティに接続し、さらに *eCommerce_eCommerceContacts* と *loyaltyScheme_loyCustomers* という 2 つのターゲット エンティティに接続した場合、これは複数ホップ、複数パスの関連付けとなります。
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="ソース エンティティは 1 つのターゲット エンティティに直接的に接続し、中間エンティティを介して別のターゲット エンティティに接続します。":::
 
 ## <a name="manage-existing-relationships"></a>既存の関連付けの管理 
 

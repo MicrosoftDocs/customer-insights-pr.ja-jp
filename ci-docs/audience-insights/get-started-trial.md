@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035421"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558829"
 ---
 # <a name="set-up-a-trial-environment"></a>試用版環境の設定 
 
@@ -95,7 +95,7 @@ Dynamics 365 Customer Insights の試用版では、さまざまな機能の主�
 
 - 試用版は既定でで30日間有効です。 ただし、試用版にログイン後、23日目以降は延長できます。
 - 試用期間中、独自の Azure Data Lake Storage アカウントを使用して出力データを保存することはできません。 ただし、Data Lake storage アカウントからデータを取り込むことができます。
-- Customer Insights の試用版開始時に自動的にプロビジョニングされる Dataverse 環境には、最大 3 GB のデータを保存することができます。
+- Customer Insights 試用版を開始すると自動的にプロビジョニングされる Dataverse 環境には、最大 3GB までデータを保存できます。
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>試用版から有料サブスクリプションにデータをコピーする
 

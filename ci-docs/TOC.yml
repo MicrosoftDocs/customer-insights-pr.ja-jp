@@ -242,7 +242,7 @@
   items:
     - name: ヘルプ ハブ
       href: engagement-insights/index.yml
-    - name: 機能の概要
+    - name: エンゲージメント分析情報について
       href: engagement-insights/overview.md
     - name: 開始する
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: 地域別の提供状況
       href: engagement-insights/regional-availability.md
-- name: 対象ユーザーとエンゲージメントの分析情報を統合する
+- name: 機能間でデータを共有する
   items:
     - name: エンゲージメント インサイトを対象ユーザーインサイトとリンクする
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR の権利と要求
   href: dsr-rights-requests.md
-- name: サポートを受ける
-  href: 'https://dynamics.microsoft.com/support/'
