@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 アプリ用顧客カード アドイン
 description: このアドインを使用して、Dynamics 365 アプリに対象者に関するインサイトのデータを表示します。
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032994"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643436"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにインストールされた顧客カード アドインを使用すると、人口統計、インサイト、活動タイムラインの表示を選択することができます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。 
+Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにカスタマー カード アドインをインストールすると、カスタマー プロファイル フィールド、インサイト、およびアクティビティのタイムラインを表示するように選択できます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -28,20 +30,19 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 - Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) 必要があります。
 - 顧客カード アドインのすべての Dynamics 365 ユーザーは、データを表示するために対象者に関するインサイトの [ユーザーとして追加](permissions.md) されている必要があります。
 - データの検索を機能させるには、対象者に関するインサイトの [検索およびフィルター機能を構成](search-filter-index.md) する必要があります。
-- 各アドイン コントロールは、対象者に関するインサイトの特定のデータに依存します:
-  - メジャー制御: [構成済みメジャー](measures.md) が必要です。
-  - インテリジェンス制御: [予測](predictions.md) または [カスタム モデル](custom-models.md) を使用して生成されたデータが必要です。
-  - 人口統計コントロール: 人口統計フィールド (年齢や性別など) は、統合顧客プロファイルで利用できます。
-  - エンリッチメント制御 : 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
-  - タイムライン コントロール: [構成済みアクティビティ](activities.md) が必要です。
+- 各アドイン コントロールは、対象者に関するインサイトの特定のデータに依存します。 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
+  - **メジャー制御**: タイプ顧客属性の[構成されたメジャー](measures.md)が必要です。
+  - **インテリジェンス制御**: [予測](predictions.md)または[カスタム モデル](custom-models.md)を使用して生成されたデータが必要です。
+  - **顧客詳細制御**: プロファイルのすべてのフィールドは、統合された顧客プロファイルで使用できます。
+  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
+  - **連絡先制御**: 連絡先タイプのセマンティック エンティティの定義が必要です。
+  - **タイムライン コントロール**: [構成済みアクティビティ](activities.md)が必要です。
 
 ## <a name="install-the-customer-card-add-in"></a> 顧客カード アドイン のインストール
 
 カスタマー カード アドインは、Dynamics 365 の Customer Engagement アプリのソリューションです。 ソリューションをインストールするには、AppSource に移動し、**Dynamics 顧客カード** を検索します。 [AppSource で顧客カードアドイン](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) を選択して、**今すぐ入手** を選択します。
 
-ソリューションをインストールするには、Dynamics 365 アプリの管理者の資格情報でログインする必要があります。
-
-ソリューションが環境にインストールされるまでに時間がかかる場合があります。
+ソリューションをインストールするには、Dynamics 365 アプリの管理者の資格情報でログインする必要があります。 ソリューションが環境にインストールされるまでに時間がかかる場合があります。
 
 ## <a name="configure-the-customer-card-add-in"></a>顧客カードアドインの構成
 
@@ -50,7 +51,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 1. **Dynamics 365 Customer Insights 顧客カード アドイン (プレビュー)** ソリューションの **表示名** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![表示名の選択。](media/select-display-name.png "表示名の選択")
+   > ![表示名の選択。](media/select-display-name.png "表示名を選択します。")
 
 1. **サインイン** を選択し、Customer Insights の構成に使用する管理者アカウントの資格情報を入力します。
 
@@ -64,7 +65,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
    - 取引先企業とマップするには、取引先企業エンティティの ID と一致する顧客エンティティのフィールドを選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![取引先担当者 ID フィールド。](media/contact-id-field.png "取引先担当者 ID フィールド")
+   > ![取引先担当者 ID フィールド。](media/contact-id-field.png "取引先担当者 ID フィールド。")
 
 1. 設定を保存するには、**構成を保存** を選択します。
 
@@ -73,17 +74,19 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 1. 組織全体で使用するカードに表示されているコンテンツをカスタマイズするユーザーに **Customer Insights カード カスタマイザ** のロールを割り当てます。
 
 ## <a name="add-customer-card-controls-to-forms"></a>フォームに顧客カード コントロールを追加する
-  
+
+シナリオに応じて、**取引先担当者** フォームまたは **取引先企業** フォームのいずれかにコントロールを追加するよう選択できます。 対象者分析情報環境がビジネス アカウント用である場合は、取引先企業フォームにコントロールを追加することをお勧めします。 その場合、以下の手順の「取引先担当者」を「取引先企業」に置き換えてください。
+
 1. 顧客カードコントロールを連絡先フォームに追加するには、**設定** > **カスタマイズ** Dynamics 365 の順に移動します。
 
 1. **システムのカスタマイズ** を選択。
 
 1. **取引先担当者** エンティティを参照し、メニューを展開して、**フォーム** を選択します。
 
-1. 顧客カード管理を追加したい取引先担当者フォームを選択します。
+1. 顧客カード コントロールを追加する先の取引先担当者フォームを選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![取引先担当者フォームを選択する。](media/contact-active-forms.png "取引先担当者フォームを選択する")
+    > ![取引先担当者フォームを選択する。](media/contact-active-forms.png "取引先担当者フォームを選択します。")
 
 1. 人口統計コントロールを追加するには、フォーム エディターで、任意のフィールドを **フィールド エクスプローラー** から人口統計コントロールを配置する場所にドラッグします。
 
@@ -102,7 +105,8 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 1. カスタム コントロールで表示したいものをカスタマイズするには、右上隅の編集ボタンを選択します。
 
 ## <a name="upgrade-customer-card-add-in"></a>顧客カード アドインのアップグレード
-顧客カード アドインは自動的にアップグレードされません。 最新バージョンにアップグレードするには、アドインがインストールされている Dynamics 365 アプリでこの手順に従います。
+
+顧客カード アドインは自動的にアップグレードされません。 最新バージョンにアップグレードするには、アドインがインストールされている Dynamics 365 アプリで次のステップを実行します。
 
 1. Dynamics 365 アプリで、**設定** > **カスタマイズ**、そして **ソリューション** を選択します。
 

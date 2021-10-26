@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032718"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618688"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
@@ -44,6 +44,8 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 1.  **次へ** を選択して、インポートするデータファイルの **パス** および **ファイル名** を入力します。
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="データの場所を入力する際のスクリーンショット。":::
+
+1. **次へ** を選択して、顧客データ セットを選択します。 これは、すべての顧客プロファイルまたはセグメントのいずれかです。
 
 1. **次へ** を選択し、エンリッチメントの名前と出力エンティティの名前を指定します。 
 
@@ -121,8 +123,8 @@ SFTP サーバーにインポートするファイルを含むディレクトリ
 
 **拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、[データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

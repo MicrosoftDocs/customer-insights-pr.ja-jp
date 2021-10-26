@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを SendGrid にエクスポートする
 description: SendGrid への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036107"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617837"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>セグメントを SendGrid にエクスポート (プレビュー)
 
@@ -25,14 +25,14 @@ ms.locfileid: "7036107"
 -   [SendGrid アカウント](https://sendgrid.com/) と対応する管理者資格情報があります。
 -   SendGrid に既存取引先担当者リストと対応する ID があります。 詳細については、[SendGrid - 取引先担当者を管理する](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)を参照してください。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- SendGrid に合計で最大 10 万件のプロファイル。
+- SendGrid には合計で最大 100,000 の顧客プロファイルがあります。
 - SendGrid へのエクスポートはセグメントに制限されています。
-- 最大 10 万件のプロファイルを SendGrid にエクスポートすると、完了するまでに最大で数時間かかる場合があります。 
-- SendGrid にエクスポートできるプロファイルの数は、SendGrid との契約に依存し、制限されています。
+- 最大 100,000 の顧客プロファイルを SendGrid にエクスポートすると、完了に最大で数時間かかる場合があります。 
+- SendGrid にエクスポートできる顧客プロファイルの数は、SendGrid との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-sendgrid"></a>SendGrid への接続を設定する
 
@@ -66,7 +66,7 @@ ms.locfileid: "7036107"
 
 1. **[SendGrid リスト ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** を入力します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 **名**、**姓**、**国/リージョン**、**州**、**市町村**、および **郵便番号** などの、他のオプション フィールドについても同じ手順を繰り返します。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 **名**、**姓**、**国/リージョン**、**州**、**市町村**、および **郵便番号** などの、他のオプション フィールドについても同じ手順を繰り返します。
 
 1. エクスポートするセグメントを選択します。 SendGrid に対しては **合計で 10 万件を超える顧客プロファイルは、エクスポートしないことをお勧めします**。 
 

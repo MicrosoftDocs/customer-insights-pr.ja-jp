@@ -2,8 +2,14 @@
   href: index.yml
 - name: 製品概要
   href: overview.md
-- name: 試用版の作成
-  href: audience-insights/get-started-trial.md
+- name: 無料試用版
+  items:
+    - name: 無料の試用版にサインアップ
+      href: trial-signup.md
+    - name: 試用版に関するよくあるご質問
+      href: trial-FAQ.md
+- name: 有料ライセンスから始める
+  href: paid-license.md
 - name: 環境へのアクセス
   href: 'https://home.ci.ai.dynamics.com/'
 - name: 対象者分析情報
@@ -19,9 +25,11 @@
         - name: クイック スタート ガイド
           href: audience-insights/get-started.md
         - name: 新しい環境を作成する
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: 対象ユーザーの分析情報を探る
           href: audience-insights/home.md
+    - name: ビジネス アカウントに関する作業
+      href: audience-insights/work-with-business-accounts.md
     - name: モジュールの学習
       items:
         - name: データの取り込み
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: 顧客アクティビティをリストする
           href: audience-insights/activities.md
+        - name: セマンティック マッピングを定義する
+          href: audience-insights/semantic-mappings.md
     - name: データ エンリッチメント
       items:
         - name: 顧客プロファイルのエンリッチ
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: サブスクリプション離反の予測
               href: audience-insights/predict-subscription-churn.md
-            - name: トランザクション解約を予測する
+            - name: トランザクション離反を予測する
               href: audience-insights/predict-transactional-churn.md
             - name: Azure Machine Learning のカスタム モデルの使用
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: サブスクリプション解約予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: トランザクション解約予測のサンプル ガイド
+            - name: トランザクション離反予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: 製品レコメンデーション予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: 複数の環境を管理する
           href: audience-insights/manage-environments.md
-        - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
-          href: audience-insights/connect-service-principal.md
         - name: サポートされている言語
           href: audience-insights/supported-languages.md
+        - name: セキュリティ
+          items:
+            - name: 独自の Key Vault を導入する
+              href: audience-insights/use-azure-key-vault.md
+            - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
+              href: audience-insights/connect-service-principal.md
     - name: 拡張性
       items:
         - name: エンゲージメント インサイトからの Web データを統合する
@@ -248,6 +262,8 @@
       items:
         - name: クイック スタート ガイド
           href: engagement-insights/get-started.md
+        - name: 環境を作成する
+          href: engagement-insights/create-new-environment.md
         - name: ワークスペースを作成する
           href: engagement-insights/create-workspace.md
         - name: Web サイトとモバイル アプリからイベントをキャプチャする

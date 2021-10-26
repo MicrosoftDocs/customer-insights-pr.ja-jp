@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Marketo にエクスポートする
 description: Marketo への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033499"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619171"
 ---
 # <a name="export-segments-to-marketo-preview"></a>セグメントを Marketo にエクスポート (プレビュー)
 
@@ -25,14 +25,14 @@ ms.locfileid: "7033499"
 -   [Marketo アカウント](https://login.marketo.com/) と対応する管理者資格情報があります。
 -   Marketo に既存のリストと対応する ID があります。 詳細については、[Marketo リスト](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) を参照してください。
 -   [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Marketo へのエクスポートごとに 100 万プロファイルまで。
+- Marketo へのエクスポートごとに最大 100 万の顧客プロファイル。
 - Marketo へのエクスポートはセグメントに制限されています。
-- 合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 3 時間かかる場合があります。 
-- Marketo にエクスポートできるプロファイルの数は、Marketo との契約に依存し、制限されています。
+- 合計 100 万の顧客プロファイルを持つセグメントをエクスポートすると、最大 3 時間かかる場合があります。 
+- Marketo にエクスポートできる顧客プロファイルの数は、Marketo との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-marketo"></a>Marketo への接続を設定する
 
@@ -64,7 +64,7 @@ ms.locfileid: "7033499"
 
 1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します。 リスト ID は純粋な数値です。 たとえば、Marketo リスト ID が ST12345A7 の場合、数字の前後の文字を削除して、`12345` を入力します。 
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 
 
 1. オプションで、**名**、**姓**、**市**、**都道府県**、**国/地域** をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

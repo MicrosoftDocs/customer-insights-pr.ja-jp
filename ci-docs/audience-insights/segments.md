@@ -1,7 +1,7 @@
 ---
 title: 対象者に関するインサイトのセグメント
 description: セグメントの概要と、セグメントの作成および管理方法。
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036379"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617381"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -26,11 +26,19 @@ ms.locfileid: "7036379"
 
 新しいセグメントを作成するには、複数の方法があります: 
 
-- セグメント ビルダーを使用した複雑なセグメント: [空のセグメント](segment-builder.md#create-a-new-segment)
-- 1 つの演算子の単純なセグメント: [クイック セグメント](segment-builder.md#quick-segments)
-- AI を活用した類似顧客の検索方法: [類似顧客](find-similar-customer-segments.md)
-- メジャーまたは属性に基づく AI を活用した提案: [メジャーを改善するための提案されたセグメント](suggested-segments.md)
-- 活動に基づく提案: [顧客活動に基づく提案されたセグメント](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+
+- セグメント ビルダーを使用した複雑なセグメント: [独自に構築する](segment-builder.md#create-a-new-segment) 
+- 1 つの演算子の単純なセグメント: [クイック セグメント](segment-builder.md#quick-segments) 
+- AI を活用した類似顧客の検索方法: [類似顧客](find-similar-customer-segments.md) 
+- メジャーまたは属性に基づく AI を活用した提案: [メジャーを改善するための提案されたセグメント](suggested-segments.md) 
+- 活動に基づく提案: [顧客活動に基づく提案されたセグメント](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+
+- セグメント ビルダーを使用した複雑なセグメント: [独自に構築する](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>既存のセグメントを管理する
 
@@ -70,9 +78,9 @@ ms.locfileid: "7036379"
 
 1. アクション ドロップダウン リストから **エクスポートの管理** を選択します。
 
-1. ページ **セグメントのエクスポート (プレビュー)** を開きます。 現在のセグメントを含む、または含まないエクスポートによってグループ化された、構成済みのすべてのエクスポートを表示できます。
+1. ページ **セグメントのエクスポート (プレビュー)** を開きます。 現在のセグメントが含まれているかどうかによってグループ化された、構成済みのすべてのエクスポートを確認できます。
 
-   1. 選択したセグメントをエクスポートに追加するには、一覧でエクスポートを選択して、**セグメントの追加** を選択します。
+   1. 選択したセグメントをエクスポートに追加するには、それぞれのエクスポートを **編集** し、対応するセグメントを選択して、保存します。 個人の顧客向けの環境では、リストでエクスポートを選択して、**セグメントを追加** を選択しても同じ結果を達成できます。
 
    1. 選択したセグメントで新しいエクスポートを作成するには、**エクスポートの追加** を選択します。 エクスポートの作成の詳細については、[新しいエクスポートの設定](export-destinations.md#set-up-a-new-export) を参照してください。
 

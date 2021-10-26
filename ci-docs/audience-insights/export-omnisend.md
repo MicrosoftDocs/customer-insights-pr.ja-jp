@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Omnisend にエクスポート
 description: Omnisend への接続とエクスポートを構成する方法を説明します。
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031772"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619034"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>セグメントを Omnisend にエクスポート (プレビュー)
 
@@ -24,13 +24,13 @@ ms.locfileid: "7031772"
 
 -   [Omnisend アカウント](https://www.omnisend.com/) と対応する管理者資格情報があります。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Omnisend には、エクスポートごとに 100 万プロファイルまでエクスポートでき、完了するまでに最大 4 時間かかる場合があります。
+- Omnisend へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートでき、完了するまでに最大 4 時間かかる場合があります。
 - Omnisend へのエクスポートはセグメントに限定されています。
-- Omnisend にエクスポートできるプロファイルの数は、Omnisend との契約によって異なります。
+- Omnisend にエクスポートできる顧客プロファイルの数は、Omnisend との契約によって異なります。
 
 ## <a name="set-up-connection-to-omnisend"></a>Omnisend への接続を設定する
 
@@ -62,7 +62,7 @@ ms.locfileid: "7031772"
 
 1. **エクスポートの接続** フィールドで、Omnisend セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Omnisend にエクスポートする必要があります。 必要に応じて、名、姓、住所、国/地域、都道府県、市区町村、郵便番号をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Omnisend にエクスポートする必要があります。 必要に応じて、名、姓、住所、国/地域、都道府県、市区町村、郵便番号をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 
 1. **保存** を選択します。
 

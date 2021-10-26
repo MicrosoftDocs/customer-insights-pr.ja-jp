@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033224"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605955"
 ---
 # <a name="connections-preview-overview"></a>接続 (プレビュー) の概要
 
@@ -47,6 +47,7 @@ ms.locfileid: "7033224"
 1. **接続の設定** ペインに、必要な詳細を入力します。 
    1. 接続の **表示名** と種類は、接続を説明します。 この接続の目的とターゲットを説明する名前を選択することをお勧めします。
    1. 正確なフィールドは、接続しているサービスによって異なります。 特定の接続の種類の詳細については、対象サービスに関する記事を参照してください。
+   1. もし、[独自の Key Vault を使用して](use-azure-key-vault.md)シークレットを保存するには、**Key Vault を使用する** をアクティブ化して、リストからシークレットを選択します。
 
 1. 接続を作成するには、**保存** を選択します。
 
@@ -93,3 +94,6 @@ ms.locfileid: "7033224"
 
 1. 削除の実行を確定するには、**削除** を選択します。
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>独自の Key Vault によって管理されるシークレットとの接続を設定します
+
+一部の接続には、API キーやパスワードなどのシークレットが必要です。 一部の接続では、独自の Key Vault に保存されているシークレットをサポートしています。 サポートされている接続とセットアップ方法の詳細については、[対象者インサイトのための独自の Key Vault](use-azure-key-vault.md) を参照してください。

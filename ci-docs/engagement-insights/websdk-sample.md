@@ -4,17 +4,17 @@ description: Web SDK サンプルを個人設定して実行する方法を説�
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036609"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606231"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Dynamics 365 Customer Insights エンゲージメント インサイト機能の Web SDK サンプルを実行する
 
@@ -26,7 +26,7 @@ ms.locfileid: "7036609"
 
 - [Visual Studio Code](https://code.visualstudio.com/) をインストールします。
 - Visual Studio Code で [Live Server 拡張機能をインストール](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) し、Live Server の実行方法を確認します。
-- [取り込みキー](instrument-website.md) が必要です。
+- [エンゲージメント分析情報ワークスペース](create-workspace.md)が必要です。
 
 ## <a name="run-sample"></a>サンプルの実行
 
@@ -36,7 +36,11 @@ ms.locfileid: "7036609"
 
 1. 解凍したフォルダーを Visual Studio Code で開きます。
 
-1. `ei_websdk_sample.html` ファイルで、文字列 "INGESTION_KEY" をエンゲージメント インサイト機能ポータルからの取り込みキーに、文字列 "NAME" を SDK をインスタンス化するためのグローバル名に置き換えます。 すべての出現箇所を必ず置き換えてください。
+1. ワークスペースのエンゲージメント分析情報ポータルに移動します。 **管理者** > **ワークスペース**、次に **インストール ガイド** を選択します。 最初のオプションに従い、**コードをコピーする** を選択して、JavaScript コード スニペットをコピーします。
+
+1. `ei_websdk_sample.html` ファイルで、コピーしたコード スニペットを次の行に貼り付けます:
+
+   - <-- この行の下にあるエンゲージメント分析情報ポータルから JavaScript コード スニペットを貼り付けます -->
 
 1. Visual Studio Code で Live Server を使用して `ei_websdk_sample.html` ファイルを開くには、ステータス バーから **ライブに移行** を選択します。
 

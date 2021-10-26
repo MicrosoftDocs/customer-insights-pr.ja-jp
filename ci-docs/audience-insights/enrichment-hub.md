@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469994"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617561"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -27,16 +27,26 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 エンリッチメントを作成、編集するには、コントリビューターまたは管理者権限が必要です。 詳細については、[権限](permissions.md)を参照してください。
 
-**検出** タブでは、次のような拡充機能があります :
+**検出** タブには、サポートされているすべてのエンリッチメント オプションが表示されます。
 
-- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
+# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+
 - Microsoft が提供する [ブランド](enrichment-microsoft.md)
 - Microsoft が提供する [関心](enrichment-microsoft.md)
-- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md)
-- Leadspace が提供する [会社データ](enrichment-leadspace.md)
+- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 
 - Experian が提供する [人口統計情報](enrichment-experian.md)
-- HERE Technologies が提供する [位置データ](enrichment-here.md)
-- セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md)
+- セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
+- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
+
+# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+
+- Leadspace が提供する [会社データ](enrichment-leadspace.md)
+- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 
+- HERE Technologies が提供する [位置データ](enrichment-here.md) 
+- セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
+- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
+
+---
 
 **自分のエンリッチメント** タブでは、設定した拡充を表示し、そのプロパティを編集することができます。
 
@@ -58,7 +68,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 ## <a name="enrichments-and-connections"></a>エンリッチメントと接続
 
-サード パーティのエンリッチメントは、管理者が資格情報を使用して設定し、データ転送の同意を提供する [接続](connections.md) を使用して構成されます。 管理者と共同作成者は接続を使用して、エンリッチメントを構成できます。  
+サード パーティのエンリッチメントは、管理者が資格情報を使用して設定し、データ転送の同意を提供する [接続](connections.md) を使用して構成されます。 この接続は、管理者と共同作成者がエンリッチメントを構成するのに使用できます。  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>同じ種類の複数のエンリッチメント
 

@@ -1,32 +1,32 @@
 ---
 title: サードパーティ エンリッチメント Leadspace による会社プロファイルのエンリッチメント
 description: Leadspace サードパーティ エンリッチメントに関する一般情報。
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031709"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617407"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
 
-Leadspace は、B2B の顧客データ プラットフォームを提供するデータ サイエンス企業です。 これを使用することで、企業の顧客プロファイルが統一された顧客は、データを充実させることができます。 エンリッチメントには、会社の規模、所在地、業界など、より多くの属性が含まれます。
+Leadspace は、B2B 顧客データ プラットフォームを提供するデータ サイエンス企業です。 これにより、取引先企業に基づいて統一された顧客プロファイルを持つ環境でデータを充実させることができます。 *顧客プロファイル* を、会社の規模、場所、業界などの属性でエンリッチします。 *取引先担当者プロファイル* を、タイトル、ペルソナ、メール確認などの属性でエンリッチします。
 
 ## <a name="prerequisites"></a>前提条件
 
 Leadspace を構成するには、次の前提条件が満たしている必要があります :
 
 - アクティブな Leadspace ライセンスを所有していること。
-- 企業向けの[統一された顧客プロファイル](customer-profiles.md)を持っていること。
-- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#administrator) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) に直接お問い合わせください。
+- 取引先企業に基づいて、[統一された顧客プロファイル](customer-profiles.md)を所有していること。
+- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#administrator) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) に直接お問い合わせください。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 
@@ -46,10 +46,14 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 1. **次へ** を選択し、統合プロファイルからどのフィールドを使用して、Leadspace から一致する企業データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
 
-   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace フィールド マッピング ペイン。":::
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace フィールドマッピング ペイン。":::
 
 1. **次へ** を選択し、フィールド マッピングを完了します。
 
+1. エンリッチする *取引先担当者プロファイル* がある場合は、チェックボックスを選択します。 対象者分析情報は、必要なフィールドを自動的にマッピングします。
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="リードスペース取引先担当者レコードのエンリッチメント。":::
+ 
 1. エンリッチメントの名前を入力して、選択内容を確認した後 **エンリッチメントの保存** を選択します。
 
 
@@ -79,9 +83,10 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 詳細については、[Leadspace の API](https://support.leadspace.com/hc/en-us/sections/201997649-API) を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、さらに [データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

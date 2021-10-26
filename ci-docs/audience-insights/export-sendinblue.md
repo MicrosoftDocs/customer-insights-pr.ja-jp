@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Sendinblue にエクスポートする
 description: 接続を構成して、Sendinblue にエクスポートする方法を学びます。
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036061"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617791"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>セグメントを Sendinblue にエクスポートする (プレビュー)
 
@@ -29,10 +29,10 @@ ms.locfileid: "7036061"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Sendinblue へのエクスポートごとに最大 100 万のプロファイルです。
+- Sendinblue へのエクスポートごとに最大 100 万の顧客プロファイル。
 - Sendinblue へのエクスポートはセグメントに制限されています。
-- 合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 90 分かかる場合があります。 
-- Sendinblue にエクスポートできるプロファイルの数は、Sendinblue との契約内容に制限されます。
+- 合計 100 万の顧客プロファイルを持つセグメントをエクスポートすると、最大 90 分かかる場合があります。 
+- Sendinblue にエクスポートできる顧客プロファイルの数は、Sendinblue との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-sendinblue"></a>Sendinblue への接続を設定する
 
@@ -64,7 +64,7 @@ ms.locfileid: "7036061"
 
 1. **Sendinblue リスト ID** を入力します 
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 
 
 1. オプションで、**姓**、**名**、および **電話番号** をエクスポートして、よりパーソナライズされた電子メールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

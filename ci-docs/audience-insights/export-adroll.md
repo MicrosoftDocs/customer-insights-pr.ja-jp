@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを AdRollにエクスポート
 description: AdRoll への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032077"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617355"
 ---
 # <a name="export-segments-to-adroll-preview"></a>セグメントを AdRoll にエクスポート (プレビュー)
 
@@ -28,11 +28,11 @@ ms.locfileid: "7032077"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- AdRoll へ一度に最大 250,000 のプロファイルをエクスポートできます。
-- プロファイルが 100 未満のセグメントを AdRoll にエクスポートできません。 
+- 一度に最大 250,000 の顧客プロファイルを AdRoll にエクスポートできます。
+- 顧客プロファイルが 100 未満のセグメントを AdRoll にエクスポートすることはできません。 
 - AdRoll へのエクスポートはセグメントに制限されています。
-- 最大 250,000 のプロファイルを AdRoll にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
-- AdRoll にエクスポートできるプロファイルの数は、AdRoll との契約によって異なります。
+- 最大 250,000 の顧客プロファイルを AdRoll にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
+- AdRoll にエクスポートできる顧客プロファイルの数は、AdRoll との契約によって異なります。
 
 ## <a name="set-up-connection-to-adroll"></a>AdRoll への接続を設定する
 
@@ -66,7 +66,7 @@ ms.locfileid: "7032077"
 
 1. **AdRoll 広告主 ID** を入力してください。 詳細については、[AdRoll 広告主プロファイル](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) を参照してください。
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを AdRoll にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを AdRoll にエクスポートする必要があります。
 
 1. エクスポートするセグメントを選択します。 メンバー数が 100 以上のセグメントを選択します。 小さいセグメントをエクスポートすることはできません。 さらに、エクスポートするセグメントの最大サイズは、エクスポートごとに 250,000 メンバーです。 
 

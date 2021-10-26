@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを ActiveCampaign にエクスポートする
 description: 接続を構成して、ActiveCampaign にエクスポートする方法を学びます。
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032215"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618159"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>セグメントを ActiveCampaign にエクスポートする (プレビュー)
 
@@ -28,9 +28,9 @@ ms.locfileid: "7032215"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- ActiveCampaign へのエクスポートごとに最大 100 万のプロファイルをエクスポートでき、完了するまでに最大 90 分かかる場合があります。
+- ActiveCampaign へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートでき、完了するまでに最大 90 分間かかる場合があります。
 - ActiveCampaign へのエクスポートはセグメントに制限されています。
-- ActiveCampaign にエクスポートできるプロファイルの数は、ActiveCampaign との契約によって異なります。
+- ActiveCampaign にエクスポートできる顧客プロファイルの数は、ActiveCampaign との契約によって異なります。
 
 ## <a name="set-up-connection-to-activecampaign"></a>ActiveCampaign への接続を設定する
 
@@ -64,7 +64,7 @@ ms.locfileid: "7032215"
 
 1. [**ActiveCampaign リスト ID**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign) を入力します。    
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 ActiveCampaign へは、セグメントをエクスポートする必要があります。 オプションで、姓、名、および電話番号をエクスポートして、よりパーソナライズされた電子メールを作成できます。 属性の追加 を選択し、これらのフィールドをマップします。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 ActiveCampaign へは、セグメントをエクスポートする必要があります。 オプションで、姓、名、および電話番号をエクスポートして、よりパーソナライズされた電子メールを作成できます。 属性の追加 を選択し、これらのフィールドをマップします。
 
 1. **保存** を選択します。
 

@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 3be417845a41c8f25c71bfc0823f42571157759b224e46d5e114037ee3df8329
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033270"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643500"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データソースに接続する
 
 Power Query では一連の広範なコネクターを搭載しており、データを取り込むことができます。 これらコネクターの多くが Dynamics 365 Customer Insights でサポートされています。 Power Query コネクタに基づくデータ ソースの追加方法については、次のセクションで説明する手順を参照してください。 ただし、使用するコネクタによっては、異なる情報が必要になります。 それぞれのコネクタに関する詳細情報については、[Power Query コネクタについての参考資料](/power-query/connectors/) を参照してください。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
 ## <a name="create-a-new-data-source"></a>新しいデータ ソースの作成
 

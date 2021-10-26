@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483531"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645178"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 
 Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 ここでは、ストレージ アカウントキーの代わりに Azure サービス プリンシパルを使用して、Dynamics 365 Customer Insights と Azure Data Lake Storage のアカウントを接続する方法について説明します。 
 
-サービス プリンシパルを使用して、[データソースとして Common Data Model フォルダを安全に追加・編集](connect-common-data-model.md)したり、[環境を作成・更新](get-started-paid.md)したりすることができます。
+サービス プリンシパルを使用して、[データソースとして Common Data Model フォルダを安全に追加・編集](connect-common-data-model.md)したり、[環境を作成・更新](create-environment.md)したりすることができます。
 
 > [!IMPORTANT]
 > - サービス プリンシパルを使用する Data Lake のストレージ アカウントには、[階層型名前空間を有効化する](/azure/storage/blobs/data-lake-storage-namespace)必要があります。

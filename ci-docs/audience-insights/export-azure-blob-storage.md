@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Azure Blob Storage にエクスポートする
 description: Blob Storage への接続とエクスポートを構成する方法を説明します。
-ms.date: 06/30/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b159f87276581f68e07bb73ffd257080eb3cb56422997b09a613bd7afa4e3980
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034734"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605856"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>セグメント リストとその他のデータを Azure Blob Storage にエクスポートする (プレビュー)
 
 Customer Insights データを Blob Storage に保存するか、それを使用してユーザーのデータを他のアプリケーションに転送します。
+
+## <a name="known-limitations"></a>既知の制限
+
+1. Azure Blob Storage の場合、[標準パフォーマンスとプレミアム パフォーマンス レベル](/azure/storage/blobs/storage-blob-performance-tiers)のいずれかを選択できます。 プレミアム パフォーマンス レベルを選択する場合は、[アカウント タイプとしてプレミアム ブロック BLOB を選択します](/azure/storage/common/storage-account-overview#types-of-storage-accounts)。
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>Blob Storage への接続を設定する
 

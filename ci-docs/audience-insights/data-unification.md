@@ -1,7 +1,7 @@
 ---
-title: データ統合
-description: 取り込んだデータを統合する方法について説明します。
-ms.date: 04/16/2020
+title: 顧客体験の統一ビューを作成する
+description: データを使用してデータ統合プロセスを実行し、顧客プロファイルの単一のマスター データセットを作成します。
+ms.date: 10/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,14 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bf1bbcd31333c8a557b59b001112042a1783546ab0cd2af394d8af2953a493f4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-unify
+ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032764"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648077"
 ---
 # <a name="data-unification-overview"></a>データの統合の概要
 

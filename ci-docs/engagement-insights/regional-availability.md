@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564600"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645407"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の地域別提供状況
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-エンゲージメントの分析情報、Dynamics 365 Customer Insights の機能は、顧客がデータの保存に選択可能な地域を徐々に増やしています。 管理者は、[新しい環境を作成する](manage-environments-workspaces.md#create-an-environment)際に、リージョンを選択できます。 
+エンゲージメントの分析情報、Dynamics 365 Customer Insights の機能は、顧客がデータの保存に選択可能な地域を徐々に増やしています。 管理者は、[新しい環境を作成する](create-new-environment.md)際に、リージョンを選択できます。 
 
 初めてエンゲージメントの分析情報を設定する際は、[ガイド付きの初回実行エクスペリエンス](quickstart.md)介して地域を選択することができます。 その後、すべての新しい環境で、データが保存されるリージョンを選択できるようになりました。
 

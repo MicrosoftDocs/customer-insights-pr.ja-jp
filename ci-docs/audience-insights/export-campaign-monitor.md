@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Campaign Monitor にエクスポート
 description: Campaign Monitor への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031893"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618987"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>セグメントを Campaign Monitor にエクスポート (プレビュー)
 
@@ -24,14 +24,14 @@ ms.locfileid: "7031893"
 
 -   [Campaign Monitor アカウント](https://www.campaignmonitor.com/) と対応する管理者資格情報がある。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Campaign Monitor には、1 回のエクスポートにつき 100 万プロファイルまでエクスポートできます。
+- Campaign Monitor へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートできます。
 - Campaign Monitor へのエクスポートはセグメントに限定されます。
-- 最大 100 万のプロファイルを Campaign Monitor にエクスポートすると、完了するまでに最大 20 分かかります。 
-- Campaign Monitor にエクスポートできるプロファイルの数は、Campaign Monitor との契約によって異なり、制限されます。
+- 最大 100 万の顧客プロファイルを Campaign Monitor にエクスポートすると、完了するまでに最大 20 分かかる場合があります。 
+- Campaign Monitor にエクスポートできる顧客プロファイルの数は、Campaign Monitor との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Campaign Monitor への接続を設定する
 
@@ -66,7 +66,7 @@ ms.locfileid: "7031893"
 1. [**Campaign Monitor リスト ID**](https://www.campaignmonitor.com/api/getting-started/#your-list-id) を入力します。    
    Campaign Monitor の **アカウント設定** から最初に [API キーを生成](https://www.campaignmonitor.com/api/getting-started/) し、API リスト ID を表示します。  
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Campaign Monitor にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Campaign Monitor にエクスポートする必要があります。
 
 1. **保存** を選択します。
 

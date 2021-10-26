@@ -1,6 +1,6 @@
 ---
 title: データ統合のためにエンティティを照合する
-description: データを照合して、統合顧客プロファイルを作成します。
+description: エンティティを照合してデータセットを結合し、統一された顧客プロファイルを作成します。
 ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ad08b8b782654939c6bfc2ca330a3d31e71054a2f2c97a921971d1056b7cd38
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-match
+ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033683"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648214"
 ---
 # <a name="match-entities"></a>エンティティを一致させる
 

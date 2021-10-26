@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Autopilot にエクスポートする
 description: Autopilot への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032031"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618435"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>セグメントを AutoPilot にエクスポート (プレビュー)
 
@@ -24,14 +24,14 @@ ms.locfileid: "7032031"
 
 -   [Autopilot 広告アカウント](https://www.autopilothq.com/) と対応する管理者資格情報があります。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- 合計で最大 10 万の顧客プロファイルを Autopilot にエクスポートできます。
+- 合計で最大 100,000の 顧客プロファイルを AutoPilot にエクスポートできます。
 - Autopilot へのエクスポートはセグメントに制限されています。
-- 最大 10 万件のプロファイルを Autopilot にエクスポートすると、完了するまでに最大で数時間かかる場合があります。 
-- Autopilot にエクスポートできるプロファイルの数は、Autopilot との契約に依存し、制限されています。
+- 最大 100,000 の顧客プロファイルを AutoPilot にエクスポートすると、完了に最大で数時間かかる場合があります。 
+- AutoPilot にエクスポートできる顧客プロファイルの数は、AutoPilot との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-autopilot"></a>Autopilot への接続を設定する
 
@@ -43,7 +43,7 @@ ms.locfileid: "7032031"
 
 1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-3. [Autopilot API キー](https://autopilot.docs.apiary.io/#) を入力します。
+1. [Autopilot API キー](https://autopilot.docs.apiary.io/#) を入力します。
 
 1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
 
@@ -63,7 +63,7 @@ ms.locfileid: "7032031"
 
 1. **エクスポートの接続** フィールドで、Autopilot セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 **名**、**姓** など、他の任意フィールドに同じ手順を繰り返します。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 **名**、**姓** など、他の任意フィールドに同じ手順を繰り返します。
 
 1. エクスポートするセグメントを選択します。 Autopilot に対しては **合計で 10 万件を超える顧客プロファイルは、エクスポートしないことをお勧めします**。 
 

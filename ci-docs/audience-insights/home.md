@@ -1,7 +1,7 @@
 ---
 title: 対象者に関するインサイトのホーム ページ
 description: ホーム ページでアプリの詳細を確認します。
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469993"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617700"
 ---
 # <a name="explore-audience-insights"></a>対象ユーザーの分析情報を探る
 
@@ -23,7 +23,7 @@ ms.locfileid: "7469993"
 
 :::image type="content" source="media/home-page.png" alt-text="サンプルの分析情報を示すホーム画面のスクリーンショット。":::
 
-1 - Customer Insights の機能を切り替えます 2 - 左ペインを使用してさまざまな領域間を移動します 3 - 作業環境を確認し、管理者権限を使用して環境を管理します 4 - Customer Insights の個人設定を指定します
+1 - Customer Insights の機能を切り替えます 2 - 左側のペインを使用してさまざまな領域間を移動し、プライマリ ターゲット対象者を選択します 3 - 作業している環境を確認し、環境を管理者として管理します 4 - Customer Insights の個人設定を指定します
 
 **最近のセグメント** 配下で、定義した人口統計、行動、またはトランザクションの属性に基づいた顧客のグループが表示されます。 [セグメントの作成](segments.md)は、顧客ベースをグループ化し、ビジネス活動をより的確にターゲティングするのに役立ちます。
 

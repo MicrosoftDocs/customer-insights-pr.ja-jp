@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032856"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645361"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 
 ## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
 
-オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](get-started-paid.md) することで、Customer Insights で有効にできます。
+オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](create-environment.md) することで、Customer Insights で有効にできます。
 
 Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/data-integration/gateway/service-gateway-app) します。
 

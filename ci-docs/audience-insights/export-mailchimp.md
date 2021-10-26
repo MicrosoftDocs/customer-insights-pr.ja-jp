@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のデータを Mailchimp にエクスポートする
 description: Mailchimp への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033545"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618619"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>セグメントを Mailchimp にエクスポート (プレビュー)
 
@@ -25,14 +25,14 @@ ms.locfileid: "7033545"
 -   [Mailchimp アカウント](https://mailchimp.com/) と対応する管理者資格情報があります。
 -   Mailchimp に既存のオーディエンスと対応する ID があります。 詳細については、[Mailchimp オーディエンス](https://mailchimp.com/help/create-audience/) を参照してください。
 -   [セグメントを構成](segments.md) しました
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Mailchimp へのエクスポートごとに 100 万プロファイルまで。
+- Mailchimp へのエクスポートごとに最大 100 万の顧客プロファイル。
 - Mailchimp へのエクスポートはセグメントに制限されています。
-- 100 万件のプロファイルを持つセグメントのエクスポートには、最大 3 時間かかります。 
-- Mailchimp にエクスポートできるプロファイルの数は、Mailchimp との契約に依存し、制限されています。
+- 100 万の顧客プロファイルを持つセグメントをエクスポートすると、最大 3 時間かかる場合があります。 
+- Mailchimp にエクスポートできる顧客プロファイルの数は、Mailchimp との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-mailchimp"></a>Mailchimp への接続を設定する
 
@@ -66,7 +66,7 @@ ms.locfileid: "7033545"
 
 1. **[Mailchimp 対象者 ID](https://mailchimp.com/help/find-audience-id/)** を入力します
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 
 
 1. オプションで、**名** と **姓** をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

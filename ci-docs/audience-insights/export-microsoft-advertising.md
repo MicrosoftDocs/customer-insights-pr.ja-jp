@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Microsoft Advertising にエクスポートする
 description: Microsoft Advertising への接続とエクスポートを構成する方法を説明します。
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8f8a4cbb9590f9c5311789154319283530e0a10343cccbe9c7aec99765b4fbf2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031475"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618067"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>セグメントを MicrosoftAdvertising にエクスポート (プレビュー)
 
@@ -25,13 +25,13 @@ Customer Insights セグメントを Microsoft Advertising にエクスポート
 -   [Microsoft Advertising アカウント](https://ads.microsoft.com/) と対応する管理者資格情報。
 -   カスタマー マッチの使用条件に同意しました。 
 -   対象者に関するインサイトの [構成済みセグメント](segments.md)。
--   エクスポートされたセグメントの統合された顧客プロファイルには、メール アドレスのあるフィールドが含まれています。
+-   エクスポートされたセグメントの統合された顧客プロファイルには、メール アドレスのあるフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Microsoft Advertising には、エクスポートごとに 50 万プロファイルまでエクスポートできます。
+- Microsoft Advertising へのエクスポートごとに最大 500'000 の顧客プロファイルをエクスポートできます。
 - Microsoft Advertising へのエクスポートはセグメントに限定されています。
-- 最大 50 万のプロファイルを Microsoft Advertising にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
+- 最大 500'000 の顧客プロファイルを Microsoft Advertising にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Microsoft Advertising への接続を設定する
@@ -68,7 +68,7 @@ Customer Insights セグメントを Microsoft Advertising にエクスポート
 
 1. **Microsoft Advertising の顧客 ID とアカウントID** を入力します。 顧客 ID (`cid`) とアカウントID (`aid`) は、Microsoft Advertising にサインインしているときに URL のパラメーターで確認できます。
 
-1. **データ一致** セクションの **メール** フィールドで、顧客のメール アドレスを持つ統合された顧客プロファイルのフィールドを選択します。 セグメントを Microsoft Advertising にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスのフィールドを選択します。 セグメントを Microsoft Advertising にエクスポートする必要があります。
 
 1. **保存** を選択します。
 

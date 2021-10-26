@@ -1,7 +1,7 @@
 ---
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034183"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645132"
 ---
 # <a name="manage-environments"></a>環境の管理
 
@@ -26,7 +26,7 @@ ms.locfileid: "7034183"
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="環境を切り替えるコントロールのスクリーンショット。":::
 
-管理者は環境の[作成](get-started-paid.md)と管理ができます。
+管理者は環境の[作成](create-environment.md)と管理ができます。
 
 ## <a name="edit-an-existing-environment"></a>既存の環境を編集する
 
@@ -36,23 +36,9 @@ ms.locfileid: "7034183"
 
 2.  **編集** アイコンを選択します。
 
-3. **環境の編集** ボックスで、環境の **表示名** は更新できますが、**リージョン** または **タイプ** を変更することはできません。
+3. **環境の編集** ボックスで、環境設定を更新できます。
 
-4. Azure Data Lake Storage にデータを格納するように環境が構成されている場合、**アカウント キー** を更新できます。 ただし、**アカウント名** または **コンテナー** 名前を変更することはできません。
-
-5. 必要に応じて、アカウント キー ベースの接続から、リソース ベースまたはサブスクリプション ベースの接続に更新できます。 一度アップグレードすると、アップグレード後にアカウント キーに戻すことはできません。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 接続の更新時に、**コンテナー** 情報を変更することはできません。
-
-6. オプションで、**Microsoft Dataverse とのデータ共有を構成し、追加の機能を有効にする** の下にある Microsoft Dataverse 環境の URL を指定できます。 これらの機能には、Microsoft Dataverse に基づくアプリケーションおよびソリューションとのデータ共有、オンプレミスのデータ ソースからのデータ インジェスト、または使用 [予測](predictions.md) が含まれます。 **データ共有の有効化** を選択して、Customer Insights 出力データを Microsoft Dataverse Managed Data Lake と共有します。
-
-   > [!NOTE]
-   > - Microsoft Dataverse マネージド Data Lake とのデータ共有は、すべてのデータを自分の Azure Data Lake Storage に保存する場合、現在サポートされていません。
-   > - [エンティティの欠落値の予測](predictions.md)および対象ユーザーインサイトの PowerBI Embedded レポート (ご利用の環境で有効になっている場合) は、Microsoft Dataverse マネージド Data Lake とのデータ共有を有効にした場合、現在サポートされていません。
-
-   Microsoft Dataverse でデータ共有を有効にすると、データ ソースやその他のプロセスの完全更新が開始されます。 プロセスが現在実行中の場合は、Microsoft Dataverse とのデータ共有を有効にするオプションは表示されません。 これらのプロセスが完了するのを待つか、キャンセルして、データ共有を有効にします。 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
-   
-   データ インジェストやセグメントの作成などのプロセスを実行すると、対応するフォルダーが上記で指定したストレージ アカウントに作成されます。 実行するプロセスに応じて、データ ファイルと model.json ファイルが作成され、それぞれのサブフォルダーに追加されます。
+環境設定の詳細については、[新しい環境を作成する](create-environment.md)をご覧ください。
 
 ## <a name="copy-the-environment-configuration"></a>環境の構成をコピーする
 

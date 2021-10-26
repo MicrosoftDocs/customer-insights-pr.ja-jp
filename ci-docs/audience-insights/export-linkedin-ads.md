@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを LinkedIn Ads にエクスポート
 description: LinkedIn Ads への接続とエクスポートを構成する方法を説明します。
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034229"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618297"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>セグメントを LinkedIn Ads にエクスポート (プレビュー)
 
@@ -28,9 +28,9 @@ ms.locfileid: "7034229"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- LinkedIn Ads には、エクスポートごとに最大 10 万件のプロファイルをエクスポートできます。
+- LinkedIn Ads へのエクスポートごとに最大 10 万の顧客プロファイルをエクスポートできます。
 - LinkedIn Ads へのエクスポートはセグメントに限定されています。
-- 最大 10 万件のプロファイルを LinkedIn Ads にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
+- 最大 10 万の顧客プロファイルを LinkedIn Ads にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>LinkedIn Ads への接続を設定する
 
@@ -66,7 +66,7 @@ ms.locfileid: "7034229"
 
 1. データをエクスポートして、LinkedInで [連絡先のターゲット設定](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) または [会社のターゲット設定](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) を行うかを選択します。 
 
-1. **データ一致** セクションで、顧客のメール アドレスを表す統合された顧客プロファイルのフィールドを選択します。 セグメントを LinkedIn Ads にエクスポートする必要があります。
+1. **データ マッチング** セクションの取引先担当者ターゲティングでは、顧客のメール アドレス、Apple Ad ID、Google Ad ID、Google ユーザー ID、または最初と姓を表すフィールドを少なくとも 1 つ選択します。 会社のターゲティングを選択する場合は、会社名、メール ドメイン、LinkedIn ページの URL、銘柄記号、または Web サイトを表すフィールドを少なくとも 1 つ選択します。 追加のフィールドを選択して、エクスポートをさらに定義できます。 
 
 1. エクスポートするセグメントを選択します。 LinkedIn Campaign Manager の Matched Audiences は、エクスポートするために選択したセグメントの名前で自動的に作成されます。 各セグメントは、個別の Matched Audience になります。 
 

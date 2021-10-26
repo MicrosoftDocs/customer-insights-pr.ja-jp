@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032441"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645040"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
 
@@ -35,7 +35,7 @@ ms.locfileid: "7032441"
 
 2. 対象ユーザー インサイトの環境は Dataverse インスタンスに接続されています。
 
-[新しい環境を作成する](get-started-paid.md) 場合は、**環境の作成** ダイアログで設定して、**詳細** を選択します。 既に環境を作成している場合は、その設定に移動して **詳細** を選択します。 いずれの場合も、**予測の使用** セクションで、環境を関連付ける Dataverse インスタンス URLを入力します。
+詳しくは、[新しい環境を作成する](create-environment.md)をご覧ください。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>顧客エンティティで予測を作成する
 

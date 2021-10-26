@@ -1,7 +1,7 @@
 ---
 title: サポートされている予測シナリオの概要
 description: Dynamics 365 Customer Insights アプリケーションで対応する予測シナリオとオプション。
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036015"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618849"
 ---
 # <a name="predictions-overview"></a>予測の概要
 
@@ -24,10 +24,20 @@ Dynamics 365 Customer Insights には、AI や機械学習を活用してデー�
 ## <a name="out-of-box-models"></a>標準モデル
 
 データの予測を開始する最も簡単な方法は、事前定義されたモデルであり、多くの場合、標準モデルと呼ばれます。 特定のデータと構造があれば、インサイトをすばやく生成することができます。 現在、以下のモデルが使用可能です: 
-- [顧客の生涯価値](predict-customer-lifetime-value.md): ビジネスとのやり取り全体を通じて、顧客の潜在的な売上を予測します。 
+
+# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+
+- [顧客の生涯価値](predict-customer-lifetime-value.md): ビジネスとのやり取り全体を通じて、顧客の潜在的な売上を予測します。
 - [製品推奨](predict-product-recommendation.md): 購入行動や類似の購入パターンを持つ顧客に基づいて、予測製品推奨セットを提案します。
 - [サブスクリプション離反](predict-subscription-churn.md): 顧客が自社のサブスクリプション製品やサービスを使用しなくなるリスクがあるかどうかを予測します。
 - [トランザクション離反](predict-transactional-churn.md): 顧客が一定期間内に製品やサービスを購入しなくなるかどうかを予測します。
+
+# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+
+- [トランザクション離反](predict-transactional-churn.md): 顧客が一定期間内に製品やサービスを購入しなくなるかどうかを予測します。
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning 統合
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557358"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623017"
 ---
 # <a name="relationships-between-entities"></a>エンティティ間の関連付け
 
@@ -67,6 +67,20 @@ ms.locfileid: "7557358"
    - **ターゲット キー フィールド**: 対象エンティティのキー フィールド。 例 Customer は **CustomerID** キー フィールドを使用できます。
 
 4. **保存** を選択して、ユーザー定義の関連付けを作成します。
+
+## <a name="set-up-account-hierarchies"></a>アカウントの階層を設定する
+
+ビジネス アカウントをプライマリ ターゲット対象ユーザーとして使用するように構成された環境は、関連するビジネス アカウントのアカウント階層を構成できます。 たとえば、別々の部署を持つ会社です。 
+
+組織はアカウント階層を作成して、アカウントとそのリレーションシップをお互い適切に管理します。 対象者分析情報機能は、取り込んだ顧客データにすでに存在する親子アカウント階層をサポートします。 たとえば、Dynamics 365 Sales のアカウントです。 これらの階層は、対象者分析情報の **リレーションシップ** ページのアカウント階層タブで構成できます。
+
+1. **データ** > **リレーションシップ** に移動します。
+1. **アカウント階層** タブを選択します。
+1. **新しいアカウント階層** を選択します。 
+1. **アカウント階層** ペインで、階層の名前を指定します。 システムは、出力エンティティの名前を作成します。 出力名のエンティティの名称を変更することができます。
+1. アカウント階層を含むエンティティを選択します。 通常、アカウントを含むエンティティと同じエンティティにあります。
+1. 選択したエンティティから **Account ID** と **Account Parent ID** を選択します 
+1. **保存** を選択して、設定を適用し、アカウント階層を完成させます。
 
 ## <a name="view-relationships"></a>関連付けの表示
 

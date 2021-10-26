@@ -4,27 +4,33 @@ description: ワークスペース メンバーに使用可能なロールとア
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036699"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645543"
 ---
 # <a name="roles-and-permissions"></a>ロールとアクセス許可
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-ワークスペースは、イベントとレポートを保存および管理する方法です。 メンバーは、ワークスペースにアクセスできるユーザーです。 メンバーをワークスペースに割り当て、ロールとアクセス許可を定義できます。 管理者ロールでは、ワークスペースと環境を管理し、他のユーザーのエンゲージメントインサイトを構成できます。 共同作成者は、エンゲージメント インサイトを設定する必要はないが、独自のレポート、じょうご、セグメントを作成したいと考えているアナリストを対象としています。
+ワークスペースとは、イベントやレポートを保存、管理する場所です。 詳細については、[ワークスペースを作成してメンバーを追加する](create-workspace.md)を参照してください。 
+
+ワークスペースには、次の役割とアクセス許可を含めることができます。
+
+- *メンバー* ロールは、ワークスペースにアクセスできるユーザーです。 メンバーをワークスペースに割り当て、ロールとアクセス許可を定義できます。 
+- *管理者* ロールでは、ワークスペースと環境を管理し、他のユーザーのエンゲージメント分析情報を構成できます。 
+- *投稿者* 役割は、エンゲージメント分析情報を構成する必要はないが、独自のレポート、じょうご、またはセグメントを作成したいアナリストを対象としています。
 
 ## <a name="permissions"></a>権限
   
-次のグラフは、各ロールのアクセス許可を示しています。 
+次のテーブルでは、各役割のアクセス許可を示します。 
 
 | アクセス許可 | 環境管理者 | ワークスペース管理者 | 環境の共同作成者 | ワークスペースの共同作成者 | 
 |--|--|--|--|--|

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse の Customer Insights データ
 description: Customer Insights エンティティを Microsoft Dataverse のテーブルとして使用します。
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032902"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645224"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
@@ -24,11 +24,7 @@ Customer Insights には、[Microsoft Dataverse](/powerapps/maker/data-platform/
 
 **既存の Dataverse 環境を持つ組織**
 
-すでに Dataverse 使用している組織は、管理者が対象者に関するインサイトを設定するときに [既存の Dataverse 環境のいずれかを使用](get-started-paid.md) できます。 Dataverse 環境に URL を提供することで、新しい対象者に関するインサイトの環境に接続されます。 可能な限り最高のパフォーマンスを確保するために、Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。
-
-Dataverse 環境に接続するには、対象者に関するインサイトの環境を作成するときに、**詳細設定** を展開します。 **Microsoft Dataverse 環境 URL** を提供し、**データ共有の有効化** のチェックボックスを選択します。
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+すでに Dataverse 使用している組織は、管理者が対象者に関するインサイトを設定するときに [既存の Dataverse 環境のいずれかを使用](create-environment.md) できます。 Dataverse 環境に URL を提供することで、新しい対象者に関するインサイトの環境に接続されます。 可能な限り最高のパフォーマンスを確保するために、Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。
 
 **新しい組織**
 

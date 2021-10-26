@@ -1,22 +1,22 @@
 ---
-title: ワークスペースを作成する
-description: ワークスペースの目的とその作成方法。
+title: 新しいワークスペースの作成
+description: ワークスペースの目的と新しいワークスペースの作成方法。
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 38c817c169ce7986c73fb46fa14a9a8352a218d359cdcb2fa822a34303ff5ecc
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034138"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645316"
 ---
-# <a name="create-the-first-workspaces-and-add-members"></a>最初のワークスペースを作成し、メンバーを追加します
+# <a name="create-a-new-workspace-and-add-members"></a>新しいワークスペースから作成してメンバーを追加する
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "7034138"
 
 ワークスペースの作成時には、対象となるデータの種類を選択します。 既存のワークスペースには、いつでも他のユーザーまたはメンバーを追加できます。 
 
-## <a name="create-a-workspace"></a>ワークスペースを作成する
+## <a name="create-a-new-workspace"></a>新しいワークスペースの作成
 
 ワークスペースを作るプロセスには、ワークスペースの整理に必要な *環境* を整えることも含まれます。 環境とは、1つまたは複数のワークスペースを含むことができるスペースです。 環境を使用して、ワークスペースとCustomer Insights の対象ユーザーのインサイト機能への接続を管理できます。
 
@@ -32,13 +32,25 @@ ms.locfileid: "7034138"
 
    :::image type="content" source="media/new-workspace.png" alt-text="ナビゲーション ウィンドウと説明にコールアウトがある Customer Insights ページ。":::
 
-1. リストから環境を選択するか、**新規環境の作成** を選択します。
-1. **ワークスペース名** を入力します。
-1. 使用するプラットフォームを選択します。
-1. 完了後は、 **終了** を選択します。 
-1. メンバーの追加と権限レベルの割り当ては、**役割** リストから行います。 詳細については、[ロールとアクセス許可](user-roles.md) を参照してください。 その後、ワークスペースを作成する場合は **完了** を、コードをインストールする場合は **次へ** を選択します。
-1. コードスニペットをインストールしてデータの受信を開始し、**完了** を選択します。
+1. **ワークスペース** ペインで、**ワークスペース名** を入力します。
+
+   :::image type="content" source="media/workspace-name.png" alt-text="ワークスペース名を入力します。":::
+
+1. 測定するプラットフォーム タイプ (Web またはモバイル) を選択します。
+
+1. **詳細設定を表示する** を選択して、これらのオプション設定を有効または無効にします:
+
+   - **不明から既知** を「有効」に切り替えて、以前に認証したユーザーに Web イベントを関連付けます。 詳細については、[以前に認証された訪問者からの Web イベントを認識する](unknown-to-known.md)を参照してください。
+   - **ボット トラフィックをフィルタリングする** を「有効」に切り替えて、このワークスペースのボットによる Web トラフィックを削除します。 
+
+1. 完了したら、**完了** を選択します。 
+
+1. コード スニペットをインストールしてデータの受信を開始し、**終了** を選択して、ワークスペースを作成します。 詳細については、[開発者リソースの概要](developer-resources.md)を参照してください。
+
+> [!NOTE]
+> これで、メンバーを追加して、**役割** リストからのアクセス許可レベルを割り当てることができます。 詳細については、[ロールとアクセス許可](user-roles.md) を参照してください。 
 
 詳細については、[環境の管理とワークスペース](manage-environments-workspaces.md) を参照してください。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

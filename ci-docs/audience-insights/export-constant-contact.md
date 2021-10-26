@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Constant Contact にエクスポート
 description: Constant Contact への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031847"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619125"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>セグメントを Constant Contact にエクスポート (プレビュー)
 
@@ -24,14 +24,14 @@ ms.locfileid: "7031847"
 
 -   [Constant Contact アカウント](https://www.constantcontact.com/account-home) と対応する管理者資格情報がある。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Constant Contact には、1 回のエクスポートにつき 100 万プロファイルまでエクスポートできます。
+- Constant Contact へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートできます。
 - Constant Contact へのエクスポートはセグメントに限定されています。
-- 最大 100 万のプロファイルを Constant Contact にエクスポートすると、完了するまでに最大 1 時間かかります。 
-- Constant Contact にエクスポートできるプロファイルの数は、Constant Contact との契約によって異なり、制限されます。
+- 最大 100 万の顧客プロファイルを Constant Contact にエクスポートすると、完了するまでに最大 1 時間かかる場合があります。 
+- Constant Contact にエクスポートできる顧客プロファイルの数は、Constant Contact との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-constant-contact"></a>Constant Contact への接続を設定する
 
@@ -65,7 +65,7 @@ ms.locfileid: "7031847"
 
 1. [**Constant Contact リスト ID**](https://app.constantcontact.com/pages/contacts/ui#lists) を入力します。 Constant Contact でリストを開き、URL でリスト ID を検索します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Constant Contact にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Constant Contact にエクスポートする必要があります。
 
 1. オプションで、名 と 姓 を追加フィールドとしてエクスポートし、よりパーソナライズされた電子メールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

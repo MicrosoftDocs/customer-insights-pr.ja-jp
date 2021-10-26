@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558978"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617929"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>セグメントを Google Ads にエクスポート (プレビュー)
 
@@ -35,9 +35,9 @@ ms.locfileid: "7558978"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Google 広告 へのエクスポートごとに 100 万プロファイルまで。
+- Google Ads へのエクスポートごとに最大 100 万の顧客プロファイル。
 - Google 広告へのエクスポートはセグメントに制限されています。
-- プロバイダー側の制限により、合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 5 分かかる場合があります。 
+- プロバイダー側の制限により、合計 100 万の顧客プロファイルを持つセグメントのエクスポートには最大 5 分間かかる場合があります。 
 - Google 広告でのマッチングには、最大 48 時間かかる場合があります。
 
 ## <a name="set-up-connection-to-google-ads"></a>Google Ads への接続を設定する
@@ -74,7 +74,7 @@ ms.locfileid: "7558978"
 
 1. **[Google 広告オーディエンス ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** を入力して、**接続** を選択し、Google 広告への接続を初期化します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。
 
 1. エクスポートするセグメントを選択します。 合計で最大 100 万の顧客プロファイルを Google 広告にエクスポートできます。
 
