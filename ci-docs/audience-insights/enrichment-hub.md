@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617561"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673005"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -29,7 +29,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **検出** タブには、サポートされているすべてのエンリッチメント オプションが表示されます。
 
-# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 - Microsoft が提供する [ブランド](enrichment-microsoft.md)
 - Microsoft が提供する [関心](enrichment-microsoft.md)
@@ -38,7 +38,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 - セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
 - Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
 
-# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[事業取引先企業 (B2B)](#tab/b2b)
 
 - Leadspace が提供する [会社データ](enrichment-leadspace.md)
 - Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 

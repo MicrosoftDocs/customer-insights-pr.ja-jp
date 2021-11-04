@@ -1,19 +1,19 @@
 ---
 title: " Dynamics 365 Customer Insights の有料ライセンスを開始する"
 author: m-hartmann
-description: Dynamics 365 Customer Insights での初回実行の経験に慣れ、その機能を試してみます。
+description: Dynamics 365 Customer Insights での初回実行の経験に精通し、その機能を試してみます。
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645701"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673465"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Customer Insights を購入してから始めましょう
 
@@ -29,7 +29,7 @@ Customer Insights はテナントごとにライセンスされ、複数の機�
 
 ## <a name="start-with-customer-insights"></a>Customer Insights を使い始める
 
-初回実行のエクスペリエンスは、Customer Insights で最初に焦点を当てる要素を選択し、サンプル データで機能を探索するのに役立ちます。 次のステップとして、独自の環境を作成し、独自のデータを操作できます。
+初回実行のエクスペリエンスは、Customer Insights で初期の焦点を選択し、サンプル データで機能を探索するのに役立ちます。 次のステップとして、独自の環境を作成し、独自のデータを操作できます。
 
 **初めてサインインするには**:
 

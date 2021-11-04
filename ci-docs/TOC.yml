@@ -232,8 +232,6 @@
           href: audience-insights/connections.md
         - name: 複数の環境を管理する
           href: audience-insights/manage-environments.md
-        - name: サポートされている言語
-          href: audience-insights/supported-languages.md
         - name: セキュリティ
           items:
             - name: 独自の Key Vault を導入する

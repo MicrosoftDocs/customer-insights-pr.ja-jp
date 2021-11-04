@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617381"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673847"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -26,7 +26,7 @@ ms.locfileid: "7617381"
 
 新しいセグメントを作成するには、複数の方法があります: 
 
-# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 - セグメント ビルダーを使用した複雑なセグメント: [独自に構築する](segment-builder.md#create-a-new-segment) 
 - 1 つの演算子の単純なセグメント: [クイック セグメント](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ ms.locfileid: "7617381"
 - メジャーまたは属性に基づく AI を活用した提案: [メジャーを改善するための提案されたセグメント](suggested-segments.md) 
 - 活動に基づく提案: [顧客活動に基づく提案されたセグメント](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[事業取引先企業 (B2B)](#tab/b2b)
 
 - セグメント ビルダーを使用した複雑なセグメント: [独自に構築する](segment-builder.md#create-a-new-segment)
 

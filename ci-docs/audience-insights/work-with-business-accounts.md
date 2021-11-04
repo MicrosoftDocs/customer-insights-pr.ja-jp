@@ -1,7 +1,7 @@
 ---
 title: 主なターゲットとしてビジネスアカウントを開始する対象者
 description: 主なターゲット対象 Dynamics 365 Customer Insights としてのビジネス アカウントについて学習します。
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644994"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673693"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>対象者分析情報でビジネス アカウントを使用する
 
-Dynamics 365 Customer Insights の対象者分析情報機能では、個人の顧客 (B2C) とビジネス アカウント (B2B) など、さまざまな主要ターゲット対象ユーザー向けに環境を構成できます。 B2C シナリオでは、データは個人を中心にしています。 B2B の場合、主なターゲット対象ユーザーは取引先企業 (組織または企業) と取引先担当者です。 この記事は、ビジネス アカウントの環境を開始するのに役立ちます。 環境の焦点に応じて、対象者分析情報の機能領域の違いが一覧表示されます。 違いの詳細については、機能領域のドキュメントを確認してください。 
+Dynamics 365 Customer Insights の対象者分析情報機能では、個人の消費者 (B-to-B) とビジネス アカウント (B-to-B) など、さまざまな主要ターゲット対象ユーザー向けに環境を構成できます。 B-to-C シナリオでは、データは個人を中心にしています。 B-to-B の場合、主なターゲット対象ユーザーは取引先企業 - 組織または企業 - および取引先担当者です。 この記事は、ビジネス アカウントの環境を開始するのに役立ちます。 環境の焦点に応じて、対象者分析情報の機能領域の違いが一覧表示されます。 違いの詳細については、機能領域のドキュメントを確認してください。 
 
 ## <a name="create-an-environment-for-business-accounts"></a>ビジネス アカウントの環境を作成する
 
@@ -32,7 +32,7 @@ Dynamics 365 Customer Insights の対象者分析情報機能では、個人の�
 
 組織が個人の顧客とビジネス アカウントの環境を維持している場合、左側のペインのスイッチャーを使用して、プライマリ ターゲット対象ユーザーを選択できます。
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="個人の顧客とビジネス アカウントの間でプライマリ ターゲット対象ユーザーを変更するスイッチャー。":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="個人の顧客とビジネス アカウントの間でプライマリ ターゲット対象ユーザーを変更するスイッチャー。":::
 
 ## <a name="supported-feature-areas"></a>サポートされている機能領域
 

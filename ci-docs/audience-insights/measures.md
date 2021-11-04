@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622976"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673471"
 ---
 # <a name="define-and-manage-measures"></a>メジャーの定義と管理
 
@@ -28,7 +28,7 @@ ms.locfileid: "7622976"
 
 このセクションでは、新しいメジャーを最初から作成する方法について説明します。 統合された顧客プロファイル エンティティに接続するように設定された関係を持つデータ エンティティからのデータ属性を使用して、メジャーを構築できます。
 
-# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 1. 対象者に関するインサイトで、**メジャー** に移動します。
 
@@ -92,7 +92,7 @@ ms.locfileid: "7622976"
 
 1. **メジャー** に移動して、リストで新たに作成されたメジャーを確認します。
 
-# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[事業取引先企業 (B2B)](#tab/b2b)
 
 1. 対象者に関するインサイトで、**メジャー** に移動します。
 
@@ -164,7 +164,7 @@ ms.locfileid: "7622976"
 
 一般的に使用されるメジャーの定義済みテンプレートを使用して、それらを作成できます。 テンプレートの詳細な説明とガイド付きのエクスペリエンスは、効率的なメジャーの作成に役立ちます。 テンプレートは、*Unified Activity* エンティティからマップされたデータに基づいて構築されます。 したがって、テンプレートからメジャーを作成する前に、[顧客活動](activities.md) を構成していることを確認します。
 
-# <a name="individual-customers-b2c"></a>[個人消費者 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 一般的に使用されるメジャーの定義済みテンプレートを使用して、それらを作成できます。 テンプレートの詳細な説明とガイド付きのエクスペリエンスは、効率的なメジャーの作成に役立ちます。 テンプレートは、*Unified Activity* エンティティからマップされたデータに基づいて構築されます。 したがって、テンプレートからメジャーを作成する前に、[顧客活動](activities.md) を構成していることを確認します。
 
@@ -212,7 +212,7 @@ ms.locfileid: "7622976"
 
 1. **実行** を選択してメジャーの結果を計算できるようになりました。 後で調整するには、**下書きの保存** を選択します。
 
-# <a name="business-accounts-b2b"></a>[事業取引先企業 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[事業取引先企業 (B2B)](#tab/b2b)
 
 この機能は、個々の顧客がプライマリ ターゲット対象ユーザーである環境で作成されたメジャーでのみ使用できます。
 

@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645132"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673739"
 ---
 # <a name="manage-environments"></a>環境の管理
 
@@ -67,7 +67,8 @@ ms.locfileid: "7645132"
 
 - 顧客のプロファイル。
 - データ ソースの資格情報。 すべてのデータ ソースの認証情報を提供し、データソースを手動で更新する必要があります。
-- Common Data Model フォルダと Dataverse マネージド Data Lake のデータ ソース。 これらのデータ ソースは、ソース環境と同じ名前で手動で作成する必要があります。
+
+- Common Data Model フォルダーと Dataverse- マネージド Data Lake からのデータ ソース。 これらのデータ ソースは、ソース環境と同じ名前で手動で作成する必要があります。
 
 環境をコピーすると、新たな環境が作成されたことを示す確認メッセージが表示されます。 **データソースに移動する** を選択してデータ ソースのリストを表示します。
 

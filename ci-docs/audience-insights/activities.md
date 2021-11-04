@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617975"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673144"
 ---
 # <a name="customer-activities"></a>顧客活動
 
@@ -49,7 +49,7 @@ Dynamics 365 Customer Insights では、[さまざまなデータ ソース](dat
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="エンティティの関連付けを定義する。":::
 
    > [!TIP]
-   > B2B 環境では、取引先企業エンティティと他のエンティティのどちらかを選択できます。 取引先企業エンティティを選択すると、リレーションシップ パスが自動的に設定されます。 他のエンティティの場合、取引先企業エンティティに到達するまで、1 つ以上の中間エンティティの関係パスを定義する必要があります。
+   > B-to-B 環境では、取引先企業エンティティと他のエンティティのどちらかを選択できます。 取引先企業エンティティを選択すると、リレーションシップ パスが自動的に設定されます。 他のエンティティの場合、取引先企業エンティティに到達するまで、1 つ以上の中間エンティティの関係パスを定義する必要があります。
 
 1. **次へ** を選択して、次の手順に移動します。 
 

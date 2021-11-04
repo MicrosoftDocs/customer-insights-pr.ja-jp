@@ -1,7 +1,7 @@
 ---
 title: 対象者に関するインサイトのシステム構成
 description: Dynamics 365 Customer Insights 対象者に関するインサイト機能のシステム設定について説明します。
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035916"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651846"
 ---
 # <a name="system-configuration"></a>システム構成
 
@@ -24,9 +24,9 @@ ms.locfileid: "7035916"
 - [API の使用状況](#api-usage-tab)
 - [詳細](#about-tab)
 - [全般](#general-tab)
+- [セキュリティ](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![システム ページ。](media/system-tabs.png "システム ページ")
+:::image type="content" source="media/system-tabs.png" alt-text="システム ページの設定タブ。":::
 
 ## <a name="status-tab"></a>ステータス タブ
 
@@ -84,9 +84,15 @@ ms.locfileid: "7035916"
 
 ## <a name="general-tab"></a>[全般] タブ
 
-**全般** タブには、**言語** そして **国/地域の形式** の 2 つのオプションがあります。
+**全般的** タブで言語と国/地域の形式を変更できます。
 
-アプリは、[複数の言語をサポートしています](supported-languages.md)。 優先する言語を変更するには、ドロップダウンから **言語** を選択します。
+Customer Insights は、[多くの言語をサポートしています](/dynamics365/get-started/availability)。 アプリは言語選択を使用して、メニュー、ラベル テキスト、システム メッセージなどの要素を優先する言語で表示します。
+
+インポートしたデータと手動で入力した情報は翻訳されません。
+
+### <a name="update-the-settings"></a>設定を更新する
+
+優先する言語を変更するには、ドロップダウンから **言語** を選択します。
 
 日付、時刻、数値の優先フォーマットを変更するには、**国/地域の形式** ドロップダウンを使用します。 このフィールドの下にフォーマット プレビューが表示されます。 新しい言語を選択すると、システムは自動的に選択を提案します。
 
@@ -105,6 +111,13 @@ ms.locfileid: "7035916"
 
    [リアルタイムのデータ インジェスト](real-time-data-ingestion.md)を使用する操作には、リアルタイムの API 使用状況を表示するための双眼鏡記号の付いたボタンが含まれています。 ボタンを選択して、現在の環境でリアルタイム API の使用状況の詳細を含むサイド ペインを開きます。   
    **リアルタイム API の使用** ペインで **グループ化の基準** ボックスを使って、リアルタイムのインタラクションを最適に表示する方法を選択します。 API メソッド、エンティティー修飾名 (取り込んだエンティティー)、作成者 (イベントのソース)、結果 (成功または失敗)、またはエラー コード別にデータをグループ化できます。 データは履歴グラフおよびテーブルとして利用できます。
+
+## <a name="security-tab"></a>キュリティ タブ
+
+**セキュリティ** タブを使用すると、独自の[Azure Key Vault](/azure/key-vault/general/basic-concepts) を環境にリンクおよび管理します。
+専用の Key Vault を使用して、組織のコンプライアンス境界でシークレットをステージングおよび使用できます。 対象者分析情報では、Azure Key Vault のシークレットを使用してサードパーティ システムに[接続を設定する](connections.md)ことができます。
+
+詳細については、[独自の Azure Key Vault を導入する](use-azure-key-vault.md) を参照してください。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
