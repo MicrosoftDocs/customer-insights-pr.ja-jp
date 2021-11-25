@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643436"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792033"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -34,7 +34,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
   - **メジャー制御**: タイプ顧客属性の[構成されたメジャー](measures.md)が必要です。
   - **インテリジェンス制御**: [予測](predictions.md)または[カスタム モデル](custom-models.md)を使用して生成されたデータが必要です。
   - **顧客詳細制御**: プロファイルのすべてのフィールドは、統合された顧客プロファイルで使用できます。
-  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。
+  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。 カード アドインは、次のエンリッチメントをサポートしています: Microsoft が提供する[ブランド](enrichment-microsoft.md)、Microsoft が提供する[関心](enrichment-microsoft.md)。
   - **連絡先制御**: 連絡先タイプのセマンティック エンティティの定義が必要です。
   - **タイムライン コントロール**: [構成済みアクティビティ](activities.md)が必要です。
 

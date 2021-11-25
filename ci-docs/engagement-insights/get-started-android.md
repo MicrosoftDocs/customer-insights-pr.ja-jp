@@ -4,17 +4,17 @@ description: Android SDK をパーソナライズして実行する方法を学�
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/15/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494281"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655348"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Android SDK の利用を開始する
 
@@ -42,12 +42,12 @@ ms.locfileid: "7494281"
 
 - 既存のワークスペースがない場合は、**新しいワークスペース** を選択し、手順に従って [新しいワークスペース](create-workspace.md) を作成します。
 
-- ワークスペースを作成したら、**管理者** > **ワークスペース** に移動し、**インストール ガイド** を選択します。 
+- ワークスペースを作成したら、**管理者** > **ワークスペース** に移動し、**インストール ガイド** を選択します。
 
 ## <a name="configure-the-sdk"></a>SDK を構成する
 
 SDK をダウンロードしたら、Android Studio で SDK を操作して、イベントを有効にして定義できます。 これには 2 つの方法があります:
-### <a name="option-1-using-jitpack-recommended"></a>オプション1: JitPack の使用 (推奨)
+### <a name="option-1-use-jitpack-recommended"></a>オプション 1: JitPack を使用する (推奨)
 1. JitPack リポジトリをルートに追加します: `build.gradle`
     ```gradle
     allprojects {
@@ -61,12 +61,12 @@ SDK をダウンロードしたら、Android Studio で SDK を操作して、�
 1. 依存関係を追加します:
     ```gradle
     dependencies {
-        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
         api 'com.google.code.gson:gson:2.8.1'
     }
     ```
 
-### <a name="option-2-using-download-link"></a>オプション 2: ダウンロード リンクを使用する
+### <a name="option-2-use-download-link"></a>オプション 2: ダウンロード リンクを使用する
 1. [エンゲージメント分析情報の Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) をダウンロードし、`libs` フォルダに `eiandroidsdk-debug.aar` ファイルを配置します。
 
 1. プロジェクト レベルの `build.gradle` ファイルを開き、次のスニペットを追加します:
@@ -83,22 +83,23 @@ SDK をダウンロードしたら、Android Studio で SDK を操作して、�
     }
     ```
 
-1. `manifests` フォルダ配下にある `AndroidManifest.xml` ファイルに、ネットワークとインターネットの許可を追加します。 
+## <a name="enable-auto-instrumentation"></a>自動インストルメンテーションを有効にする
+
+1. `manifests` フォルダ配下にある `AndroidManifest.xml` ファイルに、ネットワークとインターネットの許可を追加します。
     ```xml
     <manifest>
         ...
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     ```
-    
-1. `AndroidManifest.xml` ファイルでエンゲージメント インサイト SDK の設定を行います。 
 
-## <a name="enable-auto-instrumentation"></a>自動インストルメンテーションを有効にする
+1. `AndroidManifest.xml` ファイルでエンゲージメント インサイト SDK の設定を行います。
+
 1. **インストール ガイド** から、XML スニペットをコピーします。 `Your-Ingestion-Key` は自動的に入力されます。
 
    > [!NOTE]
    > `${applicationId}` セクションを置き換える必要はありません。 自動的に入力されます。
-   
+
 
    ```xml
    <application>
@@ -116,20 +117,24 @@ SDK をダウンロードしたら、Android Studio で SDK を操作して、�
    </application>
    ```
 
-1. 上部の `autoCapture` フィールドを `true` または `false` に設定し、`View` イベントの自動取り込みを有効または無効にします。 現在 `Action` イベントは手動で追加する必要があります。
+1. 上部の `autoCapture` フィールドを `true` または `false` に設定し、`View` イベントの自動取り込みを有効または無効にします。 
+
+   >[!NOTE]
+   >`Action` イベントは手動で追加する必要があります。
 
 1. (オプション) その他の構成には、エンドポイント コレクター URL の設定が含まれます。 それらは、`AndroidManifest.xml` のインジェスト キー メタデータの下に追加できます。
-    ```xml
+
+   ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-    ```
+   ```
 
 ## <a name="implement-custom-events"></a>カスタム イベントの実装
 
 SDK を初期化した後、`MainActivity`  環境でイベントとそのプロパティを操作できます。
 
-    
+
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -141,7 +146,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>すべてのイベントのプロパティを設定します (オプション)
-    
+
 Java:
 ```java
 analytics.setProperty("year", 2021);

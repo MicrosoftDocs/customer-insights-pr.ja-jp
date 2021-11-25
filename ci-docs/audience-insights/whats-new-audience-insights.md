@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673846"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753123"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
@@ -26,6 +26,41 @@ ms.locfileid: "7673846"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="october-2021-updates"></a>2021 年 10 月の更新プログラム
+
+2021 年 10 月の更新には、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="b-to-b"></a>B-to-B
+
+2021 年 10 月以降、Customer Insights でビジネス アカウントとその関連する取引先担当者を操作できるようになりました。 以前は、アプリは主に個人消費者向けに調整されていました。 新しい環境タイプに加えて B-to-B シナリオをサポートするために、いくつかの機能領域が更新されました。 サポートされている B-to-B 機能の概要については、[対象者分析情報でビジネス アカウントを操作する](work-with-business-accounts.md) を参照してください。
+
+次のセクションでは、ビジネスア カウントと個人消費者をサポートするために適応された主要な領域のいくつかに重点を置きます。
+
+#### <a name="export-segments-based-on-business-accounts"></a>ビジネス アカウントに基づくセグメントをエクスポートする
+
+対象者分析情報のすべてのセグメント エクスポートは、ビジネス アカウントのコンテキストで使用できます。 ほとんどのセグメント エクスポートでは、ビジネス アカウントで有効にするために、追加の構成と、基になるセグメントの[取引先担当者情報](segment-builder.md#create-a-new-segment) が必要です。 詳細については、[セグメントのエクスポート](export-destinations.md#export-segments) を参照してください。
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn 広告のエクスポートをビジネス アカウントで使用する
+
+LinkedIn 広告のエクスポートは、ビジネス アカウントのコンテキストで取引先担当者および会社のターゲティングに使用できるようになりました。 LinkedIn エクスポートの主な焦点として会社のターゲティングを選択すると、取引先担当者情報を予測することなく、ビジネス アカウントに基づいて構築されたセグメントをエクスポートできます。 詳細については、[LinkedIn 広告のエクスポート](export-linkedin-ads.md) および[取引先担当者ターゲティング](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) と[会社のターゲティング](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) の違いに関するドキュメントに移動してください。 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>ビジネス アカウントとその階層に基づいてメジャーを作成する
+
+メジャー ビルダーは、ビジネス アカウントの周囲にメジャーを作成し、オプションで階層情報を使用できるようにします。 階層情報は、アカウントとそれに関連するすべてのサブ アカウント全体でメジャーの計算をロールアップするために使用されます。 たとえば、階層で識別されるビジネス アカウントの各グループの総収益などのメジャーを作成できます。 詳細については、[メジャーの定義および管理](measures.md) を参照してください。
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>ビジネス アカウントとその階層に基づいてセグメントを作成する
+
+セグメント ビルダーを使用すると、セグメント内の各アカウントの取引先担当者情報をオプションで含むビジネス アカウントのセグメントを作成できます。 アカウント階層を設定している場合は、セグメント作成でアカウント階層情報を使用できます。 詳しくは、[新しいセグメントを作成する](segment-builder.md#create-a-new-segment) をご覧ください。
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>離反傾向に対する詳細な分析情報でビジネス アカウントを保持する
+
+顧客離反予測モデルは、ビジネス アカウントもサポートするようになりました。 アカウントだけでなく、アカウントと、アカウントが購入した製品またはサービス カテゴリの組み合わせについても、離反のリスクを評価できます。 この追加により、アカウントが一般的に購入を停止する可能性が高いのか、特定のカテゴリの商品やサービスに対してのみ購入を停止する可能性が高いのかを理解するのに役立ちます。 この AI モデルの使用をさらに支援するために、アカウントが離反する可能性が高い理由もリストされています。 詳細については、[トランザクション離反予測 (プレビュー)](predict-transactional-churn.md) を参照してください。
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>顧客ビューでビジネス アカウントの取引先担当者を表示する
+
+ビジネス アカウントが関連アカウントにマップされている場合、Customer Insights アプリは、これらの取引先担当者を顧客詳細ビューの一部として表示します。 詳細については、[顧客プロファイル](customer-profiles.md) を参照してください。
+
 
 ## <a name="september-2021-updates"></a>2021 年 9 月の更新プログラム
 
@@ -60,7 +95,7 @@ ms.locfileid: "7673846"
 
 ### <a name="extensibility"></a>拡張性
 
-- **セグメントやその他のデータを Salesforce Marketing Cloudにエクスポート**: [ Salesforce Marketing Cloud](export-salesforce.md) をはじめとする様々なエクスポート先に対応します。 ブランド化されたSFTPエクスポートを介して、セグメントやその他のデータを Salesforce Marketing Cloud にエクスポートできるようになりました。 データのインポートは Salesforce 上で完全に自動化され、より効果的なマーケティングキャンペーンの作成に利用できます。  
+- **セグメントやその他のデータを Salesforce Marketing Cloudにエクスポート**: [Salesforce Marketing Cloud](export-salesforce.md) をはじめとする様々なエクスポート先に対応します。 ブランド化されたSFTPエクスポートを介して、セグメントやその他のデータを Salesforce Marketing Cloud にエクスポートできるようになりました。 データのインポートは Salesforce 上で完全に自動化され、より効果的なマーケティングキャンペーンの作成に利用できます。  
  
 - **セグメントを ActiveCampaign にエクスポート**: [アクティブなキャンペーン](export-active-campaign.md)をはじめとする様々なエクスポート先に対応します。 セグメントをエクスポートして、キャンペーンの生成、メールマーケティングの実行、ActiveCampaign の特定の顧客グループを利用できるようになりました。
  

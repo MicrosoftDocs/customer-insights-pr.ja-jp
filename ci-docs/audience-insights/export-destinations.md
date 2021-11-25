@@ -1,7 +1,7 @@
 ---
 title: Customer Insights からデータをエクスポートする
 description: エクスポートを管理してデータを共有します。
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673329"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732156"
 ---
 # <a name="exports-preview-overview"></a>エクスポート (プレビュー) の概要
 
@@ -97,7 +97,9 @@ ms.locfileid: "7673329"
 
 構成する各エクスポートには、更新スケジュールがあります。 更新中に、システムはエクスポートに含める新しいデータまたは更新されたデータを検索します。 既定では、エクスポートはすべての [スケジュールされたシステム更新](system.md#schedule-tab) の一部として実行されます。 更新スケジュールをカスタマイズするか、オフにしてエクスポートを手動で実行できます。
 
-エクスポートのスケジュールは、環境の状態によって異なります。 スケジュールされたエクスポートが開始する時点で、[依存関係](system.md#refresh-policies) に進行中の更新がある場合、システムは最初に更新を完了してからエクスポートを実行します。 エクスポートが最後に更新された日時を列 **最終更新** で確認できます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+エクスポートのスケジュールは、環境の状態によって異なります。 スケジュールされたエクスポートが開始する時点で、[依存関係](system.md#refresh-processes) に進行中の更新がある場合、システムは最初に更新を完了してからエクスポートを実行します。 エクスポートが最後に更新された日時を列 **最終更新** で確認できます。
 
 ### <a name="schedule-exports"></a>エクスポートのスケジュール
 

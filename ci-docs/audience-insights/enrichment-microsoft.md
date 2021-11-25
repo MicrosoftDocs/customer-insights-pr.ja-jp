@@ -1,7 +1,7 @@
 ---
 title: Microsoft のデータで顧客プロファイルをエンリッチする
 description: Microsoft が所有するデータを使用して、ブランドや関心のアフィニティで顧客データをエンリッチさせます。
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 51b150cbf5d9cfb3a5df42e680bcfa57ec5496cb
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617884"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732548"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>ブランドと関心のアフィニティで顧客プロファイルをエンリッチさせる (プレビュー)
 
@@ -116,8 +116,7 @@ Microsoft のオンライン検索データを使用して、さまざまな人�
 
 顧客データのサイズによっては、エンリッチメントの実行が完了するまでに数分かかる場合があります。
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクで **詳細を見る** を選択すると、処理時間、最終処理日、タスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>強化の結果
 

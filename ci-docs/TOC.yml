@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: 拡張住所
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: 会社データを拡張する
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Maps でエンリッチする
           href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies を利用して強化する
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: API リファレンス
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: 同意の管理 (プレビュー)
+  items:
+    - name: ヘルプ ハブ
+      href: consent-management/index.yml
+    - name: 機能の概要
+      href: consent-management/overview.md
+    - name: 開始する
+      items:
+        - name: 開始する
+          href: consent-management/get-started.md
+        - name: 概念と用語
+          href: consent-management/glossary.md
+    - name: 同意データをインポートする
+      items:
+        - name: 同意データをインポートする
+          href: consent-management/import-consent-data.md
+        - name: 同意データを設定し、同意の基本設定を適用する
+          href: consent-management/set-consent-rules.md
+    - name: 同意データを管理する
+      items:
+        - name: 対象者分析情報で同意規則を有効化する
+          href: audience-insights/activate-consent.md
+        - name: 対象者分析情報のセグメントを使用して既定の同意規則を管理する
+          href: audience-insights/change-default-consent-rules.md
+    - name: 設定とユーザーを管理する
+      items:
+        - name: システム設定のコンフィギュレーション
+          href: consent-management/system-settings.md
+        - name: ユーザーとアクセス許可を管理する
+          href: consent-management/manage-users.md
+    - name: 同意データを使用する
+      items:
+        - name: 同意データを使用して予測を作成する
+          href: consent-management/predictions-consent-data.md
 - name: エンゲージメント分析情報 (プレビュー)
   items:
     - name: ヘルプ ハブ

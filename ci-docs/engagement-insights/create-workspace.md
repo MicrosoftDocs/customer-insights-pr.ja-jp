@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645316"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673449"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>新しいワークスペースから作成してメンバーを追加する
 
@@ -26,9 +26,9 @@ ms.locfileid: "7645316"
 
 ## <a name="create-a-new-workspace"></a>新しいワークスペースの作成
 
-ワークスペースを作るプロセスには、ワークスペースの整理に必要な *環境* を整えることも含まれます。 環境とは、1つまたは複数のワークスペースを含むことができるスペースです。 環境を使用して、ワークスペースとCustomer Insights の対象ユーザーのインサイト機能への接続を管理できます。
+ワークスペースを作るプロセスには、ワークスペースの整理に必要な *環境* を整えることも含まれます。 環境とは、1つまたは複数のワークスペースを含むことができるスペースです。 環境を使用して、ワークスペースと対象者分析情報機能への接続を管理できます。
 
-1. ワークスペース スイッチャーから **新規** を選択します。
+1. ワークスペース スイッチャーから **+ 新規** を選択します。
 
    :::image type="content" source="media/new-workspace.png" alt-text="ナビゲーション ウィンドウと説明にコールアウトがある Customer Insights ページ。":::
 

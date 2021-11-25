@@ -1,7 +1,7 @@
 ---
 title: データ統合のためにエンティティを照合する
 description: エンティティを照合してデータセットを結合し、統一された顧客プロファイルを作成します。
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648214"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732640"
 ---
 # <a name="match-entities"></a>エンティティを一致させる
 
@@ -180,10 +180,7 @@ ms.locfileid: "7648214"
 
 成功した実行結果である、統合した顧客プロファイル エンティティは、**エンティティ** ページで確認できます。 統合された顧客エンティティは、**プロファイル** セクションで **顧客** と呼ばれます。 最初に成功した照合の実行は、統合 *Customer* エンティティを作成します。 後続のすべての照合実行では、そのエンティティが展開されます。
 
-> [!TIP]
-> 一致プロセスを実行した後、プロセスの状態を選択して **タスクの詳細** ペインを開きます。 処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告に関する概要が表示されます。 **詳細の表示** を選択し、どのエンティティが一致プロセスに参加したか、どのルールがそれらに適用されたか、および更新が正常に公開されたかどうかを確認します。  
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。  
-> :::image type="content" source="media/process-detail-path.png" alt-text="タスクステータスリンクからプロセスの詳細にアクセスするためのドリルダウンパス。":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>一致のレビューと検証
 

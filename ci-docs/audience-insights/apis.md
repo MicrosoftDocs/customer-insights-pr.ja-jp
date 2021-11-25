@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033591"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732270"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -135,7 +135,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. [Microsoft 認証ライブラリ (MSAL)](/azure/active-directory/develop/msal-overview) を使用し、既存の [Azure アプリの登録](#create-a-new-app-registration-in-the-azure-portal) を使用して `AccessToken` を取得します。
 
-1. トークンの認証と取得に成功したら、新しい `HttpClient` を作成するか、既存のものを使用して、追加の **DefaultRequestHeaders "Authorization"** を **ベアラー <access token>** に設定し、**Ocp-Apim-Subscription-Key** を [Customer Insights 環境の **サブスクリプション キー**](#get-started-trying-the-customer-insights-apis) に設定します。   
+1. トークンの認証と取得に成功したら、**ベアラー "アクセス トークン"** に設定された追加の **DefaultRequestHeaders "認証"** と、[Customer Insights 環境から **サブスクリプション キー**](#get-started-trying-the-customer-insights-apis) に設定された **Ocp-Apim-Subscription-Key** を使用して、新しい `HttpClient` を作成するか既存の `HttpClient` を使用します。   
  
    必要に応じて **Authorization** ヘッダーをリセットします。 たとえば、トークンの有効期限が切れたときです。
 

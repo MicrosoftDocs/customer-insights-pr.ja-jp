@@ -1,7 +1,7 @@
 ---
 title: セマンティック マッピング (プレビュー)
 description: セマンティック マッピングの概要とその使用方法。
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622941"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731949"
 ---
 # <a name="semantic-mappings"></a>セマンティック マッピング
 
@@ -75,8 +75,7 @@ ms.locfileid: "7622941"
 
 1. 後でセマンティック マッピングを実行するには、セマンティック マッピングを選択し、**更新** を選択します。
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>既存のセマンティック マッピングを管理する
 
@@ -91,5 +90,6 @@ ms.locfileid: "7622941"
 - **名前を変更**: 選択したセマンティック マッピングに別の名前を入力できるダイアログを開きます。 **保存** を選択して変更を適用します。
 
 - **削除**: 選択したセマンティック マッピングの削除を確認するダイアログを開きます。 セマンティック マッピングと削除アイコンを選択して、一度に複数のセマンティック マッピングを削除することもできます。 **削除** を選択して、削除内容を確認します。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

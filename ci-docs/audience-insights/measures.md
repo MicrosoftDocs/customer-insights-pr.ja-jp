@@ -1,7 +1,7 @@
 ---
 title: メジャーを作成および管理する
 description: メジャーを定義して、ビジネスのパフォーマンスを分析して反映させます。
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673471"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732732"
 ---
 # <a name="define-and-manage-measures"></a>メジャーの定義と管理
 
@@ -238,8 +238,7 @@ ms.locfileid: "7673471"
 - メジャーを **削除** します。
 - **アクティブ化** または **非アクティブ化** します。 非アクティブなメジャーは、[スケジュールされた更新](system.md#schedule-tab)中に更新されません。
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクで **詳細を見る** を選択すると、処理時間、最終処理日、タスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>次のステップ
 

@@ -1,7 +1,7 @@
 ---
 title: 顧客活動
 description: 顧客の活動を定義し、顧客プロファイルのタイムラインでこれらを表示します。
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673144"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732466"
 ---
 # <a name="customer-activities"></a>顧客活動
 
@@ -82,9 +82,7 @@ Dynamics 365 Customer Insights では、[さまざまなデータ ソース](dat
 
 1. **活動** ページで **実行** を選択し、活動を処理します。 
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>既存の活動の管理
 

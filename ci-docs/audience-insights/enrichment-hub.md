@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673005"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770128"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -42,6 +42,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 - Leadspace が提供する [会社データ](enrichment-leadspace.md)
 - Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 
+- Microsoft 提供による[強化された会社データ](enrichment-enhanced-company-data.md)
 - HERE Technologies が提供する [位置データ](enrichment-here.md) 
 - セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
 - Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)

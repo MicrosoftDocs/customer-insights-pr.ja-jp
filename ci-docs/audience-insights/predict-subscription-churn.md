@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035329"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799734"
 ---
 # <a name="subscription-churn-prediction-preview"></a>サブスクリプションの解約予測 (プレビュー)
 
 サブスクリプション解約予測では、顧客が自社のサブスクリプション製品やサービスを利用しなくなった場合に、状況不利となっている顧客を予測します。 **インテリジェンス** > **予測** ページで新しいサブスクリプション解約の予測を作成できます。 作成済みの予測を確認するには、**自分の予測** を選択します。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > サンプル データを使用して、サブスクリプション解約予測のチュートリアルを試してみてください: [サブスクリプション 解約予測サンプル ガイド](sample-guide-predict-subscription-churn.md)。

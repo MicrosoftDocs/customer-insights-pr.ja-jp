@@ -1,7 +1,7 @@
 ---
 title: データ ソースを使用してデータを取り込む
 description: さまざまなソースからデータをインポートする方法について説明します。
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645361"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732148"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -48,14 +48,7 @@ Dataverse 環境を Customer Insights に関連付け後に作成されるデー
 > [!div class="mx-imgBorder"]
 > ![データ ソースが追加されました。](media/configure-data-datasource-added.png "追加されたデータ ソース")
 
-|Status  |内容  |
-|---------|---------|
-|成功   |**最終更新** 列に時間が記載されている場合、データ ソースは正常に取り込まれました。
-|開始前   |データ ソースには、まだデータが取り込まれていないか、ドラフト モードのままです。         |
-|更新中    |データ取り込みが進行中です。 この操作をキャンセルするには、**アクション** 列で **更新を中止** を選択します。 データ ソースの更新を停止すると、そのデータ ソースは最後の更新状態に戻ります。       |
-|失敗     |データの取り込みでエラーが発生しました。         |
-
-任意のデータ ソースの **ステータス** 列でで値を選択して、詳細をレビューします。 **進捗状況の詳細** ペインで、**データ ソース** を展開します。 **詳細の表示** を選択し、エラーの詳細や下流プロセスの更新など、更新ステータスのその他の情報を確認します。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、**エンティティ** ページから取り込んだデータをレビューできます。 詳細については、[エンティティ](entities.md) を参照してください。
 

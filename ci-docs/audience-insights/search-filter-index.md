@@ -1,7 +1,7 @@
 ---
 title: 顧客プロファイルの検索とフィルター
 description: 統一された顧客プロファイルに関する情報をすばやく検索し、指定された属性をフィルタ―します。
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469995"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732040"
 ---
 # <a name="customer-profiles-search--filter-index"></a>顧客プロファイル: 検索とフィルターのインデックス
 
 顧客データを統合した結果は、顧客ベース全体に統一されたビューを提供する顧客プロファイル エンティティです。 迅速に [特定の顧客または顧客グループに関する情報を見つける](customer-profiles.md) には、**検索** と **フィルタ** 機能を **顧客** ページで構成できます。 ユーザーが検索とフィルタリングに使用できる **検索およびフィルター インデックス** ページを読んで、管理者がどのように属性を編集できるかを学んください。
 
-> [!div class="mx-imgBorder"]
-> ![検索フィルター。](media/search-filter.png "検索フィルター")
+   :::image type="content" source="media/search-filter.png" alt-text="検索フィルター":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>フィールドを追加して属性を指定する
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483681"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791987"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Customer Insights の機能におけるサービス制限
 
@@ -26,8 +26,8 @@ ms.locfileid: "7483681"
 
 | 面グラフ  | 制限  | メモ  |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| セグメントとメジャー | 100 セグメントまたはメジャー。 | アクティブな [セグメント](audience-insights/segments.md) と [メジャー](audience-insights/measures.md) の総数の合計は 100 を超えることはできません。  |
-| 関係 | エンティティ パスの関係性には、20 段階の深さがあります。 | ビルダーのインターフェイスを使用して[セグメント](audience-insights/segments.md)または[メジャー](audience-insights/measures.md)を作成する場合、エンティティ パスでは、開始エンティ ティとターゲット・エンティティの間に最大 20 のリレーションシップ・ホップを設定できます。  |
+| セグメント、メジャー、および予測 | 300  | [セグメント](audience-insights/segments.md)、[メジャー](audience-insights/measures.md)、および[予測](audience-insights/predictions.md)の合計は、300 を超えることはできません。  |
+| 顧客間関係 | エンティティ パスの関係性には、20 段階の深さがあります。 | ビルダーのインターフェイスを使用して[セグメント](audience-insights/segments.md)または[メジャー](audience-insights/measures.md)を作成する場合、エンティティ パスでは、開始エンティ ティとターゲット・エンティティの間に最大 20 のリレーションシップ・ホップを設定できます。  |
 
 
 ## <a name="engagement-insights"></a>エンゲージメント分析情報

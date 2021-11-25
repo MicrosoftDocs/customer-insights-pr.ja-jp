@@ -1,7 +1,7 @@
 ---
 title: 対象者に関するインサイトのセグメント
 description: セグメントの概要と、セグメントの作成および管理方法。
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673847"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732594"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -65,8 +65,7 @@ ms.locfileid: "7673847"
 
 **セグメント** pページで **すべて更新** を選択すると、すべてのセグメントを一度に更新することができ、1つまたは複数のセグメントを選択してオプションから **更新** を選択すると、該当するセグメントを更新することができます。 または、**管理者** > **システム** > **スケジュール** で定期的な更新を構成できます。
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>セグメントのエクスポート
 
@@ -105,5 +104,6 @@ ms.locfileid: "7673847"
 > このリストに表示されるフィールドは、セグメントのエンティティの属性に基づいています。
 >
 >このリストは、一致するセグメント メンバーのプレビューであり、セグメントの最初の 100 レコードが表示されるため、必要に応じてセグメントをすばやく評価し、定義をレビューできます。 一致するすべてのレコードを表示するには、[セグメントをエクスポートする](export-destinations.md) 必要があります。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 
