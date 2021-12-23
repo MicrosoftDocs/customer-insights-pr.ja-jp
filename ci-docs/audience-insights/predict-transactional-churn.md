@@ -1,5 +1,5 @@
 ---
-title: トランザクション離反の予測
+title: トランザクション チャーンの予測 (ビデオ)
 description: 顧客が製品やサービスを購入しなくなるリスクがあるかどうかを予測します。
 ms.date: 10/20/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673051"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904078"
 ---
 # <a name="transaction-churn-prediction-preview"></a>トランザクション離反の予測 (プレビュー)
 

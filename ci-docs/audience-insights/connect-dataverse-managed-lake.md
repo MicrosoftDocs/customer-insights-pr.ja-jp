@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse のテーブルへの接続
 description: Microsoft Dataverse が管理する  Data Lake からデータをインポートする。
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033086"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900157"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-この記事では、Dataverse のユーザーが Dataverse のマネージド レイクで分析エンティティに素早く接続する方法について説明します。 これを進めるには、 Dataverse 組織の管理者で、マネージド レイクで利用可能なエンティティのリストを見る還元が付与されている必要があります。
+この記事では、Dataverseユーザーが Microsoft Dataverse 管理レイクの分析エンティティにすばやく接続する方法について説明しています。 
+
+> [!NOTE]
+> 進んで、管理レイクで使用できるエンティティのリストを表示するには、Dataverse 組織の管理者である必要があります。
 
 ## <a name="important-considerations"></a>重要な考慮事項
 
-Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください
+Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Dataverse マネージド レイクに接続する
 
@@ -32,12 +35,9 @@ Azure Data Lake Storage などのオンライン サービスに保存される�
 
 2. **データソースの追加** を選択します。
 
-3. **Microsoft Dataverse マネージドレイクに接続する** を選択し、**次へ** を選択します。
+3. **Microsoft Dataverse** を選び、**次へ** を選択します。
 
-4. データソースの **名前** を入力し、 **次へ** を選択します。 名前のガイドライン: 
-   - 文字で始まる必要があります。
-   - 文字と数字のみを使用してください。 特殊文字とスペースは使用できません。
-   - 3〜64 文字を使用します。
+4. データソースの **名前** を入力し、 **次へ** を選択します。 
 
 5. Dataverse の組織で使用する **サーバーアドレス** を入力し、**サインイン** を選択します。
 

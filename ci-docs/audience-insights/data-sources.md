@@ -1,7 +1,7 @@
 ---
 title: データ ソースを使用してデータを取り込む
 description: さまざまなソースからデータをインポートする方法について説明します。
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732148"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900365"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -25,19 +25,22 @@ Dynamics 365 Customer Insights の対象者に関するインサイト機能は�
 
 ## <a name="add-a-data-source"></a>データ ソースの追加
 
-選択したオプションに応じて、データ ソースを追加する方法に関する詳細な記事を参照してください。
+選択したオプションに応じて、データ ソースを追加する方法については、詳細な記事を参照してください。
 
-データ ソースは、主に次の 3 つの方法で追加できます:
+データ ソースとして次のデータを追加できます:
 
-- [多数の Power Query コネクタを使用して](connect-power-query.md)
-- [Common Data Model フォルダーから](connect-common-data-model.md)
-- [自分の Microsoft Dataverse レイク から](connect-dataverse-managed-lake.md)
+- [Power Query コネクタ](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse レイク](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> 試用版を使用している場合、インポート方法のセクションには **Customer Insights データ ライブラリ** オプションが含まれます。 このオプションを選択して、さまざまな業界で利用可能なサンプル データセットを選択します。 詳細については、[Dynamics 365 Customer Insights 試用版](../trial-signup.md)をご覧ください。
 
 ## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
 
-オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 データフローは、環境を設定するときに [Microsoft Dataverse 環境 URL を指定](create-environment.md) することで、Customer Insights で有効にできます。
+オンプレミスのデータ ソースから、対象ユーザー分析情報へのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 Customer Insights でデータフローを有効にするには、環境を設定するときに[Microsoft Dataverse 環境 URL の提供](create-environment.md)を参照してください。
 
-Dataverse 環境を Customer Insights に関連付け後に作成されるデータ ソースは、既定で [Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 Dataverse 環境が関連付けられる前に存在したデータ ソースを削除して再作成し、[オンプレミス データ ゲートウェイを使用](/data-integration/gateway/service-gateway-app) します。
+Dataverse 環境を Customer Insights に関連付けた後に作成されるデータ ソースは、既定で[Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 [オンプレミスのデータ ゲートウェイを使用して](/data-integration/gateway/service-gateway-app)、Dataverse 環境が関連付けられる前に存在するデータソースを削除して再作成できます。
 
 既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、Microsoft Power Platform 環境に移動するためのリンクが表示され、オンプレミスのデータ ゲートウェイを表示および構成することができます。
 

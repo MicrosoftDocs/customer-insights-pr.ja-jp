@@ -1,7 +1,7 @@
 ---
 title: セグメントの同意規則をアクティブ化する
 description: 対象者分析情報で同意データを関連付けて、同意確認をアクティブ化するには、次の手順に従います。 管理者は同意確認を無効にすることもできます。
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790782"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884080"
 ---
 # <a name="activate-consent-rules"></a>同意規則のアクティブ化
 
@@ -49,3 +49,6 @@ ms.locfileid: "7790782"
 1. **同意 (プレビュー)** タブを選択します。
 
 1. **同意確認を有効化する** セクションで、切り替えを **オフ** に設定します。
+
+> [!TIP]
+> 同意管理機能の使用を停止するには、[同意センターのシステム設定 (プレビュー)](../consent-management/system-settings.md)を参照してください。

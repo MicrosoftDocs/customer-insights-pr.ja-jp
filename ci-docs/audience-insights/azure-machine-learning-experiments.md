@@ -1,7 +1,7 @@
 ---
 title: Azure Machine Learning の実験
 description: Dynamics 365 Customer Insights で Azure Machine Learning ベースのモデルを使用します。
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033178"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881744"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning ベースのモデルを使用する
 
-Dynamics 365 Customer Insights の統合データは、追加のビジネス インサイトを生成できる機械学習モデルを構築するためのソースです。 Customer Insights は、Machine Learning Studio (クラシック) や Azure Machine Learning と統合して、独自のカスタム モデルを使用します。 Machine Learning Studio (クラシック) 上に構築された実験の例については、[Machine Learning Studio (クラシック) の実験](machine-learning-studio-experiments.md) を参照してください。 
+Dynamics 365 Customer Insights の統合データは、追加のビジネス インサイトを生成できる機械学習モデルを構築するためのソースです。 Customer Insights は Azure Machine Learning と統合し、独自のカスタム モデルを使用します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure Machine Learning デザイナーと連携する
 
-Azure Machine Learning デザイナーは、Machine Learning Studio (クラシック) と同様に、データセットとモジュールをドラッグ アンド ドロップできるビジュアル キャンバスを提供します。 デザイナーから作成されたバッチ パイプラインは、適切に構成されていれば、Customer Insights に統合できます。 
+Azure Machine Learning デザイナーは、データセットとモジュールをドラッグ アンド ドロップできるビジュアル キャンバスを提供します。 デザイナーから作成されたバッチ パイプラインは、適切に構成されていれば、Customer Insights に統合できます。 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure Machine Learning SDK との連携
 

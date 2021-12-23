@@ -1,7 +1,7 @@
 ---
-title: Power Query コネクタを使用してデータを取り込む
+title: Power Query コネクタを介してデータを取り込む (ビデオ)
 description: Power Queryに基づくデータソース用のコネクタです。
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732224"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903846"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データソースに接続する
 
-Power Query では一連の広範なコネクターを搭載しており、データを取り込むことができます。 これらコネクターの多くが Dynamics 365 Customer Insights でサポートされています。 Power Query コネクタに基づくデータ ソースの追加方法については、次のセクションで説明する手順を参照してください。 ただし、使用するコネクタによっては、異なる情報が必要になります。 それぞれのコネクタに関する詳細情報については、[Power Query コネクタについての参考資料](/power-query/connectors/) を参照してください。
+Power Query では一連の広範なコネクターを搭載しており、データを取り込むことができます。 これらコネクターの多くが Dynamics 365 Customer Insights でサポートされています。 
+
+Power Query コネクタに基づくデータ ソースの追加は、通常、このセクションで概説されている手順に従います。 ただし、使用するコネクタによっては、異なる情報が必要になります。 詳細については、[Power Query コネクタ リファレンス](/power-query/connectors/)の個々のコネクタに関するドキュメントを参照してください。
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
 
 1. **データソースの追加** を選択します。
 
-1. **データをインポート** する方法を選択し、**次へ** を選択します。
+1. **Microsoft Power Query** を選択してから、**次へ** を選択します。
 
-1. データ ソースの **名前** を入力し、**次へ** を選択してデータ ソースを作成します。 名前のガイドライン: 
-   - 文字で始まる必要があります。
-   - 文字と数字のみを使用してください。 特殊文字とスペースは使用できません。
-   - 3〜64 文字を使用します。
+1. データ ソースの **名前** を入力し、**次へ** を選択してデータ ソースを作成します。
 
-1. [使用可能なコネクタ](#available-power-query-data-sources) のいずれかを選択します。 この例では、**Text/CSV** コネクタを選択しています。
+1. [使用可能なコネクタ](#available-power-query-data-sources) のいずれかを選択します。 この例では、**テキスト/CSV** コネクタを選択します。
 
 1. 選択したコネクタの **接続設定** で必要な詳細を入力し、**次へ** を選択するとデータのプレビューが表示されます。
 
@@ -50,7 +49,7 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
 
 1. **クエリの編集** ダイアログで **データの取得** を選択することで、その他のエンティティをデータ ソースに追加できます。
 
-   次の変換を強くお勧めします。
+   次の変換を使用することを強くお勧めします。
 
    - CSV ファイルからデータを取り込む場合、多くの場合、最初の行にヘッダーが含まれています。 **テーブルの変換** に移動し、**最初の行をヘッダーとして使用する** を選択します。
    - データ型が適切に設定されていることを確認してください。
@@ -61,7 +60,7 @@ Power Query では一連の広範なコネクターを搭載しており、デ�
 
 ## <a name="available-power-query-data-sources"></a>利用可能な Power Query のデータソース
 
-Customer Insights にデータをインポートするために選択できるコネクタの最新のリストについては、[Power Query コネクタの参考資料](/power-query/connectors/)を参照してください。 
+Customer Insights にデータをインポートするために使用できるコネクタのリストについては、[Power Query コネクタ リファレンス](/power-query/connectors/)を参照してください。 
 
 **Customer Insights (Dataflows)** 列にチェック マークが付いているコネクタは、Power Query に基づいた新しいデータ ソースを作成することができます。 特定のコネクタのドキュメントを確認し、その前提条件、制限、およびその他の詳細を確認します。
 
@@ -70,7 +69,7 @@ Customer Insights にデータをインポートするために選択できる�
 > [!NOTE]
 > アプリのプロセスの 1 つで (たとえば、*セグメント化*、*一致*、または *マージ*)、現在使用されているデータソースに変更を加えることができない場合があります。 
 >
-> **設定** ページを使用して、有効な各プロセスの進行状況を追跡できます。 プロセスが完了すると、**データ ソース** ページに戻り、変更を加えることができます。
+> **設定** ページで、有効な各プロセスの進行状況を追跡できます。 プロセスが完了すると、**データ ソース** ページに戻り、変更を加えることができます。
 
 1. 対象者に関するインサイトで、**データ** > **データ ソース** に移動します。
 

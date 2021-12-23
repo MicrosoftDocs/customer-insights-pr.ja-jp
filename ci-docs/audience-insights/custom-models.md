@@ -1,7 +1,7 @@
 ---
 title: カスタム機械学習モデル | Microsoft Docs
 description: Dynamics 365 Customer Insights で Azure Machine Learning で作成したカスタマイズ モデルで作業する。
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032948"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881790"
 ---
 # <a name="custom-machine-learning-models"></a>カスタム機械学習モデル
+
+> [!NOTE]
+> Machine Learning Studio (クラシック) のサポートは、2024 年 8 月 31 日に終了します。 その日までに、[Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) に移行することをお薦めします。
+>
+> 2021 年 12 月 1 日以降、新しい Machine Learning Studio (クラシック) のリソースは作成できません。 2024 年 8 月 31 日まで、既存の Machine Learning Studio (クラシック) リソースを引き続き使用できます。 詳細については、[Azure Machine Learning に移行する](/azure/machine-learning/migrate-overview)を参照してください。
+
 
 **インテリジェンス** > **カスタム モデル** を使用すると、Azure Machine Learning モデルに基づいてワークフローを管理できます。 ワークフローは、インサイトを生成するデータを選択し、その結果を統合顧客データにマップするのに役立ちます。 カスタム ML モデルの構築の詳細については、[ Azure Machine Learning ベースのモデルを使用する](azure-machine-learning-experiments.md) を参照してください。
 
@@ -26,7 +32,7 @@ ms.locfileid: "7032948"
 
 ## <a name="prerequisites"></a>前提条件
 
-- 現在、この機能は、[Machine Learning Studio (クラシック)](https://studio.azureml.net) と [Azure Machine Learning バッチ パイプライン](/azure/machine-learning/concept-ml-pipelines) を通じて公開された Web サービスをサポートしています。
+- この機能は、[Azure Machine Learning バッチ パイプライン](/azure/machine-learning/concept-ml-pipelines)を通じて公開された Web サービスをサポートします。
 
 - この機能を使用するには、Azure Studio インスタンスに関連付けられている Azure Data Lake Gen2 ストレージ アカウントが必要です。 詳細については、[Azure Data Lake Storage Gen2 ストレージ アカウントの作成](/azure/storage/blobs/data-lake-storage-quickstart-create-account) を参照してください。
 
@@ -48,11 +54,10 @@ ms.locfileid: "7032948"
 
 1. Azure Machine Learning のサブスクリプションが Customer Insights とは異なるテナントにある場合は、選択した組織の資格情報を使用して **サイン インする** を選択します。
 
-1. Web サービスに関連付けられている **ワークスペース** を選択します。 リストされているセクションは 2 つあり、Azure Machine Learning v1 (Machine Learning Studio (クラシック)) と Azure Machine Learning v2 (Azure Machine Learning) です。 どのワークスペースが Machine Learning Studio (クラシック) Web サービスに適しているかわからない場合は、**任意** を選択します。
+1. Web サービスに関連付けられている **ワークスペース** を選択します。 
 
-1. **モデルを含む Web サービス** ドロップダウンで、Machine Learning Studio (クラシック) Web サービスまたは Azure Machine Learning パイプラインを選択します。 続いて、**次へ** を選択します。
-   - [Machine Learning Studio (クラシック) での Web サービスの公開](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service) の詳細
-   - [デザイナーを使用した Azure Machine Learning でのパイプラインの公開](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) または [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) の詳細。 パイプラインは、[パイプライン エンドポイント](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) で公開する必要があります。
+1. **モデルを含む Web サービス** ドロップダウンで、Azure Machine Learning パイプラインを選択します。 続いて、**次へ** を選択します。    
+   [デザイナーを使用した Azure Machine Learning でのパイプラインの公開](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) または [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) の詳細。 パイプラインは、[パイプライン エンドポイント](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) で公開する必要があります。
 
 1. **Web サービスの入力** ごとに、対象者に関するインサイトから一致する **エンティティ** を選択して、**次へ** を選択します。
    > [!NOTE]
@@ -62,9 +67,6 @@ ms.locfileid: "7032948"
    > ![ワークフローの構成。](media/intelligence-screen2-updated.png "ワークフローの構成")
 
 1. **モデル出力パラメーター** のステップで、次のプロパティを設定します:
-   - Machine Learning Studio (クラシック)
-      1. Web サービス出力結果のフロー先となる、出力 **エンティティ名** を入力します。
-   - Azure Machine Learning
       1. パイプライン出力結果のフロー先となる、出力 **エンティティ名** を入力します。
       1. ドロップダウンからバッチ パイプラインの **出力データ ストア パラメーター名** を選択します。
       1. ドロップダウンからバッチ パイプラインの **出力パス パラメーター名** を選択します。
@@ -93,9 +95,6 @@ ms.locfileid: "7032948"
 1. **Web サービスの入力** ごとに、対象者に関するインサイトから一致する **エンティティ** を更新できます。 続いて、**次へ** を選択します。
 
 1. **モデル出力パラメーター** のステップで、次のプロパティを設定します:
-   - Machine Learning Studio (クラシック)
-      1. Web サービス出力結果のフロー先となる、出力 **エンティティ名** を入力します。
-   - Azure Machine Learning
       1. パイプライン出力結果のフロー先となる、出力 **エンティティ名** を入力します。
       1. テスト パイプラインの **出力データ ストア パラメーター名** を選択します。
       1. テスト パイプラインの **出力パス パラメーター名** を選択します。

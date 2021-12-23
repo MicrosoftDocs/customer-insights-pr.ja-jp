@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: 拡張住所
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: 会社データを拡張する
+        - name: 拡張された会社データ
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Maps でエンリッチする
           href: audience-insights/enrichment-azure-maps.md
@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Experian を利用して強化する
           href: audience-insights/enrichment-experian.md
+        - name: Office 365 のデータでエンリッチする
+          href: audience-insights/enrichment-office.md
         - name: SFTP カスタム インポートを利用して強化する
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: セグメント
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Azure Machine Learning で実験する
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Azure Machine Learning Studio での実験
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: 予測の管理
           href: audience-insights/manage-predictions.md
         - name: 予測に基づいてセグメントを作成する
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
               href: audience-insights/connect-service-principal.md
+            - name: 診断ログをエクスポートする
+              href: audience-insights/diagnostics.md
     - name: 拡張性
       items:
         - name: エンゲージメント インサイトからの Web データを統合する

@@ -1,20 +1,20 @@
 ---
-title: Dynamics 365 アプリ用顧客カード アドイン
+title: Dynamics 365 アプリの顧客カード アドイン (動画)
 description: このアドインを使用して、Dynamics 365 アプリに対象者に関するインサイトのデータを表示します。
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792033"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904019"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -34,7 +34,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
   - **メジャー制御**: タイプ顧客属性の[構成されたメジャー](measures.md)が必要です。
   - **インテリジェンス制御**: [予測](predictions.md)または[カスタム モデル](custom-models.md)を使用して生成されたデータが必要です。
   - **顧客詳細制御**: プロファイルのすべてのフィールドは、統合された顧客プロファイルで使用できます。
-  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。 カード アドインは、次のエンリッチメントをサポートしています: Microsoft が提供する[ブランド](enrichment-microsoft.md)、Microsoft が提供する[関心](enrichment-microsoft.md)。
+  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。 カード アドインは、次の機能強化をサポートしています。Microsoft 提供の[ブランド](enrichment-microsoft.md)、Microsoft 提供の[興味](enrichment-microsoft.md)、Microsoft が提供の[Office エンゲージメント データ](enrichment-office.md)。
   - **連絡先制御**: 連絡先タイプのセマンティック エンティティの定義が必要です。
   - **タイムライン コントロール**: [構成済みアクティビティ](activities.md)が必要です。
 

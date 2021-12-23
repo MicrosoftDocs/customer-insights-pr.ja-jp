@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770128"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884222"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -46,6 +46,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 - HERE Technologies が提供する [位置データ](enrichment-here.md) 
 - セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
 - Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
+- Microsoft 提供の[アカウント エンゲージメント データ](enrichment-office.md)
 
 ---
 

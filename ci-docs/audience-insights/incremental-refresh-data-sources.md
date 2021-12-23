@@ -1,7 +1,7 @@
 ---
 title: PowerQuery ベースのデータ ソースの増分更新
 description: Power Query に基づいて、大規模なデータ ソースの新規および更新されたデータを更新します。
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377840"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900274"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query ベースのデータ ソースの増分更新
+
+この記事では、Power Query に基づいてデータ ソースの増分更新を構成する方法について説明します。
 
 データ ソースの増分更新には、次の利点があります:
 
@@ -30,9 +32,9 @@ ms.locfileid: "7377840"
 
 1. [Power Query に基づいて新しいデータ ソースを作成します](connect-power-query.md)。
 
-1. データ ソースの名称を入力してください。
+1. データ ソースの **名前** を入力してください。
 
-1. Azure SQL データベースなどの、増分更新に対応するデータ ソースを選択します。
+1. [Azure SQL データベース](/power-query/connectors/azuresqldatabase)などの、増分更新に対応するデータ ソースを選択します。
 
 1. 取り込むエンティティまたはテーブルを選択します。
 
