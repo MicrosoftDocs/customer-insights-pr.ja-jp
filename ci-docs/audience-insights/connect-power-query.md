@@ -1,5 +1,5 @@
 ---
-title: Power Query コネクタを介してデータを取り込む (ビデオ)
+title: Power Query コネクタを介してデータを取り込む (ビデオを含む)
 description: Power Queryに基づくデータソース用のコネクタです。
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903846"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934984"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データソースに接続する
 

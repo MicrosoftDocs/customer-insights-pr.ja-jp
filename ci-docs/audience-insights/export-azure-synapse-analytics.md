@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Azure Synapse Analytics にエクスポート
 description: Azure Synapse Analytics への接続を構成する方法について説明します。
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031939"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951048"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポート (プレビュー)
 
@@ -49,6 +49,8 @@ Azure の場合:
 
 ### <a name="configure-a-connection"></a>接続の構成
 
+接続を作成するには、Customer Insights のサービス プリンシパルとユーザー アカウントには、Synapse Analytics ワークスペースが配置されている *リソース グループ* で **閲覧者** の権限が必要です。 さらに、Synapse Analytics ワークスペースのサービス プリンシパルとユーザーには **Synapse 管理者** の権限が必要です。 
+
 1. **管理** > **接続** に移動します。
 
 1. **つながりの追加** を選択し、**Azure Synapse Analytics** を選択するか、**Azure Synapse Analytics** タイルで **設定** を選択して、接続を構成します。
@@ -63,7 +65,7 @@ Azure の場合:
 
 ### <a name="configure-an-export"></a>エクスポートの構成
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 共有接続でエクスポートを構成するには、Customer Insights で **共同作成者** の権限が最低限必要です。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
 
 1. **データ** > **エクスポート** に移動します。
 
@@ -82,6 +84,8 @@ Azure の場合:
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
 エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
+
+Synapse Analytics にエクスポートされたデータをクエリするには、エクスポートのワークスペースにあるデスティネーション ストレージへの **ストレージ BLOB データ閲覧者** アクセスが必要です。 
 
 ### <a name="update-an-export"></a>エクスポートの更新
 

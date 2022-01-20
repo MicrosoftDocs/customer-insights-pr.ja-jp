@@ -1,5 +1,5 @@
 ---
-title: AI で類似の顧客を見つける (ビデオ)
+title: AI で類似の顧客を見つける (ビデオを含む)
 description: 人工知能を活用して類似した顧客セグメントを見つけます。
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903896"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934846"
 ---
 # <a name="similar-customers-preview"></a>類似した顧客 (プレビュー)
 

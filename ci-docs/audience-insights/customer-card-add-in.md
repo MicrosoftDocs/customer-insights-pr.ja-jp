@@ -1,7 +1,7 @@
 ---
-title: Dynamics 365 アプリの顧客カード アドイン (動画)
+title: Dynamics 365 アプリの顧客カード アドイン (ビデオを含む)
 description: このアドインを使用して、Dynamics 365 アプリに対象者に関するインサイトのデータを表示します。
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904019"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945433"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -27,12 +27,12 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 ## <a name="prerequisites"></a>前提条件
 
 - アドインは、Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
-- Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) 必要があります。
+- Dynamics 365 のデータを対象者に関するインサイトの顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md) ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセスのマップ ステップでのデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認する必要があります。 
 - 顧客カード アドインのすべての Dynamics 365 ユーザーは、データを表示するために対象者に関するインサイトの [ユーザーとして追加](permissions.md) されている必要があります。
 - データの検索を機能させるには、対象者に関するインサイトの [検索およびフィルター機能を構成](search-filter-index.md) する必要があります。
 - 各アドイン コントロールは、対象者に関するインサイトの特定のデータに依存します。 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
   - **メジャー制御**: タイプ顧客属性の[構成されたメジャー](measures.md)が必要です。
-  - **インテリジェンス制御**: [予測](predictions.md)または[カスタム モデル](custom-models.md)を使用して生成されたデータが必要です。
+  - **インテリジェンス制御**: [予測またはカスタム モデル](predictions-overview.md) を使用して生成されたデータが必要です。
   - **顧客詳細制御**: プロファイルのすべてのフィールドは、統合された顧客プロファイルで使用できます。
   - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。 カード アドインは、次の機能強化をサポートしています。Microsoft 提供の[ブランド](enrichment-microsoft.md)、Microsoft 提供の[興味](enrichment-microsoft.md)、Microsoft が提供の[Office エンゲージメント データ](enrichment-office.md)。
   - **連絡先制御**: 連絡先タイプのセマンティック エンティティの定義が必要です。

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights データを SFTP ホストにエクスポートする (ビデオ)
+title: Customer Insights データを SFTP ホストにエクスポートする (ビデオを含む)
 description: SFTP ロケーションへの接続とエクスポートを構成する方法を説明します。
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904125"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934893"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>セグメントとその他のデータを SFTP にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "7904125"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- ファイアウォールの SFTP デスティネーションは現在サポートされていません。 
 - エクスポートの実行時間は、システムのパフォーマンスによって異なります。 サーバーの最小構成としては、2 つの CPU コアと 1Gb のメモリをお勧めします。 
 - 2 つの CPU コアと 1Gb のメモリの推奨される最小構成を使用する場合、最大 1 億件の顧客プロファイルを持つエンティティのエクスポートには 90 分かかる場合があります。 
 

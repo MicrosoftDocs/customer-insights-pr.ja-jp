@@ -80,7 +80,7 @@
       items:
         - name: 顧客プロファイルのエンリッチ
           href: audience-insights/enrichment-hub.md
-        - name: ブランドや関心のアフィニティ
+        - name: ブランドと関心
           href: audience-insights/enrichment-microsoft.md
         - name: 拡張住所
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: トランザクション離反を予測する
               href: audience-insights/predict-transactional-churn.md
+            - name: 顧客フィードバックで感情を分析する
+              href: audience-insights/sentiment-analysis.md
             - name: Azure Machine Learning のカスタム モデルの使用
               href: audience-insights/custom-models.md
             - name: 部分的な欠損データの補完

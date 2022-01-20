@@ -1,7 +1,7 @@
 ---
-title: アドレス エンハンスメント エンリッチメント (ビデオ)
+title: アドレス エンハンスメント エンリッチメント (ビデオを含む)
 description: Microsoft のモデルを使用して、顧客プロファイルの住所情報をエンリッチおよび正規化します。
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2158d80aa088c5bf8589fb7d23586496e2d8b855
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903956"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934929"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
@@ -102,7 +102,17 @@ ms.locfileid: "7903956"
 
 **拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
-## <a name="next-steps"></a>次のステップ
+### <a name="overview-card"></a>概要カード
+
+概要カードには、エンリッチメントの対応範囲に関する詳細が表示されます。 
+
+* **処理および変更された顧客**: 正常に強化された顧客プロファイルの数。
+
+* **処理および変更されていない顧客**: 認識されているが変更されていない顧客プロファイルの数。 これは通常、入力データが有効であり、エンリッチメントが改善できない場合に起こります。
+
+* **処理されていない、および変更されていない顧客**: 認識されていないプロファイルの数。 通常は、有効、またはエンリッチメントでサポートされていない入力データの場合です。
+
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

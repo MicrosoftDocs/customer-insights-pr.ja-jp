@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション チャーンの予測 (ビデオ)
+title: サブスクリプション チャーンの予測 (ビデオを含む)
 description: 顧客が自社のサブスクリプション製品やサービスを利用しなくなった場合に、状況不利となっている顧客を予測します。
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903995"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967707"
 ---
 # <a name="subscription-churn-prediction-preview"></a>サブスクリプションの解約予測 (プレビュー)
 
@@ -77,7 +77,7 @@ ms.locfileid: "7903995"
 1. 解約状態にあると見なされる顧客の **サブスクリプション終了後の日数** を表わす日数を入力します。 この期間は通常、顧客を失うことを防ぐ目的で行うオファーやその他のマーケティング活動などのビジネス活動に好まれます。
 1. **チャーンを予測するために見る未来の日数** の数を入力して、チャーンを予測するウィンドウを設定します。 たとえば、今後 90 日間の顧客の離反リスクを予測して、マーケティングの維持努力に調整することができます。 長期間または短期間の離反リスクを予測すると、特定のビジネス要件に応じて、離反リスク プロファイルの要因への対処が困難になる場合があります。 **次へ** を選んで続行します。
    >[!TIP]
-   > 下書き状態の予測はいつでも、**保存して閉じる** を選択して保存できます。 予測ドラフトは **自分の予測** タブをで続きを見ることができます。
+   > いつでも **下書きを保存** を選択して予測をドラフトとして保存できます。 予測ドラフトは **自分の予測** タブをで続きを見ることができます。
 
 ### <a name="add-required-data"></a>必須データの追加
 
