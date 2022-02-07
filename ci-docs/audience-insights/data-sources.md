@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977835"
 ---
+
 # <a name="data-sources-overview"></a>データ ソースの概要
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dynamics 365 Customer Insights の対象者に関するインサイト機能は、幅広いソースからのデータに接続します。 データ ソースへの接続は、多くの場合、*データ取り込み* のプロセスと呼ばれます。 データを取り込んだ後、[統合](data-unification.md) およびアクションを実行できます。
 

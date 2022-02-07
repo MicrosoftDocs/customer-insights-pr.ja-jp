@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380749"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) は宣言的な仕様であり、ビジネスと生産性アプリケーションの全体で一般的に使用される概念とアクティビティを表す標準エンティティの定義です。 このモデルは実測データ、および分析データにも拡張されています。 Common Data Model は、アクティビティおよびサービス レベル アグリーメントなど、ベンダー、従業員、および顧客間の対話だけでなく、取引先企業、部署、ケース、連絡先、潜在顧客、営業案件、製品など、適切に定義されたモジュール形式の拡張可能なビジネス エンティティを提供します。 誰もが Common Data Model の定義に基づいて拡張し、さらなるビジネス固有のアイデアを取り込むことができます。
 

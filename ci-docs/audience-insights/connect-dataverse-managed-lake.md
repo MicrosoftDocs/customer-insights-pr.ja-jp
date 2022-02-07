@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900157"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 この記事では、Dataverseユーザーが Microsoft Dataverse 管理レイクの分析エンティティにすばやく接続する方法について説明しています。 
 

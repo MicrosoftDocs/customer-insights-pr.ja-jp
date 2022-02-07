@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 12/02/2021
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884268"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 最新の更新プログラムについてお知らせします ! この記事は、パブリック プレビュー機能、全般的な可用性の強化、毎月の更新プログラム、機能の更新をまとめたものです。 長期的な機能計画を確認するには、[Dynamics 365 と Power Platform のリリース計画](/dynamics365/release-plans/) をご覧ください。
 
@@ -27,9 +22,53 @@ ms.locfileid: "7884268"
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
 
+
+## <a name="december-2021-updates"></a>2021 年 12 月の更新プログラム
+
+2021 年 12 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights のログを Azure Monitor に転送する
+
+Customer Insights は、Azure Monitor との直接統合を提供します。 この機能には、監査イベントと操作イベントが含まれます。 Azure Monitor リソース ログを使用すると、ログを監視して Azure Storage や Azure Log Analytics に送信したり、Azure Event Hubs にストリーミングできます。
+
+詳細については、[Azure Monitor による Dynamics 365 Customer Insights でのログ転送 (プレビュー)](diagnostics.md) を参照してください。
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>エンゲージメント データで顧客プロファイルをエンリッチする
+
+Microsoft Office 365 からのデータを使用して、Office 365 アプリ経由でエンゲージメントに関するインサイトで顧客アカウント プロファイルをエンリッチします。 エンゲージメント データは、アカウント レベルで集計されたメールと会議のアクティビティで構成されます。 たとえば、ビジネス アカウントからのメールの数、またはアカウントとの会議の数などです。 個々のユーザーに関するデータは共有されません。 このエンリッチメントは、英国、欧州、北米で使用することができます。
+
+詳細については、[エンゲージメント データで顧客プロファイルをエンリッチする (プレビュー)](enrichment-office.md) を参照してください
+
+### <a name="advanced-data-unification-features"></a>詳細データ統合機能
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>個々の属性レベルで競合解決ポリシーを有効にする
+
+エンティティ内で顧客レコードを重複排除する場合、勝者として完全なレコードを選択する必要はありません。 すべての属性のルールに基づいて、さまざまなレコードから最適なフィールドをマージできるようになりました。 たとえば、最新のメールと最も完全なアドレスを異なるレコードから保持することを選択できます。 
+
+1 つのエンティティ内でレコードを重複排除およびマージしながら、個々の属性に対して個別のマージ ルールを定義できるようになりました。 以前は、1 つのマージ ルール (最新データの完全性に基づいてレコードを保持する) のみを選択でき、そのルールはレコード レベルですべての属性に適用されていました。 保持するデータの一部がレコード A にあり、他の適切なデータがレコード B にある場合、これは理想的ではありません。
+
+詳細については、[照合エンティティで重複排除を定義する](match-entities.md#define-deduplication-on-a-match-entity) を参照してください。
+
+#### <a name="custom-rules-for-matching"></a>照合のカスタム ルール
+
+レコードを照合しないために、一般的なルールの例外を指定する必要がある場合があります。 これは、複数の個人が多数の情報を共有し、システムがそれらの個人を 1 人の個人として照合する場合に発生します。 たとえば、姓が同じで、同じ都市に住んでいて、生年月日が同じ双子です。
+
+例外により、統合ルールで誤ったデータ統合に対処できるようになります。 1 つのルールに複数の例外を追加できます。
+
+詳細については、[ルールに例外を追加する](match-entities.md#add-exceptions-to-a-rule) を参照してください。
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>追加の競合解決ポリシーを指定し、属性のグループ化を可能にする
+
+この機能を使用すると、フィールドのグループを 1 つのユニットとして扱うことができます。 たとえば、レコードにフィールド Address1、Address2、City、State、Zip が含まれている場合です。 データをより完全なものにするために、異なるレコードの Address2 にマージすることはおそらくないでしょう。
+
+これで、関連するフィールドのグループを結合して、1 つのマージ ポリシーをグループに適用できるようになりました。 
+
+詳細については、[フィールドのグループの結合](merge-entities.md#combine-a-group-of-fields) を参照してください。
+
+
 ## <a name="november-2021-updates"></a>2021 年 11 月 の更新プログラム
 
-2021 年 11 月の更新には、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+2021 年 11 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Dataverse でセグメント メンバーシップが利用可能になりました
 

@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945433"
 ---
+
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにカスタマー カード アドインをインストールすると、カスタマー プロファイル フィールド、インサイト、およびアクティビティのタイムラインを表示するように選択できます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。
 

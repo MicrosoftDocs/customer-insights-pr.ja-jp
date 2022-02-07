@@ -1,7 +1,7 @@
 ---
 title: Common Data Model データを Azure Data Lake アカウントに接続する
 description: Azure Data Lake Storage を使用して、Common Data Model データを操作します。
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900203"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Azure Data Lake アカウントを使用して Common Data Model のフォルダーに接続する
 
 この記事では、Azure Data Lake Storage Gen2 アカウントを使用して、Common Data Model フォルダーからデータを取り込む方法について説明します。
@@ -25,6 +20,8 @@ ms.locfileid: "7900203"
 - Azure Data Lake のデータは、Common Data Model に準拠する必要があります。 他のフォーマットは現在のところ対応していません。
 
 - データの取り込みは、Azure Data Lake *Gen2* ストレージ アカウントのみをサポートしています。 Azure Data Lake Gen1 ストレージ アカウントを使用してデータを取り込むことはできません。
+
+- Azure Data Lake Storage アカウントは [階層型名前空間を有効](/azure/storage/blobs/data-lake-storage-namespace) にしておく必要があります。
 
 - Azure サービス プリンシパルで認証するには、テナントで構成されていることを確認してください。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。
 
