@@ -1,7 +1,7 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 01/27/2022
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088291"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
 
 
@@ -21,6 +26,17 @@ manager: shellyha
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+
+## <a name="january-2022-updates"></a>2022 年 1 月の更新
+
+2022 年 1 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>顧客フィードバックの感情分析
+
+Customer Insights は、顧客の感情を統合して的を絞った改善のチャンスとして特定のビジネス要因を特定する、AI を活用した新機能を提供します。 顧客が書いた文字によるフィードバックを分析して、低コストで正確なインサイトを獲得できます。 自然言語処理 (NLP) モデルを利用した感情分析は、顧客 ID ごとに 2 つの派生したインサイトを生成します。 感情スコア (of –5 to 5) と適用できるビジネス要因のリスト。 
+
+詳細については [顧客フィードバックで感情を分析する (プレビュー)](sentiment-analysis.md) を参照してください。
 
 
 ## <a name="december-2021-updates"></a>2021 年 12 月の更新プログラム
@@ -37,7 +53,7 @@ Customer Insights は、Azure Monitor との直接統合を提供します。 �
 
 Microsoft Office 365 からのデータを使用して、Office 365 アプリ経由でエンゲージメントに関するインサイトで顧客アカウント プロファイルをエンリッチします。 エンゲージメント データは、アカウント レベルで集計されたメールと会議のアクティビティで構成されます。 たとえば、ビジネス アカウントからのメールの数、またはアカウントとの会議の数などです。 個々のユーザーに関するデータは共有されません。 このエンリッチメントは、英国、欧州、北米で使用することができます。
 
-詳細については、[エンゲージメント データで顧客プロファイルをエンリッチする (プレビュー)](enrichment-office.md) を参照してください
+詳細については、[エンゲージメント データで顧客プロファイルをエンリッチする (プレビュー)](enrichment-office.md) を参照してください。
 
 ### <a name="advanced-data-unification-features"></a>詳細データ統合機能
 

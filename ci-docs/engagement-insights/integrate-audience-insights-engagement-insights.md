@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645588"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116020"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>対象ユーザー インサイトとエンゲージメント インサイトの間にリンクを作成する
 
@@ -25,7 +25,7 @@ ms.locfileid: "7645588"
 
 ## <a name="prerequisites"></a>前提条件
 
-- 対象ユーザー インサイトのプロファイルは、ご利用の Azure Data Lake Storage アカウント、または [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; のマネージド データレイクに保存する必要があります。 
+- 対象ユーザー インサイトのプロファイルは、ご利用の Azure Data Lake Storage アカウント、または [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; のマネージド データレイクに保存する必要があります。 
 - ご利用の対象ユーザー インサイト環境には、関連する Dataverse 環境が必要です。 また、その環境でもデータの保存に Dataverse を使用している場合は、対象ユーザー インサイトの **データ共有を有効にする** にチェックを入れてください。 詳細については、[対象ユーザー インサイトで環境を作成および構成する](../audience-insights/create-environment.md)を参照してください。
 - エンゲージメント インサイトと対象ユーザーインサイト環境の両方に管理者権限が必要です。
 - リンク先の環境は同一の地域である必要があります。

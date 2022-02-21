@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900264"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088153"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 
@@ -23,7 +23,7 @@ ms.locfileid: "7900264"
 Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 サービス プリンシパルを使用して安全に[ Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md)したり、[環境を作成または更新](create-environment.md)したりできます。
 
 > [!IMPORTANT]
-> - サービス プリンシパルを使用する Data Lake のストレージ アカウントには、[階層型名前空間を有効化する](/azure/storage/blobs/data-lake-storage-namespace)必要があります。
+> - サービス プリンシパルを使用する Data Lake Storage アカウントは、Gen2 であり、[階層型名前空間を有効化](/azure/storage/blobs/data-lake-storage-namespace) する必要があります。 Azure Data Lake Gen1 ストレージ アカウントはサポートしていません。
 > - サービス プリンシパルを作成するには、Azure サブスクリプションの管理者権限が必要です。
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Customer Insights の Azure サービス プリンシパルを作成する

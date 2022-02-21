@@ -2,6 +2,22 @@
   href: index.yml
 - name: 製品概要
   href: overview.md
+- name: ラーニング カタログ
+  items:
+    - name: 作業の開始
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: データの取り込み
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: 統合型顧客プロファイルを作成する
+      href: /learn/modules/unified-customer-profile/
+    - name: 対象者分析情報を使用する
+      href: /learn/modules/working-with-customer-insights/
+    - name: データをエンリッチして予測を行う
+      href: /learn/modules/enrich-data/
+    - name: 外部接続の管理
+      href: /learn/modules/configure-third-party-connections/
+    - name: Customer Insights の管理
+      href: /learn/modules/administer-customer-data-platform/
 - name: 無料試用版
   items:
     - name: 無料の試用版にサインアップ
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: ビジネス アカウントに関する作業
       href: audience-insights/work-with-business-accounts.md
-    - name: モジュールの学習
-      items:
-        - name: データの取り込み
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: 統合型顧客プロファイルを作成する
-          href: /learn/modules/unified-customer-profile/
-        - name: アプリで作業する
-          href: /learn/modules/working-with-customer-insights/
-        - name: データと予測を強化する
-          href: /learn/modules/enrich-data/
     - name: データ ソース
       items:
         - name: データ ソースの概要
           href: audience-insights/data-sources.md
-        - name: Power Query コネクタを介してデータソースを追加する
+        - name: Power Query コネクタでデータ ソースを追加する
           href: audience-insights/connect-power-query.md
         - name: データ ソースとして共通データ モデル フォルダーを追加する
           href: audience-insights/connect-common-data-model.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR の権利と要求
   href: dsr-rights-requests.md
+- name: サポートを受ける
+  href: /power-platform/admin/get-help-support

@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090929"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales でセグメントを使用する (プレビュー)
 
 
 
 Dynamics 365 Sales で顧客データを使用して、マーケティング リストの作成、ワークフローのフォローアップ、プロモーションの送信を行います。
+
+## <a name="known-limitations"></a>既知の制限
+
+- Dynamics 365 Sales にエクスポートする際は、セグメントごとに 100,000 人のメンバーに制限されます。
+- Dynamics 365 Sales にセグメントをエクスポートする際は、完了するまでに最大 3 時間かかります。 
 
 ## <a name="prerequisite-for-connection"></a>接続の前提条件
 

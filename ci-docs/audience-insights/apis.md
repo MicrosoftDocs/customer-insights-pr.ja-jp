@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732270"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100146"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights は、Customer Insights のデータに基づい�
  
    API を有効にすると、API 要求で使用されるインスタンスに対してプライマリおよびセカンダリのサブスクリプション キーが作成されます。 キーを再生成するには、**管理** > **アクセス許可** > **API** で **プライマリの再生成** または **セカンダリの再生成** を選択します。
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API を有効にする。":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. **API の詳細を確認** を選択して、[API を試してください](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
 
@@ -49,7 +49,7 @@ Dynamics 365 Customer Insights は、Customer Insights のデータに基づい�
 
 HTTP 応答がすぐに下に表示されます。
 
-   :::image type="content" source="media/try-apis.gif" alt-text="API をテストする方法。":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Azure portal で新しいアプリの登録を作成する
 
@@ -65,7 +65,7 @@ HTTP 応答がすぐに下に表示されます。
 
 1. 新しいアプリの登録で、**API アクセス許可** に移動します。
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="アプリの登録で API のアクセス許可を設定する方法。":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. **アクセス許可の追加** を選択し、サイド ペインで **Customer Insights** を選択します。
 
@@ -77,7 +77,7 @@ HTTP 応答がすぐに下に表示されます。
 
 Microsoft 認証ライブラリ (MSAL) でこのアプリの登録に使用されたアプリケーション/クライアント ID を使用して、API への要求とともに送信するベアラー トークンを取得できます。
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="管理者の同意を付与する方法。":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 MSAL の詳細については、[Microsoft 認証ライブラリ (MSAL) の概要](/azure/active-directory/develop/msal-overview) を参照してください。
 
@@ -103,7 +103,7 @@ Azure でのアプリ登録の詳細については、[アプリケーション�
 
 1. **... に管理者の同意を付与する** を選択して、アプリの登録を完了します。
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="管理者の同意を付与する方法。":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. 結論から言うと、アプリ登録の名前を Customer Insights でユーザーとして追加する必要があります。  
    
@@ -129,7 +129,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
  
    または、次のコマンドを **NuGet パッケージ マネージャー コンソール** で実行します: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGet パッケージを Visual Studio プロジェクトに追加する。":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>C# クライアント ライブラリを使用する
 
@@ -141,7 +141,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. この `HttpClient` を `CustomerInsights` クライアントの構築に渡します。
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="httpclient のサンプル。":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. クライアントで、たとえば `GetAllInstancesAsync` などの「拡張メソッド」を呼び出します。 基になる `Microsoft.Rest.HttpOperationResponse` へのアクセスが推奨される場合は、たとえば `GetAllInstancesWithHttpMessagesAsync` などの「HTTP メッセージ メソッド」を使用します。
 

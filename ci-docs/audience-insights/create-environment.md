@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892344"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088119"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>対象者分析情報で環境を作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "7892344"
 
 ## <a name="create-a-new-environment"></a>新しい環境を作成する
 
-Customer Insights のサブスクリプションライセンスを購入すると、Microsoft 365 テナントのグローバル管理者に、環境の作成を促すメールが届きます。 [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) にアクセスし、使用を開始します。 
+Customer Insights のサブスクリプション ライセンスを購入すると、Microsoft 365 テナントのグローバル管理者が、環境の作成に招待するメールを受け取ります。 [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) にアクセスし、使用を開始します。 
 
 ガイド付きエクスペリエンスでは、新しい環境に必要なすべての情報を収集するステップを実行するのに役立ちます。 環境を作成または管理するには、対象者分析情報の[管理者権限](permissions.md)が必要です。
 
@@ -64,7 +64,7 @@ Customer Insights のサブスクリプションライセンスを購入する�
 > Customer Insights では現在、以下をサポートしています。
 > - Microsoft Dataverse に保存された Power BI データフローから取得されたエンティティ - マネージド Data Lake。  
 > - 環境作成時に選択したのと同じ Azure リージョンの Azure Data Lake Storage アカウント。
-> - *階層型名前空間* が有効な Azure Data Lake Storage アカウント。
+> - Gen2 であり *階層型名前空間* を有効している Azure Data Lake Storage アカウント。 Azure Data Lake Gen1 ストレージ アカウントはサポートしていません。
 
 Azure Data Lake Storage オプションでは、認証用にリソース ベース オプションとサブスクリプション ベース オプションのどちらかを選択できます。 詳細については、[Azure サービス プリンシパルを使用した Azure Data Lake Storage アカウントに接続](connect-service-principal.md) を参照してください。 **コンテナー** 名は `customerinsights` であり、変更することはできません。
 
