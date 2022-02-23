@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046570"
 ---
-
 # <a name="merge-entities"></a>エンティティの結合
 
 マージ フェーズはデータ統合プロセスの最後のフェーズです。 その目的は、競合するデータを調整することです。 競合するデータの例としては、2 つのデータ セットで見つかったがそれぞれに少しずつ異なって表示される顧客名 ("Grant Marshall" と "Grant Marshal") や、形式が異なる電話番号 (617-803-091X と 617803091X) などがあります。 これらの競合するデータ ポイントのマージは、属性ごとに行われます。

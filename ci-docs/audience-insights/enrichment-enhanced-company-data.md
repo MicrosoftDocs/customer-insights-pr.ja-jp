@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010915"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>強化された会社データで会社プロファイルのエンリッチメント
 
 Microsoftの モデルとコンパイルされた会社データを使用して、会社のプロファイルを修正、補足、および標準化します。 より正確で、分析情報のために、[Common Data Model 形式](/common-data-model/schema/core/applicationcommon/account) を使用します。
