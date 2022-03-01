@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466354"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461109"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>人口統計ディメンションを使用して行動データを分割する
 
@@ -29,7 +29,7 @@ ms.locfileid: "7466354"
 - 顧客プロファイルデータがあるエンゲージメント インサイト環境と、顧客プロファイルが作成される対象ユーザーインサイト環境がリンクされています。 詳細情報: [対象ユーザー インサイトとエンゲージメント インサイトの間にリンクを作成する](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> 対象ユーザーインサイトとエンゲージメント インサイトの環境間のリンクを作成した後、エンゲージメント インサイトのディメンションとして有用な顧客プロファイルのプロパティに特化したデータのみを必要とする場合があります。 詳細については、[対象ユーザー インサイトの統合プロファイルの属性とセグメントを有効にする](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments)にアクセスしてください。
+> 対象ユーザーインサイトとエンゲージメント インサイトの環境間のリンクを作成した後、エンゲージメント インサイトのディメンションとして有用な顧客プロファイルのプロパティに特化したデータのみを必要とする場合があります。 詳細については、[対象ユーザー インサイトの統合プロファイルの属性とセグメントを有効にする](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments)にアクセスしてください。<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>新しいカスタム レポートを作成する
 

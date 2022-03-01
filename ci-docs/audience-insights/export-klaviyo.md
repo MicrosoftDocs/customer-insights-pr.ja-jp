@@ -1,7 +1,7 @@
 ---
 title: Customer Insights データを Klaviyo にエクスポートする
 description: 接続を構成して、Klaviyo にエクスポートする方法を説明します。
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619079"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385794"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>セグメント リストを Klaviyo にエクスポートする (プレビュー)
 
@@ -28,10 +28,10 @@ ms.locfileid: "7619079"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Klaviyo へのエクスポートごとに最大 10 万の顧客プロファイルをエクスポートできます。
+- Klaviyo へのエクスポートごとに最大100,000 件のプロファイルをエクスポートできます。
 - Klaviyo へのエクスポートはセグメントに制限されています。
-- 最大 100 万の顧客プロファイルを Klaviyo にエクスポートすると、完了するまでに最大 20 分かかる場合があります。 
-- Klaviyo にエクスポートできる顧客プロファイルの数は、Klaviyo との契約によって異なり、限定されます。
+- 最大 100 万件のプロファイルを Klaviyo にエクスポートすると、完了するまでに最大 20 分かかる場合があります。 
+- Klaviyo にエクスポートできるプロファイルの数は、Klaviyo との契約内容に制限されます。
 
 ## <a name="set-up-connection-to-klaviyo"></a>Klaviyo への接続を設定する
 
@@ -67,7 +67,7 @@ ms.locfileid: "7619079"
 
 1. [**Klaviyo リスト ID**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID) を入力します。     
 
-3. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Klaviyo にエクスポートする必要があります。
+3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Klaviyo にエクスポートする必要があります。
 
 1. **保存** を選択します。
 

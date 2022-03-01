@@ -2,19 +2,19 @@
 title: サブスクリプション解約予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成のサブスクリプション解約予測モデルを試してください。
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e2360c707bcbdfa64482f06f0a0cd0783a377b4fd79620ffd3cc1c9c6cad9ed3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
+ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029589"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "4653986"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>サブスクリプション解約予測 (プレビュー) サンプル ガイド
 
@@ -22,7 +22,7 @@ ms.locfileid: "7029589"
 
 ## <a name="scenario"></a>シナリオ
 
-Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。 彼らは最近、定期的にコーヒーを飲む顧客のためにサブスクリプション ビジネスを始めた。 彼らの目標は、どの加入した顧客が今後数か月以内にサブスクリプションをキャンセルする可能性があるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
+Contoso は、高品質のコーヒーとコーヒー メーカーを製造し、Contoso Coffee の Web サイトで販売している会社です。 彼らは最近、定期的にコーヒーを飲む顧客のためにサブスクリプション ビジネスを始めた。 彼らの目標は、どの加入した顧客が今後数か月以内にサブスクリプションをキャンセルする可能性があるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -46,9 +46,10 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **DateOfBirth**: 日付
    - **CreatedOn**: 日付/時刻/タイムゾーン
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
+   [!div class="mx-imgBorder"]
+   ![生年月日を日付に変換](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
 
-1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 
 1. データ ソースを保存します。
 
@@ -66,7 +67,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **RewardsPoints**: 整数
    - **CreatedOn**: 日付/時刻
 
-1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
+1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
 
 1. データ ソースを保存します。
 
@@ -89,7 +90,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **Is_auto_renew**: True/False
    - **RecurringFrequencyInMonths**: 整数
 
-1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
+1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
 
 1. データ ソースを保存します。
 
@@ -128,9 +129,9 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. **照合** タブに移動して、**順序の設定** を選択します。
 
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
+1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択し、すべてのレコードを含めます。
 
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
+1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択し、すべてのレコードを含めます。
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="eコマースとロイヤルティの一致を統合します。":::
 
@@ -138,16 +139,16 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. FullName を使用して最初の条件を追加します。
 
-   * eCommerceContacts では、ドロップダウンで **FullName** を選択します。
-   * loyCustomers では、ドロップダウンで **FullName** を選択します。
+   * eCommerceContacts の場合は、ドロップダウンで **FullName** を選択します。
+   * loyCustomers の場合は、ドロップダウンで **FullName** を選択します。
    * **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 
 1. 新しいルールに **FullName, Email** という名前を入力します。
 
    * **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   * エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
-   * エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。 
+   * エンティティ eCommerceContacts の場合、ドロップダウンで **電子メール** を選択します。
+   * エンティティ loyCustomers の場合、ドロップダウンで **電子メール** を選択します。 
    * 正規化を空白のままにします。 
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 
@@ -229,6 +230,3 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 これで、このサブスクリプション ビジネスの解約リスクの高い顧客を識別するセグメントが動的に更新されます。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

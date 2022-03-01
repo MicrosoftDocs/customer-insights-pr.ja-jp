@@ -1,7 +1,7 @@
 ---
 title: 予測を使用して部分データを完成させる
 description: 予測を使用して、不完全な顧客データを入力します。
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,17 +9,16 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732412"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645040"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>予測を使用した部分データの完成 (非推奨)
+# <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
 
-> [!IMPORTANT]
-> この機能は、**2021 年 11 月 5 日** の時点で **非推奨** になります。 現在の実装は、機能が削除されるまで引き続き機能しますが、以下の手順を使用して新しい統合を作成することはできません。
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 予測により、予測値を簡単に作成して、顧客の理解を深めることができます。 **インテリジェンス** > **予測** ページで、**自分の予測** を選択して、対象者に関するインサイトの他の部分で構成した予測を表示し、さらにカスタマイズすることができます。
 
@@ -61,8 +60,6 @@ ms.locfileid: "7732412"
    > ![カテゴリにマップされたフィールド値を示す例。](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
 
 8. **完了** を選択すると、予測が処理されます。 データのサイズと複雑さによっては、処理に時間がかかります。 結果は作成した予測の **出力エンティティ名** に基づいて、新しいエンティティで利用可能になります。
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>セグメントの作成中に予測を作成する
 

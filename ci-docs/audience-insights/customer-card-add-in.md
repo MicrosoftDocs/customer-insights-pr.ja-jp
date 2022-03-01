@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 アプリの顧客カード アドイン (ビデオを含む)
 description: このアドインを使用して、Dynamics 365 アプリに対象者に関するインサイトのデータを表示します。
-ms.date: 02/02/2022
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.openlocfilehash: 98597600c2a39f8bb707af8461df4736f913e6bc
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085254"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046486"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
 
@@ -118,26 +118,5 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 
 1. アップグレード プロセスを開始すると、アップグレードが完了するまで読み込みインジケータが表示されます。 新しいバージョンがない場合、アップグレードでエラーメッセージが表示されます。
 
-## <a name="troubleshooting"></a>トラブルシューティング​​
-
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>顧客カード アドインによるコントロールがデータを検出しません
-
-**問題:**
-
-ID フィールドを正しく構成した場合も、コントロールが顧客のデータを検出できません。  
-
-**解決方法:**
-
-1. この手順に従ってカード アドインの構成を確認してください: [顧客カード アドインの構成](#configure-the-customer-card-add-in) 
-
-1. データ取り込み構成を確認します。 取引先担当者 ID GUID を含む Dynamics 365 システムのデータ ソースを編集します。 Power Query エディタで取引先担当者 ID GUID が大文字で表示される場合は、次を実行してください。 
-    1. データ ソースを編集して Power Query エディタでデータ ソースを開きます。
-    1. 取引先担当者 ID 列を選択します。
-    1. ヘッダー バーの **変換** を選択して、使用できるアクションを確認します。
-    1. **小文字** を選択します。 テーブルが含む GUID が小文字になったことを確認します。
-    1. データ ソースを保存します。
-    1. データの取り込み、統合、下流プロセスを実行して、変更を GUID に伝播します。 
-
-完全に更新が完了すると、顧客カード アドイン コントロールに必要なデータが表示されます。 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

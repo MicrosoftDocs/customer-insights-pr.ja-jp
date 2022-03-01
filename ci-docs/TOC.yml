@@ -2,30 +2,8 @@
   href: index.yml
 - name: 製品概要
   href: overview.md
-- name: ラーニング カタログ
-  items:
-    - name: 作業の開始
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: データの取り込み
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: 統合型顧客プロファイルを作成する
-      href: /learn/modules/unified-customer-profile/
-    - name: 対象者分析情報を使用する
-      href: /learn/modules/working-with-customer-insights/
-    - name: データをエンリッチして予測を行う
-      href: /learn/modules/enrich-data/
-    - name: 外部接続の管理
-      href: /learn/modules/configure-third-party-connections/
-    - name: Customer Insights の管理
-      href: /learn/modules/administer-customer-data-platform/
-- name: 無料試用版
-  items:
-    - name: 無料の試用版にサインアップ
-      href: trial-signup.md
-    - name: 試用版に関するよくあるご質問
-      href: trial-FAQ.md
-- name: 有料ライセンスから始める
-  href: paid-license.md
+- name: 試用版の作成
+  href: audience-insights/get-started-trial.md
 - name: 環境へのアクセス
   href: 'https://home.ci.ai.dynamics.com/'
 - name: 対象者分析情報
@@ -41,16 +19,24 @@
         - name: クイック スタート ガイド
           href: audience-insights/get-started.md
         - name: 新しい環境を作成する
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: 対象ユーザーの分析情報を探る
           href: audience-insights/home.md
-    - name: ビジネス アカウントに関する作業
-      href: audience-insights/work-with-business-accounts.md
+    - name: モジュールの学習
+      items:
+        - name: データの取り込み
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: 統合型顧客プロファイルを作成する
+          href: /learn/modules/unified-customer-profile/
+        - name: アプリで作業する
+          href: /learn/modules/working-with-customer-insights/
+        - name: データと予測を強化する
+          href: /learn/modules/enrich-data/
     - name: データ ソース
       items:
         - name: データ ソースの概要
           href: audience-insights/data-sources.md
-        - name: Power Query コネクタでデータ ソースを追加する
+        - name: Power Query コネクタを介してデータソースを追加する
           href: audience-insights/connect-power-query.md
         - name: データ ソースとして共通データ モデル フォルダーを追加する
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: 顧客アクティビティをリストする
           href: audience-insights/activities.md
-        - name: セマンティック マッピングを定義する
-          href: audience-insights/semantic-mappings.md
     - name: データ エンリッチメント
       items:
         - name: 顧客プロファイルのエンリッチ
           href: audience-insights/enrichment-hub.md
-        - name: ブランドと関心
+        - name: ブランドや関心のアフィニティ
           href: audience-insights/enrichment-microsoft.md
         - name: 拡張住所
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: 拡張された会社データ
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Maps でエンリッチする
           href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies を利用して強化する
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Experian を利用して強化する
           href: audience-insights/enrichment-experian.md
-        - name: Office 365 のデータでエンリッチする
-          href: audience-insights/enrichment-office.md
         - name: SFTP カスタム インポートを利用して強化する
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: セグメント
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: サブスクリプション離反の予測
               href: audience-insights/predict-subscription-churn.md
-            - name: トランザクション離反を予測する
+            - name: トランザクション解約を予測する
               href: audience-insights/predict-transactional-churn.md
-            - name: 顧客フィードバックで感情を分析する
-              href: audience-insights/sentiment-analysis.md
             - name: Azure Machine Learning のカスタム モデルの使用
               href: audience-insights/custom-models.md
             - name: 部分的な欠損データの補完
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: サブスクリプション解約予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: トランザクション離反予測のサンプル ガイド
+            - name: トランザクション解約予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: 製品レコメンデーション予測のサンプル ガイド
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Azure Machine Learning で実験する
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Azure Machine Learning Studio での実験
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: 予測の管理
           href: audience-insights/manage-predictions.md
         - name: 予測に基づいてセグメントを作成する
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: 複数の環境を管理する
           href: audience-insights/manage-environments.md
-        - name: セキュリティ
-          items:
-            - name: 独自の Key Vault を導入する
-              href: audience-insights/use-azure-key-vault.md
-            - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
-              href: audience-insights/connect-service-principal.md
-            - name: 診断ログをエクスポートする
-              href: audience-insights/diagnostics.md
+        - name: サービス プリンシパルを使用してADLS ストレージ アカウントに接続する
+          href: audience-insights/connect-service-principal.md
+        - name: サポートされている言語
+          href: audience-insights/supported-languages.md
     - name: 拡張性
       items:
         - name: エンゲージメント インサイトからの Web データを統合する
@@ -262,40 +238,6 @@
           href: audience-insights/apis.md
         - name: API リファレンス
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: 同意の管理 (プレビュー)
-  items:
-    - name: ヘルプ ハブ
-      href: consent-management/index.yml
-    - name: 機能の概要
-      href: consent-management/overview.md
-    - name: 開始する
-      items:
-        - name: 開始する
-          href: consent-management/get-started.md
-        - name: 概念と用語
-          href: consent-management/glossary.md
-    - name: 同意データをインポートする
-      items:
-        - name: 同意データをインポートする
-          href: consent-management/import-consent-data.md
-        - name: 同意データを設定し、同意の基本設定を適用する
-          href: consent-management/set-consent-rules.md
-    - name: 同意データを管理する
-      items:
-        - name: 対象者分析情報で同意規則を有効化する
-          href: audience-insights/activate-consent.md
-        - name: 対象者分析情報のセグメントを使用して既定の同意規則を管理する
-          href: audience-insights/change-default-consent-rules.md
-    - name: 設定とユーザーを管理する
-      items:
-        - name: システム設定のコンフィギュレーション
-          href: consent-management/system-settings.md
-        - name: ユーザーとアクセス許可を管理する
-          href: consent-management/manage-users.md
-    - name: 同意データを使用する
-      items:
-        - name: 同意データを使用して予測を作成する
-          href: consent-management/predictions-consent-data.md
 - name: エンゲージメント分析情報 (プレビュー)
   items:
     - name: ヘルプ ハブ
@@ -306,8 +248,6 @@
       items:
         - name: クイック スタート ガイド
           href: engagement-insights/get-started.md
-        - name: 環境を作成する
-          href: engagement-insights/create-new-environment.md
         - name: ワークスペースを作成する
           href: engagement-insights/create-workspace.md
         - name: Web サイトとモバイル アプリからイベントをキャプチャする
@@ -378,5 +318,3 @@
   href: service-limits.md
 - name: DSR の権利と要求
   href: dsr-rights-requests.md
-- name: サポートを受ける
-  href: /power-platform/admin/get-help-support

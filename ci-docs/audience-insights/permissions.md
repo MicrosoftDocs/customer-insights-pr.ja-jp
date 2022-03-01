@@ -1,20 +1,20 @@
 ---
 title: ユーザーのアクセス許可を管理する
 description: アクセス許可とユーザー ロールについて説明します。
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 430ad902a5a75552243bc4a094361a749364383717278f687dd6e8ef33749c6f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028320"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689226"
 ---
 # <a name="user-permissions"></a>ユーザーのアクセス許可
 
@@ -31,7 +31,7 @@ ms.locfileid: "7028320"
 - **強化** ページを確認し、探索します。
 - **エンティティ** ページを使用してエンティティを探索およびエクスポートします。
 - **システム** ページを使用してシステムプロセスのステータスを表示します。
-- **エクスポート** ページでエクスポートを表示します。
+- **セグメント** ページからセグメントをエクスポートします。
 - **Power BI Customer Insights** ダッシュボードをインストールして使用します。
 
 ## <a name="contributor"></a>共同作成者
@@ -43,7 +43,6 @@ ms.locfileid: "7028320"
 - **セグメント** ページを使用してセグメントを作成します。
 - **メジャー** ページを使用してメジャーを作成します。
 - 構成を管理し、顧客プロファイルを **エンリッチメント** ページから拡充します (ファースト パーティのエンリッチメントのみ)。
-- 共同作成者と共有されている接続に基づいてエクスポートを管理および作成します。 [管理者が共同作成者にエクスポート用の接続の使用を許可する方法について説明します](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
 ## <a name="administrator"></a>管理者
 
@@ -51,9 +50,8 @@ ms.locfileid: "7028320"
 - 作業言語とシステム プロセスの更新スケジュールを含む、**システム** ページの設定を変更します。
 - **アクセス許可** ページを使用して、アクセス許可を表示および追加します。
 - **インデックスの検索およびフィルター処理** ページ (**顧客** ページからアクセス可能) を使用して、顧客ページの検索およびフィルターの定義を設定します。
-- 接続を管理し、**接続** ページで他のユーザー ロールを許可します。
+- **エクスポート先** ページを使用して Dynamics 365 Sales セグメントの保存先を定義します。
 - 構成を管理し、顧客プロファイルを **エンリッチメント** ページから拡充します (すべてのエンリッチメントが対象)。
-- **エクスポート** ページでエクスポートを管理および作成します。
 - **顧客カード アドイン** をインストールして使用します。
 - **Power Apps コネクタ** を追加して使用します。
 - [Customer Insights API](apis.md) の使用を有効にします。
@@ -76,6 +74,3 @@ ms.locfileid: "7028320"
 - ロールは **ロール** 列で指定します。
 - 列タイトルを選択して、その列内の値で結果をソートします。
 - ページ上部の **検索** フィールドを使用して、特定のユーザーを見つけます。
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

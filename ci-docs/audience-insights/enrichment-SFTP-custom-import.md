@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618688"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304656"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
@@ -45,8 +45,6 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="データの場所を入力する際のスクリーンショット。":::
 
-1. **次へ** を選択して、顧客データ セットを選択します。 これは、すべての顧客プロファイルまたはセグメントのいずれかです。
-
 1. **次へ** を選択し、エンリッチメントの名前と出力エンティティの名前を指定します。 
 
 1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
@@ -66,7 +64,7 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 1. 確認が完了したら、**保存** を選択して接続を保存できます。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 接続の構成ページ。](media/enrichment-SFTP-connection.png "Experian 接続の構成ページ")
+   > ![Experian 接続の構成ページ](media/enrichment-SFTP-connection.png "Experian 接続の構成ページ")
 
 
 ## <a name="defining-field-mappings"></a>フィールド マッピングの定義 
@@ -123,8 +121,8 @@ SFTP サーバーにインポートするファイルを含むディレクトリ
 
 **拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、[データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

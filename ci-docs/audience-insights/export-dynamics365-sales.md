@@ -1,48 +1,38 @@
 ---
 title: Customer Insights のデータを Dynamics 365 Sales にエクスポートする
-description: Dynamics 365 Sales への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Dynamics 365 Sales への接続を構成する方法について説明します。
+ms.date: 08/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090929"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643824"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales でセグメントを使用する (プレビュー)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Dynamics 365 Sales のコネクタ (プレビュー)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Dynamics 365 Sales で顧客データを使用して、マーケティング リストの作成、ワークフローのフォローアップ、プロモーションの送信を行います。
 
-## <a name="known-limitations"></a>既知の制限
+## <a name="prerequisite"></a>前提条件
 
-- Dynamics 365 Sales にエクスポートする際は、セグメントごとに 100,000 人のメンバーに制限されます。
-- Dynamics 365 Sales にセグメントをエクスポートする際は、完了するまでに最大 3 時間かかります。 
+[Common Data Service を使用して取り込んだ Dynamics 365 Sales](connect-power-query.md) の取引先担当者レコード。
 
-## <a name="prerequisite-for-connection"></a>接続の前提条件
+## <a name="configure-the-connector-for-sales"></a>Sales 用のコネクタを構成する
 
-1. Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。 取引先担当者を取り込む方法の詳細については、[Microsoft Dataverse を使った Dynamics 365 Sales](connect-power-query.md) を読んでください。
+1. 対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。
 
-   > [!NOTE]
-   > 対象者インサイトから Sales にセグメントをエクスポートしても、Sales インスタンスに新しい取引先担当者レコードは作成されません。 Sales からの取引先担当者レコードは、対象者インサイトに取り込まれ、データ ソースとして使用される必要があります。 また、セグメントをエクスポートする前に、顧客 ID を取引先担当者 ID にマッピングするために、統合された顧客エンティティに含める必要があります。
+1. **Dynamics 365 Sales** で **設定** を選択します。
 
-## <a name="set-up-the-connection-to-sales"></a>Sales への接続を設定する
-
-1. **管理** > **接続** に移動します。
-
-1. **つながりの追加** を選択し、**Dynamics 365 Sales** を選択して、接続を構成します。
-
-1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
-
-1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+1. **表示名** フィールドで、エクスポート先にわかりやすい名前を付けます。
 
 1. **サーバー アドレス** フィールドに組織の Sales URL を入力します。
 
@@ -50,24 +40,12 @@ Dynamics 365 Sales で顧客データを使用して、マーケティング リ
 
 1. 顧客 ID フィールドを Dynamics 365 取引先担当者 ID にマップします。
 
-1. **保存** を選択して、接続を完了します。 
-
-## <a name="configure-an-export"></a>エクスポートの構成
-
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
-
-1. **データ** > **エクスポート** に移動します。
-
-1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
-
-1. **エクスポートの接続** フィールドで、Dynamics 365 Sales セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **次へ** を選択します。
 
 1. 1つ、または複数のセグメントを選択します。
 
-1. **保存** を選択します
+1. **保存** を選択します。
 
-エクスポートを保存しても、エクスポートはすぐには実行されません。
+## <a name="export-the-data"></a>データをエクスポートする
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[オンデマンドでデータをエクスポート](export-destinations.md) できます。 エクスポートは、[スケジュールされた更新](system.md#schedule-tab) ごとに実行されます。

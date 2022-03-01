@@ -1,20 +1,20 @@
 ---
 title: エンティティとエンティティ パスの関連付け
 description: 複数のデータ ソースからエンティティ間の関連付けを作成および管理します。
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623017"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171170"
 ---
 # <a name="relationships-between-entities"></a>エンティティ間の関連付け
 
@@ -68,20 +68,6 @@ ms.locfileid: "7623017"
 
 4. **保存** を選択して、ユーザー定義の関連付けを作成します。
 
-## <a name="set-up-account-hierarchies"></a>アカウントの階層を設定する
-
-ビジネス アカウントをプライマリ ターゲット対象ユーザーとして使用するように構成された環境は、関連するビジネス アカウントのアカウント階層を構成できます。 たとえば、別々の部署を持つ会社です。 
-
-組織はアカウント階層を作成して、アカウントとそのリレーションシップをお互い適切に管理します。 対象者分析情報機能は、取り込んだ顧客データにすでに存在する親子アカウント階層をサポートします。 たとえば、Dynamics 365 Sales のアカウントです。 これらの階層は、対象者分析情報の **リレーションシップ** ページのアカウント階層タブで構成できます。
-
-1. **データ** > **リレーションシップ** に移動します。
-1. **アカウント階層** タブを選択します。
-1. **新しいアカウント階層** を選択します。 
-1. **アカウント階層** ペインで、階層の名前を指定します。 システムは、出力エンティティの名前を作成します。 出力名のエンティティの名称を変更することができます。
-1. アカウント階層を含むエンティティを選択します。 通常、アカウントを含むエンティティと同じエンティティにあります。
-1. 選択したエンティティから **Account ID** と **Account Parent ID** を選択します 
-1. **保存** を選択して、設定を適用し、アカウント階層を完成させます。
-
 ## <a name="view-relationships"></a>関連付けの表示
 
 関連付けページには、作成されたすべての関連付けが一覧表示されます。 各行は関係を表し、ソース エンティティ、対象エンティティ、基数の詳細も含まれます。 
@@ -96,7 +82,7 @@ ms.locfileid: "7623017"
 
 ### <a name="explore-the-relationship-visualizer"></a>関連ビジュアライザーの確認
 
-関連ビジュアライザーは、接続されたエンティティ間の既存の関連付けとその基数のネットワーク図を示します。 また、リレーションシップ パスを視覚化します。
+関連ビジュアライザーは、接続されたエンティティ間の既存の関連付けとその基数のネットワーク図を示します。
 
 ビューをカスタマイズするには、ボックスをキャンバス上でドラッグして、位置を変更します。
 
@@ -106,56 +92,6 @@ ms.locfileid: "7623017"
 - **画像としてエクスポート**: 現在のビューを画像ファイルとして保存します。
 - **水平/垂直レイアウトに変更**: エンティティと関連付けの配置を変更します。
 - **編集**: 編集ペインでユーザー定義の関連付けのプロパティを更新し、変更を保存します。
-
-## <a name="relationship-paths"></a>関連付けパス
-
-関連付けパスは、ソース エンティティとターゲット エンティティの間の関係で結ばれたエンティティを記述します。 統合プロファイル エンティティ以外のエンティティを含むセグメント、またはメジャーを作成し、統一されたプロファイル エンティティに到達する複数のオプションがある場合に使用されます。 
-
-関連付けパスは、統合プロファイル エンティティにどの関連付けでアクセスするかをシステムに通知します。 リレーションシップ パスが異なれば、結果も異なる可能性があります。
-
-エンティティ *eCommerce_eCommercePurchases* は、統合プロファイルの *顧客* エンティティと以下の関係にあります:
-
-- eCommerce_eCommercePurchases > 顧客
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > 顧客
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > 顧客 
-
-関連付けパスは、メジャーやセグメントのルールを作成する際に、どのエンティティを使用するかを決定します。 一致するレコードがすべてのエンティティの一部である必要があるため、最も長いリレーションシップ パスを持つオプションを選択すると、結果が少なくなる可能性があります。 この例では、顧客は電子商取引 (eCommerce_eCommercePurchases) を通じて販売時点管理 (POS_posPurchases) で商品を購入し、当社のロイヤルティ プログラム (loyaltyScheme_loyCustomers) に参加する必要があります。 1 つ目のオプションを選択した場合、顧客は 1 つの追加されたエンティティに存在するだけでよいため、より多くの結果を得られる可能性があります。
-
-### <a name="direct-relationship"></a>直接的な関連付け
-
-ソース エンティティーがターゲット エンティティーと 1 つの関連付けだけで関連している場合、その関係は **直接的な関連付け** に分類されます。
-
-たとえば、*eCommerce_eCommercePurchases* という活動エンティティが *ContactId* のみでターゲット エンティティ *eCommerce_eCommerceContacts* のエンティティに接続している場合、これは直接的な関連付けです。
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="ソース エンティティはターゲット エンティティに直接的に接続します。":::
-
-#### <a name="multi-path-relationship"></a>複数パスの関連付け
-
-**マルチパスの関連付け** は、ソース エンティティを複数のターゲット エンティティに接続する特別なタイプの直接的な関連付けです。
-
-たとえば、*eCommerce_eCommercePurchases* という活動エンティティが、*eCommerce_eCommerceContacts* と *loyaltyScheme_loyCustomers* という 2 つのターゲット エンティティに関係している場合、それはマルチパスの関連付けです。
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="ソース エンティティは、マルチホップの関連付けを介して複数のターゲット エンティティに直接的に接続します。":::
-
-### <a name="indirect-relationship"></a>間接的な関連付け
-
-ソース エンティティーがターゲット エンティティーに関連付けられる前に、1 つまたは複数の追加エンティティーに関係する場合、その関係性は **間接的な関連付け** に分類されます。
-
-#### <a name="multi-hop-relationship"></a>複数ホップの関連付け
-
-*マルチホップ関係* は、ソース エンティティとターゲット エンティティを、1 つ以上の他の仲介エンティティを介して接続することができる *間接的な関連付け* です。
-
-たとえば、*eCommerce_eCommercePurchasesWest* という活動エンティティが *eCommerce_eCommercePurchasesEast* という中間エンティティに接続し、さらに *eCommerce_eCommerceContacts* というターゲット エンティティに接続した場合、それはマルチホップの関連付けです。
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="ソース エンティティが、中間エンティティを使用してターゲット エンティティに直接的に接続している。":::
-
-### <a name="multi-hop-multi-path-relationship"></a>複数ホップ、複数パスの関連付け
-
-複数ホップと複数パスの関連付けを一緒に使用して **複数ホップの関連付け、複数パスの関連付け** を作成できます。 この特殊なタイプは、**複数ホップ** と **複数パスの関連付け** の機能を兼ね備えています。 中間エンティティを使用しながら、複数のターゲット エンティティに接続できます。
-
-*eCommerce_eCommercePurchasesWest* という活動エンティティが *eCommerce_eCommercePurchasesEast* という中間エンティティに接続し、さらに *eCommerce_eCommerceContacts* と *loyaltyScheme_loyCustomers* という 2 つのターゲット エンティティに接続した場合、これは複数ホップ、複数パスの関連付けとなります。
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="ソース エンティティは 1 つのターゲット エンティティに直接的に接続し、中間エンティティを介して別のターゲット エンティティに接続します。":::
 
 ## <a name="manage-existing-relationships"></a>既存の関連付けの管理 
 
@@ -169,6 +105,6 @@ ms.locfileid: "7623017"
 
 ## <a name="next-step"></a>次のステップ
 
-システムやカスタムの関連付けを利用して、サイロ化から解き放たれた複数のデータソースに基づいて [セグメントの作成](segments.md) と [対策](measures.md) を行います。
+システムとユーザー定義の関連付けは、サイロ化されなくなった複数のデータ ソースに基づいて [セグメントを作成](segments.md) するために使用されます。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

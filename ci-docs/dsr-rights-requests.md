@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732686"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483680"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR におけるデータ主体の権利 (DSR)
 
@@ -79,14 +79,7 @@ Customer Insights 管理者は、次の手順に従って Customer Insights ユ�
 2. 要求されたユーザーのデータをエクスポートするにあたっての確認をします。
 3. テナント管理者のメールアドレスからエクスポートされたデータを受け取ります。
 
-## <a name="consent-management-preview"></a>同意の管理 (プレビュー)
-
-同意管理機能は、ユーザー データを直接収集しません。 他のアプリケーションのユーザーから提供された同意データのみをインポートして処理します。
-
-特定のユーザーに関する同意データを削除するには、同意管理機能に取り込まれたデータ ソースで削除します。 データ ソースを更新すると、削除されたデータは同意センターでも削除されます。 同意エンティティを使用するアプリケーションは、[更新](audience-insights/system.md#refresh-processes) 後にソースで削除されたデータも削除します。 他のすべてのプロセスおよびアプリケーションからユーザーのデータを削除するために、データ主体の要求に応答した後、データ ソースをすばやく更新することをお勧めします。
-
-
-## <a name="engagement-insights-preview"></a>エンゲージメント分析情報 (プレビュー)
+## <a name="engagement-insights"></a>エンゲージメント分析情報
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>エンド ユーザーを特定できる情報を含むイベント データの削除とエクスポート
 

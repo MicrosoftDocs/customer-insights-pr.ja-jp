@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse の Customer Insights データ
 description: Customer Insights エンティティを Microsoft Dataverse のテーブルとして使用します。
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866940"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645224"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
@@ -45,7 +45,6 @@ Customer Insights を設定するときに新しい組織を作成すると、�
 - [CustomerMeasure](#customermeasure)
 - [エンリッチメント](#enrichment)
 - [予測](#prediction)
-- [セグメント メンバーシップ](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -122,16 +121,3 @@ AlternativeKey テーブルには、統合プロセスに参加したエンテ�
 | 値               | JSON 文字列 | モデルが生成した属性のリスト |
 | msdynci_predictionid | GUID        | msdynci_identifier から生成された確定的 GUID | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>セグメント メンバーシップ
-
-このテーブルは、顧客プロファイルのセグメント メンバーシップ情報を含みます。
-
-| Column        | タイプ | Description                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | 顧客プロファイル ID        |
-| SegmentProvider      | String       | セグメントを公開するアプリ。 既定: 対象ユーザーに関するインサイト         |
-| SegmentMembershipType | String       | このセグメント メンバーシップ レコードの顧客のタイプ。 顧客、取引先担当者、取引先企業など、複数のタイプをサポートします。 既定: 顧客  |
-| セグメント       | JSON 文字列  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
-| msdynci_identifier  | String   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | `msdynci_identifier` から生成した確定的 GUID          |
