@@ -3,18 +3,17 @@ title: 試用版 FAQ - Dynamics 365 Customer Insights
 description: Customer Insights 試用版の設定と管理に関連するよくある質問への解決策。 プラットフォームとアプリ固有の問題を解決する方法について説明します。
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642884"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229501"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版に関するよくあるご質問
 
@@ -24,7 +23,7 @@ ms.locfileid: "7642884"
 
 このアプリはクラウド ベースのサービスであり、最新の Web ブラウザー以外に特別なソフトウェアは必要ありませんが、いくつかの制約があります。 最高の試用版体験を得るには、シークレット モードで試用版サイトにアクセスすることを避け、最も近い試用版の場所を選択してください。 [Web アプリケーションの要件についての詳細情報。](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Microsoft 365 のテナントなしで試用版にサインアップするにはどうすればよいですか。
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Microsoft 365 テナントがない状態で試用版にサインアップする方法は?
 
 仕事用以外のメール アドレスを入力すると、アカウントとテナントが作成されます。
 
@@ -43,7 +42,7 @@ ms.locfileid: "7642884"
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>試用版にユーザーをさらに追加するにはどうすればよいですか。
 
-ユーザーを追加するには、試用版管理者アカウントを使用して [Microsoft 365 管理センター](https://admin.microsoft.com) に移動します。 [管理センターのガイダンス](/microsoft-365/admin/add-users/add-users) に従って、試用版ライセンスの上限までユーザーを追加します。 追加するユーザーが既に Microsoft 365 のアカウントを持っている場合は、試用をする組織で適切なセキュリティ ロールを割り当てます。詳細については、[セキュリティ ロールをユーザーに割り当てる](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user) を参照してください。
+ユーザーを追加する際は、試用版の管理者アカウントを使用して [Microsoft 365 管理センター](https://admin.microsoft.com) に移動します。 [管理センターのガイダンス](/microsoft-365/admin/add-users/add-users) に従って、試用版ライセンスの上限までユーザーを追加します。 追加するユーザーが既に Microsoft 365 アカウントを持っている場合は、試用する組織で適切なセキュリティ ロールを割り当てます。詳細は [セキュリティ ロールをユーザーに割り当てる](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user) を参照してください。
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>試用版環境には何人のユーザーを追加できますか？
 
@@ -63,7 +62,7 @@ ms.locfileid: "7642884"
 
 一般的に、Customer Insights の有料版にアップグレードする際には、独自のデータで新しく始めることをお勧めします。 
 
-オプションで、対象者分析情報のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用環境から有料環境に設定を移行するには、Customer Insights の試用版の管理者と Microsoft 365 テナントのグローバル管理者、または組織内の Dynamics 365 管理者である必要があります。 
+オプションで、対象者分析情報のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用版環境から有料環境に設定を移行する場合は、Customer Insights 試用版の管理者および Microsoft 365 テナントのグローバル管理者、または組織の Dynamics 365 管理者である必要があります。 
 
 Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](audience-insights/manage-environments.md#copy-the-environment-configuration)を参照してください。
 
@@ -82,8 +81,9 @@ Customer Insights の有料インスタンスに初めてサインインする�
 
 Customer Insights 機能のほとんどの機能は、試用版で利用できます。
 
-次の機能は使用できません: 
+次の機能は **利用できません**。 
 - 独自の Azure Data Lake ストレージ アカウントを使用する新しい環境を作成することはできません。
+- 試用版環境は削除できません。 
 
 ### <a name="how-long-does-the-trial-last"></a>試用版の期間はどのくらいですか?
 

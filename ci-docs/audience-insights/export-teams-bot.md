@@ -1,27 +1,26 @@
 ---
 title: Microsoft Teams 用ボット
 description: ボットのヘルプを使用して、Microsoft Teams で統合顧客プロファイルを検索します。
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406182"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232108"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights 用 Teams ボット (プレビュー)
 
 Microsoft Teams に接続して、ボットが Teams チャネルで統合顧客プロファイルを検索できるようにします。
 
 > [!div class="mx-imgBorder"]
-> ![顧客レコードを表示する Teams ボット](media/teams-bot.png "顧客レコードを表示する Teams ボット")
+> ![顧客レコードを表示する Teams ボット。](media/teams-bot.png "顧客レコードを表示する Teams ボット")
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -31,7 +30,10 @@ Microsoft Teams に接続して、ボットが Teams チャネルで統合顧客
 - [統合プロセス](data-unification.md) が完了しました。
 - フィールドが [検索とフィルター インデックス](search-filter-index.md) に追加されます。
 - Customer Insights と Teams は同じ組織内にあります。
+- ご使用の環境では、プライマリ ターゲット対象者が個人顧客に設定されています。 ビジネス アカウントはサポートされていません。
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>ボットの構成
 
 1. 対象者に関するインサイトで、**管理** > **エクスポート先** に移動します。
@@ -52,3 +54,6 @@ Microsoft Teams に接続して、ボットが Teams チャネルで統合顧客
 - 組織が同じ組織内に複数の Customer Insights 環境を維持している場合は、**switchinstance** を入力し、ボットを接続する環境を選択できます。
 
 - **ヘルプ** と入力して、ボットで使用できるコマンドのリストを表示します。  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

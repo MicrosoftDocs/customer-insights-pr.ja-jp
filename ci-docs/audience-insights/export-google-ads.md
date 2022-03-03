@@ -1,24 +1,26 @@
 ---
 title: Customer Insights のデータを Google 広告にエクスポートする
 description: Google Ads への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604283"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227016"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>セグメントを Google Ads にエクスポート (プレビュー)
 
 統一された顧客プロファイルのセグメントを Google Ads 対象ユーザー リストにエクスポートし、それらを使用して Google 検索、Gmail、YouTube、および Google ディスプレイ ネットワークで宣伝できます。 
+
+> [!IMPORTANT]
+> 現在、承認済み Google Ads 開発者トークンを既にお持ちの場合にのみ、新しい接続を作成してデータを Google Ads にエクスポートできます。 ポリシーの変更に伴い、Google Ads のエクスポートをまもなく更新し、開発者トークンを必要としないエクスポート オプションを提供します。これにより、エクスペリエンスの継続性が確保され、 Google Ads へのエクスポートが簡素化されます。 新しいエクスポート オプションへの切り替えを容易にするために、Google Ads への接続をこれ以上設定しないことをお勧めします。
 
 ## <a name="prerequisites-for-connection"></a>接続の前提条件
 
@@ -32,9 +34,9 @@ ms.locfileid: "6604283"
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Google 広告 へのエクスポートごとに 100 万プロファイルまで。
+- Google Ads へのエクスポートごとに最大 100 万の顧客プロファイル。
 - Google 広告へのエクスポートはセグメントに制限されています。
-- プロバイダー側の制限により、合計 100 万のプロファイルを持つセグメントのエクスポートには、最大 5 分かかる場合があります。 
+- プロバイダー側の制限により、合計 100 万の顧客プロファイルを持つセグメントのエクスポートには最大 5 分間かかる場合があります。 
 - Google 広告でのマッチングには、最大 48 時間かかる場合があります。
 
 ## <a name="set-up-connection-to-google-ads"></a>Google Ads への接続を設定する
@@ -71,7 +73,7 @@ ms.locfileid: "6604283"
 
 1. **[Google 広告オーディエンス ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** を入力して、**接続** を選択し、Google 広告への接続を初期化します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。
 
 1. エクスポートするセグメントを選択します。 合計で最大 100 万の顧客プロファイルを Google 広告にエクスポートできます。
 

@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645316"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229083"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>新しいワークスペースから作成してメンバーを追加する
 
@@ -26,9 +25,9 @@ ms.locfileid: "7645316"
 
 ## <a name="create-a-new-workspace"></a>新しいワークスペースの作成
 
-ワークスペースを作るプロセスには、ワークスペースの整理に必要な *環境* を整えることも含まれます。 環境とは、1つまたは複数のワークスペースを含むことができるスペースです。 環境を使用して、ワークスペースとCustomer Insights の対象ユーザーのインサイト機能への接続を管理できます。
+ワークスペースを作るプロセスには、ワークスペースの整理に必要な *環境* を整えることも含まれます。 環境とは、1つまたは複数のワークスペースを含むことができるスペースです。 環境を使用して、ワークスペースと対象者分析情報機能への接続を管理できます。
 
-1. ワークスペース スイッチャーから **新規** を選択します。
+1. ワークスペース スイッチャーから **+ 新規** を選択します。
 
    :::image type="content" source="media/new-workspace.png" alt-text="ナビゲーション ウィンドウと説明にコールアウトがある Customer Insights ページ。":::
 

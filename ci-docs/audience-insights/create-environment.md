@@ -1,21 +1,23 @@
 ---
 title: Customer Insights で環境を作成する
 description: Dynamics 365 Customer Insights のライセンス サブスクリプションを使用して環境を作成するステップ。
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088119"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354101"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>対象者分析情報で環境を作成する
 
@@ -76,12 +78,14 @@ Customer Insights の複数の環境を作成し、それらの環境からの�
    
 **Microsoft Dataverse** ステップを使用すると、Customer Insights を Dataverse 環境に接続できます。
 
-[すぐに使用できる予測モデル](predictions-overview.md#out-of-box-models)を使用するには、Dataverse とのデータ共有を構成します。 または、オンプレミスのデータ ソースからのデータ取り込みを有効にして、組織が管理する Microsoft Dataverse 環境 URL を提供します。 **データ共有の有効化** を選択して、Customer Insights 出力データを Dataverse - マネージド Data Lake と共有します。
+自分の Microsoft Dataverse 環境を提供し、Dynamics 365 Marketing や Power Apps のモデル駆動型アプリケーションなどの Dataverse ベースのビジネス アプリケーションを使用してデータ (プロファイルと分析情報) を共有します。 自分の Dataverse 環境がない場合はこのフィールドを空にしてください。環境がプロビジョニングされます。
+
+自分の Dataverse 環境を接続すると、[Power Platform データフローとゲートウェイを使用してオンプレミス データ ソースからデータを取り込む](data-sources.md#add-data-from-on-premises-data-sources)こともできます。 また、Dataverse 環境に接続して、[すぐに使用できる予測モデル](predictions-overview.md?tabs=b2c#out-of-box-models)を使用することもできます。
 
 > [!IMPORTANT]
 > データ共有を有効にするには、Customer Insights と Dataverse が同じリージョンにある必要があります。
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Microsoft Dataverse とのデータ共有を新しいインスタンスで自動的に有効にする":::
 
 > [!NOTE]
 > Customer Insights では、次のデータ共有シナリオがサポートされていません。

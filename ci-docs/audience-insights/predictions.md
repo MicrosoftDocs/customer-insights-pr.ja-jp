@@ -1,24 +1,28 @@
 ---
 title: 予測を使用して部分データを完成させる
 description: 予測を使用して、不完全な顧客データを入力します。
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645040"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354009"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>予測を使用した部分データの完成 (非推奨)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> この機能は、**2021 年 11 月 5 日** の時点で **非推奨** になります。 現在の実装は、機能が削除されるまで引き続き機能しますが、以下の手順を使用して新しい統合を作成することはできません。
 
 予測により、予測値を簡単に作成して、顧客の理解を深めることができます。 **インテリジェンス** > **予測** ページで、**自分の予測** を選択して、対象者に関するインサイトの他の部分で構成した予測を表示し、さらにカスタマイズすることができます。
 
@@ -60,6 +64,8 @@ ms.locfileid: "7645040"
    > ![カテゴリにマップされたフィールド値を示す例。](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
 
 8. **完了** を選択すると、予測が処理されます。 データのサイズと複雑さによっては、処理に時間がかかります。 結果は作成した予測の **出力エンティティ名** に基づいて、新しいエンティティで利用可能になります。
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>セグメントの作成中に予測を作成する
 
@@ -110,7 +116,7 @@ ms.locfileid: "7645040"
 
 ## <a name="edit-a-prediction"></a>予測の編集
 
-予測を作成したら、AI Builder でモデルをカスタマイズして、モデルの有効性を高めることができます。  
+予測を作成したら、AI Builder でモデルをカスタマイズして、モデルの効果を高めることができます。  
 
 1. 対象者に関するインサイトで、**インテリジェンス** > **予測** > **自分の予測** に移動します。
 
@@ -118,14 +124,14 @@ ms.locfileid: "7645040"
 
 3.  **アクション** 列で省略記号を選択し、**表示** を選択します。
 
-4. **AI Builder でカスタマイズ** を選択します。
+4. **AI Builder でのカスタマイズ** を選択します。
 
 5. AI Builder でモデルを更新します。 [AI Builder でのモデルの管理に関する詳細](/ai-builder/manage-model#retrain-and-republish-existing-models)。
 
 予測の次の実行では、作成した更新済みモデルが使用されます。
 
 > [!NOTE]
-> AI Builder で作成された新しいモデルは、モデルが上記のエクスペリエンスから作成されていない限り、対象者に関するインサイトに表示されません。
+> AI Builder で作成された新しいモデルは、モデルが上記のエクスペリエンスから作成されていない限り、対象者分析情報には表示されません。
 
 ## <a name="remove-a-prediction"></a>予測の削除
 

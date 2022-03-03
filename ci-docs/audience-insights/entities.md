@@ -3,18 +3,20 @@ title: エンティティとデータセット
 description: エンティティ ページにデータを表示します。
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900433"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355304"
 ---
 # <a name="entities-in-audience-insights"></a>対象者に関するインサイトのエンティティ
 
@@ -71,7 +73,9 @@ ms.locfileid: "7900433"
 
 たとえば、「birthday」 列のデータ型は 「date」 に設定されています。 顧客レコードには、誕生日が 「01/01/19777」 と入力されています。 システムは、このレコードに破損のフラグを立てます。 ソースシステムの誕生日を「1977」に変更できるようになります。 データソースの自動更新後、このフィールドは有効なフォーマットとなり、破損したエンティティからレコードが削除されます。 
 
-**データ** > **エンティティ** に移動し、**システム** セクションで破損したエンティティを探します。 破損したエンティティのネーミング スキーマ: 'DataSourceName_EntityName_corrupt'。
+**データ** > **エンティティ** に移動し、**システム** セクションで破損したエンティティを探します。 破損したエンティティのネーミング スキーマ: 'DataSourceName_EntityName_corrupt'。 破損したエンティティを選択して、破損したすべてのフィールドと理由を個々のレコード レベルで識別します。
+> [!div class="mx-imgBorder"]
+> ![破損の理由。](media/corruption-reason.png "破損の理由")
 
 Customer Insights は、破損したレコードを引き続き処理します。 ただし、統合データを操作するときに問題が発生する可能性があります。
 

@@ -3,18 +3,20 @@ title: Customer Insights からの他のサービスへの接続。
 description: 他のサービスとデータを共有します。
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304978"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354390"
 ---
 # <a name="connections-preview-overview"></a>接続 (プレビュー) の概要
 
@@ -47,6 +49,7 @@ ms.locfileid: "6304978"
 1. **接続の設定** ペインに、必要な詳細を入力します。 
    1. 接続の **表示名** と種類は、接続を説明します。 この接続の目的とターゲットを説明する名前を選択することをお勧めします。
    1. 正確なフィールドは、接続しているサービスによって異なります。 特定の接続の種類の詳細については、対象サービスに関する記事を参照してください。
+   1. もし、[独自の Key Vault を使用して](use-azure-key-vault.md)シークレットを保存するには、**Key Vault を使用する** をアクティブ化して、リストからシークレットを選択します。
 
 1. 接続を作成するには、**保存** を選択します。
 
@@ -93,3 +96,6 @@ ms.locfileid: "6304978"
 
 1. 削除の実行を確定するには、**削除** を選択します。
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>独自の Key Vault によって管理されるシークレットとの接続を設定します
+
+一部の接続には、API キーやパスワードなどのシークレットが必要です。 一部の接続では、独自の Key Vault に保存されているシークレットをサポートしています。 サポートされている接続とセットアップ方法の詳細については、[対象者インサイトのための独自の Key Vault](use-azure-key-vault.md) を参照してください。

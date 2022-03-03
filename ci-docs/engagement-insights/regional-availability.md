@@ -4,26 +4,25 @@ description: サービスが展開される地域の詳細について解説し�
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483303"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228112"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の地域別提供状況
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-エンゲージメントの分析情報、Dynamics 365 Customer Insights の機能は、顧客がデータの保存に選択可能な地域を徐々に増やしています。 管理者は、[新しい環境を作成する](manage-environments-workspaces.md#create-an-environment)際に、リージョンを選択できます。 
+エンゲージメントの分析情報、Dynamics 365 Customer Insights の機能は、顧客がデータの保存に選択可能な地域を徐々に増やしています。 管理者は、[新しい環境を作成する](create-new-environment.md)際に、リージョンを選択できます。 
 
-初めてエンゲージメントの分析情報を設定する際は、[ガイド付きの初回実行エクスペリエンス](quickstart.md)介して地域を選択することができます。 すべての新規環境では、後からデータを保存する領域を選択できます。
+初めてエンゲージメントの分析情報を設定する際は、[ガイド付きの初回実行エクスペリエンス](quickstart.md)介して地域を選択することができます。 その後、すべての新しい環境で、データが保存されるリージョンを選択できるようになりました。
 
-現在、米国とヨーロッパの 2 つの地域があります。 ユーザーは、米国西部地域と北ヨーロッパ地域のどちらかを選択できます。
+現在、米国と欧州の地域に対応しています。 ユーザーは、これらの地域 (米国西部、米国東部、北ヨーロッパ、西ヨーロッパ) から選択できます。
 
 組織は、さまざまな地域の環境を管理できます。 たとえば、環境 A は米国西部にデータを保存し、環境 B は北ヨーロッパにデータを保存しています。
 

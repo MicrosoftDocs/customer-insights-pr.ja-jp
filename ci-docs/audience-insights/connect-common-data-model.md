@@ -1,20 +1,24 @@
 ---
 title: Common Data Model データを Azure Data Lake アカウントに接続する
 description: Azure Data Lake Storage を使用して、Common Data Model データを操作します。
-ms.date: 05/29/2020
-ms.service: customer-insights
+ms.date: 01/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033132"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354933"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Azure Data Lake アカウントを使用して Common Data Model のフォルダーに接続する
 
@@ -26,11 +30,13 @@ ms.locfileid: "7033132"
 
 - データの取り込みは、Azure Data Lake *Gen2* ストレージ アカウントのみをサポートしています。 Azure Data Lake Gen1 ストレージ アカウントを使用してデータを取り込むことはできません。
 
+- Azure Data Lake Storage アカウントは [階層型名前空間を有効](/azure/storage/blobs/data-lake-storage-namespace) にしておく必要があります。
+
 - Azure サービス プリンシパルで認証するには、テナントで構成されていることを確認してください。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。
 
 - 接続してデータを取り込む Azure Data Lake は、Dynamics 365 Customer Insights 環境と同じ Azure リージョンに存在する必要があります。 別の Azure リージョンにあるデータ レイクから Common Data Model フォルダーへの接続はサポートされていません。 環境の Azure リージョンを確認するには、対象者に関するインサイトで **管理** > **システム** > **詳細** に移動します。
 
-- オンライン サービスに保存されたデータは、Dynamics 365 Customer Insights でデータが処理または保存される場所とは別の場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください
+- オンライン サービスに保存されたデータは、Dynamics 365 Customer Insights でデータが処理または保存される場所とは別の場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Common Data Model フォルダーへの接続
 
@@ -38,12 +44,11 @@ ms.locfileid: "7033132"
 
 1. **データソースの追加** を選択します。
 
-1. **Common Data Model フォルダーへの接続** を選択し、データ ソースの **名前** を入力して、**次へ** を選択します。 名前のガイドライン: 
-   - 文字で始まる必要があります。
-   - 文字と数字のみを使用してください。 特殊文字とスペースは使用できません。
-   - 3〜64 文字を使用します。
+1. **Azure Data Lake Storage** を選択して、データ ソースの **名前** を入力し、**次へ** を選択します。
 
-1. 認証にリソース ベースのオプションとサブスクリプション ベースのオプションのどちらを使用するかを選択できます。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 **コンテナー** 情報を入力し、**次へ** を選択します。
+   - プロンプトが表示されたら、業界に関連するサンプル データセットの 1 つを選択してから、**次へ** を選択します。 
+
+1. 認証にリソース ベースのオプションとサブスクリプション ベースのオプションのどちらを使用するかを選択できます。 詳細については、[対象者に関するインサイトを Azure サービス プリンシパルで Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。 **サーバー アドレス** を入力してから、**ログイン** を選択し、次に **次へ** を選択します。
    > [!div class="mx-imgBorder"]
    > ![Azure Data Lake の新しい接続の詳細を入力するためのダイアログ ボックス。](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +61,11 @@ ms.locfileid: "7033132"
    > [!NOTE]
    > 環境内にある別のデータ ソースに関連付けられている model.json または manifest.json ファイルは一覧に表示されません。
 
-1. 選択した model.json または manifest.json ファイルで利用可能なエンティティの一覧を取得します。 使用可能なエンティティのリストから、レビューと選択をし、**保存** を選択します。 選択したエンティティのすべてが新しいデータ ソースから取り込まれます。
+1. 選択した model.json または manifest.json ファイルに含まれる使用可能なエンティティの一覧が表示されます。 利用可能なエンティティのリストをレビューして選択し、**保存** を選択します。 選択したエンティティのすべてが新しいデータ ソースから取り込まれます。
    > [!div class="mx-imgBorder"]
    > ![ダイアログ ボックスに model.json ファイルのエンティティ リストが表示されます。](media/review-entities.png)
 
-8. データ プロファイルを有効にするデータ エンティティを指定し、**保存** を選択します。 データ プロファイルによって分析とその他の機能が有効になります。 エンティティ全体を選択して、エンティティからすべての属性を選択するか、選択した特定の属性を選択できます。 既定では、データ プロファイルが有効になっているエンティティはありません。
+8. データ プロファイルを有効にするデータ エンティティを指定してから、**保存** を選択します。 データ プロファイルによって分析とその他の機能が有効になります。 エンティティ全体を選択して、エンティティからすべての属性を選択するか、選択した特定の属性を選択できます。 既定では、データ プロファイルが有効になっているエンティティはありません。
    > [!div class="mx-imgBorder"]
    > ![データ プロファイルを表示するダイアログ ボックス。](media/dataprofiling-entities.png)
 

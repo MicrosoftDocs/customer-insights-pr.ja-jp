@@ -3,20 +3,19 @@ title: サブスクリプション チャーンの予測 (ビデオを含む)
 description: 顧客が自社のサブスクリプション製品やサービスを利用しなくなった場合に、状況不利となっている顧客を予測します。
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967707"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354699"
 ---
-# <a name="subscription-churn-prediction-preview"></a>サブスクリプションの解約予測 (プレビュー)
+# <a name="subscription-churn-prediction"></a>サブスクリプション離反予測
 
 サブスクリプション解約予測では、顧客が自社のサブスクリプション製品やサービスを利用しなくなった場合に、状況不利となっている顧客を予測します。 **インテリジェンス** > **予測** ページで新しいサブスクリプション解約の予測を作成できます。 作成済みの予測を確認するには、**自分の予測** を選択します。
 
@@ -63,7 +62,7 @@ ms.locfileid: "7967707"
 ## <a name="create-a-subscription-churn-prediction"></a>サブスクリプションの解約予測を作成する
 
 1. 対象者に関するインサイトで、**インテリジェンス** > **予測** に移動します。
-1. **サブスクリプションの解約モデル (プレビュー)** タイルを選択し、**このモデルを使用する** を選択します。
+1. **サブスクリプション離反モデル** タイルをを選択し、**このモデルを使用する** を選択します。
    > [!div class="mx-imgBorder"]
    > ![このモデルボタンを使用したサブスクリプション解約モデルのタイル。](media/subscription-churn-usethismodel.PNG "このモデルボタンを使用したサブスクリプション解約モデルのタイル")
 

@@ -1,10 +1,30 @@
 ---
-ms.openlocfilehash: e0635711419c369fd89ac3d18bf84ab78567c146c06f8a456462608c170bca39
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 0740cbb2605ad7dbe81a54658da9361c7f31d3c1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032306"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8356072"
 ---
+
+> [!IMPORTANT]
+> Dynamics 365 Customer Insights エンゲージメント分析機能のプレビューは 2022 年 2 月 15 日に終了しました。  
+>
+>この変更は、Customer Insights の試用版エクスペリエンスに、ファネルの作成機能も他のレポート機能も含まれなくなることを意味します。
+>
+> Microsoft の顧客データ プラットフォーム (CDP)、[Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) の他の多くの機能を調べて評価することをお勧めします。    
+>  
+> 移行期間中、既存のプレビュー参加者は引き続き一部のプレビュー機能にアクセスできます。
+> 
+> - Web サイトやモバイル アプリをインストルメント化するためのコードを取得する 
+> - イベントとイベント プロパティを表示する 
+> - 取り込まれたイベントと絞り込まれたイベントで統合プロファイルを強化して、顧客データの価値を最大限に活用します
+>  
+> 注意: 移行期間中、キャプチャされたイベントは接続された Data Lake にストリーミングされます。 この機能をオフにすると、エンゲージメント分析情報と対象者分析情報間のデータ共有が停止し、接続されたストレージに新しいイベントが送信されなくなります。
+>
+> 機能のプレビューの終了に関するご質問は、Microsoft アカウント チームに直接お問い合わせください。 アカウント チームは、今後のリリースについて最新の情報を提供します。 
+>
+>今後ともよろしくお願いいたします。
+
 
 [このトピックはプレリリース ドキュメントであり、変更されることがあります。]

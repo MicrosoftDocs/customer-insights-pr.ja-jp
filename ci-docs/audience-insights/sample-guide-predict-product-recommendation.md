@@ -3,26 +3,29 @@ title: 製品のレコメンデーション予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成の製品レコメンデーション予測モデルを試してください。
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035191"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354653"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>製品のレコメンデーション予測 (プレビュー) サンプル ガイド
+# <a name="product-recommendation-prediction-sample-guide"></a>製品のレコメンデーション予測サンプル ガイド
 
 以下に示すサンプル データを使用して、製品レコメンデーション予測のエンドツーエンドの例について説明します。
 
 ## <a name="scenario"></a>シナリオ
 
-Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。 その目標は、定期的な顧客にどの製品を推奨すべきかを理解することです。 顧客が **購入する可能性が高い** ことを把握することで、特定のアイテムに焦点を当ててマーケティングの労力を軽減できます。
+Contoso は、高品質のコーヒーとコーヒー メーカーを製造し、Contoso Coffee の Web サイトで販売している会社です。 その目標は、定期的な顧客にどの製品を推奨すべきかを理解することです。 顧客が **購入する可能性が高い** ことを把握することで、特定のアイテムに焦点を当ててマーケティングの労力を軽減できます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -31,7 +34,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-1---ingest-data"></a>タスク 1 - データの取り込み
 
-特に [データの取り込み](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) についての記事を確認します。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
+[データ インジェスト](data-sources.md)と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md)に関する記事を特にご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>顧客データを eコマース プラットフォームから取り込む
 

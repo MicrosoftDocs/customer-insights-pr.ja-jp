@@ -1,20 +1,19 @@
 ---
 title: Customer Insights データを Constant Contact にエクスポート
 description: Constant Contact への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124279"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226409"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>セグメントを Constant Contact にエクスポート (プレビュー)
 
@@ -24,14 +23,14 @@ ms.locfileid: "6124279"
 
 -   [Constant Contact アカウント](https://www.constantcontact.com/account-home) と対応する管理者資格情報がある。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Constant Contact には、1 回のエクスポートにつき 100 万プロファイルまでエクスポートできます。
+- Constant Contact へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートできます。
 - Constant Contact へのエクスポートはセグメントに限定されています。
-- 最大 100 万のプロファイルを Constant Contact にエクスポートすると、完了するまでに最大 1 時間かかります。 
-- Constant Contact にエクスポートできるプロファイルの数は、Constant Contact との契約によって異なり、制限されます。
+- 最大 100 万の顧客プロファイルを Constant Contact にエクスポートすると、完了するまでに最大 1 時間かかる場合があります。 
+- Constant Contact にエクスポートできる顧客プロファイルの数は、Constant Contact との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-constant-contact"></a>Constant Contact への接続を設定する
 
@@ -47,7 +46,7 @@ ms.locfileid: "6124279"
 
 1. **接続** を選択して、Constant Contact への接続を初期化します。
 
-1. **AdRoll による認証** を選択して、Constant Contact の管理者資格情報を入力します。 
+1. **コンスタントコンタクトで認証する** を選択し、コンスタント コンタクトの管理者認証情報を入力します。 
 
 1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
 
@@ -65,7 +64,7 @@ ms.locfileid: "6124279"
 
 1. [**Constant Contact リスト ID**](https://app.constantcontact.com/pages/contacts/ui#lists) を入力します。 Constant Contact でリストを開き、URL でリスト ID を検索します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Constant Contact にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Constant Contact にエクスポートする必要があります。
 
 1. オプションで、名 と 姓 を追加フィールドとしてエクスポートし、よりパーソナライズされた電子メールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

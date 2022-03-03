@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645270"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353719"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights の対象ユーザー インサイト機能を使用する
 
@@ -37,7 +39,7 @@ ms.locfileid: "7645270"
 
 統合プロファイルは、データを洞察し、アクションを実行するための基盤となります。 様々なソースからデータを取り込み、データの統一プロセスを実行して、統一されたプロファイルを組み合わせます。 取り込んだエンティティ間で関連付けを指定し、エンリッチメント機能を使用してプロファイルに情報を追加します。 
 
-1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Power Query コネクタ](connect-power-query.md)、[ Common Data Model フォルダ](connect-common-data-model.md)、または [Microsoft Dataverse](connect-common-data-service-lake.md) から選択します。 
+1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Power Query コネクタ](connect-power-query.md)、[Common Data Model フォルダー](connect-common-data-model.md)、[Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake) の中から選択します。 
 
 1. [マッピング](map-entities.md)、[一致](match-entities.md)、と[マージ](merge-entities.md)のフェーズを介して、[データ統合プロセス](data-unification.md)を実行します。
 

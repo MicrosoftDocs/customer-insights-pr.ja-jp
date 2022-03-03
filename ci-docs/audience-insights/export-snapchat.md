@@ -1,22 +1,21 @@
 ---
 title: Customer Insights データを Snapchat にエクスポート
 description: Snapchat への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760565"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227254"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>セグメント リストを Snapchat にエクスポート (プレビュー)
+# <a name="export-segments-to-snapchat-preview"></a>セグメントを Snapchat にエクスポート (プレビュー)
 
 統合顧客プロファイルのセグメントを Snapchat にエクスポートし、広告に使用します。 
 
@@ -29,7 +28,7 @@ ms.locfileid: "5760565"
 ## <a name="known-limitations"></a>既知の制限
 
 - Snapchat へのエクスポートはセグメントに限定されています。
-- 最大 100 万件のプロファイルを Snapchat にエクスポートすると、完了するまでに最大 15 分かかります。 
+- 最大 100 万の顧客プロファイルを Snapchat にエクスポートすると、完了するまでに最大 15 分かかる場合があります。 
 
 ## <a name="set-up-connection-to-snapchat"></a>Snapchat への接続を設定する
 
@@ -63,7 +62,7 @@ ms.locfileid: "5760565"
 
 1. [**Snapchat 対象者 ID**](https://businesshelp.snapchat.com/s/article/custom-audiences) を入力します。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Snapchat にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Snapchat にエクスポートする必要があります。
 
 1. エクスポートするセグメントを選択します。 
 

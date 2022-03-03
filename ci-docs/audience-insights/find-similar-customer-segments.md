@@ -1,24 +1,29 @@
 ---
-title: AI で類似する顧客を見つける
+title: AI で類似の顧客を見つける (ビデオを含む)
 description: 人工知能を活用して類似した顧客セグメントを見つけます。
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034549"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355251"
 ---
 # <a name="similar-customers-preview"></a>類似した顧客 (プレビュー)
 
 この機能を使用すると、人工知能を使用して顧客ベース内で類似した顧客を見つけることができます。 この機能を使用するには、少なくとも1つのセグメントを作成する必要があります。 既存のセグメントの基準を拡張することで、そのセグメントに類似した顧客を見つけることができます。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *類似した顧客を見つける* は、は、データを評価し、そのデータに基づいて予測を行う自動化された手法を使用しているため、一般データ保護規則 (GDPR) で定義されているプロファイリングの手法として使用することができます。 顧客がこの機能を使用してデータを処理する場合、GDPR またはその他の法律または規制が適用される場合があります。 お客様は、予測を含む Dynamics 365 Customer Insights の使用が、プライバシー、個人データ、生体認証データ、データ保護、通信の秘密保持に関連する法律を含む、適用されるすべての法律および規制に準拠していることを確認する責任があります。

@@ -3,18 +3,20 @@ title: 機械学習を利用して提案されたセグメント
 description: 機械学習を使用して、顧客の属性に基づいて新しく興味深いセグメントを見つけることができます。
 ms.date: 10/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-segment-suggestions
+- customerInsights
+ms.openlocfilehash: 82345a7d7cf7fd38d74080552799de0b92461d78
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673189"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353595"
 ---
 # <a name="suggested-segments-preview"></a>提案されたセグメントを見る (プレビュー)
 

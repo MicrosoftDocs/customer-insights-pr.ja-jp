@@ -1,39 +1,33 @@
 ---
-title: すぐに使用できるプロファイル レポートを有効にする
-description: 性別、年齢、出身市区郡または出身地域ごとにグループ化された、すぐに使用できるプロファイル レポートを作成する方法について説明します。
+title: すぐに使用できる (OOB) プロファイル レポートを有効にする
+description: 性別、年齢、出身市区郡または出身地域ごとにグループ化された、すぐに使用できる (OOB) プロファイル レポートを作成する方法について説明します。
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4c165c4278a4870e6872d460e20cf7cb1eb8df83
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033958"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233960"
 ---
-# <a name="out-of-box-profile-reports"></a>すぐに使用できるプロファイル レポート
+# <a name="out-of-box-oob-unified-profile-reports"></a>すぐに使用できる (OOB) 統一プロファイル レポート
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-レポートは、ユーザーの行動を理解するのに役立つデータのビジュアル化のコレクションです。 Customer Insights の対象者に関するインサイトに接続することで、エンゲージメント インサイトは統合顧客プロファイルに関する情報を含むレポートを表示できます。 このレポートには、性別、年齢、地理的な場所ごとにグループ化された、所有するプロファイルの数が含まれます。
+統合プロファイル レポートは、ユーザーの行動を理解するのに役立つ集合的なデータのビジュアル化です。 Customer Insights 対象者分析情報機能に接続することで、エンゲージメント分析情報は統合された顧客プロファイルに関する情報を含む OOB レポートを表示できます。 このレポートには、性別、年齢、地理的な場所ごとにグループ化された、所有するプロファイルの数が含まれます。 顧客プロファイルについては、[顧客プロファイル](../audience-insights/customer-profiles.md)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-対象者に関するインサイトの環境では、顧客が管理する Azure Data Lake Storage アカウントにデータを保存する必要があります。
-
-対象者に関するインサイト機能の試用版または Customer Insights が管理するデータ レイク内の環境を使用している場合は、[当社までお問い合わせください](https://go.microsoft.com/fwlink/?linkid=2145734)。  
-
+環境管理者は、[エンゲージメント分析情報と対象者分析情報の間にリンクを作成する](integrate-audience-insights-engagement-insights.md)必要があります。
 
 ## <a name="enable-the-customer-profile-report"></a>顧客プロファイル レポートを有効にする
 
-環境管理者は、[対象者に関するインサイトへの接続を作成](configure-connections.md) する必要があります。
-
-接続の詳細を指定した後、管理者は組織内の他のユーザーにレポートを表示するためのアクセスを許可できます。 接続を設定する環境管理者は、レポートに自動的にアクセスできます。 
+エンゲージメント分析情報と対象者分析情報間のリンクを指定した後、管理者は組織内の他のユーザーにレポートを表示するためのアクセスを許可できます。 接続を設定する環境管理者は、レポートに自動的にアクセスできます。 
 
 接続が完了すると、**プロファイル** 機能は左側のナビゲーション ウィンドウで使用できるようになります。 
 

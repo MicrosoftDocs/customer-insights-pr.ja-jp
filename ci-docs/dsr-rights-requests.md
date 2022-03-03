@@ -3,18 +3,17 @@ title: GDPR におけるデータ主体の権利 (DSR) | Microsoft Docs
 description: Dynamics 365 Customer Insights の対象者に関するインサイト機能についてデータ主体の要求に対応します。
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483680"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350275"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR におけるデータ主体の権利 (DSR)
 
@@ -79,71 +78,78 @@ Customer Insights 管理者は、次の手順に従って Customer Insights ユ�
 2. 要求されたユーザーのデータをエクスポートするにあたっての確認をします。
 3. テナント管理者のメールアドレスからエクスポートされたデータを受け取ります。
 
-## <a name="engagement-insights"></a>エンゲージメント分析情報
+## <a name="consent-management-preview"></a>同意の管理 (プレビュー)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>エンド ユーザーを特定できる情報を含むイベント データの削除とエクスポート
+同意管理機能は、ユーザー データを直接収集しません。 他のアプリケーションのユーザーから提供された同意データのみをインポートして処理します。
 
-次のセクションでは、個人データを含む可能性のあるイベント データを削除、エクスポートする方法について説明します。
+特定のユーザーに関する同意データを削除するには、同意管理機能に取り込まれたデータ ソースで削除します。 データ ソースを更新すると、削除されたデータは同意センターでも削除されます。 同意エンティティを使用するアプリケーションは、[更新](audience-insights/system.md#refresh-processes) 後にソースで削除されたデータも削除します。 他のすべてのプロセスおよびアプリケーションからユーザーのデータを削除するために、データ主体の要求に応答した後、データ ソースをすばやく更新することをお勧めします。
 
-データの削除とエクスポートをする方法:
 
-1. データを含むイベント プロパティに個人情報のタグを付けます。
-2. 特定の値 (例 : 指定したユーザー ID) に関連付けられたデータを削除したり、エクスポートしたりすることができます。
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>イベントのプロパティにタグを付けて更新する
+### Deleting and exporting event data containing end user identifiable information
 
-個人データは、イベントのプロパティ レベルでタグ付けされます。 まず、削除やエクスポートを検討しているプロパティにタグを付けます。
+The following sections describe how to delete and export event data that might contain personal data.
 
-イベント プロパティに個人情報を含むタグを付けるには、次の手順に従います:
+To delete or export data:
 
-1. イベントを含むワークスペースを開きます。
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. **データ** > **イベント** に移動し、選択したワークスペースのイベントのリストを表示します。
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. タグ付けするイベントを選択します。
+1. Select the event you want to tag.
 
-1. **プロパティの編集** を選択して、選択したイベントのすべてのプロパティを一覧表示するペインを開きます。
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. **...** を選択し、**編集** を選択して、**プロパティの更新** ダイアログを開きます。
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![イベントを編集する。](engagement-insights/media/edit-event.png "イベントを編集する")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. **プロパティの更新** ウィンドウで、右上隅にある **...** を選択し、**EUII を含む** ボックスを選択します。 **更新** を選択して変更を保存します。
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![変更を保存。](engagement-insights/media/update-property.png "変更を保存します")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > イベント スキーマが変更されたり、新しいイベントを作成したりするたびに、関連するイベント プロパティを評価し、必要に応じて個人情報を含むものとしてタグ付けしたり、タグを外したりすることをお勧めします。
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>タグ付けされたイベント データの削除、エクスポート
+#### Delete or export tagged event data
 
-前のステップで説明したように、すべてのイベント プロパティが適切にタグ付けされていれば、環境管理者はタグ付けされたイベント データに対して削除要求を出すことができます。
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-EUII の削除やエクスポート要求を管理する
+To manage EUII deletion or export requests
 
-1. **管理** > **環境** > **設定** に移動します。
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. **エンド ユーザーを特定できる情報の管理 (EUII)** セクションで、**EUII を管理する** を選択します。
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>削除
+##### Deletion
 
-削除する場合は、**エンドユーザーを特定できる情報の削除 (EUII)** セクションに、カンマ区切りのユーザー ID のリストを入力します。 これらの ID は、現在の環境にあるすべてのプロジェクトの、タグ付けされたすべてのイベント プロパティと、正確な文字列マッチングによって比較されます。 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-プロパティ値が指定された ID のいずれかと一致する場合、関連するイベントは完全に削除されます。 このアクションは不可逆的であるため、**削除** の選択後に削除を確認する必要があります。
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-**エンドユーザーを特定できる情報のエクスポート (EUII)** セクションにイベントのプロパティ値を定義する点では、エクスポート処理は削除処理と同じです。 さらに、エクスポート先を指定するために、**Azure Blob Storage の URL** を指定する必要があります。 Azure Blob の URL には、[Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview) を含める必要があります。
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-**エクスポート** の選択後、一致するタグ付きプロパティを含む現在のチームのすべてのイベントが、CSV 形式でエクスポート先にエクスポートされます。
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>ベスト プラクティス
+### Good practices
 
-* 個人情報を含むイベントの送信はなるべく避けてください。
-* EUII データを含むイベントを送信する必要がある場合は、EUII データを含むイベントやイベント プロパティの数を制限してください。 そのようなイベントは可能な限り 1 つに制限してください。
-* 送信された個人データにアクセスできる人はできるだけ少なくしてください。
-* 個人情報を含むイベントでは、特定のユーザーに容易に結びつけられる固有の識別子 (ユーザー ID など) を発行するように、必ず 1 つのプロパティを設定してください。 これにより、データの分別が容易になり、正しいデータのエクスポートや削除が可能になります。
-* タグ付けに個人情報が含まれるものは、1 つのイベントにつき 1 つのプロパティのみです。 理想的なのは、一意の識別子のみを含むものです。
-* 詳細な値を含むプロパティ (たとえば、リクエストの本文全体) にはタグ付けしないでください。 エンゲージメントのインサイト機能では、削除またはエクスポートするイベントを決定する際に、文字列の完全一致を使用します。
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -2,21 +2,23 @@
 title: サブスクリプション解約予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成のサブスクリプション解約予測モデルを試してください。
 ms.date: 11/19/2020
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653986"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355619"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>サブスクリプション解約予測 (プレビュー) サンプル ガイド
+# <a name="subscription-churn-prediction-sample-guide"></a>サブスクリプション解約予測サンプル ガイド
 
 以下に示すサンプル データを使用して、サブスクリプション解約予測のエンドツーエンドの例について説明します。 
 
@@ -31,7 +33,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-1---ingest-data"></a>タスク 1 - データの取り込み
 
-特に [データの取り込み](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) についての記事を確認します。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。 
+[データ インジェスト](data-sources.md)と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md)に関する記事を特にご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>顧客データを eコマース プラットフォームから取り込む
 
@@ -46,10 +48,9 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **DateOfBirth**: 日付
    - **CreatedOn**: 日付/時刻/タイムゾーン
 
-   [!div class="mx-imgBorder"]
-   ![生年月日を日付に変換](media/ecommerce-dob-date.PNG "生年月日を日付に変換する")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 
 1. データ ソースを保存します。
 
@@ -67,7 +68,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **RewardsPoints**: 整数
    - **CreatedOn**: 日付/時刻
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
 
 1. データ ソースを保存します。
 
@@ -90,7 +91,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **Is_auto_renew**: True/False
    - **RecurringFrequencyInMonths**: 整数
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **SubscriptionHistory** に変更します。
 
 1. データ ソースを保存します。
 
@@ -129,9 +130,9 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. **照合** タブに移動して、**順序の設定** を選択します。
 
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択し、すべてのレコードを含めます。
+1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
 
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択し、すべてのレコードを含めます。
+1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="eコマースとロイヤルティの一致を統合します。":::
 
@@ -139,16 +140,16 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. FullName を使用して最初の条件を追加します。
 
-   * eCommerceContacts の場合は、ドロップダウンで **FullName** を選択します。
-   * loyCustomers の場合は、ドロップダウンで **FullName** を選択します。
+   * eCommerceContacts では、ドロップダウンで **FullName** を選択します。
+   * loyCustomers では、ドロップダウンで **FullName** を選択します。
    * **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 
 1. 新しいルールに **FullName, Email** という名前を入力します。
 
    * **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   * エンティティ eCommerceContacts の場合、ドロップダウンで **電子メール** を選択します。
-   * エンティティ loyCustomers の場合、ドロップダウンで **電子メール** を選択します。 
+   * エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
+   * エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。 
    * 正規化を空白のままにします。 
    * **精度レベル** の設定: **基本** と **値**: **高い**。
 
@@ -169,7 +170,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>タスク 3 - サブスクリプション解約予測を構成する
 
-統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。 詳細な手順については、[サブスクリプション解約予測 (プレビュー)](predict-subscription-churn.md) の記事を参照してください。 
+統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。 詳細な手順については、[サブスクリプション離反予測](predict-subscription-churn.md)記事を参照してください。 
 
 1. **インテリジェンス** > **検出** に移動し、**顧客離反モデル** の使用を選択します。
 
@@ -230,3 +231,6 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 これで、このサブスクリプション ビジネスの解約リスクの高い顧客を識別するセグメントが動的に更新されます。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

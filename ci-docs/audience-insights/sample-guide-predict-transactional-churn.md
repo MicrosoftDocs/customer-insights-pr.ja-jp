@@ -3,26 +3,25 @@ title: トランザクション解約予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成のトランザクション解約予測モデルを試してください。
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029451"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354607"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>トランザクション解約予測 (プレビュー) サンプル ガイド
+# <a name="transactional-churn-prediction-sample-guide"></a>トランザクション解約予測サンプル ガイド
 
 このガイドでは、以下のデータを使用して、Customer Insights でのトランザクション解約予測のエンドツーエンドの例について説明します。 このガイドで使用されているすべてのデータは、実際の顧客データではなく、Customer Insights サブスクリプション内の *デモ* 環境にある Contoso データセットの一部です。
 
 ## <a name="scenario"></a>シナリオ
 
-Contoso は、高品質のコーヒーとコーヒー メーカーを製造している会社で、Contoso Coffee の Web サイトで販売しています。 彼らの目標は、製品を通常定期的に購入している顧客のうち、どの顧客が今後 60 日以内にアクティブな顧客でなくなるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
+Contoso は、高品質のコーヒーとコーヒー メーカーを製造し、Contoso Coffee の Web サイトで販売している会社です。 彼らの目標は、製品を通常定期的に購入している顧客のうち、どの顧客が今後 60 日以内にアクティブな顧客でなくなるかを把握することです。 どの顧客が **解約する可能性がある** かを把握することは、顧客をつなぎ止めることに集中することで、マーケティング活動を軽減するのに役立ちます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -31,7 +30,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-1---ingest-data"></a>タスク 1 - データの取り込み
 
-特に [データの取り込み](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) についての記事を確認します。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。 
+[データ インジェスト](data-sources.md)と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md)に関する記事を特にご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>顧客データを eコマース プラットフォームから取り込む
 
@@ -149,7 +148,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>タスク 3 - トランザクション解約予測を構成する
 
-統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。 詳細な手順については、[サブスクリプション解約予測 (プレビュー)](predict-subscription-churn.md) の記事を参照してください。 
+統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。 詳細な手順については、[サブスクリプション離反予測](predict-subscription-churn.md)記事を参照してください。 
 
 1. **インテリジェンス** > **検出** に移動し、**顧客離反モデル** の使用を選択します。
 

@@ -1,22 +1,24 @@
 ---
 title: セマンティック マッピング (プレビュー)
 description: セマンティック マッピングの概要とその使用方法。
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622941"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353963"
 ---
-# <a name="semantic-mappings"></a>セマンティック マッピング
+# <a name="semantic-mappings-preview"></a>セマンティック マッピング (プレビュー)
 
 セマンティック マッピングを使用すると、非活動データを事前定義されたスキーマにマッピングできます。 これらのスキーマは、対象者分析情報がデータ属性をよりよく理解するのに役立ちます。 セマンティック マッピングと提供されたデータにより、対象者分析情報の新しいインサイトと機能が可能になります。 活動データをスキーマにマッピングするには、[活動](activities.md)ドキュメンテーションをレビューします。
 
@@ -75,8 +77,7 @@ ms.locfileid: "7622941"
 
 1. 後でセマンティック マッピングを実行するには、セマンティック マッピングを選択し、**更新** を選択します。
 
-> [!TIP]
-> タスク/プロセスには、[6 種類の状態](system.md#status-types) があります。 さらに、ほとんどのプロセスは、[その他の下流プロセスに依存します](system.md#refresh-policies)。 プロセスのステータスを選択して、ジョブ全体の進行状況の詳細を確認できます。 ジョブのタスクの 1 つについて **詳細の表示** を選択すると、処理時間、最終処理日、およびタスクに関連するすべてのエラーと警告などの追加情報が表示されます。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>既存のセマンティック マッピングを管理する
 
@@ -91,5 +92,41 @@ ms.locfileid: "7622941"
 - **名前を変更**: 選択したセマンティック マッピングに別の名前を入力できるダイアログを開きます。 **保存** を選択して変更を適用します。
 
 - **削除**: 選択したセマンティック マッピングの削除を確認するダイアログを開きます。 セマンティック マッピングと削除アイコンを選択して、一度に複数のセマンティック マッピングを削除することもできます。 **削除** を選択して、削除内容を確認します。
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>ContactProfile セマンティック エンティティ マッピングを使用して、連絡先レベルの活動を作成します
+
+*ContactProfile* セマンティック エンティティ マッピングを作成後、連絡先の活動をキャプチャできます。 これにより、各活動を担当した連絡先のアカウントの活動タイムラインを確認できます。 ほとんどの手順は、一般的な活動マッピング構成に従います。
+
+   > [!NOTE]
+   > 連絡先レベルの活動を機能させるには、活動データ内の各レコードの **AccountID** と **ContactID** 属性の両方が必要です。
+
+1. [*ContactProfile* セマンティック エンティティ マッピングを定義します。](#define-a-contactprofile-semantic-entity-mapping) セマンティック マッピングを実行します。
+
+1. 対象者に関するインサイトで、**データ** > **活動** に移動します。
+
+1. **活動の追加** を選択して、新しい活動を作成します。
+
+1. 活動に名前を付け、ソース 活動エンティティを選択し、活動エンティティの主キーを選択します。
+
+1. **リレーションシップ** ステップでは、連絡先データを仲介エンティティとして使用して、活動ソースデータとアカウントの間に間接的な関係を作成します。 詳細については、[直接および間接のリレーションシップ パス](relationships.md#relationship-paths)を参照してください。
+   - *購入* と呼ばれる活動の関係の例:
+      - 属性 **ContactID** の **購入ソース活動データ** > **連絡先データ**
+      - 属性 **AccountID** の **連絡先データ** > **アカウント データ**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="リレーションシップのセットアップ例。":::
+
+1. リレーションシップを設定した後、**次へ** を選択して、活動マッピングの構成を完了します。 活動作成の詳細な手順については、[活動を定義する](activities.md)を参照してください。
+
+1. 活動マッピングを実行します。
+
+1. これで、連絡先レベルの活動が顧客のタイムラインに表示されます。
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="連絡先活動を構成した後の最終結果":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>連絡先レベルの活動タイムライン フィルタリング
+
+連絡先レベルの活動マッピングを構成して実行すると、顧客の活動タイムラインが更新されます。 従事した活動の *ContactProfile* 構成に応じて、ID または名前を含みます。 タイムラインの連絡先で活動をフィルタリングして、関心のある特定の連絡先を確認できます。 さらに、**活動が取引先担当者にマップされていません** を選択すると、特定の連絡先に割り当てられていないすべての活動を表示できます。
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="連絡先レベルの活動で使用できるフィルタリング オプション。":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

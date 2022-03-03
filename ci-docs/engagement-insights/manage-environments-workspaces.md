@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ded9e98f06109b7cdc27f449455b7f58d633722f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645452"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350643"
 ---
 # <a name="manage-environments-and-workspaces"></a>環境とワークスペースの管理
 
@@ -24,7 +23,7 @@ ms.locfileid: "7645452"
 
 このトピックでは、作成済みのワークスペースと環境を管理する方法について説明します。 
 
-- *ワークスペース* とは、イベントやレポートを保存、管理するためのスペースです。 ここでは、ユーザーの活動をリアルタイムで確認することができます。 ワークスペースの作成時には、ワークスペースに送信するデータの種類を選択します。 現在、Web データとモバイル アプリがサポートされています。 詳細については、[ワークスペースを作成してメンバーを追加する](create-workspace.md)を参照してください。
+- *ワークスペース* とは、イベントやレポートを保存、管理するためのスペースです。 ここでは、ユーザーの活動をリアルタイムで確認することができます。 ワークスペースの作成時には、ワークスペースに送信するデータの種類を選択します。 現在、Web データとモバイル アプリがサポートされています。 詳細については、[新しいワークスペースを作成してメンバーを追加する](create-workspace.md)を参照してください。
 
 - *環境* とは、ワークスペースや接続を管理するスペースです。 詳しくは、[新しい環境を作成する](create-new-environment.md)をご覧ください。
 
@@ -71,19 +70,11 @@ ms.locfileid: "7645452"
 
 :::image type="content" source="media/environment-edit.png" alt-text="環境の管理センター。":::
 
-### <a name="rename-an-environment"></a>環境の名称変更
+### <a name="edit-an-environment-name"></a>環境名の編集
 
 1. **管理者** > **環境** に移動し、**設定** を選択します。
 
 1. **環境名** を更新し、**保存** を選択して変更を適用します。
-
-### <a name="manage-environment-members"></a>環境のメンバーを管理する
-
-1. **管理者** > **環境** に移動し、**メンバー** を選択します。
-
-1. **メンバーの追加** を選択してメンバーを更新し、[役割を割り当て](user-roles.md)ます。 現在、**環境管理者** のみが使用できます。
-
-1. **メンバーの追加** を選択し、環境に追加します。
 
 ### <a name="delete-an-environment"></a>環境の削除
 
@@ -97,6 +88,14 @@ ms.locfileid: "7645452"
 
 1. **削除** を選択して、環境を恒久的に削除します。
 
+### <a name="manage-environment-members"></a>環境のメンバーを管理する
+
+1. **管理者** > **環境** に移動し、**メンバー** を選択します。
+
+1. **メンバーの追加** を選択してメンバーを更新し、[役割を割り当て](user-roles.md)ます。 現在、**環境管理者** のみが使用できます。
+
+1. **メンバーの追加** を選択し、環境に追加します。
+
 ## <a name="manage-connections"></a>接続の管理
 
 対象ユーザー分析情報への接続を確立することで、統一された顧客プロファイルに基づいたエンゲージメント分析情報のレポートを見ることができます。 
@@ -107,7 +106,6 @@ ms.locfileid: "7645452"
 
 顧客の個人情報を保護するために、エンドユーザーを特定できるデータを削除したり、エクスポートしたりすることができます。
 
-詳細については、[個人情報を含むイベントデータの削除とエクスポート](delete-export-personal-data.md)を参照してください。
-
+詳細については、[個人情報を含むイベントデータの削除とエクスポート](../dsr-rights-requests.md)を参照してください。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

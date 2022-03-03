@@ -4,17 +4,16 @@ description: じょうごレポートを使用して、対象ユーザーがど�
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498648"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226266"
 ---
 # <a name="create-and-manage-funnel-reports"></a>じょうごレポートの作成および管理
 
@@ -163,13 +162,23 @@ ms.locfileid: "7498648"
 
 エンゲージメント インサイトは、顧客に目標到達プロセスのインサイト提供に対応しました。 じょうごインサイトを使用して、じょうごレポートのステップに関する顧客の行動に対するより深い分析情報を得ることができます。 新しいじょうごレポートを作成して保存すると、レポートのじょうごインサイトが自動的に生成されます。 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="じょうごインサイト。":::
+
+> [!NOTE]
+> じょうごインサイトは、カスタム分析コードを含ま **ない** じょうごステップに対してのみ生成できます。 じょうごのすべてのステップに対してじょうごインサイトを生成するには、エンゲージメント分析情報の標準ディメンションを使用してじょうごステップを作成します。 
+
 以下のカテゴリーのじょうごインサイトを、メイン レベルとステップ レベルの両方で見ることができます。 
 
- - 変換率 
+ - 変換率
+ -    チェックアウトから購入までのコンバージョン率は 22% です。
  - 遷移の時間 
+ -    買い物カゴからチェックアウトまでの平均遷移時間は 23 分です。 
  - 完了時間 
+ -    顧客がじょうごの完了までにかかる平均時間は 47分です。 
 
 これらの分析情報を利用して、顧客の行動をより深く探り、ファネル レポートのドロップ オフ ポイントやコンバージョンをより深く理解します。 
+
+異なるステップでインサイトを比較するには、インサイト カードから **ステップのブレークダウンを表示** または **他のステップと比較する** を選択します。 これらは、じょうごの各ステップの指標を比較する棒グラフを表示します。 
 
 じょうごインサイトは 24 時間ごと、またはじょうごの **保存** 時に再計算されます。 
 

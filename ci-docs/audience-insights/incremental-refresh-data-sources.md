@@ -1,24 +1,26 @@
 ---
-title: PowerQuery ベースのデータ ソースの増分更新
-description: Power Query に基づいて、大規模なデータ ソースの新規および更新されたデータを更新します。
+title: Power Query ベースのデータ ソースの増分更新
+description: Power Query ベースの大規模なデータ ソースの新規データおよび更新データを最新の情報に更新します。
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900274"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353688"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query ベースのデータ ソースの増分更新
 
-この記事では、Power Query に基づいてデータ ソースの増分更新を構成する方法について説明します。
+この記事では、Power Query ベースのデータ ソースの増分更新を構成する方法について説明します。
 
 データ ソースの増分更新には、次の利点があります:
 
@@ -28,9 +30,9 @@ ms.locfileid: "7900274"
 
 ## <a name="configure-incremental-refresh"></a>増分更新を構成する
 
-対象者に関するインサイトでは、増分取り込みをサポートする Power Query でインポートしたデータ ソースの増分更新が可能です。 たとえば、データ レコードが最後に更新された日付と時刻のフィールドを持つ Azure SQL データベースなどです。
+対象者分析情報により、増分取り込みをサポートする Power Query を使用してインポートされるデータ ソースの増分更新ができます。 たとえば、データ レコードが最後に更新された日付と時刻のフィールドを持つ Azure SQL データベースなどです。
 
-1. [Power Query に基づいて新しいデータ ソースを作成します](connect-power-query.md)。
+1. [Power Query ベースの新しいデータ ソースを作成します](connect-power-query.md)。
 
 1. データ ソースの **名前** を入力してください。
 

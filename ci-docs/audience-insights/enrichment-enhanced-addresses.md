@@ -1,20 +1,25 @@
 ---
 title: アドレス エンハンスメント エンリッチメント (ビデオを含む)
 description: Microsoft のモデルを使用して、顧客プロファイルの住所情報をエンリッチおよび正規化します。
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934929"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353642"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
@@ -100,17 +105,17 @@ ms.locfileid: "7934929"
 
 エンリッチメント プロセスが完了したら、**自分のエンリッチメント** で新しくエンリッチされた顧客プロファイル データを確認できます。 さらに、最後の更新の時刻とエンリッチされたプロファイルの数が表示されます。
 
-**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
+エンリッチされたデータのサンプルは、**エンリッチされた顧客プレビュー** タイルで確認できます。 **さらに表示** を選択し、**データ** タブを選択して、エンリッチされた各プロファイルの詳細ビューにアクセスします。
 
 ### <a name="overview-card"></a>概要カード
 
 概要カードには、エンリッチメントの対応範囲に関する詳細が表示されます。 
 
-* **処理および変更された顧客**: 正常に強化された顧客プロファイルの数。
+* **処理済かつ変更済の住所**: 正常にエンリッチされた住所を持つ顧客プロファイルの数。
 
-* **処理および変更されていない顧客**: 認識されているが変更されていない顧客プロファイルの数。 これは通常、入力データが有効であり、エンリッチメントが改善できない場合に起こります。
+* **処理済かつ未変更の住所**: 認識されているが変更されていない住所を持つ顧客プロファイルの数。 これは通常、入力データが有効で、エンリッチメントによって改善できない場合に起こります。
 
-* **処理されていない、および変更されていない顧客**: 認識されていないプロファイルの数。 通常は、有効、またはエンリッチメントでサポートされていない入力データの場合です。
+* **未処理かつ未変更の住所**: 認識されなかった住所を持つプロファイルの数。 通常は、エンリッチメントで無効またはサポートされていない入力データの場合です。
 
 ## <a name="next-steps"></a>次の手順
 
