@@ -1,36 +1,34 @@
 ---
 title: サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 description: Azure サービス プリンシパルを使用して、独自の Data Lake に接続します。
-ms.date: 12/06/2021
+ms.date: 09/08/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-system-security
-- customerInsights
-ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354194"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483531"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 
-この記事では、ストレージ アカウント キーの代わりに Azure サービス プリンシパルを使用して Dynamics 365 Customer Insights を Azure Data Lake Storage アカウントに接続する方法について説明しています。 
+Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 ここでは、ストレージ アカウントキーの代わりに Azure サービス プリンシパルを使用して、Dynamics 365 Customer Insights と Azure Data Lake Storage のアカウントを接続する方法について説明します。 
 
-Azure サービスを使用する自動ツールは、常に制限されたアクセス許可が必要です。 Azureは、完全な権限を持つユーザーとしてアプリケーションにサインインさせる代わりに、サービス プリンシパルを提供します。 サービス プリンシパルを使用して安全に[ Common Data Model フォルダーをデータ ソースとして追加または編集](connect-common-data-model.md)したり、[環境を作成または更新](create-environment.md)したりできます。
+サービス プリンシパルを使用して、[データソースとして Common Data Model フォルダを安全に追加・編集](connect-common-data-model.md)したり、[環境を作成・更新](get-started-paid.md)したりすることができます。
 
 > [!IMPORTANT]
-> - サービス プリンシパルを使用する Data Lake Storage アカウントは、Gen2 であり、[階層型名前空間を有効化](/azure/storage/blobs/data-lake-storage-namespace) する必要があります。 Azure Data Lake Gen1 ストレージ アカウントはサポートしていません。
-> - サービス プリンシパルを作成するには、Azure サブスクリプションの管理者権限が必要です。
+> - サービス プリンシパルを使用する Data Lake のストレージ アカウントには、[階層型名前空間を有効化する](/azure/storage/blobs/data-lake-storage-namespace)必要があります。
+> - サービス プリンシパルを作成するには、Azure サブスクリプションに対する管理者のアクセス許可が必要です。
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Customer Insights の Azure サービス プリンシパルを作成する
 
-Customer Insights の新しいサービス プリンシパルを作成する前に、それが組織にすでに存在するかどうかを確認してください。
+対象ユーザー インサイトやエンゲージメント インサイトに向けた新しいサービス プリンシパルを作成する前に、すでに組織内に存在していないかどうかを確認してください。
 
 ### <a name="look-for-an-existing-service-principal"></a>既存のサービス プリンシパルの検索
 
@@ -92,7 +90,7 @@ Azure portal に移動して、対象者に関するインサイトで使用す�
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>対象者に関するインサイトのストレージ アカウント添付ファイルに Azure リソース ID または Azure サブスクリプションの詳細を入力します
 
-対象ユーザーの分析情報に Data Lake Storage アカウントをアタッチして、[出力データの保存](manage-environments.md)や、[データ ソースとしての使用](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake)ができます。 このオプションを使用すると、リソース ベースのアプローチとサブスクリプション ベースのアプローチのどちらかを選択できます。 選択したアプローチに応じて、次のセクションのいずれかの手順に従います。
+対象ユーザーの分析情報に Data Lake Storage アカウントをアタッチして、[出力データの保存](manage-environments.md)や、[データ ソースとしての使用](connect-common-data-service-lake.md)ができます。 このオプションを使用すると、リソース ベースのアプローチとサブスクリプション ベースのアプローチのどちらかを選択できます。 選択したアプローチに応じて、次のセクションのいずれかの手順に従います。
 
 ### <a name="resource-based-storage-account-connection"></a>リソースベースのストレージ アカウント接続
 

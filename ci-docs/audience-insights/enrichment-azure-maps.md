@@ -3,17 +3,18 @@ title: Azure Maps の場所データを使用して、顧客プロファイル�
 description: Azure Maps のファーストパーティ エンリッチメントに関する一般情報。
 ms.date: 08/31/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226455"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466768"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Maps による顧客プロファイルの強化 (プレビュー)
 
@@ -83,9 +84,9 @@ Azure Maps のデータ エンリッチメントを構成するには、次の�
 
 **拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+エンリッチされた顧客データの上に構築します。 [セグメント](segments.md)、[メジャー](measures.md) を作成し、[データをエクスポート](export-destinations.md) して、顧客にパーソナライズされたエクスペリエンスを提供します。
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

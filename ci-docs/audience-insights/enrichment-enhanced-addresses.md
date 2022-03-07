@@ -1,25 +1,20 @@
 ---
-title: アドレス エンハンスメント エンリッチメント (ビデオを含む)
+title: 住所拡張エンリッチメント
 description: Microsoft のモデルを使用して、顧客プロファイルの住所情報をエンリッチおよび正規化します。
-ms.date: 01/19/2022
+ms.date: 07/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353642"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692259"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
@@ -28,8 +23,6 @@ ms.locfileid: "8353642"
 ## <a name="how-we-enhance-addresses"></a>住所の拡張方法
 
 このモデルでは、住所を拡張するために 2 ステップのプロセスを行います。 まず、住所を解析してコンポーネントを特定し、それらを構造化された形式にします。 次に、AI を使用して、住所の値を修正して完成させ、標準化します。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>例
 
@@ -105,20 +98,10 @@ ms.locfileid: "8353642"
 
 エンリッチメント プロセスが完了したら、**自分のエンリッチメント** で新しくエンリッチされた顧客プロファイル データを確認できます。 さらに、最後の更新の時刻とエンリッチされたプロファイルの数が表示されます。
 
-エンリッチされたデータのサンプルは、**エンリッチされた顧客プレビュー** タイルで確認できます。 **さらに表示** を選択し、**データ** タブを選択して、エンリッチされた各プロファイルの詳細ビューにアクセスします。
-
-### <a name="overview-card"></a>概要カード
-
-概要カードには、エンリッチメントの対応範囲に関する詳細が表示されます。 
-
-* **処理済かつ変更済の住所**: 正常にエンリッチされた住所を持つ顧客プロファイルの数。
-
-* **処理済かつ未変更の住所**: 認識されているが変更されていない住所を持つ顧客プロファイルの数。 これは通常、入力データが有効で、エンリッチメントによって改善できない場合に起こります。
-
-* **未処理かつ未変更の住所**: 認識されなかった住所を持つプロファイルの数。 通常は、エンリッチメントで無効またはサポートされていない入力データの場合です。
+**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
 ## <a name="next-steps"></a>次の手順
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+エンリッチされた顧客データの上に構築します。 [セグメント](segments.md) および [メジャー](measures.md) を作成し、さらに [データのエクスポート](export-destinations.md) を行って、パーソナライズされたエクスペリエンスを顧客に提供します。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

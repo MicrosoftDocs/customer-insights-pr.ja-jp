@@ -1,29 +1,24 @@
 ---
-title: AI で類似の顧客を見つける (ビデオを含む)
+title: AI で類似する顧客を見つける
 description: 人工知能を活用して類似した顧客セグメントを見つけます。
 ms.date: 06/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: JimsonChalissery
-ms.author: jimsonc
-ms.reviewer: mhart
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: jimsonc
 manager: shellyha
-searchScope:
-- ci-segment-builder
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 8cdec4edd599b0249fcf144b5e5c0124504e1e14
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355251"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406181"
 ---
 # <a name="similar-customers-preview"></a>類似した顧客 (プレビュー)
 
 この機能を使用すると、人工知能を使用して顧客ベース内で類似した顧客を見つけることができます。 この機能を使用するには、少なくとも1つのセグメントを作成する必要があります。 既存のセグメントの基準を拡張することで、そのセグメントに類似した顧客を見つけることができます。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *類似した顧客を見つける* は、は、データを評価し、そのデータに基づいて予測を行う自動化された手法を使用しているため、一般データ保護規則 (GDPR) で定義されているプロファイリングの手法として使用することができます。 顧客がこの機能を使用してデータを処理する場合、GDPR またはその他の法律または規制が適用される場合があります。 お客様は、予測を含む Dynamics 365 Customer Insights の使用が、プライバシー、個人データ、生体認証データ、データ保護、通信の秘密保持に関連する法律を含む、適用されるすべての法律および規制に準拠していることを確認する責任があります。
@@ -55,7 +50,7 @@ ms.locfileid: "8355251"
 類似するセグメントを処理した後、新たなセグメントが **セグメント** ページにリスト表示されます。
 
 > [!div class="mx-imgBorder"]
-> ![類似する顧客のセグメント。](media/expanded-segment.png "類似する顧客のセグメント")
+> ![類似する顧客のセグメント](media/expanded-segment.png "類似する顧客のセグメント")
 
 アクションバーで **表示** を選択して、セグメントの詳細を開きます。 このビューには、[類似性スコア](#about-similarity-scores)の結果の分布に関する情報が含まれています。 類似性スコアの値は、**セグメント メンバーのプレビュー** にも表示されます。
 
@@ -84,6 +79,3 @@ ms.locfileid: "8355251"
 - 0.85 ～ 1 の間の類似性スコアは、*とても類似している* と分類されます
 
 類似性スコアが 0.4 未満の顧客はモデルの出力対象となりません。 システムは、これらソース セグメントと十分に類似していると見なしません。
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

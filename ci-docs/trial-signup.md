@@ -5,15 +5,16 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
+ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350229"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645497"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>無料の Dynamics 365 Customer Insights 試用版にサインアップする
 
@@ -31,12 +32,23 @@ Customer Insights では、30 日間の無料試用版をご利用いただけ�
 
 試用環境には、有料版と同じ機能が含まれています。 以下のリンクでは、主要な機能のいくつかについて紹介しています。
 
+### <a name="audience-insights"></a>対象者分析情報
+
 - [対象者分析情報のクイックスタート。](audience-insights/get-started.md)
 - [ユーザーを追加し、権限を割り当てます。](audience-insights/permissions.md)
 - [データソースを取り込み](audience-insights/data-sources.md)、[データ統合プロセス](audience-insights/data-unification.md)を通してそれらを実行し、[統一された顧客プロファイル](audience-insights/customer-profiles.md)を取得する。
 - [統一された顧客プロファイルを充実させる](audience-insights/enrichment-hub.md)または [予測モデルを実行する](audience-insights/predictions-overview.md)。
 - [セグメントを作成](audience-insights/segments.md)して顧客をグループ化し、[メジャー](audience-insights/measures.md)を作成して KPI をレビューします。
 - [接続](audience-insights/connections.md)と[エクスポート](audience-insights/export-destinations.md)を設定し、他のアプリケーションでデータのサブセットを処理します。
+
+### <a name="engagement-insights"></a>エンゲージメント分析情報
+
+- [エンゲージメント分析情報のクイックスタート。](engagement-insights/get-started.md)
+- [ワークスペースを作成](engagement-insights/create-workspace.md)し、メンバーを追加します。
+- [Web サイトにコードを追加する](engagement-insights/instrument-website.md)または[モバイル アプリ](engagement-insights/developer-resources.md#capture-events-from-mobile-apps)。
+- [リアルタイム レポート](engagement-insights/view-reports.md)を表示するか、または[カスタム レポート](engagement-insights/custom-reports.md)を作成します。
+- エクスポートする [改良されたイベントを作成](engagement-insights/refined-events.md)します。
+- [データを Azure Data Lake Storage にエクスポートします](engagement-insights/export-events.md)。
 
 ## <a name="additional-resources"></a>追加リソース
 

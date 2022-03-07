@@ -2,25 +2,23 @@
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
 ms.date: 12/06/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-system-about
-- customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354285"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892390"
 ---
 # <a name="manage-environments"></a>環境の管理
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 ## <a name="switch-environments"></a>環境の切り替え
 
@@ -46,12 +44,12 @@ ms.locfileid: "8354285"
    
 **Microsoft Dataverse** ステップを使用すると、Customer Insights を Dataverse 環境に接続できます。
 
-[すぐに使用できる予測モデル](predictions-overview.md#out-of-box-models)を使用するには、Dataverse とのデータ共有を構成します。 または、オンプレミスのデータ ソースからのデータ取り込みを有効にして、組織が管理する Microsoft Dataverse 環境 URL を提供します。
+[すぐに使用できる予測モデル](predictions-overview.md#out-of-box-models)を使用するには、Dataverse とのデータ共有を構成します。 または、オンプレミスのデータ ソースからのデータ取り込みを有効にして、組織が管理する Microsoft Dataverse 環境 URL を提供します。 **データ共有の有効化** を選択して、Customer Insights 出力データを Dataverse - マネージド Data Lake と共有します。
 
 > [!IMPORTANT]
 > データ共有を有効にするには、Customer Insights と Dataverse が同じリージョンにある必要があります。
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Microsoft Dataverse とのデータ共有を有効にする構成オプション。":::
 
 > [!NOTE]
 > Customer Insights では、次のデータ共有シナリオがサポートされていません。

@@ -1,28 +1,24 @@
 ---
 title: 予測を使用して部分データを完成させる
 description: 予測を使用して、不完全な顧客データを入力します。
-ms.date: 11/01/2021
+ms.date: 05/05/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: zacookmsft
-ms.author: zacook
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: zacook
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 66f0b16b5d05741ab98ca5ce2157da8c46b6d9e0
+ms.sourcegitcommit: 5379c2b77d613d071a177f509e6417ebf3c47516
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "4648717"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>予測を使用した部分データの完成 (非推奨)
+# <a name="complete-your-partial-data-with-predictions"></a>予測で部分データを完成させる
 
-> [!IMPORTANT]
-> この機能は、**2021 年 11 月 5 日** の時点で **非推奨** になります。 現在の実装は、機能が削除されるまで引き続き機能しますが、以下の手順を使用して新しい統合を作成することはできません。
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 予測により、予測値を簡単に作成して、顧客の理解を深めることができます。 **インテリジェンス** > **予測** ページで、**自分の予測** を選択して、対象者に関するインサイトの他の部分で構成した予測を表示し、さらにカスタマイズすることができます。
 
@@ -35,11 +31,11 @@ ms.locfileid: "8354009"
 
 組織で予測機能を使用するには、次の前提条件を満たす必要があります:
 
-1. あなたの組織では、[Microsoft Dataverse にインスタンス](/ai-builder/build-model#prerequisites)が設定されていて、Customer Insights と同じ組織にあります。
+1. 組織には、[Common Data Service で設定された](https://docs.microsoft.com/ai-builder/build-model#prerequisites) インスタンスがあり、Customer Insights と同じ組織にあります。
 
-2. 対象ユーザー インサイトの環境は Dataverse インスタンスに接続されています。
+2. ご使用の環境は、Common Data Service インスタンスに関連付けられています。
 
-詳しくは、[新しい環境を作成する](create-environment.md)をご覧ください。
+[新しい環境を作成する](manage-environments.md) 場合は、**環境の作成** ダイアログで設定して、**詳細** を選択します。 既に環境を作成している場合は、その設定に移動して **詳細** を選択します。 いずれの場合も、**予測の使用** セクションで、環境を関連付ける Common Data Service インスタンス URLを入力します。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>顧客エンティティで予測を作成する
 
@@ -51,21 +47,19 @@ ms.locfileid: "8354009"
 
 4. 値を予測する属性名を見つけてから、**概要** 列で **概要** アイコンを選択します。
    > [!div class="mx-imgBorder"]
-   > ![概要アイコン。](media/intelligence-overviewicon.png "概要アイコン")
+   > ![概要アイコン](media/intelligence-overviewicon.png "概要アイコン")
 
 5. 属性の欠損値の割合が高い場合は、**欠損値を予測** を選択して、予測を続行します。
    > [!div class="mx-imgBorder"]
-   > ![欠損値の予測ボタンが表示された概要ステータス。](media/intelligence-overviewpredictmissingvalues.png "欠損値の予測ボタンが表示された概要ステータス")
+   > ![欠損値の予測ボタンが表示された概要ステータス](media/intelligence-overviewpredictmissingvalues.png "欠損値の予測ボタンが表示された概要ステータス")
 
 6. 予測結果に **表示名** と **出力エンティティ名** を入力します。
 
 7. オプションの事前設定リストには、予測カテゴリに値をマッピングできる場所が表示されます。 この場合、予測の True/False またはバイナリの性質にマップされるため、カテゴリ オプションは 0 または 1 のみです。 カテゴリ列で、最終予測で "0" に分類するフィールド値を "0" にマップし、最終予測で "1" に分類する項目を "1" にマップします。
    > [!div class="mx-imgBorder"]
-   > ![カテゴリにマップされたフィールド値を示す例。](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
+   > ![カテゴリにマップされたフィールド値を示す例](media/intelligence-categorymapping.png "カテゴリにマップされたフィールド値を示す例")
 
 8. **完了** を選択すると、予測が処理されます。 データのサイズと複雑さによっては、処理に時間がかかります。 結果は作成した予測の **出力エンティティ名** に基づいて、新しいエンティティで利用可能になります。
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>セグメントの作成中に予測を作成する
 
@@ -83,7 +77,7 @@ ms.locfileid: "8354009"
 
 5. 作成したセグメントのソース フィールドに不完全なデータがある場合、欠損値の予測を選択できます。
    > [!div class="mx-imgBorder"]
-   > ![予測ボタン。](media/segments-predictoption.png "予測ボタン")
+   > ![予測ボタン](media/segments-predictoption.png "予測ボタン")
 
 6. 予測結果に **表示名** と **出力エンティティ名** を入力します。
 
@@ -99,7 +93,7 @@ ms.locfileid: "8354009"
 
 4. 予測のビューに多数のデータ ポイントが表示されます。
    > [!div class="mx-imgBorder"]
-   > ![予測ページ。](media/intelligence-predictionsviewpage.png "予測ページ")
+   > ![予測ページ](media/intelligence-predictionsviewpage.png "予測ページ")
 
    - **予測値** は、フィールド値からカテゴリへのマッピング段階で作成したマッピングを示します。 これらは、特定のカテゴリにマップされたデータセット内の値です。
    -**トップ インフルエンサー** は、特定のカテゴリにマップされるフィールド値の予測の信頼性に最も影響を与えた可能性があるデータセット内の要因です。
@@ -116,7 +110,7 @@ ms.locfileid: "8354009"
 
 ## <a name="edit-a-prediction"></a>予測の編集
 
-予測を作成したら、AI Builder でモデルをカスタマイズして、モデルの効果を高めることができます。  
+予測を作成したら、AI Builder でモデルをカスタマイズして、モデルの有効性を高めることができます。  
 
 1. 対象者に関するインサイトで、**インテリジェンス** > **予測** > **自分の予測** に移動します。
 
@@ -124,14 +118,14 @@ ms.locfileid: "8354009"
 
 3.  **アクション** 列で省略記号を選択し、**表示** を選択します。
 
-4. **AI Builder でのカスタマイズ** を選択します。
+4. **AI Builder でカスタマイズ** を選択します。
 
-5. AI Builder でモデルを更新します。 [AI Builder でのモデルの管理に関する詳細](/ai-builder/manage-model#retrain-and-republish-existing-models)。
+5. AI Builder でモデルを更新します。 [AI Builder でのモデルの管理に関する詳細](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models)。
 
 予測の次の実行では、作成した更新済みモデルが使用されます。
 
 > [!NOTE]
-> AI Builder で作成された新しいモデルは、モデルが上記のエクスペリエンスから作成されていない限り、対象者分析情報には表示されません。
+> AI Builder で作成された新しいモデルは、モデルが上記のエクスペリエンスから作成されていない限り、対象者に関するインサイトに表示されません。
 
 ## <a name="remove-a-prediction"></a>予測の削除
 
@@ -145,7 +139,7 @@ ms.locfileid: "8354009"
 
 ## <a name="troubleshooting"></a>トラブルシューティング​​
 
-エラーが原因で Dataverse の添付プロセスを完了できない場合は、プロセスを手動で完了できます。 添付プロセスで発生する可能性のある既知の問題が 2 つあります。
+エラーが原因で Common Data Service の添付プロセスを完了できない場合は、プロセスを手動で完了できます。 添付プロセスで発生する可能性のある既知の問題が 2 つあります。
 
 - 顧客カード アドイン ソリューションがインストールされていません。
     1. 指示を完了して、[ソリューションをインストールして構成します](customer-card-add-in.md)。
@@ -166,6 +160,3 @@ ms.locfileid: "8354009"
     1. 作成したユーザーを選択します。
     1. 上部メニューバーから、**ロールの管理** を選択します。
     1. **システム管理者** を選択して、次に **OK** を選択します。
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

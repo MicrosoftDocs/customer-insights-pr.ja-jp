@@ -4,16 +4,17 @@ description: SDK でウェブサイトをインストルメント化する際に
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/27/2021
+ms.date: 11/12/2020
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227204"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036334"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>高度な Web SDK のインストルメント化
 
@@ -32,20 +33,20 @@ SDK を使用すると、すべてのイベントで送信できるユーザー�
 - **authType**: 認証されたユーザー ID の取得に使用される認証タイプです。
 - **name**: ユーザー名です。
 - **email**: ユーザーのメール アドレスです。
-
-次の例では、ユーザー情報を送信するコード スニペットを示しています。 アスタリスク*記号が前に付いている関数が表示されている場合は、その関数をカスタム実装に置き換えます:
+    
+次の例では、ユーザー情報を送信するコード スニペットを示しています。 関数が * で示されている場合は、それらの値を呼び出す実装に置き換えてください。  
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     user:{
@@ -57,25 +58,25 @@ window, document
 […]
 ```
 
-`setUser(user: IUser)` API を呼び出してユーザー情報を指定することもできます。 `setUser` API を呼び出した後に送信されるテレメトリには、ユーザー情報が含まれています。
+また、SDK上の `setUser(user: IUser)` API を呼び出してユーザー情報を指定することもできます。 `setUser API` を呼び出した後に送信されるテレメトリには、ユーザー情報が含まれています。
 
 ## <a name="adding-custom-properties-for-each-event"></a>イベントごとのカスタムプロパティを追加する
 
-SDK では、イベントごとに送信できるカスタム プロパティを指定することができます。 カスタム プロパティは、キーと値のペアを含むオブジェクトとして指定できます (値は `string | number | boolean` のタイプにすることができます)。 コード スニペット構文の `src`、`name`、および `cfg` に類似した、`props` と呼ばれるプロパティにオブジェクトを追加できます。
+SDK では、イベントごとに送信できるカスタム プロパティを指定することができます。 カスタム プロパティは、キーと値のペアを含むオブジェクトとして指定できます (値は `string | number | boolean` のタイプにすることができます)。 オブジェクトは、コード スニペットの構成にある `src`、`name`、`cfg` と同様に、`props` というプロパティで追加できます。 
 
 次の例では、カスタム プロパティを送信するコード スニペットを示しています:
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     props:{
@@ -86,7 +87,7 @@ window, document
 […]
 ```
 
-`setProperty(name: string, value: string | number | boolean)` API を呼び出してカスタム プロパティを個別に指定することもできます。
+また、SDK上の `setProperty(name: string, value: string | number | boolean)`  API を呼び出すことで、カスタム プロパティを個別に指定することもできます。
 
 ## <a name="sending-custom-events"></a>カスタム イベントの送信
 
