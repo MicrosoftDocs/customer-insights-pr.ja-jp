@@ -1,22 +1,21 @@
 ---
-title: Customer Insights データを Azure Synapse Analytics にエクスポート
+title: Customer Insights データを Azure Synapse Analytics にエクスポートする
 description: Azure Synapse Analytics への接続を構成する方法について説明します。
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
-ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6327370"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231318"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポート (プレビュー)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポートする (プレビュー)
 
 Azure Synapse は、データ ウェアハウスやビッグ データ システムにおいて分析時間を短縮する分析サービスです。 [Azure Synapse](/azure/synapse-analytics/overview-what-is) では、Customer Insights のデータを取り込んで使用できます。
 
@@ -49,9 +48,11 @@ Azure の場合:
 
 ### <a name="configure-a-connection"></a>接続の構成
 
+接続を作成するには、Customer Insights のサービス プリンシパルとユーザー アカウントには、Synapse Analytics ワークスペースが配置されている *リソース グループ* で **閲覧者** の権限が必要です。 さらに、Synapse Analytics ワークスペースのサービス プリンシパルとユーザーには **Synapse 管理者** の権限が必要です。 
+
 1. **管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**Azure Synapse Analytics** を選択するか、**Azure Synapse Analytics** タイルで **設定** を選択して、接続を構成します。
+1. **接続の追加** を選択して **Azure Synapse Analytics** を選択するか、**Azure Synapse Analytics** タイルで **設定** を選択して接続を構成します。
 
 1. 接続にわかりやすい名前を 表示名 フィールドに付けます。 接続名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
@@ -63,7 +64,7 @@ Azure の場合:
 
 ### <a name="configure-an-export"></a>エクスポートの構成
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 共有接続でエクスポートを構成するには、Customer Insights で **共同作成者** の権限が最低限必要です。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
 
 1. **データ** > **エクスポート** に移動します。
 
@@ -82,6 +83,8 @@ Azure の場合:
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
 エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
+
+Synapse Analytics にエクスポートされたデータをクエリするには、エクスポートのワークスペースにあるデスティネーション ストレージへの **ストレージ BLOB データ閲覧者** アクセスが必要です。 
 
 ### <a name="update-an-export"></a>エクスポートの更新
 

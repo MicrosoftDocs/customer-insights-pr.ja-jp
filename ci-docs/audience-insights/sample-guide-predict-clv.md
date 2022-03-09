@@ -3,18 +3,17 @@ title: 顧客の生涯価値予測サンプル ガイド
 description: このサンプル ガイドを使用して、顧客の生涯価値予測モデルを試してください。
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 705e159f348e876f8a2a0ad3481608c6dd380df3dd74d7e5dba9dd3bebe25e52
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029497"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354837"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>顧客の生涯価値 (CLV) 予測サンプル ガイド
 
@@ -22,7 +21,7 @@ ms.locfileid: "7029497"
 
 ## <a name="scenario"></a>シナリオ
 
-Contoso は高品質のコーヒーとコーヒー メーカーを製造する会社です。 Contoso Coffee の Web サイトで製品を販売しています。 同社は、顧客が今後 12 か月で生み出す価値 (売上) を把握したいと考えています。 今後 12 か月の顧客の期待値を知ることで、価値の高い顧客にマーケティング活動を行うことができます。
+Contoso は、高品質のコーヒーとコーヒー マシンを製造する会社です。 Contoso Coffee の Web サイトで製品を販売しています。 同社は、顧客が今後 12 か月で生み出す価値 (売上) を把握したいと考えています。 今後 12 か月の顧客の期待値を知ることで、価値の高い顧客にマーケティング活動を行うことができます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -31,7 +30,7 @@ Contoso は高品質のコーヒーとコーヒー メーカーを製造する�
 
 ## <a name="task-1---ingest-data"></a>タスク 1 - データの取り込み
 
-[データ インジェストについて](data-sources.md) と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md) の記事を確認します。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
+[データ インジェスト](data-sources.md)と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md)に関する記事をご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>顧客データを eコマース プラットフォームから取り込む
 
@@ -164,7 +163,7 @@ Contoso は高品質のコーヒーとコーヒー メーカーを製造する�
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>タスク 3 - 顧客の生涯価値予測の構成
 
-統合された顧客プロファイルが用意できたので、顧客の生涯価値予測を実行できるようになりました。 詳細な手順については、[顧客の生涯価値予測 (プレビュー)](predict-customer-lifetime-value.md) を参照してください。
+統合された顧客プロファイルが用意できたので、顧客の生涯価値予測を実行できるようになりました。 詳細な手順については、[顧客の生涯価値予測](predict-customer-lifetime-value.md)を参照してください。
 
 1. **インテリジェンス**  > **予測** に移動し、**顧客の生涯価値モデル** を選択します。
 

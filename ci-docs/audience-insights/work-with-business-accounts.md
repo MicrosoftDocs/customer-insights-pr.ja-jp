@@ -2,19 +2,23 @@
 title: 主なターゲットとしてビジネスアカウントを開始する対象者
 description: 主なターゲット対象 Dynamics 365 Customer Insights としてのビジネス アカウントについて学習します。
 ms.date: 10/19/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673693"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353549"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>対象者分析情報でビジネス アカウントを使用する
 

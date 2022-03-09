@@ -1,20 +1,19 @@
 ---
 title: Customer Insights データを RollWorks にエクスポート
 description: RollWorks への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dce5d51ca4587b4d7a0644cc701c1826854882b5
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 392084105628ba4e6008a1386a5ac80c809a004e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124095"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225571"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>セグメントを RollWorks にエクスポート (プレビュー)
 
@@ -24,15 +23,15 @@ ms.locfileid: "6124095"
 
 -   [RollWorks アカウント](https://www.rollworks.com/) と対応する管理者資格情報がある。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- RollWorks には、1 回のエクスポートで 250'000 プロファイルまでエクスポートできます。
-- プロファイルが 100 未満のセグメントを RollWorks にエクスポートできません。 
+- RollWorks へのエクスポートごとに最大 250'000 の顧客プロファイルをエクスポートできます。
+- 顧客プロファイルが 100 未満のセグメントを RollWorks にエクスポートすることはできません。 
 - RollWorks へのエクスポートはセグメントに限定されています。
-- 最大 250'000 件のプロファイルを RollWorks にエクスポートすると、完了するまでに最大 10 分かかります。 
-- RollWorks にエクスポートできるプロファイルの数は、RollWorks との契約によって異なり、制限されます。
+- 最大 250,000 の顧客プロファイルを RollWorks にエクスポートすると、完了するまでに最大 10 分かかる場合があります。 
+- RollWorks にエクスポートできる顧客プロファイルの数は、RollWorks との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-rollworks"></a>RollWorks への接続を設定する
 
@@ -66,7 +65,7 @@ ms.locfileid: "6124095"
 
 1. **RollWorks 広告者 ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) を入力します。
 
-3. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを RollWorks にエクスポートする必要があります。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを RollWorks にエクスポートする必要があります。
 
 1. エクスポートするセグメントを選択します。 メンバー数が 100 以上のセグメントを選択します。 小さいセグメントをエクスポートすることはできません。 さらに、エクスポートするセグメントの最大サイズは、エクスポートごとに 250'000 メンバーです。 
 

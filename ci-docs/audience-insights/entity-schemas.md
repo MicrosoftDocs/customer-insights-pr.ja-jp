@@ -1,24 +1,23 @@
 ---
 title: Common Data Model における Customer Insights エンティティ スキーマ
 description: Common Data Model のエンティティに関する作業。
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692311"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231045"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) は宣言的な仕様であり、ビジネスと生産性アプリケーションの全体で一般的に使用される概念とアクティビティを表す標準エンティティの定義です。 このモデルは実測データ、および分析データにも拡張されています。 Common Data Model は、アクティビティおよびサービス レベル アグリーメントなど、ベンダー、従業員、および顧客間の対話だけでなく、取引先企業、部署、ケース、連絡先、潜在顧客、営業案件、製品など、適切に定義されたモジュール形式の拡張可能なビジネス エンティティを提供します。 誰もが Common Data Model の定義に基づいて拡張し、さらなるビジネス固有のアイデアを取り込むことができます。
 
@@ -42,7 +41,7 @@ ms.locfileid: "6692311"
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Common Data Model エンティティ ナビゲーターを使用してエンティティを表示する
 
-[Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 **GitHub からロードする** を選択します **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** に移動すると、Customer Insights エンティティと定義のリストが表示されます。
+[Common Data Model のエンティティ ナビゲータ](https://microsoft.github.io/CDM/) にエンティティを表示できます。 インサイト アプリケーション セクションからエンティティを選択すると、Customer Insights エンティティのリストとその定義が表示されます。
 > [!div class="mx-imgBorder"]
 > ![CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター。](media/CDM-entity-navigator.png "CustomerActivity エンティティを表示するC DM エンティティ ナビゲーター")
 

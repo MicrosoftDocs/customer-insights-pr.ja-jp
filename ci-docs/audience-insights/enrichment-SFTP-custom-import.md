@@ -1,56 +1,76 @@
 ---
 title: SFTP カスタム インポートによるエンリッチメント
 description: SFTP カスタム インポート エンリッチメントに関する一般情報。
-ms.date: 11/18/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+ms.date: 04/09/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269612"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229644"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
-セキュリティで保護されたファイル転送プロトコル (SFTP) カスタム インポートを使用すると、データ統合のプロセスを行う必要のないデータをインポートできます。 これは、データを取り込むための柔軟で安全かつ簡単な方法です。 SFTP カスタム インポートは、エンリッチメントに必要な顧客プロファイル データをエクスポートできる [SFTP エクスポート](export-sftp.md) と組み合わせて使用できます。 次に、データを処理して強化し、SFTP カスタム インポートを使用して、エンリッチしたデータを Dynamics 365 Customer Insights の対象者に関するインサイト機能に戻すことができます。
+セキュリティで保護されたファイル転送プロトコル (SFTP) カスタム インポートを使用すると、データ統合のプロセスを行う必要のないデータをインポートできます。 これは、データを取り込むための柔軟で安全かつ簡単な方法です。 SFTP カスタム インポートは、エンリッチメントに必要な顧客プロファイル データをエクスポートできる [SFTP エクスポート](export-sftp.md) と組み合わせて使用できます。 次に、データを処理してエンリッチし、SFTP カスタム インポートを使用して、エンリッチされたデータを Dynamics 365 Customer Insights の対象ユーザー分析機能に戻すことができます。
 
 ## <a name="prerequisites"></a>前提条件
 
 SFTP カスタム インポートを構成するには、次の前提条件が満たされている必要があります:
 
-- データのインポート元となる SFTP の場所に、ユーザー資格情報 (ユーザー名とパスワード) があります。
-- STFP ホストに URL とポート番号 (通常は22) があります。
-- SFTP ホストにインポートするファイルのファイル名と場所があります。
-- インポートするデータのスキーマを指定する *model.json* ファイルがあります。 このファイルは、インポートするファイルと同じディレクトリにある必要があります。
-- [管理者](permissions.md#administrator) のアクセス許可があります。
+- SFTP ホストにインポートするファイルのファイル名と場所 (パス) があること。
+- インポートするデータの [Common Data Model スキーマ](/common-data-model/) を指定する *model.json* ファイルがある。 このファイルは、インポートするファイルと同じディレクトリにある必要があります。
+- SFTP 接続は既に管理者によって構成されている、*または* [管理者](permissions.md#administrator) アクセス許可を所有していること。 データのインポート元となる SFTP ロケーションに対して、ユーザー資格情報、URL、およびポート番号が必要です。
 
-## <a name="configuration"></a>構成
+
+## <a name="configure-the-import"></a>インポートの構成
 
 1. **データ** > **エンリッチメント** に移動し、**検出** タブを選択します。
 
-1. **SFTP カスタム インポート タイル** で **データの強化** を選択します。
+1. **SFTP カスタム インポート タイル** で **データのエンリッチ** を選択し、**開始する** を選択します。
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP カスタム インポート タイル。":::
+
+1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**接続の追加** を選択して、ドロップダウン リストから **SFTP カスタム インポート** を選択することで、接続を作成できます。
+
+1. **カスタム インポートに接続する** を選択し、選択した接続を確認します。
+
+1.  **次へ** を選択して、インポートするデータファイルの **パス** および **ファイル名** を入力します。
+
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="データの場所を入力する際のスクリーンショット。":::
+
+1. **次へ** を選択して、顧客データ セットを選択します。 これは、すべての顧客プロファイルまたはセグメントのいずれかです。
+
+1. **次へ** を選択し、エンリッチメントの名前と出力エンティティの名前を指定します。 
+
+1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP カスタム インポートの接続を構成する 
+
+接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、カスタム インポート タイルで **設定** を選択します。
+
+1. **表示名** ボックスに接続の名前を入力します。
+
+1. インポートするデータが存在する SFTP サーバーの有効なユーザー名、パスワード、およびホスト URL を入力します。
+
+1. 内容を確認し、**同意する** チェックボックスを選択して、**データのプライバシーとコンプライアンス** に同意してください。
+
+1. **検証** を選択して、構成を検証します。
+
+1. 確認が完了したら、**保存** を選択して接続を保存できます。
 
    > [!div class="mx-imgBorder"]
-   > ![SFTP カスタム インポート タイル](media/SFTP_Custom_Import_tile.png "SFTP カスタム インポート タイル")
+   > ![Experian 接続の構成ページ。](media/enrichment-SFTP-connection.png "Experian 接続の構成ページ")
 
-1. **開始する** を選択し、SFTP サーバーの資格情報とアドレスを指定します。 たとえば、sftp://mysftpserver.com:22 です。
-
-1. データを含むファイルの名前と、ルート フォルダーにない場合は、SFTP サーバー上のファイルへのパスを入力します。
-
-1. **カスタム インポート への接続** を選択して、すべての入力を確認します。
-
-   > [!div class="mx-imgBorder"]
-   > ![SFTP カスタム インポート構成ポップアップ](media/SFTP_Custom_Import_Configuration_flyout.png "SFTP カスタム インポート構成ポップアップ")
 
 ## <a name="defining-field-mappings"></a>フィールド マッピングの定義 
 
-SFTP サーバーにインポートするファイルを含むディレクトリには、*model.json* ファイルも含まれている必要があります。 このファイルは、データのインポートに使用するスキーマを定義します。 スキーマは、[Common Data Model](https://docs.microsoft.com/common-data-model/) を使用して、フィールド マッピングを指定する必要があります。 model.json ファイルの簡単な例は次のようになります:
+SFTP サーバーにインポートするファイルを含むディレクトリには、*model.json* ファイルも含まれている必要があります。 このファイルは、データのインポートに使用するスキーマを定義します。 スキーマは、フィールド マッピングを指定するため、[共通データ モデル](/common-data-model/) を使用します。 model.json ファイルの簡単な例は次のようになります:
 
 ```
 {
@@ -102,11 +122,8 @@ SFTP サーバーにインポートするファイルを含むディレクトリ
 
 **拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-エンリッチされた顧客データの上に構築します。 [セグメント](segments.md)、[メジャー](measures.md)、[データのエクスポート](export-destinations.md) を作成し、パーソナライズされたエクスペリエンスを顧客に提供します。
-
-
-
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

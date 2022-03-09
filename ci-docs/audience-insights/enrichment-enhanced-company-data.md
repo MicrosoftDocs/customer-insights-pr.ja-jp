@@ -1,20 +1,19 @@
 ---
 title: 会社データの拡張
 description: Microsoft のモデルを使用して、会社のデータをエンリッチし、正規化します。
-ms.date: 11/05/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770176"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229409"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>強化された会社データで会社プロファイルのエンリッチメント
 
@@ -51,7 +50,8 @@ Microsft
 
 1.  会社の ID を確認します。 入力が既存の組織であるかどうか、または会社が標準名として出力を使用しているかどうかは確認しません。
 2.  世界中の会社を包括的にカバーします。 Microsoft のコンパイルされた会社データはグローバルなカバーがありますが、オーストラリア、カナダ、英国、および米国でほとんどのカバーを提供しています。
-3.  データの正確性または鮮度を保証します。 ビジネス情報は頻繁に変更されるため、提供される強化された会社データが常に正確または最新であることを保証することはできません。
+3.  会社の住所をグローバルに標準化します。 現在、以下の国または地域で住所の標準化をサポートしています: オーストラリア、カナダ、フランス、ドイツ、イタリア、日本、英国、米国。
+4.  データの正確性または鮮度を保証します。 ビジネス情報は頻繁に変更されるため、提供される強化された会社データが常に正確または最新であることを保証することはできません。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 
@@ -81,9 +81,19 @@ Microsft
 
 エンリッチメント プロセスが完了したら、**自分のエンリッチメント** で新しくエンリッチされた顧客プロファイル データを確認できます。 さらに、最後の更新の時刻とエンリッチされたプロファイルの数が表示されます。
 
-**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
+エンリッチされたデータのサンプルは、**エンリッチされた顧客プレビュー** タイルで確認できます。 **さらに表示** を選択し、**データ** タブを選択して、エンリッチされた各プロファイルの詳細ビューにアクセスします。
 
-## <a name="next-steps"></a>次のステップ
+### <a name="overview-card"></a>概要カード
+
+概要カードには、エンリッチメントの対応範囲に関する詳細が表示されます。 
+
+* **処理済かつ変更済の会社**: 正常にエンリッチされた顧客の会社プロファイルの数。
+
+* **処理済かつ未変更の会社**: 認識されているが変更されていない顧客の会社プロファイルの数。 これは通常、入力データが有効で、エンリッチメントによって改善できない場合に起こります。
+
+* **未処理かつ未変更の会社**: 認識されていない顧客の会社プロファイルの数。 これは通常は、エンリッチメントで無効またはサポートされていない入力データで発生します。
+
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

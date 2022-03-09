@@ -1,20 +1,19 @@
 ---
 title: Customer Insights データを Omnisend にエクスポート
 description: Omnisend への接続とエクスポートを構成する方法を説明します。
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 15fc6fc2426ad3958268e5bcc200b8eb2b0fd13a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124511"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226768"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>セグメントを Omnisend にエクスポート (プレビュー)
 
@@ -24,13 +23,13 @@ ms.locfileid: "6124511"
 
 -   [Omnisend アカウント](https://www.omnisend.com/) と対応する管理者資格情報があります。
 -   対象者に関するインサイトで [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれています。
+-   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Omnisend には、エクスポートごとに 100 万プロファイルまでエクスポートでき、完了するまでに最大 4 時間かかる場合があります。
+- Omnisend へのエクスポートごとに最大 100 万の顧客プロファイルをエクスポートでき、完了するまでに最大 4 時間かかる場合があります。
 - Omnisend へのエクスポートはセグメントに限定されています。
-- Omnisend にエクスポートできるプロファイルの数は、Omnisend との契約によって異なります。
+- Omnisend にエクスポートできる顧客プロファイルの数は、Omnisend との契約によって異なります。
 
 ## <a name="set-up-connection-to-omnisend"></a>Omnisend への接続を設定する
 
@@ -62,7 +61,7 @@ ms.locfileid: "6124511"
 
 1. **エクスポートの接続** フィールドで、Omnisend セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-1. **データの照合** セクションの **電子メール** フィールドで、顧客の電子メール アドレスを表す統合顧客プロファイルのフィールドを選択します。 セグメントを Omnisend にエクスポートする必要があります。 必要に応じて、名、姓、住所、国/地域、都道府県、市区町村、郵便番号をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Omnisend にエクスポートする必要があります。 必要に応じて、名、姓、住所、国/地域、都道府県、市区町村、郵便番号をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 
 1. **保存** を選択します。
 
