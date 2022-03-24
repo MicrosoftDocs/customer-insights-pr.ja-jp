@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229644"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376560"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
 
@@ -25,7 +25,7 @@ SFTP カスタム インポートを構成するには、次の前提条件が�
 
 - SFTP ホストにインポートするファイルのファイル名と場所 (パス) があること。
 - インポートするデータの [Common Data Model スキーマ](/common-data-model/) を指定する *model.json* ファイルがある。 このファイルは、インポートするファイルと同じディレクトリにある必要があります。
-- SFTP 接続は既に管理者によって構成されている、*または* [管理者](permissions.md#administrator) アクセス許可を所有していること。 データのインポート元となる SFTP ロケーションに対して、ユーザー資格情報、URL、およびポート番号が必要です。
+- SFTP 接続は既に管理者によって構成されている、*または* [管理者](permissions.md#admin) アクセス許可を所有していること。 データのインポート元となる SFTP ロケーションに対して、ユーザー資格情報、URL、およびポート番号が必要です。
 
 
 ## <a name="configure-the-import"></a>インポートの構成

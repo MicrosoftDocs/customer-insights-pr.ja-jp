@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232664"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376468"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の対象者に関するインサイト機能の新機能
-
-
 
 最新の更新プログラムについてお知らせします ! この記事は、パブリック プレビュー機能、全般的な可用性の強化、毎月の更新プログラム、機能の更新をまとめたものです。 長期的な機能計画を確認するには、[Dynamics 365 と Power Platform のリリース計画](/dynamics365/release-plans/) をご覧ください。
 
@@ -26,6 +24,62 @@ ms.locfileid: "8232664"
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
 
+
+## <a name="february-2022-updates"></a>2022 年 2 月の更新プログラム
+
+2022 年 2 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="general-availability-for-prediction-models"></a>予測モデルの一般提供
+
+**サブスクリプション解約**、**トランザクション解約**、**顧客生涯価値 (CLV)** を含む、すぐに使用できる予測モデルが Customer Insights の一部として一般提供になります。 
+
+詳細については、[予測の概要](predictions-overview.md) を参照してください。
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>新しいデータ ソース: Azure Synapse Analytics との統合 (プレビュー)
+
+Azure Synapse Analytics は、データ ウェアハウスとビッグ データ システム全体の分析情報までの時間を短縮するエンタープライズ分析サービスです。
+
+組織がすでに Azure Synapse Analytics の高度な分析機能を使用して、出力を Data Lake データベースに保存している場合、そのデータを Customer Insights に簡単に取り込むことができます。 詳細については、[Azure Synapse データ ソースを接続する (プレビュー)](connect-synapse.md) を参照してください。
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp のエンリッチメント (プレビュー)
+
+LiveRamp は、確定的なオフライン ID の解決と顧客データの統合を提供します。 顧客データの個人 ID を AbiliTec ID グラフにマッピングし、AbiliTec ID を受け取ることができます。 その後、これらの ID を使用して、顧客データをより適切に統合できます。
+
+詳細については、[LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)](enrichment-liveramp.md) を参照してください。
+
+### <a name="enrichment-for-data-sources-preview"></a>データ ソースのエンリッチメント (プレビュー)
+
+Microsoft や他のパートナーなどのソースからのデータを使用して、データ統合前に顧客データをエンリッチします。 データ ソース エンリッチメントは、データを統合するとより良い結果を達成するのに役立つ、より高いデータの完全性と品質を生み出すのに役立ちます。
+
+詳細については、[データ ソースのエンリッチメント (プレビュー)](data-sources-enrichment.md) を参照してください。
+
+### <a name="change-owner-of-environment"></a>環境の所有者を変更する
+
+Customer Insights では複数のユーザーが管理者権限を持つことができますが、環境の所有者は 1 人のユーザーのみです。 改善したエクスペリエンスにより、環境の所有者を変更し、前の所有者が組織を離れた場合に所有権を要求できます。 
+
+詳細については、[環境の所有者を変更する](manage-environments.md#change-the-owner-of-an-environment) を参照してください。
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>データ準備プロセスにより、破損したレコードの破損理由が一覧表示される
+
+データ準備プロセスでは、簡単に識別できるように、個々のレコード レベルで破損したデータを持つすべてのフィールドの破損理由が示されるようになりました。 
+
+詳細については、[破損したデータ ソース](entities.md#corrupted-data-sources) を参照してください。
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>エンゲージメント インサイト機能におけるレポート機能のプレビューの終了
+
+Dynamics 365 Customer Insights エンゲージメント分析機能のプレビューは 2022 年 2 月 15 日に終了しました。  
+この変更は、Customer Insights の試用版エクスペリエンスに、ファネルの作成機能も他のレポート機能も含まれなくなることを意味します。
+
+Microsoft の顧客データ プラットフォーム (CDP)、[Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) の他の多くの機能を調べて評価することをお勧めします。    
+ 
+移行期間中、既存のプレビュー参加者は引き続き一部のプレビュー機能にアクセスできます。
+
+- Web サイトやモバイル アプリをインストルメント化するためのコードを取得する 
+- イベントとイベント プロパティを表示する 
+- 取り込まれたイベントと絞り込まれたイベントで統合プロファイルを強化して、顧客データの価値を最大限に活用します
+  
+移行期間中も、キャプチャされたイベントは接続された Data Lake にストリーミングされます。 この機能をオフにすると、エンゲージメント分析情報と対象者分析情報間のデータ共有が停止し、接続されたストレージに新しいイベントが送信されなくなります。
+機能のプレビューの終了に関するご質問は、Microsoft アカウント チームに直接お問い合わせください。 アカウント チームは、今後のリリースについて最新の情報を提供します。 
 
 ## <a name="january-2022-updates"></a>2022 年 1 月の更新
 

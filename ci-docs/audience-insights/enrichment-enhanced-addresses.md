@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353642"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376303"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
 
 データ内のアドレスは、構造化されていない、不完全である、または正しくない可能性があります。 Microsoft のモデルを使用して、住所を [Common Data Model 形式](/common-data-model/schema/core/applicationcommon/address) に正規化およびエンリッチし、精度とインサイトを向上します。
+
+また、[データ ソースのアドレスをエンリッチ](data-sources-enrichment.md) して、データ統合プロセスでの一致精度を向上させることもできます。 
 
 ## <a name="how-we-enhance-addresses"></a>住所の拡張方法
 

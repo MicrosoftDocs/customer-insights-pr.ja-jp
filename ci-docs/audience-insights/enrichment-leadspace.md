@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230640"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376790"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
 
@@ -25,7 +25,7 @@ Leadspace を構成するには、次の前提条件が満たしている必要�
 
 - アクティブな Leadspace ライセンスを所有していること。
 - 取引先企業に基づいて、[統一された顧客プロファイル](customer-profiles.md)を所有していること。
-- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#administrator) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) に直接お問い合わせください。
+- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#admin) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) に直接お問い合わせください。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

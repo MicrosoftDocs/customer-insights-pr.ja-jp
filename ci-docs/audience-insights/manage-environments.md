@@ -1,7 +1,7 @@
 ---
 title: 環境の作成および管理
 description: サービスにサインアップする方法と環境を管理する方法について説明します。
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354285"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376882"
 ---
 # <a name="manage-environments"></a>環境の管理
-
-
 
 ## <a name="switch-environments"></a>環境の切り替え
 
@@ -98,9 +96,29 @@ ms.locfileid: "8354285"
 
 データ統合の完了後は、**計測** と **セグメント** に移動し、それらを更新します。
 
+## <a name="change-the-owner-of-an-environment"></a>環境の所有者を変更する
+
+Customer Insights では複数のユーザーが管理者権限を持つことができますが、環境の所有者は 1 人のユーザーのみです。 既定では、最初に環境を作成するのは管理者です。 環境の管理者は、管理者権限を持つ別のユーザーに所有権を割り当てることができます。
+
+1. アプリのヘッダーにある **環境** ピッカーを選択します。
+
+1. **編集** アイコンを選択します。
+
+1. **環境の編集** ボックスで、**基本情報** ステップに移動します。
+
+1. **環境の所有者を変更する** フィールドで、環境の新しい所有者を選択します。  
+
+1. **レビューと完了**、**更新** の順に選択して、変更を適用します。 
+
+## <a name="claim-ownership-of-an-environment"></a>環境の所有権を要求する
+
+環境の所有者が組織を離れるか、ユーザー アカウントが削除された場合、環境には所有者がいなくなります。 管理者権限を持つユーザーは、所有権を要求して新しい所有者になることができます。 環境を所有し続けることも、[所有権を別の管理者に変更](#change-the-owner-of-an-environment) することもできます。 
+
+所有権を要求するには、元の所有者が組織を離れたときに Customer Insights の各ページの上部に表示される **所有権を取得** ボタンを選択します。
+
 ## <a name="reset-an-existing-environment"></a>既存の環境のリセット
 
-管理者の場合、すべての構成を削除し、取り込んだデータを削除する場合は、環境を空の状態にリセットできます。
+環境の所有者は、すべての構成を削除して取り込んだデータを削除する場合、環境を空の状態にリセットできます。
 
 1.  アプリのヘッダーにある **環境** ピッカーを選択します。 
 
@@ -112,7 +130,7 @@ ms.locfileid: "8354285"
 
 ## <a name="delete-an-existing-environment"></a>既存の環境を削除する
 
-管理者の場合、管理している環境を削除できます。
+環境の所有者は、管理する環境を削除できます。
 
 1.  アプリのヘッダーにある **環境** ピッカーを選択します。
 

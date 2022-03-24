@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354414"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376422"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
 
@@ -37,7 +37,7 @@ Customer Insights は、次のイベント ログを送信します。
 Customer Insights で診断を構成するには、次の前提条件が満たされている必要があります。
 
 - 有効な [Azure サブスクリプション](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)がある。
-- Customer Insights の[管理者](permissions.md#administrator)権限がある。
+- Customer Insights の[管理者](permissions.md#admin)権限がある。
 - Azure の宛先リソースでの **共同作成者** と **ユーザー アクセス管理者** の役割がある。 リソースには、Azure Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 詳細については、[Azure ポータルを使用して Azure 役割の割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)を参照してください。
 - Azure Storage、Azure イベント ハブ、または Azure Log Analytics の[宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)が満たされている。
 - リソースが属するリソースグループで、最低 **閲覧者** の役割がある。
@@ -132,7 +132,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | `resultSignature` | String    | 任意出席者          | イベントの結果ステータス。 操作が REST API 呼び出しに対応する場合、それは HTTP ステータス コードです。        | `200`             |
 | `durationMs`      | Long      | 任意出席者          | 操作の期間 (ミリ秒)。     | `133`     |
 | `callerIpAddress` | String    | 任意出席者          | 操作が公開されている IP アドレスからの API 呼び出しに対応している場合は、呼び出し元の IP アドレス。                                                 | `144.318.99.233`         |
-| `identity`        | String    | 任意出席者          | 操作を行ったユーザーまたはアプリケーションの ID を説明する JSON オブジェクト。       | [ID](#identity-schema) セクションを参照してください。     |  |
+| `identity`        | String    | 任意出席者          | 操作を行ったユーザーまたはアプリケーションの ID を説明する JSON オブジェクト。       | [ID](#identity-schema) セクションを参照してください。     |  
 | `properties`      | String    | 任意出席者          | イベントの特定のカテゴリに対するより多くのプロパティを持つ JSON オブジェクト。      | [プロパティ](#api-properties-schema) セクションを参照してください。    |
 | `level`           | String    | 必須          | イベントの重要度レベル。    | `Informational`、`Warning`、`Error`、または `Critical`。           |
 | `uri`             | String    | 任意出席者          | 絶対リクエスト URI。    |               |
@@ -230,8 +230,8 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | 有効      | 有効  | 常に `WorkflowEvent` で、ログ イベントをワークフロー イベントとしてマークします。                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | 有効      | 有効  | ワークフロー実行の識別子。 ワークフロー実行内のすべてのワークフローイベントとタスクイベントには、同じ `workflowJobId` があります。                                                                                                                                   |
-| `properties.operationType`                   | 有効      | 有効  | 操作の識別子。[操作の種類]を参照してください。(#operation-types)                                                                                                                                                                                       |
-| `properties.tasksCount`                      | 有効      | 無効   | ワークフローのみ。 ワークフロー トリガーのタスクの数。                                                                                                                                                                                                       |
+| `properties.operationType`                   | 有効      | 有効  | 操作の識別子。[操作の種類].(#operation-types) を参照してください                                                                                                                                                                                       |
+| `properties.tasksCount`                      | 有効      | 番号   | ワークフローのみ。 ワークフロー トリガーのタスクの数。                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | 有効      | 無効   | 省略可能。 ワークフロー イベントのみ。 ワークフローをトリガーしたユーザーの Azure Active Directory [objectId](/azure/marketplace/find-tenant-object-id#find-user-object-id)については、`properties.workflowSubmissionKind` も参照してください。                                   |
 | `properties.workflowType`                    | 有効      | 無効   | `full` または `incremental` 更新。                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | 有効      | 無効   | `OnDemand` または `Scheduled`。                                                                                                                                                                                                                                  |
@@ -239,7 +239,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | `properties.startTimestamp`                  | 有効      | 有効  | UTC タイムスタンプ`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | 有効      | 有効  | UTC タイムスタンプ`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | 有効      | 有効  | UTC タイムスタンプ`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | 有効      | 有効  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | 有効      | 有効  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | 無効       | 有効  | - OperationType = `Export` の場合、識別子はエクスポート構成の guid です。 <br> - OperationType = `Enrichment` の場合、それはエンリッチメントの guid です <br> - OperationType `Measures` と `Segmentation` の場合、識別子はエンティティ名です。 |
 | `properties.friendlyName`                    | 無効       | 有効  | エクスポートまたは処理されるエンティティのユーザーフレンドり名。                                                                                                                                                                                           |
 | `properties.error`                           | 無効       | 有効  | 省略可能。 詳細付きのエラー メッセージ。                                                                                                                                                                                                                  |

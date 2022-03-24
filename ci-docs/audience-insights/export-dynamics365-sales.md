@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355023"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455861"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales でセグメントを使用する (プレビュー)
 
@@ -31,7 +31,7 @@ Dynamics 365 Sales で顧客データを使用して、マーケティング リ
 
 ## <a name="prerequisite-for-connection"></a>接続の前提条件
 
-1. Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。 取引先担当者を取り込む方法の詳細については、[Microsoft Dataverse を使った Dynamics 365 Sales](connect-power-query.md) を読んでください。
+1. Customer Insights から Sales にセグメントをエクスポートする前に、取引先担当者レコードが Dynamics 365 Sales に存在している必要があります。 [Microsoft Dataverse を使用した Dynamics 365 Sales](connect-dataverse-managed-lake.md) から連絡先を取り込む方法の詳細を参照します。
 
    > [!NOTE]
    > 対象者インサイトから Sales にセグメントをエクスポートしても、Sales インスタンスに新しい取引先担当者レコードは作成されません。 Sales からの取引先担当者レコードは、対象者インサイトに取り込まれ、データ ソースとして使用される必要があります。 また、セグメントをエクスポートする前に、顧客 ID を取引先担当者 ID にマッピングするために、統合された顧客エンティティに含める必要があります。

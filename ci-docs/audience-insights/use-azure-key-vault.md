@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355897"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376514"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>独自の Azure Key Vault を持ち込む (プレビュー)
 
@@ -31,7 +31,7 @@ ms.locfileid: "8355897"
 
 - 有効な Azure サブスクリプションがある。
 
-- 対象者に関するインサイトで [管理者](permissions.md#administrator) ロールを持っていること。 [対象者分析情報のユーザー権限](permissions.md#assign-roles-and-permissions)の詳細を参照してください。
+- 対象者に関するインサイトで [管理者](permissions.md#admin) ロールを持っていること。 [対象者分析情報のユーザー権限](permissions.md#assign-roles-and-permissions)の詳細を参照してください。
 
 - Key Vault または Key Vault が属するリソース グループでは、[共同作成者](/azure/role-based-access-control/built-in-roles#contributor)と[ユーザー アクセス管理者](/azure/role-based-access-control/built-in-roles#user-access-administrator)の役割があります。 詳細については、[Azure ポータルを使用して Azure 役割の割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)にアクセスしてください。 Key Vault にユーザー アクセス管理者役割がない場合は、Dynamics 365 Customer Insights の Azure サービス プリンシパルの役割ベースのアクセス制御権限を別々に設定する必要があります。 リンクする必要のある Key Vault に [Azure サービス プリンシパルを使用する](connect-service-principal.md)ステップに従います。
 

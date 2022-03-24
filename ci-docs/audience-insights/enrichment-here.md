@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230388"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376356"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies による顧客プロファイルの強化 (プレビュー)
 
@@ -25,7 +25,7 @@ HERE Technologies のエンリッチメントを構成するには、次の前�
 
 - HERE Technologies のアクティブなサブスクリプションがあること。 サブスクリプションを取得するには、[ここでサインアップする](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) か、または直接 [HERE Technologies に問い合わせ](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) を行うことができます。 [HERE Technologies 位置情報エンリッチメントの詳細。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE [接続](connections.md) が利用可能であるか、*または* [管理者](permissions.md#administrator) 権限と HERE Technologies API キーを所有していること。
+- HERE [接続](connections.md) が利用可能であるか、*または* [管理者](permissions.md#admin) 権限と HERE Technologies API キーを所有していること。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

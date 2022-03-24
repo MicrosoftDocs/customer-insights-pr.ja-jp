@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226720"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455913"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automateコネクタ (プレビュー)
 
 データが変更されたときに特定のイベントを自動的にトリガーし、[Power Automate](https://flow.microsoft.com/) でより複雑なフローを直接管理します。
+
+## <a name="known-limitations"></a>既知の制限
+
+- 60 秒あたり最大 100 回の呼び出しを実行できます。 $skip パラメーターを使用して、API エンドポイントを複数回呼び出すことができます。 [$skip パラメーターの詳細](/connectors/customerinsights/#get-items-from-an-entity)。
 
 ## <a name="power-automate-triggers"></a>Power Automate のトリガー
 

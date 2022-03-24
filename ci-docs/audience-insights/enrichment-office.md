@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228480"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376836"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>エンゲージメント データで顧客プロファイルをエンリッチする (プレビュー)
 
@@ -28,7 +28,7 @@ Microsoft Office 365 からのデータを使用して、Office 365 アプリ経
 - アクティブな Office 365 クラウド ライセンスを所有していること。
 - [ビジネス アカウント](work-with-business-accounts.md)に基づいた[統一顧客プロファイル](customer-profiles.md)。
 - Customer Insights 環境には、[Microsoft Dataverse 組織](create-environment.md#step-3-connect-to-microsoft-dataverse)が付属している必要があります。
-- [管理者](permissions.md#administrator) 権限がある。
+- [管理者](permissions.md#admin) 権限がある。
 - Office 365 データを使って Dynamics 365 アプリケーション内に **組織のためのインサイト** を提供するために、Office 365 テナント管理者から同意を取り付けている、または取り付けることができる。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成

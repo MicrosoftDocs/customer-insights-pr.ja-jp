@@ -1,7 +1,7 @@
 ---
 title: ユーザーのアクセス許可を管理する
 description: アクセス許可とユーザー ロールについて説明します。
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355943"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376744"
 ---
 # <a name="user-permissions"></a>ユーザーのアクセス許可
 
@@ -48,7 +48,7 @@ ms.locfileid: "8355943"
 - 構成を管理し、顧客プロファイルを **エンリッチメント** ページから拡充します (ファースト パーティのエンリッチメントのみ)。
 - 共同作成者と共有されている接続に基づいてエクスポートを管理および作成します。 [管理者が共同作成者にエクスポート用の接続の使用を許可する方法について説明します](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
-## <a name="administrator"></a>管理者
+## <a name="admin"></a>Admin
 
 - 共同制作者が使用できるすべてのアクセス権限。
 - 作業言語とシステム プロセスの更新スケジュールを含む、**システム** ページの設定を変更します。
@@ -60,6 +60,12 @@ ms.locfileid: "8355943"
 - **顧客カード アドイン** をインストールして使用します。
 - **Power Apps コネクタ** を追加して使用します。
 - [Customer Insights API](apis.md) の使用を有効にします。
+- 別の管理者に [環境の所有権を割り当て](manage-environments.md#change-the-owner-of-an-environment) ます。
+
+## <a name="admin-owner"></a>管理者 (所有者)
+
+- 管理者が利用できるすべての権限。
+- 環境を [リセットおよび削除](manage-environments.md#reset-an-existing-environment) します。
 
 ## <a name="assign-roles-and-permissions"></a>アクセス許可とロールの割り当て
 
