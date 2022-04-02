@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231997"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487521"
 ---
 # <a name="export-segments-to-marketo-preview"></a>セグメントを Marketo にエクスポート (プレビュー)
 
@@ -63,7 +63,7 @@ ms.locfileid: "8231997"
 
 1. **[Marketo リスト ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** を入力します。 リスト ID は純粋な数値です。 たとえば、Marketo リスト ID が ST12345A7 の場合、数字の前後の文字を削除して、`12345` を入力します。 
 
-1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 
+1. **データマッチング** セクションで、顧客のメール アドレスまたは顧客の Marketo ID を表すフィールドを少なくとも 1 つ選択します。 
 
 1. オプションで、**名**、**姓**、**市**、**都道府県**、**国/地域** をエクスポートし、パーソナライズされたメールを作成できます。 **属性の追加** を選択し、これらのフィールドをマップします。
 

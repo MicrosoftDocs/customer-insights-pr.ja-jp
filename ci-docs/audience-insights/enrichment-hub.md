@@ -1,7 +1,7 @@
 ---
 title: 統合顧客プロファイルを強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372721"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491964"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -97,5 +97,19 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 1. **進捗状況の詳細** ペインで、**エンリッチメント** セクションを展開します。 
 1. 進行状況を確認するエンリッチメントの配下で、**詳細を表示する** を選択します。 
 1. **タスクの詳細** ペインで、**詳細を表示する** を選択してエンリッチメントとその状態の更新に関連するプロセスを確認します。 
+
+## <a name="enrichment-results"></a>強化の結果
+
+エンリッチメントの実行が完了したら、エンリッチメントの結果を確認できます。
+
+1. **データ** > **エンリッチメント** に移動します。 
+1. 情報が必要なエンリッチメントを選択します。
+
+すべてのエンリッチメントには、エンリッチメントされたプロファイルの数、生成されたエンリッチメント エンティティのプレビュー、一定期間のエンリッチメントされたプロファイルの数などの基本情報が表示されます。 可能な場合は、**エンリッチされた顧客のフィールドごとの数** に各エンリッチされたフィールドのカバレッジへのドリルダウンを提供します。
+
+:::image type="content" source="media/enrichments-results.png" alt-text="エンリッチメントの結果ページ。":::
+
+一部のエンリッチメントには、エンリッチメントのタイプに固有の情報も表示されます。 詳細については、関連するエンリッチメントのドキュメントを参照してください。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

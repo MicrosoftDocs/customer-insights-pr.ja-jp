@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376422"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523675"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
 
@@ -230,7 +230,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | 有効      | 有効  | 常に `WorkflowEvent` で、ログ イベントをワークフロー イベントとしてマークします。                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | 有効      | 有効  | ワークフロー実行の識別子。 ワークフロー実行内のすべてのワークフローイベントとタスクイベントには、同じ `workflowJobId` があります。                                                                                                                                   |
-| `properties.operationType`                   | 有効      | 有効  | 操作の識別子。[操作の種類].(#operation-types) を参照してください                                                                                                                                                                                       |
+| `properties.operationType`                   | 有効      | 有効  | 操作の識別子。[操作の種類](#operation-types)を参照してください                                                                                                                                                                               |
 | `properties.tasksCount`                      | 有効      | 番号   | ワークフローのみ。 ワークフロー トリガーのタスクの数。                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | 有効      | 無効   | 省略可能。 ワークフロー イベントのみ。 ワークフローをトリガーしたユーザーの Azure Active Directory [objectId](/azure/marketplace/find-tenant-object-id#find-user-object-id)については、`properties.workflowSubmissionKind` も参照してください。                                   |
 | `properties.workflowType`                    | 有効      | 無効   | `full` または `incremental` 更新。                                                                                                                                                                                                                            |

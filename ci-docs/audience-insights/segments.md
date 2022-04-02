@@ -1,7 +1,7 @@
 ---
 title: 対象者に関するインサイトのセグメント
 description: セグメントの概要と、セグメントの作成および管理方法。
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355989"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508572"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -68,7 +68,9 @@ ms.locfileid: "8355989"
 
 ## <a name="refresh-segments"></a>セグメントを最新の情報に更新する
 
-**セグメント** pページで **すべて更新** を選択すると、すべてのセグメントを一度に更新することができ、1つまたは複数のセグメントを選択してオプションから **更新** を選択すると、該当するセグメントを更新することができます。 または、**管理者** > **システム** > **スケジュール** で定期的な更新を構成できます。
+**セグメント** pページで **すべて更新** を選択すると、すべてのセグメントを一度に更新することができ、1つまたは複数のセグメントを選択してオプションから **更新** を選択すると、該当するセグメントを更新することができます。 または、**管理者** > **システム** > **スケジュール** で定期的な更新を構成できます。 定期的な更新が構成されている場合、次のルールが適用されます。
+- **動的** または **拡張** タイプのすべてのセグメントは、設定されたケイデンスで自動的に更新されます。 更新が完了すると、**状態** に、セグメントの更新に問題がなかったか示されます。 **最終更新日** には、最後に成功した更新のタイムスタンプが表示されます。 エラーが発生した場合は、エラーを選択して詳細を確認してください。
+- **静的** タイプのセグメントは自動的に *更新されません*。 **最終更新日** には、静的セグメントが最後に手動で実行または更新されたときのタイムスタンプが表示されます。
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

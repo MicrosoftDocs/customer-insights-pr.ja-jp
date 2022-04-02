@@ -1,7 +1,7 @@
 ---
 title: データ ソースを使用してデータを取り込む
 description: さまざまなソースからデータをインポートする方法について説明します。
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354055"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464080"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -47,7 +47,18 @@ Dataverse 環境を Customer Insights に関連付けた後に作成されるデ
 
 既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、Microsoft Power Platform 環境に移動するためのリンクが表示され、オンプレミスのデータ ゲートウェイを表示および構成することができます。
 
+> [!IMPORTANT]
+> ゲートウェイが最新バージョンに更新されていることを確認してください。 更新プログラムをインストールして、ゲートウェイ画面に表示されるプロンプトから直接ゲートウェイを再構成するか、[最新バージョンをダウンロードする](https://powerapps.microsoft.com/downloads/)ことができます。 最新のゲートウェイ バージョンを使用しない場合、データフローの更新は失敗し、**キーワードはサポートされていません: 構成プロパティ。パラメータ名: キーワード** のようなエラーメッセージが表示されます。。
+
 ## <a name="review-ingested-data"></a>取り込んだデータのレビュー
+環境に Power Platform データフローが含まれる場合、**データ ソース** ページには以下の 3 つのセクションがリストされます。 
+- **共有済み**: すべての Customer Insights 管理者が管理できるデータソース。 Power BI データフロー、独自のストレージ アカウント、および Dataverse マネージド データ レイクは、共有データ ソースの一例です。
+- **自分の管理対象**: 自分がだけが作成して管理できる Power Platform データフロー。 他の Customer Insights 管理者は、これらのデータフローを表示することはできますが、編集、更新、または削除することはできません。
+- **他のユーザーの管理対象**: 他の管理者によって作成された Power Platform データフロー。 自分は表示のみ可能です。 支援が必要な場合に連絡するデータフローの所有者のリストが表示されます。
+> [!NOTE]
+> すべてのエンティティは、他のユーザーが表示および使用できます。 ユーザーのコンテキスト性はデータ ソースにのみ適用され、これらのデータフローから生じるエンティティには適用されません。
+
+Power Platform データフローが使用されない場合、グループやセクションは表示されません。 **データ ソース** ページには、すべてのデータ ソースのリストのみが含まれています。
 
 取り込んだ各データ ソースの名前、状態、ソースのデータが最後に更新された時刻が表示されます。 データ ソースの一覧を列ごとに並べ替えることができます。
 

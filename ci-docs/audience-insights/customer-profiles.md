@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354887"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523732"
 ---
 # <a name="customer-profiles"></a>顧客プロファイル
 
 **顧客** ページには、統合された顧客プロファイルを組み合わせたビューが表示されます。 顧客プロファイルは、[統合された顧客エンティティが作成されると](data-unification.md)使用できるようになります。 このページでは、顧客を検索し、その検索のインデックスを定義できます。
 
-顧客は個人または組織である場合があります。 各顧客プロファイルは、タイルで表されます。 より多くのレコードを取得するには、ページネーション コントロールを使用します。 カードには、*顧客* エンティティからの **インデックスの検索とフィルタリング** で定義されているフィールドが表示されます。 タイルを選択すると、選択した顧客のデータが[顧客詳細ページ](customer-profiles.md#customer-details-page)という専用ページに表示されます。
+顧客は個人または組織である場合があります。 各顧客プロファイルは、タイルで表されます。 より多くのレコードを取得するには、ページネーション コントロールを使用します。 カードには、*顧客* エンティティからの **インデックスの検索とフィルタリング** で定義されているフィールドが表示されます。 各カード内のフィールドの順序は、システムによって選択されます。
+
+タイルを選択すると、選択した顧客のデータが[顧客詳細ページ](customer-profiles.md#customer-details-page)という専用ページに表示されます。
 
 > [!div class="mx-imgBorder"] 
 > ![結果タイルを表示する顧客ページ](media/customers-page-result-tiles-B2C.png "結果タイルを表示する顧客ページ")

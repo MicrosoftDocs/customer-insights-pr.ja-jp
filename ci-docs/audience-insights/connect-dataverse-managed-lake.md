@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse のテーブルへの接続
 description: Microsoft Dataverse が管理する  Data Lake からデータをインポートする。
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354147"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464072"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
-
-
 
 この記事では、Dataverseユーザーが Microsoft Dataverse 管理レイクの分析エンティティにすばやく接続する方法について説明しています。 
 
@@ -29,7 +27,8 @@ ms.locfileid: "8354147"
 
 ## <a name="important-considerations"></a>重要な考慮事項
 
-Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
+1. Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
+2. [変更の追跡](/power-platform/admin/enable-change-tracking-control-data-synchronization)が有効な Dataverse エンティティのみ表示されます。 これらのエンティティは、Dataverse マネージド データ レイクにエクスポートして、Customer Insights で使用できます。 すぐに使える Dataverse テーブルは、デフォルトで変更の追跡が有効になっています。 カスタム テーブルの変更の追跡を有効にする必要があります。 Dataverse テーブルで変更の追跡が有効になっているか確認するには、[Power Apps](https://make.powerapps.com) > **データ** > **テーブル** に移動します。 目的のテーブルを見つけて選択します。 **設定** > **詳細オプション** に移動して **変更の追跡** の設定を確認します。
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Dataverse マネージド レイクに接続する
 

@@ -1,23 +1,23 @@
 ---
 title: Customer Insights で環境を作成する
 description: Dynamics 365 Customer Insights のライセンス サブスクリプションを使用して環境を作成するステップ。
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354101"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491919"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>対象者分析情報で環境を作成する
 
@@ -83,14 +83,16 @@ Customer Insights の複数の環境を作成し、それらの環境からの�
 自分の Dataverse 環境を接続すると、[Power Platform データフローとゲートウェイを使用してオンプレミス データ ソースからデータを取り込む](data-sources.md#add-data-from-on-premises-data-sources)こともできます。 また、Dataverse 環境に接続して、[すぐに使用できる予測モデル](predictions-overview.md?tabs=b2c#out-of-box-models)を使用することもできます。
 
 > [!IMPORTANT]
-> データ共有を有効にするには、Customer Insights と Dataverse が同じリージョンにある必要があります。
+> 1. データ共有を有効にするには、Customer Insights と Dataverse が同じリージョンにある必要があります。
+> 1. Dataverse 環境のグローバル管理者ロールが必要です。 特定のセキュリティ グループにこの [Dataverse 環境が関連付けられいる](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment)か確認して、それらのセキュリティ グループに自分が追加されていることを確認してください。
+> 1. 既存の Customer Insights 環境はまだ Dataverse 環境に関連付けられていません。 [Dataverse 環境への既存の接続を削除する](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment)方法について説明します。
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Microsoft Dataverse とのデータ共有を新しいインスタンスで自動的に有効にする":::
 
-> [!NOTE]
-> Customer Insights では、次のデータ共有シナリオがサポートされていません。
-> - すべてのデータを自分の Azure Data Lake Storage に保存する場合、Dataverse - マネージド データ レイクとのデータ共有を有効にすることはできません。
-> - Dataverse とのデータ共有を有効にした場合、[エンティティに予測値または欠落値を作成する](predictions.md) ことができなくなります。
+独自の Azure Data Lake Storage から Microsoft Dataverse とのデータ共有を有効にする方法の詳細については、[Microsoft Dataverse への接続](manage-environments.md#connect-to-microsoft-dataverse)を参照してください。
+
+Customer Insights では、次のデータ共有シナリオがサポートされていません。
+- Dataverse とのデータ共有を有効にした場合、[エンティティに予測値または欠落値を作成する](predictions.md) ことができなくなります。
 
 ### <a name="step-4-finalize-the-settings"></a>ステップ 4: 設定の終了処理
 
