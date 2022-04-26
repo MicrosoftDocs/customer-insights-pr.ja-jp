@@ -1,19 +1,19 @@
 ---
 title: Customer Insights データを Azure Synapse Analytics にエクスポートする
 description: Azure Synapse Analytics への接続を構成する方法について説明します。
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231318"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560393"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポートする (プレビュー)
 
@@ -28,21 +28,21 @@ Customer Insights から Azure Synapse への接続を構成するには、次�
 
 ## <a name="prerequisites-in-customer-insights"></a>Customer Insights の前提条件
 
-* 対象者に関するインサイトで **管理者** ロールを持っていること。 詳細については、[対象者に関するインサイトでのユーザー アクセス許可の設定](permissions.md#assign-roles-and-permissions) を参照してください
+* Azure Active Directory (AD) ユーザー アカウントに Customer Insights の **管理者** ロールがあります。 詳細については、[対象者に関するインサイトでのユーザー アクセス許可の設定](permissions.md#assign-roles-and-permissions) を参照してください
 
 Azure の場合: 
 
 - 有効な Azure サブスクリプション。
 
-- 新しい Azure Data Lake Storage Gen2 アカウントを使用する場合、*対象者に関するインサイトのサービス プリンシパル* には、**ストレージ Blob データ共同作成者** アクセス許可が必要です。 詳細は、[対象者に関するインサイトの Azure サービス プリンシパルを持つ Azure Data Lake Storage Gen2 アカウントへの接続](connect-service-principal.md) を参照してください。 Data Lake Storage Gen2 では、[階層型名前空間](/azure/storage/blobs/data-lake-storage-namespace) を有効にすることが **必要** です。
+- 新しい Azure Data Lake Storage Gen2 アカウントを使用する場合、*Customer Insights のサービス プリンシパル* に **ストレージ Blob データ投稿者** アクセス許可が必要です。 詳細は、[対象者に関するインサイトの Azure サービス プリンシパルを持つ Azure Data Lake Storage Gen2 アカウントへの接続](connect-service-principal.md) を参照してください。 Data Lake Storage Gen2 では、[階層型名前空間](/azure/storage/blobs/data-lake-storage-namespace) を有効にすることが **必要** です。
 
-- Azure Synapse ワークスペースが配置されているリソース グループでは、*サービス プリンシパル* と *対象者に関するインサイトのユーザー* に、少なくとも **閲覧者** のアクセス許可を割り当てる必要があります。 詳細については、[Azure ポータルを使用した Azure ロールの割り当て](/azure/role-based-access-control/role-assignments-portal) を参照してください。
+- Azure Synapse workspace が配置されているリソース グループでは、*サービス プリンシパル* と、*Customer Insights の管理者アクセス許可を持つ Azure AD ユーザー* に、**閲覧者** アクセス許可が必要です。 詳細については、[Azure ポータルを使用した Azure ロールの割り当て](/azure/role-based-access-control/role-assignments-portal) を参照してください。
 
-- *ユーザー* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細については、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
+- *Customer Insights の管理者アクセス許可を持つ Azure AD ユーザー* には、Azure Synapse workspace にデータが配置されてリンクされている、Azure Data Lake Storage Gen2 アカウントに **ストレージ Blob データ投稿者** アクセス許可が必要です。 詳細については、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
 - *[Azure Synapse ワークスペース マネージド ID](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細は、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
-- Azure Synapse ワークスペースでは、*対象者に関するインサイトのサービス プリンシパル* に **Synapse 管理者** ロールを割り当てる必要があります。 詳細については、[Synapse ワークスペースのアクセス制御を設定する方法](/azure/synapse-analytics/security/how-to-set-up-access-control) を参照してください。
+- Azure Synapse workspace では、*Customer Insights のサービス プリンシパル* に **Synapse 管理者** ロールを割り当てられる必要があります。 詳細については、[Synapse ワークスペースのアクセス制御を設定する方法](/azure/synapse-analytics/security/how-to-set-up-access-control) を参照してください。
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Azure Synapse への接続とエクスポートを設定する
 

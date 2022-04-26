@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508572"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529545"
 ---
 # <a name="segments-overview"></a>すべてのセグメントの概要
 
@@ -51,20 +51,26 @@ ms.locfileid: "8508572"
 
 各セグメントは、セグメントに関する追加情報を含む行で表されます。
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="オプション ドロップダウン リストと使用可能なオプションを含む選択されたセグメント。":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="オプション ドロップダウン リストと使用可能なオプションを含む選択されたセグメント。" lightbox="media/segments-selected-segment.png":::
 
-セグメントを選択すると、次のアクションを実行できます。
+セグメントを選択すると、次のアクションを使用できます。
 
 - セグメント メンバーのプレビューなどメンバー数の傾向など、セグメントの詳細を **表示** します。
+- メンバーのリストを、CSV ファイル形式で **ダウンロード** します。
 - プロパティを変更するセグメントを **編集** します。
 - セグメントの **複製を作成** します。 プロパティをすぐに編集するか、単に複製を保存するかを選択できます。
 - 最新のデータを含めるセグメントを **最新の情報に更新します**。
-- セグメントを **アクティブ化** または **非アクティブ化** します。 セグメントには、アクティブまたは非アクティブの 2 つの状態があります。 これらの状態は、セグメントを編集するときに役立ちます。 非アクティブなセグメントの場合、セグメント定義は存在しますが、まだ顧客は含まれていません。 セグメントをアクティブ化すると、その状態が '非アクティブ' から 'アクティブ' に変わり、セグメント定義に一致する顧客の検索が開始されます。 [スケジュールされた更新](system.md#schedule-tab) が構成されている場合、非アクティブなセグメントには **状態** が **スキップされた** としてリストされ、更新も試行されなかったことを示しています。 非アクティブなセグメントがアクティブ化されると、これによって最新の情報に更新され、これはスケジュールされた更新に含まれます。
+- セグメントを **アクティブ化** または **非アクティブ化** します。 非アクティブなセグメントの場合、セグメント定義は存在しますが、まだ顧客は含まれていません。 アクティブなセグメントは、セグメント定義に一致する顧客を探します。 [スケジュールされた更新](system.md#schedule-tab) が構成されている場合、非アクティブなセグメントには **状態** が **スキップされた** としてリストされ、更新も試行されなかったことを示しています。 非アクティブなセグメントがアクティブ化されると、これによって最新の情報に更新され、これはスケジュールされた更新に含まれます。
   または、**アクティブ化/非アクティブ化** ドロップダウンで **後でスケジュール** 機能を使用して、特定のセグメントをアクティブ化および非アクティブ化する未来の日時を指定します。
+- **セグメントから[類似の顧客を探します](find-similar-customer-segments.md)**。
 - セグメントの **名前を変更します**。
+- セグメントの [タグを管理する](work-with-tags-columns.md#manage-tags)ための **タグ** です。
 - メンバーのリストを、CSV ファイル形式で **ダウンロード** します。
 - **エクスポートを管理** して、エクスポートに関連するセグメントを表示および管理します。 [エクスポートについて詳細を確認します。](export-destinations.md)
 - セグメントを **削除** します。
+- 表示する [列をカスタマイズする](work-with-tags-columns.md#customize-columns)ための **列** です。
+- [タグをフィルターする](work-with-tags-columns.md#filter-on-tags)ための **フィルター** です。
+- 検索名で検索するための **検索名** です。
 
 ## <a name="refresh-segments"></a>セグメントを最新の情報に更新する
 

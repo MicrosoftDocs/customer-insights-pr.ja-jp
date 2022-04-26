@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: 対象ユーザーの分析情報を探る
           href: audience-insights/home.md
+        - name: タグと列の使用
+          href: audience-insights/work-with-tags-columns.md
         - name: ビジネス アカウントに関する作業
           href: audience-insights/work-with-business-accounts.md
     - name: データ ソース

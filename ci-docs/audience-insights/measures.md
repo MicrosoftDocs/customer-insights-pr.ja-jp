@@ -1,12 +1,12 @@
 ---
 title: メジャーの理解と管理
 description: メジャーをビジネスのパフォーマンスの分析と反映に役立てる方法について説明します。
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359784"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529683"
 ---
 # <a name="measures-overview"></a>メジャーの概要
 
@@ -27,7 +27,7 @@ ms.locfileid: "8359784"
 
 メジャーは、さまざまな演算子と単純なマッピング オプションを備えたデータ クエリ プラットフォームである[メジャー ビルダーを使用して](measure-builder.md)作成されます。 データをフィルタリングし、結果をグループ化し、[エンティティ関連パス](relationships.md)を検出して、出力をプレビューします。 [定義済みのテンプレート](measure-templates.md)を使用して、一般的に使用されるメジャーを効率的に構成できます。
 
-メジャー ビルダーを使用して、顧客データを照会し、インサイトを抽出することによりビジネス アクティビティを計画します。 たとえば、*顧客あたりの総支出* と *顧客あたりのトータル リターン* のメジャーを作成することにより、支出は多いが収益が高い顧客のグループを特定するのに役立ちます。 これらのメジャーに基づいて[セグメントを作成し](segments.md)、次に行う最善の行動を推進します。 
+メジャー ビルダーを使用して、顧客データを照会し、インサイトを抽出することによりビジネス アクティビティを計画します。 たとえば、*顧客あたりの総支出* と *顧客あたりのトータル リターン* のメジャーを作成することにより、支出は多いが収益が高い顧客のグループを特定するのに役立ちます。 これらのメジャーに基づいて[セグメントを作成し](segments.md)、次に行う最善の行動を推進します。
 
 ## <a name="manage-your-measures"></a>メジャーの管理
 
@@ -35,18 +35,17 @@ ms.locfileid: "8359784"
 
 メジャー タイプ、作成者、作成日、ステータス、および状態に関する情報が表示されます。 リストからメジャーを選択すると、出力をプレビューして CSV ファイルをダウンロードできます。
 
-すべてのメジャーを同時に更新するには、特定のメジャーを選択せずに **すべて更新** を選択します。
+:::image type="content" source="media/measures-actions.png" alt-text="単一のメジャーを管理するためのアクション。"lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="単一のメジャーを管理するためのアクション。":::
+メジャーを選択すると、次のアクションを使用できます。
 
-次のオプションのリストからメジャーを選択します。
-
-- メジャー名を選択して詳細を表示します。
 - メジャーの構成を **編集** します。
-- 最新のデータに基づいて、メジャーを **更新** します。
+- メジャーを **複製** します。 プロパティをすぐに編集するか、単に複製を保存するかを選択できます。
+- 最新のデータに基づいて、メジャーを **更新** します。 すべてのメジャーを同時に更新するには、すべてのメジャーを選択してから **更新** を選択します。
 - メジャーの **名前を変更** します。
-- メジャーを **削除** します。
 - **アクティブ化** または **非アクティブ化** します。 非アクティブなメジャーは、[スケジュールされた更新](system.md#schedule-tab)中に更新されません。
+- セグメントの [タグを管理する](work-with-tags-columns.md#manage-tags)ための **タグ** です。
+- メジャーを **削除** します。
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

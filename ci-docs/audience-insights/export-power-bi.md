@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225521"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552062"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI のコネクタ (プレビュー)
 
@@ -72,6 +72,6 @@ Power BI の Customer Insights コネクタは、最大 100 万の顧客プロ�
 
 MM / DD / YYYY のような日付形式のフィールドを含むエンティティを読み込むと、ロケール形式の不一致が原因でエラーが発生する可能性があります。 Power BI Desktop ファイルのロケールが英語 (米国) 以外に設定されていると、対象ユーザーインサイトの日付フィールドが米国形式で保存されるため、このような不一致が発生します。
 
-Power BI Desktop ファイルには単一のロケール設定があり、データを取得するときに適用されます。 これらの日付フィールドを正しく解釈するには、.BPI ファイルのロケールを英語 (米国) に設定します。 [Power BI Desktop のロケールを変更する方法について説明します](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop)。
+Power BI Desktop ファイルには単一のロケール設定があり、データを取得するときに適用されます。 これらの日付フィールドを正しく解釈するには、.BPI ファイルのロケールを英語 (米国) に設定します。 [Power BI Desktop のロケールを変更する方法について説明します](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop)。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

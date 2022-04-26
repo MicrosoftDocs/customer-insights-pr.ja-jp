@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse の Customer Insights データ
 description: Customer Insights エンティティを Microsoft Dataverse のテーブルとして使用します。
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355435"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547632"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
-Customer Insights には、[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) で出力エンティティを使用できるようにするオプションがあります。 この統合により、ローコード / ノーコード アプローチによる簡単なデータ共有とカスタム開発が可能になります。 出力エンティティは、Dataverse のテーブルとして使用できます。 これらのテーブルは、[Power Automate による自動化されたワークフロー](/power-automate/getting-started)、[モデル駆動型アプリ](/powerapps/maker/model-driven-apps/)、Power Apps による [キャンバス アプリ](/powerapps/maker/canvas-apps/) のようなシナリオを可能にします。 Dataverse テーブルに基づいている他のアプリケーションのデータを使用できます。 現在の実装は主に、利用可能な対象者インサイト エンティティからのデータを、指定した顧客 ID に対してフェッチできる検索をサポートしています。
+Customer Insights には、[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) で出力エンティティを使用できるようにするオプションがあります。 この統合により、ローコード/ノーコード アプローチによる簡単なデータ共有とカスタム開発が可能になります。 Dataverse 環境では、[出力エンティティ](#output-entities)をテーブルとして使用できます。 Dataverse テーブルに基づいて他のアプリケーションのデータを使用できます。 これらのテーブルにより、Power Automate でのワークフローの自動化や、Power Apps でのアプリ構築などのシナリオが有効になります。 現在の実装は主に、使用可能な Customer Insights エントリのデータを指定した顧客 ID に対して取得できる検索をサポートしています。
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse 環境を Customer Insights に接続する
 
-**既存の Dataverse 環境を持つ組織**
+**既存の組織**
 
-すでに Dataverse 使用している組織は、管理者が対象者に関するインサイトを設定するときに [既存の Dataverse 環境のいずれかを使用](create-environment.md) できます。 Dataverse 環境に URL を提供することで、新しい対象者に関するインサイトの環境に接続されます。 可能な限り最高のパフォーマンスを確保するために、Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。
+管理者は、環境を作成する際に、Customer Insights を構成して[既存の Dataverse 環境を使用](create-environment.md)することができます。 Dataverse 環境に URL を提供することで、新しい対象者に関するインサイトの環境に接続されます。 Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。 
+
+既存の Dataverse 環境を使用しない場合、システムはテナント内に Customer Insights データ用の新しい環境を作成します。 
+
+> [!NOTE]
+> 組織が既にテナントで Dataverse を使用している場合、[Dataverse 環境の作成は管理者によって制御される](/power-platform/admin/control-environment-creation) ことを覚えておくことが重要です。たとえば、組織アカウントを使用して、新しい対象者に関するインサイトの環境を設定していて、管理者が管理者以外のすべてのユーザーの Dataverse 試用環境の作成を無効にした場合、新しい試用環境を作成することはできません。
+> 
+> Customer Insights で作成された Dataverse 試用環境には 3 GB のストレージがあり、テナントに与えられる全体的な容量にはカウントされません。 有料サブスクリプションでは、データベース用に 15 GB、ファイル ストレージ用に 20 GB の Dataverse 使用権を取得します。
 
 **新しい組織**
 
-Customer Insights を設定するときに新しい組織を作成すると、自動的に新しい Dataverse 環境が取得されます。
-
-> [!NOTE]
-> 組織が既にテナントで Dataverse を使用している場合、[Dataverse 環境の作成は管理者によって制御される](/power-platform/admin/control-environment-creation.md) ことを覚えておくことが重要です。たとえば、組織アカウントを使用して、新しい対象者に関するインサイトの環境を設定していて、管理者が管理者以外のすべてのユーザーの Dataverse 試用環境の作成を無効にした場合、新しい試用環境を作成することはできません。
-> 
-> Customer Insights で作成された Dataverse 試用環境には 3 GB のストレージがあり、テナントに与えられる全体的な容量にはカウントされません。 有料サブスクリプションでは、データベース用に 15 GB、ファイル ストレージ用に 20 GB の Dataverse 使用権を取得します。
+Customer Insights の設定時に新しい組織を作成すると、自動的に新しい Dataverse 環境が組織に作成されます。
 
 ## <a name="output-entities"></a>出力エンティティ
 
@@ -129,11 +131,11 @@ AlternativeKey テーブルには、統合プロセスに参加したエンテ�
 
 このテーブルは、顧客プロファイルのセグメント メンバーシップ情報を含みます。
 
-| Column        | タイプ | Description                        |
+| Column        | タイプ | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | 顧客プロファイル ID        |
-| SegmentProvider      | String       | セグメントを公開するアプリ。 既定: 対象ユーザーに関するインサイト         |
-| SegmentMembershipType | String       | このセグメント メンバーシップ レコードの顧客のタイプ。 顧客、取引先担当者、取引先企業など、複数のタイプをサポートします。 既定: 顧客  |
-| セグメント       | JSON 文字列  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
-| msdynci_identifier  | String   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | 顧客プロファイル ID        |
+| SegmentProvider      | String       | セグメントを公開するアプリ。 既定: 対象ユーザーに関するインサイト         |
+| SegmentMembershipType | String       | このセグメント メンバーシップ レコードの顧客のタイプ。 顧客、取引先担当者、取引先企業など、複数のタイプをサポートします。 既定: 顧客  |
+| セグメント       | JSON 文字列  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
+| msdynci_identifier  | String   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | `msdynci_identifier` から生成した確定的 GUID          |

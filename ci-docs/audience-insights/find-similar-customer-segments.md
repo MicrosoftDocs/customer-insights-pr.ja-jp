@@ -1,23 +1,23 @@
 ---
 title: AI で類似の顧客を見つける (ビデオを含む)
 description: 人工知能を活用して類似した顧客セグメントを見つけます。
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355251"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561576"
 ---
 # <a name="similar-customers-preview"></a>類似した顧客 (プレビュー)
 
@@ -36,6 +36,8 @@ ms.locfileid: "8355251"
 
 1. 新たなセグメントの推奨名を確認し、必要に応じて変更します。
 
+1. オプションで、[タグ](work-with-tags-columns.md#manage-tags)を新しいセグメントに追加します。
+
 1. 新たなセグメントを定義するフィールドを確認します。 これらのフィールドは、システムがソース セグメントに類似する顧客を見つけようとする基準の定義を行います。 システムは既定で推奨フィールドを選択します。
   モデルのパフォーマンスを大きく低下させる可能性があるフィールドは、自動的に除外されます。
   
@@ -44,9 +46,9 @@ ms.locfileid: "8355251"
 
 1. 新たなセグメントで **すべての顧客**  を含めるか、 **特定の既存セグメント** の顧客のみを含めるかを選択します。
 
-1. ソースセグメントの顧客を除外するには、**ソース セグメント内の全員を除外する** チェックボックスを選択します。
-
 1. 既定では、システムはターゲットの対象ユーザーの全体の 20％ のみを出力に含めることを推奨しています。 必要に応じてこのしきい値を編集してください。 しきい値を大きくすると、精度が低下します。
+
+1. ソース セグメントの顧客を含めるには、**類似の属性を持つ顧客に加えて、ソース セグメントのメンバーを含める** チェック ボックスをオンにします。
 
 1. ページの下部で **実行** を選択し、データセットを分析する二項分類タスク (機械学習のメソッド) を開始します。
 
@@ -67,7 +69,7 @@ ms.locfileid: "8355251"
 
 類似するセグメントを更新するには、**セグメント** ページで選択し、アクション バーで **更新** を選択します。
 
-類似するセグメントを編集すると、データが再処理されます。 既に作成されているセグメントは、更新されたデータに基づいて更新されます。    
+類似するセグメントを編集すると、データが再処理されます。 既に作成されているセグメントは、更新されたデータに基づいて更新されます。
 類似するセグメントを編集するには、**セグメント** ページで選択し、アクション バーで **編集** を選択します。 変更を適用後は、**実行** を選択して処理を開始します。
 
 ## <a name="delete-a-similar-segment"></a>類似したセグメントの削除
@@ -84,6 +86,5 @@ ms.locfileid: "8355251"
 - 0.85 ～ 1 の間の類似性スコアは、*とても類似している* と分類されます
 
 類似性スコアが 0.4 未満の顧客はモデルの出力対象となりません。 システムは、これらソース セグメントと十分に類似していると見なしません。
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

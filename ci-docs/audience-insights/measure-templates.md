@@ -1,22 +1,22 @@
 ---
 title: テンプレートからメジャーを作成する
 description: 一般的な使用事例にのテンプレートを使用してメジャーを定義します。
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359911"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529407"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>テンプレートを使用してメジャーを作成する
 
@@ -51,7 +51,9 @@ ms.locfileid: "8359911"
 
 1. すべてのデータが揃っている場合、必要なデータを確認して、**開始する** を選択します。
 
-1. **名前の編集** ペインで、メジャーと出力エンティティの名前を設定します。 
+1. メジャー名の横にある **詳細の編集** を選択します。 メジャーの名前を入力します。 オプションで、[タグ](work-with-tags-columns.md#manage-tags)をメジャーに追加します。
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="[詳細の編集] ダイアログ ボックス。":::
 
 1. **完了** を選択します。
 
