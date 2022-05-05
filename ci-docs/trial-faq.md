@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229501"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641814"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版に関するよくあるご質問
 
@@ -62,13 +62,13 @@ ms.locfileid: "8229501"
 
 一般的に、Customer Insights の有料版にアップグレードする際には、独自のデータで新しく始めることをお勧めします。 
 
-オプションで、対象者分析情報のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用版環境から有料環境に設定を移行する場合は、Customer Insights 試用版の管理者および Microsoft 365 テナントのグローバル管理者、または組織の Dynamics 365 管理者である必要があります。 
+オプションで、Customer Insights のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用版環境から有料環境に設定を移行する場合は、Customer Insights 試用版の管理者および Microsoft 365 テナントのグローバル管理者、または組織の Dynamics 365 管理者である必要があります。 
 
-Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](audience-insights/manage-environments.md#copy-the-environment-configuration)を参照してください。
+Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](manage-environments.md#copy-the-environment-configuration)を参照してください。
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>試用版の使用制限とクォータはどれくらいですか?
 
-- 対象者分析情報の試用版では、独自の Azure Data Lake ストレージ アカウントを使用して出力データを保存することはできません。 ただし、Data Lake ストレージ アカウントからデータを取り込むことができます。
+- Customer Insights の試用版では、独自の Azure Data Lake Storage アカウントを使用して出力データを保存することはできません。 ただし、Data Lake ストレージ アカウントからデータを取り込むことができます。
 - Customer Insights 試用版を開始すると自動的にプロビジョニングされる Dataverse 環境には、最大 3GB までデータを保存できます。
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights 固有の質問

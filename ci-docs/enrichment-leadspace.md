@@ -1,0 +1,96 @@
+---
+title: サードパーティ エンリッチメント Leadspace による会社プロファイルのエンリッチメント
+description: Leadspace サードパーティ エンリッチメントに関する一般情報。
+ms.date: 09/30/2021
+ms.reviewer: mhart
+ms.subservice: audience-insights
+ms.topic: how-to
+author: jodahlMSFT
+ms.author: jodahl
+manager: shellyha
+ms.openlocfilehash: 08a4c56eb1c387015fd9e985a0c9484a13236fcf
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8646991"
+---
+# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
+
+Leadspace は、B-to-B 顧客データ プラットフォームを提供するデータ サイエンス企業です。 これにより、取引先企業に基づいて統一された顧客プロファイルを持つ環境でデータを充実させることができます。 *顧客プロファイル* を、会社の規模、場所、業界などの属性でエンリッチします。 *取引先担当者プロファイル* を、タイトル、ペルソナ、メール確認などの属性でエンリッチします。
+
+## <a name="prerequisites"></a>前提条件
+
+Leadspace を構成するには、次の前提条件が満たしている必要があります :
+
+- アクティブな Leadspace ライセンスを所有していること。
+- 取引先企業に基づいて、[統一された顧客プロファイル](customer-profiles.md)を所有していること。
+- Leadspace 接続は、管理者によって既に構成されているか、[管理者](permissions.md#admin) アクセス許可と "永続キー" (**Leadspace トークン** と呼ばれます) を所有していること。 製品の詳細については、[Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) に直接お問い合わせください。
+
+## <a name="configure-the-enrichment"></a>エンリッチメントの構成
+
+1. **データ** > **エンリッチメント** に移動します。
+
+1. Leadspace タイルで **データのエンリッチ** を選択し、**開始する** を選択します。
+
+   :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace タイルのスクリーンショット。":::
+
+1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択し、**Leadspace** を選択することで、接続を作成できます。 
+
+1. **Leadspace に接続する** を選択し、接続を確定します。
+
+1. **次へ** を選択し、Leadspace の企業データで強化する **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="顧客データ セットを選択するときのスクリーンショット。":::
+
+1. **次へ** を選択し、統合プロファイルからどのフィールドを使用して、Leadspace から一致する企業データを検索するかを定義します。 **会社名** フィールドは必須です。 一致精度を高めるために、**会社の Web サイト** と **会社所在地** の 2 つのフィールドまで追加できます。
+
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace フィールドマッピング ペイン。":::
+
+1. **次へ** を選択し、フィールド マッピングを完了します。
+
+1. エンリッチする *取引先担当者プロファイル* がある場合は、チェックボックスを選択します。 Customer Insights は、必要なフィールドを自動的にマッピングします。
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="リードスペース取引先担当者レコードのエンリッチメント。":::
+ 
+1. エンリッチメントの名前を入力して、選択内容を確認した後 **エンリッチメントの保存** を選択します。
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Leadspace の接続を構成する 
+
+接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、Leadspace タイルで **設定** を選択します。
+
+1. **開始する** を選択します。 
+
+1. **表示名** ボックスに接続の名前を入力します。
+
+1. 有効な Leadspace トークンを指定します。
+
+1. 確認して、**同意する** を選択して、**データのプライバシーとコンプライアンス** に同意します。
+
+1. **検証** を選択して、構成を検証します。
+
+1. 検証が完了したら、**保存** を選択します。
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace 接続構成ページ。":::
+
+## <a name="enrichment-results"></a>強化の結果
+
+エンリッチメントを更新した後、[自分のエンリッチメント](enrichment-hub.md) で新しくエンリッチされた会社データを確認できます。 最終更新時刻と、エンリッチされたプロファイル数を確認できます。
+
+**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
+
+詳細については、[Leadspace の API](https://support.leadspace.com/hc/en-us/sections/201997649-API) を参照してください。
+
+## <a name="next-steps"></a>次のステップ
+
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
+
+## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
+
+Dynamics 365 Customer Insights による Leadspace へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、Leadspace がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
+Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
+
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

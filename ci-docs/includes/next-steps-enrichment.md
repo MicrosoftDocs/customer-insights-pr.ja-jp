@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 98c7bd1cec20481874681e98bda050846c760e45
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92dc5c662af39a5a4393f15ac48b50af81f8f4d
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619307"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641476"
 ---
-エンリッチされた顧客データの上に構築します。 コマンド バーのアイコンを選択して、[セグメント](../audience-insights/segments.md)と[メジャー](../audience-insights/measures.md)を作成します。 また、[データをエクスポート](../audience-insights/export-destinations.md)して、パーソナライズされたエクスペリエンスを顧客に提供することもできます。
+エンリッチされた顧客データの上に構築します。 コマンド バーのアイコンを選択して、[セグメント](../segments.md)と[メジャー](../measures.md)を作成します。 また、[データをエクスポート](../export-destinations.md)して、パーソナライズされたエクスペリエンスを顧客に提供することもできます。

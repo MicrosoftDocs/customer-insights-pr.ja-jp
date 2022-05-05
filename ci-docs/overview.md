@@ -1,39 +1,41 @@
 ---
-title: 製品概要
+title: Dynamics 365 Customer Insights製品の概要
 author: m-hartmann
-description: Dynamics 365 Customer Insights とその機能の概要を取得します。
+description: Dynamics 365 Customer Insights の概要とその主な機能を取得します。
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560439"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641906"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の製品概要
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) は、パーソナライズされた顧客エクスペリエンスの提供を支援するマイクロソフトの顧客データ プラットフォーム (CDP) の一部です。 プラットフォームの機能は、顧客が誰であるか、および顧客がプラットフォームにどのように関与しているかについてのインサイトを提供します。 複数ソースにまたがる顧客データを統合して、顧客を 1 つのビューで把握します。
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) は、パーソナライズされた顧客エクスペリエンスの提供を支援する Microsoft の顧客データ プラットフォーム (CDP) です。 このアプリケーションは、比類のない分析情報までの時間で顧客の全体像を提供します。 顧客データのリアルタイムでの運営データや IoT データとの統合によって、顧客に関する最も包括的なビューを取得します。 ファースト パーティとサード パーティのデータ ソースを使用して、顧客プロファイルをエンリッチメントします。 
 
-[対象者インサイト](audience-insights/overview.md)は、ビジネスを顧客中心の組織に変革するのに役立ちます。 マーケティング、販売、およびサービスの専門家は、エクスペリエンスをパーソナライズするために必要なインサイトを持っています。 トランザクション、行動、および観察のソースからのデータを接続して、360 度の顧客ビューを作成します。 対処可能なインサイトを提供するように設計された CDP を使用すると、結果をより早く確認できます。 
-
-[エンゲージメント分析情報](engagement-insights/overview.md)は、追加の分析情報のために Web イベントとモバイル イベントを収集することに焦点を当てた Customer Insights のプレビュー機能でした。 プレビューは 2022 年 2 月 15 日に終了しました。
+Customer Insights は、マーケティング、販売、サービスの専門家が 1 対 1 のやり取りを大規模に調整できるようにすることで、ビジネスを顧客中心の組織に変えるのに役立ちます。 ターンキーと Microsoft およびサード パーティのアプリケーションとの統合を使用して、リアルタイムの分析情報をアクティブにし、意味のあるアクションを推進できます。
  
-## <a name="choose-a-capability"></a>機能の選択
+トランザクション、行動、人口統計のデータ ソースからのデータを接続して、360 度の顧客ビューを作成します。 事前に構築された AI モデルを使用してすぐに使用できる分析情報を引き出したり、高度な分析ソリューションを無制限の規模で使用してカスタム AI / ML モデルを迅速に構築、テスト、デプロイしたりできます。
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="対象者インサイトまたはエンゲージメント インサイトに移動できる顧客インサイト ページ。":::
-
-機能を選択するには
-
-1. ナビゲーション ウィンドウで、**すべてのアプリ** を選択して **フォーカスを選択する** ウィンドウを開きます。
-1. **今すぐ移動** を選択して、選択した機能に移動します。
+顧客データの制御を完全に維持し、最高レベルのデータ ガバナンスと Microsoft Azure 上に構築されたセルフ サービス グレードの CDP とのコンプライアンスを保証します。 組み込みのプライバシー、セキュリティ、ガバナンス、同意管理ツールを通じて、一般データ保護規則 (GDPR) およびその他の法的要件と業界標準をサポートします。
 
 ## <a name="pricing-and-licensing"></a>料金およびライセンス
+Customer Insights はテナントごとにライセンスされ、企業間 (B2C) と企業間 (B2B) の両方の機能が含まれています。 アドオン ライセンスで追加の容量を購入して、プロファイルとアカウントの数を増やすことができます。
 
-Customer Insights はテナントごとにライセンスされ、複数の機能が含まれています。 容量やライセンスを追加購入することで、既定のクォータを増やすことができます。 
 - [価格の概要](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - キャパシティと資格の詳細: [ Dynamics 365 ライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsoft ボリューム ライセンスの Web サイト](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Customer Insights を試して始める
+
+[Customer Insights の無料試用版](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) を今すぐ始めて、独自の顧客データを使用してアプリケーションをテストします。 [アプリケーションの主要な機能の多くにすばやくアクセスして探索する方法をご覧ください](trial-signup.md)。 
+
+アナリストレポート、オンデマンドウェビナー、カスタマーストーリーを含む、[注目の学習リソース](https://dynamics.microsoft.com/ai/customer-insights/resources/) を探索します。
+
+[スタート ガイド](get-started.md) で顧客をより深く理解する方法を学びましょう。
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

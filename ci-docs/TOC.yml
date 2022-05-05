@@ -2,6 +2,8 @@
   href: index.yml
 - name: 製品概要
   href: overview.md
+- name: 新機能と更新された機能
+  href: whats-new-customer-insights.md
 - name: ラーニング カタログ
   items:
     - name: 作業の開始
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: 統合型顧客プロファイルを作成する
       href: /learn/modules/unified-customer-profile/
-    - name: 対象者分析情報を使用する
+    - name: Customer Insights を使用する
       href: /learn/modules/working-with-customer-insights/
     - name: データをエンリッチして予測を行う
       href: /learn/modules/enrich-data/
@@ -26,275 +28,269 @@
       href: trial-FAQ.md
 - name: 環境へのアクセス
   href: 'https://home.ci.ai.dynamics.com/'
-- name: 対象者分析情報
+- name: 作業の開始
   items:
-    - name: ヘルプ ハブ
-      href: audience-insights/index.yml
-    - name: 機能の概要
-      href: audience-insights/overview.md
-    - name: 新機能と更新された機能
-      href: audience-insights/whats-new-audience-insights.md
-    - name: 作業の開始
+    - name: クイック スタート ガイド
+      href: get-started.md
+    - name: 有料ライセンスから始める
+      href: paid-license.md
+    - name: 新しい環境を作成する
+      href: create-environment.md
+    - name: Customer Insights を探索する
+      href: home.md
+    - name: タグと列の使用
+      href: work-with-tags-columns.md
+    - name: ビジネス アカウントに関する作業
+      href: work-with-business-accounts.md
+    - name: Dynamics 365 Marketing との統合
+      href: marketing-get-started.md
+- name: データ ソース
+  items:
+    - name: データ ソースの概要
+      href: data-sources.md
+    - name: Power Query コネクタでデータ ソースを追加する
+      href: connect-power-query.md
+    - name: データ ソースとして共通データ モデル フォルダーを追加する
+      href: connect-common-data-model.md
+    - name: Dataverse により管理されたデータ レイクの追加
+      href: connect-dataverse-managed-lake.md
+    - name: Azure Synapse Analytics の追加
+      href: connect-synapse.md
+    - name: データ ソースのエンリッチメント
+      href: data-sources-enrichment.md
+    - name: データ ソースの増分更新
+      href: incremental-refresh-data-sources.md
+    - name: リアルタイム データ インジェスト
+      href: real-time-data-ingestion.md
+- name: データ統合
+  items:
+    - name: データの統合の概要
+      href: data-unification.md
+    - name: エンティティおよび属性のマッピング
+      href: map-entities.md
+    - name: エンティティを一致させる
+      href: match-entities.md
+    - name: エンティティの結合
+      href: merge-entities.md
+- name: データ エンリッチメント
+  items:
+    - name: 顧客プロファイルのエンリッチ
+      href: enrichment-hub.md
+    - name: ブランドと関心
+      href: enrichment-microsoft.md
+    - name: 拡張住所
+      href: enrichment-enhanced-addresses.md
+    - name: 拡張された会社データ
+      href: enrichment-enhanced-company-data.md
+    - name: Azure Maps でエンリッチする
+      href: enrichment-azure-maps.md
+    - name: Dun & Bradstreet でエンリッチする
+      href: enrichment-dnb.md
+    - name: HERE Technologies を利用して強化する
+      href: enrichment-here.md
+    - name: Leadspace で充実させる
+      href: enrichment-leadspace.md
+    - name: LiveRamp でエンリッチする
+      href: enrichment-liveramp.md
+    - name: Experian を利用して強化する
+      href: enrichment-experian.md
+    - name: Office 365 のデータでエンリッチする
+      href: enrichment-office.md
+    - name: SFTP カスタム インポートを利用して強化する
+      href: enrichment-SFTP-custom-import.md
+- name: 統合されたプロファイル
+  items:
+    - name: 統合型顧客プロファイルのレビュー
+      href: customer-profiles.md
+    - name: 統合型顧客プロファイルのフィルター
+      href: search-filter-index.md
+    - name: 顧客活動の定義
+      href: activities.md
+- name: Segments
+  items:
+    - name: すべてのセグメントの概要
+      href: segments.md
+    - name: セグメントの作成
+      href: segment-builder.md
+    - name: メジャーに基づく提案されたセグメント
+      href: suggested-segments.md
+    - name: 活動に基づく提案されたセグメント
+      href: suggested-segments-activity.md
+    - name: セグメントでのインサイトの取得
+      href: segment-insights.md
+    - name: 類似する顧客を見つける
+      href: find-similar-customer-segments.md
+- name: メジャー
+  items:
+    - name: メジャーの概要
+      href: measures.md
+    - name: 新しいメジャーを作成する
+      href: measure-builder.md
+    - name: メジャー テンプレートを使用する
+      href: measure-templates.md
+- name: 予測
+  items:
+    - name: AI を活用したデータ予測
       items:
-        - name: クイック スタート ガイド
-          href: audience-insights/get-started.md
-        - name: 有料ライセンスから始める
-          href: paid-license.md
-        - name: 新しい環境を作成する
-          href: audience-insights/create-environment.md
-        - name: 対象ユーザーの分析情報を探る
-          href: audience-insights/home.md
-        - name: タグと列の使用
-          href: audience-insights/work-with-tags-columns.md
-        - name: ビジネス アカウントに関する作業
-          href: audience-insights/work-with-business-accounts.md
-    - name: データ ソース
+        - name: 予測モデルの概要
+          href: predictions-overview.md
+        - name: 顧客の生涯価値 (CLV) を予測する
+          href: predict-customer-lifetime-value.md
+        - name: 製品レコメンデーションを予測する
+          href: predict-product-recommendation.md
+        - name: サブスクリプション離反の予測
+          href: predict-subscription-churn.md
+        - name: トランザクション離反を予測する
+          href: predict-transactional-churn.md
+        - name: 顧客フィードバックで感情を分析する
+          href: sentiment-analysis.md
+        - name: Azure Machine Learning のカスタム モデルの使用
+          href: custom-models.md
+        - name: 部分的な欠損データの補完
+          href: predictions.md
+    - name: サンプル ガイド
       items:
-        - name: データ ソースの概要
-          href: audience-insights/data-sources.md
-        - name: Power Query コネクタでデータ ソースを追加する
-          href: audience-insights/connect-power-query.md
-        - name: データ ソースとして共通データ モデル フォルダーを追加する
-          href: audience-insights/connect-common-data-model.md
-        - name: Dataverse により管理されたデータ レイクの追加
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Azure Synapse Analytics の追加
-          href: audience-insights/connect-synapse.md
-        - name: データ ソースのエンリッチメント
-          href: audience-insights/data-sources-enrichment.md
-        - name: データ ソースの増分更新
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: リアルタイム データ インジェスト
-          href: audience-insights/real-time-data-ingestion.md
-    - name: データ統合
+        - name: CLV 予測のサンプル ガイド
+          href: sample-guide-predict-clv.md
+        - name: サブスクリプション解約予測のサンプル ガイド
+          href: sample-guide-predict-subscription-churn.md
+        - name: トランザクション離反予測のサンプル ガイド
+          href: sample-guide-predict-transactional-churn.md
+        - name: 製品レコメンデーション予測のサンプル ガイド
+          href: sample-guide-predict-product-recommendation.md
+        - name: Azure Machine Learning で実験する
+          href: azure-machine-learning-experiments.md
+    - name: 予測の管理
+      href: manage-predictions.md
+    - name: 予測に基づいてセグメントを作成する
+      href: prediction-based-segment.md
+- name: エクスポート オプション
+  items:
+    - name: エクスポート
       items:
-        - name: データの統合の概要
-          href: audience-insights/data-unification.md
-        - name: エンティティおよび属性のマッピング
-          href: audience-insights/map-entities.md
-        - name: エンティティを一致させる
-          href: audience-insights/match-entities.md
-        - name: エンティティの結合
-          href: audience-insights/merge-entities.md
-    - name: データ エンリッチメント
+        - name: エクスポートの概要
+          href: export-destinations.md
+        - name: アクティブなキャンペーン
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: AutoPilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 の販売
+          href: export-dynamics365-sales.md
+        - name: Facebook 広告マネージャー
+          href: export-facebook.md
+        - name: Google 広告
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: LinkedIn Ads
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: Mailchimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: Sendinblue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: その他の用途
       items:
-        - name: 顧客プロファイルのエンリッチ
-          href: audience-insights/enrichment-hub.md
-        - name: ブランドと関心
-          href: audience-insights/enrichment-microsoft.md
-        - name: 拡張住所
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: 拡張された会社データ
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Azure Maps でエンリッチする
-          href: audience-insights/enrichment-azure-maps.md
-        - name: HERE Technologies を利用して強化する
-          href: audience-insights/enrichment-here.md
-        - name: Leadspace で充実させる
-          href: audience-insights/enrichment-leadspace.md
-        - name: LiveRamp でエンリッチする
-          href: audience-insights/enrichment-liveramp.md
-        - name: Experian を利用して強化する
-          href: audience-insights/enrichment-experian.md
-        - name: Office 365 のデータでエンリッチする
-          href: audience-insights/enrichment-office.md
-        - name: SFTP カスタム インポートを利用して強化する
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: 統合されたプロファイル
-      items:
-        - name: 統合型顧客プロファイルのレビュー
-          href: audience-insights/customer-profiles.md
-        - name: 統合型顧客プロファイルのフィルター
-          href: audience-insights/search-filter-index.md
-        - name: 顧客活動の定義
-          href: audience-insights/activities.md
-    - name: Segments
-      items:
-        - name: すべてのセグメントの概要
-          href: audience-insights/segments.md
-        - name: セグメントの作成
-          href: audience-insights/segment-builder.md
-        - name: メジャーに基づく提案されたセグメント
-          href: audience-insights/suggested-segments.md
-        - name: 活動に基づく提案されたセグメント
-          href: audience-insights/suggested-segments-activity.md
-        - name: セグメントでのインサイトの取得
-          href: audience-insights/segment-insights.md
-        - name: 類似する顧客を見つける
-          href: audience-insights/find-similar-customer-segments.md
-    - name: メジャー
-      items:
-        - name: メジャーの概要
-          href: audience-insights/measures.md
-        - name: 新しいメジャーを作成する
-          href: audience-insights/measure-builder.md
-        - name: メジャー テンプレートを使用する
-          href: audience-insights/measure-templates.md
-    - name: 予測
-      items:
-        - name: AI を活用したデータ予測
-          items:
-            - name: 予測モデルの概要
-              href: audience-insights/predictions-overview.md
-            - name: 顧客の生涯価値 (CLV) を予測する
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: 製品レコメンデーションを予測する
-              href: audience-insights/predict-product-recommendation.md
-            - name: サブスクリプション離反の予測
-              href: audience-insights/predict-subscription-churn.md
-            - name: トランザクション離反を予測する
-              href: audience-insights/predict-transactional-churn.md
-            - name: 顧客フィードバックで感情を分析する
-              href: audience-insights/sentiment-analysis.md
-            - name: Azure Machine Learning のカスタム モデルの使用
-              href: audience-insights/custom-models.md
-            - name: 部分的な欠損データの補完
-              href: audience-insights/predictions.md
-        - name: サンプル ガイド
-          items:
-            - name: CLV 予測のサンプル ガイド
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: サブスクリプション解約予測のサンプル ガイド
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: トランザクション離反予測のサンプル ガイド
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: 製品レコメンデーション予測のサンプル ガイド
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Azure Machine Learning で実験する
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: 予測の管理
-          href: audience-insights/manage-predictions.md
-        - name: 予測に基づいてセグメントを作成する
-          href: audience-insights/prediction-based-segment.md
-    - name: エクスポート オプション
-      items:
-        - name: エクスポート
-          items:
-            - name: エクスポートの概要
-              href: audience-insights/export-destinations.md
-            - name: アクティブなキャンペーン
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: AutoPilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 の販売
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook 広告マネージャー
-              href: audience-insights/export-facebook.md
-            - name: Google 広告
-              href: audience-insights/export-google-ads.md
-            - name: Iterable
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: Sendinblue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: その他の用途
-          items:
-            - name: Dynamics 365 の顧客カード アドイン
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (ボット)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: エンティティ
-      items:
-        - name: エンティティについて
-          href: audience-insights/entities.md
-        - name: Common Data Model のエンティティ スキーマを確認する
-          href: audience-insights/entity-schemas.md
-        - name: Dataverse の Customer Insights データ
-          href: audience-insights/customer-insights-dataverse.md
-        - name: リレーションシップと接続されたエンティティを構築する
-          href: audience-insights/relationships.md
-        - name: セマンティック マッピングを定義する
-          href: audience-insights/semantic-mappings.md
-    - name: 管理
-      items:
-        - name: システム構成の設定
-          href: audience-insights/system.md
-        - name: ユーザーのアクセス許可を割り当てる
-          href: audience-insights/permissions.md
-        - name: 接続の概要
-          href: audience-insights/connections.md
-        - name: 複数の環境を管理する
-          href: audience-insights/manage-environments.md
-        - name: 独自の Key Vault を導入する
-          href: audience-insights/use-azure-key-vault.md
-        - name: サービス プリンシパルを使用してストレージ アカウントに接続する
-          href: audience-insights/connect-service-principal.md
-        - name: 診断ログをエクスポートする
-          href: audience-insights/diagnostics.md
-        - name: サービス制限
-          href: service-limits.md
-        - name: DSR の権利と要求
-          href: dsr-rights-requests.md
-    - name: API
-      items:
-        - name: Common Data Model のエンティティ スキーマを確認する
-          href: audience-insights/entity-schemas.md
-        - name: Dataverse の Customer Insights データ
-          href: audience-insights/customer-insights-dataverse.md
-        - name: API に関する作業
-          href: audience-insights/apis.md
-        - name: API リファレンス
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+        - name: Dynamics 365 の顧客カード アドイン
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (ボット)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: エンティティ
+  items:
+    - name: エンティティについて
+      href: entities.md
+    - name: Common Data Model のエンティティ スキーマを確認する
+      href: entity-schemas.md
+    - name: Dataverse の Customer Insights データ
+      href: customer-insights-dataverse.md
+    - name: リレーションシップと接続されたエンティティを構築する
+      href: relationships.md
+    - name: セマンティック マッピングを定義する
+      href: semantic-mappings.md
+- name: 管理
+  items:
+    - name: システム構成の設定
+      href: system.md
+    - name: セキュリティ設定を構成する
+      href: security-overview.md
+    - name: ユーザーのアクセス許可を割り当てる
+      href: permissions.md
+    - name: 接続の概要
+      href: connections.md
+    - name: 複数の環境を管理する
+      href: manage-environments.md
+    - name: 独自の Key Vault を導入する
+      href: use-azure-key-vault.md
+    - name: サービス プリンシパルを使用してストレージ アカウントに接続する
+      href: connect-service-principal.md
+    - name: 診断ログをエクスポートする
+      href: diagnostics.md
+    - name: サービス制限
+      href: service-limits.md
+    - name: DSR の権利と要求
+      href: dsr-rights-requests.md
+- name: API
+  items:
+    - name: API に関する作業
+      href: apis.md
+    - name: API リファレンス
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
 - name: 同意の管理 (プレビュー)
   items:
     - name: ヘルプ ハブ
       href: consent-management/index.yml
     - name: 機能の概要
       href: consent-management/overview.md
-    - name: 開始する
+    - name: 作業の開始
       items:
-        - name: 開始する
+        - name: 作業の開始
           href: consent-management/get-started.md
         - name: 概念と用語
           href: consent-management/glossary.md
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: 同意データを管理する
       items:
-        - name: 対象者分析情報で同意規則を有効化する
-          href: audience-insights/activate-consent.md
-        - name: 対象者分析情報のセグメントを使用して既定の同意規則を管理する
-          href: audience-insights/change-default-consent-rules.md
+        - name: Customer Insights で同意を有効にする
+          href: activate-consent.md
+        - name: Customer Insights セグメントを使用して既定の同意規則を管理する
+          href: change-default-consent-rules.md
     - name: 設定とユーザーを管理する
       items:
         - name: システム設定のコンフィギュレーション
@@ -320,7 +316,5 @@
       items:
         - name: 同意データを使用して予測を作成する
           href: consent-management/predictions-consent-data.md
-- name: エンゲージメント分析情報 (プレビュー)
-  href: engagement-insights/overview.md
 - name: サポートを受ける
   href: /power-platform/admin/get-help-support
