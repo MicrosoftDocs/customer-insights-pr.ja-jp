@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646793"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755456"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights は、Customer Insights のデータに基づい�
 > [!IMPORTANT]
 > これらの API の詳細は、[Customer Insights API リファレンス](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) に一覧表示されます。 これらには、操作、パラメーター、および応答に関する追加情報が含まれています。
 
-この記事では、Customer Insights APIにアクセスし、Azure App Registrationを作成し、利用可能なクライアント ライブラリの使用を開始する方法について説明します。
+この記事では、Customer Insights API にアクセスし、Azure アプリの登録を作成し、クライアント ライブラリの使用を開始する方法について説明します。
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Customer Insights API の試用を開始する
 
@@ -83,13 +83,13 @@ Microsoft 認証ライブラリ (MSAL) でこのアプリの登録に使用さ�
 
 MSAL の詳細については、[Microsoft 認証ライブラリ (MSAL) の概要](/azure/active-directory/develop/msal-overview) を参照してください。
 
-Azure でのアプリ登録の詳細については、[アプリケーションの登録](/azure/active-directory/develop/quickstart-register-app.md#register-an-application) を参照してください。
+Azure でのアプリ登録の詳細については、[アプリケーションの登録](/graph/auth-register-app-v2) を参照してください。
 
 クライアント ライブラリでの API の使用については、[Customer Insights クライアント ライブラリ](#customer-insights-client-libraries) を参照してください。
 
 ### <a name="server-to-server-application-permissions"></a>サーバー間アプリケーションのアクセス許可
 
-[アプリ登録セクション](#create-a-new-app-registration-in-the-azure-portal) では、ユーザーが認証のためにサインインする必要があるアプリを登録する方法の概要を説明します。 ユーザーの操作を必要とせず、サーバー上で実行できるアプリ登録の作成方法を説明します。
+[アプリ登録セクション](#create-a-new-app-registration-in-the-azure-portal) では、ユーザーが認証のためにサインインする必要があるアプリを登録する方法の概要を説明します。 ユーザー対話を必要とせず、サーバー上で実行できるアプリの登録を作成する方法を学びます。
 
 1. Azure portal のアプリの登録で、**API アクセス許可** に移動します。
 
@@ -112,6 +112,10 @@ Azure でのアプリ登録の詳細については、[アプリケーション�
    Customer Insights を開き、**管理** > **アクセス許可** に移動し、**ユーザーの追加** を選択します。
 
 1. アプリ登録の名前を検索し、検索結果から選択して、**保存** を選択します。
+
+## <a name="sample-queries"></a>サンプル クエリ
+
+API で動作する OData サンプル クエリを短い一覧にまとめました。[OData クエリの例](odata-examples.md)。
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights クライアント ライブラリ
 
@@ -137,7 +141,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. [Microsoft 認証ライブラリ (MSAL)](/azure/active-directory/develop/msal-overview) を使用し、既存の [Azure アプリの登録](#create-a-new-app-registration-in-the-azure-portal) を使用して `AccessToken` を取得します。
 
-1. トークンの認証と取得に成功したら、**ベアラー "アクセス トークン"** に設定された追加の **DefaultRequestHeaders "認証"** と、[Customer Insights 環境から **サブスクリプション キー**](#get-started-trying-the-customer-insights-apis) に設定された **Ocp-Apim-Subscription-Key** を使用して、新しい `HttpClient` を作成するか既存の `HttpClient` を使用します。   
+1. トークンの認証と取得に成功したら、**ベアラー "アクセス トークン"** に設定された **DefaultRequestHeaders "認証"** と、[Customer Insights 環境から **サブスクリプション キー**](#get-started-trying-the-customer-insights-apis) に設定された **Ocp-Apim-Subscription-Key** を使用して、新しい `HttpClient` を作成するか、既存の `HttpClient` を使用します。   
  
    必要に応じて **Authorization** ヘッダーをリセットします。 たとえば、トークンの有効期限が切れたときです。
 
@@ -147,7 +151,7 @@ NuGet.org から C# クライアント ライブラリを使い始める方法�
 
 1. クライアントで、たとえば `GetAllInstancesAsync` などの「拡張メソッド」を呼び出します。 基になる `Microsoft.Rest.HttpOperationResponse` へのアクセスが推奨される場合は、たとえば `GetAllInstancesWithHttpMessagesAsync` などの「HTTP メッセージ メソッド」を使用します。
 
-1. メソッドは複数の型 (たとえば、`IList<InstanceInfo>` や `ApiErrorResult`) を返すことができるため、応答は `object` 型である可能性があります。 戻り値の型を確認するためには、その操作の [API 詳細ページ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) で指定した応答型にオブジェクトを安全にキャストできます。    
+1. メソッドは複数の型 (たとえば、`IList<InstanceInfo>` や `ApiErrorResult`) を返すことができるため、応答は `object` 型である可能性があります。 戻り値の型を確認するには、その操作に対して [API 詳細ページ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights)で指定された応答タイプのオブジェクトを使用します。    
    
    要求に関する詳細情報が必要な場合は、**HTTP メッセージ メソッド** を使用して、未加工の応答オブジェクトにアクセスします。
 

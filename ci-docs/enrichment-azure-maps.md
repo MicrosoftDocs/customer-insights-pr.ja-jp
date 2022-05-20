@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646534"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755360"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Maps による顧客プロファイルの強化 (プレビュー)
 
@@ -51,7 +51,7 @@ Azure Maps のデータ エンリッチメントを構成するには、次の�
 
 1. **次へ** を選択し、フィールド マッピングを完了します。
 
-1. **高度な設定** を変更するかどうかを評価します。 これらは、高度なユースケースに対応できるよう最大限の柔軟性を持たせていますが、ほとんどの場合は既定値のままで十分です。
+1. **高度な設定** を変更するかどうかを評価します。 これらの設定は、高度なユース ケースを処理するために最大限の柔軟性をもたせて提供されていますが、ほとんどの場合、デフォルト値で十分です。
    - **アドレスの種類**: 既定の動作では、エンリッチメントが不完全であっても最適なアドレス一致を返します。 完全なアドレスのみを取得するには、&mdash;たとえば、家番号を含む住所の場合、&mdash;**ポイント アドレス** 以外のチェックボックスはすべてクリアされます。 
    - **言語**: 既定では、住所は、住所が属すると判断された地域の言語で返されます。 標準化された住所の言語を適用するには、ドロップダウン メニューから言語を選択します。 たとえば、**英語** を選択すると、 **København、Danmark** ではなく、**Copenhagen、Denmark** が返されます。
 
@@ -89,7 +89,7 @@ Azure Maps のデータ エンリッチメントを構成するには、次の�
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 
-Dynamics 365 Customer Insights から Azure Maps へのデータ送信を可能にすると、Dynamics 365 Customer Insights のコンプライアンスの範囲を越えて、個人情報などの機密性の高い情報が潜在的に含まれるデータの転送を許可することになります。 マイクロソフトはお客様の指示で当該データを送信する場合がありますが、お客様は Azure Maps がお客様のプライバシーまたはセキュリティに関する義務を確実に満たす責任を負います。 詳細については、[Microsoft プライバシー ステートメント](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
+Dynamics 365 Customer Insights から Azure Maps へのデータ送信を可能にすると、Dynamics 365 Customer Insights のコンプライアンスの範囲を越えて、個人情報などの機密性の高い情報が潜在的に含まれるデータの転送を許可することになります。 Microsoft はそのようなデータをお客様の指示に従って転送しますが、Azure Maps がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシー ステートメント](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、このエンリッチメントはいつでも削除できます。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

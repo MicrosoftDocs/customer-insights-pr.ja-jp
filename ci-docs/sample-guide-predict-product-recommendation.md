@@ -1,7 +1,7 @@
 ---
 title: 製品のレコメンデーション予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成の製品レコメンデーション予測モデルを試してください。
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647108"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762692"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>製品のレコメンデーション予測サンプル ガイド
 
@@ -40,7 +40,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. **eコマース** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。
 
-1. eコマースの連絡先の URL https://aka.ms/ciadclasscontacts を入力します。
+1. e コマースの連絡先の URL を入力します: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts)。
 
 1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
 
@@ -50,15 +50,15 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
 
-5. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
 
-6. データ ソースを **保存** します。
+1. データ ソースを **保存** します。
 
 ### <a name="ingest-online-purchase-data"></a>オンライン購入データを取り込む
 
 1. 同じ **eコマース** データ ソースに別のデータ セットを追加します。 **テキスト/CSV** コネクタをもう一度選択します。
 
-1. **オンライン購入** データ の URL https://aka.ms/ciadclassonline を入力します。
+1. **オンライン購入** データ [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline) の URL を入力します。
 
 1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
 
@@ -70,12 +70,11 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. データ ソースを **保存** します。
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>ロイヤルティ スキームから顧客データを取り込む
 
 1. **LoyaltyScheme** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。
 
-1. eコマースの連絡先の URL https://aka.ms/ciadclasscustomerloyalty を入力します。
+1. e コマースの連絡先 [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty) の URL を入力します。
 
 1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
 
@@ -90,64 +89,11 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-2---data-unification"></a>タスク 2 - データの統合
 
-データを取り込んだ後、データ統合プロセスを開始して、統合された顧客プロファイルを作成します。 詳細については、[データの統合](data-unification.md) を参照してください。
-
-### <a name="map"></a>マップ
-
-1. データを取り込んだ後、連絡先を eコマースおよびロイヤルティ データから共通のデータ型にマップします。 **データ** > **統合** > **マップ** に移動します。
-
-2. 顧客プロファイルを表すエンティティ - **eCommerceContacts** および **loyCustomers** を選択します。
-
-   ![eコマースとロイヤルティ データソースを統合します。](media/unify-ecommerce-loyalty.png)
-
-3. **eCommerceContacts** の主キーとして **ContactId**、**loyCustomers** の主キーとして **LoyaltyID** を選択します。
-
-   ![LoyaltyId を主キーとして統合します。](media/unify-loyaltyid.png)
-
-### <a name="match"></a>照合
-
-1. **照合** タブに移動して、**順序の設定** を選択します。
-
-2. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
-
-3. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
-
-   ![eコマースとロイヤルティの一致を統合します。](media/unify-match-order.png)
-
-4. **新しいルールの作成** を選択します
-
-5. FullName を使用して最初の条件を追加します。
-
-   - eCommerceContacts では、ドロップダウンで **FullName** を選択します。
-   - loyCustomers では、ドロップダウンで **FullName** を選択します。
-   - **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
-   - **精度レベル** の設定: **基本** と **値**: **高い**。
-
-6. 新しいルールに **FullName, Email** という名前を入力します。
-
-   - **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   - エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
-   - エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。
-   - 正規化を空白のままにします。
-   - **精度レベル** の設定: **基本** と **値**: **高い**。
-
-   ![名前とメールの照合ルールを統一します。](media/unify-match-rule.png)
-
-7. **保存** と **実行** を選択します。
-
-### <a name="merge"></a>マージ
-
-1. **マージ** タブに移動します。
-
-1. **loyCustomers** エンティティの **ContactId** で、表示名を **ContactIdLOYALTY** に変更して、取り込まれた別の ID とは区別されるようにします。
-
-   ![ロイヤルティ ID から contactid に名前を変更します。](media/unify-merge-contactid.png)
-
-1. **保存** と **実行** を選択し、マージ プロセスを開始します。
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>タスク 3 - 製品レコメンデーション予測を構成する
 
-統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。
+統合された顧客プロファイルが整ったので、製品レコメンデーション予測を実行できます。
 
 1. **インテリジェンス** > **予測** に移動して、**製品レコメンデーション** を選択します。
 
@@ -162,27 +108,36 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
    - **期待される再購入**: **はい** を選択して、顧客が以前に購入したことのある製品をおすすめ候補に含めることを指定します。
 
    - **ウィンドウを見返す:** 少なくとも **365 日** を選択してください。 この設定で、レコメンデーションへの入力として顧客のアクティビティをさかのぼって振り返る期間が定義されます。
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="製品レコメンデーション モデルモデル マッピングです。":::
 
-1. **必要なデータ** を選択し、購入履歴に対して **データの追加** を選択します。
+1. **必須データの追加** 手順で、**データを追加する** を選択します。
 
-1. **eCommercePurchases : eCommerce** エンティティを追加し、eコマースのフィールドをモデルに必要な対応するフィールドにマップします。
+1. **データの追加** ウィンドウで、購入履歴エンティティとして **SalesOrderLine** を選択します。 この時点では、まだ構成されていない可能性があります。 ウィンドウでリンクを開き、次の手順で活動を作成します。
+   1. **活動名** を入力し、**活動エンティティ** として *eCommercePurchases:eCommerce* を選択します。 **主キー** は *PurchaseId* です。
+   1. *eCommerceContacts:eCommerce entity* との関係を定義して名前を付け、外部キーとして **ContactId** を選択します。
+   1. 活動を統合するには、**イベント活動** を *TotalPrice* 設定し、タイムスタンプを *PurchasedOn* に設定します。 [顧客活動](activities.md) で概説されているように、より多くのフィールドを指定できます。
+   1. **活動の種類** の場合は、*SalesOrderLine* を選択します。 次の活動フィールドをマップします:
+      - 受注明細行 ID: PurchaseId
+      - 受注 ID: PurchaseId
+      - 受注データ: PurchasedOn
+      - 製品 ID: ProductId
+      - 金額: TotalPrice
+   1. モデル構成に戻る前に、活動を確認して終了してください。
 
-1. **eCommercePurchases : eCommerce** エンティティを **eCommerceContacts : eCommerce** と結合します。
+1. **活動を選択** 手順に戻り、**活動** セクションで新しく作成された活動を選択します。 **次** を選択すると、属性マッピングはすでに入力されています。**保存** を選択します。
 
-   ![eコマース エンティティを結合します。](media/model-purchase-join.png)
+1. このサンプル ガイドでは、製品情報データがないため、**製品情報の追加** および **製品フィルター** の設定をスキップします。
 
-1. **次へ** を選択し、モデル スケジュールを設定します。
+1. **データ更新** 手順で、モデル スケジュールを設定します。
 
    新しいデータが取り込まれた場合、モデルは新しいパターンを学習するために定期的にトレーニングする必要があります。 この例では、**月** を選択します。
 
-1. すべての詳細を確認した後、**保存と実行** を選択します。
-
+1. すべての詳細を確認した後、**保存と実行** を選択します。 モデルを初めて実行するには、数分かかります。
 
 ## <a name="task-4---review-model-results-and-explanations"></a>タスク 4 - モデルの結果と説明を確認する
 
-モデルにデータのトレーニングとスコアリングを完了させます。 これで、製品レコメンデーション モデルの説明を確認できるようになりました。 詳細については、[予測の状態と結果の確認](predict-subscription-churn.md#review-a-prediction-status-and-results) を参照してください。
+モデルにデータのトレーニングとスコアリングを完了させます。 これで、製品レコメンデーション モデルの説明を確認できるようになりました。 詳細については、[予測の状態と結果の確認](predict-transactional-churn.md#review-a-prediction-status-and-results) を参照してください。
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>タスク 5 - 購入数の多い製品のセグメントを作成する
 
@@ -190,21 +145,19 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 モデルによって作成されたエンティティに基づいて、新しいセグメントを作成できます。
 
-1. **セグメント** に移動します。 **新規** を選択し、**作成元** > **インテリジェンス** と選択します。
+1. **セグメント** に移動します。 **新規** を選択し、**インテリジェンスから作成** を選択します。
 
    ![モデル出力を使用してセグメントを作成しています。](media/segment-intelligence.png)
 
 1. **OOBProductRecommendationModelPrediction** エンドポイントを選択して、セグメントを定義します。
 
    - フィールド: ProductID
-   - 演算子: 値
    - 値: 上位 3 つの製品 ID を選択する
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="モデルの結果からセグメントを作成します。":::
 
-これで、最も推奨される 3 つの製品を購入する意欲のある顧客を識別する、動的に更新されるセグメントができました 
+これで、動的に更新されるセグメントができました。これは、最も推奨される 3 つの製品の購入に関心がある可能性のある顧客を識別します。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

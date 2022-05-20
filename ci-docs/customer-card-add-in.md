@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646613"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755642"
 ---
 # <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
-
-
 
 Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにカスタマー カード アドインをインストールすると、カスタマー プロファイル フィールド、インサイト、およびアクティビティのタイムラインを表示するように選択できます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。
 
@@ -31,7 +29,7 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 ## <a name="prerequisites"></a>前提条件
 
 - アドインは、Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
-- Dynamics 365 データを Customer Insights の顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md)  ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセスのマップ ステップでのデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認する必要があります。 
+- Dynamics 365 データを Customer Insights の顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md)  ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセスのマップ ステップでのデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認する必要があります。
 - カスタマー カード アドインのすべての Dynamics 365 ユーザーは、データを見るには、Customer Insights で [ユーザーとして追加](permissions.md) する必要があります。
 - Customer Insights の [構成された検索およびフィルター機能](search-filter-index.md) は、作業するデータの検索に必要です。
 - 各アドイン コントロールは、Customer Insights の特定のデータに依存します。 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
@@ -132,16 +130,16 @@ ID フィールドを正しく構成した場合も、コントロールが顧�
 
 **解決方法:**
 
-1. この手順に従ってカード アドインの構成を確認してください: [顧客カード アドインの構成](#configure-the-customer-card-add-in) 
+1. この手順に従ってカード アドインの構成を確認してください: [顧客カード アドインの構成](#configure-the-customer-card-add-in)
 
-1. データ取り込み構成を確認します。 取引先担当者 ID GUID を含む Dynamics 365 システムのデータ ソースを編集します。 Power Query エディタで取引先担当者 ID GUID が大文字で表示される場合は、次を実行してください。 
+1. データ取り込み構成を確認します。 取引先担当者 ID GUID を含む Dynamics 365 システムのデータ ソースを編集します。 Power Query エディタで取引先担当者 ID GUID が大文字で表示される場合は、次の手順を実行してください。
     1. データ ソースを編集して Power Query エディタでデータ ソースを開きます。
     1. 取引先担当者 ID 列を選択します。
     1. ヘッダー バーの **変換** を選択して、使用できるアクションを確認します。
     1. **小文字** を選択します。 テーブルが含む GUID が小文字になったことを確認します。
     1. データ ソースを保存します。
-    1. データの取り込み、統合、下流プロセスを実行して、変更を GUID に伝播します。 
+    1. データの取り込み、統合、下流プロセスを実行して、変更を GUID に伝播します。
 
-完全に更新が完了すると、顧客カード アドイン コントロールに必要なデータが表示されます。 
+完全にシステムの更新が完了すると、顧客カード アドイン コントロールに必要なデータが表示されます。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

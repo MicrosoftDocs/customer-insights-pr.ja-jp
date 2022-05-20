@@ -1,19 +1,19 @@
 ---
 title: トランザクション解約予測サンプル ガイド
 description: このサンプル ガイドを使用して、既成のトランザクション解約予測モデルを試してください。
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647268"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741325"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>トランザクション解約予測サンプル ガイド
 
@@ -86,69 +86,13 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 1. データ ソースを保存します。
 
-
 ## <a name="task-2---data-unification"></a>タスク 2 - データの統合
 
-データを取り込んだ後、**マップ、照合、マージ** のプロセスを開始して、統一顧客プロファイルを作成します。 詳細については、[データの統合](data-unification.md) を参照してください。
-
-### <a name="map"></a>マップ
-
-1. データを取り込んだ後、連絡先を eコマースおよびロイヤルティ データから共通のデータ型にマップします。 **データ** > **統合** > **マップ** に移動します。
-
-1. 顧客プロファイルを表すエンティティ - **eCommerceContacts** および **loyCustomers** を選択します。 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="eコマースとロイヤルティ データソースを統合します。":::
-
-1. **eCommerceContacts** の主キーとして **ContactId**、**loyCustomers** の主キーとして **LoyaltyID** を選択します。
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="LoyaltyId を主キーとして統合します。":::
-
-### <a name="match"></a>照合
-
-1. **照合** タブに移動して、**順序の設定** を選択します。
-
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
-
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="eコマースとロイヤルティの一致を統合します。":::
-
-1. **新しいルールの作成** を選択します
-
-1. FullName を使用して最初の条件を追加します。
-
-   * eCommerceContacts では、ドロップダウンで **FullName** を選択します。
-   * loyCustomers では、ドロップダウンで **FullName** を選択します。
-   * **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
-   * **精度レベル** の設定: **基本** と **値**: **高い**。
-
-1. 新しいルールに **FullName, Email** という名前を入力します。
-
-   * **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   * エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
-   * エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。 
-   * 正規化を空白のままにします。 
-   * **精度レベル** の設定: **基本** と **値**: **高い**。
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="名前とメールの照合ルールを統一します。":::
-
-7. **保存** と **実行** を選択します。
-
-### <a name="merge"></a>マージ
-
-1. **マージ** タブに移動します。
-
-1. **loyCustomers** エンティティの **ContactId** で、表示名を **ContactIdLOYALTY** に変更して、取り込まれた別の ID とは区別されるようにします。
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="ロイヤルティ ID から contactid に名前を変更します。":::
-
-1. **保存** と **実行** を選択し、マージ プロセスを開始します。
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>タスク 3 - トランザクション解約予測を構成する
 
-統合顧客プロファイルが整ったら、サブスクリプション解約予測を実行できます。 詳細な手順については、[サブスクリプション離反予測](predict-subscription-churn.md)記事を参照してください。 
+統合された顧客プロファイルが整ったので、トランザクション離反予測を実行できます。 詳細な手順については、[トランザクション離反予測](predict-transactional-churn.md) 記事を参照してください。 
 
 1. **インテリジェンス** > **検出** に移動し、**顧客離反モデル** の使用を選択します。
 
@@ -180,7 +124,7 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
 ## <a name="task-4---review-model-results-and-explanations"></a>タスク 4 - モデルの結果と説明を確認する
 
-モデルにデータのトレーニングとスコアリングを完了させます。 これで、サブスクリプション解約モデルの説明を確認できるようになりました。 詳細については、[予測の状態と結果の確認](predict-subscription-churn.md#review-a-prediction-status-and-results) を参照してください。
+モデルにデータのトレーニングとスコアリングを完了させます。 これで、離反モデルの説明を確認できます。 詳細については、[予測の状態と結果の確認](predict-transactional-churn.md#review-a-prediction-status-and-results) を参照してください。
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>タスク5 - 解約リスクの高い顧客のセグメントを作成する
 
@@ -192,14 +136,12 @@ Contoso は、高品質のコーヒーとコーヒー メーカーを製造し�
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="モデル出力を使用してセグメントを作成しています。":::
 
-1. **OOBSubscriptionChurnPrediction** エンドポイントを選択して、セグメントを定義します: 
+1. **OOBeCommerceChurnPrediction** エンドポイントを選択し、セグメントを定義します。 
    - フィールド: ChurnScore
    - 演算子: より大きい
    - 値: 0.6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="サブスクリプション解約セグメントを設定します。":::
 
-これで、このサブスクリプション ビジネスの解約リスクの高い顧客を識別するセグメントが動的に更新されます。
+これで、離反リスクの高い顧客を識別する動的に更新されるセグメントができました。
 
 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
 

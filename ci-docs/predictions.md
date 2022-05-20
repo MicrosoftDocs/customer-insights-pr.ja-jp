@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647128"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740725"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>予測を使用した部分データの完成 (非推奨)
 
@@ -37,7 +37,7 @@ ms.locfileid: "8647128"
 
 1. あなたの組織では、[Microsoft Dataverse にインスタンス](/ai-builder/build-model#prerequisites)が設定されていて、Customer Insights と同じ組織にあります。
 
-2. 対象ユーザー インサイトの環境は Dataverse インスタンスに接続されています。
+2. Customer Insights 環境は、Dataverseインスタンスに添付されています。
 
 詳しくは、[新しい環境を作成する](create-environment.md)をご覧ください。
 

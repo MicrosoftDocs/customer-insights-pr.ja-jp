@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646800"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755504"
 ---
 # <a name="customer-activities"></a>顧客活動
 
-Dynamics 365 Customer Insights では、[さまざまなデータ ソース](data-sources.md) からの顧客活動を組み合わせて、活動を時系列で一覧表示するタイムラインを作成します。 [顧客カード アドイン](customer-card-add-in.md) ソリューション、または Power BI ダッシュボードを使用して、Dynamics 365 アプリにタイムラインを含めます。
+[さまざまなデータ ソース](data-sources.md)に Dynamics 365 Customer Insights からの顧客活動を組み合わせます。 活動を時系列で一覧表示するタイムラインを作成します。 [顧客カード アドイン](customer-card-add-in.md) ソリューションで Dynamics 365 アプリにタイムラインを含めます。
 
 ## <a name="define-an-activity"></a>活動を定義する
 
@@ -78,7 +78,7 @@ Dynamics 365 Customer Insights では、[さまざまなデータ ソース](dat
 
 1. **次へ** を選択して、次の手順に移動します。 **終了して確認** を選択して、活動の種類を **その他** に設定した状態で活動を保存できます。 
 
-1. **活動の種類** の手順で活動の種類を選択し、オプションで Customer Insights の他の領域で使用するために活動の種類の一部をセマンティックにマップするかどうかを選択します。 現在、活動タイプ: *フィードバック*、*ロイヤリティ*、*SalesOrder*、*SalesOrderLine*、*サブスクリプション* はフィールドのマッピングに合意した後は、セマンティックにマッピングすることができます。 活動の種類が新しい活動に関連しない場合は、カスタム活動の種類に *その他* または *新規作成* を選択できます。
+1. **活動の種類** の手順で活動の種類を選択し、オプションで Customer Insights の他の領域で使用するために活動の種類の一部をセマンティックにマップするかどうかを選択します。 現在、*フィードバック*、*ロイヤルティ*、*SalesOrder*、*SalesOrderLine*、および *サブスクリプション* アクティビティ タイプは、フィールドのマップに同意した後、セマンティクスをサポートします。 活動の種類が新しい活動に関連しない場合は、カスタム活動の種類に *その他* または *新規作成* を選択できます。
 
 1. **次へ** を選択して、次の手順に移動します。 
 

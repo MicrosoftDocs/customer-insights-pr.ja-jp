@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646955"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757392"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>セグメント リストとその他のデータを Azure Blob Storage にエクスポートする (プレビュー)
 
@@ -44,7 +44,7 @@ Customer Insights データを Blob Storage に保存するか、それを使用
 この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
 
 > [!IMPORTANT]
-> Azure Blob Storage アカウントのソフト削除設定をオンにした場合、エクスポートは失敗します。 データを BLOB にエクスポートするには、ソフト削除をオフにします。 詳細情報: [ BLOB のソフト削除を有効にする](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Azure Blob Storage アカウントのソフト削除設定をオンにした場合、エクスポートは失敗します。 データを BLOB にエクスポートするには、ソフト削除をオフにします。 詳細情報: [ BLOB のソフト削除を有効にする](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. **データ** > **エクスポート** に移動します。
 

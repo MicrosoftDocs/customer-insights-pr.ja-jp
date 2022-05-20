@@ -66,12 +66,18 @@
   items:
     - name: データの統合の概要
       href: data-unification.md
-    - name: エンティティおよび属性のマッピング
+    - name: ソース フィールドを選択する
       href: map-entities.md
-    - name: エンティティを一致させる
+    - name: 重複レコードを削除する
+      href: remove-duplicates.md
+    - name: 一致条件
       href: match-entities.md
-    - name: エンティティの結合
+    - name: 顧客フィールドを統合する
       href: merge-entities.md
+    - name: データ統合を確認する
+      href: review-unification.md
+    - name: 統合の設定を更新する
+      href: data-unification-update.md
 - name: データ エンリッチメント
   items:
     - name: 顧客プロファイルのエンリッチ
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API リファレンス
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData サンプル クエリ
+      href: odata-examples.md
 - name: 同意の管理 (プレビュー)
   items:
     - name: ヘルプ ハブ

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646554"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755268"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
 
@@ -27,7 +27,7 @@ Customer Insights は、次のイベント ログを送信します。
 - **監査イベント**
   - **APIEvent** - Dynamics 365 Customer Insights UI を介して行われる変更の追跡を有効にします。
 - **運用イベント**
-  - **WorkflowEvent** - ワークフローにより、[データ ソース](data-sources.md)をセットアップし、データを[統一](data-unification.md)して、[エンリッチ](enrichment-hub.md)し、最後に他のシステムに[エクスポート](export-destinations.md)します。 これらのすべての手順は、個別に実行することも (たとえば、単一のエクスポートをトリガーする)、調整することもできます (たとえば、統合プロセスをトリガーするデータソースからのデータ更新により、追加のエンリッチメントがプルされ、完了したらデータを別のシステムにエクスポートします)。 詳細については、[WorkflowEvent スキーマ](#workflow-event-schema)を参照してください。
+  - **WorkflowEvent** - ワークフローにより、[データ ソース](data-sources.md)をセットアップし、[統合](data-unification.md)し、[エンリッチ](enrichment-hub.md)して、最後に他のシステムに[エクスポート](export-destinations.md)します。 これらの手順はすべて個別に実行できます (たとえば、単一のエクスポートをトリガーします)。 また、調整を実行することもできます (たとえば、データソースからのデータ更新が統合プロセスをトリガーし、エンリッチメントが取得され、完了するとデータが別のシステムにエクスポートされます)。 詳細については、[WorkflowEvent スキーマ](#workflow-event-schema)を参照してください。
   - **APIEvent** - Dynamics 365 Customer Insights に対する顧客インスタンスへのすべての API 呼び出し。 詳細については、[APIEvent スキーマ](#api-event-schema)を参照してください。
 
 ## <a name="set-up-the-diagnostic-settings"></a>診断設定をセットアップする
@@ -182,7 +182,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 
 ### <a name="workflow-event-schema"></a>ワークフロー イベント スキーマ
 
-ワークフローには複数のステップが含まれています。 [データ ソースを取り込む](data-sources.md)、データを[統一](data-unification.md)、[エンリッチ](enrichment-hub.md)、[エクスポート](export-destinations.md)します。 これらのステップはすべて、個別に実行することも、次のプロセスで調整することもできます。 
+ワークフローには複数のステップが含まれています。 [データ ソースを取り込む](data-sources.md)、データを[統一](data-unification.md)、[エンリッチ](enrichment-hub.md)、[エクスポート](export-destinations.md)します。 これらのステップはすべて、個別に実行することも、次のプロセスで調整することもできます。
 
 #### <a name="operation-types"></a>操作の種類
 
@@ -215,7 +215,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | `time`          | タイムスタンプ | 必須          | イベントのタイムスタンプ (UTC)。                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | 必須          | イベントを発行したインスタンスの ResourceId。                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | 必須          | このイベントによって表される操作の名前。 `{OperationType}.[WorkFlow|Task][Started|Completed]`。 参考のために[操作の種類](#operation-types)を参照してください。 | `Segmentation.WorkflowStarted`、<br> `Segmentation.TaskStarted`、 <br> `Segmentation.TaskCompleted`、 <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | 必須          | イベントの ログ カテゴリ。 常にワークフローイベントの `Operational`                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | 必須          | イベントの ログ カテゴリ。 常にワークフローイベントの `Operational`                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | 必須          | イベントの状態。 `Running`、`Skipped`、`Successful`、`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | 任意出席者          | 操作の期間 (ミリ秒)。                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | 任意出席者          | イベントの特定のカテゴリに対するより多くのプロパティを持つ JSON オブジェクト。                                                                                        | サブ セクションの[ワークフローのプロパティ](#workflow-properties-schema)を参照してください                                                                                                       |

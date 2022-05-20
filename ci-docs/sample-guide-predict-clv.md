@@ -1,19 +1,19 @@
 ---
 title: 顧客の生涯価値予測サンプル ガイド
 description: このサンプル ガイドを使用して、顧客の生涯価値予測モデルを試してください。
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647115"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740817"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>顧客の生涯価値 (CLV) 予測サンプル ガイド
 
@@ -102,64 +102,7 @@ Contoso は、高品質のコーヒーとコーヒー マシンを製造する�
 
 ## <a name="task-2---data-unification"></a>タスク 2 - データの統合
 
-データを取り込んだ後、データ統合プロセスを開始して、統合された顧客プロファイルを作成します。 詳細については、[データの統合](data-unification.md) を参照してください。
-
-### <a name="map"></a>マップ
-
-1. データを取り込んだ後、連絡先を eコマースおよびロイヤルティ データから共通のデータ型にマップします。 **データ** > **統合** > **マップ** に移動します。
-
-1. 顧客プロファイルを表すエンティティ - **eCommerceContacts** および **loyCustomers** を選択します。 次に、**適用** を選択します。
-
-   ![eコマースとロイヤルティ データソースを統合します。](media/unify-ecommerce-loyalty.png)
-
-1. **eCommerceContacts** の主キーとして **ContactId**、**loyCustomers** の主キーとして **LoyaltyID** を選択します。
-
-   ![LoyaltyId を主キーとして統合します。](media/unify-loyaltyid.png)
-
-1. **保存** を選択します。
-
-### <a name="match"></a>照合
-
-1. **照合** タブに移動して、**順序の設定** を選択します。
-
-1. **プライマリ** ドロップダウン リストで、**eCommerceContacts : eCommerce** をプライマリ ソースとして選択してから、すべてのレコードを含めます。
-
-1. **エンティティ 2** ドロップダウン リストで、**loyCustomers : LoyaltyScheme** を選択してから、すべてのレコードを含めます。
-
-   ![eコマースとロイヤルティの一致を統合します。](media/unify-match-order.png)
-
-1. **ルールの追加** を選択します
-
-1. FullName を使用して最初の条件を追加します。
-
-   - eCommerceContacts では、ドロップダウンで **FullName** を選択します。
-   - loyCustomers では、ドロップダウンで **FullName** を選択します。
-   - **正規化** ドロップダウンを選択して、**種類 (電話、名前、住所、...)** を選択します。
-   - **精度レベル** の設定: **基本** と **値**: **高い**。
-
-1. 新しいルールに **FullName, Email** という名前を入力します。
-
-   - **条件の追加** を選択し、メール アドレスの 2 番目の条件を追加します
-   - エンティティ eCommerceContacts では、ドロップダウンで **メール** を選択します。
-   - エンティティ loyCustomers では、ドロップダウンで **メール** を選択します。
-   - 正規化を空白のままにします。
-   - **精度レベル** の設定: **基本** と **値**: **高い**。
-
-   ![名前とメールの照合ルールを統一します。](media/unify-match-rule.png)
-
-1. **完了** を選択します。
-
-1. **保存** と **実行** を選択します。
-
-### <a name="merge"></a>マージ
-
-1. **マージ** タブに移動します。
-
-1. **loyCustomers** エンティティの **ContactId** で、表示名を **ContactIdLOYALTY** に変更して、取り込まれた別の ID とは区別されるようにします。
-
-   ![ロイヤルティ ID から contactid に名前を変更します。](media/unify-merge-contactid.png)
-
-1. **保存** と **マージおよびダウンストリーム プロセスを実行する** を選択します。
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>タスク 3 - 顧客の生涯価値予測の構成
 

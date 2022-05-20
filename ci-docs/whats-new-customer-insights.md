@@ -1,19 +1,19 @@
 ---
 title: 新しい機能および今後の機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647248"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700943"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -24,6 +24,28 @@ ms.locfileid: "8647248"
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
 
+
+## <a name="april-2022-updates"></a>2022 年 4 月の更新プログラム
+
+2022 年 4 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet のエンリッチメント (プレビュー)
+
+Dun ＆ Bradstreet は、企業向けの商用データ、分析、およびインサイトを提供します。 これを使用することで、企業の顧客プロファイルが統一された顧客は、データを充実させることができます。 エンリッチメントには、DUNS 番号、会社の規模、業界などの属性が含まれます。
+
+詳細については、[Dun＆Bradstreet (プレビュー) による企業プロファイルのエンリッチメント](enrichment-dnb.md) を参照してください。
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>新しいメジャーを作成するときにメジャー タイプを定義する
+
+これで、個々のプロファイルのメジャーとビジネス全体のメジャーを区別できます。 ビジネス メジャーは Customer Insights のホーム ページに表示されますが、顧客メジャーは詳細な顧客ビューに公開されます。
+
+詳細については、[メジャー ビルダーを使用して最初からメジャーを作成する](measure-builder.md) を参照してください。
+
+### <a name="consolidation-of-customer-insights-documentation"></a>Customer Insights のドキュメントの連結
+
+ドキュメントの記事を再検討し、エンゲージメント分析情報と対象者分析情報機能についての言及を削除しました。 今後、アプリケーションのコア機能について説明するときは、一貫して製品名 Customer Insights を参照します。 この変更により、目次、URL 構造、および基になるドキュメント リポジトリ内のファイル パスが大幅に再構築されます。 すべてのブックマークまたは既存のリンクは引き続き機能し、更新された URL にリダイレクトされます。
+
+その変化をどのように認識しているか、または期待どおりに機能していないものを見つけたい場合は、[このページのフィードバックを送信](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) してください。
 
 ## <a name="march-2022-updates"></a>2022 年 3 月の更新プログラム
 

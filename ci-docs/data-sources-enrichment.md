@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646574"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755692"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>データ ソースのエンリッチメント (プレビュー)
 
@@ -26,7 +26,7 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 1. **データ** > **統合** に移動します。 エンリッチするエンティティを選択し、エンティティの主キーとして 1 つの属性を選択します。 詳細については、[主キーの選択](map-entities.md#select-primary-key-and-semantic-type-for-attributes) を参照してください。
 
 1. **データ** > **データ ソース** にアクセスします。
- 
+
 1. エンリッチするデータ ソースの横にある垂直の省略記号を選択して、**エンリッチ** を選択します。
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="データ ソースのエンリッチメント ページ。":::

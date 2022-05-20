@@ -1,23 +1,22 @@
 ---
 title: セグメントの同意規則をアクティブ化する
 description: Dynamics 365 Customer Insights で同意データを関連付けて、同意確認をアクティブ化するには、次の手順に従います。 管理者は同意確認を無効にすることもできます。
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646638"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755176"
 ---
 # <a name="activate-consent-rules"></a>同意規則のアクティブ化
 
-[同意センター (プレビュー)](consent-management/overview.md) は、さまざまなソースからの同意データを調和させるのに役立ちます。 統合された *同意* エンティティを使用し、既定の同意確認を適用します。 Dynamics 365 Customer Insights に同意データをインポートし、インポートされた同意データの規則を構成した後、*同意* エンティティは自動的に対象者分析情報に同期されます。
+[同意センター (プレビュー)](consent-management/overview.md) は、さまざまなソースからの同意データを調和させるのに役立ちます。 統合された *同意* エンティティを使用し、既定の同意確認を適用します。 同意データをインポートし、マップ規則を構成した後、*同意* エンティティは自動的に Dynamics 365 Customer Insights に同期されます。
 
 ## <a name="enable-consent-checks"></a>同意確認を有効化する
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のホーム ページ
 description: ホーム ページでアプリの詳細を確認します。
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647195"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743419"
 ---
 # <a name="explore-customer-insights"></a>Customer Insights を探索する
 
-次の URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/) 上で [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) ができます。
+[Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) には次の URL からアクセスできます。[https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/)
 
-**ホーム** ページには、[マップ](map-entities.md)、[一致](match-entities.md)、および[マージ](merge-entities.md) フェーズ完了後のセグメント、メジャー、およびエンリッチメント データ (構成されている場合) の概要が表示されます。
+この **ホーム** ページでは、主な機能の構成プロセスを説明し、セグメント、メジャー、およびエンリッチメント データの概要を示しています。
 
 :::image type="content" source="media/home-page.png" alt-text="サンプルの分析情報を示すホーム画面のスクリーンショット。":::
 
-Customer Insights の重要なコントロール:
+## <a name="left-side-pane"></a>左側のペイン
 
-- 左ウィンドウ: B2C 環境と B2B 環境がある場合は、プライマリ ターゲット対象者を切り替えます
+左側のペインを使用して、Customer Insights のさまざまな領域間を移動します。 
 
-- 左ウィンドウ: 異なる領域間を移動し、プライマリ ターゲットの対象者を選択します
+ビジネス アカウントと個人消費者を相手にする場合は、プライマリ対象ユーザーを選択して、それに応じてフォーカスを設定できます。 
 
-- ヘッダー: 作業している環境を見つけ、管理者として環境を管理します
+## <a name="application-header"></a>アプリケーションのヘッダー
 
-- ヘッダー: Customer Insights の個人設定を指定し、ヘルプ オプションを取得します
+**環境** ピッカーは、作業している環境を表示し、管理者として環境を作成または管理できるようにします。
 
-これで、ホームページの次のセクションを表示できます。
+スマイル アイコンは **フィードバック** コントロールです。 それを選択して、Customer Insights のご意見をお聞かせください。 私たちはお客様のフィードバックを積極的に聞き、何が好きで、どうすれば改善できるかを知らせてくださることに、前もって感謝いたします。
 
-- **最近のセグメント** では、定義した人口統計、行動、またはトランザクション属性に基づいて顧客のグループを表示します。 [セグメントの作成](segments.md)は、顧客ベースをグループ化し、ビジネス活動をより的確にターゲティングするのに役立ちます。
+歯車のアイコンで表される **設定** コントロールを使用すると、Customer Insights のセッションの詳細を収集し、Microsoft 365 プロフィールのグローバル設定を構成できます。 
 
-- **最近のビジネス対策** では、定義した [主要業績評価指標 (KPIs)](measures.md) でタイルを表示します。 たとえば、顧客が解約する平均的な可能性や、顧客ごとの平均オンライン支出などです。
+疑問符アイコンで表される **ヘルプ** オプションは、コンテキストに応じたヘルプ リンクやその他の役立つリソースを提供します。
 
-- **最近の濃縮** では、最近完了したエンリッチメント実行の結果を一覧表示します。 [エンリッチメント](enrichment-hub.md)は、顧客ベースに基づく情報を追加します。 これらは、例えば親しんでいる興味の対象をブランドを理解することで得られます。
+プロファイル画像で Microsoft 365 プロファイルの **アカウント マネージャー** が開きます。 **マイ アカウント** を選択し個人設定を管理します。
+
+## <a name="getting-started-with-customer-insights-section"></a>Customer Insights セクションの基本情報
+
+このセクションには、Customer Insights 環境を設定するプロセスを説明するカードが含まれています。 
+
+1. **データを追加する** カードはデータ インポートをサポートします。 Customer Insights は[顧客に関するデータを取り込むためのいくつかのオプション](data-sources.md)をサポートします。 **データ ソースを追加する** を選択して開始します。
+1. 最初のデータ インポートが正常に完了すると、**データの統合** カードを使用してデータを調和させ、異なるソースから[統合された顧客プロファイルを作成](data-unification.md)できます。 
+1. 統合された顧客プロファイルが作成されたら、次は **データの分析** オプションを確認し追加のインサイトを取得します。 KPI を追跡するための[ビジネス メジャー](measures.md)、特定の対象者と繋がるための[セグメントの定義](segments.md)、または AI の助けを借りて[予測の構成](predictions-overview.md)を作成してみてください。
+1. 顧客データがインポートされ、統合され、きちんと構造化されたので、[さまざまなエクスポート先](export-destinations.md)を使用して、データに対してアクションを実行します。 **接続の追加** を選択し、お気に入りのサービスに接続します。 たとえば、データを Dynamics 365 Marketing にエクスポートして、アウトバウンド マーケティング キャンペーンを作成したり、顧客体験を構築したりします。 
+
+## <a name="your-customer-insights-section"></a>顧客分析情報セクション
+
+- **セグメント** では、定義した人口統計、行動、またはトランザクション属性に基づいて顧客のグループを表示します。 [セグメントの作成](segments.md)は、顧客ベースをグループ化し、ビジネス活動をより的確にターゲティングするのに役立ちます。
+
+- **ビジネス対策** では、定義した[主要業績評価指標 (KPIs)](measures.md) でタイルを表示します。 たとえば、顧客が解約する平均的な可能性や、顧客ごとの平均オンライン支出などです。
+
+- **エンリッチメント** では、最近完了したエンリッチメント実行の結果を一覧表示します。 [エンリッチメント](enrichment-hub.md)は、顧客ベースに基づく情報を追加します。 これらは、例えば親しんでいる興味の対象をブランドを理解することで得られます。
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

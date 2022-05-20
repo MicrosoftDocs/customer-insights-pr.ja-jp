@@ -1,0 +1,69 @@
+---
+title: Dynamics 365 Customer Insights API の OData の例
+description: Open Data Protocol (OData) が Customer Insights API にクエリを実行してデータを確認するためによく使用される例。
+ms.date: 05/10/2022
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: mhart
+manager: shellyha
+ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740041"
+---
+# <a name="odata-query-examples"></a>OData クエリの例
+
+Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づいて構築されたデータ アクセス プロトコルです。 Web 用の REST のような一般的に受け入れられている方法論を使用します。 OData サービスを使用するために使用できるさまざまな種類のライブラリとツールがあります。
+
+この記事では、[Customer Insights APIs](apis.md) に基づいて独自の実装を構築するのに役立つ、頻繁に要求されるクエリの例をいくつか示します。
+
+クエリ サンプルを変更して、ターゲット環境で機能するようにする必要があります。 
+
+- {instanceId} がクエリする Customer Insights 環境の GUID は {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` です。 [ListAllInstances 操作](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) を使用すると、アクセスできる {InstanceId} を見つけることができます。
+- {CID}: 統合された顧客レコードの GUID。 例: `ce759201f786d590bf2134bff576c369`。
+- {AlternateKey}: データ ソースの顧客レコードの主キーの識別子。 例: `CNTID_1002`
+- {DSname}: Customer Insights に取り込まれるデータ ソースのエンティティ名を持つ文字列。 例: `Website_contacts`。
+- {SegmentName}: Customer Insights のセグメントの出力エンティティ名を含む文字列。 例: `Male_under_40`。
+
+## <a name="customer"></a>大変お世話になっております
+
+次の表には、*顧客* エンティティの一連のサンプル クエリが含まれています。
+
+
+|クエリの種類 |例  | Note  |
+|---------|---------|---------|
+|1 つの顧客 ID     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
+|代替キー    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  代替キーは統合された顧客エンティティに保持される       |
+|選択   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
+|含む    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
+|代替キー + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|検索する  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   検索文字列の上位 10 件の結果を返す      |
+|セグメント メンバーシップ  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | セグメント化エンティティから事前設定された行数を返します。      |
+
+## <a name="unified-activity"></a>統合した活動
+
+次の表には、*UnifiedActivity* エンティティの一連のサンプル クエリが含まれています。
+
+|クエリの種類 |例  | Note  |
+|---------|---------|---------|
+|CID の活動     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | 特定の顧客プロファイルの活動を一覧表示する |
+|活動の概算時間    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  概算時間の顧客プロファイルの活動       |
+|活動の種類    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
+|表示名による活動     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|活動の並び替え    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  活動を昇順または降順で並べ替える       |
+|セグメント メンバーシップから拡大した活動  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
+
+## <a name="other-examples"></a>その他の例
+
+次の表には、他のエンティティの一連のサンプル クエリが含まれています。
+
+|クエリの種類 |例  | Note  |
+|---------|---------|---------|
+|CID のメジャー    | `{serviceRoot}/Customer_Measure?$filter=CustomerId eq '{CID}'`          |  |
+|CID のエンリッチされたブランド    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
+|CID のエンリッチされた関心    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
+|句内 + 展開     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |

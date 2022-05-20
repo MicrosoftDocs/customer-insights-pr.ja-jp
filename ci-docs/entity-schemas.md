@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646890"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757438"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
 
@@ -23,7 +23,7 @@ ms.locfileid: "8646890"
 
 この共有データ モデルにより、データの統一された定義を提供され、アプリケーションとデータ インテグレータの共同作業が容易になります。 Common Data Model には、標準的なエンティティー、関連付け、階層、特性などを備えた豊富なメタデータ システムが含まれています。 これは、Dynamics 365 アプリ を起点としており、260を超える標準エンティティを持つ GitHub でオープンソース化されています。 内外のパートナーからなる大規模なシステムは、Common Data Model に業種固有の概念を提供します。
 
-現在、Power BI データフロー、 Azure Data Services を含む複数のシステムおよびプラットフォームが Common Data Model を実装しています。 これは、Microsoft Dataverse、Dynamics 365、Power Apps、Power BI、そして今後リリースされる Azure のデータサービスで対応しており、[Open Data Initiative](https://www.microsoft.com/open-data-initiative) に直接貢献しています。
+現在、Power BI データフロー、 Azure Data Services を含む複数のシステムおよびプラットフォームが Common Data Model を実装しています。 これは、Microsoft Dataverse、Dynamics 365、Power Apps、Power BI、そして今後リリースされる Azure のデータサービスで対応しており、[Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/) に直接貢献しています。
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights のエンティティのスキーマ
 
