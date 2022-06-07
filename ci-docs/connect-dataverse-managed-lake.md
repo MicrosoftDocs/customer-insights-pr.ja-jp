@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646631"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800179"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
@@ -62,7 +62,7 @@ ms.locfileid: "8646631"
 
 1. **データ** > **データ ソース** にアクセスします。
 
-2. 更新を行うデータ ソースの横にある省略記号を選択します。
+2. 更新するデータ ソースの横にある、垂直の省略記号 (&vellip;) を選択します。
 
 3. リストから **編集** オプションを選択します。
 

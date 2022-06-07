@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653746"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833314"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing で統一された顧客プロファイルを操作する
 
@@ -23,7 +23,6 @@ Customer Insights データを Marketing と連携させることで、以下の
 - メール、SMS、プッシュ通知の動的コンテンツ (パーソナライズされたトークンなど) は、ロイヤルティの状態、定期購入の更新日、親アカウントなど、統合された Customer Insights のプロファイルで把握した指標に基づいて作成されます。
 - Marketing から Customer Insights にデータを読み込み、他のソースからの顧客データと組み合わせることができます。
 - Customer Insights のデータ クリーニング、強化、ファジーマッチングなどのツールを適用します。
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>豊富な顧客プロファイルをリアルタイム マーケティングに活用する
 
@@ -41,4 +40,4 @@ Customer Insights では、多くのソースからのデータを絞り込み�
 
 Customer Insights データを Marketing に活用する場合、クラウド ストレージに限定されません。 すでに自分の Azure Data Lake Storage 設定を持っている場合は、Customer Insights と連携し、クラウドベースの設定と同様にマーケティング アプリとデータを共有することが可能です。
 
-詳細: [Azure Data Lake Storage から Dataverse とデータ共有ができるようにする](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+詳細: [Azure Data Lake Storage から Dataverse とデータ共有ができるようにする](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

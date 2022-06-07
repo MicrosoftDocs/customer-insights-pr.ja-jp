@@ -11,34 +11,34 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743419"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768356"
 ---
 # <a name="explore-customer-insights"></a>Customer Insights を探索する
 
 [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) には次の URL からアクセスできます。[https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/)
 
-この **ホーム** ページでは、主な機能の構成プロセスを説明し、セグメント、メジャー、およびエンリッチメント データの概要を示しています。
+この **ホーム** ページでは、主要な機能の構成プロセスを示し、セグメント、メジャー、エンリッチメント データの概要を提供します。
 
 :::image type="content" source="media/home-page.png" alt-text="サンプルの分析情報を示すホーム画面のスクリーンショット。":::
 
 ## <a name="left-side-pane"></a>左側のペイン
 
-左側のペインを使用して、Customer Insights のさまざまな領域間を移動します。 
+左側のペインを使用して、Customer Insights のさまざまな領域間を移動します。
 
-ビジネス アカウントと個人消費者を相手にする場合は、プライマリ対象ユーザーを選択して、それに応じてフォーカスを設定できます。 
+ビジネス アカウントと個人消費者を相手にする場合は、プライマリ対象ユーザーを選択して、それに応じてフォーカスを設定できます。
 
 ## <a name="application-header"></a>アプリケーションのヘッダー
 
-**環境** ピッカーは、作業している環境を表示し、管理者として環境を作成または管理できるようにします。
+**環境** ピッカーは、作業している環境を表示し、管理者として環境の作成や管理を実行できます。
 
 スマイル アイコンは **フィードバック** コントロールです。 それを選択して、Customer Insights のご意見をお聞かせください。 私たちはお客様のフィードバックを積極的に聞き、何が好きで、どうすれば改善できるかを知らせてくださることに、前もって感謝いたします。
 
-歯車のアイコンで表される **設定** コントロールを使用すると、Customer Insights のセッションの詳細を収集し、Microsoft 365 プロフィールのグローバル設定を構成できます。 
+歯車のアイコンで表される **設定** コントロールを使用すると、Customer Insights のセッションの詳細を収集し、Microsoft 365 プロフィールのグローバル設定を構成できます。
 
 疑問符アイコンで表される **ヘルプ** オプションは、コンテキストに応じたヘルプ リンクやその他の役立つリソースを提供します。
 
@@ -46,7 +46,7 @@ ms.locfileid: "8743419"
 
 ## <a name="getting-started-with-customer-insights-section"></a>Customer Insights セクションの基本情報
 
-このセクションには、Customer Insights 環境を設定するプロセスを説明するカードが含まれています。 
+このセクションには、Customer Insights 環境を設定するプロセスを説明するカードが含まれています。
 
 1. **データを追加する** カードはデータ インポートをサポートします。 Customer Insights は[顧客に関するデータを取り込むためのいくつかのオプション](data-sources.md)をサポートします。 **データ ソースを追加する** を選択して開始します。
 1. 最初のデータ インポートが正常に完了すると、**データの統合** カードを使用してデータを調和させ、異なるソースから[統合された顧客プロファイルを作成](data-unification.md)できます。 

@@ -1,5 +1,5 @@
 ---
-title: 統合顧客プロファイルを強化する
+title: Unified customer profile を強化する
 description: 機能を使用して、顧客データを強化します。
 ms.date: 03/29/2022
 ms.reviewer: mhart
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653529"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800611"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -63,7 +63,7 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 **自分のエンリッチメント** タブに移動し、構成されているすべてのエンリッチメントを表示します。 各エンリッチメントは、エンリッチメントに関する追加情報を含む行として表されます。
 
-エンリッチメントを選択して、使用可能なオプションを確認します。 リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
+エンリッチメントを選択して、使用可能なオプションを確認します。 また、リスト項目の垂直省略記号 (&vellip;) を選択しても、オプションを表示できます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="エンリッチメントの一覧でエンリッチメントを管理するオプション。":::
 

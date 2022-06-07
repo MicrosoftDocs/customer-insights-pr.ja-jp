@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: ラーニング カタログ
   items:
-    - name: 作業の開始
+    - name: Microsoft 顧客データ プラットフォームの専門家として認定する
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Customer Insights を使用する
       href: /learn/modules/get-started-customer-data-platform/
     - name: データの取り込み
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: 有料ライセンスから始める
       href: paid-license.md
-    - name: 新しい環境を作成する
-      href: create-environment.md
     - name: Customer Insights を探索する
       href: home.md
     - name: タグと列の使用
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Common Data Model のエンティティ スキーマを確認する
       href: entity-schemas.md
-    - name: Dataverse の Customer Insights データ
-      href: customer-insights-dataverse.md
     - name: リレーションシップと接続されたエンティティを構築する
       href: relationships.md
     - name: セマンティック マッピングを定義する
       href: semantic-mappings.md
+- name: 環境
+  items:
+    - name: 新しい環境を作成する
+      href: create-environment.md
+    - name: Microsoft Dataverse への接続
+      href: customer-insights-dataverse.md
+    - name: 独自の Azure Data Lake Storage を使用する
+      href: own-data-lake-storage.md
+    - name: 環境設定を管理する
+      href: manage-environments.md
+    - name: サービス プリンシパルを使用してストレージ アカウントに接続する
+      href: connect-service-principal.md
 - name: 管理
   items:
     - name: システム構成の設定
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: ユーザーのアクセス許可を割り当てる
       href: permissions.md
-    - name: 接続の概要
-      href: connections.md
-    - name: 複数の環境を管理する
-      href: manage-environments.md
     - name: 独自の Key Vault を導入する
       href: use-azure-key-vault.md
-    - name: サービス プリンシパルを使用してストレージ アカウントに接続する
-      href: connect-service-principal.md
     - name: 診断ログをエクスポートする
       href: diagnostics.md
-    - name: サービス制限
-      href: service-limits.md
-    - name: DSR の権利と要求
-      href: dsr-rights-requests.md
+    - name: 接続の概要
+      href: connections.md
 - name: API
   items:
     - name: API に関する作業
@@ -324,5 +328,9 @@
       items:
         - name: 同意データを使用して予測を作成する
           href: consent-management/predictions-consent-data.md
+- name: サービス制限
+  href: service-limits.md
+- name: DSR の権利と要求
+  href: dsr-rights-requests.md
 - name: サポートを受ける
   href: /power-platform/admin/get-help-support

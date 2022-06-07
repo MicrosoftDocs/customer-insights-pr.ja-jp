@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755268"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807587"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
 
@@ -38,7 +38,7 @@ Customer Insights で診断を構成するには、次の前提条件が満た�
 
 - 有効な [Azure サブスクリプション](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)がある。
 - Customer Insights の[管理者](permissions.md#admin)権限がある。
-- Azure の宛先リソースでの **共同作成者** と **ユーザー アクセス管理者** の役割がある。 リソースには、Azure Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 詳細については、[Azure ポータルを使用して Azure 役割の割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)を参照してください。
+- Azure の宛先リソースでの **共同作成者** と **ユーザー アクセス管理者** の役割がある。 リソースには、Azure Data Lake Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 詳細については、[Azure ポータルを使用して Azure 役割の割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)を参照してください。 このアクセス許可は、Customer Insights の診断設定を構成する際に必要ですが、設定が正常に完了した後で変更できます。
 - Azure Storage、Azure イベント ハブ、または Azure Log Analytics の[宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)が満たされている。
 - リソースが属するリソースグループで、最低 **閲覧者** の役割がある。
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647075"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800102"
 ---
 # <a name="create-segments"></a>セグメントの作成
 
@@ -134,8 +134,9 @@ ms.locfileid: "8647075"
 > - セグメント ビルダでは、条件の演算子の設定時にエンティティの有効な値を提案しません。 **データ** > **エンティティ** にアクセスして、エンティティ データをダウンロードして、使用可能な値を確認します。
 > - 日付に基づく条件を使用すると、固定日付と変動日付範囲を切り替えることができます。
 > - セグメントに複数のルールがある場合、編集しているルールの横に青い縦線が表示されます。
-> - ルールと条件は、セグメント定義の他の場所に移動できます。 ルールまたは条件の横にある [...] を選択し、移動する方法と場所を選択します。
+> - ルールと条件は、セグメント定義の他の場所に移動できます。 ルールや条件の横にある垂直の省略記号 (&vellip;) を選択し、それを移動する方法と場所を選択します。
 > - コマンドバーの **元に戻す** と **やり直し** コントロールを使用すると、変更をロールバックできます。
+> - セグメントの作成後、一部のセグメントでは [セグメントの使用状況を追跡](segments.md#track-usage-of-a-segment) できます。
 
 ## <a name="quick-segments"></a>簡易セグメント
 

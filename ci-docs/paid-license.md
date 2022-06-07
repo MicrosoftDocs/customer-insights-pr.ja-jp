@@ -1,41 +1,33 @@
 ---
-title: " Dynamics 365 Customer Insights の有料ライセンスを開始する"
+title: Dynamics 365 Customer Insights のライセンスを購入する
 author: m-hartmann
-description: Dynamics 365 Customer Insights での初回実行の経験に精通し、その機能を試してみます。
+description: Dynamics 365 Customer Insights のライセンスを購入してサインインし、アプリに慣れましょう。
 ms.author: mhart
 ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9c83dc6716abd5f81eb7851d462d7d61791f542b
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641860"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768428"
 ---
-# <a name="get-started-after-purchasing-customer-insights"></a>Customer Insights を購入してから始めましょう
+# <a name="purchase-customer-insights"></a>Customer Insights を購入する
 
-この記事では、組織がサブスクリプションを購入した後に、Dynamics 365 Customer Insights で最初の一歩を踏み出す方法について説明します。 Customer Insights の購入をご希望の場合、当社の連絡先は [Dynamics 365 Customer Insights のウェブサイト](https://dynamics.microsoft.com/ai/customer-insights/)に掲載されています。 
-
-Customer Insights のサブスクリプション ライセンスを購入すると、Microsoft 365 テナントのグローバル管理者が、環境の作成に招待するメールを受け取ります。 
-
-Customer Insights はテナントごとにライセンスされ、複数の機能が含まれています。 より多くのキャパシティとライセンスを購入して、デフォルトのクォータを増やすことができます。 
-- [価格の概要](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- キャパシティと資格の詳細: [ Dynamics 365 ライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544)
+Dynamics 365 Customer Insights を購入する際は、[Dynamics 365 Customer Insights の Web サイト](https://dynamics.microsoft.com/ai/customer-insights/) で当社のお問い合わせオプションをご確認ください。
 
 サービスと機能をお試しになりたい場合は、[トライアル環境をセットアップする](trial-signup.md)を参照してください。
 
-## <a name="start-with-customer-insights"></a>Customer Insights を使い始める
+Customer Insights はテナントごとにライセンスされ、複数の機能が含まれています。 より多くのキャパシティとライセンスを購入して、デフォルトのクォータを増やすことができます。
+- [価格の概要](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- キャパシティと資格の詳細: [ Dynamics 365 ライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544)
 
-初回実行のエクスペリエンスは、Customer Insights で初期の焦点を選択し、サンプル データで機能を探索するのに役立ちます。 次のステップとして、独自の環境を作成し、独自のデータを操作できます。
-
-**初めてサインインするには**:
+## <a name="sign-in-for-the-first-time"></a>初めてサインインする
 
 1. [Customer Insights アプリの URL](https://home.ci.ai.dynamics.com) に移動します。
-1. 学校または職場のアカウントでサインインします。 
+1. 学校または職場のアカウントでサインインします。
 1. 利用規約に同意し、Customer Insights 環境のコンテンツ設定を設定します。
 
-## <a name="create-your-own-environment"></a>独自の環境を作成する
-
-最初のサインイン後、サンプル データのある環境が表示されます。 そのデータを使用して、機能を調べたり、アプリに慣れたりすることができます。 独自のデータを使用するには、[環境を作成する](create-environment.md)必要があります。
+最初のサインイン後、サンプル データのある環境が表示されます。 そのデータを使用して機能を調査し、アプリに慣れることができます。 独自のデータを使用する場合は [環境を作成します](create-environment.md)。

@@ -1,19 +1,19 @@
 ---
 title: データ ソース エンリッチメント
 description: データ統合プロセスを実行する前に、データ ソースをエンリッチします。
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755692"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800287"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>データ ソースのエンリッチメント (プレビュー)
 
@@ -27,7 +27,7 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 
 1. **データ** > **データ ソース** にアクセスします。
 
-1. エンリッチするデータ ソースの横にある垂直の省略記号を選択して、**エンリッチ** を選択します。
+1. エンリッチするデータ ソースの横にある垂直の省略記号 (&vellip;) を選択して、**エンリッチ** を選択します。
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="データ ソースのエンリッチメント ページ。":::
 
@@ -41,11 +41,12 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 
 - [拡張住所](enrichment-enhanced-addresses.md)
 - [拡張された会社データ](enrichment-enhanced-company-data.md)
+- [LiveRamp による ID データ](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>既存のデータ ソース エンリッチメントを管理する
 
 **自分のエンリッチメント** タブに移動し、構成されているすべてのエンリッチメントを表示します。
 
-エンリッチメントを選択して、使用可能なオプションを確認します。 リスト項目の省略記号 (...) を選択して、オプションを表示することもできます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
+エンリッチメントを選択して、使用可能なオプションを確認します。 また、リスト項目の垂直省略記号 (&vellip;) を選択しても、オプションを表示できます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
 
 データ ソース エンリッチメントを表示、編集、実行、または削除できます。 詳細については、[既存のエンリッチメントを管理する](enrichment-hub.md) を参照してください。

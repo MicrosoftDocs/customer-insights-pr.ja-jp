@@ -1,43 +1,113 @@
 ---
-title: Microsoft Dataverse の Customer Insights データ
-description: Customer Insights エンティティを Microsoft Dataverse のテーブルとして使用します。
-ms.date: 04/05/2022
+title: Microsoft Dataverse での Customer Insights データの使用
+description: Customer Insights と Microsoft Dataverse の接続方法と、Dataverse にエクスポートする出力エンティティを説明します。
+ms.date: 05/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: wimohabb
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741371"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833682"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
-Customer Insights には、[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) で出力エンティティを使用できるようにするオプションがあります。 この統合により、ローコード/ノーコード アプローチによる簡単なデータ共有とカスタム開発が可能になります。 Dataverse 環境では、[出力エンティティ](#output-entities)をテーブルとして使用できます。 Dataverse テーブルに基づいて他のアプリケーションのデータを使用できます。 これらのテーブルにより、Power Automate でのワークフローの自動化や、Power Apps でのアプリ構築などのシナリオが有効になります。 現在の実装は主に、使用可能な Customer Insights エントリのデータを指定した顧客 ID に対して取得できる検索をサポートしています。
+Customer Insights は、出力エンティティを [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) として使用可能にするオプションを提供します。 この統合により、ローコード/ノーコード アプローチによる簡単なデータ共有とカスタム開発が可能になります。 Dataverse 環境では、[出力エンティティ](#output-entities)をテーブルとして使用できます。 Dataverse テーブルに基づいて他のアプリケーションのデータを使用できます。 これらのテーブルにより、Power Automate でのワークフローの自動化や、Power Apps でのアプリ構築などのシナリオが有効になります。
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse 環境を Customer Insights に接続する
+自分の Dataverse 環境を接続すると、[Power Platform データフローとゲートウェイを使用してオンプレミス データ ソースからデータを取り込む](data-sources.md#add-data-from-on-premises-data-sources)こともできます。
 
-**既存の組織**
+## <a name="prerequisites"></a>前提条件
 
-管理者は、環境を作成する際に、Customer Insights を構成して[既存の Dataverse 環境を使用](create-environment.md)することができます。 Dataverse 環境に URL を提供することによって、それは彼らの新しい Customer Insights 環境に接続しています。 Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。 
+- Customer Insights と Dataverse 環境は同じリージョンでホストする必要があります。
+- Dataverse 環境のグローバル管理者ロールが必要です。 特定のセキュリティ グループにこの [Dataverse 環境が関連付けられいる](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment)か確認して、それらのセキュリティ グループに自分が追加されていることを確認してください。
+- 接続する Dataverse 環境に関連付けられた Customer Insights 環境は他に存在しません。 [Dataverse 環境への既存の接続を削除する](#remove-an-existing-connection-to-a-dataverse-environment)方法について説明します。
+- Microsoft Dataverse 環境を接続できるのは、単一のストレージ アカウントのみです。 これは [Azure Data Lake Storage を使用する](own-data-lake-storage.md) ように環境を構成した場合にのみ適用されます。
 
-既存の Dataverse 環境を使用しない場合、システムはテナント内に Customer Insights データ用の新しい環境を作成します。 
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse 環境を Customer Insights に接続する
 
-> [!NOTE]
-> 組織がすでにテナントで Dataverse を使用している場合、[Dataverse 環境の作成は管理者によって制御されている](/power-platform/admin/control-environment-creation) ことを覚えておくことが重要です。たとえば、組織のアカウントを使用して新しい Customer Insights 環境をセットアップしていて、管理者以外のすべてのユーザー向けの Dataverse 試用環境では、管理者が新しい試用環境を作成することはできません。
-> 
-> Customer Insights で作成された Dataverse 試用環境には 3 GB のストレージがあり、テナントに与えられる全体的な容量にはカウントされません。 有料サブスクリプションでは、データベース用に 15 GB、ファイル ストレージ用に 20 GB の Dataverse 使用権を取得します。
+**Microsoft Dataverse** ステップによって、[Customer Insights 環境を作成する](create-environment.md) 際に Customer Insights を Dataverse 環境に接続できます。
 
-**新しい組織**
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="正味の新しい環境に対して自動で有効化された、Microsoft Dataverse とのデータ共有。":::
 
-Customer Insights の設定時に新しい組織を作成すると、自動的に新しい Dataverse 環境が組織に作成されます。
+管理者は、既存の Dataverse 環境に接続するように Customer Insights を構成できます。 Dataverse 環境に URL を提供することによって、それは彼らの新しい Customer Insights 環境に接続しています。
+
+既存の Dataverse 環境を使用しない場合、システムはテナント内に Customer Insights データ用の新しい環境を作成します。 [Power Platform 管理者は、環境を作成できるユーザーを制御できます](/power-platform/admin/control-environment-creation)。 新しい Customer Insights 環境を設定する際に、管理者が自身を除くすべてのユーザーに対して Dataverse の環境作成を無効化している場合、新しい環境を作成できない場合があります。
+
+データ共有チェックボックスを選択することで、Dataverse との **データ共有を有効化します**。
+
+独自の Data Lake Storage アカウントを使用する場合は、**アクセス許可の識別子** も必要です。 アクセス許可の識別子を取得する方法の詳細は、次のセクションを確認してください。
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>独自の Azure Data Lake Storage から Dataverse とのデータ共有を有効にする (プレビュー)
+
+その環境で [独自の Azure Data Lake Storage アカウントを使用](own-data-lake-storage.md) しており、Microsoft Dataverse とのデータ共有を有効化する際は、追加の構成が必要です。 Customer Insights 環境を設定するユーザーは、Azure Data Lake Storage アカウントの *CustomerInsights* コンテナーに対する、少なくとも **ストレージ BLOB データの読み取り** アクセス許可が必要です。
+
+1. Azure サブスクリプションに 2 つのセキュリティ グループを作成します。1 つは **閲覧者** セキュリティ グループで、もう 1 つは **共同作成者** セキュリティ グループです。さらに、Microsoft Dataverse サービスを両方のセキュリティ グループの所有者として設定します。
+2. これらのセキュリティ グループを使用して、ストレージ アカウントの Customer Insights コンテナのアクセス制御リスト (ACL) を管理します。 Microsoft Dataverse サービスと、Dynamics 365 Marketing などの任意の Dataverse ベースのビジネスアプリケーションを、**読み取り専用** アクセス許可を持つ **閲覧者** セキュリティ グループに追加します。 Customers Insights アプリケーション *のみ* を **共同作成者** セキュリティ グループに追加して、プロファイルと分析情報を書き込むための **読み取りと書き込み** の両方のアクセス許可を付与します。
+
+### <a name="limitations"></a>制限
+
+独自の Azure Data Lake Storage アカウントで Dataverse を使用する場合、制限が 2 つ存在します:
+
+- Dataverse 組織と Azure Data Lake Storage アカウントの間に 1 対 1 のマッピングが存在すること。 Dataverse 組織をストレージ アカウントに接続すると、別のストレージ アカウントに接続できない。 この制限により、Dataverse が複数のストレージ アカウントにデータを入力することを防ぎます。
+- Azure Data Lake Storage アカウントにアクセスする際に Azure 非公開リンクの設定が必要な場合、ファイアウォールの背後に存在するため、データの共有が機能しません。 Dataverse は現在、非公開リンクによる非公開エンドポイントへの接続に対応していません。
+
+### <a name="set-up-powershell"></a>PowerShell の設定
+
+PowerShell スクリプトを実行する場合は、それに応じて最初に PowerShell の設定が必要です。
+
+1. 最新バージョンの [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2) をインストールします。
+   1. PC で、キーボードの Windows キーを選択し、**Windows PowerShell** を検索し、**管理者として実行** を選択します。
+   1. 開いた PowerShell ウィンドウで、`Install-Module AzureAD` を入力します。
+2. 3 つのモジュールをインポートします。
+    1. PowerShell ウィンドウで `Install-Module -Name Az.Accounts` と入力してから次の手順に従います。
+    1. `Install-Module -Name Az.Resources` と `Install-Module -Name Az.Storage` に対して繰り返します。
+
+### <a name="configuration-steps"></a>構成手順
+
+1. エンジニアの [GitHub リポジトリ](https://github.com/trin-msft/byol)から実行する必要のある 2 つの PowerShell スクリプトをダウンロードします。
+    1. `CreateSecurityGroups.ps1`
+       - この PowerShell スクリプトを実行するには、*テナント管理者* のアクセス許可が必要です。
+       - この PowerShell スクリプトは、Azure サブスクリプションに 2 つのセキュリティ グループを作成します。 1 つは閲覧者グループ用で、もう 1 つは共同作成者グループ用です。これらの両方のセキュリティ グループの所有者として Microsoft Dataverse サービスを作成します。
+       - Azure Data Lake Storage を含む Azure サブスクリプション ID を指定して、Windows PowerShell でこの PowerShell スクリプトを実行します。 エディターで PowerShell スクリプトを開き、追加情報と実装されているロジックを確認します。
+       - このスクリプトで生成された両方のセキュリティ グループ ID 値を、`ByolSetup.ps1` スクリプトで使用するために保存します。
+
+        > [!NOTE]
+        > テナントでのセキュリティ グループの作成を無効にできます。 その場合、手動セットアップが必要になり、Azure AD 管理者が[セキュリティ グループの作成を有効にする](/azure/active-directory/enterprise-users/groups-self-service-management)必要があります。
+
+    2. `ByolSetup.ps1`
+        - このスクリプトを実行するにはストレージアカウント/コンテナーレベルで *ストレージ BLOB データ所有者* のアクセス許可が必要です。または、このスクリプトによって自分のアクセス許可が作成されます。 スクリプトを正常に実行した後、ロールの割り当てを手動で削除できます。
+        - この PowerShell スクリプトは、Microsoft Dataverse サービスおよび任意の Dataverse ベースのビジネス アプリケーションに必要なロールベースのアクセス制御 (RBAC) を追加します。 また、`CreateSecurityGroups.ps1` スクリプトで作成されたセキュリティ グループの Customer Insights コンテナのアクセス制御リスト (ACL) を更新します。 共同作成者グループには *rwx* アクセスが付与され、閲覧者グループには *r-x* アクセス許可のみ付与されます。
+        - Azure Data Lake Storage を含む Azure サブスクリプション ID ストレージ アカウント名、リソース グループ名、および閲覧者および共同作成者のセキュリティ グループ ID 値を指定して、Windows PowerShell でこの PowerShell スクリプトを実行します。 エディターで PowerShell スクリプトを開き、追加情報と実装されているロジックを確認します。
+        - スクリプトを正常に実行した後、出力文字列をコピーします。 出力スクリプトは次のようになります: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+2. 上からコピーした出力文字列を、Microsoft Dataverse の環境構成ステップの **アクセス許可の識別子** フィールドに入力します。
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="独自の Azure Data Lake Storage から Microsoft Dataverse とのデータ共有を有効にするための構成オプション。":::
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Dataverse 環境への既存の接続を削除する
+
+Dataverse 環境に接続すると、**この CDS 組織は、すでに別の Customer Insights インスタンスに接続されています** というエラー メッセージが表示されます。これは、Dataverse 環境が Customer Insights 環境ですでに使用されていることを意味します。 Dataverse 環境のグローバル管理者として既存の接続を削除できます。 変更の反映に数時間かかる場合があります。
+
+1. [Power Apps](https://make.powerapps.com) に移動します。
+1. 環境ピッカーから環境を選択します。
+1. **ソリューション** に移動します
+1. **Dynamics 365 Customer Insights 顧客カード アドイン (プレビュー)** という名前のソリューションをアンインストールまたは削除します。
+
+OR
+
+1. Dataverse 環境を開きます。
+1. **詳細設定** > **ソリューション** に移動します。
+1. **CustomerInsightsCustomerCard** ソリューションをアンインストールします。
+
+依存関係が原因で接続の削除に失敗した場合は、その依存関係も削除する必要があります。 詳細については [依存関係の削除](/power-platform/alm/removing-dependencies) を参照してください。
 
 ## <a name="output-entities"></a>出力エンティティ
 
@@ -50,7 +120,6 @@ Customer Insights からの一部の出力エンティティは、Dataverse の�
 - [エンリッチメント](#enrichment)
 - [予測](#prediction)
 - [セグメント メンバーシップ](#segment-membership)
-
 
 ### <a name="customerprofile"></a>CustomerProfile
 
@@ -139,3 +208,34 @@ AlternativeKey テーブルには、統合プロセスに参加したエンテ�
 | セグメント       | JSON 文字列  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
 | msdynci_identifier  | String   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | `msdynci_identifier` から生成した確定的 GUID          |
+
+<!--
+## FAQ: Update existing environments to use Microsoft Dataverse
+
+Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
+
+1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
+
+   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
+
+1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
+
+   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
+   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
+
+1. I proceeded with the update and it seems like nothing happened. Is the update complete?
+
+   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
+
+1. Why do I still see the banner after completing the update steps?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+
+1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+   Common causes:
+    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
+    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
+    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
+    - -->

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741139"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833581"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の使用の開始
 
@@ -25,21 +25,21 @@ Customer Insights は、顧客の理解を深めるのに役立ちます。 さ�
 
 ## <a name="step-1-create-an-environment"></a>ステップ 1: 環境の作成
 
-まず、作業する環境を作成する必要があります。 組織がすでにライセンスを購入している場合は、[環境を作成する](create-environment.md)を参照してください。 Customer Insights の試用を開始するには、[試用環境を設定する](trial-signup.md) を参照してください。
+まず、作業する環境を作成します。 組織がすでにライセンスを購入している場合は、[環境を作成する](create-environment.md)を参照してください。 Customer Insights の試用を開始するには、[試用環境を設定する](trial-signup.md) を参照してください。
 
 ## <a name="step-2-explore-customer-insights"></a>ステップ 2: Customer Insights を探索する
 
-Customer Insights に初めてログインするときに、設定を構成して製品を調べることができます。
+Customer Insights に初めてログインする際は、設定を構成して、この製品を調査します。
 
 1. Microsoft Azure Active Directory (AAD) ユーザー アカウントを使用して、[Customer Insights にログインします](https://home.ci.ai.dynamics.com)。
 
-1. [環境を変えて](manage-environments.md#switch-environments)、デモ データを見て、[Customer Insights を探索する](home.md)。
+1. 環境を変更してデモ データを確認し、[Customer Insights を探索します](home.md)。
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>ステップ 3: データの取り込み、統合、関連付けを設定します
 
-統合プロファイルは、データを洞察し、アクションを実行するための基盤となります。 様々なソースからデータを取り込み、データの統一プロセスを実行して、統一されたプロファイルを組み合わせます。 取り込んだエンティティ間で関連付けを指定し、エンリッチメント機能を使用してプロファイルに情報を追加します。
+統合プロファイルは、データを洞察し、アクションを実行するための基盤となります。 様々なソースからデータを取り込み、データの統一プロセスを実行して、統一されたプロファイルを組み合わせます。 取り込んだエンティティ間のリレーションシップを指定し、エンリッチメント機能を使用してプロファイルに情報を追加します。
 
-1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Power Query コネクタ](connect-power-query.md)、[Common Data Model フォルダー](connect-common-data-model.md)、[Microsoft Dataverse](connect-dataverse-managed-lake.md) の中から選択します。 
+1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Power Query コネクタ](connect-power-query.md)、[Common Data Model フォルダー](connect-common-data-model.md)、[Microsoft Dataverse](connect-dataverse-managed-lake.md) の中から選択します。
 
 1. [ソース フィールド](map-entities.md)を識別し、[重複](remove-duplicates.md)を削除し、[条件を一致](match-entities.md)させ、[フィールドを統合](merge-entities.md)することにより、[データ統合プロセス](data-unification.md)を実行します。
 
@@ -47,7 +47,7 @@ Customer Insights に初めてログインするときに、設定を構成し�
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>ステップ 4: 予測、アクティビティ、および測定値を使用して統合プロファイルを強化する
 
-統一されたプロファイルを設定することで、データを強化し、提供する情報をさらに増やすことができます。
+統合プロファイルを設定してデータを強化し、提供する情報をさらに増やします。
 
 1. 拡張されたエンリッチメント プロバイダーのライブラリから [顧客データのエンリッチ](enrichment-hub.md) を選択します。
 
@@ -59,7 +59,7 @@ Customer Insights に初めてログインするときに、設定を構成し�
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>ステップ 5: セグメントを作成し、さまざまなエクスポート オプションを使用してデータをアクティブ化します
 
-顧客に関するさまざまな情報を含めたデータが完成したら、次はそのデータを活用したアクションを考えてみましょう。
+これでデータが完成し、顧客に関するさまざまな情報が含まれたので、そのデータに対してアクションを実行する方法を確認します。
 
 1. 顧客層のサブセットである[セグメントを作成し](segments.md)、ターゲットとなる顧客に適切なアクションを起こします。
 

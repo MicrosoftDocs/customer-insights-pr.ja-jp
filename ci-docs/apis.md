@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755456"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808512"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API の使用
 
@@ -31,11 +31,11 @@ Dynamics 365 Customer Insights は、Customer Insights のデータに基づい�
 
 1. Customer Insights に [サインイン](https://home.ci.ai.dynamics.com) します。 まだサブスクリプションをお持ちでない場合は、[Customer Insights の試用版にサインアップ](https://aka.ms/tryci) します。
 
-1. Customer Insights 環境で API を有効にするには、**管理** > **アクセス許可** に移動します。 これを行うには、管理者のアクセス許可が必要です。
+1. Customer Insights 環境で API を有効化する場合は、**管理者** > **セキュリティ** の順に移動します。 これを行うには、管理者のアクセス許可が必要です。
 
 1. **API** タブに移動し、**有効** ボタンを選択します。    
  
-   API を有効にすると、API 要求で使用されるインスタンスに対してプライマリおよびセカンダリのサブスクリプション キーが作成されます。 キーを再生成するには、**管理** > **アクセス許可** > **API** で **プライマリの再生成** または **セカンダリの再生成** を選択します。
+   API を有効にすると、API 要求で使用されるインスタンスに対してプライマリおよびセカンダリのサブスクリプション キーが作成されます。 **プライマリの再生成** または **管理者** > **セキュリティ** > **API** で **セカンダリの再生成** を選択することでキーを再生成できます。
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ HTTP 応答がすぐに下に表示されます。
 1. 左側で、**アプリの登録** を選択します。
 
 1. **新規登録** を選択して、アプリケーション名を入力し、アカウントの種類を選択します。
- 
+
    必要に応じて、リダイレクト URL を追加します。 ローカル コンピュータでアプリケーションを開発するには、http://localhost で十分です。
 
 1. 新しいアプリの登録で、**API アクセス許可** に移動します。
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. **アクセス許可の追加** を選択し、サイド ペインで **Customer Insights** を選択します。
+1. **Add a permission** を選択し、サイド ペインで **Customer Insights 向けの Dynamics 365 AI** を選択します。
 
 1. **アクセス許可の種類** では、**委任されたアクセス許可** を選択し、**user_impersonation** のアクセス許可を選択します。
 
@@ -109,7 +107,7 @@ Azure でのアプリ登録の詳細については、[アプリケーション�
 
 1. 結論から言うと、アプリ登録の名前を Customer Insights でユーザーとして追加する必要があります。  
    
-   Customer Insights を開き、**管理** > **アクセス許可** に移動し、**ユーザーの追加** を選択します。
+   Customer Insights を開いて **管理者** > **セキュリティ** の順に移動し、**ユーザーの追加** を選択します。
 
 1. アプリ登録の名前を検索し、検索結果から選択して、**保存** を選択します。
 

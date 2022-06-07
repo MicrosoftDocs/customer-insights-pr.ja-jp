@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740725"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800656"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>予測を使用した部分データの完成 (非推奨)
 
@@ -95,7 +95,7 @@ ms.locfileid: "8740725"
 
 2. レビューする予測を選択します。
 
-3.  **アクション** 列で省略記号を選択し、**表示** を選択します。
+3. **アクション** 列で垂直の省略記号 (&vellip;) を選択し、**表示** を選択します。
 
 4. 予測のビューに多数のデータ ポイントが表示されます。
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ ms.locfileid: "8740725"
 
 2. 編集する予測を選択します。
 
-3.  **アクション** 列で省略記号を選択し、**表示** を選択します。
+3. **アクション** 列で垂直の省略記号 (&vellip;) を選択し、**表示** を選択します。
 
 4. **AI Builder でのカスタマイズ** を選択します。
 
@@ -139,7 +139,7 @@ ms.locfileid: "8740725"
 
 2. 削除する予測を選択します。
 
-3.  **アクション** 列で省略記号を選択し、**削除** を選択します。
+3. **アクション** 列で垂直の省略記号 (&vellip;) を選択し、**削除** を選択します。
 
 4. 削除を確認します。
 
@@ -153,7 +153,7 @@ ms.locfileid: "8740725"
 - アプリのアクセス許可は付与されていません。
     1. [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) に移動します。
     1. **環境** を選択します。
-    1. アクセス許可を追加したい環境の横にある省略記号を選択して、**設定** を選択します。
+    1. アクセス許可を追加する環境の横にある垂直の省略記号 (&vellip;) を選択し、**設定** を選択します。
     1. **ユーザー + アクセス権限** を展開して、**ユーザー** を選択します。
     1. **+ 新規** を選択して、**ユーザー** を選択します。
     1. **アプリケーション ユーザー** を選択して、まだ選択されていない場合は、次の情報を入力します。

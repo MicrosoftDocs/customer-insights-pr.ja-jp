@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646883"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800157"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データ ソースに接続する
 
@@ -76,7 +76,7 @@ Customer Insights にデータをインポートするために使用できる�
 
 1. **データ** > **データ ソース** にアクセスします。
 
-2. 変更するデータ ソースの横にある縦の省略記号を選択し、ドロップダウン メニューから **編集** を選択します。
+2. 変更するデータ ソースの横にある垂直の省略記号 (&vellip;) を選択し、ドロップダウン メニューから **編集** を選択します。
 
    > [!div class="mx-imgBorder"]
    > ![オプションの編集。](media/edit-option-data-sources.png "オプションの編集")

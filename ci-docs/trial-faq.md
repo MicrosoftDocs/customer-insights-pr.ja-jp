@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641814"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833774"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版に関するよくあるご質問
 
@@ -62,9 +62,9 @@ ms.locfileid: "8641814"
 
 一般的に、Customer Insights の有料版にアップグレードする際には、独自のデータで新しく始めることをお勧めします。 
 
-オプションで、Customer Insights のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用版環境から有料環境に設定を移行する場合は、Customer Insights 試用版の管理者および Microsoft 365 テナントのグローバル管理者、または組織の Dynamics 365 管理者である必要があります。 
+オプションで、Customer Insights のみを使用する場合、Customer Insights を購入すると、試用版環境からデータをコピーできます。 試用版環境から有料環境に設定を移行する場合は、Customer Insights 試用版の管理者および Microsoft 365 テナントのグローバル管理者、または組織の Dynamics 365 管理者である必要があります。
 
-Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](manage-environments.md#copy-the-environment-configuration)を参照してください。
+Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](create-environment.md#copy-the-environment-configuration)を参照してください。
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>試用版の使用制限とクォータはどれくらいですか?
 
@@ -81,9 +81,10 @@ Customer Insights の有料インスタンスに初めてサインインする�
 
 Customer Insights 機能のほとんどの機能は、試用版で利用できます。
 
-次の機能は **利用できません**。 
-- 独自の Azure Data Lake ストレージ アカウントを使用する新しい環境を作成することはできません。
-- 試用版環境は削除できません。 
+次の機能は **利用できません**。
+
+- 独自の Azure Data Lake Storage アカウントを使用する新しい環境を作成することはできません。
+- 試用版環境は削除できません。
 
 ### <a name="how-long-does-the-trial-last"></a>試用版の期間はどのくらいですか?
 

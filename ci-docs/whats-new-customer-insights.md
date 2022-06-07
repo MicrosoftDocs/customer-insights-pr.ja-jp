@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700943"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833636"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -58,6 +58,7 @@ LiveRamp は、ID の解決と顧客データの統合を提供します。 顧�
 詳細については、[LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)](enrichment-liveramp.md) を参照してください。
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>タグとフィルターを使用してセグメントとメジャーを整理します
+
 組織が多くのセグメントまたはメジャーを管理している場合、適切なものを見つけるのは難しいと感じることがあります。 この新機能を使用すると、タグと列を使用してリストを整理できます。 データをすばやく簡単に検索し、ビューをカスタマイズするのに役立ちます。
 
 詳細については、[タグと列の使用](work-with-tags-columns.md)を参照してください。
@@ -65,9 +66,9 @@ LiveRamp は、ID の解決と顧客データの統合を提供します。 顧�
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>独自にのストレージ アカウントを使用する場合に Dataverse とのデータ共有を有効にする
 
 Azure Data Lake Storage 環境を使用して Customer Insights データを格納するように場合、Microsoft Dataverse とのデータ共有は、追加の構成がいくつか必要です。
-以前は、データが管理対象データ レイクに保存されている場合しか、Dataverse とのデータ共有を有効にできませんでした。 
+以前は、データが管理対象データ レイクに保存されている場合しか、Dataverse とのデータ共有を有効にできませんでした。
 
-詳細については、[独自の Azure Data Lake Storage から Dataverse とのデータ共有を有効にする (プレビュー)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview) を参照してください。
+詳細については、[独自の Azure Data Lake Storage から Dataverse とのデータ共有を有効にする (プレビュー)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview) を参照してください。
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>新しいエクスポート先: Iterable と Braze
 
@@ -81,7 +82,6 @@ Azure Data Lake Storage 環境を使用して Customer Insights データを格�
 
 - Google Ads: 新しいバージョンの Google Ads エクスポート コネクタでは、認証エクスペリエンスが簡素化され、新しい Google Ads 対象者を自動的に作成できます。 
 - Marketo: 新しいバージョンの Marketo エクスポート コネクタでは、Marketo ID のサポートを提供し、データの重複を回避し、既存のレコードを更新し、Marketo で新しいレコードを作成できます。 
-
 
 ## <a name="february-2022-updates"></a>2022 年 2 月の更新プログラム
 
