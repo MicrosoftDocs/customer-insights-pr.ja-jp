@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833564"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011617"
 ---
 # <a name="how-to-create-a-new-environment"></a>新しい環境を作成する方法
 
@@ -67,6 +67,7 @@ ms.locfileid: "8833564"
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>ステップ 3: Microsoft Dataverse に接続する
 
 **Microsoft Dataverse** ステップを使用すると、Customer Insights を Dataverse 環境に接続できます。 データを Dataverse と共有し、Dynamics 365 Marketing や Power Apps のモデル駆動型アプリケーションなど、Dataverse に基づくビジネス アプリケーションでデータを使用します。
+
 
 独自の Dataverse 環境がない場合は、このフィールドを空白のままにすると、環境が作成されます。
 

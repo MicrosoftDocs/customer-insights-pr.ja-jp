@@ -1,19 +1,19 @@
 ---
 title: Customer Insights データを SFTP ホストにエクスポートする (ビデオを含む)
 description: SFTP ロケーションへの接続とエクスポートを構成する方法を説明します。
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646757"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947190"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>セグメントとその他のデータを SFTP にエクスポート (プレビュー)
 
@@ -28,8 +28,8 @@ ms.locfileid: "8646757"
 ## <a name="known-limitations"></a>既知の制限
 
 - ファイアウォールの SFTP デスティネーションは現在サポートされていません。 
-- エクスポートの実行時間は、システムのパフォーマンスによって異なります。 サーバーの最小構成としては、2 つの CPU コアと 1Gb のメモリをお勧めします。 
-- 2 つの CPU コアと 1Gb のメモリの推奨される最小構成を使用する場合、最大 1 億件の顧客プロファイルを持つエンティティのエクスポートには 90 分かかる場合があります。 
+- エクスポートの実行時間は、システムのパフォーマンスによって異なります。 サーバーの最小構成としては、2 つの CPU コアと 1Gb のメモリをお勧めします。
+- 2 つの CPU コアと 1Gb のメモリの推奨される最小構成を使用する場合、最大 1 億件の顧客プロファイルを持つエンティティのエクスポートには 90 分かかる場合があります。
 
 ## <a name="set-up-connection-to-sftp"></a>SFTP への接続を設定する
 
@@ -64,13 +64,17 @@ ms.locfileid: "8646757"
 1. エクスポートするエンティティ (セグメントなど) を選択します。
 
    > [!NOTE]
-   > 選択した各エンティティは、エクスポート時に最大 5 つの出力ファイルに分割されます。 
+   > 選択した各エンティティは、エクスポート時に最大 5 つの出力ファイルに分割されます。
 
 1. **保存** を選択します。
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。
+[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
+
+> [!TIP]
+> 大量のデータを含むエンティティのエクスポートでは、エクスポートごとに同じフォルダーに複数の CSV ファイルが作成される場合があります。 エクスポートの分割は、エクスポートの完了にかかる時間を最小限にするためのパフォーマンス上の理由で実施されます。
 
 ## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 

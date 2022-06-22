@@ -1,7 +1,7 @@
 ---
 title: Unified customer profile を強化する
 description: 機能を使用して、顧客データを強化します。
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800611"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954047"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>顧客プロファイルを拡充させる (プレビュー版)
 
@@ -35,29 +35,29 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 # <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
+- LiveRamp AbiliTec が提供する [AbiliTec ID](enrichment-liveramp.md)
 - Microsoft が提供する [ブランド](enrichment-microsoft.md)
-- Microsoft が提供する [関心](enrichment-microsoft.md)
-- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 
 - Experian が提供する [人口統計情報](enrichment-experian.md)
-- セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
-- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
-- HERE Technologies が提供する [位置データ](enrichment-here.md) 
-- LiveRamp AbiliTec が提供する [ID](enrichment-liveramp.md)
+- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md)
+- Microsoft が提供する [関心](enrichment-microsoft.md)
+- Microsoft Azure Maps が提供する [場所データ](enrichment-azure-maps.md)
+- HERE Technologies が提供する [位置データ](enrichment-here.md)
+- セキュリティで保護されたファイル転送プロトコル (SFTP) による [SFTP カスタム データ](enrichment-SFTP-custom-import.md)
 
 # <a name="business-accounts-b-to-b"></a>[事業取引先企業 (B2B)](#tab/b2b)
 
-- Leadspace が提供する [会社データ](enrichment-leadspace.md)
-- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md) 
-- Microsoft 提供による[強化された会社データ](enrichment-enhanced-company-data.md)
-- HERE Technologies が提供する [位置データ](enrichment-here.md) 
-- セキュリティで保護されたファイル転送プロトコル (SFTP) による [カスタム データ](enrichment-SFTP-custom-import.md) 
-- Microsoft が提供する [Azure Maps](enrichment-azure-maps.md)
-- Dun & Bradstreet が提供する [会社データ](enrichment-dnb.md)
 - Microsoft 提供の[アカウント エンゲージメント データ](enrichment-office.md)
+- Dun & Bradstreet が提供する [会社データ](enrichment-dnb.md)
+- Leadspace が提供する [会社データ](enrichment-leadspace.md)
+- Microsoft が提供する [拡張住所](enrichment-enhanced-addresses.md)
+- Microsoft 提供による[強化された会社データ](enrichment-enhanced-company-data.md)
+- Microsoft Azure Maps が提供する [場所データ](enrichment-azure-maps.md)
+- HERE Technologies が提供する [位置データ](enrichment-here.md)
+- セキュリティで保護されたファイル転送プロトコル (SFTP) による [SFTP カスタム データ](enrichment-SFTP-custom-import.md)
 
 ---
 
-**自分のエンリッチメント** タブでは、設定した拡充を表示し、そのプロパティを編集することができます。
+**自分のエンリッチメント** タブでは、設定した拡充を表示し、そのプロパティを編集することができます。 また、エンリッチメントから[セグメント](segments.md)や[メジャー](measures.md)を作成することも可能です。
 
 ## <a name="manage-existing-enrichments"></a>既存のエンリッチメントの管理
 
@@ -81,36 +81,45 @@ Microsoft やその他のパートナーなどのソースからのデータを�
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>同じ種類の複数のエンリッチメント
 
-強化されるエンティティは、エンリッチメントの構成中に指定され、プロファイルのサブセットのみを強化できます。 たとえば、特定のセグメントのデータのみをエンリッチします。 同じ種類の複数のエンリッチメントを構成し、同じ接続を再利用できます。 一部のエンリッチメントには、作成できる同じ種類のエンリッチメントの数に制限があります。 制限と現在の使用状況は **エンリッチメント** ページで確認できます。
+強化されるエンティティは、エンリッチメントの構成中に指定され、プロファイルのサブセットのみを強化できます。 たとえば、特定のセグメントのデータのみをエンリッチします。 同じ種類の複数のエンリッチメントを構成し、同じ接続を再利用できます。 一部のエンリッチメントには、作成できる同じ種類のエンリッチメントの数に制限があります。 制限と現在の使用状況は、**エンリッチメント** ページの **検出** タブで各タイルに表示されます。
 
 ## <a name="enrich-data-sources-before-unification"></a>統合前にデータ ソースをエンリッチする
 
 データ統合前に顧客データをエンリッチして、データ照合の品質を向上させることができます。 詳細については、[データ ソース エンリッチメント](data-sources-enrichment.md) を参照してください。
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>エンリッチメント プロセスの進捗状況を確認する
+## <a name="run-or-refresh-enrichments"></a>エンリッチメントの実行または更新
+
+1. エンリッチメント処理を開始するには、**実行** を選択します。 または、[スケジュール更新](system.md#schedule-tab) の一部として、システムにエンリッチメントを自動的に実行させることもできます。 処理時間は、顧客データのサイズによって異なります。
+
+1. オプションで、[エンリッチメントプロセスの進捗状況を確認](#see-the-progress-of-the-enrichment-process)します。
+
+1. エンリッチメントプロセスが完了したら、**自分のエンリッチメント** で新しくエンリッチされた顧客プロファイルデータ、最終更新時刻、エンリッチされたプロファイルの数を確認できます。
+
+1. エンリッチメントを選択すると、[エンリッチメントの結果](#enrichment-results)が表示されます。
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>エンリッチメント プロセスの進捗状況を確認する
 
 エンリッチメントの処理に関する詳細 (更新中または更新完了後のステータスや潜在的な問題など) を確認できます。 エンリッチメントを更新するためにどのようなプロセスがあり、そのプロセスの実行にどのくらいの時間がかかったのかを理解する。 エンリッチメントの状態は、Experian、Leadspace、HERE Technologies、SFTP Import、Azure Maps で確認できます。
 
-エンリッチメントの状態を確認する方法
-
-1. **データ** > **エンリッチメント** に移動します。 
-1. **マイ エンリッチメント** タブで、エンリッチメントの状態を選択してサイド ペインを開きます。 
-1. **進捗状況の詳細** ペインで、**エンリッチメント** セクションを展開します。 
-1. 進行状況を確認するエンリッチメントの配下で、**詳細を表示する** を選択します。 
-1. **タスクの詳細** ペインで、**詳細を表示する** を選択してエンリッチメントとその状態の更新に関連するプロセスを確認します。 
+1. **データ** > **エンリッチメント** に移動します。
+1. **自分のエンリッチメント** タブで、エンリッチメントのステータスを選択してサイド ペインを開きます。
+1. **進捗状況の詳細** ペインで、**エンリッチメント** セクションを展開します。
+1. 進行状況を確認するエンリッチメントの配下で、**詳細を表示する** を選択します。
+1. **タスクの詳細** ペインで、**詳細を表示する** を選択してエンリッチメントとその状態の更新に関連するプロセスを確認します。
 
 ## <a name="enrichment-results"></a>強化の結果
 
 エンリッチメントの実行が完了したら、エンリッチメントの結果を確認できます。
 
-1. **データ** > **エンリッチメント** に移動します。 
-1. 情報が必要なエンリッチメントを選択します。
+1. **データ** > **エンリッチメント** に移動します。
+1. **自分のエンリッチメント** タブで、情報が必要なエンリッチメントを選択します。
 
-すべてのエンリッチメントには、エンリッチメントされたプロファイルの数、生成されたエンリッチメント エンティティのプレビュー、一定期間のエンリッチメントされたプロファイルの数などの基本情報が表示されます。 可能な場合は、**エンリッチされた顧客のフィールドごとの数** に各エンリッチされたフィールドのカバレッジへのドリルダウンを提供します。
+すべてのエンリッチには、エンリッチされたプロファイルの数、時間経過によるエンリッチ プロファイルの数などの基本情報が表示されます。 **エンリッチされた顧客プレビュー** タイルには、生成されたエンリッチメント エンティティのサンプルが表示されます。 詳細表示を見るには、**その他** を選択し、**データ** タブを選択します。
 
 :::image type="content" source="media/enrichments-results.png" alt-text="エンリッチメントの結果ページ。":::
 
-一部のエンリッチメントには、エンリッチメントのタイプに固有の情報も表示されます。 詳細については、関連するエンリッチメントのドキュメントを参照してください。
+可能な場合は、**エンリッチされた顧客のフィールドごとの数** に各エンリッチされたフィールドのカバレッジへのドリルダウンを提供します。
 
+一部のエンリッチメントには、エンリッチメントのタイプに固有の情報も表示されます。 詳細については、関連するドキュメントを参照してください。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

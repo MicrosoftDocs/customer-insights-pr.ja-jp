@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646775"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947236"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>セグメントリストおよびその他のデータを Azure Data Lake Storage Gen2 (プレビュー) にエクスポートする
 
@@ -21,11 +21,9 @@ Customer Insights データを Data Lake Storage Gen2 アカウントに保存�
 
 ## <a name="known-limitations"></a>既知の制限
 
-1. Azure Data Lake Storage Gen2 の場合、データレイクのストレージアカウントを作成するとき、[標準パフォーマンスとプレミアム パフォーマンス レベル](/azure/storage/blobs/create-data-lake-storage-account)のいずれかを選択できます。 プレミアム パフォーマンス レベルを選択する場合は、アカウント タイプとしてプレミアム ブロック BLOB を選択します。 
+1. Azure Data Lake Storage Gen2 の場合、データレイクのストレージアカウントを作成するとき、[標準パフォーマンスとプレミアム パフォーマンス レベル](/azure/storage/blobs/create-data-lake-storage-account)のいずれかを選択できます。 プレミアム パフォーマンス レベルを選択する場合は、アカウント タイプとしてプレミアム ブロック BLOB を選択します。
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Azure Data Lake Storage Gen2 への接続を設定する 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Azure Data Lake Storage Gen2 への接続を設定する
 
 1. **管理** > **接続** に移動します。
 
@@ -39,7 +37,7 @@ Customer Insights データを Data Lake Storage Gen2 アカウントに保存�
     - Azure Data Lake Storage Gen2 で使うストレージ アカウントを作成する方法を学ぶには、[ストレージアカウントを作成する](/azure/storage/blobs/create-data-lake-storage-account)を参照します。 
     - Azure Data Lake Gen2 のストレージ アカウント名とアカウント キーの詳細については、[Azure ポータルでストレージ アカウントの設定を管理する](/azure/storage/common/storage-account-manage) を参照してください。
 
-1. **保存** を選択して、接続を完了します。 
+1. **保存** を選択して、接続を完了します。
 
 ## <a name="configure-an-export"></a>エクスポートの構成
 
@@ -57,8 +55,12 @@ Customer Insights データを Data Lake Storage Gen2 アカウントに保存�
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。
+[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
 
-エクスポート データは、構成した Azure Data Lake Gen 2 のストレージ コンテナーに保存されます。 
+エクスポート データは、構成した Azure Data Lake Gen 2 のストレージ コンテナーに保存されます。
+
+> [!TIP]
+> 大量のデータを含むエンティティのエクスポートでは、エクスポートごとに同じフォルダーに複数の CSV ファイルが作成される場合があります。 エクスポートの分割は、エクスポートの完了にかかる時間を最小限にするためのパフォーマンス上の理由で実施されます。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

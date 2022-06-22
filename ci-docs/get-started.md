@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833581"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011985"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の使用の開始
 
@@ -39,7 +39,7 @@ Customer Insights に初めてログインする際は、設定を構成して�
 
 統合プロファイルは、データを洞察し、アクションを実行するための基盤となります。 様々なソースからデータを取り込み、データの統一プロセスを実行して、統一されたプロファイルを組み合わせます。 取り込んだエンティティ間のリレーションシップを指定し、エンリッチメント機能を使用してプロファイルに情報を追加します。
 
-1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Power Query コネクタ](connect-power-query.md)、[Common Data Model フォルダー](connect-common-data-model.md)、[Microsoft Dataverse](connect-dataverse-managed-lake.md) の中から選択します。
+1. 複数のオプションからデータ ソースを作成してデータを取り込みます。 [Common Data Model を含む Azure Data Lake Storage ](connect-common-data-model.md)、[Azure Synapse Analytics](connect-synapse.md)、[Microsoft Dataverse](connect-dataverse-managed-lake.md)、[Power Query コネクタ](connect-power-query.md)の中から選択します。
 
 1. [ソース フィールド](map-entities.md)を識別し、[重複](remove-duplicates.md)を削除し、[条件を一致](match-entities.md)させ、[フィールドを統合](merge-entities.md)することにより、[データ統合プロセス](data-unification.md)を実行します。
 

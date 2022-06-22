@@ -1,88 +1,80 @@
 ---
 title: データ ソースを使用してデータを取り込む
 description: さまざまなソースからデータをインポートする方法について説明します。
-ms.date: 03/18/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800472"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011755"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
+Dynamics 365 Customer Insights は、幅広いソースからデータを持ち込むための接続を提供します。 データ ソースへの接続は、多くの場合、*データ取り込み* のプロセスと呼ばれます。 データを取り込んだ後、パーソナライズされた体験を構築するために、データを[統一](data-unification.md)し、分析情報を生成し、活性化することができます。
 
+## <a name="add-data-sources"></a>データ ソースの追加
 
-Dynamics 365 Customer Insights は、さまざまなソースからのデータに接続します。 データ ソースへの接続は、多くの場合、*データ取り込み* のプロセスと呼ばれます。 データを取り込んだ後、[統合](data-unification.md) およびアクションを実行できます。
+Customer Insights にデータソースを添付したり、インポートしたりすることができます。 以下のリンクは、データソースを追加する手順を提供します。
 
-## <a name="add-a-data-source"></a>データ ソースの追加
+**データ ソースを添付する**
 
-選択したオプションに応じて、データ ソースを追加する方法については、詳細な記事を参照してください。
+Microsoft の Azureデータ サービスのいずれかにデータが準備されている場合、Customer Insights はデータを再テストすることなく、簡単にデータソースに接続することができます。 次のいずれかのオプションを選択してください。
+- [Azure Data Lake Storage (Common Data Model 内の csv ファイルまたは Parquet ファイル)](connect-common-data-model.md)
+- [Azure Synapse Analytics (Lake データベース)](connect-synapse.md)
+- [Microsoft Dataverse データ レイク](connect-dataverse-managed-lake.md)
 
-データ ソースとして次のデータを追加できます:
+**インポートと変換**
 
-- [多数の Power Query コネクタから](connect-power-query.md)
-- [Common Data Model フォルダーから](connect-common-data-model.md)
-- [自分の Microsoft Dataverse レイク から](connect-dataverse-managed-lake.md)
-- [Azure Synapse Analytics データベースから](connect-synapse.md)
+オンプレミスのデータソース、Microsoft、またはサードパーティのデータを使用する場合は、Power Query コネクタを使用してデータをインポートおよび変換します。
+- [Power Query コネクタ](connect-power-query.md)
 
-## <a name="add-data-from-on-premises-data-sources"></a>オンプレミスのデータ ソースからデータを追加する
+## <a name="review-data-sources"></a>データ リソースのレビュー
 
-オンプレミスのデータ ソースからのデータの取り込みは、Microsoft Power Platform データフローに基づいてサポートされています。 Customer Insights でデータフローを有効にするには、環境を設定するときに[Microsoft Dataverse 環境 URL の提供](create-environment.md)を参照してください。
-
-Dataverse 環境を Customer Insights に関連付けた後に作成されるデータ ソースは、既定で[Power Platform データフロー](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)を使用します。 データフローは、データ ゲートウェイを使用したオンプレミス接続をサポートします。 [オンプレミスのデータ ゲートウェイを使用して](/data-integration/gateway/service-gateway-app)、Dataverse 環境が関連付けられる前に存在するデータソースを削除して再作成できます。
-
-既存の Power BI または Power Apps 環境からのデータ ゲートウェイが表示され、Customer Insights で再利用できます。 データ ソース ページには、Microsoft Power Platform 環境に移動するためのリンクが表示され、オンプレミスのデータ ゲートウェイを表示および構成することができます。
-
-> [!IMPORTANT]
-> ゲートウェイが最新バージョンに更新されていることを確認してください。 更新プログラムをインストールして、ゲートウェイ画面に表示されるプロンプトから直接ゲートウェイを再構成するか、[最新バージョンをダウンロードする](https://powerapps.microsoft.com/downloads/)ことができます。 最新のゲートウェイ バージョンを使用しない場合、データフローの更新は失敗し、**キーワードはサポートされていません: 構成プロパティ。パラメータ名: キーワード** のようなエラーメッセージが表示されます。。
-
-## <a name="review-ingested-data"></a>取り込んだデータのレビュー
-環境に Power Platform データフローが含まれる場合、**データ ソース** ページには以下の 3 つのセクションがリストされます。 
-- **共有済み**: すべての Customer Insights 管理者が管理できるデータソース。 Power BI データフロー、独自のストレージ アカウント、および Dataverse マネージド データ レイクは、共有データ ソースの一例です。
-- **自分の管理対象**: 自分がだけが作成して管理できる Power Platform データフロー。 他の Customer Insights 管理者は、これらのデータフローを表示することはできますが、編集、更新、または削除することはできません。
+ご利用の環境が Customer Insights ストレージを使用するように構成され、オンプレミスのデータソースを使用している場合、Power Platform データフローを使用します。 Power Platform データフローでは、共有データソースと他のユーザーが管理するデータソースを表示できます。 **データソース** ページには、データソースが 3 つのセクションにリストされています。
+- **共有済み**: すべての Customer Insights 管理者が管理できるデータソース。 Power Platform データフロー、独自のストレージ アカウント、Dataverse マネージド データ レイクは、共有データ ソースの一例です。
+- **自分の管理対象**: 自分がだけが作成して管理できる Power Platform データフローです。 他の Customer Insights 管理者は、これらのデータフローを表示することはできますが、編集、更新、または削除することはできません。
 - **他のユーザーの管理対象**: 他の管理者によって作成された Power Platform データフロー。 自分は表示のみ可能です。 支援が必要な場合に連絡するデータフローの所有者のリストが表示されます。
 > [!NOTE]
-> すべてのエンティティは、他のユーザーが表示および使用できます。 ユーザーのコンテキスト性はデータ ソースにのみ適用され、これらのデータフローから生じるエンティティには適用されません。
+> すべてのエンティティは、他のユーザーが表示および使用できます。 データソースはそれらを作成したユーザーが所有しますが、データの取り込みから得られたエンティティは、Customer Insights のすべてのユーザーが使用できます。
 
-Power Platform データフローが使用されない場合、グループやセクションは表示されません。 **データ ソース** ページには、すべてのデータ ソースのリストのみが含まれています。
+Power Platform データフローを使用しない環境の場合、**データソース** ページには、すべてのデータソースのリストのみが表示されます。 セクションは表示されません。
 
-取り込んだ各データ ソースの名前、状態、ソースのデータが最後に更新された時刻が表示されます。 データ ソースの一覧を列ごとに並べ替えることができます。
+**データ** > **データ ソース** に移動すると、取り込まれた各データソースの名前、ステータス、およびそのデータソースの前回のリフレッシュが表示されます。 データ ソースの一覧を列ごとに並べ替えることができます。
 
-> [!div class="mx-imgBorder"]
-> ![データ ソースが追加されました。](media/configure-data-datasource-added.png "追加されたデータ ソース")
+:::image type="content" source="media/configure-data-datasource-added.png" alt-text="データ ソースが追加されました。":::
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、**エンティティ** ページから取り込んだデータをレビューできます。 詳細については、[エンティティ](entities.md) を参照してください。
 
-## <a name="refresh-a-data-source"></a>データ ソースの更新
+## <a name="refresh-data-sources"></a>データ ソースの更新
 
-データ ソースは、自動スケジュールで更新することも、オンデマンドで手動で更新することもできます。 
+データ ソースは、自動スケジュールで更新することも、オンデマンドで手動で更新することもできます。 [オンプレミスのデータソース](connect-power-query.md#add-data-from-on-premises-data-sources)データの取り込み中に設定された独自のスケジュールで更新します。 接続されたデータソースの場合、データの取り込みは、そのデータ ソースから利用可能な最新のデータを消費します。
 
-**管理** > **システム** > [**スケジュール**](system.md#schedule-tab) に移動し、取り込まれたデータ ソースすべてのスケジュール済みの更新を構成します。
+**管理者** > **システム** > [**スケジュール**](system.md#schedule-tab)にアクセスし、取り込んだデータソースのシステムスケジュールによる更新を構成します。
 
 オンデマンドでデータ ソースを更新するには、次の手順を実行します:
 
 1. **データ** > **データ ソース** にアクセスします。
 
-2. 更新するデータ ソースの横にある垂直の省略記号 (&vellip;) を選択し、ドロップダウン リストから **更新** を選択します。
+1. 更新するデータ ソースの横にある垂直の省略記号 (&vellip;) を選択し、ドロップダウン リストから **更新** を選択します。 これで、データ ソースが手動で更新されるようになりました。 データ ソースを更新すると、データ ソースで指定されたすべてのエンティティのエンティティ スキーマとデータの両方が更新されます。
 
-3. これで、データ ソースが手動で更新されるようになりました。 データ ソースを更新すると、データ ソースで指定されたすべてのエンティティのエンティティ スキーマとデータの両方が更新されます。
-
-4. 既存の更新をキャンセルし、データ ソースを最後の更新状態に戻す場合は、**更新の停止** を選択します。
+1. 既存の更新をキャンセルし、データ ソースを最後の更新状態に戻す場合は、**更新の停止** を選択します。
 
 ## <a name="delete-a-data-source"></a>データ ソースの削除
+
+データ ソースは、データが統合、分析情報、アクティブ化、エクスポートなどの処理で使用されていない場合にのみ削除できます。
 
 1. **データ** > **データ ソース** にアクセスします。
 

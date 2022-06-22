@@ -1,19 +1,19 @@
 ---
 title: GDPR におけるデータ主体の権利 (DSR) | Microsoft Docs
 description: Dynamics 365 Customer Insights のデータ主体の要求への応答。
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808567"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947374"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR におけるデータ主体の権利 (DSR)
 
@@ -77,11 +77,5 @@ Customer Insights 管理者は、次の手順に従って Customer Insights ユ�
 1. 要求でユーザーのメールアドレスを指定して、D365CI@microsoft.com にメールを送ります。 Customer Insights チームは、登録されたテナント管理者のメール アドレスにメールを送信し、データのエクスポートの確認を求めます。
 2. 要求されたユーザーのデータをエクスポートするにあたっての確認をします。
 3. テナント管理者のメールアドレスからエクスポートされたデータを受け取ります。
-
-## <a name="consent-management-preview"></a>同意の管理 (プレビュー)
-
-同意管理機能は、ユーザー データを直接収集しません。 他のアプリケーションのユーザーから提供された同意データのみをインポートして処理します。
-
-特定のユーザーに関する同意データを削除するには、同意管理機能に取り込まれたデータ ソースで削除します。 データ ソースを更新すると、削除されたデータは同意センターでも削除されます。 同意エンティティを使用するアプリケーションは、[更新](system.md#refresh-processes) 後にソースで削除されたデータも削除します。 他のすべてのプロセスおよびアプリケーションからユーザーのデータを削除するために、データ主体の要求に応答した後、データ ソースをすばやく更新することをお勧めします。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

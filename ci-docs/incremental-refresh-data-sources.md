@@ -1,26 +1,26 @@
 ---
-title: Power Query ベースのデータ ソースの増分更新
-description: Power Query ベースの大規模なデータ ソースの新規データおよび更新データを最新の情報に更新します。
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Power Query と Azure Data Lake のデータソースの増分更新
+description: Power Query または Azure Data Lake のデータソースに基づく大規模データソースの新規、および更新データを更新します。
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647188"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012031"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query ベースのデータ ソースの増分更新
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Power Query と Azure Data Lake のデータソースの増分更新
 
-この記事では、Power Query ベースのデータ ソースの増分更新を構成する方法について説明します。
+この記事では、Power Query、または Azure Data Lake ベースのデータ ソースの増分更新を構成する方法について説明します。
 
 データ ソースの増分更新には、次の利点があります:
 
@@ -28,13 +28,11 @@ ms.locfileid: "8647188"
 - **安定性の増加** - 更新の規模を縮小化することで、揮発性のソース システムへの接続を長期間維持する必要がなくなり、接続の問題が発生するリスクが軽減されます。
 - **リソース消費の軽減** - データ全体の一部のみを更新することで、コンピューター上のリソース使用効率が向上し、環境への負荷が軽減します。
 
-## <a name="configure-incremental-refresh"></a>増分更新を構成する
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query に基づくデータソースの増分更新を構成する
 
 Customer Insights により、増分取り込みをサポートする Power Query を使用してインポートされるデータ ソースの増分更新ができます。 たとえば、データ レコードが最後に更新された日付と時刻のフィールドを持つ Azure SQL データベースなどです。
 
 1. [Power Query ベースの新しいデータ ソースを作成します](connect-power-query.md)。
-
-1. データ ソースの **名前** を入力してください。
 
 1. [Azure SQL データベース](/power-query/connectors/azuresqldatabase)などの、増分更新に対応するデータ ソースを選択します。
 
@@ -48,7 +46,7 @@ Customer Insights により、増分取り込みをサポートする Power Quer
 
 1. **増分更新の設定** にて、データ ソースの作成時に選択したすべてのエンティティーの増分更新を構成します。
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="データソースのエンティティの増分更新を設定する。":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="増分更新の設定を更新する。":::
 
 1. エンティティを選択し、次の詳細を指定します：
 
@@ -58,5 +56,31 @@ Customer Insights により、増分取り込みをサポートする Power Quer
 
 1. **保存** を選択して、データ ソースの作成を完了します。 最初のデータ更新は全体の更新になります。 その後の更新からは、上記手順で設定したように増分の更新が行われます。
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Azure Data Lake データソースの増分更新の構成
+
+Customer Insightsは、Azure Data Lake Storage に接続されたデータソースの増分更新を可能にします。 エンティティに対して増分インジェストと更新を使用するには、Azure Data Lake データソースの追加時、またはそれ以降のデータソースの編集時にそのエンティティを構成します。 エンティティ データ フォルダには、次のフォルダが含まれている必要があります:
+
+- **FullData**: フォルダには、初期レコードを含むデータ ファイルが必要です
+- **IncrementalData**: 増分更新を含む **yyyy/mm/dd/hh** 形式の日付/時刻階層フォルダです。 **hh** は更新の UTC 時間を表し、**Upserts** と **Deletes** フォルダが含まれています。 **Upserts** は、既存レコードの更新や新規レコードを含むデータファイルです。 **削除** には、削除するレコードのあるデータ ファイルが含まれています。
+
+1. データソースを追加または編集する場合、そのエンティティの **属性** ペインに移動します。
+
+1. 属性を確認します。 作成日や最終更新日の属性が、*dateTime* **Data format** と *Calendar.Date* **セマンティックタイプ** で設定されていることを確認します。 必要に応じて属性を編集し、**完了** を選択します。
+
+1. **エンティティを選択** ペインで、エンティティを編集します。 **増分インジェスト** チェックボックスが選択されています。
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="データソースのエンティティの増分更新を設定する。":::
+
+   1. フルデータ、増分データのアップサート、増分データの削除のための .csv または .parquet ファイルを含むルートフォルダを参照してください。
+   1. フルデータと増分ファイルの両方の拡張子を入力します (\.csv または \.parquet)。
+   1. **保存** を選択します。
+
+1. **最終更新日** で、日付のタイムスタンプ属性を選択します。
+
+1. **主キー** が選択されていない場合は、主キーを選択します。 主キーは、エンティティに固有の属性です。 属性を有効な主キーにするには、重複する値、欠落している値、または null 値を含めないようにする必要があります。 文字列、整数、および GUID データ型属性が主キーとしてサポートされています。
+
+1. **閉じる** を選択し、ペインを保存して閉じます。
+
+1. データ ソースの追加または編集を続行します。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

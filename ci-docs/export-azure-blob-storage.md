@@ -1,19 +1,19 @@
 ---
 title: Customer Insights データを Azure Blob Storage にエクスポートする
 description: Blob Storage への接続とエクスポートを構成する方法を説明します。
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757392"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947144"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>セグメント リストとその他のデータを Azure Blob Storage にエクスポートする (プレビュー)
 
@@ -58,16 +58,19 @@ Customer Insights データを Blob Storage に保存するか、それを使用
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。     
+エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。
 
-[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
+[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
 
 エクスポート データは、構成した Blob Storage コンテナーに保存されます。 以下のフォルダー パスが自動的にコンテナーに作成されます。
 
 - システムによって生成されたソース エンティティとエンティティの場合:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - 例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > 大量のデータを含むエンティティのエクスポートでは、エクスポートごとに同じフォルダーに複数の CSV ファイルが作成される場合があります。 エクスポートの分割は、エクスポートの完了にかかる時間を最小限にするためのパフォーマンス上の理由で実施されます。
+
 - エクスポートされたエンティティの model.json は、%ExportDestinationName% レベルです。  
   - 例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

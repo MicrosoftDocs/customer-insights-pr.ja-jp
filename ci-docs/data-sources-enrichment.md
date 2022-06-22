@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800287"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011479"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>データ ソースのエンリッチメント (プレビュー)
 
@@ -29,9 +29,11 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 
 1. エンリッチするデータ ソースの横にある垂直の省略記号 (&vellip;) を選択して、**エンリッチ** を選択します。
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="データ ソースのエンリッチメント ページ。":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="エンリッチが強調表示されたデータ ソース ページ":::
 
    **検出** タブに [サポートされているデータ ソース エンリッチメント オプション](#supported-data-source-enrichments) が表示されます。
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="データ ソースのエンリッチメント ページ。":::
 
 1. **データのエンリッチ** を選択し、データ ソース エンリッチメントを構成します。 出力エンティティ名は自動的に設定されます。
 

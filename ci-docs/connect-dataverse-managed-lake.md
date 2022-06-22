@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800179"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011709"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
-この記事では、Dataverseユーザーが Microsoft Dataverse 管理レイクの分析エンティティにすばやく接続する方法について説明しています。 
+Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイクにある分析エンティティに素早く接続することができます。
 
 > [!NOTE]
 > 進んで、管理レイクで使用できるエンティティのリストを表示するには、Dataverse 組織の管理者である必要があります。
@@ -32,40 +32,34 @@ ms.locfileid: "8800179"
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Dataverse マネージド レイクに接続する
 
-1. Customer Insights で、 **データ** > **データソース** に移動します。
+1. **データ** > **データ ソース** にアクセスします。
 
-2. **データソースの追加** を選択します。
+1. **データソースの追加** を選択します。
 
-3. **Microsoft Dataverse** を選び、**次へ** を選択します。
+1. **Microsoft Dataverse** を選択します。
 
-4. データソースの **名前** を入力し、 **次へ** を選択します。 
+1. データソースの **名前** とオプションの **説明** を入力します。
 
-5. Dataverse の組織で使用する **サーバーアドレス** を入力し、**サインイン** を選択します。
+1. Dataverse の組織で使用する **サーバーアドレス** を入力し、**サインイン** を選択します。
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="データ取り込みの手順で、ユーザーが Dataverse 環境の URL を入力する画面。":::
-
-6. 使用可能なリストから、エンティティとして Customer Insights に取り込むテーブルを選択します。    
+1. 使用可能なリストから、エンティティとして Customer Insights に取り込むテーブルを選択します。
 
    > [!NOTE]
    > 既に選択されているテーブルは、他の Dynamics 365 アプリケーション (例: Dynamics 365 Sales Insights や Customer Service Insights) で使用されている可能性があります。 この選択を変更することはできません。 これらのテーブルは、データソースが作成されると、エンティティとして利用できるようになります。
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dataverse 環境内のエンティティのリストを表示するダイアログ ボックス。":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dataverse 環境内のエンティティのリストを表示するダイアログ ボックス。":::
 
-7. 選択した内容を保存すると、Dataverse から選択したテーブルの同期が始まります。 新しく追加された接続は、**データソース** ページで確認することができます。 選択されたすべてのテーブルが同期されるまで、更新のキューに入り、エンティティ数が 0 と表示されます。
+1. 選択した内容を保存すると、Dataverse から選択したテーブルの同期が始まります。 新しく追加された接続は、**データソース** ページで確認することができます。 選択されたすべてのテーブルが同期されるまで、更新のキューに入り、エンティティ数が 0 と表示されます。
 
 環境のデータ ソース は 1 つだけで、同じ Dataverse が管理するレイクを同時に使用できます。
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Dataverse マネージド レイク データ ソースを編集する
 
-データ ソースを作成した後に、エンティティの選択を編集します。 例えば、Dataverse に追加のエンティティが追加されており、これらもインポートしたいとします。    
+データ ソースを作成した後に、エンティティの選択を編集します。 例えば、Dataverse に追加のエンティティが追加されており、これらもインポートしたいとします。
 別の Dataverse Data Lakeに接続するには、[新しいデータ ソースを作成します](#connect-to-a-dataverse-managed-lake)。
 
 1. **データ** > **データ ソース** にアクセスします。
 
-2. 更新するデータ ソースの横にある、垂直の省略記号 (&vellip;) を選択します。
+1. 更新するデータ ソースの横にある、**編集** を選択します。
 
-3. リストから **編集** オプションを選択します。
-
-4. 使用可能なエンティティのリストから追加するエンティティを選択し、**保存** を選択します。
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. 使用可能なエンティティのリストから追加するエンティティを選択し、**保存** を選択します。

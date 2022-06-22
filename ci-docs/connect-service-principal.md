@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833391"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011847"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure サービス プリンシパルを利用した Azure Data Lake Storage アカウントへの接続
 
@@ -51,7 +51,13 @@ Customer Insights の新しいサービス プリンシパルを作成する前�
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>ストレージ アカウントにアクセスするためにアクセス許可をサービス プリンシパルに付与する
 
-Azure ポータルに移動して、Customer Insights で使用するストレージ アカウントのサービス プリンシパルにアクセス許可を付与します。
+Azure ポータルに移動して、Customer Insights で使用するストレージ アカウントのサービス プリンシパルにアクセス許可を付与します。 次のいずれかの役割をストレージ アカウントまたはコンテナに割り当てる必要があります:
+
+|資格情報|要件|
+|----------|------------|
+|現在ログインしているユーザー|**役割**: ストレージ ブロブ データ リーダー、ストレージ ブロブ コントリビューター、またはストレージ ブロブ オーナー。<br>**レベル**: アクセス許可は、ストレージ アカウントまたはコンテナに対して付与することができます。</br>|
+|Customer Insights サービス プリンシパル -<br>データ ソースとしての Azure Data Lake Storage の使用</br>|オプション 1<ul><li>**役割**: ストレージ ブロブ データ リーダー、ストレージ ブロブ コントリビューター、またはストレージ ブロブ オーナー。</li><li>**レベル**: アクセス許可は、ストレージ アカウントに対して付与することができます。</li></ul>オプション 2 *(ストレージ アカウントへのサービス プリンシパル アクセスの共有なし)*<ul><li>**役割 1**: ストレージ ブロブ データ リーダー、ストレージ ブロブ コントリビューター、またはストレージ ブロブ オーナー。</li><li>**レベル**: アクセス許可は、コンテナに対して付与することができます。</li><li>**役割 2**: ストレージ ブログ データ デリゲーター。</li><li>**レベル**: アクセス許可は、ストレージ アカウントに対して付与することができます。</li></ul>|
+|Customer Insights サービス プリンシパル - <br>Azure Data Lake Storage を出力または宛先として使用する</br>|オプション 1<ul><li>**役割**: ストレージ ブロブ データ リーダー コントリビューター、またはストレージ ブロブ オーナー。</li><li>**レベル**: アクセス許可は、ストレージ アカウントに対して付与することができます。</li></ul>オプション 2 *(ストレージ アカウントへのサービス プリンシパル アクセスの共有なし)*<ul><li>**役割**: ストレージ ブロブ データ リーダー コントリビューター、またはストレージ ブロブ オーナー。</li><li>**レベル**: アクセス許可は、コンテナに対して付与することができます。</li><li>**役割 2**: ストレージ ブログ デリゲーター。</li><li>**レベル**: アクセス許可は、ストレージ アカウントに対して付与することができます。</li></ul>|
 
 1. [Azure 管理ポータル](https://portal.azure.com) に移動し、サインインにログインします。
 
@@ -62,7 +68,7 @@ Azure ポータルに移動して、Customer Insights で使用するストレ�
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="役割の割り当てを追加する際の Azure ポータルを示すスクリーンショット。":::
 
 1. **役割の割り当てを追加する** ペインで、次のプロパティを設定します:
-   - ロール: **ストレージ Blob データ共同作成者**
+   - 役割: 前述の資格情報に基づくストレージ ブロブ データ リーダー、ストレージ ブロブ コントリビューター、またはストレージ ブロブ オーナー。
    - アクセスの割当て先: **ユーザー、グループ、またはサービス プリンシパル**
    - メンバーの選択: **Customer Insights 向けの Dynamics 365 AI** (この手順の前半で確認した [サービス プリンシパル](#create-a-new-service-principal))
 

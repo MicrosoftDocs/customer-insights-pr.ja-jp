@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833682"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011526"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
 Customer Insights は、出力エンティティを [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) として使用可能にするオプションを提供します。 この統合により、ローコード/ノーコード アプローチによる簡単なデータ共有とカスタム開発が可能になります。 Dataverse 環境では、[出力エンティティ](#output-entities)をテーブルとして使用できます。 Dataverse テーブルに基づいて他のアプリケーションのデータを使用できます。 これらのテーブルにより、Power Automate でのワークフローの自動化や、Power Apps でのアプリ構築などのシナリオが有効になります。
 
-自分の Dataverse 環境を接続すると、[Power Platform データフローとゲートウェイを使用してオンプレミス データ ソースからデータを取り込む](data-sources.md#add-data-from-on-premises-data-sources)こともできます。
+自分の Dataverse 環境を接続すると、[Power Platform データフローとゲートウェイを使用してオンプレミス データ ソースからデータを取り込む](connect-power-query.md#add-data-from-on-premises-data-sources)こともできます。
 
 ## <a name="prerequisites"></a>前提条件
 

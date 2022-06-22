@@ -1,19 +1,19 @@
 ---
 title: Customer Insights データを Snapchat にエクスポート
 description: Snapchat への接続とエクスポートを構成する方法を説明します。
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647148"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947282"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>セグメントを Snapchat にエクスポート (プレビュー)
 
@@ -21,9 +21,10 @@ ms.locfileid: "8647148"
 
 ## <a name="prerequisites-for-a-connection"></a>接続の前提条件
 
--   [Snapchat ビジネス アカウント](https://business.snapchat.com/)、[Snapchat Ads アカウント](https://ads.snapchat.com/)、および対応する管理者資格情報がある。
+-   [Snapchat ビジネス アカウント](https://business.snapchat.com/)、[Snapchat Ads アカウント](https://ads.snapchat.com/)、および対応する管理者資格情報がある。 組織アカウントのメンバーであり、特定の Ad アカウントのデータ管理者であることが必要です。 
+-   Snapchat Audience Manager に SAM (Snap Audience Match) タイプの対象ユーザーが 1 人以上いること。 
 -   Customer Insights で [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
+-   エクスポートされたセグメントの Unified customer profile には、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
@@ -60,7 +61,7 @@ ms.locfileid: "8647148"
 
 1. **エクスポートの接続** フィールドで、Snapchat セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
 
-1. [**Snapchat 対象者 ID**](https://businesshelp.snapchat.com/s/article/custom-audiences) を入力します。
+1. [**Snapchat セグメント/対象者 ID**](https://businesshelp.snapchat.com/s/article/custom-audiences)を入力します。 対象ユーザー ID は、Snapchat Audience Manager でオーディエンスを選択した後の URL で確認することができます。 
 
 1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Snapchat にエクスポートする必要があります。
 

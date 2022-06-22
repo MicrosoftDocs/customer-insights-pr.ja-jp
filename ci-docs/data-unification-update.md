@@ -1,7 +1,7 @@
 ---
 title: 統合の設定を更新する
 description: 統合設定で重複ルール、一致規則、または統合フィールドを更新します。
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755596"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844046"
 ---
 # <a name="update-the-unification-settings"></a>統合の設定を更新する
 
@@ -43,8 +43,9 @@ ms.locfileid: "8755596"
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="統合オプションが強調表示されたデータ統合ページのスクリーンショット。":::
 
-   - 統合された顧客プロファイルを更新するには (依存関係の有無にかかわらず)、[顧客プロファイルの更新を実行する](#run-updates-to-the-unified-customer-profile)を参照してください。
-   - 統合プロファイルを更新せずに一致条件の品質を評価するには、[一致の条件を実行する](#run-matching-conditions)を参照してください。 **一致する条件のみを実行する** オプションは、単一のエンティティには表示されません。
+   - [マッチング条件を実行](#run-matching-conditions)することで、統一プロファイルを更新することなく、マッチング条件 (重複排除、マッチルール) の品質を迅速に評価することができます。 **一致する条件のみを実行する** オプションは、単一のエンティティには表示されません。
+   - [顧客プロファイルを統一](#run-updates-to-the-unified-customer-profile)して、マッチング条件を実行し、依存関係 (エンリッチメント、セグメント、メジャーなど) に影響を与えることなく Unified customer profile のエンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](system.md#schedule-tab)されたとおりに更新されます。
+   - [顧客プロファイルと依存関係を統一](#run-updates-to-the-unified-customer-profile)し、マッチング条件を実行し、Unified customer profile のエンティティおよびすべての依存関係 (エンリッチメント、セグメント、またはメジャーなど) を更新することができます。 すべてのプロセスが自動的に再実行されます。
 
 ## <a name="edit-source-fields"></a>ソース フィールドを編集する
 
@@ -135,11 +136,13 @@ ms.locfileid: "8755596"
 
 ## <a name="run-matching-conditions"></a>一致する条件を実行する
 
+一致条件を実行すると、重複排除と一致ルールのみが実行され、*Deduplication_* と *ConflationMatchPair* エンティティが更新されます。
+
 1. **データ** > **統合** ページに移動し、**一致する条件のみを実行する** を選択します。
 
-   **重複レコード** と **一致条件** タイル **には、キューに登録済み** また **更新中** と表示されます。
+   **重複レコード** と **一致条件** タイルには、**キューに登録済み**、または **更新中** と表示されます。
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. 一致プロセスが完了したら、**一致条件** タイルで **編集** を選択します。
 
@@ -153,10 +156,12 @@ ms.locfileid: "8755596"
 
 1. **データ** > **統合** ページに移動し、選択します。
 
-   - **顧客プロファイルを統合する**: 依存関係 (エンリッチメント、セグメント、メジャーなど) に影響を与えることなく、統合された顧客プロファイル エンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](system.md#schedule-tab)されたとおりに更新されます。
+   - **顧客プロファイルを統一** して、一致する条件を実行し、依存関係 (エンリッチメント、セグメント、またはメジャーなど) に影響を与えることなく、Unified customer profile エンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](system.md#schedule-tab)されたとおりに更新されます。
 
-   - **顧客プロファイルと依存関係を統合する**: 統合プロファイルとすべての依存関係を更新します。 すべてのプロセスが自動的に再実行されます。 すべてのダウンストリームプロセスが完了すると、更新されたデータは顧客プロファイルに反映されます。
+   - **顧客プロファイルと依存関係を統合する**: 一致する条件を実行し、統一されたプロファイルとすべての依存関係を更新します。 すべてのプロセスが自動的に再実行されます。 すべてのダウンストリームプロセスが完了すると、更新されたデータは顧客プロファイルに反映されます。
 
    **重複レコード**、**一致条件**、**統合された顧客フィールド** タイルに、**キューに登録済み** または **更新中** と表示されます。
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+正常に実行された結果は、統合された顧客プロファイルの数を示す **統合** ページに表示されます。

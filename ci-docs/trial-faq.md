@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833774"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011893"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版に関するよくあるご質問
 
@@ -66,7 +66,7 @@ ms.locfileid: "8833774"
 
 Customer Insights の有料インスタンスに初めてサインインすると、新しい環境を作成するよう求められます。 このプロセスでは、既存の環境から構成をコピーし、ほとんどの設定を移行することを選択できます。 上記の権限がある場合、このリストに試用環境が表示されます。 詳細については、[環境の構成をコピーする](create-environment.md#copy-the-environment-configuration)を参照してください。
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>試用版の使用制限とクォータはどれくらいですか?
+### <a name="what-are-the-trial-limits-and-quotas"></a>試用版の制限とクォータはどれくらいですか?
 
 - Customer Insights の試用版では、独自の Azure Data Lake Storage アカウントを使用して出力データを保存することはできません。 ただし、Data Lake ストレージ アカウントからデータを取り込むことができます。
 - Customer Insights 試用版を開始すると自動的にプロビジョニングされる Dataverse 環境には、最大 3GB までデータを保存できます。

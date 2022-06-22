@@ -1,95 +1,85 @@
 ---
 title: サードパーティのエンリッチメント HERE Technologies によるエンリッチメント
 description: HERE Technologies サードパーティ エンリッチメントに関する一般情報。
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c131ffb230a62b76e123334ff3c6776c8f9aa06e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646818"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953679"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies による顧客プロファイルの強化 (プレビュー)
 
-HERE Technologies は、位置中心のデータとサービスを提供するロケーション プラットフォーム企業です。 HERE Technologies のデータ エンリッチメント サービスを使用すると、住所の正規化、緯度と経度の抽出などにより、顧客のより正確な位置情報を把握できます。
+HERE Technologies は、位置中心のデータとサービスを提供するロケーション プラットフォーム企業です。 HERE Technologies のデータエンリッチメントサービスは、顧客の位置情報の精度を向上させます。 住所の正規化、緯度・経度の抽出などを行います。
 
 ## <a name="prerequisites"></a>前提条件
 
-HERE Technologies のエンリッチメントを構成するには、次の前提条件が満たされている必要があります:
+- 有効な HERE Technologies のサブスクリプション。 購読をご希望の方は、[こちらからご登録](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic)いただくか、[HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) に直接お問い合わせください。 [HERE Technologies 位置情報エンリッチメントの詳細。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE Technologies のアクティブなサブスクリプションがあること。 サブスクリプションを取得するには、[ここでサインアップする](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) か、または直接 [HERE Technologies に問い合わせ](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) を行うことができます。 [HERE Technologies 位置情報エンリッチメントの詳細。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- HERE [接続](connections.md)は、管理者が[構成](#configure-the-connection-for-here-technologies)します。
 
-- HERE [接続](connections.md) が利用可能であるか、*または* [管理者](permissions.md#admin) 権限と HERE Technologies API キーを所有していること。
+## <a name="configure-the-connection-for-here-technologies"></a>HERE Technologies の接続を構成する
 
-## <a name="configure-the-enrichment"></a>エンリッチメントの構成
+Customer Insights の[管理者](permissions.md#admin)で、有効な HERE Technologies  API キーを持っている必要があります。
 
-1. **データ** > **エンリッチメント** に移動します。 
+1. エンリッチメントの構成時に **つながりの追加** を選択するか、または **管理** > **接続**  に移動し、HERE Technologies タイルで **設定** を選択します。
 
-1. HERE Technologies タイルで **データのエンリッチ** を選択し、**開始する** を選択します。
+1. 接続の名前と有効な HERE Technologies API キーを入力します。
 
-   > [!div class="mx-imgBorder"]
-   > ![HERE Technologies タイル。](media/HERE-tile.png "HERE Technologies タイル")
+1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
 
-1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 管理者の場合は、**つながりの追加** を選択して接続を作成できます。 ドロップダウン リストから、**HERE Technologies** を選択します。 
+1. **確認** を選択して設定を確認し、**保存** を選択します。
 
-1. **HERE Technologies に接続する** を選択し、選択内容を確認します。
+   :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="HERE Technologies 接続構成ページ。":::
 
-1.  **次へ** を選択し、HERE Technologies の位置情報データで強化する **顧客データ セット** を選択します。 **顧客** エンティティを選択してすべての顧客プロファイルをエンリッチするか、セグメント エンティティを選択してそのセグメントに含まれる顧客プロファイルのみをエンリッチします。
-
-    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="顧客データ セットを選択するときのスクリーンショット。":::
-
-1. フィールドを住所 1 または住所 2、あるいはその両方にマップするかどうかを選択します。 両方の住所のフィールド マッピングを指定し、、両方の住所のプロファイルを別々に強化できます。 たとえば、自宅と会社の住所がある場合です。 **次へ** を選択します。
-
-1. HERE Technologies から一致する位置データを検索するために、統合プロファイルのどのフィールドを使用するかを定義します。 **番地 1** と **郵便番号** フィールドは、住所 1 または住所 2、あるいはその両方に必要です。 一致精度を高めるために、より多くのフィールドを追加できます。
-
-   > [!div class="mx-imgBorder"]
-   > ![HERE Technologies エンリッチメント構成ページ。](media/enrichment-HERE-configuration.png "HERE Technologies エンリッチメント構成ページ")
-
-1. **次へ** を選択し、フィールド マッピングを完了します。
-
-1. エンリッチメントの名前を入力します。 
-
-1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
-
-## <a name="configure-the-connection-for-here-technologies"></a>HERE Technologies の接続を構成する 
-
-接続を構成するには、管理者である必要があります。 エンリッチメントの構成時に **つながりの追加** を選択するか、*または* **管理** > **接続** に移動し、HERE Technologies タイルで **設定** を選択します。
-
-1. **表示名** ボックスに接続の名前を入力します。
-
-1. 有効な HERE Technologies API キーを入力します。
-
-1. 確認して、**同意する** を選択して、**データのプライバシーとコンプライアンス** に同意します。
-
-1. **検証** を選択して、構成を検証します。
-
-1. 検証が完了したら、**保存** を選択します。
-
-   > [!div class="mx-imgBorder"]
-   > ![HERE Technologies 接続構成ページ。](media/enrichment-HERE-connection.png "HERE Technologies 接続構成ページ")
-
-## <a name="enrichment-results"></a>強化の結果
-
-エンリッチ プロセスを開始するには、コマンド バーから **実行** を選択します。 [スケジュールされた更新](system.md#schedule-tab) の一部として、システムにエンリッチメントを自動的に実行させることもできます。 処理時間は、顧客データのサイズと HERE Technologies からの API 応答時間によって異なります。
-
-エンリッチメント プロセスが完了したら、**自分のエンリッチメント** で新しくエンリッチされた顧客プロファイル データを確認できます。 さらに、最後の更新の時刻とエンリッチされたプロファイルの数が表示されます。
-
-**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
-
-## <a name="next-steps"></a>次のステップ
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
+### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 
 Dynamics 365 Customer Insights による HERE Technologies へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、HERE Technologies がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
+## <a name="configure-the-enrichment"></a>エンリッチメントの構成
+
+1. **データ** > **エンリッチメント** に移動し、**検出** タブを選択します。
+
+1. HERE Technologies タイルから **場所** で  **データを充実させる** を選択します。
+
+   :::image type="content" source="media/HERE-tile.png" alt-text="HERE Technologies タイル。":::
+
+1. 概要を確認し、**次へ** を選択します。
+
+1. 接続を選択します。 利用できない場合は、管理者に連絡してください。
+
+1. **次へ** を選択します。
+
+1. **顧客データセット** を選択し、HERE Technologies からのデータでエンリッチするプロファイルまたはセグメントを選択します。 *顧客* エンティティは、すべての顧客プロファイルをエンリッチするのに対し、セグメントは、そのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+
+1. 照合に使用する統合プロファイルのフィールドのタイプ (プライマリおよび/またはセカンダリ アドレス) を定義します。 両方の住所のフィールド マッピングを指定し、、両方の住所のプロファイルを別々に強化できます。 たとえば、自宅の住所と会社の住所の場合。 **次へ** を選択します。
+
+1. HERE Technologies のデモグラフィック データにフィールドをマッピングします。 **番地 1** と **郵便番号** フィールドは、住所 1 または住所 2、あるいはその両方に必要です。 一致の精度を高めるには、フィールドを追加します。
+
+1. **次へ** を選択し、フィールド マッピングを完了します。
+
+1. エンリッチメントと **出力エンティティ名** の **名前** を指定します。
+
+1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
+
+1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
+
+## <a name="enrichment-results"></a>強化の結果
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+**エンリッチされた顧客のフィールドごとの数** 各エンリッチフィールドのカバー範囲をドリルダウンで表示します。
+
+## <a name="next-steps"></a>次の手順
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

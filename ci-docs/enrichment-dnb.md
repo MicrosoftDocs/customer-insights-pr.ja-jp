@@ -1,7 +1,7 @@
 ---
 title: Dun ＆ Bradstreet による企業プロファイルのエンリッチメント
 description: Dun ＆ Bradstreet のサードパーティ エンリッチメントに関する一般的な情報。
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755406"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953897"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Dun ＆ Bradstreet による企業プロファイルのエンリッチメント (プレビュー)
 
@@ -22,16 +22,14 @@ Dun ＆ Bradstreet は、企業向けの商用データ、分析、およびイ�
 
 ## <a name="prerequisites"></a>前提条件
 
-Dun & Bradstreet エンリッチメントを構成するには、次の前提条件が満たされている必要があります。
+- アクティブな [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) ライセンスの所有。
+- [統一された顧客プロファイル](customer-profiles.md) 企業向け。
+- Dun & Bradstreet の [プロジェクト](#set-up-your-dun--bradstreet-project)が設定されている。
+- Dun & Bradstreet [接続](connections.md) は、管理者によって[構成](#configure-a-connection-for-dun--bradstreet)されます。
 
-- アクティブな [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) ライセンスを所有していること。
-- 企業向けの[統一された顧客プロファイル](customer-profiles.md)を持っていること。
-- Dun & Bradstreet [接続](connections.md) は、管理者によって構成されます。 あなたが [管理者](permissions.md#admin) のアクセス権と Dun＆Bradstreet Connect からの資格を持っている場合はそれを作成できます。
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Dun ＆ Bradstreet プロジェクトを設定する
+## <a name="set-up-your-dun--bradstreet-project"></a>Dun ＆ Bradstreet プロジェクトを設定する
 
 Dun ＆ Bradstreet のライセンス ユーザーとして、[Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights) でプロジェクトを設定できます。
-
 
 1. [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights) にサインインします。 資格情報を取得するには、[パスワードを復元します](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights)。
 
@@ -47,66 +45,69 @@ Dun ＆ Bradstreet のライセンス ユーザーとして、[Dun & Bradstreet 
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Dun ＆ Bradstreet プロジェクトでの s3 情報の選択のスクリーンショット。":::
 
-## <a name="configure-the-enrichment"></a>エンリッチメントの構成
-
-1. **データ** > **エンリッチメント** に移動します。
-
-1. Dun ＆ Bradstreet タイルで **データをエンリッチメントする** を選択して、**始める** を選択します。
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Dun ＆ Bradstreet タイルのスクリーンショット。":::
-
-1. ドロップダウン リストから [接続](connections.md) を選択してください。 接続できない場合は、管理者に連絡してください。 あなたが管理者の場合は、接続を作成できます。 **つながりの追加** を選択して、**Dun & Bradstreet** を選択します。
-
-1. **Dun ＆ Bradstreet に接続する** を選択して、接続を確認します。
-
-1. **次へ** を選択し、Dun & Bradstreet からの会社 データでエンリッチする **顧客データ セット** を選択します。 **顧客** エンティティを選択して、すべての顧客プロファイルをエンリッチメントするか、セグメント エンティティを選択してそのセグメントに含まれる統合顧客プロファイルのみをエンリッチします。
-
-1. **次へ** を選択し、統合プロファイルからどのタイプのフィールドを使用して、Dun & Bradstreet から一致する会社データを検索するかを定義します。 **DUNS 番号** または **会社名** と **国** のフィールドのいずれかは必須です。 国フィールドは [2 文字または 3 文字の国コード](https://www.iso.org/iso-3166-country-codes.html)、英語の国名、母国語の国名、および電話プレフィックスをサポートします。 一般的な国のバリエーションには、次のものがあります。
-
-- US: アメリカ合衆国、米国、USA、アメリカ。
-- CA: カナダ。
-- GB: 英国、UK、Great Britain、GB、グレートブリテンおよび北部アイルランド連合王国、グレートブリテン王国。
-- AU: オーストラリア、オーストラリア連邦。
-- FR: フランス、フランス共和国。
-- DE: ドイツ、ドイツ語、Deutschland、アレマーニュ、ドイツ連邦共和国、ドイツ共和国。
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun ＆ Bradstreet フィールド マッピング ウィンドウ。":::
-
-1. **次へ** を選択し、フィールド マッピングを完了します。
-
-1. エンリッチメントの名前を入力して、選択内容を確認した後 **エンリッチメントの保存** を選択します。
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Dun ＆ Bradstreet の接続を構成する
 
-接続を構成するには、管理者である必要があります。 エンリッチメントを構成する *もしくは* **管理** > **接続** に移動して、Dun & Bradstreet タイルで **設定** を選択して、**つながりの追加** を選択します。
+Customer Insights の [管理者](permissions.md#admin)で、Dun & Bradstreet Connect の資格情報を持っている必要があります。
 
-1. **開始する** を選択します。
+1. エンリッチメントを設定する際に **つながりの追加** を選択するか、**管理** > **接続** に移動して Dun & Bradstreet タイルの **設定** を選択します。
 
-1. **表示名** ボックスに接続の名前を入力します。
+1. 接続の名前を入力します。
 
-1. 有効な Dun ＆ Bradstreet の資格情報と Dun ＆ Bradstreet プロジェクトの詳細 *リージョン、ドロップ フォルダー パス、ドロップ フォルダー名* を提供します。 Dun ＆ Bradstreet プロジェクトから、[この情報を入手します](#setting-up-your-dun--bradstreet-project)。
+1. 有効な Dun ＆ Bradstreet の資格情報と Dun ＆ Bradstreet プロジェクトの詳細 *リージョン、ドロップ フォルダー パス、ドロップ フォルダー名* を提供します。 Dun ＆ Bradstreet プロジェクトから、[この情報を入手します](#set-up-your-dun--bradstreet-project)。
 
-1. 確認して、**同意する** を選択して、**データのプライバシーとコンプライアンス** に同意します。
+1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
 
-1. **検証** を選択して、構成を検証します。
-
-1. 検証が完了したら、**保存** を選択します。
+1. **確認** を選択して設定を確認し、**保存** を選択します。
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun ＆ Bradstreet 接続の構成ページ":::
 
-## <a name="enrichment-results"></a>強化の結果
-
-エンリッチメントを更新した後、[自分のエンリッチメント](enrichment-hub.md) で新しくエンリッチされた会社データを確認できます。 最終更新時刻と、エンリッチされたプロファイル数を確認できます。
-
-**拡充したデータの表示** を選択することで、それぞれの拡充されたプロファイルの詳細ビューにアクセスできます。
-
-## <a name="next-steps"></a>次のステップ
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
+### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
 
 Dun & Bradstreet へのデータを転送するために Dynamics 365 Customer Insights を有効にすると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft はそのようなデータをお客様の指示に従って転送しますが、Dun & Bradstreet がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
 Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
+
+## <a name="supported-countries-or-regions"></a>サポートされている国または地域
+
+現在、次の国/地域オプションをサポートしています: カナダ (英語) または米国 (英語)。
+
+## <a name="configure-the-enrichment"></a>エンリッチメントの構成
+
+1. **データ** > **エンリッチメント** に移動し、**検出** タブを選択します。
+
+1. **会社データ** タイルで、Dun & Bradstreet タイルの **データのエンリッチ** を選択します。
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Dun ＆ Bradstreet タイルのスクリーンショット。":::
+
+1. 概要を確認し、**次へ** を選択します。
+
+1. 接続を選択して確認します。 利用できない場合は、管理者に連絡してください。
+
+1. **次へ** を選択します。
+
+1. **顧客データセット** を選択し、Dun & Bradstreet の企業データでエンリッチするプロファイルまたはセグメントを選択します。 *顧客* エンティティは、すべての顧客プロファイルをエンリッチするのに対し、セグメントは、そのセグメントに含まれる顧客プロファイルのみをエンリッチします。
+
+1. Dun & Bradstreet からの企業データとのマッチングに使用する統一プロファイルのフィールドの種類を定義します。 **名前と住所**、**電話**、または **メール** フィールドの少なくとも 1 つが必要です。
+
+1. **次へ** を選択します。
+
+1. Dun & Bradstreet の企業データにフィールドをマッピングします。 **DUNS 番号** または **会社名** と **国** のフィールドのいずれかは必須です。
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun ＆ Bradstreet フィールド マッピング ウィンドウ。":::
+
+1. **次へ** を選択し、フィールド マッピングを完了します。
+
+1. エンリッチメントと **出力エンティティ名** の **名前** を指定します。
+
+1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
+
+1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
+
+## <a name="enrichment-results"></a>強化の結果
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+## <a name="next-steps"></a>次の手順
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

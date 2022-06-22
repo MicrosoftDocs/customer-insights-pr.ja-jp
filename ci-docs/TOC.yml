@@ -48,14 +48,14 @@
   items:
     - name: データ ソースの概要
       href: data-sources.md
+    - name: Azure Data Lake Storage のデータへの接続
+      href: connect-common-data-model.md
+    - name: Azure Synapse Analytics への接続
+      href: connect-synapse.md
+    - name: Microsoft Dataverse の管理された Data Lake に接続する
+      href: connect-dataverse-managed-lake.md
     - name: Power Query コネクタでデータ ソースを追加する
       href: connect-power-query.md
-    - name: データ ソースとして共通データ モデル フォルダーを追加する
-      href: connect-common-data-model.md
-    - name: Dataverse により管理されたデータ レイクの追加
-      href: connect-dataverse-managed-lake.md
-    - name: Azure Synapse Analytics の追加
-      href: connect-synapse.md
     - name: データ ソースのエンリッチメント
       href: data-sources-enrichment.md
     - name: データ ソースの増分更新
@@ -82,27 +82,27 @@
   items:
     - name: 顧客プロファイルのエンリッチ
       href: enrichment-hub.md
+    - name: Office 365 データからのアカウント
+      href: enrichment-office.md
     - name: ブランドと関心
       href: enrichment-microsoft.md
+    - name: Dun & Bradstreet の会社データ
+      href: enrichment-dnb.md
+    - name: Leadspace からの会社データ
+      href: enrichment-leadspace.md
+    - name: Experian の統計情報
+      href: enrichment-experian.md
     - name: 拡張住所
       href: enrichment-enhanced-addresses.md
     - name: 拡張された会社データ
       href: enrichment-enhanced-company-data.md
-    - name: Azure Maps でエンリッチする
-      href: enrichment-azure-maps.md
-    - name: Dun & Bradstreet でエンリッチする
-      href: enrichment-dnb.md
-    - name: HERE Technologies を利用して強化する
-      href: enrichment-here.md
-    - name: Leadspace で充実させる
-      href: enrichment-leadspace.md
-    - name: LiveRamp でエンリッチする
+    - name: LiveRamp の ID
       href: enrichment-liveramp.md
-    - name: Experian を利用して強化する
-      href: enrichment-experian.md
-    - name: Office 365 のデータでエンリッチする
-      href: enrichment-office.md
-    - name: SFTP カスタム インポートを利用して強化する
+    - name: Azure Maps からの位置情報
+      href: enrichment-azure-maps.md
+    - name: HERE Technologies からの場所
+      href: enrichment-here.md
+    - name: SFTP カスタム インポート
       href: enrichment-SFTP-custom-import.md
 - name: 統合されたプロファイル
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: 顧客活動の定義
       href: activities.md
+    - name: Customer Insights の同意管理
+      href: consent-management.md
 - name: Segments
   items:
     - name: すべてのセグメントの概要
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData サンプル クエリ
       href: odata-examples.md
-- name: 同意の管理 (プレビュー)
-  items:
-    - name: ヘルプ ハブ
-      href: consent-management/index.yml
-    - name: 機能の概要
-      href: consent-management/overview.md
-    - name: 作業の開始
-      items:
-        - name: 作業の開始
-          href: consent-management/get-started.md
-        - name: 概念と用語
-          href: consent-management/glossary.md
-    - name: 同意データをインポートする
-      items:
-        - name: 同意データをインポートする
-          href: consent-management/import-consent-data.md
-        - name: 同意データを設定し、同意の基本設定を適用する
-          href: consent-management/set-consent-rules.md
-    - name: 同意データを管理する
-      items:
-        - name: Customer Insights で同意を有効にする
-          href: activate-consent.md
-        - name: Customer Insights セグメントを使用して既定の同意規則を管理する
-          href: change-default-consent-rules.md
-    - name: 設定とユーザーを管理する
-      items:
-        - name: システム設定のコンフィギュレーション
-          href: consent-management/system-settings.md
-        - name: ユーザーとアクセス許可を管理する
-          href: consent-management/manage-users.md
-    - name: 同意データを使用する
-      items:
-        - name: 同意データを使用して予測を作成する
-          href: consent-management/predictions-consent-data.md
 - name: サービス制限
   href: service-limits.md
 - name: DSR の権利と要求

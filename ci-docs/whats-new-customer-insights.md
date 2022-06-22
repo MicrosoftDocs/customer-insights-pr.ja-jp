@@ -1,19 +1,19 @@
 ---
-title: 新しい機能および今後の機能
+title: 新機能と更新された機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833636"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843353"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -24,6 +24,37 @@ ms.locfileid: "8833636"
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
 
+## <a name="may-2022-updates"></a>2022 年 5 月の更新
+
+2022 年 5 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="updated-data-unification-experience"></a>更新されたデータ統合エクスペリエンス
+
+ データ統合により、かつては異なっていたデータソースを単一のマスター データセットに統合して、そのデータの統合ビューを提供できます。 データは、単一のエンティティまたは複数のエンティティに統合できます。 まず、[エンティティやソースフィールドの選択](map-entities.md)、[重複レコードの削除](remove-duplicates.md)、[マッチング条件](match-entities.md)のルール指定、[Unified customer profile に含めるフィールド](merge-entities.md)の定義などを行います。
+
+詳細については、[データ統合の概要](data-unification.md) を参照してください。
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Customer Insights のホームページを更新しました
+
+**ホーム** では、主要な機能の構成プロセスを示し、セグメント、メジャー、エンリッチメント データの概要を提供します。 エクスペリエンスを一新し、より関連性の高い情報を一目で確認できるようにしました。
+
+詳細については、[Customer Insights について](home.md)を参照してください。
+
+### <a name="track-usage-of-a-segment"></a>セグメントの使用状況を追跡する
+
+Customer Insights と連携している Dataverse 組織をベースにしたアプリで、[セグメントの利用状況を追跡](segments.md#track-usage-of-a-segment)できるようになりました。 [Dynamics 365 Marketing の顧客体験で使用する Customer Insights セグメント](/dynamics365/marketing/real-time-marketing-ci-profile) の場合、システムが、そのセグメントの使用状況について通知します。
+
+### <a name="export-to-criteo"></a>Criteo へのエクスポート
+
+Criteo は、ユーザーがデジタル広告を管理するのに役立つオンライン プラットフォームです。 Unified customer profile のセグメントをエクスポートして、キャンペーンを生成してメール マーケティングを提供し、Criteo の特定の顧客グループを使用できます。
+
+詳細については、[Criteo にセグメントをエクスポートする (プレビュー)](export-criteo.md)を参照してください。
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>環境作成のための洗練されたドキュメント構造
+
+Customer Insights の環境の作成と管理に関連するヘルプ ドキュメントを再検討しました。 これで、記事は目次の環境ノードの下にグループ化されます。 再構築された記事は、環境のさまざまな設定方法に対するガイダンスを提供し、より明確な構成になっています。 共有するフィードバックがある場合は、ヘルプ記事の最後にあるコントロールを介してお伝えください。
+
+詳しくは、[新しい環境を作成する方法](create-environment.md)をご覧ください。
 
 ## <a name="april-2022-updates"></a>2022 年 4 月の更新プログラム
 
