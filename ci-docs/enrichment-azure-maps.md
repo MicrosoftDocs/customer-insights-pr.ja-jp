@@ -1,5 +1,5 @@
 ---
-title: Azure Maps の場所データを使用して、顧客プロファイルを強化する
+title: Azure Maps からの場所データで顧客プロファイルをエンリッチする (プレビュー)
 description: Azure Maps のファーストパーティ エンリッチメントに関する一般情報。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953634"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052613"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Maps による顧客プロファイルの強化 (プレビュー)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Azure Maps からの場所データで顧客プロファイルをエンリッチする (プレビュー)
 
 Azure Maps は、位置情報を中心としたデータとサービスを提供し、位置情報インテリジェンスを組み込んだ地理空間データに基づくエクスペリエンスを提供します。 Azure Maps のデータ エンリッチメント サービスにより、顧客の位置情報の精度が向上します。 アドレスの正規化や緯度や経度の抽出などの機能を Dynamics 365 Customer Insights で使用できるようになります。
 
@@ -82,7 +82,7 @@ Dynamics 365 Customer Insights 管理者は、この機能の使用を中止す�
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

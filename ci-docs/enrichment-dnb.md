@@ -1,5 +1,5 @@
 ---
-title: Dun ＆ Bradstreet による企業プロファイルのエンリッチメント
+title: Dun ＆ Bradstreet で企業プロファイルをエンリッチする (プレビュー)
 description: Dun ＆ Bradstreet のサードパーティ エンリッチメントに関する一般的な情報。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953897"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081435"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Dun ＆ Bradstreet による企業プロファイルのエンリッチメント (プレビュー)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun ＆ Bradstreet で企業プロファイルをエンリッチする (プレビュー)
 
 Dun ＆ Bradstreet は、企業向けの商用データ、分析、およびインサイトを提供します。 これを使用することで、企業の顧客プロファイルが統一された顧客は、データを充実させることができます。 エンリッチメントには、DUNS 番号、会社の規模、業界などの属性が含まれます。
 
@@ -102,7 +102,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

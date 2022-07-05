@@ -1,5 +1,5 @@
 ---
-title: Customer Insights データを ActiveCampaign にエクスポートする
+title: セグメントを ActiveCampaign にエクスポートする
 description: 接続を構成して、ActiveCampaign にエクスポートする方法を学びます。
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646937"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054714"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>セグメントを ActiveCampaign にエクスポートする (プレビュー)
 
@@ -21,9 +21,9 @@ ms.locfileid: "8646937"
 
 ## <a name="prerequisites"></a>前提条件
 
--   [ActiveCampaign アカウント](https://www.activecampaign.com/) および対応する管理者資格情報を所有していること。
--   Customer Insights で [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合された顧客プロファイルには、メール アドレスのあるフィールドが含まれていること。
+- [ActiveCampaign アカウント](https://www.activecampaign.com/) および対応する管理者資格情報を所有していること。
+- Customer Insights で [セグメントを構成](segments.md) しました。
+- エクスポートされたセグメントの統合された顧客プロファイルには、メール アドレスのあるフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 

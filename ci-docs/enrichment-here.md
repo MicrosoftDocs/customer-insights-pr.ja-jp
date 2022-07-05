@@ -1,5 +1,5 @@
 ---
-title: サードパーティのエンリッチメント HERE Technologies によるエンリッチメント
+title: HERE Technologies で顧客プロファイルをエンリッチする (プレビュー)
 description: HERE Technologies サードパーティ エンリッチメントに関する一般情報。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953679"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052057"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies による顧客プロファイルの強化 (プレビュー)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>HERE Technologies で顧客プロファイルをエンリッチする (プレビュー)
 
 HERE Technologies は、位置中心のデータとサービスを提供するロケーション プラットフォーム企業です。 HERE Technologies のデータエンリッチメントサービスは、顧客の位置情報の精度を向上させます。 住所の正規化、緯度・経度の抽出などを行います。
 
@@ -72,7 +72,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -12,14 +12,14 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833728"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054878"
 ---
-# <a name="user-permissions"></a>ユーザーのアクセス許可
+# <a name="manage-user-permissions"></a>ユーザーのアクセス許可を管理する
 
 **アクセス許可** ページは、Customer Insights を使用するための役割と権限を設定するところです。
 

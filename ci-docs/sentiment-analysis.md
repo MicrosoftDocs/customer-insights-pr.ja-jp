@@ -1,5 +1,5 @@
 ---
-title: 顧客フィードバックの感情分析
+title: 顧客フィードバックのセンチメントを分析する (プレビュー)
 description: Dynamics 365 Customer Insights で顧客フィードバックに感情分析モデルを使用する方法について説明します。
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647048"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055542"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>顧客フィードバックで感情を分析する (プレビュー)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>顧客フィードバックでセンチメントを分析する (プレビュー)
 
 最近の顧客は、高品質の製品、サービス、体験を期待しています。 フィードバックを共有する顧客は特にその傾向があります。 組織にとっては、正確性を低下させたり人件費を上げたりせずに、増え続けるデータを分析することは非常に困難です。 Dynamics 365 Customer Insights では、顧客のフィードバックの感情分析モデルを利用することができ、組織はデータを正確に低コストで分析できます。
 

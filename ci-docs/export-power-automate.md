@@ -1,5 +1,5 @@
 ---
-title: Power Automate コネクタ | Microsoft Docs
+title: Power Automate コネクタ (プレビュー) | Microsoft Docs
 description: Dynamics 365 Customer Insights から Microsoft Power Automate のフローを作成します。
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741185"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081388"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automateコネクタ (プレビュー)
 
-データが変更されたときに特定のイベントを自動的にトリガーし、[Power Automate](https://flow.microsoft.com/) でより複雑なフローを直接管理します。
+データが変更されたときに特定のイベントを自動的にトリガーし、[Microsoft Power Automate](https://flow.microsoft.com/) でより複雑なフローを直接管理します。
 
 ## <a name="known-limitations"></a>既知の制限
 

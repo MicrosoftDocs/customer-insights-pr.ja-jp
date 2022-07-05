@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646656"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051689"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>テンプレートを使用してメジャーを作成する
+# <a name="create-measures-from-templates"></a>テンプレートからメジャーを作成する
 
 一般的に使用される[メジャー](measures.md)の定義済みテンプレートを使用して、それらを作成できます。 テンプレートの詳細な説明とガイド付きのエクスペリエンスは、効率的なメジャーの作成に役立ちます。 テンプレートは、*Unified Activity* エンティティからマップされたデータに基づいて構築されます。 したがって、テンプレートからメジャーを作成する前に、[顧客活動](activities.md) を構成していることを確認します。
 

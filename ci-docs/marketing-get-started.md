@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833314"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054438"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing で統一された顧客プロファイルを操作する
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing で Unified customer profile を使用する
 
 [Dynamics 365 Marketing](/dynamics365/marketing/overview) は、顧客エクスペリエンスを向上させ、すべてのタッチポイントでパーソナライズされた体験を調整し、関係を強化してロイヤルティを獲得できます。 Dynamics 365 Marketing アプリは、Dynamics 365 Sales、Dynamics 365 Customer Insights、Microsoft Teams などの製品とシームレスに連携し、データや AI の力を使用してより迅速に、より適切な意思決定を行うことができます。
 

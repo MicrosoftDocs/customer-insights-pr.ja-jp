@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics のデータを取り込む
+title: Azure Synapse データ ソースに接続する (プレビュー)
 description: Azure Synapse のデータベースを Dynamics 365 Customer Insights のデータ ソースとして使用します。
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011433"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052705"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics データ ソースに接続する (プレビュー)
 
@@ -59,7 +59,7 @@ Azure Synapse Analytics は、データ ウェアハウスとビッグ データ
 
 1. Azure Synapse Analytics への[使用可能な接続](connections.md)を選択するか、新しい接続を作成します。
 
-1. 選択した Azure Synapse Analytics 接続で接続されているワークスペースから **データベース** を選択し、**次へ** を選択します。
+1. 選択した Azure Synapse Analytics 接続で接続されているワークスペースから **データベース** を選択し、**次へ** を選択します。 現在、*レイク データベース* データベース タイプのみサポートしています。
 
 1. 接続されているデータベースから取り込むエンティティを選択し、**次へ** を選択します。
 

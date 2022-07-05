@@ -1,5 +1,5 @@
 ---
-title: 新機能と更新された機能
+title: Dynamics 365 Customer Insights の新機能
 description: 新機能、改善、およびバグ修正に関する情報。
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843353"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054024"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 

@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 アプリの顧客カード アドイン (ビデオを含む)
+title: Dynamics 365 アプリの顧客カード アドイン (プレビュー) (ビデオを含む)
 description: このアドインを使用して、Dynamics 365 アプリの Customer Insights からの顧客プロファイル データを表示します。
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755642"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081255"
 ---
-# <a name="customer-card-add-in-preview"></a>顧客カード アドイン (プレビュー)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 アプリの顧客カード アドイン (プレビュー)
 
 Dynamics 365 アプリで直接、顧客を全方位から確認します。 サポートされている Dynamics 365 アプリにカスタマー カード アドインをインストールすると、カスタマー プロファイル フィールド、インサイト、およびアクティビティのタイムラインを表示するように選択できます。 アドインは、接続されている Dynamics 365 アプリのデータに影響を与えることなく、Customer Insights からデータを取得します。
 

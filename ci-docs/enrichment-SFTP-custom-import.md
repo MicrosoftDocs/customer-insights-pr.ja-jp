@@ -1,5 +1,5 @@
 ---
-title: SFTP カスタム インポートによるエンリッチメント
+title: SFTP カスタム インポートで顧客プロファイルをエンリッチする (プレビュー)
 description: SFTP カスタム インポート エンリッチメントに関する一般情報。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953725"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081334"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>カスタム データで顧客プロファイルを強化する (プレビュー)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>SFTP カスタム インポートで顧客プロファイルをエンリッチする (プレビュー)
 
 セキュリティで保護されたファイル転送プロトコル (SFTP) カスタム インポートを使用すると、データ統合のプロセスを行う必要のないデータをインポートできます。 これは、データを取り込むための柔軟で安全かつ簡単な方法です。 SFTP カスタム インポートは、エンリッチメントに必要な顧客プロファイル データをエクスポートできる [SFTP エクスポート](export-sftp.md) と組み合わせて使用できます。 次に、データを処理して強化し、SFTP カスタム インポートを使用して、エンリッチメントされたデータを Dynamics 365 Customer Insights に戻すことができます。
 
@@ -120,7 +120,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

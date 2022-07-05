@@ -1,5 +1,5 @@
 ---
-title: Customer Insights のデータを Dynamics 365 Marketing にエクスポートする
+title: Dynamics 365 Marketing にセグメントをエクスポートする (プレビュー)
 description: Dynamics 365 Marketing への接続とエクスポートを構成する方法を説明します。
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646481"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054622"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing でセグメントを使用する (プレビュー)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing にセグメントをエクスポートする (プレビュー)
 
 [セグメント](segments.md) を使用してキャンペーンを生成し、Dynamics 365 Marketing を使用して特定の顧客グループに連絡します。 詳しくは、[Dynamics 365 Marketing で Dynamics 365 Customer Insights のセグメントを使用する](/dynamics365/marketing/customer-insights-segments) をご覧ください。
 

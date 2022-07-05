@@ -1,5 +1,5 @@
 ---
-title: Customer Insights データを  Adobe Campaign Standard にエクスポートする
+title: Adobe Campaign Standard で Customer Insights セグメントをエクスポートする (プレビュー)
 description: Adobe Campaign Standard で Customer Insights セグメントを使用する方法について学びます。
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646973"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081345"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Adobe Campaign Standard で Customer Insights のセグメントを使用する (プレビュー)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Adobe Campaign Standard で Customer Insights セグメントをエクスポートする (プレビュー)
 
-ユーザー Dynamics 365 Customer Insights として、関連するオーディエンスをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントを作成した可能性があります。 Adobe Experience Platform や Adobe Campaign Standard のようなアプリケーションで Customer Insights からのセグメントを使用するには、この記事で概説されているいくつかの手順に従う必要があります。
+Dynamics 365 Customer Insights のユーザーとして、関連するオーディエンスをターゲットにすることで、マーケティング キャンペーンをより効率的にするためのセグメントを作成した可能性があります。 Adobe Experience Platform や Adobe Campaign Standard のようなアプリケーションで Customer Insights からのセグメントを使用するには、この記事で概説されているいくつかの手順に従う必要があります。
 
 :::image type="content" source="media/ACS-flow.png" alt-text="この記事で概説されているステップのプロセス図。":::
 
 ## <a name="prerequisites"></a>前提条件
 
--   Dynamics 365 Customer Insights ライセンス
--   Adobe Campaign Standard のライセンス
--   Azure Blob Storage アカウント
+- Dynamics 365 Customer Insights ライセンス
+- Adobe Campaign Standard のライセンス
+- Azure Blob Storage アカウント
 
 ## <a name="campaign-overview"></a>キャンペーン 概要
 

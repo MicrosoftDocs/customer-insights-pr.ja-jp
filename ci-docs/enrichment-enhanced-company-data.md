@@ -1,5 +1,5 @@
 ---
-title: 会社データの拡張
+title: 強化された会社データで会社プロファイルをエンリッチする
 description: Microsoft のモデルを使用して、会社のデータをエンリッチし、正規化します。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953955"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054254"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>強化された会社データで会社プロファイルのエンリッチメント
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>強化された会社データで会社プロファイルをエンリッチする
 
 Microsoftの モデルとコンパイルされた会社データを使用して、会社のプロファイルを修正、補足、および標準化します。 より正確で、分析情報のために、[Common Data Model 形式](/common-data-model/schema/core/applicationcommon/account) を使用します。
 
@@ -84,7 +84,7 @@ Microsft
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

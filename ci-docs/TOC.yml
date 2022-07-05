@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: データ エンリッチメント
   items:
-    - name: 顧客プロファイルのエンリッチ
+    - name: データのエンリッチメントの概要
       href: enrichment-hub.md
     - name: Office 365 データからのアカウント
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: 顧客活動の定義
       href: activities.md
-    - name: Customer Insights の同意管理
+    - name: 同の管理の利用
       href: consent-management.md
 - name: Segments
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google 広告
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo

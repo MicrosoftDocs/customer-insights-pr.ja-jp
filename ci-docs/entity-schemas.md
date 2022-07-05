@@ -1,5 +1,5 @@
 ---
-title: Common Data Model における Customer Insights エンティティ スキーマ
+title: Common Data Model のエンティティ スキーマ
 description: Common Data Model のエンティティに関する作業。
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757438"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054760"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model のエンティティ スキーマ
-
-
 
 [Common Data Model](/common-data-model/) は宣言的な仕様であり、ビジネスと生産性アプリケーションの全体で一般的に使用される概念とアクティビティを表す標準エンティティの定義です。 このモデルは実測データ、および分析データにも拡張されています。 Common Data Model は、アクティビティおよびサービス レベル アグリーメントなど、ベンダー、従業員、および顧客間の対話だけでなく、取引先企業、部署、ケース、連絡先、潜在顧客、営業案件、製品など、適切に定義されたモジュール形式の拡張可能なビジネス エンティティを提供します。 誰もが Common Data Model の定義に基づいて拡張し、さらなるビジネス固有のアイデアを取り込むことができます。
 

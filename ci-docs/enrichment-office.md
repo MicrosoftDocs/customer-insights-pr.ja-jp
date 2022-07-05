@@ -1,5 +1,5 @@
 ---
-title: Microsoft Office 365 からのデータで顧客プロファイルをエンリッチする
+title: Microsoft Office 365 からのデータで顧客プロファイルをエンリッチする (プレビュー)
 description: Microsoft Office からの専有データを使用して、エンゲージメント データで顧客プロファイルをエンリッチします。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954139"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055680"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>エンゲージメント データで顧客プロファイルをエンリッチする (プレビュー)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Microsoft Office 365 からのデータで顧客プロファイルをエンリッチする (プレビュー)
 
 Microsoft Office 365 からのデータを使用して、Office 365 アプリ経由でエンゲージメントに関するインサイトで顧客アカウント プロファイルをエンリッチします。 エンゲージメント データは、アカウント レベルで集計されたメールと会議の活動で構成されます。 たとえば、ビジネス アカウントからのメールの数、またはアカウントとの会議の数などです。 個々のユーザーに関するデータは利用できません。
 
@@ -75,7 +75,7 @@ Office データのサイズによっては、エンリッチメントの実行�
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] これは *Office* エンティティです。 *Office_UserEntity* には、エンリッチメント構成中に選択されたメール アドレスの Active Directory の ID が含まれています。
 

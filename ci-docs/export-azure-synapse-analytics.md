@@ -1,19 +1,19 @@
 ---
-title: Customer Insights データを Azure Synapse Analytics にエクスポートする
+title: データを Azure Synapse Analytics にエクスポートする (プレビュー)
 description: Azure Synapse Analytics への接続を構成する方法について説明します。
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741509"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081582"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポートする (プレビュー)
 
@@ -48,7 +48,7 @@ Azure の場合:
 
 ### <a name="configure-a-connection"></a>接続の構成
 
-接続を作成するには、Customer Insights のサービス プリンシパルとユーザー アカウントには、Synapse Analytics ワークスペースが配置されている *リソース グループ* で **閲覧者** の権限が必要です。 さらに、Synapse Analytics ワークスペースのサービス プリンシパルとユーザーには **Synapse 管理者** の権限が必要です。 
+接続を作成するには、Customer Insights のサービス プリンシパルとユーザー アカウントには、Synapse Analytics ワークスペースが配置されている *リソース グループ* で **閲覧者** の権限が必要です。 さらに、Synapse Analytics ワークスペースのサービス プリンシパルとユーザーには **Synapse 管理者** のアクセス許可が必要です。 
 
 1. **管理** > **接続** に移動します。
 
@@ -72,13 +72,13 @@ Azure の場合:
 
 1. **エクスポートの接続** フィールドで、**Azure Synapse Analytics** セクションから接続を選択します。 このセクション名が表示されない場合、この種類の [接続](connections.md) は使用できません。
 
-1. エクスポートの識別可能な **表示名** と **データベース名** を指定します。
+1. エクスポートの識別可能な **表示名** と **データベース名** を指定します。 エクスポートにより、新しい [Azure Synapse レイク データベース](/azure/synapse-analytics/database-designer/concepts-lake-database)が接続で定義されたワークスペース内に作成されます。
 
 1. Azure Synapse Analytics にエクスポートするエンティティを選択します。
    > [!NOTE]
    > [Common DataModel フォルダー](connect-common-data-model.md) に基づくデータソースはサポートされていません。
 
-2. **保存** を選択します。
+1. **保存** を選択します。
 
 エクスポートを保存しても、エクスポートはすぐには実行されません。
 

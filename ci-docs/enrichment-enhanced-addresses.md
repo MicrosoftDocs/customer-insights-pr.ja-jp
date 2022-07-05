@@ -1,5 +1,5 @@
 ---
-title: アドレス エンハンスメント エンリッチメント (ビデオを含む)
+title: エンリッチ アドレスで顧客プロファイルをエンリッチする (ビデオを含む)
 description: Microsoft のモデルを使用して、顧客プロファイルの住所情報をエンリッチおよび正規化します。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953817"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081226"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>拡張住所による顧客プロファイルの強化
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>拡張アドレスで顧客プロファイルをエンリッチする
 
 データ内のアドレスは、構造化されていない、不完全である、または正しくない可能性があります。 Microsoft のモデルを使用して、住所を [Common Data Model 形式](/common-data-model/schema/core/applicationcommon/address) に正規化およびエンリッチし、精度とインサイトを向上します。
 
@@ -101,7 +101,7 @@ ms.locfileid: "8953817"
 
 1. 選択内容を確認した後、**エンリッチメントの保存** を選択します。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

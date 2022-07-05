@@ -1,34 +1,35 @@
 ---
-title: Customer Insights データを Braze にエクスポートする
+title: セグメントを Braze にエクスポートする (プレビュー)
 description: Braze への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646674"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081495"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>セグメント リストを Braze にエクスポートする (プレビュー)
+# <a name="export-segments-to-braze-preview"></a>セグメントを Braze にエクスポートする (プレビュー)
 
 統合顧客プロファイルのセグメントを Braze にエクスポートして、マーケティング活動に使用します。
 
 ## <a name="prerequisites"></a>前提条件
 
--   [Braze アカウント](https://www.braze.com/)と対応する管理者資格情報を保有しています。
--   Customer Insights で [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、メール アドレスと Braze 顧客 ID を表すフィールドが含まれています。 
+- [Braze アカウント](https://www.braze.com/)と対応する管理者資格情報。
+- 既存の [Braze のセグメント](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/)。
+- Customer Insights で [構成されたセグメント](segments.md)。
+- エクスポートされたセグメントの統合顧客プロファイルには、メール アドレスと Braze 顧客 ID を表すフィールドが含まれています。
 
 ## <a name="known-limitations"></a>既知の制限
 
 - Braze へのエクスポートはセグメントに制限されています。
-- 最大 100 万の顧客プロファイルを Braze にエクスポートすると、完了するまでに最大 40 分かかる場合があります。 
+- 最大 100 万の顧客プロファイルを Braze にエクスポートすると、完了するまでに最大 40 分かかる場合があります。
 - Braze にエクスポートできる顧客プロファイルの数は、Braze との契約によって異なり、限定されます。
 
 ## <a name="set-up-connection-to-braze"></a>Braze への接続を設定します
@@ -41,7 +42,7 @@ ms.locfileid: "8646674"
 
 1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. [Braze API キー](https://www.braze.com/docs/api/basics/)を入力してサインインを続行します。 
+1. [Braze API キー](https://www.braze.com/docs/api/basics/)を入力してサインインを続行します。
 
 1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
 
@@ -59,9 +60,13 @@ ms.locfileid: "8646674"
 
 1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、Braze セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。  
+1. **エクスポートの接続** フィールドで、Braze セクションから接続を選択します。 このセクションが表示されない場合は、この種類の接続を利用できません。  
 
-3. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択し、[顧客 ID] フィールドで、顧客の Braze ID を表すフィールドを選択します。 セグメントを Braze にエクスポートする必要があります。 Braze のセグメントは、Dynamics 365 Customer Insights のセグメントと同じ名前で作成されます。 データを照合するための追加のオプション フィールドを選択できます。 
+1. エクスポートの **表示名** を追加する
+
+1. エクスポート先の Braze セグメントの API 識別子を **Braze セグメント API 識別子** フィールドに追加します。 識別子は、Braze プラットフォームのセグメントの詳細にあります。
+
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 **顧客 ID** フィールドで、顧客の Braze ID を表すフィールドを選択します。 セグメントを Braze にエクスポートする必要があります。 オプションで、さらにフィールドを選択できます。
 
 1. **保存** を選択します。
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights データを Azure Blob Storage にエクスポートする
+title: Azure Blob Storage にデータをエクスポートする (プレビュー)
 description: Blob Storage への接続とエクスポートを構成する方法を説明します。
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947144"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055496"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>セグメント リストとその他のデータを Azure Blob Storage にエクスポートする (プレビュー)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Azure Blob Storage にデータをエクスポートする (プレビュー)
 
 Customer Insights データを Blob Storage に保存するか、それを使用してユーザーのデータを他のアプリケーションに転送します。
 

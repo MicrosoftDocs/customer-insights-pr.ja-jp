@@ -1,5 +1,5 @@
 ---
-title: Power BI コネクタ
+title: Power BIコネクタ (プレビュー)
 description: Power BI で Dynamics 365 Customer Insights コネクタの使用方法を学びます。
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647155"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051275"
 ---
-# <a name="connector-for-power-bi-preview"></a>Power BI のコネクタ (プレビュー)
+# <a name="power-bi-connector-preview"></a>Power BIコネクタ (プレビュー)
 
-Power BI Desktop を使用してデータをビジュアル化します。 統合された顧客データを使用して、追加のインサイトを生成し、レポートをビルドします。
+Microsoft Power BI Desktop を使用してデータのビジュアル化を作成します。 統合された顧客データを使用して、追加のインサイトを生成し、レポートをビルドします。
 
 ## <a name="prerequisites"></a>前提条件
 

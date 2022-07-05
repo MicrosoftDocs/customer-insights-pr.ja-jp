@@ -1,5 +1,5 @@
 ---
-title: LiveRamp ID データのエンリッチメント
+title: LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)
 description: LiveRamp データで顧客プロファイルをエンリッチします。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954001"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081280"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)
 
@@ -79,7 +79,7 @@ Dynamics 365 Customer Insights による LiveRamp へのデータの転送を有
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

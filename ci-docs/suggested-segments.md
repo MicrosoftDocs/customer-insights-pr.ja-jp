@@ -1,5 +1,5 @@
 ---
-title: 機械学習を利用して提案されたセグメント
+title: 提案されたセグメントを見る (プレビュー)
 description: 機械学習を使用して、顧客の属性に基づいて新しく興味深いセグメントを見つけることができます。
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647028"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081522"
 ---
 # <a name="suggested-segments-preview"></a>提案されたセグメントを見る (プレビュー)
 

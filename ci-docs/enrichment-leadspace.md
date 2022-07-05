@@ -1,5 +1,5 @@
 ---
-title: サードパーティ エンリッチメント Leadspace による会社プロファイルのエンリッチメント
+title: Leadspace で企業プロファイルをエンリッチする (プレビュー)
 description: Leadspace サードパーティ エンリッチメントに関する一般情報。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954185"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081352"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace を使用した企業プロファイルの拡充 (プレビュー)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Leadspace で企業プロファイルをエンリッチする (プレビュー)
 
 Leadspace は、B-to-B 顧客データ プラットフォームを提供するデータ サイエンス企業です。 これにより、取引先企業に基づいて統一された顧客プロファイルを持つ環境でデータを充実させることができます。 *顧客プロファイル* を、会社の規模、場所、業界などの属性でエンリッチします。 *取引先担当者プロファイル* を、タイトル、ペルソナ、メール確認などの属性でエンリッチします。
 
@@ -82,7 +82,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. **実行** を選択してエンリッチメント処理を開始するか、閉じるを選択して **エンリッチメント** ページに戻ります。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

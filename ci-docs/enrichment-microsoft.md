@@ -1,5 +1,5 @@
 ---
-title: Microsoft が提供するブランドや趣味のデータで顧客プロファイルを充実させる
+title: Microsoft が提供するブランドや趣味のデータで顧客プロファイルをエンリッチする (プレビュー)
 description: Microsoft の独自データを使用して、アフィニティとシェア オブ ボイスで顧客データを拡充します。
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953771"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081502"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>アフィニティとシェア オブ ボイス (プレビュー) で顧客プロファイルを拡充する
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Microsoft が提供するブランドや趣味のデータで顧客プロファイルをエンリッチする (プレビュー)
 
 Microsoft の独自データを使用して、ブランド アフィニティ、関心アフィニティおよびシェア オブ ボイス (SoV) で顧客データを拡充します。 これらのアフィニティと SoV は、顧客と類似するターゲット層の人々のデータに基づいています。 この情報は、特定のブランドや関心へのアフィニティまたは SoV に基づいて、顧客をより良く理解し、セグメント化するのに役立ちます。
 
@@ -104,7 +104,7 @@ SoV は 100 ポイント スケールで計算します。 エンリッチされ
 
    プロファイルのエンリッチメント を行うとき、選択した国または地域にないプロファイルを含む、選択したブランドおよび関心のデータを取得するすべての顧客プロファイルをエンリッチします。 たとえば、ドイツを選択した場合、米国で選択したブランドと関心に関するデータが利用可能であれば、米国にあるプロファイルをエンリッチします。
 
-## <a name="enrichment-results"></a>強化の結果
+## <a name="view-enrichment-results"></a>エンリッチメントの結果の表示
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
