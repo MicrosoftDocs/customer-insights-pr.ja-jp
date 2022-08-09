@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse の管理された Data Lake に接続する
 description: Microsoft Dataverse が管理する  Data Lake からデータをインポートする。
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081262"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206959"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
-Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイクにある分析エンティティに素早く接続することができます。
+Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイクにある分析エンティティに素早く接続することができます。 環境のデータ ソース は 1 つだけで、同じ Dataverse が管理するレイクを同時に使用できます。
 
 > [!NOTE]
 > 進んで、管理レイクで使用できるエンティティのリストを表示するには、Dataverse 組織の管理者である必要があります。
 
-## <a name="important-considerations"></a>重要な考慮事項
+## <a name="prerequisites"></a>前提条件
 
-1. Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
-2. [変更の追跡](/power-platform/admin/enable-change-tracking-control-data-synchronization)が有効な Dataverse エンティティのみ表示されます。 これらのエンティティは、Dataverse マネージド データ レイクにエクスポートして、Customer Insights で使用できます。 すぐに使える Dataverse テーブルは、デフォルトで変更の追跡が有効になっています。 カスタム テーブルの変更の追跡を有効にする必要があります。 Dataverse テーブルで変更の追跡が有効になっているか確認するには、[Power Apps](https://make.powerapps.com) > **データ** > **テーブル** に移動します。 目的のテーブルを見つけて選択します。 **設定** > **詳細オプション** に移動して **変更の追跡** の設定を確認します。
+- Azure Data Lake Storage などのオンライン サービスに保存されるデータは、Dynamics 365 Customer Insights で処理や保存される場所とは異なる場所に保存される場合があります。  オンライン サービスに保存されているデータをインポート、あるいは接続することで、 Dynamics 365 Customer Insights にデータの転送と保存がされることに同意するものとします。詳細については、 [Microsoft Trust Center](https://www.microsoft.com/trust-center) をご覧ください。
+
+- [変更の追跡](/power-platform/admin/enable-change-tracking-control-data-synchronization)が有効な Dataverse エンティティのみ表示されます。 これらのエンティティは、Dataverse マネージド データ レイクにエクスポートして、Customer Insights で使用できます。 すぐに使える Dataverse テーブルは、デフォルトで変更の追跡が有効になっています。 カスタム テーブルの変更の追跡を有効にする必要があります。 Dataverse テーブルで変更の追跡が有効になっているか確認するには、[Power Apps](https://make.powerapps.com) > **データ** > **テーブル** に移動します。 目的のテーブルを見つけて選択します。 **設定** > **詳細オプション** に移動して **変更の追跡** の設定を確認します。
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Dataverse マネージド レイクに接続する
 
@@ -51,7 +52,9 @@ Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイ
 
 1. 選択した内容を保存すると、Dataverse から選択したテーブルの同期が始まります。 新しく追加された接続は、**データソース** ページで確認することができます。 選択されたすべてのテーブルが同期されるまで、更新のキューに入り、エンティティ数が 0 と表示されます。
 
-環境のデータ ソース は 1 つだけで、同じ Dataverse が管理するレイクを同時に使用できます。
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、[**エンティティ**](entities.md) ページから取り込んだデータをレビューできます。
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Dataverse マネージド レイク データ ソースを編集する
 
@@ -62,4 +65,10 @@ Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイ
 
 1. 更新するデータ ソースの横にある、**編集** を選択します。
 
-1. 使用可能なエンティティのリストから追加するエンティティを選択し、**保存** を選択します。
+1. 使用可能なエンティティのリストから追加するエンティティを選択します。
+
+1. **保存** をクリックして変更を適用し、**データ ソース** ページに戻ります。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

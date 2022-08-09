@@ -1,65 +1,78 @@
 ---
 title: データを SFTP ホストにエクスポートする (ビデオを含む)
 description: SFTP ロケーションへの接続とエクスポートを構成する方法を説明します。
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081535"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207235"
 ---
-# <a name="export-data-to-sftp-preview"></a>データを SFTP にエクスポートする (プレビュー)
+# <a name="export-data-to-sftp-hosts-preview"></a>データを SFTP ホストにエクスポートする (プレビュー)
 
 顧客データをセキュリティで保護されたファイル転送プロトコル (SFTP) ロケーションにエクスポートし、サード パーティ アプリケーションで使用します。
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>接続の前提条件
+## <a name="prerequisites"></a>前提条件
 
 - SFTP ホストと対応する資格情報が必要です。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- ファイアウォールの SFTP デスティネーションは現在サポートされていません。 
+- ファイアウォールの SFTP デスティネーションは現在サポートされていません。
 - エクスポートの実行時間は、システムのパフォーマンスによって異なります。 サーバーの最小構成としては、2 つの CPU コアと 1Gb のメモリをお勧めします。
-- 2 つの CPU コアと 1Gb のメモリの推奨される最小構成を使用する場合、最大 1 億件の顧客プロファイルを持つエンティティのエクスポートには 90 分かかる場合があります。
+- 2 つの CPU コアと 1Gb のメモリの推奨される最小構成を使用する場合、最大 1 億件の顧客プロファイル。90 分かかる場合があります。
+- 認証に SSH キーを使用する場合は、必ず PEM または SSH.COM 形式として[秘密キーを作成](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) してください。 Putty を使用している場合は、Open SSH としてエクスポートして秘密キーを変換します。 以下の秘密キーがサポートされています。
+  - OpenSSL PEM および ssh.com 形式の RSA
+  - OpenSSL PEM および ssh.com 形式の DSA
+  - OpenSSL PEM 形式の ECDSA 256/384/521
+  - OpenSSH キー形式の ED25519 および RSA
 
 ## <a name="set-up-connection-to-sftp"></a>SFTP への接続を設定する
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. **管理** > **接続** に移動します。
 
-1. **つながりの追加** を選択し、**SFTP** を選択して、接続を構成します。
+1. **つながりの追加** を選択して、**SFTP** を選択します。
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+1. この接続を使用できるユーザーを選択します。 既定では、管理者のみです。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. SFTP アカウントの **ユーザー名**、**パスワード**、**ホスト名**、および **エクスポート フォルダー** を入力します。
+1. SSH を介して認証するか、接続のユーザー名/パスワードを使用するかを選択し、必要な詳細を入力します。 認証に SSH キーを使用する場合は、必ず PEM または SSH.COM 形式として[秘密キーを作成](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) してください。 Putty を使用している場合は、Open SSH としてエクスポートして秘密キーを変換します。 以下の秘密キーがサポートされています。
+   - OpenSSL PEM および ssh.com 形式の RSA
+   - OpenSSL PEM および ssh.com 形式の DSA
+   - OpenSSL PEM 形式の ECDSA 256/384/521
+   - OpenSSH キー形式の ED25519 および RSA
 
 1. **検証する** を選択して接続をテストします。
 
-1. データを **Gzip 形式** または **解凍済み** のどちらでエクスポートするか、およびエクスポートされたファイルの **フィールド区切り記号** を選択します。
-
-1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **保存** を選択して、接続を完了します。
 
 ## <a name="configure-an-export"></a>エクスポートの構成
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **データ** > **エクスポート** に移動します。
 
-1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
+1. **エクスポートの追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、SFTP セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポートの接続** フィールドで、SFTP セクションから接続を選択します。 接続できない場合は、管理者に連絡してください。
+
+1. エクスポートの名前を入力します。
+
+1. データを **Gzip 形式** または **解凍済み** のどちらでエクスポートするか、およびエクスポートされたファイルの **フィールド区切り記号** を選択します。
 
 1. エクスポートするエンティティ (セグメントなど) を選択します。
 
@@ -68,17 +81,9 @@ ms.locfileid: "9081535"
 
 1. **保存** を選択します。
 
-エクスポートを保存しても、エクスポートはすぐには実行されません。
-
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。
-[オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
 > 大量のデータを含むエンティティのエクスポートでは、エクスポートごとに同じフォルダーに複数の CSV ファイルが作成される場合があります。 エクスポートの分割は、エクスポートの完了にかかる時間を最小限にするためのパフォーマンス上の理由で実施されます。
-
-## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights による SFTP 経由のデータ転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、エクスポート先がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

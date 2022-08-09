@@ -1,19 +1,19 @@
 ---
 title: Klaviyo にセグメントをエクスポートする (プレビュー)
 description: 接続を構成して、Klaviyo にエクスポートする方法を説明します。
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051321"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196768"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Klaviyo にセグメントをエクスポートする (プレビュー)
 
@@ -21,32 +21,34 @@ ms.locfileid: "9051321"
 
 ## <a name="prerequisites"></a>前提条件
 
--   [Klaviyo アカウント](https://www.klaviyo.com/) および対応する管理者資格情報を所有していること。
--   Customer Insights で [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
+- [Klaviyo アカウント](https://www.klaviyo.com/) および対応する管理者資格情報。
+- [Klaviyo API キー](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys)。
+- [Klaviyo リスト ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID)。
+- Customer Insights で [構成されたセグメント](segments.md)。
+- エクスポートされたセグメントの Unified customer profile には、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Klaviyo へのエクスポートごとに最大 10 万の顧客プロファイルをエクスポートできます。
-- Klaviyo へのエクスポートはセグメントに制限されています。
-- 最大 100 万の顧客プロファイルを Klaviyo にエクスポートすると、完了するまでに最大 20 分かかる場合があります。 
-- Klaviyo にエクスポートできる顧客プロファイルの数は、Klaviyo との契約によって異なり、限定されます。
+- Klaviyo へのエクスポートあたり最大 100 万の顧客プロファイル。完了するまでに最大 20 分かかる場合があります。 Klaviyo にエクスポートできる顧客プロファイルの数は、Klaviyo との契約によって異なります。
+- セグメントのみ。
 
 ## <a name="set-up-connection-to-klaviyo"></a>Klaviyo への接続を設定する
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. **管理** > **接続** に移動します。
 
-1. **接続の追加** を選択し、**Klaviyo** を選択し、接続を構成します。
+1. **つながりの追加** を選択して、**Klaviyo** を選択します。
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+1. この接続を使用できるユーザーを選択します。 既定では、管理者のみです。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. ご利用の [Klaviyo API キー](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys) を入力してログインを続行します。 
+1. ご利用の Klaviyo API キー を入力してログインを続行します。
 
-1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
-1. Klaviyo への接続を開始するには、**接続** を選択します。
+1. **接続** を選択して、接続を初期化します。
 
 1. **Klaviyo で認証する** を選択し、Klaviyo の管理者認証情報を入力します。
 
@@ -56,27 +58,24 @@ ms.locfileid: "9051321"
 
 ## <a name="configure-an-export"></a>エクスポートの構成
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **データ** > **エクスポート** に移動します。
 
-1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
+1. **エクスポートの追加** を選択します。
 
-1. **エクスポート用の接続** フィールドで、Klaviyo セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポート用の接続** フィールドで、Klaviyo セクションから接続を選択します。 接続できない場合は、管理者に連絡してください。
 
-1. [**Klaviyo リスト ID**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID) を入力します。     
+1. エクスポートの名前を入力します。
 
-3. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Klaviyo にエクスポートする必要があります。
+1. **Klaviyo リスト ID** を入力します。
+
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。
+
+1. エクスポートするセグメントを選択します。
 
 1. **保存** を選択します。
 
-エクスポートを保存しても、エクスポートはすぐには実行されません。
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
-
-
-## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights から Klaviyo へのデータ送信を可能にすると、Dynamics 365 Customer Insights のコンプライアンスの範囲を越えて、個人情報などの機密性の高い情報が潜在的に含まれるデータの転送を許可することになります。 マイクロソフトは、お客様の指示により当該データを転送しますが、お客様は、Klaviyo がお客様の持つプライバシーまたはセキュリティに関する義務を確実に果たす責任を負います。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-
-Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。
+[!INCLUDE [footer-include](includes/footer-banner.md)]

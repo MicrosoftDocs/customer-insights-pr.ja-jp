@@ -1,19 +1,19 @@
 ---
 title: Iterable にセグメントをエクスポートする (プレビュー)
 description: Iterable への接続とエクスポートを構成する方法を説明します。
-ms.date: 03/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052241"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195435"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Iterable にセグメントをエクスポートする (プレビュー)
 
@@ -21,31 +21,33 @@ ms.locfileid: "9052241"
 
 ## <a name="prerequisites"></a>前提条件
 
--   [Iterable アカウント](https://iterable.com/)と対応する管理者資格情報を保有しています。
--   Customer Insights で [セグメントを構成](segments.md) しました。
--   エクスポートされたセグメントの統合顧客プロファイルには、電子メール アドレスを表示するフィールドが含まれていること。
+- [Iterable アカウント](https://iterable.com/)と対応する管理者資格情報。
+- [Iterable API キー](https://support.iterable.com/hc/en-us/articles/360043464871)
+- Customer Insights で [構成されたセグメント](segments.md)。
+- エクスポートされたセグメントの Unified customer profile には、電子メール アドレスを表示するフィールドが含まれていること。
 
 ## <a name="known-limitations"></a>既知の制限
 
-- Iterable へのエクスポートはセグメントに制限されています。
-- 最大 100 万の顧客プロファイルを Iterable にエクスポートすると、完了するまでに最大 30 分かかる場合があります。 
-- Iterable にエクスポートできる顧客プロファイルの数は、Iterable との契約によって異なり、限定されます。
+- Iterable に対して最大 100 万の顧客プロファイル。完了するまでに最大 30 分かかる場合があります。 Iterable にエクスポートできる顧客プロファイルの数は、Iterable との契約によって異なります。
+- セグメントのみ。
 
 ## <a name="set-up-connection-to-iterable"></a>Iterable への接続を設定します
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. **管理** > **接続** に移動します。
 
-1. **接続の追加** を選択して **Iterable** を選択し、接続を構成します。
+1. **つながりの追加** を選択して、**Iterable** を選択します。
 
 1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続の表示名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+1. この接続を使用できるユーザーを選択します。 既定では、管理者のみです。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
-1. [Iterable API キー](https://support.iterable.com/hc/en-us/articles/360043464871)を入力してサインインを続行します。 
+1. Iterable API キーを入力してサインインを続行します。
 
-1. **同意する** を選択して **データのプライバシーとコンプライアンス** を確認してください。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
-1. **接続** を選択して Iterable への接続を初期化します。
+1. **接続** を選択して、接続を初期化します。
 
 1. **エクスポート ユーザーとして自分自身を追加する** を選択して、Customer Insights の資格情報を入力します。
 
@@ -53,25 +55,22 @@ ms.locfileid: "9052241"
 
 ## <a name="configure-an-export"></a>エクスポートの構成
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **データ** > **エクスポート** に移動します。
 
-1. 新しいエクスポートを作成するには、**エクスポート先の追加** を選択します。
+1. **エクスポートの追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、Iterable セクションから接続を選択します。 このセクション名が表示されない場合、この種類の接続は使用できません。
+1. **エクスポートの接続** フィールドで、Iterable セクションから接続を選択します。 接続できない場合は、管理者に連絡してください。
 
-3. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 セグメントを Iterable にエクスポートする必要があります。Iterable で作成されたリストには、Dynamics 365 Customer Insights のセグメント名とまったく同じ名前が付けられます。
+1. エクスポートの名前を入力します。
+
+1. **データ マッチング** セクションの **メール** フィールドで、顧客のメール アドレスを表すフィールドを選択します。 Iterable で作成されたリストには、Dynamics 365 Customer Insights のセグメント名とまったく同じ名前が付けられます。
+
+1. エクスポートするセグメントを選択します。
 
 1. **保存** を選択します。
 
-エクスポートを保存しても、エクスポートはすぐには実行されません。
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。 
-
-
-## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights による Iterable へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft はそのようなデータをお客様の指示に従って転送しますが、Iterable がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-
-Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、エクスポート先はいつでも削除できます。
+[!INCLUDE [footer-include](includes/footer-banner.md)]

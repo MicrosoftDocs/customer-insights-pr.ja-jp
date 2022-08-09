@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052057"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196262"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>HERE Technologies で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -54,7 +54,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. 概要を確認し、**次へ** を選択します。
 
-1. 接続を選択します。 利用できない場合は、管理者に連絡してください。
+1. 接続を選択します。 接続できない場合は、管理者に連絡してください。
 
 1. **次へ** を選択します。
 

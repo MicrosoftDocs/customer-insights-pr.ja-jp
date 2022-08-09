@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012031"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207143"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Power Query と Azure Data Lake のデータソースの増分更新
 
-この記事では、Power Query、または Azure Data Lake ベースのデータ ソースの増分更新を構成する方法について説明します。
-
-データ ソースの増分更新には、次の利点があります:
+Power Query または Azure Data Lake に基づくデータソースを増分更新することには、以下の利点があります。
 
 - **更新速度の増強** - 変更のあったデータのみが更新されます。 例えば、履歴データセットの過去 5 日間だけを更新することができます。
 - **安定性の増加** - 更新の規模を縮小化することで、揮発性のソース システムへの接続を長期間維持する必要がなくなり、接続の問題が発生するリスクが軽減されます。
@@ -73,6 +71,7 @@ Customer Insightsは、Azure Data Lake Storage に接続されたデータソー
 
    1. フルデータ、増分データのアップサート、増分データの削除のための .csv または .parquet ファイルを含むルートフォルダを参照してください。
    1. フルデータと増分ファイルの両方の拡張子を入力します (\.csv または \.parquet)。
+   1. .csv ファイルの場合は列区切り文字を選択し、ファイルの最初の行を列ヘッダーとして使用するかどうかを選択します。
    1. **保存** を選択します。
 
 1. **最終更新日** で、日付のタイムスタンプ属性を選択します。

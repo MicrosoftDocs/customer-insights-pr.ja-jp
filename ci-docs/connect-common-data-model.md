@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake アカウントを使用して Common Data Model のフォルダーに接続する
 description: Azure Data Lake Storage を使用して、Common Data Model データを操作します。
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081309"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207005"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage のデータへの接続
 
@@ -82,7 +82,7 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
    :::image type="content" source="media/ADLS_required.png" alt-text="主キーが必要であることを示すダイアログ ボックス":::
 
    > [!TIP]
-   > JSON 編集インターフェースでエンティティを編集するには、**その他** > **スキーマ ファイルの編集** を選択します。 変更を行い、**保存** を選択します。
+   > JSON 編集インターフェースでエンティティを編集するには、エンティティを選択し、**スキーマ ファイルの編集** を選択します。 変更を行い、**保存** を選択します。
 
 1. 増分インジェストが必要なエンティティを選択した場合、**増分更新** の下に **必須** と表示されます。 これらの各エンティティについては、[ Azure Data Lake データソースの増分更新を構成する](incremental-refresh-data-sources.md)を参照してください。
 
@@ -101,6 +101,10 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
    1. **完了** を選択します。
 
 1. **保存** を選択します。 **データソース** ページが開き、新しいデータソースが **更新** された状態で表示されます。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、[**エンティティ**](entities.md) ページから取り込んだデータをレビューできます。
 
 ### <a name="create-a-new-schema-file"></a>新しいスキーマ ファイルの作成
 
@@ -148,6 +152,9 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
 
 1. **保存** を選択します。 **データソース** ページが開き、新しいデータソースが **更新** された状態で表示されます。
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、[**エンティティ**](entities.md) ページから取り込んだデータをレビューできます。
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage データ ソースを編集する
 
@@ -179,8 +186,16 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
       > [!IMPORTANT]
       > 既存の model.json または manifest.json ファイルとエンティティのセットに依存関係がある場合、エラー メッセージが表示され、別の model.json または manifest.json ファイルを選択できません。 model.json または manifest.json ファイルを変更する前にこれらの依存関係を削除するか、依存関係の削除を回避するために使用する model.json または manifest.json ファイルを使用して新しいデータ ソースを作成します。
    - データ ファイルの場所または主キーを変更するには、**編集** を選択します。
-   - 増分取り込みデータを変更するには、次をを参照してください: [Azure Data Lake データソースの増分更新を構成する](incremental-refresh-data-sources.md)
+   - 増分取り込みデータを変更するには、次をを参照してください: [Azure Data Lake データソースの増分更新を構成する](incremental-refresh-data-sources.md)。
+   - エンティティ名は、.json ファイルのエンティティ名と一致するようにのみ変更してください。
+
+     > [!NOTE]
+     > インジェスト後は、Customer Insights のエンティティ名を model.json または manifest.json ファイル内のエンティティ名と常に同じにしてください。 Customer Insights は、システムを更新するたびに、model.json または manifest.json を使用してすべてのエンティティ名を検証します。 エンティティ名が Customer Insights の内部または外部で変更された場合、Customer Insights が .json ファイルで新しいエンティティ名を見つけることができないため、エラーが発生します。 取り込んだエンティティ名が誤って変更された場合、Customer Insights でエンティティ名を編集して、.json ファイルの名前と一致させます。
 
 1. 属性の追加や変更、データ プロファイリングを有効にするには、**属性** を選択します。 そして **完了** を選択します。
 
 1. **保存** をクリックして変更を適用し、**データ ソース** ページに戻ります。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

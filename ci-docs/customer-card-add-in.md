@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081255"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194929"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 アプリの顧客カード アドイン (プレビュー)
 
@@ -28,21 +28,25 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 
 ## <a name="prerequisites"></a>前提条件
 
-- アドインは、Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
-- Dynamics 365 データを Customer Insights の顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md)  ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセスのマップ ステップでのデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認する必要があります。
+- Sales や Customer Service など、Dynamics 365 モデル駆動型アプリ 9.0 以降でのみ機能します。
+- Dynamics 365 データを Customer Insights の顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md)  ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセス中のデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認してください。
 - カスタマー カード アドインのすべての Dynamics 365 ユーザーは、データを見るには、Customer Insights で [ユーザーとして追加](permissions.md) する必要があります。
-- Customer Insights の [構成された検索およびフィルター機能](search-filter-index.md) は、作業するデータの検索に必要です。
+- Customer Insights での [構成された検索およびフィルター機能](search-filter-index.md)。
 - 各アドイン コントロールは、Customer Insights の特定のデータに依存します。 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
-  - **メジャー制御**: タイプ顧客属性の[構成されたメジャー](measures.md)が必要です。
+  - **メジャー制御**: [構成された顧客属性メジャー](measures.md) が必要です。
   - **インテリジェンス制御**: [予測またはカスタム モデル](predictions-overview.md) を使用して生成されたデータが必要です。
-  - **顧客詳細制御**: プロファイルのすべてのフィールドは、統合された顧客プロファイルで使用できます。
-  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md)が必要です。 カード アドインは、次の機能強化をサポートしています。Microsoft 提供の[ブランド](enrichment-microsoft.md)、Microsoft 提供の[興味](enrichment-microsoft.md)、Microsoft が提供の[Office エンゲージメント データ](enrichment-office.md)。
-  - **連絡先制御**: 連絡先タイプのセマンティック エンティティの定義が必要です。
-  - **タイムライン コントロール**: [構成済みアクティビティ](activities.md)が必要です。
+  - **顧客詳細制御**: 統合された顧客プロファイルで使用できるプロファイルのすべてのフィールドが表示されます。
+  - **エンリッチメント制御**: 顧客プロファイルに適用されるアクティブな[エンリッチメント](enrichment-hub.md) が必要です。 カード アドインは、次の機能強化をサポートしています。Microsoft 提供の[ブランド](enrichment-microsoft.md)、Microsoft 提供の[興味](enrichment-microsoft.md)、Microsoft が提供の[Office エンゲージメント データ](enrichment-office.md)。
+  - **連絡先制御**: 連絡先のセマンティック エンティティ タイプが必要です。
+  - **タイムライン コントロール**: [構成済みアクティビティ](activities.md) が必要です。
 
 ## <a name="install-the-customer-card-add-in"></a> 顧客カード アドイン のインストール
 
-カスタマー カード アドインは、Dynamics 365 の Customer Engagement アプリのソリューションです。 ソリューションをインストールするには、AppSource に移動し、**Dynamics 顧客カード** を検索します。 [AppSource で顧客カードアドイン](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) を選択して、**今すぐ入手** を選択します。
+カスタマー カード アドインは、Dynamics 365 の Customer Engagement アプリのソリューションです。 ソリューションをインストールするには:
+
+1. AppSource に移動し、**Dynamics Customer Card** を検索します。
+
+1. [AppSource で顧客カードアドイン](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) を選択して、**今すぐ入手** を選択します。
 
 ソリューションをインストールするには、Dynamics 365 アプリの管理者の資格情報でログインする必要があります。 ソリューションが環境にインストールされるまでに時間がかかる場合があります。
 

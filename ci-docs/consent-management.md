@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947502"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188053"
 ---
 # <a name="use-customer-consent"></a>お客様の同意を得る
 
@@ -50,7 +50,7 @@ Dynamics 365 Customer Insights は、Unified customer profile の一部として
 
 ## <a name="import-and-unify-consent-data"></a>同意データをインポートして統合する
 
-同意データは、他のデータソースを Customer Insights に取り込むのと同じ方法でインポートできます。 サポートされているデータソースとそれらをインポートする方法の詳細については、[データソースの概要](data-sources.md)を参照してください。
+同意データは、他のデータソースを Customer Insights に取り込むのと同じ方法でインポートします。 サポートされているデータソースとそれらをインポートする方法の詳細については、[データソースの概要](data-sources.md)を参照してください。
 
 データソースの統合の詳細については、[データ統合の概要](data-unification.md)を参照してください。
 
@@ -71,3 +71,5 @@ Dynamics 365 Customer Insights は、Unified customer profile の一部として
 つまり、Customer Insights にインポートされるソースデータに常に最新の情報が含まれていることを確認してください。
 
 詳しくは、[手動でセグメントを更新するか](segments.md#refresh-segments)、[スケジュール更新を設定するか](system.md#schedule-tab)を参照してください。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

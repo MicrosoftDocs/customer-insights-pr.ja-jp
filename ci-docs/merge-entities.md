@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081622"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139663"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>データ統合用の顧客フィールドを統合する
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 統合プロセスのこの手順では、統合プロファイル エンティティ内でマージする属性を選択して除外します。 たとえば、3 つのエンティティに電子メール データがある場合、3 つの個別の電子メール フィールドすべてを保持するか、統合プロファイルの単一の電子メール フィールドにマージすることができます。 一部の属性は、システムによって自動的に結合されます。 安定した一意の顧客 ID を作成し、関連するプロファイルをクラスターにグループ化できます。
 

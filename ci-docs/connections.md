@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081237"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195180"
 ---
 # <a name="connections-preview-overview"></a>接続 (プレビュー) の概要
 
@@ -27,6 +27,12 @@ ms.locfileid: "9081237"
 **接続** タブには、すべてのアクティブな接続が表示されます。 一覧には、各接続の行が表示されます。
 
 **検出** タブにある各拡張性オプションの概要、説明、実行可能な操作について説明します。
+
+## <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
+
+Dynamics 365 Customer Insights によるサードパーティ製品または他の Microsoft 製品へのデータの転送を有効にすると、Dynamics 365 Customer Insights のコンプライアンスの境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可することになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、サードパーティがプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
+
+Dynamics 365 Customer Insights 管理者は、いつでも接続を削除して、この機能の使用を中止することができます。
 
 ## <a name="exports"></a>エクスポート
 
@@ -41,8 +47,6 @@ ms.locfileid: "9081237"
 接続を追加するには、[管理者のアクセス許可](permissions.md) が必要です。 他の Microsoft サービスに接続する場合、両方のサービスが同じ組織内にあることが必要です。
 
 1. **管理** > **接続 (プレビュー)** に移動します。
-
-1. **接続** タブに移動します。
 
 1. 新しい接続を作成するには、**つながりの追加** を選択します。 ドロップダウン メニューから、作成する接続の種類を選択します。
 
@@ -99,3 +103,5 @@ ms.locfileid: "9081237"
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>独自の Key Vault によって管理されるシークレットとの接続を設定します
 
 一部の接続には、API キーやパスワードなどのシークレットが必要です。 一部の接続では、独自の Key Vault に保存されているシークレットをサポートしています。 サポートされている接続とセットアップ方法の詳細については、[Customer Insights のための独自の Key Vault](use-azure-key-vault.md) を参照してください。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

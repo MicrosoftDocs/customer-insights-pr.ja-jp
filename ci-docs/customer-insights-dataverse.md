@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse での Customer Insights データの使用
 description: Customer Insights と Microsoft Dataverse の接続方法と、Dataverse にエクスポートする出力エンティティを説明します。
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011526"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153410"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
@@ -31,13 +31,25 @@ Customer Insights は、出力エンティティを [Microsoft Dataverse](/power
 - 接続する Dataverse 環境に関連付けられた Customer Insights 環境は他に存在しません。 [Dataverse 環境への既存の接続を削除する](#remove-an-existing-connection-to-a-dataverse-environment)方法について説明します。
 - Microsoft Dataverse 環境を接続できるのは、単一のストレージ アカウントのみです。 これは [Azure Data Lake Storage を使用する](own-data-lake-storage.md) ように環境を構成した場合にのみ適用されます。
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse ストレージ容量権利
+
+Customer Insights サブスクリプションは、組織の既存の [Dataverse ストレージ容量](/power-platform/admin/capacity-storage) に対して追加容量の権利を与えます。 追加される容量は、サブスクリプションが使用するプロファイルの数によって異なります。
+
+**用例:**
+
+100,000 の顧客プロファイルごとに 15 GB のデータベース ストレージと 20 GB のファイル ストレージを取得するとします。 サブスクリプションに 300,000 の顧客プロファイルが含まれている場合、合計ストレージ容量は 45 GB (3 x 15 GB) のデータベース ストレージと 60 GB のファイル ストレージ (3 x 20 GB) になります。 同様に、30,000 アカウントに B2B サブスクリプションがある場合、合計ストレージ容量は 45 GB (3 x 15 GB) のデータベース ストレージと 60 GB のファイル ストレージ (3 x 20 GB) になります。
+
+ログ容量は増分ではなく、組織によって固定されています。
+
+詳細な容量権利の詳細については、[Dynamics 365 のライセンス ガイド](https://go.microsoft.com/fwlink/?LinkId=866544) を参照してください。
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse 環境を Customer Insights に接続する
 
 **Microsoft Dataverse** ステップによって、[Customer Insights 環境を作成する](create-environment.md) 際に Customer Insights を Dataverse 環境に接続できます。
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="正味の新しい環境に対して自動で有効化された、Microsoft Dataverse とのデータ共有。":::
 
-管理者は、既存の Dataverse 環境に接続するように Customer Insights を構成できます。 Dataverse 環境に URL を提供することによって、それは彼らの新しい Customer Insights 環境に接続しています。
+管理者は、既存の Dataverse 環境に接続するように Customer Insights を構成できます。 Dataverse 環境に URL を提供することによって、それは彼らの新しい Customer Insights 環境に接続しています。 Customer Insights と Dataverse の間の接続を確立した後、Dataverse 環境の組織名を変更しないでください。 組織の名前は Dataverse URL で使用され、名前の変更により、Customer Insights との接続が切断されます。
 
 既存の Dataverse 環境を使用しない場合、システムはテナント内に Customer Insights データ用の新しい環境を作成します。 [Power Platform 管理者は、環境を作成できるユーザーを制御できます](/power-platform/admin/control-environment-creation)。 新しい Customer Insights 環境を設定する際に、管理者が自身を除くすべてのユーザーに対して Dataverse の環境作成を無効化している場合、新しい環境を作成できない場合があります。
 
@@ -84,7 +96,7 @@ PowerShell スクリプトを実行する場合は、それに応じて最初に
 
     2. `ByolSetup.ps1`
         - このスクリプトを実行するにはストレージアカウント/コンテナーレベルで *ストレージ BLOB データ所有者* のアクセス許可が必要です。または、このスクリプトによって自分のアクセス許可が作成されます。 スクリプトを正常に実行した後、ロールの割り当てを手動で削除できます。
-        - この PowerShell スクリプトは、Microsoft Dataverse サービスおよび任意の Dataverse ベースのビジネス アプリケーションに必要なロールベースのアクセス制御 (RBAC) を追加します。 また、`CreateSecurityGroups.ps1` スクリプトで作成されたセキュリティ グループの Customer Insights コンテナのアクセス制御リスト (ACL) を更新します。 共同作成者グループには *rwx* アクセスが付与され、閲覧者グループには *r-x* アクセス許可のみ付与されます。
+        - この PowerShell スクリプトは、Microsoft Dataverse サービスおよび任意の Dataverse ベースのビジネス アプリケーションに必要なロールベースのアクセス制御を追加します。 また、`CreateSecurityGroups.ps1` スクリプトで作成されたセキュリティ グループの Customer Insights コンテナのアクセス制御リスト (ACL) を更新します。 共同作成者グループには *rwx* アクセスが付与され、閲覧者グループには *r-x* アクセス許可のみ付与されます。
         - Azure Data Lake Storage を含む Azure サブスクリプション ID ストレージ アカウント名、リソース グループ名、および閲覧者および共同作成者のセキュリティ グループ ID 値を指定して、Windows PowerShell でこの PowerShell スクリプトを実行します。 エディターで PowerShell スクリプトを開き、追加情報と実装されているロジックを確認します。
         - スクリプトを正常に実行した後、出力文字列をコピーします。 出力スクリプトは次のようになります: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081720"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121568"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API の OData クエリの例
 
@@ -23,7 +23,7 @@ Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づ�
 
 クエリ サンプルを変更して、ターゲット環境で機能するようにする必要があります。 
 
-- {instanceId} がクエリする Customer Insights 環境の GUID は {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` です。 [ListAllInstances 操作](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) を使用すると、アクセスできる {InstanceId} を見つけることができます。
+- {instanceId} がクエリする Customer Insights 環境の GUID は {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` です。 [ListAllInstances 操作](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) を使用すると、アクセスできる {InstanceId} を見つけることができます。
 - {CID}: 統合された顧客レコードの GUID。 例: `ce759201f786d590bf2134bff576c369`。
 - {AlternateKey}: データ ソースの顧客レコードの主キーの識別子。 例: `CNTID_1002`
 - {DSname}: Customer Insights に取り込まれるデータ ソースのエンティティ名を持つ文字列。 例: `Website_contacts`。
@@ -39,9 +39,10 @@ Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づ�
 |代替キー    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  代替キーは統合された顧客エンティティに保持される       |
 |選択   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |含む    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|代替キー + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|代替キー + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |検索する  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   検索文字列の上位 10 件の結果を返す      |
 |セグメント メンバーシップ  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | セグメント化エンティティから事前設定された行数を返します。      |
+|顧客のセグメント メンバーシップ | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | 指定されたセグメントのメンバーである場合、顧客プロファイルを返します     |
 
 ## <a name="unified-activity"></a>統合した活動
 

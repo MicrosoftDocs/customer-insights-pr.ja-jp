@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947374"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146701"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR におけるデータ主体の権利 (DSR)
 
@@ -31,18 +31,22 @@ ms.locfileid: "8947374"
 
 Customer Insights は、特定の顧客またはユーザーの個人データを削除するために次の製品内エクスペリエンスを提供します。
 
-- **顧客データの削除要求を管理する** : Customer Insights の顧客データは、Customer Insights 外部の元のデータ ソースから取り込まれます。 すべての GDPR 削除要求は、元のデータ ソースで実行しなければなりません。
+- **顧客データの削除要求を管理する** : Customer Insights の顧客データは、Customer Insights 外部の元のデータ ソースから取り込まれます。 GDPR 削除要求は、まず元のデータ ソースで実行します。
 - **Customer Insights ユーザー データの削除要求の管理**: ユーザーのデータは Customer Insights によって作成されます。 すべての GDPR 削除要求は、Customer Insights で実行する必要があります。
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>顧客データの削除要求を管理する
 
-Customer Insights の管理者は、次の手順に従って、データ ソースで削除された顧客データを 取り除くことができます。
+Customer Insights の管理者は、次の手順に従って、データ ソースで削除された顧客データを取り除くことができます。 以下の手順に進む前に、データ ソースで削除リクエストが実行されたことを確認してください。 
 
 1. Dynamics 365 Customer Insights にサインインします。
-2. **データ** > **データ ソース** に移動します
-3. 削除された顧客データを含むリスト内の各データ ソースについて :
+1. **データ** > **データ ソース** に移動します
+1. 削除された顧客データを含むリスト内の各データ ソースについて :
    1. 垂直の省略記号 (&vellip;) を選択し、**更新** を選択します。
-   2. **状態** 下のデータ ソースの状態を確認します。 チェックマークが付いていると、更新が成功したことを意味します。 警告の三角形は、何かがうまくいかなかったことを意味します。 警告の三角形が表示された場合は、D365CI@microsoft.com にお問い合わせください。
+   1. **状態** 下のデータ ソースの状態を確認します。 チェックマークが付いていると、更新が成功したことを意味します。 警告の三角形は、何かがうまくいかなかったことを意味します。 警告の三角形が表示された場合は、D365CI@microsoft.com にお問い合わせください。
+1. データ ソースの更新が成功したら、ダウンストリームの更新も実行します。 特に、Customer Insights の定期的な完全更新がスケジュールされていない場合です。 
+
+> [!IMPORTANT]
+> 静的セグメントは、完全更新や、削除要求後のダウンストリーム更新の実行には含まれていません。 顧客データが静的セグメントからも確実に削除されるようにするには、更新されたソース データを使用して静的セグメントを再作成します。
 
 > [!div class="mx-imgBorder"]
 > ![顧客データの GDPR 削除要求の処理。](media/gdpr-data-sources.png "顧客データの GDPR 削除要求の処理")
@@ -77,5 +81,10 @@ Customer Insights 管理者は、次の手順に従って Customer Insights ユ�
 1. 要求でユーザーのメールアドレスを指定して、D365CI@microsoft.com にメールを送ります。 Customer Insights チームは、登録されたテナント管理者のメール アドレスにメールを送信し、データのエクスポートの確認を求めます。
 2. 要求されたユーザーのデータをエクスポートするにあたっての確認をします。
 3. テナント管理者のメールアドレスからエクスポートされたデータを受け取ります。
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights でのデータ削除処理
+
+1. データ パーティションとデータ スナップショットが 30 日を超えて非アクティブである場合、データは削除されます (データ パーティションとデータ スナップショット)。つまり、データ ソースの更新を通じて、新しいデータ パーティションとスナップショットに置き換えられます。
+2. すべてのデータとスナップショットが削除されるわけではありません。 最新のデータ パーティションとデータ スナップショットは、Customer Insightsで使用されているため、定義上アクティブです。 最新のデータの場合、過去 30 日以内にデータ ソースが更新されなかったかどうかは関係ありません。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse データ ソースに接続する (プレビュー)
 description: Azure Synapse のデータベースを Dynamics 365 Customer Insights のデータ ソースとして使用します。
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052705"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206913"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics データ ソースに接続する (プレビュー)
 
@@ -66,3 +66,9 @@ Azure Synapse Analytics は、データ ウェアハウスとビッグ データ
 1. オプションで、データ プロファイルを許可するデータ エンティティを選択します。
 
 1. **保存** を選択して選択を適用し、Azure Synapse Analytics のレイク データベース テーブルにリンクされている新しく作成されたデータ ソースからのデータの取り込みを開始します。 **データソース** ページが開き、新しいデータソースが **更新** された状態で表示されます。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+データの読み込みには時間がかかる場合があります。 正常に最新の情報に更新したら、[**エンティティ**](entities.md) ページから取り込んだデータをレビューできます。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

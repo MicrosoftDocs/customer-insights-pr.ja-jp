@@ -1,19 +1,19 @@
 ---
 title: データを Azure Synapse Analytics にエクスポートする (プレビュー)
 description: Azure Synapse Analytics への接続を構成する方法について説明します。
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081582"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196400"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポートする (プレビュー)
 
@@ -21,58 +21,54 @@ Azure Synapse は、データ ウェアハウスやビッグ データ システ
 
 ## <a name="prerequisites"></a>前提条件
 
-Customer Insights から Azure Synapse への接続を構成するには、次の前提条件を満たす必要があります。
-
 > [!NOTE]
-> すべての **ロールの割り当て** を説明どおりに設定してください。  
+> すべての **ロールの割り当て** を説明どおりに設定してください。
 
-## <a name="prerequisites-in-customer-insights"></a>Customer Insights の前提条件
+- Customer Insights で、Azure Active Directory (AD) ユーザー アカウントに[管理者の役割](permissions.md#assign-roles-and-permissions) が必要です。
 
-* Azure Active Directory (AD) ユーザー アカウントに Customer Insights の **管理者** ロールがあります。 [ユーザーのアクセス許可の設定](permissions.md#assign-roles-and-permissions) の詳細について参照してください。
-
-Azure の場合: 
+Azure の場合:
 
 - 有効な Azure サブスクリプション。
 
-- 新しい Azure Data Lake Storage Gen2 アカウントを使用する場合、*Customer Insights のサービス プリンシパル* に **ストレージ Blob データ投稿者** アクセス許可が必要です。 [Customer Insights の Azure サービス プリンシパルを使用して Azure Data Lake Storage Gen2 アカウントへの接続](connect-service-principal.md)の詳細をご覧ください。 Data Lake Storage Gen2 では、[階層型名前空間](/azure/storage/blobs/data-lake-storage-namespace) を有効にすることが **必要** です。
+- 新しい Azure Data Lake Storage Gen2 アカウントを使用する場合、[Customer Insights のサービス プリンシパル](connect-service-principal.md)に **ストレージ Blob データ投稿者** アクセス許可が必要です。 Data Lake Storage Gen2 では、[階層型名前空間](/azure/storage/blobs/data-lake-storage-namespace) を有効にすることが **必要** です。
 
-- Azure Synapse workspace が配置されているリソース グループでは、*サービス プリンシパル* と、*Customer Insights の管理者アクセス許可を持つ Azure AD ユーザー* に、**閲覧者** アクセス許可が必要です。 詳細については、[Azure ポータルを使用した Azure ロールの割り当て](/azure/role-based-access-control/role-assignments-portal) を参照してください。
+- Azure Synapse workspace が配置されているリソース グループでは、*サービス プリンシパル* と、*Customer Insights の管理者アクセス許可を持つ Azure AD ユーザー* に、**閲覧者**[アクセス許可](/azure/role-based-access-control/role-assignments-portal) が必要です。
 
 - *Customer Insights の管理者アクセス許可を持つ Azure AD ユーザー* には、Azure Synapse workspace にデータが配置されてリンクされている、Azure Data Lake Storage Gen2 アカウントに **ストレージ Blob データ投稿者** アクセス許可が必要です。 詳細については、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
-- *[Azure Synapse ワークスペース マネージド ID](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細は、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
+- *[Azure Synapse workspace マネージド ID](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細は、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
-- Azure Synapse workspace では、*Customer Insights のサービス プリンシパル* に **Synapse 管理者** ロールを割り当てられる必要があります。 詳細については、[Synapse ワークスペースのアクセス制御を設定する方法](/azure/synapse-analytics/security/how-to-set-up-access-control) を参照してください。
+- Azure Synapse workspace では、*Customer Insights のサービス プリンシパル* に **Synapse 管理者**[ロールを割り当てられる](/azure/synapse-analytics/security/how-to-set-up-access-control) 必要があります。
 
-## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Azure Synapse への接続とエクスポートを設定する
+## <a name="set-up-connection-to-azure-synapse"></a>Azure Synapse への接続を設定する
 
-### <a name="configure-a-connection"></a>接続の構成
-
-接続を作成するには、Customer Insights のサービス プリンシパルとユーザー アカウントには、Synapse Analytics ワークスペースが配置されている *リソース グループ* で **閲覧者** の権限が必要です。 さらに、Synapse Analytics ワークスペースのサービス プリンシパルとユーザーには **Synapse 管理者** のアクセス許可が必要です。 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. **管理** > **接続** に移動します。
 
-1. **接続の追加** を選択して **Azure Synapse Analytics** を選択するか、**Azure Synapse Analytics** タイルで **設定** を選択して接続を構成します。
+1. **つながりの追加** を選択して、**Azure Synapse Analytics** を選択します。
 
-1. 接続にわかりやすい名前を 表示名 フィールドに付けます。 接続名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
+1. 接続にわかりやすい名前を **表示名** フィールドに付けます。 接続名と種類は、この接続を説明します。 接続の目的とターゲットを説明する名前を選択することをお勧めします。
 
-1. この接続を使用できるユーザーを選択します。 アクションを実行しない場合、既定は管理者になります。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
+1. この接続を使用できるユーザーを選択します。 既定では、管理者のみです。 詳細については、[共同作成者がエクスポートに接続を使用できるようにする](connections.md#allow-contributors-to-use-a-connection-for-exports) を参照してください。
 
 1. Customer Insights のデータを使用するサブスクリプションを選択または検索します。 サブスクリプションが選択されると、**ワークスペース**、**ストレージ アカウント**、**コンテナー** も選択できます。
 
-1. **保存** を選択して、接続を保存します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
-### <a name="configure-an-export"></a>エクスポートの構成
+1. **保存** を選択して、接続を完了します。
 
-この種類の接続にアクセスできる場合は、このエクスポートを構成できます。 共有接続でエクスポートを構成するには、Customer Insights で **共同作成者** の権限が最低限必要です。 詳細については、[エクスポートの構成に必要なアクセス許可](export-destinations.md#set-up-a-new-export) を参照してください。
+## <a name="configure-an-export"></a>エクスポートの構成
+
+[!INCLUDE [export-permission-include](includes/export-permission.md)] 共有接続でエクスポートを構成するには、Customer Insights で **共同作成者** の権限が最低限必要です。
 
 1. **データ** > **エクスポート** に移動します。
 
-1. 新しいエクスポートを作成するには、**エクスポートの追加** を選択します。
+1. **エクスポートの追加** を選択します。
 
-1. **エクスポートの接続** フィールドで、**Azure Synapse Analytics** セクションから接続を選択します。 このセクション名が表示されない場合、この種類の [接続](connections.md) は使用できません。
+1. **エクスポートの接続** フィールドで、Azure Synapse Analytics セクションから接続を選択します。 接続できない場合は、管理者に連絡してください。
 
-1. エクスポートの識別可能な **表示名** と **データベース名** を指定します。 エクスポートにより、新しい [Azure Synapse レイク データベース](/azure/synapse-analytics/database-designer/concepts-lake-database)が接続で定義されたワークスペース内に作成されます。
+1. エクスポートの識別可能な **表示名** と **データベース名** を指定します。 エクスポートにより、新しい [Azure Synapse レイク データベース](/azure/synapse-analytics/database-designer/concepts-lake-database) が接続で定義されたワークスペース内に作成されます。
 
 1. Azure Synapse Analytics にエクスポートするエンティティを選択します。
    > [!NOTE]
@@ -80,13 +76,11 @@ Azure の場合:
 
 1. **保存** を選択します。
 
-エクスポートを保存しても、エクスポートはすぐには実行されません。
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-エクスポートは、すべての [スケジュール更新](system.md#schedule-tab) で実行されます。 [オンデマンドでデータをエクスポート](export-destinations.md#run-exports-on-demand) することもできます。
+Synapse Analytics にエクスポートされたデータをクエリするには、エクスポートのワークスペースにあるデスティネーション ストレージへの **ストレージ BLOB データ閲覧者** アクセスが必要です。
 
-Synapse Analytics にエクスポートされたデータをクエリするには、エクスポートのワークスペースにあるデスティネーション ストレージへの **ストレージ BLOB データ閲覧者** アクセスが必要です。 
-
-### <a name="update-an-export"></a>エクスポートの更新
+## <a name="update-an-export"></a>エクスポートの更新
 
 1. **データ** > **エクスポート** に移動します。
 
@@ -95,3 +89,5 @@ Synapse Analytics にエクスポートされたデータをクエリするに�
    - 選択からエンティティを **追加** または **削除** します。 エンティティを選択から削除しても、Synapse Analytics データベースからは削除されません。 ただし、今後データを更新しても、そのデータベース内の削除されたエンティティは更新されません。
 
    - **データベース名を変更** すると、新しい Synapse Analytics データベースを作成します。 以前に構成された名前のデータベースは、今後の更新では更新が行われません。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

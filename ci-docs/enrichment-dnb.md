@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081435"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196032"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun ＆ Bradstreet で企業プロファイルをエンリッチする (プレビュー)
 
@@ -80,7 +80,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. 概要を確認し、**次へ** を選択します。
 
-1. 接続を選択して確認します。 利用できない場合は、管理者に連絡してください。
+1. 接続を選択して確認します。 接続できない場合は、管理者に連絡してください。
 
 1. **次へ** を選択します。
 

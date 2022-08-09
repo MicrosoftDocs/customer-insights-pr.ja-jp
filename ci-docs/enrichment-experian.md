@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053027"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195942"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian からの人口統計情報で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -59,7 +59,7 @@ Dynamics 365 Customer Insights から Experian へのデータ送信を可能に
 
 1. 概要を確認し、**次へ** を選択します。
 
-1. 接続を選択します。 利用できない場合は、管理者に連絡してください。
+1. 接続を選択します。 接続できない場合は、管理者に連絡してください。
 
 1. **次へ** を選択します。
 

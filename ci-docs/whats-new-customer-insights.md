@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights の新機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054024"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114252"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -23,6 +23,34 @@ ms.locfileid: "9054024"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="june-2022-updates"></a>2022 年 6 月の更新プログラム
+
+2022 年 6 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>データ ソースとデータ インジェストのユーザーエクスペリエンスを更新
+
+さまざまなデータ ソースからデータをインポートすることは、Dynamics 365 Customer Insights で顧客データを統合するための基盤です。 データ ソースのインポートと接続のユーザー エクスペリエンスを再検討しました。 この更新は、Customer Insights へのデータの取り込みを容易にすることを目的としています。
+
+詳細については、[データ ソースの概要](data-sources.md) を参照してください。
+
+### <a name="export-to-inmobi"></a>InMobi にエクスポート
+
+InMobi は、ブランドが消費者を理解し、特定し、関与し、獲得するのに役立ちます。 Azure Blob Storage アカウントを介して、セグメントやその他のデータを InMobi サービスにエクスポートできます。
+
+詳細については、[InMobi にエクスポートする (プレビュー)](export-inmobi.md)を参照してください。
+
+### <a name="lockbox-support-in-customer-insights"></a>Customer Insights でのロックボックスのサポート
+
+カスタマー ロックボックスは、データ アクセス要求を確認し、承認 (または拒否) するためのインターフェイスを提供します。 このリクエストは、サポート案件を解決するために顧客データへのデータアクセスが必要な場合に発生します。
+
+詳細については、[カスタマー ロックボックスを使用して顧客データに安全にアクセスする (プレビュー)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview) を参照してください。
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Azure Private Link を使用してデータに接続する
+
+Azure Private Link により、Customer Insightsは、仮想ネットワーク内のプライベート エンドポイントを介して、Azure Data Lake Storage アカウントに接続します。 パブリック インターネットに公開されていないストレージ アカウント内のデータに対して、プライベート リンクはその制限されたネットワークへの接続を可能にします。
+
+詳細については、[Customer Insights での Private Link の使用](security-overview.md#private-links-tab) を参照してください。
 
 ## <a name="may-2022-updates"></a>2022 年 5 月の更新
 

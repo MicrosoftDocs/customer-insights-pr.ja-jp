@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081244"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207189"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>データ ソースのエンリッチメント (プレビュー)
 
@@ -21,9 +21,9 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 
 ## <a name="enrich-a-data-source"></a>データ ソースをエンリッチする
 
-エンリッチメントを作成または編集するには、共同作成者または管理者権限が必要です。 詳細については、[権限](permissions.md)を参照してください。  
+エンリッチメントを作成または編集するには、共同作成者または管理者[権限](permissions.md) が必要です。  
 
-1. **データ** > **統合** に移動します。 エンリッチするエンティティを選択し、エンティティの主キーとして 1 つの属性を選択します。 詳細については、[主キーの選択](map-entities.md#select-primary-key-and-semantic-type-for-attributes) を参照してください。
+1. **データ** > **統合** に移動します。 エンリッチするエンティティを選択し、エンティティの[主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes)として 1 つの属性を選択します。
 
 1. **データ** > **データ ソース** にアクセスします。
 
@@ -47,8 +47,8 @@ Microsoft や他のパートナーなどのソースからのデータを使用�
 
 ## <a name="manage-existing-data-source-enrichments"></a>既存のデータ ソース エンリッチメントを管理する
 
-**自分のエンリッチメント** タブに移動し、構成されているすべてのエンリッチメントを表示します。
+**データ** > **エンリッチメント** に移動します。 **自分のエンリッチメント** タブに、構成されたエンリッチメント、それらのステータス、エンリッチされた顧客の数、およびデータが最後に更新された時刻が表示されます。 エンリッチメントのリストを任意の列で並べ替えたり、検索ボックスを使用して管理するエンリッチメントを検索したりできます。
 
-エンリッチメントを選択して、使用可能なオプションを確認します。 また、リスト項目の垂直省略記号 (&vellip;) を選択しても、オプションを表示できます。 複数のエンリッチメントを構成した場合は、検索ボックスを使用して簡単に見つけることができます。
+エンリッチメントを選択して、使用可能なオプションを確認します。 また、リスト項目の垂直省略記号 (&vellip;) を選択しても、オプションを表示できます。
 
-データ ソース エンリッチメントを表示、編集、実行、または削除できます。 詳細については、[既存のエンリッチメントを管理する](enrichment-hub.md) を参照してください。
+データ ソース エンリッチメントを表示、編集、実行、または削除できます。 詳細については、[既存のエンリッチメントを管理する](enrichment-hub.md#manage-existing-enrichments) を参照してください。

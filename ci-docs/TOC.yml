@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: SFTP カスタム インポート
       href: enrichment-SFTP-custom-import.md
-- name: 統合されたプロファイル
+- name: 顧客プロファイルおよびアクティビティ
   items:
-    - name: 統合型顧客プロファイルのレビュー
+    - name: 顧客プロファイルの表示
       href: customer-profiles.md
-    - name: 統合型顧客プロファイルのフィルター
+    - name: 検索とフィルター インデックスページの管理
       href: search-filter-index.md
     - name: 顧客活動の定義
       href: activities.md
     - name: 同の管理の利用
       href: consent-management.md
+    - name: パーソナライズに Web データを使用する
+      href: unknown-to-known.md
 - name: Segments
   items:
     - name: すべてのセグメントの概要
       href: segments.md
-    - name: セグメントの作成
+    - name: セグメント ビルダーで作成
       href: segment-builder.md
+    - name: 簡易作成セグメントで作成
+      href: segment-quick.md
     - name: メジャーに基づく提案されたセグメント
       href: suggested-segments.md
     - name: 活動に基づく提案されたセグメント
@@ -132,9 +136,9 @@
   items:
     - name: メジャーの概要
       href: measures.md
-    - name: 新しいメジャーを作成する
+    - name: メジャー ビルダーで作成
       href: measure-builder.md
-    - name: メジャー テンプレートを使用する
+    - name: テンプレートで作成
       href: measure-templates.md
 - name: 予測
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: アクティブなキャンペーン
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: AutoPilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

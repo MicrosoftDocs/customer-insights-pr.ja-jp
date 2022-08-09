@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081352"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196216"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Leadspace で企業プロファイルをエンリッチする (プレビュー)
 
@@ -54,7 +54,7 @@ Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメン�
 
 1. 概要を確認し、**次へ** を選択します。
 
-1. 接続を選択します。 利用できない場合は、管理者に連絡してください。
+1. 接続を選択します。 接続できない場合は、管理者に連絡してください。
 
 1. **次へ** を選択します。
 

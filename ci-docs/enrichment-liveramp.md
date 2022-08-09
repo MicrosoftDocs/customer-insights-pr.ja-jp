@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081280"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196354"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)
 
@@ -59,7 +59,7 @@ Dynamics 365 Customer Insights による LiveRamp へのデータの転送を有
 
 1. 概要を確認し、**次へ** を選択します。
 
-1. 接続を選択します。 利用できない場合は、管理者に連絡してください。
+1. 接続を選択します。 接続できない場合は、管理者に連絡してください。
 
 1. **次へ** を選択します。
 

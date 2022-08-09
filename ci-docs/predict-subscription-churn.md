@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647335"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171055"
 ---
 # <a name="subscription-churn-prediction"></a>サブスクリプション離反予測
 
@@ -121,7 +121,7 @@ ms.locfileid: "8647335"
    - **予測名 :** 作成時に入力された予測の名前。
    - **予測タイプ :** 予測に使用されるモデルのタイプ
    - **出力エンティティ :** 予測の出力を保存するエンティティの名前。 **データ** > **エンティティ** で、この名前を持つエンティティを見つけることができます。    
-     出力エンティティでは、*ChurnScore* は離反の予測確率であり、*IsChurn* は *ChurnScore* に基づく 0.5 のしきい値を持つバイナリ ラベルです。 既定のしきい値は、ユーザーのシナリオでは機能しない場合があります。 任意のしきい値で [新しいセグメントを作成](segments.md#create-a-new-segment) します。
+     出力エンティティでは、*ChurnScore* は離反の予測確率であり、*IsChurn* は *ChurnScore* に基づく 0.5 のしきい値を持つバイナリ ラベルです。 既定のしきい値は、ユーザーのシナリオでは機能しない場合があります。 任意のしきい値で [新しいセグメントを作成](segments.md#create-a-segment) します。
    - **予測フィールド :** このフィールドは、一部のタイプの予測に対してのみ入力され、サブスクリプションの解約予測では使用されません。
    - **状態 :** 実行された予測の現在の状態を表示します。
         - **待機中 :** 予測は現在、他のプロセスの実行を待機しています。
