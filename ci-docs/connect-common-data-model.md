@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207005"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245839"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage のデータへの接続
 
@@ -56,8 +56,8 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
 
 1. **ストレージの接続方法** について、次のいずれかを選択します。 詳細については、[Azure サービス プリンシパルで Customer Insights を Azure Data Lake Storage Gen2 アカウントに接続する](connect-service-principal.md) を参照してください。
 
-   - **Azure リソース**: **リソース ID** を入力します。オプションとして、Azure プライベート リンクを介してストレージ アカウントからデータを取り込む場合は、**プライベートリンクを有効にする**.を選択します。 詳しくは、[Private Link](security-overview.md#private-links-tab)を確認してください
-   - **Azure サブスクリプション**：**サブスクリプション** を選択し、**リソース グループ** と **ストレージ アカウント** を選択します。 オプションとして、Azure Private Link を介してストレージ アカウントからデータを取り込む場合は、**プライベート リンクを有効にする** を選択します。 詳しくは、[Private Link](security-overview.md#private-links-tab)を確認してください
+   - **Azure リソース**: **リソース ID** を入力します。オプションとして、Azure プライベート リンクを介してストレージ アカウントからデータを取り込む場合は、**プライベートリンクを有効にする**.を選択します。 詳しくは、[Private Link](security-overview.md#set-up-an-azure-private-link)を確認してください
+   - **Azure サブスクリプション**：**サブスクリプション** を選択し、**リソース グループ** と **ストレージ アカウント** を選択します。 オプションとして、Azure Private Link を介してストレージ アカウントからデータを取り込む場合は、**プライベート リンクを有効にする** を選択します。 詳しくは、[Private Link](security-overview.md#set-up-an-azure-private-link)を確認してください
   
    > [!NOTE]
    > データ ソースを作成する際は、コンテナーまたはストレージ アカウントに対して、次のいずれかのロールが必要です:
@@ -176,7 +176,7 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
         > - ストレージ Blob データ所有者
         > - ストレージ Blob データ共同作成者
 
-   - Azure Private Link を介してストレージアカウントからデータを取り込む場合は、**Private Link を有効** にします。 詳しくは、[Private Link](security-overview.md#private-links-tab)を確認してください
+   - Azure Private Link を介してストレージアカウントからデータを取り込む場合は、**Private Link を有効** にします。 詳しくは、[Private Link](security-overview.md#set-up-an-azure-private-link)を確認してください
 
 1. **次へ** を選択します。
 1. 次のいずれかを変更します:

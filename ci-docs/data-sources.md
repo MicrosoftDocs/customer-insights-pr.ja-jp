@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207097"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245655"
 ---
 # <a name="data-sources-overview"></a>データ ソースの概要
 
@@ -67,7 +67,7 @@ Power Platform データフローを使用しない環境の場合、**データ
 
 データ ソースは、自動スケジュールで更新することも、オンデマンドで手動で更新することもできます。 [オンプレミスのデータソース](connect-power-query.md#add-data-from-on-premises-data-sources)データの取り込み中に設定された独自のスケジュールで更新します。 接続されたデータソースの場合、データの取り込みは、そのデータ ソースから利用可能な最新のデータを消費します。
 
-**管理者** > **システム** > [**スケジュール**](system.md#schedule-tab)にアクセスし、取り込んだデータソースのシステムスケジュールによる更新を構成します。
+**管理者** > **システム** > [**スケジュール**](schedule-refresh.md)にアクセスし、取り込んだデータソースのシステムスケジュールによる更新を構成します。
 
 データ ソースをオンデマンドで更新するには:
 

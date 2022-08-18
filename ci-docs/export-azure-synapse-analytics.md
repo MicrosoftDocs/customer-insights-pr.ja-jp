@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196400"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259850"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>データを Azure Synapse Analytics にエクスポートする (プレビュー)
 
@@ -24,7 +24,7 @@ Azure Synapse は、データ ウェアハウスやビッグ データ システ
 > [!NOTE]
 > すべての **ロールの割り当て** を説明どおりに設定してください。
 
-- Customer Insights で、Azure Active Directory (AD) ユーザー アカウントに[管理者の役割](permissions.md#assign-roles-and-permissions) が必要です。
+- Customer Insights で、Azure Active Directory (AD) ユーザー アカウントに[管理者の役割](permissions.md#add-users) が必要です。
 
 Azure の場合:
 
@@ -39,6 +39,8 @@ Azure の場合:
 - *[Azure Synapse workspace マネージド ID](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細は、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
 - Azure Synapse workspace では、*Customer Insights のサービス プリンシパル* に **Synapse 管理者**[ロールを割り当てられる](/azure/synapse-analytics/security/how-to-set-up-access-control) 必要があります。
+
+- Customer Insights 環境がデータを [自分の Azure Data Lake Storage](own-data-lake-storage.md) に保存する場合、Azure Synapse Analytics への接続を設定するユーザーには、少なくとも Data Lake Storage アカウントの組み込み **閲覧者** ロールが必要です。 詳細については、[Azure ポータルを使用した Azure ロールの割り当て](/azure/role-based-access-control/role-assignments-portal) を参照してください。
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Azure Synapse への接続を設定する
 

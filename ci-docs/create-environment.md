@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142825"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245563"
 ---
 # <a name="how-to-create-a-new-environment"></a>新しい環境を作成する方法
 
@@ -48,7 +48,7 @@ ms.locfileid: "9142825"
 
 次の詳細を入力します:
 
-- **名前**: この環境の名前。 既存の環境からコピーする場合は、このフィールドには既にに入力されていますが、変更することもできます。
+- **名前**: この環境の名前。 既存の環境からコピーする場合は、このフィールドには既にに入力されていますが、変更することもできます。 複数の作業環境がある場合は、それぞれにわかりやすい名前を付けます。
 - **ビジネスを選択する**: 新しい環境のプライマリ対象ユーザーを選択します。 個々の消費者 (B-to-C) または[ビジネス アカウント](work-with-business-accounts.md) (B-to-B)。 小売業者やコーヒー店など、主に個人と取引する組織の場合は、個人の消費者を選択します。 自動車メーカーや製紙会社など、主な取引先が他の企業である場合、ビジネス アカウントを選択します。
 - **タイプ**: 実稼働環境、またはサンドボックス環境のどちらを作成するかを選択します。 サンドボックス環境では、スケジュールされたデータの更新は許可されておらず、事前の実装とテストを目的としています。 サンドボックス環境は、現在選択されている本番環境と同じプライマリ対象ユーザーを使用します。
 - **リージョン** : サービスが展開、ホストされるリージョンを示します。 [独自の Azure Data Lake Storage アカウントを使用する](own-data-lake-storage.md) か、[既存の Microsoft Dataverse 組織に接続する](customer-insights-dataverse.md) には、Customer Insights 環境が同じリージョンに存在する必要があります。

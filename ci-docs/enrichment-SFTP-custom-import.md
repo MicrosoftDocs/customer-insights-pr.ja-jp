@@ -1,19 +1,19 @@
 ---
 title: SFTP カスタム インポートで顧客プロファイルをエンリッチする (プレビュー)
 description: SFTP カスタム インポート エンリッチメントに関する一般情報。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195802"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237772"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>SFTP カスタム インポートで顧客プロファイルをエンリッチする (プレビュー)
 
@@ -85,14 +85,9 @@ Customer Insights の [管理者](permissions.md#admin) であり、データを
 
 1. インポートするデータが存在する SFTP サーバーの有効なユーザー名、パスワード、およびホスト URL を入力します。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights がカスタムインポートを使用してデータを転送できるようにすると、Dynamics 365 Customer Insights のコンプライアンス境界外のデータ転送 (個人データなどの潜在的な機密データを含む) を許可することになります。 マイクロソフトは、お客様の指示により当該データを転送しますが、お客様は、当該データがお客様の有するプライバシーまたはセキュリティ上の義務を満たす責任を負います。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 ## <a name="configure-the-import"></a>インポートの構成
 

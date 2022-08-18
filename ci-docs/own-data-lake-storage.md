@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011939"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246207"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>独自の Azure Data Lake Storage Gen2 アカウントを使用する
 
@@ -37,7 +37,7 @@ Customer Insights の管理者は、このプロセスで [環境を作成し](c
 1. **ストレージに接続する** 方法を選択します。 リソースに基づくオプションとサブスクリプションに基づくオプションのどちらかを、認証に選択できます。 詳細については、[Azure サービス プリンシパルを使用して Azure Data Lake Storage アカウントに接続する](connect-service-principal.md) を参照してください。
    - **Azure サブスクリプション** に対して、`customerinsights` コンテナを含む **サブスクリプション**、**リソース グループ**、**ストレージ アカウント** を選択します。
    - **アカウント キー** に対して、Data Lake Storage アカウントの **アカウント名** と **アカウント キー** を提供します。 この認証方法を使用すると、組織がキーをローテーションしたかどうかが通知されます。 ローテーションした場合は、新しいキーで [環境の構成を更新する](manage-environments.md#edit-an-existing-environment) 必要があります。
-1. Azure Private Link を使用してストレージ アカウントに接続するかどうかを選択し、2 段階のプロセスで [Private Link への接続を作成](security-overview.md#private-links-tab)します。
+1. Azure Private Link を使用してストレージ アカウントに接続するかどうかを選択し、2 段階のプロセスで [Private Link への接続を作成](security-overview.md#set-up-an-azure-private-link)します。
 
 データの取り込みなど、システム プロセスが完了すると、システムがストレージ アカウントに対応するフォルダーを作成します。 データ ファイルと *model.json* ファイルが作成され、プロセス名に基づいたフォルダーに追加されます。
 

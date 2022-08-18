@@ -1,19 +1,19 @@
 ---
 title: HERE Technologies で顧客プロファイルをエンリッチする (プレビュー)
 description: HERE Technologies サードパーティ エンリッチメントに関する一般情報。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196262"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237864"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>HERE Technologies で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -33,16 +33,11 @@ Customer Insights の[管理者](permissions.md#admin)で、有効な HERE Techn
 
 1. 接続の名前と有効な HERE Technologies API キーを入力します。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="HERE Technologies 接続構成ページ。":::
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights による HERE Technologies へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、HERE Technologies がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081575"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245471"
 ---
 # <a name="manage-predictions"></a>予測の管理
 
@@ -58,7 +58,7 @@ ms.locfileid: "9081575"
 
 ## <a name="refresh-a-prediction"></a>予測を更新する
 
-予測は、設定で構成されているとおり、同一の[データ更新スケジュール](system.md#schedule-tab)に基づいて自動的に更新されます。 手動で更新することもできます。
+予測は、設定で構成されているとおり、同一の[データ更新スケジュール](schedule-refresh.md)に基づいて自動的に更新されます。 手動で更新することもできます。
 
 1. **インテリジェンス** > **予測** に移動し、**自分の予測** タブを選択します。
 

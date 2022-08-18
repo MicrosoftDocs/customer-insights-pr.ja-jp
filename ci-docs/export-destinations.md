@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194974"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245333"
 ---
 # <a name="exports-preview-overview"></a>エクスポート (プレビュー) の概要
 
@@ -79,7 +79,7 @@ ms.locfileid: "9194974"
 
 ## <a name="schedule-and-run-exports"></a>エクスポートのスケジュールと実行
 
-構成する各エクスポートには、更新スケジュールがあります。 更新中に、システムはエクスポートに含める新しいデータまたは更新されたデータを検索します。 既定では、エクスポートはすべての [スケジュールされたシステム更新](system.md#schedule-tab) の一部として実行されます。 更新スケジュールをカスタマイズするか、オフにしてエクスポートを手動で実行できます。
+構成する各エクスポートには、更新スケジュールがあります。 更新中に、システムはエクスポートに含める新しいデータまたは更新されたデータを検索します。 既定では、エクスポートはすべての [スケジュールされたシステム更新](schedule-refresh.md) の一部として実行されます。 更新スケジュールをカスタマイズするか、オフにしてエクスポートを手動で実行できます。
 
 エクスポートのスケジュールは、環境の状態によって異なります。 スケジュールされたエクスポートが開始する時点で、[依存関係](system.md#refresh-processes) に進行中の更新がある場合、システムは最初に更新を完了してからエクスポートを実行します。 **更新** 列に、エクスポートが最後に更新された日時が表示されます。
 

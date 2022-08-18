@@ -1,19 +1,19 @@
 ---
 title: Experian からの人口統計情報で顧客プロファイルをエンリッチする (プレビュー)
 description: Experian サードパーティのエンリッチメントに関する一般情報。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195942"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238002"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian からの人口統計情報で顧客プロファイルをエンリッチする (プレビュー)
 
@@ -41,13 +41,9 @@ Customer Insights の[管理者](permissions.md#admin)であり、Experian ユ�
 
 1. 接続の名前と、Experian  Secure Transport アカウントの有効なユーザー ID、パーティー ID、モデル番号を入力します。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights から Experian へのデータ送信を可能にすると、Dynamics 365 Customer Insights のコンプライアンスの範囲を越えて、個人情報などの機密性の高い情報が潜在的に含まれるデータの転送を許可することになります。 Microsoft はお客様の指示でそのようなデータを送信することがありますが、Experian が関係するプライバシーまたはセキュリティのすべての義務を満たすよう見届ける責任はお客様にあります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。 Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

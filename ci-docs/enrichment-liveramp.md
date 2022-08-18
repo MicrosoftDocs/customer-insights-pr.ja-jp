@@ -1,19 +1,19 @@
 ---
 title: LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)
 description: LiveRamp データで顧客プロファイルをエンリッチします。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196354"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237818"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>LiveRamp からの ID データで顧客プロファイルをエンリッチする (プレビュー)
 
@@ -41,13 +41,9 @@ Customer Insights の[管理者](permissions.md#admin)であり、LiveRamp の�
 
 1. 接続の名前と有効な LiveRamp クライアント ID とシークレットを入力します。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights による LiveRamp へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft はそのようなデータをお客様の指示に従って転送しますが、LiveRamp がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシー ステートメント](https://go.microsoft.com/fwlink/?linkid=396732) を確認してください。 Dynamics 365 Customer Insights 管理者は、この機能の使用を中止するために、このエンリッチメントはいつでも削除できます。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

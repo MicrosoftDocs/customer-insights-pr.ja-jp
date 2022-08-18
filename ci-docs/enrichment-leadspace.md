@@ -1,19 +1,19 @@
 ---
 title: Leadspace で企業プロファイルをエンリッチする (プレビュー)
 description: Leadspace サードパーティ エンリッチメントに関する一般情報。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196216"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237956"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Leadspace で企業プロファイルをエンリッチする (プレビュー)
 
@@ -35,14 +35,9 @@ Customer Insights の [管理者で](permissions.md#admin)、「永続キー」 
 
 1. 接続の名前と有効な Leadspace トークンを入力します。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dynamics 365 Customer Insights による Leadspace へのデータの転送を有効化すると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft ではこのようなデータをお客様の指示により転送しますが、Leadspace がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 ## <a name="configure-the-enrichment"></a>エンリッチメントの構成
 

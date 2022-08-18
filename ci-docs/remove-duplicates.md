@@ -2,7 +2,7 @@
 title: データを統合する前に重複を削除する
 description: 統合プロセスの 2 番目の手順は、重複が見つかったときに保持するレコードを選択することです。
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139435"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213633"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>データを統合する前に重複を削除する
 
-統合のこの手順では、オプションで、エンティティ内の重複レコードを処理するためのルールを設定できます。 *重複排除* は、重複するレコードを特定し、1 つのレコードにマージします。 ソース レコードは、代替 IDを使用してマージされたレコードにリンクされます。 ルールが構成されていない場合は、システム定義のルールが適用されます。
+このオプションの手順を統合で実行すると、エンティティ **が含む** 重複レコードを排除するルールを設定できます。 重複の排除は、顧客の複数のレコードを識別して、(マージの基本設定に基づいて) 保持に最適なレコードを選択するか、または (マージの高度な設定に基づいて) レコードを 1 つにマージします。 ソース レコードは、代替 IDを使用してマージされたレコードにリンクされます。 ルールが構成されていない場合は、システム定義のルールが適用されます。
+
+## <a name="default-deduplication"></a>既定の重複排除
+
+重複排除ルールを追加していない場合は、システムが定義したルールを適用します。
+
+- 主キーは重複排除されます。
+  同じ主キーを持つレコードの場合、**最も多く入力された** レコード (null 値が最も少ないレコード) を優先します。
+- すべてのエンティティ間照合ルールをエンティティに適用します。
+  例: 照合手順で、*氏名* と *誕生日* でエンティティ A が エンティティ B と一致する場合、*氏名* と *誕生日* でエンティティ A が重複排除されます。 この理由は、*氏名* と *誕生日* はエンティティ A の顧客を識別する有効なキーであり、これらのキーはエンティティ A で重複する顧客を識別する際にも有効なためです。
 
 ## <a name="include-enriched-entities-preview"></a>エンリッチされたエンティティを含む (プレビュー)
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139617"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245600"
 ---
 # <a name="update-the-unification-settings"></a>統合の設定を更新する
 
@@ -42,7 +42,7 @@ ms.locfileid: "9139617"
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="統合オプションが強調表示されたデータ統合ページのスクリーンショット。":::
 
    - [マッチング条件を実行](#run-matching-conditions)することで、統一プロファイルを更新することなく、マッチング条件 (重複排除、マッチルール) の品質を迅速に評価することができます。 **一致する条件のみを実行する** オプションは、単一のエンティティには表示されません。
-   - [顧客プロファイルを統一](#run-updates-to-the-unified-customer-profile)して、マッチング条件を実行し、依存関係 (エンリッチメント、セグメント、メジャーなど) に影響を与えることなく Unified customer profile のエンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](system.md#schedule-tab)されたとおりに更新されます。
+   - [顧客プロファイルを統一](#run-updates-to-the-unified-customer-profile)して、マッチング条件を実行し、依存関係 (エンリッチメント、セグメント、メジャーなど) に影響を与えることなく Unified customer profile のエンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](schedule-refresh.md)されたとおりに更新されます。
    - [顧客プロファイルと依存関係を統一](#run-updates-to-the-unified-customer-profile)し、マッチング条件を実行し、Unified customer profile のエンティティおよびすべての依存関係 (エンリッチメント、セグメント、またはメジャーなど) を更新することができます。 すべてのプロセスが自動的に再実行されます。
 
 ## <a name="edit-source-fields"></a>ソース フィールドを編集する
@@ -154,7 +154,7 @@ ms.locfileid: "9139617"
 
 1. **データ** > **統合** ページに移動し、選択します。
 
-   - **顧客プロファイルを統一** して、一致する条件を実行し、依存関係 (エンリッチメント、セグメント、またはメジャーなど) に影響を与えることなく、Unified customer profile エンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](system.md#schedule-tab)されたとおりに更新されます。
+   - **顧客プロファイルを統一** して、一致する条件を実行し、依存関係 (エンリッチメント、セグメント、またはメジャーなど) に影響を与えることなく、Unified customer profile エンティティを更新します。 依存プロセスは実行されませんが、[更新スケジュールで定義](schedule-refresh.md)されたとおりに更新されます。
 
    - **顧客プロファイルと依存関係を統合する**: 一致する条件を実行し、統一されたプロファイルとすべての依存関係を更新します。 すべてのプロセスが自動的に再実行されます。 すべてのダウンストリームプロセスが完了すると、更新されたデータは顧客プロファイルに反映されます。
 

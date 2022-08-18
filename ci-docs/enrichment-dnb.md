@@ -1,7 +1,7 @@
 ---
 title: Dun ＆ Bradstreet で企業プロファイルをエンリッチする (プレビュー)
 description: Dun ＆ Bradstreet のサードパーティ エンリッチメントに関する一般的な情報。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196032"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237910"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun ＆ Bradstreet で企業プロファイルをエンリッチする (プレビュー)
 
@@ -25,7 +25,7 @@ Dun ＆ Bradstreet は、企業向けの商用データ、分析、およびイ�
 - アクティブな [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) ライセンスの所有。
 - [統一された顧客プロファイル](customer-profiles.md) 企業向け。
 - Dun & Bradstreet の [プロジェクト](#set-up-your-dun--bradstreet-project)が設定されている。
-- Dun & Bradstreet [接続](connections.md) は、管理者によって[構成](#configure-a-connection-for-dun--bradstreet)されます。
+- Dun & Bradstreet [接続](connections.md) は、管理者によって [構成](#configure-a-connection-for-dun--bradstreet) されます。
 
 ## <a name="set-up-your-dun--bradstreet-project"></a>Dun ＆ Bradstreet プロジェクトを設定する
 
@@ -55,16 +55,11 @@ Customer Insights の [管理者](permissions.md#admin)で、Dun & Bradstreet Co
 
 1. 有効な Dun ＆ Bradstreet の資格情報と Dun ＆ Bradstreet プロジェクトの詳細 *リージョン、ドロップ フォルダー パス、ドロップ フォルダー名* を提供します。 Dun ＆ Bradstreet プロジェクトから、[この情報を入手します](#set-up-your-dun--bradstreet-project)。
 
-1. 確認して、**同意する** を選択して、[データのプライバシーとコンプライアンス](#data-privacy-and-compliance)に同意します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **確認** を選択して設定を確認し、**保存** を選択します。
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun ＆ Bradstreet 接続の構成ページ":::
-
-### <a name="data-privacy-and-compliance"></a>データのプライバシーとコンプライアンス
-
-Dun & Bradstreet へのデータを転送するために Dynamics 365 Customer Insights を有効にすると、Dynamics 365 Customer Insights のコンプライアンス境界線の外部へ、個人データなどの機密データを含む可能性のあるデータの転送を許可したことになります。 Microsoft はそのようなデータをお客様の指示に従って転送しますが、Dun & Bradstreet がプライバシーまたはセキュリティの義務を満たしていることを確認するのはお客様の責任になります。 詳細については、[Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?linkid=396732) を参照してください。
-Dynamics 365 Customer Insights 管理者は、いつでもエンリッチメントを削除して、この機能の使用を中止することができます。
 
 ## <a name="supported-countries-or-regions"></a>サポートされている国または地域
 

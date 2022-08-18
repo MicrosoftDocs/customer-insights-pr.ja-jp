@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195664"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246114"
 ---
 # <a name="real-time-data-ingestion-preview"></a>リアルタイム データ インジェスト (プレビュー)
 
 ほぼリアルタイムの機能により、顧客が製品やサービスに対して行った最新の対話を数秒で確認できます。
 
-[スケジュールされた更新](system.md#schedule-tab) には、多数のレコードといくつかの複雑な操作が含まれます。 まず、データはデータ ソースから取得されます。 次に、データが統合され、追加情報が追加されます。 このプロセスを実行するたびに、数分から数時間かかることがあります。
+[スケジュールされた更新](schedule-refresh.md) には、多数のレコードといくつかの複雑な操作が含まれます。 まず、データはデータ ソースから取得されます。 次に、データが統合され、追加情報が追加されます。 このプロセスを実行するたびに、数分から数時間かかることがあります。
 
 リアルタイム機能は、後続のスケジュールされた更新が、このデータをデータ ソースから取得するまで、データを即座に使用できるようにします。
 
@@ -85,7 +85,7 @@ ms.locfileid: "9195664"
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>テレメトリを使用してリアルタイムの使用状況を把握する
 
-リアルタイム API への要求の量の概要と、システムで発生する可能性のある問題に関する情報を取得します。 [リアルタイム テレメトリにアクセス](system.md#api-usage-tab)できます。 
+リアルタイム API への要求の量の概要と、システムで発生する可能性のある問題に関する情報を取得します。 [リアルタイム テレメトリにアクセス](system.md#view-api-usage)できます。 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

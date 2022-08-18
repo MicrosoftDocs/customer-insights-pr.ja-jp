@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170826"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245379"
 ---
 # <a name="measures-overview"></a>メジャーの概要
 
@@ -53,7 +53,7 @@ ms.locfileid: "9170826"
 - プロパティを変更するメジャーを **編集** します。
 - 最新のデータを含めるメジャーを **最新の情報に更新します**。
 - メジャーの **名前を変更** します。
-- メジャーを **アクティブ化** または **非アクティブ化** します。 [スケジュールされた更新](system.md#schedule-tab)中は非アクティブなメジャーが更新されず、**状態** が **スキップされた** としてリストされ、更新も試行されなかったことが示されます。
+- メジャーを **アクティブ化** または **非アクティブ化** します。 [スケジュールされた更新](schedule-refresh.md)中は非アクティブなメジャーが更新されず、**状態** が **スキップされた** としてリストされ、更新も試行されなかったことが示されます。
 - メジャーの [タグを管理する](work-with-tags-columns.md#manage-tags)ための **タグ** です。
 - メジャーを **削除** します。
 - 表示する [列をカスタマイズする](work-with-tags-columns.md#customize-columns)ための **列** です。
@@ -62,7 +62,7 @@ ms.locfileid: "9170826"
 
 ## <a name="refresh-measures"></a>メジャーを更新する
 
-メジャーは、自動スケジュールで更新することも、オンデマンドで手動で更新することもできます。 1 つ以上のメジャーを手動で更新するには、それらを選択して **更新** を選択します。 [自動更新をスケジュールする](system.md#schedule-tab)には、**管理者** > **システム** > **スケジュール** に移動します。
+メジャーは、自動スケジュールで更新することも、オンデマンドで手動で更新することもできます。 1 つ以上のメジャーを手動で更新するには、それらを選択して **更新** を選択します。 [自動更新をスケジュールする](schedule-refresh.md)には、**管理者** > **システム** > **スケジュール** に移動します。
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

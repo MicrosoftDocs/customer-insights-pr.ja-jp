@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: 管理
   items:
-    - name: システム構成の設定
-      href: system.md
-    - name: セキュリティ設定を構成する
-      href: security-overview.md
     - name: ユーザーのアクセス許可を割り当てる
       href: permissions.md
     - name: 独自の Key Vault を導入する
       href: use-azure-key-vault.md
+    - name: セキュリティ設定を構成する
+      href: security-overview.md
     - name: 診断ログをエクスポートする
       href: diagnostics.md
-    - name: 接続の概要
+    - name: 接続の管理
       href: connections.md
+    - name: システム更新のスケジューリング
+      href: schedule-refresh.md
+    - name: システム構成を表示する
+      href: system.md
 - name: API
   items:
     - name: API に関する作業

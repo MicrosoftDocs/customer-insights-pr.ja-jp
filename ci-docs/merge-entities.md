@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139663"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213588"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>データ統合用の顧客フィールドを統合する
 
@@ -58,6 +58,9 @@ ms.locfileid: "9139663"
 
 1. フィールドの結合、あるいはマージする方法を、次の 3 つのオプションのいずれかから指定します:
     - **重要性**: 参加フィールドに指定された重要度ランクに基づいて勝者の値を識別します。 既定のマージ オプションです。 **上/下に移動** を選択し、重要度ランキングを設定します。
+
+      > [!NOTE]
+      > Customer Insights は null でない最初の値を使用します。 たとえば、エンティティ A、B、C がこの順序でランク付けされている場合、A.Name と B.Name が null の場合は C.Name の値を使用します。
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="フィールドのマージ ダイアログの重要性オプション。":::
 

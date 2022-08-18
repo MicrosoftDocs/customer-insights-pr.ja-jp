@@ -1,7 +1,7 @@
 ---
-title: Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
+title: 診断ログをエクスポートする (プレビュー)
 description: Microsoft Azure モニターにログを送信する方法について説明します。
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052659"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245931"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitor を使用して、Dynamics 365 Customer Insights でログを転送する (プレビュー)
+# <a name="export-diagnostic-logs-preview"></a>診断ログをエクスポートする (プレビュー)
 
-Dynamics 365 Customer Insights は、Azure Monitor との直接統合を提供します。 Azure Monitor リソース ログを使用すると、ログを監視して [Azure ストレージ](https://azure.microsoft.com/services/storage/)、[ Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) に送信するか、またはそれらを [Azure イベント ハブ](https://azure.microsoft.com/services/event-hubs/) にストリーミングします。
+Azure Monitor を使用して Customer Insights のログを転送します。 Azure Monitor リソース ログを使用すると、ログを監視して [Azure ストレージ](https://azure.microsoft.com/services/storage/)、[ Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) に送信するか、またはそれらを [Azure イベント ハブ](https://azure.microsoft.com/services/event-hubs/) にストリーミングします。
 
 Customer Insights は、次のイベント ログを送信します。
 
 - **監査イベント**
-  - **APIEvent** - Dynamics 365 Customer Insights UI を介して行われる変更の追跡を有効にします。
+  - **APIEvent** - Dynamics 365 Customer Insights UI を介した変更の追跡を有効化します。
 - **運用イベント**
-  - **WorkflowEvent** - ワークフローにより、[データ ソース](data-sources.md)をセットアップし、[統合](data-unification.md)し、[エンリッチ](enrichment-hub.md)して、最後に他のシステムに[エクスポート](export-destinations.md)します。 これらの手順はすべて個別に実行できます (たとえば、単一のエクスポートをトリガーします)。 また、調整を実行することもできます (たとえば、データソースからのデータ更新が統合プロセスをトリガーし、エンリッチメントが取得され、完了するとデータが別のシステムにエクスポートされます)。 詳細については、[WorkflowEvent スキーマ](#workflow-event-schema)を参照してください。
-  - **APIEvent** - Dynamics 365 Customer Insights に対する顧客インスタンスへのすべての API 呼び出し。 詳細については、[APIEvent スキーマ](#api-event-schema)を参照してください。
+  - **WorkflowEvent** - [データ ソース](data-sources.md) を設定し、データの [統合](data-unification.md)、[エンリッチ](enrichment-hub.md)、他のシステムへの [エクスポート](export-destinations.md) を行います。 これらの手順は個別に実行できます (たとえば、単一のエクスポートをトリガーします)。 また、調整を実行することもできます (たとえば、データソースからのデータ更新が統合プロセスをトリガーし、エンリッチメントが取得され、データが別のシステムにエクスポートされます)。 詳細については、[WorkflowEvent スキーマ](#workflow-event-schema)を参照してください。
+  - **APIEvent** - 顧客インスタンスのすべての API 呼び出しを Dynamics 365 Customer Insights に送信します。 詳細については、[APIEvent スキーマ](#api-event-schema)を参照してください。
 
 ## <a name="set-up-the-diagnostic-settings"></a>診断設定をセットアップする
 
 ### <a name="prerequisites"></a>前提条件
 
-Customer Insights で診断を構成するには、次の前提条件が満たされている必要があります。
-
-- 有効な [Azure サブスクリプション](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)がある。
-- Customer Insights の[管理者](permissions.md#admin)権限がある。
-- Azure の宛先リソースでの **共同作成者** と **ユーザー アクセス管理者** の役割がある。 リソースには、Azure Data Lake Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 詳細については、[Azure ポータルを使用して Azure 役割の割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)を参照してください。 このアクセス許可は、Customer Insights の診断設定を構成する際に必要ですが、設定が正常に完了した後で変更できます。
-- Azure Storage、Azure イベント ハブ、または Azure Log Analytics の[宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)が満たされている。
-- リソースが属するリソースグループで、最低 **閲覧者** の役割がある。
+- アクティブな [Azure サブスクリプション](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
+- Customer Insights の [管理者](permissions.md#admin) アクセス許可。
+- Azure の宛先リソースでの [共同作成者とユーザー アクセス管理者ロール](/azure/role-based-access-control/role-assignments-portal)。 リソースには、Azure Data Lake Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 このアクセス許可は、Customer Insights の診断設定を構成する際に必要であり、設定が正常に完了した後で変更できます。
+- Azure Storage、Azure イベント ハブ、または Azure Log Analytics の [宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) を満たします。
+- リソースが属するリソース グループの、少なくとも **閲覧者** ロール。
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Azure Monitor を使用して診断を設定する
 
-1. Customer Insights で、**システム** > **診断** を選択して、このインスタンスを構成した診断の宛先を確認します。
+1. Customer Insights で、**管理者** > **システム** へ移動して、**診断** タブを選択します。
 
 1. **宛先の追加** を選択します。
 
-   > [!div class="mx-imgBorder"]
-   > ![診断の接続](media/diagnostics-pane.png "診断の接続")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="接続の診断。":::
 
 1. **診断先の名前** フィールドに名前を入力します。
 
-1. 宛先リソースを使って Azure サブスクリプションの **テナント** を選択して、**ログイン** を選択します。
-
 1. **リソース タイプ** (ストレージ アカウント、イベント ハブ、またはログ分析) を選択します。
 
-1. 宛先リソースの **サブスクリプション** を選択します。
+1. 宛先リソースの **サブスクリプション**、**リソース グループ**、**リソース** を選択します。 アクセス許可とログ情報については [宛先リソースの構成](#configuration-on-the-destination-resource) を参照してください。
 
-1. 宛先リソースの **リソース グループ** を選択します。
-
-1. **リソース** を選択します。
-
-1. **データのプライバシーとコンプライアンス** に関する声明を確認します。
+1. [データのプライバシーとコンプライアンス](connections.md#data-privacy-and-compliance) を確認し、**同意する** を選択します。
 
 1. **システムに接続する** を選択して、宛先リソースに接続します。 API が使用中でイベントを生成している場合、ログは 15 分後に宛先に表示され始めます。
 
-### <a name="remove-a-destination"></a>宛先を削除する
-
-1. **システム** > **診断** に移動します。
-
-1. 一覧から診断の宛先を選択します。
-
-1. **アクション** 列で、**削除** アイコンを選択します。
-
-1. ログ転送を停止するには、削除を確認します。 Azure サブスクリプションのリソースは削除されません。 **アクション** 列のリンクをクリックして、選択したリソースの Azure ポータルを開き、そこで削除します。
-
-## <a name="log-categories-and-event-schemas"></a>ログ カテゴリとイベント スキーマ
-
-現在[API イベント](apis.md)およびワークフロー イベントがサポートされており、次のカテゴリとスキーマが適用されます。
-ログ スキーマは[ Azure Monitor 共通スキーマ](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema)に従っています。
-
-### <a name="categories"></a>カテゴリ
-
-Customer Insights には、次の 2 つのカテゴリがあります。
-
-- **イベントの監査**: [API イベント](#api-event-schema)を選択して、サービスの構成変更を追跡します。 `POST|PUT|DELETE|PATCH` 操作はこのカテゴリに入ります。
-- **運用イベント**: サービスの使用中に生成された [API イベント](#api-event-schema)または[ワークフロー イベント](#workflow-event-schema)。  例えば、ワークフローの `GET` リクエストまたは実行イベント。
-
 ## <a name="configuration-on-the-destination-resource"></a>宛先リソースの構成
 
-リソース タイプの選択に基づいて、次の手順が自動的に適用されます。
+選択したリソース タイプに基づいて、次の変更が自動的に発生します。
 
 ### <a name="storage-account"></a>Storage account
 
@@ -109,16 +78,41 @@ Customer Insights サービス プリンシパルは、選択したリソース�
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Customer Insights サービス プリンシパルは、リソースに **ログ分析共同作成者** 権限を取得します。 ログは、選択した Log Analytics ワークスペースの **ログ** > **テーブル** > **ログ管理** で利用可能になります。 **ログ管理** ソリューションを展開して、`CIEventsAudit` と `CIEventsOperational` テーブルを見つけます。
+Customer Insights サービス プリンシパルは、リソースに **ログ分析共同作成者** 権限を取得します。 ログは、選択した Log Analytics ワークスペースの **ログ** > **テーブル** > **ログ管理** から利用できます。 **ログ管理** ソリューションを展開して、`CIEventsAudit` と `CIEventsOperational` テーブルを見つけます。
 
 - **監査イベント** を含む `CIEventsAudit`
 - **運用イベント** を含む `CIEventsOperational`
 
 **クエリ** ウィンドウの下で、**監査** ソリューションを展開して、`CIEvents` を検索して提供されたクエリ例を見つけます。
 
+## <a name="remove-a-diagnostics-destination"></a>診断の宛先を削除する
+
+1. **管理者** > **システム** に移動して、**診断** タブを選択します。
+
+1. 一覧から診断の宛先を選択します。
+
+   > [!TIP]
+   > 宛先を削除するとログの転送を停止しますが、Azure サブスクリプションのリソースは削除しません。 Azure でリソースを削除する場合は、**アクション** 列のリンクを選択し、選択したリソースの Azure ポータルを開いて、そこで削除します。 そして、診断の宛先を削除します。
+
+1. **アクション** 列で、**削除** アイコンを選択します。
+
+1. 削除を確認してから宛先を削除し、ログの転送を停止します。
+
+## <a name="log-categories-and-event-schemas"></a>ログ カテゴリとイベント スキーマ
+
+現在[API イベント](apis.md)およびワークフロー イベントがサポートされており、次のカテゴリとスキーマが適用されます。
+ログ スキーマは[ Azure Monitor 共通スキーマ](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema)に従っています。
+
+### <a name="categories"></a>カテゴリ
+
+Customer Insights には、次の 2 つのカテゴリがあります。
+
+- **イベントの監査**: [API イベント](#api-event-schema)を選択して、サービスの構成変更を追跡します。 `POST|PUT|DELETE|PATCH` 操作はこのカテゴリに入ります。
+- **運用イベント**: サービスの使用中に生成された [API イベント](#api-event-schema)または[ワークフロー イベント](#workflow-event-schema)。  例えば、ワークフローの `GET` リクエストまたは実行イベント。
+
 ## <a name="event-schemas"></a>イベント スキーマ
 
-API イベントとワークフロー イベントには共通の構造と詳細があり、それらは異なります。[API イベント スキーマ](#api-event-schema)また[ワークフロー イベント スキーマ](#workflow-event-schema)を参照してください。
+API イベントとワークフロー イベントの構造には共通点がありますが、違いもいくつか存在します。 詳細については [API イベント スキーマ](#api-event-schema) または [ワークフロー イベント スキーマ](#workflow-event-schema) を参照してください。
 
 ### <a name="api-event-schema"></a>API イベント スキーマ
 
@@ -186,7 +180,7 @@ API イベントとワークフロー イベントには共通の構造と詳細
 
 #### <a name="operation-types"></a>操作の種類
 
-| OperationType     | グループ                                     |
+| OperationType     | Group                                     |
 | ----------------- | ----------------------------------------- |
 | インジェスト         | [データ ソース](data-sources.md)           |
 | DataPreparation   | [データ ソース](data-sources.md)           |
@@ -220,7 +214,6 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | `durationMs`    | Long      | 任意出席者          | 操作の期間 (ミリ秒)。                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | 任意出席者          | イベントの特定のカテゴリに対するより多くのプロパティを持つ JSON オブジェクト。                                                                                        | サブ セクションの[ワークフローのプロパティ](#workflow-properties-schema)を参照してください                                                                                                       |
 | `level`         | String    | 必須          | イベントの重要度レベル。                                                                                                                                  | `Informational`、`Warning`、または `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>ワークフロー プロパティ スキーマ
 
@@ -247,3 +240,5 @@ API イベントとワークフロー イベントには共通の構造と詳細
 | `properties.additionalInfo.AffectedEntities` | 無効       | 有効  | 省略可能。 OperationType `Export` のみの場合。 エクスポートで構成されたエンティティのリストが含まれます。                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | 無効       | 有効  | 省略可能。 OperationType `Export` のみの場合。 エクスポートの詳細メッセージ。                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | 無効       | 有効  | 省略可能。 OperationType `Segmentation` のみの場合。 セグメントに含まれるメンバーの総数を示します。                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

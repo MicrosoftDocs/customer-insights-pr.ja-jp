@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights の新機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114252"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246017"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -23,6 +23,28 @@ ms.locfileid: "9114252"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="july-2022-updates"></a>2022 年 7 月の更新プログラム
+
+2022 年 7 月の更新プログラムには、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="export-to-moengage"></a>MoEngage にエクスポート
+
+統合された顧客プロファイルのセグメントを MoEngage にエクスポートし、MoEngage での E メール マーケティングに使用します。
+
+詳細については、[セグメントの MoEngage へのエクスポート](export-moengage.md) を参照してください。
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SFTP ベースのエクスポートの SSH サポート
+
+SFTP エクスポート先への接続で、SSH またはユーザー名/パスワードのどちらを使用して認証するかを選択します。
+
+詳細については [データを SFTP ホストにエクスポートする](export-sftp.md) を参照してください。
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>既知と未知のユーザーに関するデータでエクスペリエンスをパーソナライズする
+
+顧客データの管理は新しい課題ではありませんが、ブランドが提供するさまざまなデジタルチャネルをユーザーがナビゲートするにつれて、ますます困難になっています。 あるチャネルで認識されている (認証されている) ユーザーは、ログインしていない場合、別のチャネルでは不明 (認証されていない) になります。 多くの場合、認証されていない (不明な) ユーザーが共通の ID を持っていないことが問題になります。 意味のあるプロファイル属性を関連付け、統一された顧客プロファイルを生成するために使用できます。 Customer Insights は、ソース システムの追跡方法からデータを取り込むことにより、この問題を解決できます。
+
+詳細については [既知と未知のユーザーに関するデータでエクスペリエンスをパーソナライズする](unknown-to-known.md) を参照してください。
 
 ## <a name="june-2022-updates"></a>2022 年 6 月の更新プログラム
 
@@ -50,7 +72,7 @@ InMobi は、ブランドが消費者を理解し、特定し、関与し、獲�
 
 Azure Private Link により、Customer Insightsは、仮想ネットワーク内のプライベート エンドポイントを介して、Azure Data Lake Storage アカウントに接続します。 パブリック インターネットに公開されていないストレージ アカウント内のデータに対して、プライベート リンクはその制限されたネットワークへの接続を可能にします。
 
-詳細については、[Customer Insights での Private Link の使用](security-overview.md#private-links-tab) を参照してください。
+詳細については、[Customer Insights での Private Link の使用](security-overview.md#set-up-an-azure-private-link) を参照してください。
 
 ## <a name="may-2022-updates"></a>2022 年 5 月の更新
 
