@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188099"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303789"
 ---
 # <a name="view-customer-profiles"></a>顧客プロファイルの表示
 
@@ -78,7 +78,7 @@ ms.locfileid: "9188099"
 **顧客プロファイル タイル**: 統合された *Customer* エンティティとは異なる値を示しています。 選択した顧客プロファイルの値がフィールドにない場合、住所以外のフィールドは表示されません。 タイルはセクションで構成されています。
 
 - 最初のセクションには、事前定義されたフィールドのセットが表示され、その後に検索およびフィルター インデックスの一部であるすべてのフィールドが続きます。 住所に関する項目はすべて 1 行にまとめられ、プロフィールに住所情報がない場合でも表示されます。
-- **この顧客の連絡先** は、ビジネス アカウントの環境に表示されます。 各取引先担当者は、フィールドとともに表示されます。 空のフィールドは非表示になります。
+- ビジネス アカウント (B-to-B) 向け環境での **この顧客の取引先担当者** 表示。 各取引先担当者は、フィールドとともに表示されます。 空のフィールドは非表示になります。
 - **追加フィールド** には、選択した顧客の残りのフィールドが表示されます。
 - **ID** には、対応するエンティティ名の下にすべての ID が一覧表示されます。 フィールドは、セマンティクスによって ID として識別されます。
 

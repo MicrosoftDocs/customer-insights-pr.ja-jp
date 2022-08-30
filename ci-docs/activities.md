@@ -1,9 +1,9 @@
 ---
-title: 顧客活動
-description: 顧客の活動を定義し、顧客プロファイルのタイムラインでこれらを表示します。
-ms.date: 07/22/2022
+title: 顧客または業務上の取引先担当者活動
+description: 顧客または業務上の取引先担当者活動を定義し、顧客プロファイルのタイムラインでこれらを表示します。
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188145"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304111"
 ---
-# <a name="customer-activities"></a>顧客活動
+# <a name="customer-or-business-contact-activities"></a>顧客または業務上の取引先担当者活動
 
-顧客の活動は、顧客によって実行されるアクションまたはイベントです。 たとえば、トランザクション、サポート コールの時間、Web サイトのレビュー、購入、返品などがあります。 これらのアクティビティは、1 つ以上のデータ ソースに含まれています。 Customers Insights を使用して、それらの[データ ソース](data-sources.md) から取得された顧客活動を統合し、それらを顧客プロファイルに関連付けます。 これらの活動は、顧客プロファイルのタイムラインに時系列で表示されます。 [顧客カード アドイン](customer-card-add-in.md) ソリューションで Dynamics 365 アプリにタイムラインを含めます。
+顧客活動は、顧客または業務上の取引先担当者によるアクションまたはイベントです。 たとえば、トランザクション、サポート コールの時間、Web サイトのレビュー、購入、返品などがあります。 これらのアクティビティは、1 つ以上のデータ ソースに含まれています。 Customers Insights を使用して、それらの[データ ソース](data-sources.md) から取得された顧客活動を統合し、それらを顧客プロファイルに関連付けます。 これらの活動は、顧客プロファイルのタイムラインに時系列で表示されます。 [顧客カード アドイン](customer-card-add-in.md) ソリューションで Dynamics 365 アプリにタイムラインを含めます。
 
-## <a name="define-an-activity"></a>活動を定義する
+## <a name="define-a-customer-activity"></a>顧客活動の定義
 
 エンティティには、顧客のタイムラインに含めるために少なくとも 1 つの **日付** 属性が必要です。 このようなエンティティが見つからない場合は、**活動の追加** コントロールは無効になります。
 
@@ -38,9 +38,9 @@ ms.locfileid: "9188145"
 
 1. **活動データ** ステップに、以下の情報を入力します。
 
-   - **活動名**: 活動の名前。
-   - **活動エンティティ**: トランザクションデータ、つまり活動データを含むエンティティ。
-   - **主キー**: レコードを一意に識別するフィールド。 重複する値、空の値、または欠損した値を含めることはできません。
+   - **活動名**: 活動の名前を選択します。
+   - **活動エンティティ**: トランザクション データ、つまり活動データを含むエンティティを選択します。
+   - **主キー** : レコードを一意に識別するフィールドを選択します。 重複する値、空の値、または欠損した値を含めることはできません。
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="名前、エンティティ、および主キーを使用して活動データを設定する。":::
 
@@ -48,9 +48,9 @@ ms.locfileid: "9188145"
 
 1. **リレーションシップ** ステップで、**関係の追加** を選択し、活動データを対応する顧客レコードに接続します。 この手順では、エンティティ間の接続を視覚化します。  
 
-   - **エンティティからの外部キー**: 別のエンティティとの関係を確立するために使用される活動エンティティのフィールド。
+   - **外部キー**: 別のエンティティとの関係を確立するために使用される、活動エンティティの外部フィールド。
    - **エンティティ名へ**: 活動エンティティが関係する、対応するソース顧客エンティティ。 データ統合プロセスで使用されるソース顧客エンティティにのみ関連付けることができます。
-   - **関係名**: エンティティ間の関係を識別する名前。 この活動エンティティと選択したソース顧客エンティティの間に関連がすでに存在する場合、関連付け名は読み取り専用モードです。
+   - **リレーションシップ名**: この活動エンティティと選択されたソース顧客エンティティの間にすでにリレーションシップが存在する場合、リレーションシップ名は読み取り専用モードになります。 そのような関連が存在しない場合は、このボックスに入力した名前で新しい関係が作成されます。
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="エンティティの関連付けを定義する。":::
 
@@ -90,7 +90,7 @@ ms.locfileid: "9188145"
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>既存の活動の管理
+## <a name="manage-existing-customer-activities"></a>既存の顧客活動の管理
 
 **データ** > **活動** に移動し、保存したアクティビティ、そのソース エンティティ、アクティビティ タイプ、およびそれらが顧客のタイムラインに含まれているかどうかを表示します。 活動のリストを任意の列で並べ替えたり、検索ボックスを使用して管理する活動を検索したりできます。
 
@@ -116,9 +116,43 @@ ms.locfileid: "9188145"
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="フィルター パネルを使用して、フィルター条件を設定します。":::
 
-1. フィルターを削除するには、**フィルターをクリアする** または **フィルター** を選択し、フィルター チェックボックスをオフにします。
-
 > [!NOTE]
 > 顧客プロファイルを離れると、活動フィルターが削除されます。 顧客プロファイルを開くたびにそれらを適用する必要があります。
+
+## <a name="define-a-contact-activity"></a>取引先担当者活動の定義
+
+ビジネス アカウント (B-to-B) の場合は、*ContactProfile* エンティティを使用して取引先担当者活動をキャプチャします。 各活動を担当した連絡先のアカウントの活動タイムラインを確認できます。 ほとんどの手順は、顧客活動マッピング構成に従います。
+
+   > [!NOTE]
+   > 取引先担当者レベルの活動を定義するには、[統合された取引先担当者プロファイル](data-unification-contacts.md) として、または [セマンティック マッピング](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) を通して *ContactProfile* エンティティを作成する必要があります。
+   >
+   > 活動データ内の各レコードの **AccountID** と **ContactID** 属性の両方が必要です。
+  
+1. **データ** > **アクティビティ** に移動します。
+
+1. **活動の追加** を選択します。
+
+1. 活動に名前を付け、ソース 活動エンティティを選択し、活動エンティティの主キーを選択します。
+
+1. **リレーションシップ** ステップでは、連絡先データを仲介エンティティとして使用して、活動ソースデータとアカウントの間に間接的な関係を作成します。 詳細については、[直接および間接のリレーションシップ パス](relationships.md#relationship-paths)を参照してください。
+   - *購入* と呼ばれる活動の関係の例:
+      - 属性 **ContactID** の **購入ソース活動データ** > **連絡先データ**
+      - 属性 **AccountID** の **連絡先データ** > **アカウント データ**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="リレーションシップのセットアップ例。":::
+
+1. リレーションシップを設定した後、**次へ** を選択して、活動マッピングの構成を完了します。 活動作成の詳細な手順については、[顧客活動の定義](#define-a-customer-activity) を参照してください。
+
+1. 活動マッピングを実行します。
+
+1. これで、連絡先レベルの活動が顧客のタイムラインに表示されます。
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="連絡先活動を構成した後の最終結果":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>連絡先レベルの活動タイムライン フィルタリング
+
+連絡先レベルの活動マッピングを構成して実行すると、顧客の活動タイムラインが更新されます。 従事した活動の *ContactProfile* 構成に応じて、ID または名前を含みます。 タイムラインの連絡先で活動をフィルタリングして、関心のある特定の連絡先を確認できます。 さらに、**活動が取引先担当者にマップされていません** を選択すると、特定の連絡先に割り当てられていないすべての活動を表示できます。
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="連絡先レベルの活動で使用できるフィルタリング オプション。":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

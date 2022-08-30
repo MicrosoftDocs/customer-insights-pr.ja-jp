@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: データ統合を確認する
       href: review-unification.md
+    - name: 統合された取引先担当者プロファイルを作成する
+      href: data-unification-contacts.md
     - name: 統合の設定を更新する
       href: data-unification-update.md
 - name: データ エンリッチメント

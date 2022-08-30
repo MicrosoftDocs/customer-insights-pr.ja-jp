@@ -1,19 +1,19 @@
 ---
 title: セグメントを LinkedIn Ads にエクスポート (プレビュー)
 description: LinkedIn Ads への接続とエクスポートを構成する方法を説明します。
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196814"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304709"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>セグメントを LinkedIn Ads にエクスポート (プレビュー)
 
@@ -24,7 +24,7 @@ ms.locfileid: "9196814"
 - [LinkedIn Campaign Manager アカウント](https://business.linkedin.com/marketing-solutions/ads) と対応する管理者資格情報。
 - [LinkedIn Campaign Manager 取引先企業 ID](https://www.linkedin.com/help/lms/answer/a424270)。
 - Customer Insights で [構成されたセグメント](segments.md)。
-- エクスポートされたセグメントの Unified customer profile には、電子メール アドレスを表示するフィールドが含まれていること。
+- エクスポートされたセグメントには、[取引先担当者ターゲット設定](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) また　LinkedIn で [企業ターゲット設定](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) を選択するかどうかに応じて、少なくとも 1 つの特定のフィールドが必要です。 [エクスポートの開始を構成する](#configure-an-export) 場合、可能なフィールドは、**データ マッチング** ステップで一覧表示されます。
 
 ## <a name="known-limitations"></a>既知の制限
 

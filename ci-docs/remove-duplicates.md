@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213633"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304479"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>データを統合する前に重複を削除する
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213633"
 
 1. **重複レコード** ページで、エンティティを選択し、**ルールを追加** を選択して重複排除ルールを定義します。
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="もっと表示が強調表示された重複レコード ページのスクリーンショット":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="エンティティが強調表示され、ルールの追加が表示された重複レコード ページのスクリーンショット"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. **ルールの追加** ウィンドウに、次の情報を入力します。
       - **フィールドを選択**: 重複を確認するエンティティの使用可能なフィールドのリストから選択します。 各顧客に固有である可能性が高いフィールドを選択します。 たとえば、電子メール アドレス、または名前、都市、電話番号の組み合わせです。
@@ -80,9 +80,9 @@ ms.locfileid: "9213633"
       - **最も多く入力された**: 最も多くの属性フィールドが入力されたレコードを勝者レコードとして識別します。 既定のマージ オプションです。
       - **最も新しい**: 最新性に基づいて勝者レコードを識別します。 最新を定義するには、日付または数値フィールドが必要です。
       - **最も古い**: 最も古いレコードに基づいて勝者レコードを識別します。 最新を定義するには、日付または数値フィールドが必要です。
-      
+
       同点の場合、勝者レコードは MAX(PK) またはより大きな主キー値を持つレコードです。
-      
+
    1. 必要に応じて、エンティティの個々の属性にマージ設定を定義するには、ページ下部にある **詳細** を選択します。 たとえば、最新のメールと最も完全なアドレスを異なるレコードから保持することを選択できます。 エンティティを展開してすべての属性を表示し、個々の属性に使用するオプションを定義します。 最新性に基づくオプションを選択する場合は、最新性を定義する日付/時刻フィールドも指定する必要があります。
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="最近のメールと住所全体を表示するマージの高度な基本設定ウィンドウ":::
@@ -96,18 +96,5 @@ ms.locfileid: "9213633"
 
 > [!div class="nextstepaction"]
 > [複数のエンティティの次の手順: 条件の一致](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>エンティティとしての重複排除出力
-
-重複排除プロセスでは、ソース エンティティごとに新しい重複排除エンティティが作成されます。 これらのエンティティは、**エンティティ** ページの **システム** セクションに **ConflationMatchPairs:CustomerInsights** とともに、**Deduplication_DataSource_Entity** という名前で表示されます。
-
-重複排除出力エンティティには、次の情報が含まれています。
-
-- ID/キー
-  - 主キーと代替 ID フィールド。 代替 ID フィールドは、レコードに対して識別されたすべての代替 ID で構成されます。
-  - Deduplication_GroupId フィールドには、指定された重複排除フィールドに基づいてすべての類似レコードをグループ化するエンティティ内で識別されたグループまたはクラスターが表示されます。 これは、システム処理の目的で使用されます。 手動の重複排除ルールが指定されておらず、システム定義の重複排除ルールが適用されている場合、このフィールドが重複排除出力エンティティに表示されていない可能性があります。
-  - Deduplication_WinnerId: このフィールドには、識別されたグループまたはクラスターからの勝者 ID が含まれます。 Deduplication_WinnerId がレコードの主キー値と同じである場合、そのレコードが勝者レコードであることを意味します。
-- 重複排除ルールを定義するために使用されるフィールド。
-- [ルール] フィールドと [スコア] フィールドは、どの重複排除ルールが適用され、照合アルゴリズムによってスコアが返されことを示します。
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

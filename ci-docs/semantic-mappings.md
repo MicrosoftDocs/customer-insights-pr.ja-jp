@@ -1,9 +1,9 @@
 ---
 title: セマンティック マッピング (プレビュー)
 description: セマンティック マッピングの概要とその使用方法。
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183637"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303882"
 ---
 # <a name="semantic-mappings-preview"></a>セマンティック マッピング (プレビュー)
 
-セマンティック マッピングを使用すると、非活動データを事前定義されたスキーマにマッピングできます。 これらのスキーマは、Customer Insights がデータ属性をよりよく理解するのに役立ちます。 セマンティック マッピングと提供されたデータにより、Customer Insights の新しいインサイトと機能が可能になります。 活動データをスキーマにマッピングするには、[活動](activities.md)ドキュメンテーションをレビューします。
+> [!NOTE]
+> **セマンティック マッピング** ページは、このページを使用して取引先担当者プロファイルが既に作成されているビジネス環境 (B-to-B) でのみ使用できます。 **セマンティック マッピング** ページを使用して、個々の取引先担当者プロファイルを引き続き作成および管理できます。 または、[取引先担当者データを統合](data-unification-contacts.md)して重複を削除し、エンティティ間で一致を識別し、1 つの統合された取引先担当者プロファイルを作成します。 統合された取引先担当者プロファイルを使用して、取引先担当者レベルの活動を作成します
 
-**セマンティック マッピングは現在、ビジネス アカウントに基づく環境で有効になっています**。 *ContactProfile* は、Customer Insights で現在利用可能な唯一のタイプのセマンティック マッピングです。
+セマンティック マッピングを使用すると、非活動データを事前定義されたスキーマにマッピングできます。 これらのスキーマは、Customer Insights がデータ属性をよりよく理解するのに役立ちます。 セマンティック マッピングと提供されたデータにより、Customer Insights の新しいインサイトと機能が可能になります。 活動データをスキーマにマッピングするには、[活動](activities.md)ドキュメンテーションをレビューします。
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>ContactProfile セマンティック エンティティ マッピングを定義する
 
@@ -87,41 +88,5 @@ ms.locfileid: "9183637"
 - 最新のデータを含めるセマンティック マッピングを **最新の情報に更新します**。 特定のセマンティック マッピングを更新すると、同じタイプのすべてのセマンティック マッピングが更新されます。
 - セマンティック マッピングの **名前を変更** します。 **保存** を選択します。
 - セマンティック マッピングを **削除** します。 一度に複数のセマンティック マッピングを削除するには、セマンティック マッピングと削除アイコンを選択します。 **削除** を選択して、削除内容を確認します。
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>ContactProfile セマンティック エンティティ マッピングを使用して、連絡先レベルの活動を作成します
-
-*ContactProfile* セマンティック エンティティ マッピングを作成後、連絡先の活動をキャプチャできます。 これにより、各活動を担当した連絡先のアカウントの活動タイムラインを確認できます。 ほとんどの手順は、一般的な活動マッピング構成に従います。
-
-   > [!NOTE]
-   > 連絡先レベルの活動を機能させるには、活動データ内の各レコードの **AccountID** と **ContactID** 属性の両方が必要です。
-
-1. [*ContactProfile* セマンティック エンティティ マッピングを定義](#define-a-contactprofile-semantic-entity-mapping) し、セマンティック マッピングを実行します。
-
-1. **データ** > **アクティビティ** に移動します。
-
-1. **活動の追加** を選択して、新しい活動を作成します。
-
-1. 活動に名前を付け、ソース 活動エンティティを選択し、活動エンティティの主キーを選択します。
-
-1. **リレーションシップ** ステップでは、連絡先データを仲介エンティティとして使用して、活動ソースデータとアカウントの間に間接的な関係を作成します。 詳細については、[直接および間接のリレーションシップ パス](relationships.md#relationship-paths)を参照してください。
-   - *購入* と呼ばれる活動の関係の例:
-      - 属性 **ContactID** の **購入ソース活動データ** > **連絡先データ**
-      - 属性 **AccountID** の **連絡先データ** > **アカウント データ**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="リレーションシップのセットアップ例。":::
-
-1. リレーションシップを設定した後、**次へ** を選択して、活動マッピングの構成を完了します。 活動作成の詳細な手順については、[活動を定義する](activities.md)を参照してください。
-
-1. 活動マッピングを実行します。
-
-1. 連絡先レベルのアクティビティ マッピングを実行した後、**顧客** を選択します。 連絡先レベルの活動が顧客のタイムラインに表示されます。
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="連絡先活動を構成した後の最終結果":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>連絡先レベルの活動タイムライン フィルタリング
-
-顧客の活動タイムラインには、従事した活動の *ContactProfile* 構成に応じて、ID または名前を含みます。 タイムラインの連絡先で活動をフィルタリングして、関心のある特定の連絡先を確認します。 特定の連絡先に割り当てられていないすべての活動を表示するには、**活動が取引先担当者にマップされていません** を選択します。
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="連絡先レベルの活動で使用できるフィルタリング オプション。":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

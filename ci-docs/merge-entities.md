@@ -2,7 +2,7 @@
 title: データ統合用の顧客フィールドを統合する
 description: エンティティをマージして、統合顧客プロファイルを作成します。
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213588"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304019"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>データ統合用の顧客フィールドを統合する
+# <a name="unify-customer-fields"></a>顧客フィールドを統合する
 
-統合プロセスのこの手順では、統合プロファイル エンティティ内でマージする属性を選択して除外します。 たとえば、3 つのエンティティに電子メール データがある場合、3 つの個別の電子メール フィールドすべてを保持するか、統合プロファイルの単一の電子メール フィールドにマージすることができます。 一部の属性は、システムによって自動的に結合されます。 安定した一意の顧客 ID を作成し、関連するプロファイルをクラスターにグループ化できます。
+統合プロセスのこの手順では、統合プロファイル エンティティ内でマージする属性を選択して除外します。 たとえば、3 つのエンティティに電子メール データがある場合、3 つの個別の電子メール フィールドすべてを保持するか、統合プロファイルの単一の電子メール フィールドにマージすることができます。 一部の属性は、システムによって自動的に結合されます。 安定した一意の顧客 ID を作成できます。 個々の顧客向けに、関連するプロファイルをクラスターにグループ化できます。
 
-:::image type="content" source="media/m3_unify.png" alt-text="統合された顧客プロファイルを定義するマージされたフィールドを持つテーブルを表示するデータ統合プロセスのマージ ページ。":::
+:::image type="content" source="media/m3_unify.png" alt-text="統合された顧客プロファイルを定義するマージされたフィールドを含むテーブルを示す、データ統合プロセスの顧客フィールドページを統合します。":::
 
 ## <a name="review-and-update-the-customer-fields"></a>顧客フィールドの確認と更新
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213588"
 
 1. オプションで、[顧客 ID 構成の生成](#configure-customer-id-generation)。
 
-1. オプションで、[プロファイルを世帯またはクラスターにグループ化](#group-profiles-into-households-or-clusters) します。
+1. B-to-C のオプションで、[プロファイルを世帯またはクラスターにグループ化](#group-profiles-into-households-or-clusters)します。
 
 > [!div class="nextstepaction"]
 > [次の手順: 統合を確認する](review-unification.md)
@@ -161,7 +161,7 @@ ms.locfileid: "9213588"
 
 ## <a name="group-profiles-into-households-or-clusters"></a>プロファイルを世帯またはクラスターにグループ化します
 
-関連するプロファイルをクラスターにグループ化するルールを定義できます。 現在利用可能なクラスターには、家庭用クラスターとカスタム クラスターの 2 種類があります。 *Customer* エンティティにセマンティック フィールド *Person.LastName* と *Location.Address* が含まれる場合、システムは事前定義されたルールを持つ世帯を自動的に選択します。 [一致ルール](match-entities.md#define-rules-for-match-pairs)のように、独自のルールと条件を使用してクラスターを作成することもできます。
+個々の顧客の場合、関連するプロファイルをクラスターにグループ化するルールを定義できます。 現在利用可能なクラスターには、家庭用クラスターとカスタム クラスターの 2 種類があります。 *Customer* エンティティにセマンティック フィールド *Person.LastName* と *Location.Address* が含まれる場合、システムは事前定義されたルールを持つ世帯を自動的に選択します。 [一致ルール](match-entities.md#define-rules-for-match-pairs)のように、独自のルールと条件を使用してクラスターを作成することもできます。
 
 1. **詳細** > **クラスターを作成** を選択します。
 
