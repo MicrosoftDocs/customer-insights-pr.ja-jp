@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246068"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387255"
 ---
 # <a name="configure-security-settings"></a>セキュリティ設定を構成する
 
@@ -23,7 +23,7 @@ API キーを管理して顧客データにアクセスし、Azure 非公開リ�
 
 キーを表示および管理して、[Customer Insights API](apis.md) をあなたの環境のデータと使用します。
 
-1. **システム** > **セキュリティ** に移動して、**API** タブを選択します。
+1. **管理者** > **セキュリティ** に移動して、**API** タブを選択します。
 
 1. 環境への API アクセスを設定していない場合は、**有効化** を選択します。 または、環境への API アクセスをブロックする場合は、**無効化** を選択して確認します。
 

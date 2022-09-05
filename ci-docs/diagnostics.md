@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245931"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352807"
 ---
 # <a name="export-diagnostic-logs-preview"></a>診断ログをエクスポートする (プレビュー)
 
@@ -36,8 +36,8 @@ Customer Insights は、次のイベント ログを送信します。
 
 - アクティブな [Azure サブスクリプション](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
 - Customer Insights の [管理者](permissions.md#admin) アクセス許可。
+- Azure Storage、Azure イベント ハブ、または Azure Log Analytics の [宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) に従う Azure の有効なリソース。
 - Azure の宛先リソースでの [共同作成者とユーザー アクセス管理者ロール](/azure/role-based-access-control/role-assignments-portal)。 リソースには、Azure Data Lake Storage アカウント、Azure イベント ハブ、または Azure Log Analytics ワークスペースを使用できます。 このアクセス許可は、Customer Insights の診断設定を構成する際に必要であり、設定が正常に完了した後で変更できます。
-- Azure Storage、Azure イベント ハブ、または Azure Log Analytics の [宛先要件](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) を満たします。
 - リソースが属するリソース グループの、少なくとも **閲覧者** ロール。
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Azure Monitor を使用して診断を設定する

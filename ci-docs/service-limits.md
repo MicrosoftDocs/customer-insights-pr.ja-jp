@@ -1,23 +1,23 @@
 ---
 title: Customer Insights におけるサービス制限
 description: Customer Insights SaaS サービスにおける制限や制約を理解していること。
-ms.date: 05/28/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d1b761a5c9f67bfdc7c5b152132c618db3ea36a
-ms.sourcegitcommit: 78ef22cd39a1ebd7525f96829cd79d95f34438b9
+ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "8940674"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387162"
 ---
 # <a name="service-limits-in-customer-insights"></a>Customer Insights におけるサービス制限
 
-この記事では、 Customer Insights サービスの組み込み制限について説明します。これはサービスの信頼性と安定性を確保する目的で設計されています。 変更に対する要求はすべて、 [アイデアフォーラム](https://go.microsoft.com/fwlink/?linkid=2074172) を通しておこなうことができます。
+ Customer Insights には、サービスの信頼性と安定性を確保する目的で、制限が組み込まれています。 変更に対する要求はすべて、 [アイデアフォーラム](https://go.microsoft.com/fwlink/?linkid=2074172) を通しておこなうことができます。
 
 ## <a name="customer-insights"></a>Customer Insights
 

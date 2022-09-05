@@ -1,27 +1,27 @@
 ---
 title: Customer Insights API の OData クエリの例
 description: Open Data Protocol (OData) が Customer Insights API にクエリを実行してデータを確認するためによく使用される例。
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121568"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387208"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API の OData クエリの例
 
 Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づいて構築されたデータ アクセス プロトコルです。 Web 用の REST のような一般的に受け入れられている方法論を使用します。 OData サービスを使用するために使用できるさまざまな種類のライブラリとツールがあります。
 
-この記事では、[Customer Insights APIs](apis.md) に基づいて独自の実装を構築するのに役立つ、頻繁に要求されるクエリの例をいくつか示します。
+[Customer Insights APIs](apis.md) に基づいて独自の実装を構築するには、頻繁に要求されるクエリの例をレビューしてください。
 
-クエリ サンプルを変更して、ターゲット環境で機能するようにする必要があります。 
+クエリ サンプルを変更して、ターゲット環境で機能するようにします。
 
 - {instanceId} がクエリする Customer Insights 環境の GUID は {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` です。 [ListAllInstances 操作](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) を使用すると、アクセスできる {InstanceId} を見つけることができます。
 - {CID}: 統合された顧客レコードの GUID。 例: `ce759201f786d590bf2134bff576c369`。
@@ -31,7 +31,7 @@ Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づ�
 
 ## <a name="customer"></a>大変お世話になっております
 
-次の表には、*顧客* エンティティの一連のサンプル クエリが含まれています。
+*顧客* エンティティのサンプル クエリ。
 
 |クエリの種類 |例  | Note  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づ�
 
 ## <a name="unified-activity"></a>統合した活動
 
-次の表には、*UnifiedActivity* エンティティの一連のサンプル クエリが含まれています。
+*UnifiedActivity* エンティティのサンプル クエリ。
 
 |クエリの種類 |例  | Note  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Open Data Protocol (OData) は、HTTP などのコア プロトコルに基づ�
 
 ## <a name="other-examples"></a>その他の例
 
-次の表には、他のエンティティの一連のサンプル クエリが含まれています。
+他のエンティティのサンプル クエリ。
 
 |クエリの種類 |例  | Note  |
 |---------|---------|---------|

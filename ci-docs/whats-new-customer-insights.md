@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights の新機能
 description: 新機能、改善、およびバグ修正に関する情報。
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246017"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387300"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -23,6 +23,24 @@ ms.locfileid: "9246017"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="august-2022-updates"></a>2022 年 8 月の更新プログラム
+
+2022 年 8 月の更新プログラムには、新機能、パフォーマンスのアップグレード、バグ修正が含まれます。
+
+### <a name="contact-unification-in-b-to-b-environments"></a>B-to-B 環境の連絡先の統一
+
+Customer Insights の B-to-B 環境では、強化されたデータ統合体験をサポートするようになりました。
+
+アカウントに加えて連絡先を統合して、ビジネス連絡先を完全に把握できるようになりました。 統合された連絡先は統合されたアカウントに関連付けられ、顧客カードに表示されるようになりました。 
+
+詳細については、[モバイル オフライン プロファイルを作成する](data-unification-contacts.md) を参照してください。
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>統合された連絡先に基づくセグメントの作成とエクスポート
+
+この新しい連絡先統合のおかげで、連絡先、アカウント、またはその両方の基準を使用して、連絡先のセグメントを作成できます。 これらのセグメントは、他のサービスでアクティブ化するためにエクスポートできます。
+
+詳細については、[エクスポートの概要](export-destinations.md) を参照してください。
 
 ## <a name="july-2022-updates"></a>2022 年 7 月の更新プログラム
 
