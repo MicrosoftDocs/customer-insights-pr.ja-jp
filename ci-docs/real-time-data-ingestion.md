@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246114"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396067"
 ---
 # <a name="real-time-data-ingestion-preview"></a>リアルタイム データ インジェスト (プレビュー)
 
@@ -82,10 +82,5 @@ ms.locfileid: "9246114"
 ソース システムの形式または UnifiedActivity 形式で活動を投稿できます。 /api/instances/{instanceId}/manage/entities/UnifiedActivity への API 呼び出しを行って形式を取得します。
 
 パラメーターや応答など、この API の詳細については、[Customer Insights API リファレンス](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) の **EntityData** のセクションにあります。 詳細については、[Customer Insights API の使用](apis.md) を参照してください。
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>テレメトリを使用してリアルタイムの使用状況を把握する
-
-リアルタイム API への要求の量の概要と、システムで発生する可能性のある問題に関する情報を取得します。 [リアルタイム テレメトリにアクセス](system.md#view-api-usage)できます。 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246253"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396007"
 ---
 # <a name="view-system-configuration"></a>システム構成を表示する
 
@@ -38,12 +38,6 @@ ms.locfileid: "9246253"
    - **API 呼び出し** - 選択した概算時間での API への呼び出しのs集計数を視覚化するグラフ。
    - **データ転送** - 選択した概算時間で API を介して転送されたデータの量を示すグラフ。
    - **操作** - 使用可能な各 API 操作の行と操作の使用法に関する詳細を含むテーブル。 操作名を選択して [API リファレンス](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) に移動します。
-
-   [リアルタイム データ インジェスト](real-time-data-ingestion.md) を使用する操作は、リアルタイム API の使用状況を表示する双眼記号を含みます。
-
-   1. この双眼鏡を選択して、操作の使用方法の詳細を含む **リアルタイム API の使用状況** ペインを開きます。
-   1. 表示する **概算時間を選択します**。
-   1. **グループ化の基準** ボックスを使用して、リアルタイム操作を表現する最適な方法を選択します。 **メソッド**、**エンティティの修飾名** (取り込んだエンティティ)、**作成者** (イベントのソース)、**結果** (成功または失敗) または **エラー コード** のAPI ごとにデータをグループ化します。 データは履歴グラフおよびテーブルとして利用できます。
 
 ## <a name="view-system-information"></a>システム情報を表示する
 

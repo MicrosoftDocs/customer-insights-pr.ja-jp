@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246343"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395962"
 ---
 # <a name="schedule-system-refresh"></a>システム更新のスケジューリング
 
@@ -36,7 +36,7 @@ ms.locfileid: "9246343"
 
 1. **毎週** の更新(デフォルト) か **毎日** の更新を選択します。 毎週更新をスケジュールする場合は、更新を実行する日を 1 日以上選択します。
 
-1. **タイム ゾーン** を設定し、続いて **時間** ドロップダウンで更新のタイミングを設定します。 1 日に複数の更新をスケジュールする場合は、**別の時間を追加** を選択します。
+1. **タイム ゾーン** を設定し、続いて **時間** ドロップダウンで更新のタイミングを設定します。 1 日に複数の更新をスケジュールする場合は、**別の時間を追加** を選択します。 最大 4 つリフレッシュを追加できます。
 
 1. **保存** を選択して変更を適用します。
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse での Customer Insights データの使用
 description: Customer Insights と Microsoft Dataverse の接続方法と、Dataverse にエクスポートする出力エンティティを説明します。
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303835"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424315"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
@@ -136,6 +136,7 @@ OR
 Customer Insights からの一部の出力エンティティは、Dataverse のテーブルとして利用できます。 以下のセクションでは、これらのテーブルの想定されるスキーマについて説明します。
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Customer Insights からの一部の出力エンティティは、Dataverse の�
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-このテーブルには、Customer Insights の統合された顧客プロファイルが含まれています。 統合された顧客プロファイルのスキーマは、データ統合プロセスで使用されるエンティティと属性によって異なります。 顧客プロファイル スキーマには通常、[CustomerProfile の Common Data Model 定義](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) の属性のサブセットが含まれます。
+このテーブルには、Customer Insights の統合された顧客プロファイルが含まれています。 統合された顧客プロファイルのスキーマは、データ統合プロセスで使用されるエンティティと属性によって異なります。 顧客プロファイル スキーマには通常、[CustomerProfile の Common Data Model 定義](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) の属性のサブセットが含まれます。 B-to-B シナリオの場合、顧客プロファイルには統一されたアカウントが含まれ、スキーマには通常、[アカウントの Common Data Model 定義 ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account) からの属性のサブセットが含まれます。
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile には、取引先担当者に関する統一された情報が含まれています。 B-to-B のシナリオで、取引先担当者は [アカウントにマッピングされた個人](data-unification-contacts.md) です。
+
+| Column                       | タイプ                | 説明設定     |
+| ---------------------------- | ------------------- | --------------- |
+|  BirthDate            | DateTime       |  取引先担当者の生年月日               |
+|  都市                 | Text |  取引先担当者が住む都市               |
+|  ContactId            | Text |  取引先担当者プロファイルの ID               |
+|  ContactProfileId     | 一意識別子   |  取引先担当者の GUID               |
+|  CountryOrRegion      | Text |  取引先担当者の住所の国/地域               |
+|  CustomerId           | Text |  取引先担当者がマッピングされている取引先企業の ID               |
+|  EntityName           | Text |  データの取得元エンティティ                |
+|  FirstName            | Text |  取引先担当者の名               |
+|  Gender               | Text |  取引先担当者の性別               |
+|  Id                   | Text |  `Identifier` に基づいた確定的 GUID               |
+|  識別子           | Text |  取引先担当者プロファイルの内部 ID: `ContactProfile|CustomerId|ContactId`               |
+|  役職             | Text |  取引先担当者の役職               |
+|  LastName             | Text |  取引先担当者の姓               |
+|  PostalCode           | Text |  取引先担当者の住所の郵便番号               |
+|  PrimaryEmail         | Text |  取引先担当者の電子メール アドレス               |
+|  PrimaryPhone         | Text |  取引先担当者の電話番号               |
+|  都道府県      | Text |  取引先担当者の住所の都道府県               |
+|  StreetAddress        | Text |  取引先担当者の住所の番地               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 AlternativeKey テーブルには、統合プロセスに参加したエンティティのキーが含まれています。
 
-|Column  |型  |内容  |
+|Column  |タイプ  |説明設定  |
 |---------|---------|---------|
-|DataSourceName    |String         | データ ソースの名前。 例: `datasource5`        |
-|EntityName        | String        | Customer Insights におけるエンティティの名前。 例: `contact1`        |
-|AlternateValue    |String         |顧客 ID にマップされる代替 ID。 例: `cntid_1078`         |
-|KeyRing           | 複数行テキスト        | JSON 値  </br> サンプル: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | 統合された顧客プロファイルの ID。         |
-|AlternateKeyId     | GUID         |  msdynci_identifier に基づく AlternateKey の確定的 GUID       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> サンプル: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Text         | データ ソースの名前。 例: `datasource5`        |
+|EntityName        | Text        | Customer Insights におけるエンティティの名前。 例: `contact1`        |
+|AlternateValue    |Text         |顧客 ID にマップされる代替 ID。 例: `cntid_1078`         |
+|KeyRing           | Text        | JSON 値  </br> サンプル: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Text        | 統合された顧客プロファイルの ID。         |
+|AlternateKeyId     | 一意識別子        |  `Identifier` に基づいた AlternateKey の確定的 GUID      |
+|識別子 |   Text      |   `DataSourceName|EntityName|AlternateValue`  </br> サンプル: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ AlternativeKey テーブルには、統合プロセスに参加したエンテ�
 
 | Column            | タイプ        | 説明設定                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | 顧客プロファイル ID                                                                      |
-| ActivityId        | String      | 顧客活動の内部 ID (主キー)                                       |
-| SourceEntityName  | String      | ソース エンティティの名前                                                                |
-| SourceActivityId  | String      | ソース エンティティからの主キー                                                       |
-| ActivityType      | String      | セマンティック活動の種類またはカスタム活動の名前                                        |
-| ActivityTimeStamp | DATETIME    | 活動のタイム スタンプ                                                                      |
-| 肩書き             | String      | 活動のタイトルまたは名前                                                               |
-| 説明設定       | String      | 活動の説明                                                                     |
-| URL               | String      | 活動に固有の外部 URL へのリンク                                         |
-| SemanticData      | JSON 文字列 | 活動の種類に固有のセマンティック マッピング フィールドのキーと値のペアのリストが含まれています |
-| RangeIndex        | String      | 活動タイムラインと有効範囲クエリの並べ替えに使用される Unix タイムスタンプ |
-| mydynci_unifiedactivityid   | GUID | 顧客活動の内部 ID (ActivityId) |
+| CustomerId        | Text      | 顧客プロファイル ID                                                                      |
+| ActivityId        | Text      | 顧客活動の内部 ID (主キー)                                       |
+| SourceEntityName  | Text      | ソース エンティティの名前                                                                |
+| SourceActivityId  | Text      | ソース エンティティからの主キー                                                       |
+| ActivityType      | Text      | セマンティック活動の種類またはカスタム活動の名前                                        |
+| ActivityTimeStamp | DateTime    | 活動のタイム スタンプ                                                                      |
+| 肩書き             | Text      | 活動のタイトルまたは名前                                                               |
+| 説明設定       | Text      | 活動の説明                                                                     |
+| [URL]               | Text      | 活動に固有の外部 URL へのリンク                                         |
+| SemanticData      | Text | 活動の種類に固有のセマンティック マッピング フィールドのキーと値のペアのリストが含まれています |
+| RangeIndex        | Text      | 活動タイムラインと有効範囲クエリの並べ替えに使用される Unix タイムスタンプ |
+| UnifiedActivityId   | 一意識別子 | 顧客活動の内部 ID (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 このテーブルには、顧客属性に基づくメジャーの出力データが含まれています。
 
-| Column             | 型             | 内容                 |
+| Column             | タイプ             | 説明設定                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | 顧客プロファイル ID        |
-| メジャー           | JSON 文字列      | 特定の顧客のメジャー名と値のキーと値のペアのリストが含まれています | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | 顧客プロファイル ID |
-
+| CustomerId         | Text           | 顧客プロファイル ID        |
+| メジャー           | Text      | 特定の顧客のメジャー名と値のキーと値のペアのリストが含まれています |
+| 識別子 | Text           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | 一意識別子     | 顧客プロファイル ID |
 
 ### <a name="enrichment"></a>エンリッチメント
 
 このテーブルには、エンリッチ プロセスの出力が含まれています。
 
-| Column               | 型             |  内容                                          |
+| Column               | タイプ             |  説明設定                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | 顧客プロファイル ID                                 |
-| EnrichmentProvider   | String           | エンリッチメントのプロバイダーの名前                                  |
-| EnrichmentType       | String           | エンリッチメントの種類                                      |
-| 値               | JSON 文字列      | エンリッチメント プロセスが生成した属性のリスト |
-| msdynci_enrichmentid | GUID             | msdynci_identifier から生成された確定的 GUID |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Text           | 顧客プロファイル ID                                 |
+| EnrichmentProvider   | Text           | エンリッチメントのプロバイダーの名前                                  |
+| EnrichmentType       | Text           | エンリッチメントの種類                                      |
+| Values               | Text      | エンリッチメント プロセスが生成した属性のリスト |
+| EnrichmentId | 一意識別子            | `Identifier` から生成した確定的 GUID |
+| 識別子   | Text           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>予測
 
@@ -211,25 +236,24 @@ AlternativeKey テーブルには、統合プロセスに参加したエンテ�
 
 | Column               | タイプ        | 説明設定                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | 顧客プロファイル ID                                  |
-| ModelProvider        | String      | モデルのプロバイダーの名前                                      |
-| モデル                | String      | モデル名                                                |
-| 値               | JSON 文字列 | モデルが生成した属性のリスト |
-| msdynci_predictionid | GUID        | msdynci_identifier から生成された確定的 GUID | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Text      | 顧客プロファイル ID                                  |
+| ModelProvider        | Text      | モデルのプロバイダーの名前                                      |
+| Model                | Text      | モデル名                                                |
+| Values               | Text | モデルが生成した属性のリスト |
+| PredictionId | 一意識別子       | `Identifier` から生成した確定的 GUID |
+| 識別子   | Text      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>セグメント メンバーシップ
 
 このテーブルは、顧客プロファイルのセグメント メンバーシップ情報を含みます。
 
-| Column        | タイプ | Description                        |
+| Column        | タイプ | 説明設定                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | 顧客プロファイル ID        |
-| SegmentProvider      | String       | セグメントを公開するアプリ。      |
-| SegmentMembershipType | String       | このセグメント メンバーシップ レコードの顧客のタイプ。 顧客、取引先担当者、取引先企業など、複数のタイプをサポートします。 既定: 顧客  |
-| セグメント       | JSON 文字列  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
-| msdynci_identifier  | String   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | `msdynci_identifier` から生成した確定的 GUID          |
-
+| CustomerId        | Text       | 顧客プロファイル ID        |
+| SegmentProvider      | Text       | セグメントを公開するアプリ。      |
+| SegmentMembershipType | Text       | このセグメント メンバーシップ レコードの顧客のタイプ。 顧客、取引先担当者、取引先企業など、複数のタイプをサポートします。 既定: 顧客  |
+| Segments       | Text  | 顧客プロファイルがメンバーになっている一意のセグメントのリスト      |
+| 識別子  | Text   | セグメント メンバーシップ レコードを表す一意の識別子。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | 一意識別子      | `Identifier` から生成した確定的 GUID          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

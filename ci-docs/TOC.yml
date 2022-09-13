@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Azure Machine Learning のカスタム モデルの使用
           href: custom-models.md
-        - name: 部分的な欠損データの補完
-          href: predictions.md
     - name: サンプル ガイド
       items:
         - name: CLV 予測のサンプル ガイド

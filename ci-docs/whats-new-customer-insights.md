@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387300"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409363"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -41,6 +41,14 @@ Customer Insights の B-to-B 環境では、強化されたデータ統合体験
 この新しい連絡先統合のおかげで、連絡先、アカウント、またはその両方の基準を使用して、連絡先のセグメントを作成できます。 これらのセグメントは、他のサービスでアクティブ化するためにエクスポートできます。
 
 詳細については、[エクスポートの概要](export-destinations.md) を参照してください。
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Microsoft Dataverse に合わせて調整された展開地域
+
+新しい Customer Insights 環境を作成する際、サービスを展開してホストする地域を選択できます。 Microsoft Dataverse と Power Platform に合わせて地域の選択を更新しました。
+
+既存の Microsoft Dataverse 環境または Azure Data Lake Storage アカウント (そのオプションを選択した場合) と同じ地域を簡単に選択できるようになりましたが、これはその地域での Customer Insights の可用性に応じて異なります。
+
+詳細については、[新しい環境を作成する](create-environment.md)および[地域別の製品の入手可能性](https://dynamics.microsoft.com/availability-reports/)を参照してください。
 
 ## <a name="july-2022-updates"></a>2022 年 7 月の更新プログラム
 

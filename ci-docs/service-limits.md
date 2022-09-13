@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387162"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411746"
 ---
 # <a name="service-limits-in-customer-insights"></a>Customer Insights におけるサービス制限
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387162"
 
 | 領域  | 制限  | メモ  |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| セグメント、メジャー、および予測 | 300  | [セグメント](segments.md)、[メジャー](measures.md)、および[予測](predictions.md)の合計は、300 を超えることはできません。  |
+| セグメント、メジャー、および予測 | 300  | [セグメント](segments.md)、[メジャー](measures.md)、および[予測](predictions-overview.md)の合計は、300 を超えることはできません。  |
 | 顧客間関係 | エンティティ パスの関係性には、20 段階の深さがあります。 | ビルダーのインターフェイスを使用して[セグメント](segments.md)または[メジャー](measures.md)を作成する場合、エンティティ パスでは、開始エンティ ティとターゲット・エンティティの間に最大 20 のリレーションシップ・ホップを設定できます。  |
 
 ## <a name="fair-scheduling-of-jobs"></a>ジョブの公平なスケジューリング

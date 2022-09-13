@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245839"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396089"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage のデータへの接続
 
@@ -39,6 +39,8 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
   - ストレージ Blob データ閲覧者
   - ストレージ Blob データ所有者
   - ストレージ Blob データ共同作成者
+
+- データ ソースの接続を設定するユーザーには、ストレージ アカウントに対するストレージ BLOB データ共同作成者のアクセス許可が最低限必要です。
 
 - データレイク ストレージ内のデータは、データのストレージに関する共通データモデル標準に準拠し、データファイル (*.csv または*.parquet) のスキーマを表す共通データモデル マニフェストを備えている必要があります。 マニフェストには、エンティティの列やデータ型、データ ファイルの場所やファイル タイプなど、エンティティの詳細を記載する必要があります。 詳細については、[Common Data Model のマニフェスト](/common-data-model/sdk/manifest)を参照してください。 マニフェストが存在しない場合、Storage Blob Data Owner または Storage Blob Data Contributor のアクセス権を持つ Admin ユーザーは、データの取り込み時にスキーマを定義することができます。
 
@@ -62,7 +64,7 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
    > [!NOTE]
    > データ ソースを作成する際は、コンテナーまたはストレージ アカウントに対して、次のいずれかのロールが必要です:
    >
-   >  - ストレージ BLOB データ閲覧者は、ストレージ アカウントから読み取りを行い、Customer Insights にデータを取り込む上で十分です。 
+   >  - ストレージ BLOB データ閲覧者は、ストレージ アカウントから読み取りを行い、Customer Insights にデータを取り込む上で十分です。
    >  - ストレージ BLOB データの共同作成者や所有者は、Customer Insights でマニフェスト ファイルを直接編集する場合に必要です。  
   
 1. データをインポートするデータとスキーマを含む **コンテナ** (model.json または manifest.json ファイル) の名前を選択し、**次へ** を選択します。
