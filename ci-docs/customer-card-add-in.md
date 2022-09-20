@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194929"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473648"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 アプリの顧客カード アドイン (プレビュー)
 
@@ -32,7 +32,8 @@ Dynamics 365 アプリで直接、顧客を全方位から確認します。 サ
 - Dynamics 365 データを Customer Insights の顧客プロファイルにマップするには、[Microsoft Dataverse コネクタを使用して Dynamics 365 アプリから取り込む](connect-power-query.md)  ことをお勧めします。 別の方法で Dynamics 365 取引先担当者 (または取引先企業) を取り込む場合は、`contactid` (または `accountid`) フィールドが [データ統合プロセス中のデータ ソースの主キー](map-entities.md#select-primary-key-and-semantic-type-for-attributes) として設定されていることを確認してください。
 - カスタマー カード アドインのすべての Dynamics 365 ユーザーは、データを見るには、Customer Insights で [ユーザーとして追加](permissions.md) する必要があります。
 - Customer Insights での [構成された検索およびフィルター機能](search-filter-index.md)。
-- 各アドイン コントロールは、Customer Insights の特定のデータに依存します。 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
+- 一部のデータとコントロールは、特定のタイプの環境でのみ使用できます。 アドイン構成は、選択した環境タイプが原因でコントロールが使用できない場合に通知します。 このエラーは、レンダリング時にコントロール内に表示されます。 [環境ユース ケース](work-with-business-accounts.md)に関する詳細を参照してください。
+- 各アドイン コントロールは、Customer Insights の特定のデータに依存します。
   - **メジャー制御**: [構成された顧客属性メジャー](measures.md) が必要です。
   - **インテリジェンス制御**: [予測またはカスタム モデル](predictions-overview.md) を使用して生成されたデータが必要です。
   - **顧客詳細制御**: 統合された顧客プロファイルで使用できるプロファイルのすべてのフィールドが表示されます。

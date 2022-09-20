@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304065"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460196"
 ---
 # <a name="exports-preview-overview"></a>エクスポート (プレビュー) の概要
 
@@ -81,6 +81,11 @@ ms.locfileid: "9304065"
 ## <a name="schedule-and-run-exports"></a>エクスポートのスケジュールと実行
 
 構成する各エクスポートには、更新スケジュールがあります。 更新中に、システムはエクスポートに含める新しいデータまたは更新されたデータを検索します。 既定では、エクスポートはすべての [スケジュールされたシステム更新](schedule-refresh.md) の一部として実行されます。 更新スケジュールをカスタマイズするか、オフにしてエクスポートを手動で実行できます。
+
+> [!TIP]
+> 次のベスト プラクティスに従って、セグメント エクスポートの処理時間を最小限に抑えます:
+> - セグメント エンティティを複数のエクスポートに分散します。
+> - すべてのエクスポートを同時にスケジュールすることは避けてください。 各エクスポートのスケジュール時刻の間に 30 分または 1 時間空けてください。
 
 エクスポートのスケジュールは、環境の状態によって異なります。 スケジュールされたエクスポートが開始する時点で、[依存関係](system.md#refresh-processes) に進行中の更新がある場合、システムは最初に更新を完了してからエクスポートを実行します。 **更新** 列に、エクスポートが最後に更新された日時が表示されます。
 
