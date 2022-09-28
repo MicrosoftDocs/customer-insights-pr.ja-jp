@@ -7,21 +7,21 @@
 - name: ラーニング カタログ
   items:
     - name: Microsoft 顧客データ プラットフォームの専門家として認定する
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Customer Insights を使用する
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: データの取り込み
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: 統合型顧客プロファイルを作成する
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Customer Insights を使用する
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: データをエンリッチして予測を行う
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: 外部接続の管理
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Customer Insights の管理
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: 無料試用版
   items:
     - name: 無料の試用版にサインアップ
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: パーソナライズに Web データを使用する
       href: unknown-to-known.md
+    - name: 不明な顧客プロファイルを管理する
+      href: manage-unknown-profiles.md
 - name: Segments
   items:
     - name: すべてのセグメントの概要
