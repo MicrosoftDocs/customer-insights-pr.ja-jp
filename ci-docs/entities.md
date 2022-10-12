@@ -1,7 +1,7 @@
 ---
 title: Customer Insights のエンティティ
 description: エンティティ ページにデータを表示します。
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183567"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610104"
 ---
 # <a name="entities-in-customer-insights"></a>Customer Insights のエンティティ
 
@@ -61,27 +61,5 @@ Customer Insights でデータをエンリッチさせたり、セグメント�
   - **作成済み**: エンティティ作成の日付と時刻。
   - **編集者**: エンティティを変更した人の名前。
   - **編集済み**: エンティティ変更の日付と時刻。
-
-## <a name="entity-specific-information"></a>エンティティ固有の情報
-
-次のセクションでは、システムシステムで作成されたエンティティについての情報を提供します。
-
-### <a name="corrupted-data-sources"></a>破損したデータ ソース
-
-取り込んだデータソースのフィールドに破損したデータが含まれる可能性があります。 破損したフィールドを持つレコードが、システムで作成されたエンティティで公開されます。 破損したレコードを知ることで、ソースシステム上でどのデータを見直し、更新すべきかを特定することができます。 次のデータソースの更新後、修正されたレコードは Customer Insights に取り込まれ、下流のプロセスに渡されます。 
-
-たとえば、「birthday」 列のデータ型は 「date」 に設定されています。 顧客レコードには、誕生日が 「01/01/19777」 と入力されています。 システムは、このレコードに破損のフラグを立てます。 ソースシステムの誕生日を「1977」に変更できるようになります。 データソースの自動更新後、このフィールドは有効なフォーマットとなり、破損したエンティティからレコードが削除されます。
-
-**データ** > **エンティティ** に移動し、**システム** セクションで破損したエンティティを探します。 破損したエンティティのネーミング スキーマ: 'DataSourceName_EntityName_corrupt'。 破損したエンティティを選択して、破損したフィールドと理由を個々のレコード レベルで識別します。
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="破損の理由。":::
-
-Customer Insights は、破損したレコードを引き続き処理します。 ただし、統合データを操作するときに問題が発生する可能性があります。
-
-取り込まれたデータに対して以下のようなチェックを行い、破損したレコードを発見します:
-
-- フィールドの値がその列のデータ型と一致しません。
-- フィールドに文字が含まれてるため、列が期待されるスキーマと一致しません。 例: 不適切な書式の引用符、エスケープされていない引用符、改行文字など。
-- datetime/date/datetimeoffset 列がある場合、標準の ISO 形式に準拠していない場合は、それらの形式をモデルで指定する必要があります。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

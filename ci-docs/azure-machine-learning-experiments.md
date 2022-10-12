@@ -1,19 +1,19 @@
 ---
 title: Azure Machine Learning ベースのモデルを使用する
 description: Dynamics 365 Customer Insights で Azure Machine Learning ベースのモデルを使用します。
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081316"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609831"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning ベースのモデルを使用する
 
@@ -35,26 +35,25 @@ Dynamics 365 Customer Insights の統合データは、追加のビジネス イ
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure Machine Learning デザイナーと連携する
 
 Azure Machine Learning デザイナーは、データセットとモジュールをドラッグ アンド ドロップできるビジュアル キャンバスを提供します。 デザイナーから作成されたバッチ パイプラインは、適切に構成されていれば、Customer Insights に統合できます。 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure Machine Learning SDK との連携
 
 データ サイエンティストと AI 開発者は、[Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) を使用して、機械学習ワークフローを構築します。 現在、SDK を使用してトレーニングされたモデルは、Customer Insights と直接統合することはできません。 このモデルを使用するバッチ推論パイプラインは、Customer Insights との統合に必要です。
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Customer Insights と統合するためのバッチ パイプラインの要件
 
-### <a name="dataset-configuration"></a>データセットの構成
+### <a name="dataset-configuration"></a>データベースの構成
 
-Customer Insights のエンティティ データをバッチ推論パイプラインに使用するには、データセットを作成する必要があります。 これらのデータセットは、ワークスペースに登録する必要があります。 現在、.csv 形式の [表形式データセット](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) のみをサポートしています。 エンティティ データに対応するデータセットは、パイプライン パラメーターとしてパラメーター化する必要があります。
-   
-* デザイナーのデータセット パラメーター
-   
-     デザイナーで、**データセットで列を選択** を開き、**パイプライン パラメーターとして設定** を選択して、パラメーターの名前を指定します。
+バッチ推論パイプラインに Customer Insights のエンティティデータを使用するデータセットを作成します。 これらのデータセットをワークスペースに登録します。 現在、.csv 形式の [表形式データセット](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) のみをサポートしています。 エンティティ データに対応するデータセットをパイプラインのパラメータとするする必要があります。
 
-     > [!div class="mx-imgBorder"]
-     > ![デザイナーでのデータセットのパラメーター化。](media/intelligence-designer-dataset-parameters.png "デザイナーでのデータセットのパラメーター化")
-   
-* SDK (Python) のデータセット パラメーター
-   
+- デザイナーのデータセット パラメーター
+
+  デザイナーで、**データセットで列を選択** を開き、**パイプライン パラメーターとして設定** を選択して、パラメーターの名前を指定します。
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="デザイナーでのデータセットのパラメーター化。":::
+
+- SDK (Python) のデータセット パラメーター
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Customer Insights のエンティティ データをバッチ推論パイプラ�
 
 ### <a name="batch-inference-pipeline"></a>バッチ推論パイプライン
   
-* デザイナーでは、トレーニング パイプラインを使用して、推論パイプラインを作成または更新できます。 現在、バッチ推論パイプラインのみがサポートされています。
+- デザイナーでは、トレーニング パイプラインを使用して、推論パイプラインを作成または更新します。 現在、バッチ推論パイプラインのみがサポートされています。
 
-* SDK を使用して、パイプラインをエンドポイントに公開できます。 現在、Customer Insightsは、Machine Learning ワークスペースにあるバッチ パイプライン エンドポイントの、既定のパイプラインと統合されています。
-   
+- SDK を使用して、パイプラインをエンドポイントに公開できます。 現在、Customer Insightsは、Machine Learning ワークスペースにあるバッチ パイプライン エンドポイントの、既定のパイプラインと統合されています。
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Customer Insights のエンティティ データをバッチ推論パイプラ�
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>パイプライン データ を Customer Insights にインポートする
 
-* デザイナーは、パイプラインの出力を Azure Storage にエクスポートできる [データ エクスポート モジュール](/azure/machine-learning/algorithm-module-reference/export-data) を提供します。 現在、モジュールはデータストア型の **Azure Blob Storage** を使用し、**データストア** と 相対 **パス** をパラメータ化する必要があります。 Customer Insights は、パイプラインの実行中に、製品にアクセス可能なデータストアとパスを使用して、これら両方のパラメーターを上書きします。
-   > [!div class="mx-imgBorder"]
-   > ![データ モジュール構成のエクスポート。](media/intelligence-designer-importdata.png "データ モジュール構成のエクスポート")
-   
-* コードを使用して推論出力を作成する場合、ワークスペースで *登録済みデータストア* 内のパスに出力をアップロードできます。 パスとデータストアがパイプラインでパラメーター化されている場合、Customer insights は推論出力を読み込んでインポートできます。 現在、csv 形式の 1 つの表形式の出力がサポートされています。 パスには、ディレクトリとファイル名が含まれている必要があります。
+- デザイナーは、パイプラインの出力を Azure Storage にエクスポートできる [データ エクスポート モジュール](/azure/machine-learning/algorithm-module-reference/export-data) を提供します。 現在、モジュールはデータストア型の **Azure Blob Storage** を使用し、**データストア** と 相対 **パス** をパラメータ化する必要があります。 Customer Insights は、パイプラインの実行中に、製品にアクセス可能なデータストアとパスを使用して、これら両方のパラメーターを上書きします。
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="データ モジュール構成のエクスポート。":::
+
+- コードを使用して推論出力を作成する場合、ワークスペースで *登録済みデータストア* 内のパスに出力をアップロードできます。 パスとデータストアがパイプラインでパラメーター化されている場合、Customer insights は推論出力を読み込んでインポートできます。 現在、csv 形式の 1 つの表形式の出力がサポートされています。 パスには、ディレクトリとファイル名が含まれている必要があります。
 
    ```python
    # In Pipeline setup script

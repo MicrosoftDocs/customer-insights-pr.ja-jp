@@ -1,7 +1,7 @@
 ---
 title: Power Query データ ソース (ビデオを含む) に接続する
 description: Power Query コネクタ (ビデオを含む) を通じてデータを取り込みます。
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463271"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609896"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query データ ソースに接続する
 
@@ -43,16 +43,17 @@ Power Query コネクタに基づくデータ ソースの追加は、通常、�
 
 1. **データの変換** を選択します。
 
-1. **Power Query - クエリの編集** ダイアログでデータの確認と調整を実行できます。 選択したデータ ソースで識別されたシステムが左側のペインに表示されます。
+1. **Power Query - クエリの編集** ページでデータを確認し、改良する。 選択したデータ ソースで識別されたシステムが左側のペインに表示されます。
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="クエリの編集ダイアログ":::
 
-1. また、データをエクスポートすることもできます。 編集または変換するエンティティを選択します。 Power Query ウィンドウでオプションを使用し、変換を適用します。 各変換は **適用された手順** 以下にリストされています。 Power Query は多数の[構築済み変換](/power-query/power-query-what-is-power-query#transformations) オプションを提供します。
+1. データを変換する。 編集または変換するエンティティを選択します。 Power Query ウィンドウでオプションを使用し、変換を適用します。 各変換は **適用された手順** 以下にリストされています。 Power Query は多数の[構築済み変換](/power-query/power-query-what-is-power-query#transformations) オプションを提供します。
 
-   次の変換を使用することを強くお勧めします。
-
-   - CSV ファイルからデータを取り込む場合、多くの場合、最初の行にヘッダーが含まれています。 **変換** に移動して **1 行目をヘッダーとして使用** を選択します。
-   - データ型が適切に設定されていることを確認してください。 たとえば日付フィールドの場合、日付タイプを選択します。
+   > [!IMPORTANT]
+   > 次の変換を使用することを強くお勧めします。
+   >
+   > - CSV ファイルからデータを取り込む場合、多くの場合、最初の行にヘッダーが含まれています。 **変換** に移動して **1 行目をヘッダーとして使用** を選択します。
+   > - データ型が適切に設定され、データに合致していることを確認します。 たとえば日付フィールドの場合、日付タイプを選択します。
 
 1. **クエリの編集** ダイアログでデータ ソースにエンティティを追加する場合は、**ホーム** に移動して **データの取得** を選択します。 このデータ ソースのすべてのエンティティを追加するまで、手順 5〜10 を繰り返します。 複数のデータセットを含むデータベースがある場合、各データセットは独自のエンティティです。
 
@@ -102,5 +103,51 @@ Dataverse 環境を Customer Insights に関連付けた後に作成されるデ
 1. **保存** を選択して変更を適用し、**データ ソース** ページに戻ります。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>取り込みエラー、またはデータの破損の一般的な理由
+
+### <a name="data-type-does-not-match-data"></a>データ型がデータと一致しません
+
+最も一般的なデータ型の不一致は、日付フィールドに正しい日付フォーマットが設定されていない場合に発生します。
+
+データはソースで修正して再取り込みできます。 または、Customer Insights 内で変換を修正します。 変換を修正する方法:
+
+1. **データ** > **データ ソース** にアクセスします。
+
+1. 破損したデータのあるデータ ソースの横で、**編集** を選択します。
+
+1. **次へ** を選択します。
+
+1. 各クエリを選択し、「適用ステップ」内で適用された変換が正しくないか、または日付列が日付形式で変換されていないかを確認します。
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - 誤った日付形式を表示する編集":::
+
+1. データ型を正しく変更します。
+
+1. **保存** を選択します。 そのデータ ソースは更新されます。
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>PPDF Power Query ベースのデータソース更新に関する問題のトラブルシューティング
+
+データが古い場合、または データ ソース の更新後にエラーが発生した場合は、次の手順を実行します:
+
+1. [Power Platform](https://make.powerapps.com)に移動します。
+
+1. Customer Insights インスタンスで使用する **環境** を選択します。
+
+1. **データフロー** に移動します。
+
+1. Customer Insights のデータソースに対応するデータフローについて、縦方向の省略記号 (&vellip;) を選択し、**更新履歴の表示** を選択します。
+
+1. データフローの **状態** が **成功** である場合、Power Query ベースのデータソースの所有者が変更された可能性があります。
+
+   1. 更新履歴から更新スケジュールを確認します。
+   1. 新しい所有者のスケジュールを設定し、設定を保存します。
+
+1. データフローの **状態** が **失敗** となっている場合:
+
+   1. 更新履歴ファイルをダウンロードします。
+   1. 失敗の理由については、ダウンロードしたファイルを確認してください。
+   1. エラーが解決しない場合は、**?** を選択し、 サポート チケット を作成します。 ダウンロードした更新履歴ファイルを含めてください。
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

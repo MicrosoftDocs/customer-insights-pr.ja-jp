@@ -1,7 +1,7 @@
 ---
 title: システム更新のスケジューリング
 description: システムを更新する時間をスケジュールする
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395962"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610334"
 ---
 # <a name="schedule-system-refresh"></a>システム更新のスケジューリング
 
 すべての [取り込んだデータ ソース](data-sources.md) の自動更新をスケジュールします。 自動更新により、データソースの更新が統一された顧客プロファイルに確実に反映されます。
 
 > [!NOTE]
-> ユーザーが管理する Power Query データ ソースは、独自のスケジュールで更新されます。 Power Query データ ソースの更新をスケジュールするには、**データ ソース** ページでその特定のデータ ソースの更新設定を構成します。
+> ユーザーが管理する Power Query データ ソースは、独自のスケジュールで更新されます。 Power Query データ ソースの更新をスケジュールするには、**データ ソース** ページでその特定のデータ ソースの更新設定を構成します。 すべての更新が一度に行われないように、タイミングを上流のデータ更新スケジュールに合わせます。
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform データフローの更新設定。":::
 
 ## <a name="set-system-refresh-schedule"></a>システムの更新スケジュールを設定する

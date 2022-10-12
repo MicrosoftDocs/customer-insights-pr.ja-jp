@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse の管理された Data Lake に接続する
 description: Microsoft Dataverse が管理する  Data Lake からデータをインポートする。
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206959"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609801"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse の管理された Data Lake に接続する
 
@@ -70,5 +70,93 @@ Microsoft Dataverse ユーザーは、Microsoft Dataverse マネージド レイ
 1. **保存** をクリックして変更を適用し、**データ ソース** ページに戻ります。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>取り込みエラー、またはデータの破損の一般的な理由
+
+取り込まれたデータに対して以下のようなチェックを行い、破損したレコードを発見します:
+
+- フィールドの値がその列のデータ型と一致しません。
+- フィールドに文字が含まれてるため、列が期待されるスキーマと一致しません。 例: 不適切な書式の引用符、エスケープされていない引用符、改行文字など。
+- datetime/date/datetimeoffset 列がある場合、標準の ISO 形式に準拠していない場合は、それらの形式をモデルで指定する必要があります。
+
+### <a name="schema-or-data-type-mismatch"></a>スキーマまたはデータ型の不一致
+
+データがスキーマに準拠していない場合、レコードは破損していると分類されます。 ソース データまたはスキーマのいずれかを修正し、データを再取り込みしてください。
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datetime フィールドの形式が正しくない
+
+エンティティの日時フィールドが、ISO または en-US 形式ではない。 Customer Insights の既定の日付時間形式は en-US 形式です。 エンティティ内のすべての日時フィールドは同じ形式である必要があります。 Customer Insights は、モデルまたは manifest.json のソースまたはエンティティ レベルで注釈または特性が作成される場合、他の形式もサポートします。 例:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  manifest.json では、エンティティ レベルまたは属性レベルで日時形式を指定できます。 エンティティ レベルでは、*.manifest.cdm.json のエンティティで "exhibitsTraits" を使用して、datatime 形式を定義します。 属性レベルでは、entityname.cdm.json の属性に "appliedTraits" を使用します。
+
+**エンティティ レベルの Manifest.json**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**属性レベルの Entity.json**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

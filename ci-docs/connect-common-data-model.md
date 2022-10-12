@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake アカウントを使用して Common Data Model のフォルダーに接続する
 description: Azure Data Lake Storage を使用して、Common Data Model データを操作します。
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396089"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609948"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage のデータへの接続
 
@@ -43,6 +43,10 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
 - データ ソースの接続を設定するユーザーには、ストレージ アカウントに対するストレージ BLOB データ共同作成者のアクセス許可が最低限必要です。
 
 - データレイク ストレージ内のデータは、データのストレージに関する共通データモデル標準に準拠し、データファイル (*.csv または*.parquet) のスキーマを表す共通データモデル マニフェストを備えている必要があります。 マニフェストには、エンティティの列やデータ型、データ ファイルの場所やファイル タイプなど、エンティティの詳細を記載する必要があります。 詳細については、[Common Data Model のマニフェスト](/common-data-model/sdk/manifest)を参照してください。 マニフェストが存在しない場合、Storage Blob Data Owner または Storage Blob Data Contributor のアクセス権を持つ Admin ユーザーは、データの取り込み時にスキーマを定義することができます。
+
+## <a name="recommendations"></a>レコメンデーション
+
+最適なパフォーマンスを得るために、Customer Insights はパーティションのサイズを 1 GB 以下にし、フォルダ内のパーティション ファイルの数を 1000 以下にすることを推奨しています。
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Azure Data Lake Storage への接続
 
@@ -199,5 +203,101 @@ Azure Data Lake Storage Gen2 アカウントを使用して  Dynamics 365 Custom
 1. **保存** をクリックして変更を適用し、**データ ソース** ページに戻ります。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>取り込みエラー、またはデータの破損の一般的な理由
+
+データ取り込みの際、レコードが破損していると判断される最も一般的な理由は以下の通りです:
+
+- ソース ファイルとスキーマの間でデータ型とフィールド値が一致しない
+- ソース ファイル内のカラム数がスキーマと一致しない
+- フィールドに文字が含まれているため、予想されるスキーマと比較して列が一致しない。 例: 不正確な書式の引用符、エスケープされていない引用符、改行文字、タブ文字など。
+- パーティション ファイルがない
+- datetime/date/datetimeoffset 列がある場合、そのフォーマットが標準フォーマットに従わない場合は、スキーマで指定する必要があります。
+
+### <a name="schema-or-data-type-mismatch"></a>スキーマまたはデータ型の不一致
+
+データがスキーマに準拠していない場合、取り込みプロセスはエラーで完了します。 ソース データまたはスキーマのいずれかを修正し、データを再取り込みしてください。
+
+### <a name="partition-files-are-missing"></a>パーティション ファイルがない
+
+- 破損したレコードがなく取り込みに成功したが、データが表示されない場合は、model.json または manifest.json ファイルを編集して、パーティションが指定されていることを確認します。 続いて、[データ ソースを更新します](data-sources.md#refresh-data-sources)。
+
+- 自動スケジュール更新中にデータソースが更新されるのと同時にデータ取り込みが行われた場合、パーティション ファイルが空になったり、Customer Insights が処理するために利用できなくなる可能性があります。 アップストリームの更新スケジュールと合わせるために、[システムの更新スケジュール](schedule-refresh.md) またはデータソースの更新スケジュールを変更します。 すべての更新が一度に行われないようにタイミングを調整し、Customer Insights で処理される最新のデータを提供します。
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datetime フィールドの形式が正しくない
+
+エンティティの日時フィールドが、ISO 8601 または en-US 形式ではない。 Customer Insights の既定の日付時間形式は en-US 形式です。 エンティティ内のすべての日時フィールドは同じ形式である必要があります。 Customer Insights は、モデルまたは manifest.json のソースまたはエンティティ レベルで注釈または特性が作成される場合、他の形式もサポートします。 例:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  manifest.json では、エンティティ レベルまたは属性レベルで日時形式を指定できます。 エンティティ レベルでは、*.manifest.cdm.json のエンティティで "exhibitsTraits" を使用して、datetime 形式を定義します。 属性レベルでは、entityname.cdm.json の属性に "appliedTraits" を使用します。
+
+**エンティティ レベルの Manifest.json**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**属性レベルの Entity.json**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

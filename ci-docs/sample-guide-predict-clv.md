@@ -1,23 +1,23 @@
 ---
 title: 顧客の生涯価値 (CLV) 予測サンプル ガイド
 description: このサンプル ガイドを使用して、顧客の生涯価値予測モデルを試してください。
-ms.date: 03/31/2022
+ms.date: 09/15/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fec43b279326daa17fb179181f5e310c99d48bb7
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051643"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609644"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>顧客の生涯価値 (CLV) 予測サンプル ガイド
 
-このガイドでは、サンプル データを使用した Customer Insights での顧客の生涯価値 (CLV) 予測の例を順を追って説明します。
+このガイドでは、サンプル データを使用した Customer Insights での顧客の生涯価値 (CLV) 予測の例を順を追って説明します。 [新しい環境で](manage-environments.md) この予測を実行することをお勧めします。
 
 ## <a name="scenario"></a>シナリオ
 
@@ -25,20 +25,19 @@ Contoso は、高品質のコーヒーとコーヒー マシンを製造する�
 
 ## <a name="prerequisites"></a>前提条件
 
-- 少なくとも Customer Insights の[共同作成者権限](permissions.md) があること。
-- [新しい環境で](manage-environments.md) 次の手順を実行することをお勧めします。
+- 少なくとも [共同作成者のアクセス許可](permissions.md)。
 
 ## <a name="task-1---ingest-data"></a>タスク 1 - データの取り込み
 
-[データ インジェスト](data-sources.md)と [Power Query コネクタを使用したデータ ソースのインポート](connect-power-query.md)に関する記事をご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
+[データ インジェスト](data-sources.md) と [Power Query データ ソースへの接続](connect-power-query.md) に関する記事をご確認ください。 以下の情報は、一般的なデータの取り込みに精通していることを前提としています。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>顧客データを eコマース プラットフォームから取り込む
 
-1. **eコマース** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。
+1. **eコマース** という名前の Power Query データ ソースを作成し、**テキスト/CSV** コネクタを選択します。
 
-1. eコマースの連絡先 URL [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts) を入力します。
+1. eコマースの連絡先の URL https://aka.ms/ciadclasscontacts を入力します。
 
-1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
+1. データの編集中に、**変換** を選択して、その後 **1 行目をヘッダーとして使用** の順に選択します。
 
 1. 以下にリストされている列のデータ型を更新します:
    - **DateOfBirth**: 日付
@@ -46,7 +45,7 @@ Contoso は、高品質のコーヒーとコーヒー マシンを製造する�
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="生年月日を日付に変換します。":::
 
-1. 右側のペインにある '名前' フィールドで、データ ソースの名前を **クエリ** から **eCommerceContacts** に変更します
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **eCommerceContacts** に変更します
 
 1. データ ソースを **保存** します。
 
@@ -56,126 +55,136 @@ Contoso は、高品質のコーヒーとコーヒー マシンを製造する�
 
 1. **オンライン購入** データ の URL https://aka.ms/ciadclassonline を入力します。
 
-1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
+1. データの編集中に、**変換** を選択して、その後 **1 行目をヘッダーとして使用** の順に選択します。
 
 1. 以下にリストされている列のデータ型を更新します:
    - **PurchasedOn**: 日付/時刻
    - **TotalPrice**: 通貨
 
-1. サイド ペインの **名前** フィールドで、データ ソースの名前を **クエリ** から **eCommercePurchases** に変更します。
+1. サイド ペインの **名前** フィールドで、データ ソースの名前を **eCommercePurchases** に変更します。
 
 1. データ ソースを **保存** します。
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>ロイヤルティ スキームから顧客データを取り込む
 
-1. **LoyaltyScheme** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。
+1. **LoyaltyScheme** という名前のデータ ソースを作成し、**テキスト/CSV** コネクタを選択します。
 
-1. eコマースの連絡先の URL https://aka.ms/ciadclasscustomerloyalty を入力します。
+1. ロイヤリティ顧客の URL https://aka.ms/ciadclasscustomerloyalty を入力します。
 
-1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
+1. データの編集中に、**変換** を選択して、その後 **1 行目をヘッダーとして使用** の順に選択します。
 
 1. 以下にリストされている列のデータ型を更新します:
    - **DateOfBirth**: 日付
    - **RewardsPoints**: 整数
    - **CreatedOn**: 日付/時刻
 
-1. 右側のペインにある **名前** フィールドで、データ ソースの名前を **クエリ** から **loyCustomers** に変更します。
+1. 右側のペインにある **名前** フィールドで、データ ソースの名前を クエリ から **loyCustomers** に変更します。
 
 1. データ ソースを **保存** します。
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Web サイトのレビューから顧客データを取り込む
 
-1. **Web サイト** という名前のデータ ソースを作成し、インポート オプションを選択して、**テキスト/CSV** コネクタを選択します。
+1. **Website** という名前のデータ ソースを作成し、**テキスト/CSV** コネクタを選択します。
 
-1. eコマースの連絡先の URL https://aka.ms/CI-ILT/WebReviews を入力します。
+1. Web レビュー https://aka.ms/CI-ILT/WebReviews の URL を入力します。
 
-1. データの編集中に、**変換**、**1 行目をヘッダーとして使用** の順に選択します。
+1. データの編集中に、**変換** を選択して、その後 **1 行目をヘッダーとして使用** の順に選択します。
 
 1. 以下にリストされている列のデータ型を更新します:
-
    - **ReviewRating**: 10 進数
    - **ReviewDate**: 日付
 
-1. 右側のペインの '名前' フィールドで、データ ソースの名前を **Query** から **Reviews** に変更します。
+1. 右側のペインの **名前** フィールドで、データ ソースの名前をデータ ソースから **レビュー** に変更します。
 
 1. データ ソースを **保存** します。
 
 ## <a name="task-2---data-unification"></a>タスク 2 - データの統合
 
+[データ統合に関する](data-unification.md) 記事をレビューします。 以下の情報は、一般的なデータ統合の取り込みに精通していることを前提としています。
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-customer-lifetime-value-prediction"></a>タスク 3 - 顧客の生涯価値予測の構成
+## <a name="task-3---create-transaction-history-activity"></a>タスク 3 - トランザクション履歴の活動
 
-統合された顧客プロファイルが用意できたので、顧客の生涯価値予測を実行できるようになりました。 詳細な手順については、[顧客の生涯価値予測](predict-customer-lifetime-value.md)を参照してください。
+[お客様の活動に関する](activities.md) 記事をレビューする。 以下の情報は、一般的な活動作成に精通していることを前提としています。
 
-1. **インテリジェンス**  > **予測** に移動し、**顧客の生涯価値モデル** を選択します。
+1. *eCommercePurchases:eCommerce* エンティティとその主キー、**PurchaseId** ともに **eCommercePurchases** と呼ばれる活動を作成します。
 
-1. サイド ペインの情報に目を通し、**開始する** を選択します。
+1. *eCommercePurchases:eCommerce* と *eCommerceContacts:eCommerce* との間と、2 つのエンティティを接続するための外部キーとしての **ContactID** との関係を作成します。
+
+1. **EventActivity** に対しては **TotalPrice**、そして **TimeStamp** に対して **PurchasedOn** を選択します。
+
+1. **活動の種類** に対して **SalesOrderLine** を選択して活動データを意味的にマッピングします。
+
+1. この活動を実行します。
+
+1. その他の活動エンティティを追加し、そのフィールド名を対応するフィールドにマップします:
+   - **活動エンティティ**: Reviews:Website
+   - **主キー**: ReviewId
+   - **タイムスタンプ**: ReviewDate
+   - **イベント活動**: ActivityTypeDisplay
+   - **追加の詳細**: ReviewRating
+   - **活動の種類**: レビュー
+
+1. この活動を実行します。
+
+## <a name="task-4---configure-customer-lifetime-value-prediction"></a>タスク 4 - 顧客の生涯価値予測の構成
+
+統合顧客プロファイルが配置され活動が作成されたことで、顧客の生涯価値 (CLV) 予測を実行できるようになりました。 詳細な手順については、[顧客の生涯価値予測](predict-customer-lifetime-value.md)を参照してください。
+
+1. **インテリジェンス** > **予測** に移動します。
+
+1. **作成** タブで **顧客生涯価値** タイルの **モデルを使用** を選択します。
+
+1. **開始する** を選択します。
 
 1. モデルに **OOB eコマース CLV 予測**、出力エンティティに **OOBeCommerceCLVPrediction** という名前を付けます。
 
-1. CLV モデルのモデルの基本設定を定義します:
-   - **予測期間**: **12 か月間または 1 年**。 この設定では、顧客の生涯価値をどのくらい先まで予測するかを定義します。
-   - **アクティブな顧客**: アクティブな顧客がビジネスにどのような意味を持つかを指定します。 顧客がアクティブであると見なされるには、少なくとも 1 件のトランザクションを持つ必要がある履歴期間を設定します。 このモデルは、アクティブな顧客の CLV のみを予測します。 モデルでトランザクションの履歴データに基づいて期間を計算するか、特定の期間を指定するかのいずれかを選択します。 このサンプル ガイドでは、既定のオプションである **モデルで購入間隔を計算** します。
-   - **価値の高い顧客**: 価値の高い顧客を上位支払顧客のパーセンタイルとして定義します。 モデルはこの入力を使用して、価値の高い顧客のビジネス定義に適合する結果を提供します。 モデルに価値の高い顧客を定義させることもできます。 パーセンタイルを算出する発見的規則を使用します。 価値の高い顧客を今後の上位支払顧客のパーセンタイルとして定義することもできます。 このサンプル ガイドでは、価値の高い顧客を **アクティブな支払顧客の上位 30%** として手動で定義し、**次へ** を選択します。
+1. モデルの基本設定を定義します:
+   - **予測期間**: CLV をどの程度先まで予測するかを定義するために **12 ヶ月または 1 年**。
+   - **アクティブな顧客**: 顧客をアクティブと見なすには、少なくとも 1 件のトランザクションが必要である概算時間を設定する、**購入間隔をモデルに計算させる**。
+   - **価値の高い顧客**: 価値の高い顧客を **上位 30% のアクティブな支払顧客** として手動で定義します。
 
     :::image type="content" source="media/clv-model-preferences.png" alt-text="CLV モデルのガイド付きエクスペリエンスの基本設定ステップ。":::
 
+1. **次へ** を選択します。
+
 1. **必須データ** ステップで、**データの追加** を選択し、トランザクション履歴データを指定します。
 
-1. **eCommercePurchases : eCommerce** エンティティを追加し、モデルに必要な属性をマップします:
-   - トランザクション ID: eCommerce.eCommercePurchases.PurchaseId
-   - トランザクションの日付: eCommerce.eCommercePurchases.PurchasedOn
-   - トランザクション金額: eCommerce.eCommercePurchases.TotalPrice
-   - 製品 ID: eCommerce.eCommercePurchases.ProductId
+    :::image type="content" source="media/clv-model-required.png" alt-text="CLV モデルのガイド付きエクスペリエンスの必要なデータステップを追加します。":::
+
+1. **SalesOrderLine** と eCommercePurchases エンティティを選択して、**次へ** を選択します。 必要なデータはアクティビティから自動的に入力されます。 **保存**、**次へ** の順に選択します。
+
+1. **追加データ (オプション)** ステップでは、顧客活動データをさらに追加して、より多くの顧客対話の分析情報を取得できます。 この例では、**データを追加** を選択して、Web レビュー活動を追加します。
 
 1. **次へ** を選択します。
 
-1. **eCommercePurchases : eCommerce** エンティティと **eCommerceContacts : eCommerce** の関係を設定します。
+1. **データ更新** 手順で、モデル スケジュールに対して **月次** を選択します。
 
-1. **追加データ (オプション)** ステップでは、顧客活動データをさらに追加できます。 このデータは、顧客のビジネスとのやり取りについてより多くのインサイトを得るのに役立ち、CLV に貢献する可能性があります。 Web ログ、顧客サービス ログ、特典プログラム履歴などの、顧客との重要なやり取りを追加すると、予測の精度を向上させることができます。 **データの追加** を選択し、より多くの顧客活動データを追加します。
-
-1. 顧客活動エンティティを追加し、そのフィールド名をモデルに必要な対応するフィールドにマップします:
-   - 顧客活動エンティティ: Reviews:Website
-   - 主キー: Website.Reviews.ReviewId
-   - タイムスタンプ: Website.Reviews.ReviewDate
-   - イベント (活動名): Website.Reviews.ActivityTypeDisplay
-   - 詳細 (金額または値): Website.Reviews.ReviewRating
-
-1. **次へ** を選択し、活動およびトランザクション データと顧客データの関係を構成します。  
-   - 活動の種類: 既存を選択
-   - 活動ラベル: Review
-   - 対応するラベル: Website.Reviews.UserId
-   - 顧客エンティティ: eCommerceContacts:eCommerce
-   - 関連付け: WebsiteReviews
-
-1. **次へ** を選択し、モデル スケジュールを設定します。
-
-   新しいデータが取り込まれたときに、モデルは新しいパターンを学習するために、定期的にトレーニングする必要があります。 この例では、**月単位** を選択します。
+1. **次へ** を選択します。
 
 1. すべての詳細を確認した後、**保存と実行** を選択します。
 
-## <a name="task-4---review-model-results-and-explanations"></a>タスク 4 - モデルの結果と説明を確認する
+## <a name="task-5---review-model-results-and-explanations"></a>タスク 5 - モデルの結果と説明を確認する
 
-モデルにデータのトレーニングとスコアリングを完了させます。 次に、CLV モデルの結果と説明を確認できます。 詳細については、[予測の状態と結果の確認](predict-customer-lifetime-value.md#review-prediction-status-and-results) を参照してください。
+モデルにデータのトレーニングとスコアリングを完了させます。 [CLV モデルの結果と説明](predict-customer-lifetime-value.md#view-prediction-results) をレビューします。
 
-## <a name="task-5---create-a-segment-of-high-value-customers"></a>タスク 5 - 価値の高い顧客のセグメントの作成
+## <a name="task-6---create-a-segment-of-high-value-customers"></a>タスク 6 - 価値の高い顧客のセグメントの作成
 
 モデルを実行すると、新しいエンティティが作成され、**データ** > **エンティティ** に一覧表示されます。 モデルによって作成されたエンティティに基づいて、新しい顧客セグメントを作成できます。
 
-1. **セグメント** に移動します。 
+1. 結果ページで **セグメントの作成** を選択します。
 
-1. **新規** を選択し、**作成元** > **インテリジェンス** と選択します。
+1. **OOBeCommerceCLVPrediction** エンティティを使ってルールを作成して、セグメントを定義します。
+   - **フィールド**: CLVScore
+   - **演算子**: より大きい
+   - **値**: 1500
 
-   ![モデル出力を使用してセグメントを作成しています。](media/segment-intelligence.png)
+1. **保存** を選択し、セグメントを **実行** します。
 
-1. **OOBeCommerceCLVPrediction** エンティティを選択し、セグメントを定義します:
-  - フィールド: CLVScore
-  - 演算子: より大きい
-  - 値: 1500
+これで、今後 12 か月間で $1500 を超える売上を生み出すと予測される顧客を識別するセグメントができました。 より多くのデータが取り込まれると、このセグメントは動的に更新されます。 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
 
-1. **レビュー** を選択し、セグメントを **保存** します。
+> [!TIP]
+> **新規** を選択して、**作成元** > **インテリジェンス** を選ぶことで、**セグメント** ページから予測モデルに対してセグメントも作成できます。 詳細については、[クイック セグメントで新規セグメントを作成する](segment-quick.md) を参照してください。
 
-これで、今後 12 か月間で $1500 を超える売上を生み出すと予測される顧客を識別するセグメントができました。 より多くのデータが取り込まれると、このセグメントは動的に更新されます。
-
-詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+[!INCLUDE [footer-include](includes/footer-banner.md)]

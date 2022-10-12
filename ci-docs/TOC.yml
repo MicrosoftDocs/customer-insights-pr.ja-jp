@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Azure Machine Learning のカスタム モデルの使用
           href: custom-models.md
+        - name: 予測に基づいてセグメントを作成する
+          href: prediction-based-segment.md
     - name: サンプル ガイド
       items:
         - name: CLV 予測のサンプル ガイド
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Azure Machine Learning で実験する
           href: azure-machine-learning-experiments.md
-    - name: 予測の管理
-      href: manage-predictions.md
-    - name: 予測に基づいてセグメントを作成する
-      href: prediction-based-segment.md
 - name: エクスポート オプション
   items:
     - name: エクスポート

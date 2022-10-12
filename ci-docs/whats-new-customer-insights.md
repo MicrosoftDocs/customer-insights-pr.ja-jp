@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409363"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609598"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -228,9 +228,9 @@ Customer Insights では複数のユーザーが管理者権限を持つこと�
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>データ準備プロセスにより、破損したレコードの破損理由が一覧表示される
 
-データ準備で、データが破損しているすべてのフィールドの破損の理由が表示されるようになりました。 情報が個々のレコードレベルで提供されれるため、簡単に識別できます。 
+データ準備で、データが破損しているすべてのフィールドの破損の理由が表示されるようになりました。 情報が個々のレコードレベルで提供されれるため、簡単に識別できます。
 
-詳細については、[破損したデータ ソース](entities.md#corrupted-data-sources) を参照してください。
+詳細については、[破損したデータ ソース](data-sources.md#corrupt-data-sources) を参照してください。
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>エンゲージメント インサイト機能におけるレポート機能のプレビューの終了
 

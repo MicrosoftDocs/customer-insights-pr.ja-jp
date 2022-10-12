@@ -1,23 +1,23 @@
 ---
 title: 予測モデルに基づいてセグメントを作成する
 description: 予測モデルの出力エンティティに基づいてセグメントを作成します。
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081381"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610426"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>予測モデルに基づいたセグメントの作成 (プレビュー)
 
-予測の結果は、顧客のサブセットにのみ適用される場合があります。 予測モデルの結果からセグメントを作成することで、推奨事項のパーソナライズが向上します。 たとえば、特定の種類のサービスを希望する顧客に特定の推奨事項を提供する場合があります。 
+予測の結果は、顧客のサブセットにのみ適用される場合があります。 予測モデルの結果からセグメントを作成することで、推奨事項のパーソナライズが向上します。 たとえば、特定の種類のサービスを希望する顧客に特定の推奨事項を提供する場合があります。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -34,10 +34,15 @@ ms.locfileid: "9081381"
 
 1. **インテリジェンス** > **予測** に移動し、**自分の予測** タブを選択します。
 
-1. 確認するモデルの横にある垂直方向の省略記号を選択して、**ビュー** を選択します。
+1. レビューするモデルを選択し、**ビュー** を選択します。
 
 1. 結果ページで **セグメントの作成** を選択します。 結果ページの詳細については、モデルに関する記事を確認してください。
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="セグメントの作成アクションが強調表示された予測結果ページのスクリーンショット。":::
 
-1. 選択されたモデルの出力エンティティに基づいて新しいセグメントを作成します。 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+1. 選択したモデルの出力エンティティから属性を使用して新しいセグメントを作成します。 詳細については、[セグメントの作成と管理](segments.md) をご覧ください。
+
+> [!TIP]
+> **新規** を選択して、**作成元** > **インテリジェンス** を選ぶことで、**セグメント** ページから予測モデルに対してセグメントも作成できます。 詳細については、[クイック セグメントで新規セグメントを作成する](segment-quick.md) を参照してください。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
