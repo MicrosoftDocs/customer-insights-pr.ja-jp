@@ -1,19 +1,19 @@
 ---
 title: セグメントを Braze にエクスポートする (プレビュー)
 description: Braze への接続とエクスポートを構成する方法を説明します。
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195113"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655277"
 ---
 # <a name="export-segments-to-braze-preview"></a>セグメントを Braze にエクスポートする (プレビュー)
 
@@ -23,6 +23,7 @@ ms.locfileid: "9195113"
 
 - [Braze アカウント](https://www.braze.com/)と対応する管理者資格情報。
 - [Braze API キー](https://www.braze.com/docs/api/basics/)
+- [Braze REST エンドポイント](https://www.braze.com/docs/api/basics/#api-definitions) 
 - Customer Insights で [構成されたセグメント](segments.md)。
 - エクスポートされたセグメントの統合顧客プロファイルには、メール アドレスと Braze 顧客 ID を表すフィールドが含まれています。
 
@@ -30,6 +31,7 @@ ms.locfileid: "9195113"
 
 - Braze に対して最大 100 万の顧客プロファイル。完了するまでに最大 40 分かかる場合があります。 Braze にエクスポートできる顧客プロファイルの数は、Braze との契約によって異なります。
 - セグメントのみ。
+- Azure Private Link は、Braze エクスポートではサポートされていません。
 
 ## <a name="set-up-connection-to-braze"></a>Braze への接続を設定します
 
@@ -62,6 +64,8 @@ ms.locfileid: "9195113"
 1. **エクスポートの追加** を選択します。
 
 1. **エクスポートの接続** フィールドで、Braze セクションから接続を選択します。 接続できない場合は、管理者に連絡してください。
+
+1. 次の形式で REST エンドポイントを **ホスト名** フィールドに入力します: `rest.iad-03.braze.com`。
 
 1. エクスポートの名前を入力します。
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609598"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638357"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights の新機能
 
@@ -23,6 +23,28 @@ ms.locfileid: "9609598"
 
 > [!TIP]
 > 機能要求と製品に関する提案を送信して投票するには、[Dynamics 365 アプリケーションのアイデア ポータル](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) に移動してください。
+
+## <a name="september-2022-updates"></a>2022 年 9 月の更新プログラム
+
+2022 年 9 月の更新には、新機能、パフォーマンス アップグレード、およびバグ修正が含まれています。
+
+### <a name="export-data-to-hubspot"></a>HubSpot にデータをエクスポートする
+
+統合顧客プロファイルのセグメントを HubSpot にエクスポートして、メール マーケティングに使用します。
+
+詳細については、[セグメントの HubSpot へのエクスポート](export-hubspot.md) を参照してください。
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>統合されたフィールドまたはエンティティをデータ統合から削除する
+
+データ統合プロセスからフィールドとエンティティを削除できます。
+
+詳細については、 [統合フィールドを削除する](data-unification-update.md#remove-a-unified-field)を参照してください。
+
+### <a name="manage-unknown-customer-profiles"></a>不明な顧客プロファイルを管理する
+
+記憶に残るパーソナライゼーションは、顧客データの豊富さと完全性にかかっており、Customer Insights はこれらの目標を達成するのに役立ちます。 ID 以外の情報を持っていないユーザーの顧客プロファイルを管理できます。
+
+詳細については、[Customer Insights で不明なプロファイルを管理する](manage-unknown-profiles.md) を参照してください。
 
 ## <a name="august-2022-updates"></a>2022 年 8 月の更新プログラム
 
