@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424315"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671257"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse での Customer Insights データの使用
 
@@ -63,6 +63,9 @@ Customer Insights サブスクリプションは、組織の既存の [Dataverse
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>独自の Azure Data Lake Storage から Dataverse とのデータ共有を有効にする (プレビュー)
 
 [独自の Azure Data Lake Storage アカウント](own-data-lake-storage.md) で、Customer Insights 環境のユーザー設定に最終的にストレージ アカウントの `customerinsights` コンテナーで **ストレージ Blob データ閲覧者** アクセス許可があるかを検証します。
+
+> [!NOTE]
+> データ共有は、独自の Azure Data Lake Storage アカウントを使用する場合にのみ適用されます。 Customer Insights 環境がデフォルトの Dataverse ストレージを使用している場合、この設定は使用できません。
 
 ### <a name="limitations"></a>制限
 
