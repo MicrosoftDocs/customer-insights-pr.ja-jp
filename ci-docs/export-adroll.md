@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195756"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724718"
 ---
 # <a name="export-segments-to-adroll-preview"></a>セグメントを AdRoll にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9195756"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - AdRoll へのエクスポートあたり最大 25 万の顧客プロファイル。完了するまでに最大 10 分かかる場合があります。 AdRoll にエクスポートできる顧客プロファイルの数は、AdRoll との契約によって異なります。
 - セグメントのみ。 セグメントには、少なくとも 100 の顧客プロファイルが含まれている必要があります。
 

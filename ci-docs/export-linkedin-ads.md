@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304709"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725314"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>セグメントを LinkedIn Ads にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9304709"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - LinkedIn へのエクスポートあたり最大 10 万の顧客プロファイル。完了するまでに最大 10 分かかる場合があります。
 - セグメントのみ。 セグメントには、少なくとも 300 の一意のプロファイルが含まれている必要があります。
 

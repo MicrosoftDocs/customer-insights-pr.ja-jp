@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196308"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724690"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>セグメントを Campaign Monitor にエクスポート (プレビュー)
 
@@ -29,6 +29,7 @@ ms.locfileid: "9196308"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - Campaign Monitor へのエクスポートあたり最大 100 万の顧客プロファイル。完了するまでに最大 20 分かかる場合があります。 Campaign Monitor にエクスポートできる顧客プロファイルの数は、Campaign Monitor との契約によって異なります。
 - セグメントのみ。
 

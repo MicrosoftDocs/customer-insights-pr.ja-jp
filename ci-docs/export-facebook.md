@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195020"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724607"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>セグメントを Facebook 広告マネージャーにエクスポートする (プレビュー)
 
@@ -25,11 +25,13 @@ ms.locfileid: "9195020"
 
 - [Facebook ビジネス アカウント](https://business.facebook.com/) を含む、[Facebook 広告アカウント](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) が必要です。
 - [Facebook 広告アカウント](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) における管理者権限。
+- カスタム対象ユーザー条件は、Customer Insights で接続を設定するユーザーが同意する必要があります。
 
 ## <a name="known-limitations"></a>既知の制限
 
 - Facebook 広告マネージャーへのエクスポートあたり最大 100 万の顧客プロファイル。最大 90 分かかる場合があります。
 - セグメントのみ。
+- Facebook 広告の統合は、25 個を超える広告アカウントを持つユーザーをサポートしていません。
 - [カスタム対象者](https://www.facebook.com/business/help/744354708981227?id=2469097953376494)における Facebook *顧客リスト* の種類のみ。
   > [!NOTE]
   > 場合によっては、ドロップダウン リストにさまざまな種類のカスタム対象ユーザーが表示されることがあります。 *顧客リスト* とは異なる種類を選択した場合、エクスポートに失敗します。

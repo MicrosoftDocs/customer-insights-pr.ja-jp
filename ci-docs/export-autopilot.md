@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195066"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724763"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>セグメントを AutoPilot にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9195066"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - AutoPilot へのエクスポートあたり最大 100,000 の顧客プロファイル。完了に最大で数時間かかる場合があります。 AutoPilot にエクスポートできる顧客プロファイルの数は、AutoPilot との契約によって異なります。
 - セグメントのみ。
 

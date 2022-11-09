@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196584"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725084"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>セグメントを Google Ads にエクスポート (プレビュー)
 
@@ -30,6 +30,7 @@ ms.locfileid: "9196584"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - プロバイダー側の制限により、Google Ads へのエクスポートあたり最大 100 万の顧客プロファイルをエクスポートします。完了には最大 30 分かかる場合があります。
 - セグメントのみ。
 - Google Ads でのマッチングには、最大 48 時間かかる場合があります。

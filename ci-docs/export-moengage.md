@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199115"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725272"
 ---
 # <a name="export-segments-to-moengage-preview"></a>セグメントを MoEngage にエクスポート (プレビュー)
 
@@ -27,6 +27,7 @@ ms.locfileid: "9199115"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - MoEngage へのエクスポートあたり最大 100,000 の顧客プロファイル。最大 15 分かかる場合があります。 MoEngage にエクスポートできる顧客プロファイルの数は、MoEngage との契約によって異なります。
 - セグメントのみ。
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196078"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724992"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>セグメントを DotDigital にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9196078"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - プロバイダー側の制限により、DotDigital へのエクスポートあたり最大 100 万の顧客プロファイル。完了には最大 3 時間かかる場合があります。 DotDigital にエクスポートできる顧客プロファイルの数は、DotDigital との契約によって異なります。
 - セグメントのみ。
 

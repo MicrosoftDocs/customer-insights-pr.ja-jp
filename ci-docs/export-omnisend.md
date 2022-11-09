@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196170"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725176"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>セグメントを Omnisend にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9196170"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - Omnisend へのエクスポートあたり最大 100 万の顧客プロファイル。完了するまでに最大 4 時間かかる場合があります。 Omnisend にエクスポートできる顧客プロファイルの数は、Omnisend との契約によって異なります。
 - セグメントのみ。
 

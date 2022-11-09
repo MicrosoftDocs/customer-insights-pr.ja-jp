@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196492"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724507"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>セグメントを Constant Contact にエクスポート (プレビュー)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9196492"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - Constant Contact へのエクスポートあたり最大 100 万の顧客プロファイル。完了するまでに最大 1 時間かかる場合があります。 Constant Contact にエクスポートできる顧客プロファイルの数は、Constant Contact との契約によって異なります。
 - セグメントのみ。
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196952"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724900"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>セグメントを Sendinblue にエクスポートする (プレビュー)
 
@@ -29,6 +29,7 @@ ms.locfileid: "9196952"
 
 ## <a name="known-limitations"></a>既知の制限
 
+- Bring your own storage (BYOS) と組み合わせたプライベート リンクはサポートされていません。
 - Sendinblue へのエクスポートあたり最大 100 万の顧客プロファイル。完了するまでに最大 90 分かかる場合があります。 Sendinblue にエクスポートできる顧客プロファイルの数は、Sendinblue との契約によって異なります。
 - セグメントのみ。
 
