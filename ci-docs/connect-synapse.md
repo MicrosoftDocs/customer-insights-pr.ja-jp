@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259804"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738162"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics データ ソースに接続する (プレビュー)
 
@@ -45,7 +45,7 @@ Azure Synapse Analytics は、データ ウェアハウスとビッグ データ
 
 - *[Azure Synapse ワークスペース マネージド ID](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* には、データが配置され、Azure Synapse ワークスペースにリンクされている Azure Data Lake Storage Gen2 アカウントの **ストレージ BLOB データ共同作成者** アクセス許可が必要です。 詳細は、[Azure ポータルを使用した BLOB およびキュー データへのアクセスのための Azure ロールの割り当て](/azure/storage/common/storage-auth-aad-rbac-portal) と [ストレージ BLOB データ共同作成者のアクセス許可](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) を参照してください。
 
-- Azure Synapse workspace では、"Customer Insights 向け Dynamics 365 AI" である *Customer Insights のサービス プリンシパル* に **Synapse 管理者** ロールを割り当てられる必要があります。 詳細については、[Synapse ワークスペースのアクセス制御を設定する方法](/azure/synapse-analytics/security/how-to-set-up-access-control) を参照してください。
+- Azure Synapse workspace では、"Customer Insights 向け Dynamics 365 AI" である *Customer Insights のサービス プリンシパル* に **Synapse 管理者** ロールを割り当てられる必要があります。 **ユーザー** は、ワークスペースに対して少なくとも **シナプス 投稿者** の役割を割り当てる必要があります。 詳細については、[Synapse ワークスペースのアクセス制御を設定する方法](/azure/synapse-analytics/security/how-to-set-up-access-control) を参照してください。
 
 - Customer Insights 環境がデータを [自分の Azure Data Lake Storage](own-data-lake-storage.md) に保存する場合、Azure Synapse Analytics への接続を設定するユーザーには、少なくとも Data Lake Storage アカウントの組み込み **閲覧者** ロールが必要です。 詳細については、[Azure ポータルを使用した Azure ロールの割り当て](/azure/role-based-access-control/role-assignments-portal) を参照してください。
 
